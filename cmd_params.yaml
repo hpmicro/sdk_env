@@ -1,0 +1,32 @@
+script: tools/project_generator/preset.bat
+path:
+  HPM_SDK_BASE: hpm_sdk
+  GNURISCV_TOOLCHAIN_PATH: toolchains/rv32imac-ilp32-multilib-win
+  CMAKE: tools/cmake
+  NINJA: tools/ninja
+  OPENOCD: tools/openocd
+  PYTHON3: tools/python3
+  SCRIPTS: tools/scripts
+env:
+  HPM_SDK_BASE: ~
+  GNURISCV_TOOLCHAIN_PATH: ~
+  HPM_SDK_TOOLCHAIN_VARIANT:
+    - gcc
+    - nds-gcc
+    - nds-llvm
+build-type:
+  release: ~
+  debug: ~
+  flash_xip: ~
+  flash_xip_release: ~
+  flash_sdram_xip: [femc]
+  flash_sdram_xip_release: [femc]
+  flash_uf2: [usb-otg]
+  flash_uf2_release: [usb-otg]
+  flash_sdram_uf2: [femc, usb-otg]
+  flash_sdram_uf2_release: [femc, usb-otg]
+  sec_core_img: [multicore]
+  sec_core_img_release: [multicore]
+default-type: [flash_sdram_xip, flash_xip]
+default-sample: hello_world
+default-board: hpm6750evkmini
