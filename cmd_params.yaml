@@ -19,14 +19,24 @@ build-type:
   debug: ~
   flash_xip: ~
   flash_xip_release: ~
-  flash_sdram_xip: [femc]
-  flash_sdram_xip_release: [femc]
-  flash_uf2: [usb-otg]
-  flash_uf2_release: [usb-otg]
-  flash_sdram_uf2: [femc, usb-otg]
-  flash_sdram_uf2_release: [femc, usb-otg]
-  sec_core_img: [multicore]
-  sec_core_img_release: [multicore]
+  flash_sdram_xip:
+    on-board-ram: [sdram]
+  flash_sdram_xip_release:
+    on-board-ram: [sdram]
+  flash_uf2:
+    feature: [usb-otg]
+  flash_uf2_release:
+    feature: [usb-otg]
+  flash_sdram_uf2:
+    on-board-ram: [sdram]
+    feature: [usb-otg]
+  flash_sdram_uf2_release:
+    on-board-ram: [sdram]
+    feature: [usb-otg]
+  sec_core_img:
+    feature: [multicore]
+  sec_core_img_release:
+    feature: [multicore]
 default-type: [flash_sdram_xip, flash_xip]
 default-sample: hello_world
 default-board: hpm6750evkmini

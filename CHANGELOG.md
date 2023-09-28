@@ -1,5 +1,9 @@
 # Change Log 
 
+## [1.3.0] - 2023-09-28:
+- update SDK to v1.3.0
+- start_gui: support custom sample directory
+
 ## [1.2.0] - 2023-06-30:
 - update SDK to v1.2.0
 - project_generator: support cmake building with custom board path parameter.
