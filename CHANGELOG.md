@@ -1,5 +1,9 @@
 # Change Log 
 
+## [1.4.0] - 2023-12-29:
+- update SDK to v1.4.0
+- start_gui: support custom linker script
+
 ## [1.3.0] - 2023-09-28:
 - update SDK to v1.3.0
 - start_gui: support custom sample directory

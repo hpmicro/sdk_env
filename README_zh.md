@@ -18,7 +18,7 @@
 
 **注意：如果使用自定义 board，CMake 构建过程会尝试在自定义目录下搜索与 board 目录同名的 .cfg 文件作为板级 openocd 的配置文件，若无此文件，openocd 将不会添加任何板级配置文件**
 
-3. Sample 设置：选择了开发板后，工具会根据开发板的yaml配置文件自动筛选符合条件的 sample。默认情况下，会展示`hpm_sdk/samples` 文件夹下经过筛选的sample。同时，工具也支持加载用户自定义的 sample 文件夹。用户需要首先勾选 `Enable User Application Path` 复选框启用 `User Applications` 搜索功能，然后选择想要搜索的 sample 文件夹，软件会搜索`当前文件夹`以及`所有子文件夹`，当查找到文件夹下存在 `CMakeLists.txt`时，会查找当前`CMakeLists.txt`是否调用了 `hpm-sdk`，符合条件的会识别为 sample 文件夹并加入到列表项中。当选择了 sample 之后，会自动识别当前 sample 支持的 build type 类型并加入到列表项中；
+3. Sample 设置：选择了开发板后，工具会根据开发板的yaml配置文件自动筛选符合条件的 sample。默认情况下，会展示`hpm_sdk/samples` 文件夹下经过筛选的sample。同时，工具也支持加载用户自定义的 sample 文件夹。用户需要首先勾选 `Enable User Application Path` 复选框启用 `User Applications` 搜索功能，然后选择想要搜索的 sample 文件夹，软件会搜索`当前文件夹`以及`所有子文件夹`，当查找到文件夹下存在 `CMakeLists.txt`时，会查找当前`CMakeLists.txt`是否调用了 `hpm-sdk`，符合条件的会识别为 sample 文件夹并加入到列表项中。当选择了 sample 之后，会自动识别当前 sample 支持的 build type 类型并加入到列表项中；当 `Enable User GCC Linker File` 未勾选时，build type 切换时会自动将当前 build type 使用的链接脚本加入到对应的输入框中，当勾选了该选项后，用户需要手动添加需要的链接脚本；
 
 4. Output 设置：用户可以在 Output 区域定义工程的构建生成路径。默认情况下，项目会生成在 `${sample}/${board}_${build_type}` 文件夹。同时，工具支持选择一个父文件夹，将多个项目生成在当前父文件夹下。该功能需要用户勾选 `Use Same Parent Directory` 复选框，然后选择一个父文件夹，即 `Parent Directory`，之后构建生成的项目均会保存在当前文件夹下，`Build Folder` 为项目文件夹名称，工具会采用`${sample}_${board}_${build_type}`规则自动生成文件夹名称，用户也可以手动修改文件夹名称；
 
