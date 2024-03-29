@@ -1,5 +1,14 @@
 # Change Log 
 
+## [1.5.0] - 2023-03-29:
+- update SDK to v1.5.0
+- update toolchain to gcc 13.2
+- start_gui:
+  - add button to localize sdk for app
+  - add button to launch gdb server
+  - add button to compile with gcc
+- update HPM6800EVK UG to 1.1
+
 ## [1.4.0] - 2023-12-29:
 - update SDK to v1.4.0
 - start_gui: support custom linker script

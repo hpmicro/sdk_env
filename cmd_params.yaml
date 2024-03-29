@@ -1,7 +1,7 @@
 script: tools/project_generator/preset.bat
 path:
   HPM_SDK_BASE: hpm_sdk
-  GNURISCV_TOOLCHAIN_PATH: toolchains/rv32imac-ilp32-multilib-win
+  GNURISCV_TOOLCHAIN_PATH: toolchains/rv32imac_zicsr_zifencei_multilib_b_ext-win
   CMAKE: tools/cmake
   NINJA: tools/ninja
   OPENOCD: tools/openocd
@@ -24,15 +24,15 @@ build-type:
   flash_sdram_xip_release:
     on-board-ram: [sdram]
   flash_uf2:
-    feature: [usb-otg]
+    feature: ~
   flash_uf2_release:
-    feature: [usb-otg]
+    feature: ~
   flash_sdram_uf2:
     on-board-ram: [sdram]
-    feature: [usb-otg]
+    feature: ~
   flash_sdram_uf2_release:
     on-board-ram: [sdram]
-    feature: [usb-otg]
+    feature: ~
   sec_core_img:
     feature: [multicore]
   sec_core_img_release:

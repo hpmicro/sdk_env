@@ -1,11 +1,11 @@
 @echo off
-rem Copyright 2022 hpmicro
+rem Copyright 2022-2024 hpmicro
 rem SPDX-License-Identifier: BSD-3-Clause
 if not "%~1"=="true" (
     setlocal enabledelayedexpansion
 )
 @rem Please modify the following variable
-set TOOLCHAIN_NAME=rv32imac-ilp32-multilib-win
+set TOOLCHAIN_NAME=rv32imac_zicsr_zifencei_multilib_b_ext-win
 set HPM_SDK_BASE=%~dp0hpm_sdk
 
 @rem Normally the following variables don't need to be updated
