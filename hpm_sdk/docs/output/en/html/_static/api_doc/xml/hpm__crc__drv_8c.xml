@@ -1,0 +1,500 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hpm__crc__drv_8c" kind="file" language="C++">
+    <compoundname>hpm_crc_drv.c</compoundname>
+    <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
+    <includes refid="hpm__crc__drv_8h" local="yes">hpm_crc_drv.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>drivers/src/hpm_crc_drv.c</label>
+        <link refid="hpm__crc__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>hpm_crc_drv.h</label>
+        <link refid="hpm__crc__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_crc_regs.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__crc__interface_1gadf44f5472b10ba5012d3892c41725e3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void crc_get_default_channel_config</definition>
+        <argsstring>(crc_channel_config_t *cfg)</argsstring>
+        <name>crc_get_default_channel_config</name>
+        <param>
+          <type><ref refid="group__crc__interface_1ga40dd4a34265d765644b30cd1e1d3dbd5" kindref="member">crc_channel_config_t</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+<para>Get default channel config. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel config </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_crc_drv.c" line="11" column="6" bodyfile="drivers/src/hpm_crc_drv.c" bodystart="11" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group__crc__interface_1gac36d398a00f1c4c562be5fc3b3533db7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t crc_setup_channel_config</definition>
+        <argsstring>(CRC_Type *ptr, uint32_t ch_index, crc_channel_config_t *cfg)</argsstring>
+        <name>crc_setup_channel_config</name>
+        <param>
+          <type><ref refid="structCRC__Type" kindref="compound">CRC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crc__interface_1ga40dd4a34265d765644b30cd1e1d3dbd5" kindref="member">crc_channel_config_t</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+<para>Setup CRC channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CRC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target channel index to be configured </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel config</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status_success if everything is okay </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_crc_drv.c" line="23" column="12" bodyfile="drivers/src/hpm_crc_drv.c" bodystart="23" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__crc__interface_1gae67d98a6786f597b3343d730cdbf70bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void crc_calc_block_bytes</definition>
+        <argsstring>(CRC_Type *ptr, uint32_t ch_index, uint8_t *pbuffer, uint32_t length)</argsstring>
+        <name>crc_calc_block_bytes</name>
+        <param>
+          <type><ref refid="structCRC__Type" kindref="compound">CRC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pbuffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Calculate length bytes data block crc. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CRC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CRC channel index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pbuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be calculate buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of pbuffer, unit is byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_crc_drv.c" line="41" column="6" bodyfile="drivers/src/hpm_crc_drv.c" bodystart="41" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="group__crc__interface_1ga3a8c9aabce6c5e6db15c6c0627cf69ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void crc_calc_block_half_words</definition>
+        <argsstring>(CRC_Type *ptr, uint32_t ch_index, uint16_t *pbuffer, uint32_t length)</argsstring>
+        <name>crc_calc_block_half_words</name>
+        <param>
+          <type><ref refid="structCRC__Type" kindref="compound">CRC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>pbuffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Calculate length half-words data block crc. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CRC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CRC channel index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pbuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be calculate buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of pbuffer, unit is half word(2 bytes) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_crc_drv.c" line="50" column="6" bodyfile="drivers/src/hpm_crc_drv.c" bodystart="50" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__crc__interface_1gab8f6810961e3a2396b80fd7c00e83177" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void crc_calc_block_words</definition>
+        <argsstring>(CRC_Type *ptr, uint32_t ch_index, uint32_t *pbuffer, uint32_t length)</argsstring>
+        <name>crc_calc_block_words</name>
+        <param>
+          <type><ref refid="structCRC__Type" kindref="compound">CRC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>pbuffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Calculate length words data block crc. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CRC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CRC channel index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pbuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be calculate buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of pbuffer, unit is word(4 bytes) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_crc_drv.c" line="59" column="6" bodyfile="drivers/src/hpm_crc_drv.c" bodystart="59" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="group__crc__interface_1ga3e0db96a217d85e9ec8d02bade4b6935" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void crc_calc_large_block_fast</definition>
+        <argsstring>(CRC_Type *ptr, uint32_t ch_index, uint8_t *pbuffer, uint32_t length)</argsstring>
+        <name>crc_calc_large_block_fast</name>
+        <param>
+          <type><ref refid="structCRC__Type" kindref="compound">CRC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pbuffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Fast calculate length bytes large data block crc. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CRC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CRC channel index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pbuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be calculate buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of pbuffer, unit is byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_crc_drv.c" line="68" column="6" bodyfile="drivers/src/hpm_crc_drv.c" bodystart="68" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2022<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__common_8h" kindref="compound">hpm_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__crc__drv_8h" kindref="compound">hpm_crc_drv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__crc__interface_1gadf44f5472b10ba5012d3892c41725e3a" kindref="member">crc_get_default_channel_config</ref>(<ref refid="structcrc__channel__config" kindref="compound">crc_channel_config_t</ref><sp/>*cfg)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>cfg-&gt;<ref refid="structcrc__channel__config_1a2e42387ce56b1d0d8cd2f12a4f627ce3" kindref="member">preset</ref><sp/>=<sp/><ref refid="group__crc__interface_1gga5da145404c80577de3152df553f46989a615d45511eab52b86ad726b63e18e764" kindref="member">crc_preset_crc32</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>cfg-&gt;<ref refid="structcrc__channel__config_1aa1c53cd4b8d2ca4ccff5df5ea49bee58" kindref="member">poly</ref><sp/>=<sp/>0x4C11DB7ul;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>cfg-&gt;<ref refid="structcrc__channel__config_1a6a1125c3aff3e8c4100d1402edc376f1" kindref="member">init</ref><sp/>=<sp/>0xFFFFFFFul;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>cfg-&gt;<ref refid="structcrc__channel__config_1ab4062e72a84d63ced11a9e5634481c17" kindref="member">in_byte_order</ref><sp/>=<sp/><ref refid="group__crc__interface_1ggadf2d947d111e2ddef78ad5a2992bbcc8ae47d3d9169b1c196bcad70bf76bb22d2" kindref="member">crc_in_byte_order_lsb</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>cfg-&gt;<ref refid="structcrc__channel__config_1a90e4e757d9c4837007791a1d8332d767" kindref="member">refout</ref><sp/>=<sp/><ref refid="group__crc__interface_1gga6aeaccd1a5380573b0e70b9edf4a1c67aab2b0510c51632843a4467e51fecbb59" kindref="member">crc_refout_true</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>cfg-&gt;<ref refid="structcrc__channel__config_1a0523e4b3f5a19f7a4606341ae72c6e35" kindref="member">refin</ref><sp/>=<sp/><ref refid="group__crc__interface_1ggae02174e4ef1819f25c24bf7e4891af65a0f37f78471c7d7dd6126a8a251a68b08" kindref="member">crc_refin_true</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>cfg-&gt;<ref refid="structcrc__channel__config_1aa358f4eb4382eb73a28ec705bff44771" kindref="member">poly_width</ref><sp/>=<sp/><ref refid="group__crc__interface_1gacca88f893c13bf2dc9dce36807e8e651" kindref="member">CRC_POLY_WIDTH_32</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>cfg-&gt;<ref refid="structcrc__channel__config_1a50293fe8c479286d8a7f08eca374694a" kindref="member">xorout</ref><sp/>=<sp/>0xFFFFFFF;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__crc__interface_1gac36d398a00f1c4c562be5fc3b3533db7" kindref="member">crc_setup_channel_config</ref>(<ref refid="structCRC__Type" kindref="compound">CRC_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>ch_index,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structcrc__channel__config" kindref="compound">crc_channel_config_t</ref><sp/>*cfg)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structCRC__Type_1ab557d0984e501b4cdc3d24a6101778e0" kindref="member">CHN</ref>[ch_index].<ref refid="structCRC__Type_1ac294a44df5e36e3c0e9fbe52b8393f89" kindref="member">PRE_SET</ref><sp/>=<sp/>cfg-&gt;<ref refid="structcrc__channel__config_1a2e42387ce56b1d0d8cd2f12a4f627ce3" kindref="member">preset</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ptr-&gt;<ref refid="structCRC__Type_1ab557d0984e501b4cdc3d24a6101778e0" kindref="member">CHN</ref>[ch_index].<ref refid="structCRC__Type_1ac294a44df5e36e3c0e9fbe52b8393f89" kindref="member">PRE_SET</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structCRC__Type_1ab557d0984e501b4cdc3d24a6101778e0" kindref="member">CHN</ref>[ch_index].<ref refid="structCRC__Type_1a96f128a87180306b96a3f11765758fc6" kindref="member">POLY</ref><sp/>=<sp/>cfg-&gt;<ref refid="structcrc__channel__config_1aa1c53cd4b8d2ca4ccff5df5ea49bee58" kindref="member">poly</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structCRC__Type_1ab557d0984e501b4cdc3d24a6101778e0" kindref="member">CHN</ref>[ch_index].<ref refid="structCRC__Type_1a4ef9aa6e825339864283d9900ef5eb45" kindref="member">INIT_DATA</ref><sp/>=<sp/>cfg-&gt;<ref refid="structcrc__channel__config_1a6a1125c3aff3e8c4100d1402edc376f1" kindref="member">init</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structCRC__Type_1ab557d0984e501b4cdc3d24a6101778e0" kindref="member">CHN</ref>[ch_index].<ref refid="structCRC__Type_1a9e84d89e41a136fa40cccdc6c6fe04cf" kindref="member">XOROUT</ref><sp/>=<sp/>cfg-&gt;<ref refid="structcrc__channel__config_1a50293fe8c479286d8a7f08eca374694a" kindref="member">xorout</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structCRC__Type_1ab557d0984e501b4cdc3d24a6101778e0" kindref="member">CHN</ref>[ch_index].<ref refid="structCRC__Type_1a9f3fb490629ee59a97ff011cb88e468f" kindref="member">MISC_SETTING</ref><sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__crc__regs_8h_1a9a30c5e7d37b33bb4a78ba8f965f131c" kindref="member">CRC_CHN_MISC_SETTING_REV_OUT_SET</ref>(cfg-&gt;<ref refid="structcrc__channel__config_1a90e4e757d9c4837007791a1d8332d767" kindref="member">refout</ref>)<sp/>|</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HPM5300_2ip_2hpm__crc__regs_8h_1ade7f321b41e36da0bb8ab350009b7ebb" kindref="member">CRC_CHN_MISC_SETTING_REV_IN_SET</ref>(cfg-&gt;<ref refid="structcrc__channel__config_1a0523e4b3f5a19f7a4606341ae72c6e35" kindref="member">refin</ref>)<sp/>|</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HPM5300_2ip_2hpm__crc__regs_8h_1a2b466ed8319d198bc40fa994f3d49d7f" kindref="member">CRC_CHN_MISC_SETTING_POLY_WIDTH_SET</ref>(cfg-&gt;<ref refid="structcrc__channel__config_1aa358f4eb4382eb73a28ec705bff44771" kindref="member">poly_width</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structCRC__Type_1ab557d0984e501b4cdc3d24a6101778e0" kindref="member">CHN</ref>[ch_index].<ref refid="structCRC__Type_1a9f3fb490629ee59a97ff011cb88e468f" kindref="member">MISC_SETTING</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__crc__regs_8h_1ade7388f7c80ed17d0bceb8341b06d501" kindref="member">CRC_CHN_MISC_SETTING_BYTE_REV_SET</ref>(cfg-&gt;<ref refid="structcrc__channel__config_1ab4062e72a84d63ced11a9e5634481c17" kindref="member">in_byte_order</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__crc__interface_1gae67d98a6786f597b3343d730cdbf70bb" kindref="member">crc_calc_block_bytes</ref>(<ref refid="structCRC__Type" kindref="compound">CRC_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>ch_index,<sp/>uint8_t<sp/>*pbuffer,<sp/>uint32_t<sp/>length)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>addr<sp/>=<sp/>(uint32_t)&amp;ptr-&gt;<ref refid="structCRC__Type_1ab557d0984e501b4cdc3d24a6101778e0" kindref="member">CHN</ref>[ch_index].<ref refid="structCRC__Type_1af0308a53985f750508a809a7ba787077" kindref="member">DATA</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__crc__interface_1ga508fcbdbece1b3b3c1a6c4e3558c3055" kindref="member">CRC_REG_WRITE8</ref>(addr,<sp/>pbuffer[i]);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__crc__interface_1ga3a8c9aabce6c5e6db15c6c0627cf69ef" kindref="member">crc_calc_block_half_words</ref>(<ref refid="structCRC__Type" kindref="compound">CRC_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>ch_index,<sp/>uint16_t<sp/>*pbuffer,<sp/>uint32_t<sp/>length)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>addr<sp/>=<sp/>(uint32_t)&amp;ptr-&gt;<ref refid="structCRC__Type_1ab557d0984e501b4cdc3d24a6101778e0" kindref="member">CHN</ref>[ch_index].<ref refid="structCRC__Type_1af0308a53985f750508a809a7ba787077" kindref="member">DATA</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__crc__interface_1gae52629631c56aced7c2dcd003840d23e" kindref="member">CRC_REG_WRITE16</ref>(addr,<sp/>pbuffer[i]);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__crc__interface_1gab8f6810961e3a2396b80fd7c00e83177" kindref="member">crc_calc_block_words</ref>(<ref refid="structCRC__Type" kindref="compound">CRC_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>ch_index,<sp/>uint32_t<sp/>*pbuffer,<sp/>uint32_t<sp/>length)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>addr<sp/>=<sp/>(uint32_t)&amp;ptr-&gt;<ref refid="structCRC__Type_1ab557d0984e501b4cdc3d24a6101778e0" kindref="member">CHN</ref>[ch_index].<ref refid="structCRC__Type_1af0308a53985f750508a809a7ba787077" kindref="member">DATA</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__crc__interface_1gacbf8423684a254b61a78f465bfd06b57" kindref="member">CRC_REG_WRITE32</ref>(addr,<sp/>pbuffer[i]);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__crc__interface_1ga3e0db96a217d85e9ec8d02bade4b6935" kindref="member">crc_calc_large_block_fast</ref>(<ref refid="structCRC__Type" kindref="compound">CRC_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>ch_index,<sp/>uint8_t<sp/>*pbuffer,<sp/>uint32_t<sp/>length)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(length<sp/>&lt;<sp/>16)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__crc__interface_1gae67d98a6786f597b3343d730cdbf70bb" kindref="member">crc_calc_block_bytes</ref>(ptr,<sp/>ch_index,<sp/>pbuffer,<sp/>length);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>addr<sp/>=<sp/>(uint32_t)&amp;ptr-&gt;<ref refid="structCRC__Type_1ab557d0984e501b4cdc3d24a6101778e0" kindref="member">CHN</ref>[ch_index].<ref refid="structCRC__Type_1af0308a53985f750508a809a7ba787077" kindref="member">DATA</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>start_byte_addr<sp/>=<sp/>(uint32_t)pbuffer;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>start_byte_len<sp/>=<sp/>4ul<sp/>-<sp/>(start_byte_addr<sp/>&amp;<sp/>0x03ul);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>word_addr<sp/>=<sp/>start_byte_addr<sp/>+<sp/>start_byte_len;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>word_len<sp/>=<sp/>(length<sp/>-<sp/>start_byte_len)<sp/>&amp;<sp/>(~0x03ul);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>end_byte_addr<sp/>=<sp/>word_addr<sp/>+<sp/>word_len;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>end_byte_len<sp/>=<sp/>(length<sp/>-<sp/>start_byte_len<sp/>-<sp/>word_len);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>start_byte_len;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__crc__interface_1ga508fcbdbece1b3b3c1a6c4e3558c3055" kindref="member">CRC_REG_WRITE8</ref>(addr,<sp/>*(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>*)(start_byte_addr<sp/>+<sp/>i));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>word_len;<sp/>i<sp/>+=<sp/>4)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__crc__interface_1gacbf8423684a254b61a78f465bfd06b57" kindref="member">CRC_REG_WRITE32</ref>(addr,<sp/>*(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint32_t<sp/>*)(word_addr<sp/>+<sp/>i));</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>end_byte_len;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__crc__interface_1ga508fcbdbece1b3b3c1a6c4e3558c3055" kindref="member">CRC_REG_WRITE8</ref>(addr,<sp/>*(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>*)(end_byte_addr<sp/>+<sp/>i));</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="drivers/src/hpm_crc_drv.c"/>
+  </compounddef>
+</doxygen>

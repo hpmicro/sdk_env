@@ -1,0 +1,44 @@
+# Copyright (c) 2022,2024 HPMicro
+# SPDX-License-Identifier: BSD-3-Clause
+sdk_inc(./)
+sdk_inc_ifdef(CONFIG_HPM_MATH_DSP nds_dsp)
+sdk_inc_ifdef(CONFIG_HPM_MATH_NN_RVP32 nds_nn)
+sdk_inc_ifdef(CONFIG_HPM_MATH_NN_RVP32_ONLY_SES nds_nn)
+sdk_nds_compile_options("-mext-dsp")
+sdk_ld_options_ifdef(CONFIG_HPM_MATH_DSP "-ldsp")
+if("${TOOLCHAIN_VARIANT}" STREQUAL "zcc" AND CONFIG_HPM_MATH_DSP)
+    sdk_compile_options("-march=${RV_ARCH}_zp052b")
+endif()
+if(CONFIG_HPM_MATH_NN_RVP32_ONLY_SES OR CONFIG_HPM_MATH_NN_NORMAL OR CONFIG_HPM_MATH_NN_RVP32)
+  sdk_ld_options("-lnn")
+endif()
+sdk_ld_options("-lm")
+
+sdk_iar_enable_dsp()
+sdk_ses_ld_lib_ifdef(CONFIG_HPM_MATH_DSP "${CMAKE_CURRENT_SOURCE_DIR}/nds_dsp/gcc/${HPM_MATH_DSP_SES_LIB}.a")
+sdk_iar_ld_lib_ifdef(CONFIG_HPM_MATH_DSP "${CMAKE_CURRENT_SOURCE_DIR}/nds_dsp/iar/${HPM_MATH_DSP_SES_LIB}.a")
+
+sdk_ses_ld_lib_ifdef(CONFIG_HPM_MATH_NN_RVP32_ONLY_SES "${CMAKE_CURRENT_SOURCE_DIR}/nds_nn/lib/gcc/libnn_rvp32.a")
+sdk_ses_ld_lib_ifdef(CONFIG_HPM_MATH_NN_RVP32 "${CMAKE_CURRENT_SOURCE_DIR}/nds_nn/lib/gcc/libnn_rvp32.a")
+sdk_ses_ld_lib_ifdef(CONFIG_HPM_MATH_NN_NORMAL "${CMAKE_CURRENT_SOURCE_DIR}/nds_nn/lib/gcc/${HPM_MATH_NN_SES_LIB}.a")
+sdk_link_libraries_ifdef(CONFIG_HPM_MATH_NN_RVP32 "${CMAKE_CURRENT_SOURCE_DIR}/nds_nn/lib/gcc/libnn_rvp32.a")
+
+sdk_compile_definitions_ifdef(CONFIG_HPM_MATH_DSP "-DHPM_EN_MATH_DSP_LIB=1")
+if(("${CONFIG_HPM_MATH_NN_RVP32_ONLY_SES}") AND (NOT "${CONFIG_HPM_MATH_NN_RVP32_ONLY_SES}" EQUAL 0))
+  sdk_compile_definitions(-DHPM_EN_MATH_NN_RVP32_LIB=1)
+elseif(("${CONFIG_HPM_MATH_NN_RVP32}") AND (NOT "${CONFIG_HPM_MATH_NN_RVP32}" EQUAL 0))
+  sdk_compile_definitions(-DHPM_EN_MATH_NN_RVP32_LIB=1)
+elseif(("${CONFIG_HPM_MATH_NN_NORMAL}") AND (NOT "${CONFIG_HPM_MATH_NN_NORMAL}" EQUAL 0))
+  sdk_compile_definitions(-DHPM_EN_MATH_NN_LIB=1)
+endif()
+
+
+sdk_src(sw_dsp/hpm_math_sw.c)
+if((NOT "${TOOLCHAIN_VARIANT}" STREQUAL "nds-gcc") AND (NOT "${SES_TOOLCHAIN_VARIANT}" STREQUAL "Andes"))
+message(FATAL_ERROR "hpm_math middleware must use nds toolchain")
+endif()
+
+# from SES 6.30, nds dsp needs to be enabled explicitly
+if("${SES_TOOLCHAIN_VARIANT}" STREQUAL "Andes")
+  sdk_ses_compile_options("-mext-dsp")
+endif()

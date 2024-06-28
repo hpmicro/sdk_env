@@ -1,0 +1,27 @@
+var structDMAV2__Type =
+[
+    [ "CHABORT", "structDMAV2__Type.html#a7a203767ced1983d00b7c8bae697e45f", null ],
+    [ "CHANREQCTRL", "structDMAV2__Type.html#a6bfaae947296a9ddf68c60ae2fb80ea8", null ],
+    [ "CHCTRL", "structDMAV2__Type.html#a03cf01488719380ff70fd048ffbc75bd", null ],
+    [ "CHCTRL", "structDMAV2__Type.html#a0d0afb78ebc420d082e933c379fd252c", null ],
+    [ "CHCTRL", "structDMAV2__Type.html#aac2bd66900cdcabc6d86e1433778833e", null ],
+    [ "CHCTRL", "structDMAV2__Type.html#acb0e4866489ea4301e4b3cc6c88661bd", null ],
+    [ "CHEN", "structDMAV2__Type.html#ac1e15a3e0ac984cc67a8ba24558d9bea", null ],
+    [ "CTRL", "structDMAV2__Type.html#afd2aff4c00f3161535417a7d29aec2cd", null ],
+    [ "DMACFG", "structDMAV2__Type.html#a161ae2038d50b04b8bfef2870546a022", null ],
+    [ "DMACTRL", "structDMAV2__Type.html#a6267c7549d5edc9d41f66b282a6cf553", null ],
+    [ "DSTADDR", "structDMAV2__Type.html#a3afd7a8d320e39b898b3c6cae97d07d2", null ],
+    [ "IDMISC", "structDMAV2__Type.html#a211b5c3befc63c04233fe7f4867a5efc", null ],
+    [ "INTABORTSTS", "structDMAV2__Type.html#ab3be1be6f709783eac3376231c4a0658", null ],
+    [ "INTERRSTS", "structDMAV2__Type.html#a72eb84e2e9d81ddf5dc4c486c8db331e", null ],
+    [ "INTHALFSTS", "structDMAV2__Type.html#ac16ef58a7f533ca63050e1cce02124d3", null ],
+    [ "INTTCSTS", "structDMAV2__Type.html#a19871bac2397ca7c6ed7fc0dd8c73b3c", null ],
+    [ "LLPOINTER", "structDMAV2__Type.html#a094a1e582839834f5582fd7ce427de0f", null ],
+    [ "RESERVED0", "structDMAV2__Type.html#aea5de7659535bc0fcafae07c419fd5e2", null ],
+    [ "RESERVED1", "structDMAV2__Type.html#a4b2e8433f46d94c520132c44363fc57f", null ],
+    [ "RESERVED2", "structDMAV2__Type.html#acfbd93de57b6b46c5e2e7de86d4ab754", null ],
+    [ "RESERVED3", "structDMAV2__Type.html#a67d24a3f1e0e3baaa8f5f67c5441d4bf", null ],
+    [ "SRCADDR", "structDMAV2__Type.html#a0c633454c0622c7d35de333155c9afef", null ],
+    [ "SWAPTABLE", "structDMAV2__Type.html#abcd6b6ede9d6584cddedf24086d027c9", null ],
+    [ "TRANSIZE", "structDMAV2__Type.html#ad2537fea335483ade14176136e57a9bb", null ]
+];

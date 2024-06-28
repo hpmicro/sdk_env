@@ -1,0 +1,76 @@
+var hpm__sdm__drv_8h =
+[
+    [ "CH0_EN_MASK", "group__sdm__interface.html#ga6015c75d6a0656fd9262f0951d8c3a9c", null ],
+    [ "CHN_DRY_MASK", "group__sdm__interface.html#ga60712e7964218d7e4d8f421088600c6b", null ],
+    [ "CHN_EN_MASK", "group__sdm__interface.html#gacca693a02edb26b71b148e24dfc1942a", null ],
+    [ "CHN_ERR_MASK", "group__sdm__interface.html#ga67f9a663100d53b9723f3a257033cbfb", null ],
+    [ "CHN_SAMPLING_MODE_MASK", "group__sdm__interface.html#ga3d22d13f702e940e11990f3443d0a0e0", null ],
+    [ "CHN_SAMPLING_MODE_SHIFT", "group__sdm__interface.html#ga195729ce444d38e7bf67161b0c3c2bc1", null ],
+    [ "SAMPLING_MODE_MASK", "group__sdm__interface.html#ga3ba97d2857790143743e9581fc138472", null ],
+    [ "sdm_channel_enable_mask_t", "group__sdm__interface.html#ga9163df5d5d66774bee99b0eba915ae2d", [
+      [ "sdm_chn0_enable_mask", "group__sdm__interface.html#gga9163df5d5d66774bee99b0eba915ae2da1862bf043144126cde44617cab6eb312", null ],
+      [ "sdm_chn1_enable_mask", "group__sdm__interface.html#gga9163df5d5d66774bee99b0eba915ae2da231250c6bd4d151b540b5d3b9e237b9d", null ],
+      [ "sdm_chn2_enable_mask", "group__sdm__interface.html#gga9163df5d5d66774bee99b0eba915ae2daf2966a61112e0dbda73980cc082dd936", null ],
+      [ "sdm_chn3_enable_mask", "group__sdm__interface.html#gga9163df5d5d66774bee99b0eba915ae2da554a041ad196729d43d22dc130e0faa4", null ]
+    ] ],
+    [ "sdm_channel_int_status_mask_t", "group__sdm__interface.html#ga81ec1fb46ffa37b7db0eea696e998070", [
+      [ "sdm_chn0_error_mask", "group__sdm__interface.html#gga81ec1fb46ffa37b7db0eea696e998070afacc3e38c5a752e3ca32285890179f3c", null ],
+      [ "sdm_chn1_error_mask", "group__sdm__interface.html#gga81ec1fb46ffa37b7db0eea696e998070a974e820d406e62fede8964ffa27da896", null ],
+      [ "sdm_chn2_error_mask", "group__sdm__interface.html#gga81ec1fb46ffa37b7db0eea696e998070a8ba46d5c58a5e176cce07298eb79d4dc", null ],
+      [ "sdm_chn3_error_mask", "group__sdm__interface.html#gga81ec1fb46ffa37b7db0eea696e998070ae3855f3fa5ed89b9b749e88476a98971", null ],
+      [ "sdm_chn0_data_ready_mask", "group__sdm__interface.html#gga81ec1fb46ffa37b7db0eea696e998070a4596284bea9b0966f27263ab14efc0f4", null ],
+      [ "sdm_chn1_data_ready_mask", "group__sdm__interface.html#gga81ec1fb46ffa37b7db0eea696e998070ac3a1345a23c0edd1ff67a375df70157e", null ],
+      [ "sdm_chn2_data_ready_mask", "group__sdm__interface.html#gga81ec1fb46ffa37b7db0eea696e998070a2c5dd13635a305bba570d8671cfeed80", null ],
+      [ "sdm_chn3_data_ready_mask", "group__sdm__interface.html#gga81ec1fb46ffa37b7db0eea696e998070a2593fbda99a6383179590eae91d30dc3", null ]
+    ] ],
+    [ "sdm_comparator_event_t", "group__sdm__interface.html#ga2e08c666a9d23c386252929e55707e32", [
+      [ "sdm_comparator_no_event", "group__sdm__interface.html#gga2e08c666a9d23c386252929e55707e32a3e7b09695541e37e6ee37740197b27e0", null ],
+      [ "sdm_comparator_event_out_high_threshold", "group__sdm__interface.html#gga2e08c666a9d23c386252929e55707e32ac62dbd501f96c5b53d6c498403d2f698", null ],
+      [ "sdm_comparator_event_out_low_threshold", "group__sdm__interface.html#gga2e08c666a9d23c386252929e55707e32ad289512dd89864393ede1f7cf46d95e7", null ],
+      [ "sdm_comparator_event_hz", "group__sdm__interface.html#gga2e08c666a9d23c386252929e55707e32ac6add7c7ac9923d660d53ab651d95a99", null ],
+      [ "sdm_comparator_event_invalid_clk", "group__sdm__interface.html#gga2e08c666a9d23c386252929e55707e32aa63153f17536d66de2347618d4081483", null ]
+    ] ],
+    [ "sdm_filter_type_t", "group__sdm__interface.html#ga3ace677c42e7ea4960f25d4a0ffb1d85", [
+      [ "sdm_filter_sinc1", "group__sdm__interface.html#gga3ace677c42e7ea4960f25d4a0ffb1d85aab1b486b58bbb20a9cf5d6430d9f31ed", null ],
+      [ "sdm_filter_sinc2", "group__sdm__interface.html#gga3ace677c42e7ea4960f25d4a0ffb1d85a6968fa0e46fcf86936934f5e7e3cab53", null ],
+      [ "sdm_filter_sinc3", "group__sdm__interface.html#gga3ace677c42e7ea4960f25d4a0ffb1d85ae8f64c21231e6c03677aeb214aef0675", null ],
+      [ "sdm_filter_fast_sinc2", "group__sdm__interface.html#gga3ace677c42e7ea4960f25d4a0ffb1d85aad7a51d4c3e86725f7f397b3fa941d48", null ]
+    ] ],
+    [ "sdm_sampling_mode_t", "group__sdm__interface.html#ga61a66f30f2f42b82fcfa37800fa97b3c", [
+      [ "sdm_sampling_rising_clk_edge", "group__sdm__interface.html#gga61a66f30f2f42b82fcfa37800fa97b3ca36de294c95ac368eb17f67a62225ac7c", null ],
+      [ "sdm_sampling_every_clk_edge", "group__sdm__interface.html#gga61a66f30f2f42b82fcfa37800fa97b3ca5983c2edda9d96d84797895042696796", null ],
+      [ "sdm_sampling_manchester_mode", "group__sdm__interface.html#gga61a66f30f2f42b82fcfa37800fa97b3caf8edfbaee7f895a47849c7b4595ace8c", null ],
+      [ "sdm_sampling_falling_clk_edge", "group__sdm__interface.html#gga61a66f30f2f42b82fcfa37800fa97b3ca00818d4422c94f8710814645cd9ad5b6", null ],
+      [ "sdm_sampling_rising_two_clk_edge", "group__sdm__interface.html#gga61a66f30f2f42b82fcfa37800fa97b3ca6cfc2e8daaba8275d1ff9c2309db2d4d", null ],
+      [ "sdm_sampling_falling_two_clk_edge", "group__sdm__interface.html#gga61a66f30f2f42b82fcfa37800fa97b3ca1e74d80514d4f339e96c7f6e4a2db8fc", null ]
+    ] ],
+    [ "sdm_config_channel_common_setting", "group__sdm__interface.html#ga2478e3e28b188e1c351944d59458a570", null ],
+    [ "sdm_config_channel_comparator", "group__sdm__interface.html#ga2c40357845567cb8170f03d66c3023e9", null ],
+    [ "sdm_config_channel_filter", "group__sdm__interface.html#gad4ee97c30d041e7febab894ff96ea8ab", null ],
+    [ "sdm_enable_channel", "group__sdm__interface.html#gab0df1343da18eb1dcc6c531bd2cb6951", null ],
+    [ "sdm_enable_channel_by_mask", "group__sdm__interface.html#ga8c08ff8be006596d60e65b04b16b9f23", null ],
+    [ "sdm_enable_channel_interrupt", "group__sdm__interface.html#ga22de12d531da2979a566fedf1784682d", null ],
+    [ "sdm_enable_module_interrupt", "group__sdm__interface.html#ga7a91894eabb048dadbf9337e8be7b6f8", null ],
+    [ "sdm_get_ch_fifo_threshold", "group__sdm__interface.html#gaede542f656e41c657d31a7c45ca96ec2", null ],
+    [ "sdm_get_channel_clock_cycle_count", "group__sdm__interface.html#gaadd72ba9ffb4306b6a46833f12f171d2", null ],
+    [ "sdm_get_channel_common_setting", "group__sdm__interface.html#ga193289f80e6af2294bbabcb52420f6e7", null ],
+    [ "sdm_get_channel_comparator_data", "group__sdm__interface.html#ga8ae6c36f6fea07192b3ac7f01aebe2e8", null ],
+    [ "sdm_get_channel_comparator_status", "group__sdm__interface.html#gabac861fa1459c7d2ad4d269f1f97aa43", null ],
+    [ "sdm_get_channel_data_error_status", "group__sdm__interface.html#gad75ce3a0103b08908c77817131b29566", null ],
+    [ "sdm_get_channel_data_ready_status", "group__sdm__interface.html#gaecebe65c285a6abb614551e539ba04d1", null ],
+    [ "sdm_get_channel_default_comparator_config", "group__sdm__interface.html#gafdcb7ab9c58f5a443f16c9220e30f822", null ],
+    [ "sdm_get_channel_default_filter_config", "group__sdm__interface.html#ga710b8e06eef8976a72812a859e08bf60", null ],
+    [ "sdm_get_channel_fifo_data", "group__sdm__interface.html#ga9ba10c957317fee5f0ca413cb453522c", null ],
+    [ "sdm_get_channel_fifo_data_count", "group__sdm__interface.html#ga83586c9c7e1c22f5d65dd7375b5707e2", null ],
+    [ "sdm_get_channel_filter_status", "group__sdm__interface.html#ga7e869d2391e06514c4f45653ed3ec417", null ],
+    [ "sdm_get_default_module_control", "group__sdm__interface.html#ga5938eac9390cf4657c25c6b618ff71d7", null ],
+    [ "sdm_get_status", "group__sdm__interface.html#ga9e6db974a050b88558755d0ac58d02a1", null ],
+    [ "sdm_init_module", "group__sdm__interface.html#ga14c4630123a9d58bfcae17ae8d607b3a", null ],
+    [ "sdm_receive_filter_data", "group__sdm__interface.html#gaabdf2c3c19243587e8d0cf7f7591d6a2", null ],
+    [ "sdm_receive_one_filter_data", "group__sdm__interface.html#ga7d601a72668c8573e2338c579987c510", null ],
+    [ "sdm_set_ch_fifo_threshold", "group__sdm__interface.html#ga3cb232cb33cac7bffc626a22c22c8126", null ],
+    [ "sdm_set_channel_comparator_high_threshold", "group__sdm__interface.html#gabff599c51e1f7a9534ec6a4febdd33a9", null ],
+    [ "sdm_set_channel_comparator_low_threshold", "group__sdm__interface.html#gaa72e13c5a81e446ad78758579a049e33", null ],
+    [ "sdm_set_channel_comparator_zero_crossing_threshold", "group__sdm__interface.html#gade47e0b6b0455f59f0bf35a239f10ec9", null ],
+    [ "sdm_set_channel_sampling_mode", "group__sdm__interface.html#gae3a60de07a8167c24e83c6ded0d6c7ff", null ]
+];

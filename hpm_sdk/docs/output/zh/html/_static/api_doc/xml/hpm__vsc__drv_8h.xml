@@ -1,0 +1,1654 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hpm__vsc__drv_8h" kind="file" language="C++">
+    <compoundname>hpm_vsc_drv.h</compoundname>
+    <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
+    <includes local="yes">hpm_vsc_regs.h</includes>
+    <includedby refid="hpm__vsc__drv_8c" local="yes">drivers/src/hpm_vsc_drv.c</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="8">
+        <label>hpm_vsc_regs.h</label>
+      </node>
+      <node id="1">
+        <label>drivers/inc/hpm_vsc_drv.h</label>
+        <link refid="hpm__vsc__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>drivers/src/hpm_vsc_drv.c</label>
+        <link refid="hpm__vsc__drv_8c"/>
+      </node>
+      <node id="1">
+        <label>drivers/inc/hpm_vsc_drv.h</label>
+        <link refid="hpm__vsc__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structvsc__adc__config__t" prot="public">vsc_adc_config_t</innerclass>
+    <innerclass refid="structvsc__data__opr__config__t" prot="public">vsc_data_opr_config_t</innerclass>
+    <innerclass refid="structvsc__config__t" prot="public">vsc_config_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__vsc__interface_1gad831675b3cdf332b5713643d9c2a4f11" prot="public" static="no" strong="no">
+        <type></type>
+        <name>vsc_phase_mode</name>
+        <enumvalue id="group__vsc__interface_1ggad831675b3cdf332b5713643d9c2a4f11a0d16b3593dca7b4b28e9684075ef51ee" prot="public">
+          <name>vsc_abc_phase</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1ggad831675b3cdf332b5713643d9c2a4f11ab701f100704178ad254528f0ca694417" prot="public">
+          <name>vsc_ab_phase</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>vsc phase mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="25" column="1" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__vsc__interface_1ga5fb335e5da41c6eb5e72e4148f3489d3" prot="public" static="no" strong="no">
+        <type></type>
+        <name>vsc_data_opr_mode</name>
+        <enumvalue id="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3ae9f5c8af9efabeb91f861d02fa19a9b1" prot="public">
+          <name>vsc_data_opr_plus_mul_1</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3ad143eb0235a4acea9b24cf71167c22bc" prot="public">
+          <name>vsc_data_opr_plus_mul_2</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a490ccf54e29b4001399974c7d37befef" prot="public">
+          <name>vsc_data_opr_plus_div_2</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a58ca675f0bd0afc13727a032bcdf7739" prot="public">
+          <name>vsc_data_opr_plus_div_3</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3adac757c82fe5ba5a63d29122d8e6501b" prot="public">
+          <name>vsc_data_opr_plus_div_4</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3acf588618488b878946de285ae2324c6c" prot="public">
+          <name>vsc_data_opr_minus_mul_1</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a9c290b674e6201703f50f52d4d7733e7" prot="public">
+          <name>vsc_data_opr_minus_mul_2</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a1eeb1f52c5608f34c27fe38342edd7ed" prot="public">
+          <name>vsc_data_opr_minus_div_2</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3ab8905e7b48221fec52f3f17c95fad451" prot="public">
+          <name>vsc_data_opr_minus_div_3</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a82bb2f4c6b96870120abb1601dda4052" prot="public">
+          <name>vsc_data_opr_minus_div_4</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>vsc data operation mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="34" column="1" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="34" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__vsc__interface_1ga784f29338a2220342e1a1d8982b018ed" prot="public" static="no" strong="no">
+        <type></type>
+        <name>vsc_adc_sel</name>
+        <enumvalue id="group__vsc__interface_1gga784f29338a2220342e1a1d8982b018edaa02722be497b2981d0cb7d0f323c9025" prot="public">
+          <name>vsc_sel_adc0</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga784f29338a2220342e1a1d8982b018eda18923068495d1ecf94e739315393c930" prot="public">
+          <name>vsc_sel_adc1</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga784f29338a2220342e1a1d8982b018eda37d9741410e1de95ff105721f1cff780" prot="public">
+          <name>vsc_sel_adc2</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>vsc select adc instance </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="51" column="1" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="51" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__vsc__interface_1ga890ae1ed99ce9a8181f5eb9c162ac030" prot="public" static="no" strong="no">
+        <type></type>
+        <name>vsc_pos_cap_mode</name>
+        <enumvalue id="group__vsc__interface_1gga890ae1ed99ce9a8181f5eb9c162ac030a8b8afdb44207d85dbc166ee2fab7dd82" prot="public">
+          <name>vsc_pos_use_last_data_when_adc_sample_finish</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga890ae1ed99ce9a8181f5eb9c162ac030a33a07fedd09acc6f6786f779cf0504e4" prot="public">
+          <name>vsc_pos_use_first_data_after_adc_sample_start</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga890ae1ed99ce9a8181f5eb9c162ac030a8e58d69c4418ddd1fffb1e9d5301b5cb" prot="public">
+          <name>vsc_pos_use_last_data_before_adc_sample_start</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>vsc position capture mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="61" column="1" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__vsc__interface_1ga2ac0e8bed686eb5e574d05882a0038be" prot="public" static="no" strong="no">
+        <type></type>
+        <name>vsc_timestamp_sel</name>
+        <enumvalue id="group__vsc__interface_1gga2ac0e8bed686eb5e574d05882a0038bea9ecd7866f32dd3be37af919b5f056c25" prot="public">
+          <name>vsc_timestamp_sel_value_a</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga2ac0e8bed686eb5e574d05882a0038bea31ffa832984510ceb8108bc9a77ef571" prot="public">
+          <name>vsc_timestamp_sel_value_b</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga2ac0e8bed686eb5e574d05882a0038beabacc68f83b2ede6b5a2e8f3dc61eab57" prot="public">
+          <name>vsc_timestamp_sel_value_c</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>vsc select adc timestamp </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="71" column="1" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="71" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__vsc__interface_1ga33048dcae1eb0629759630e26940251a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>vsc_irq_mask</name>
+        <enumvalue id="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa1d8ae6b953710624098bb5fbb3fe5401" prot="public">
+          <name>vsc_irq_convert_done</name>
+          <initializer>=  (0x00000001UL)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa831fe4cfb6fd998f946a852370b68167" prot="public">
+          <name>vsc_irq_abc_over_tolerate</name>
+          <initializer>=  (0x00000002UL)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aab75331b6471beb2b3510d6c3cce16e78" prot="public">
+          <name>vsc_irq_c_overflow</name>
+          <initializer>=  (0x00000004UL)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aacd8fd76463c17fcb6388b2fba4139501" prot="public">
+          <name>vsc_irq_b_overflow</name>
+          <initializer>=  (0x00000008UL)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa86fa89099e0844049c98656cc6104930" prot="public">
+          <name>vsc_irq_a_overflow</name>
+          <initializer>=  (0x00000010UL)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa741e503b82f89ed5c0351a43f6c32410" prot="public">
+          <name>vsc_irq_adc2_cap_not_enough</name>
+          <initializer>=  (0x00000020UL)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aaab6fc959c7b45aa6934a1a95aaf76816" prot="public">
+          <name>vsc_irq_adc1_cap_not_enough</name>
+          <initializer>=  (0x00000040UL)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aaf9dfe16d715055b632b7d0d1924b0e11" prot="public">
+          <name>vsc_irq_adc0_cap_not_enough</name>
+          <initializer>=  (0x00000080UL)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aaac861944e5f53ea0173d3f3c01b8bd4d" prot="public">
+          <name>vsc_irq_pos_timeout</name>
+          <initializer>=  (0x00000100UL)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aae082d0179c0902cc465efc4b54268ada" prot="public">
+          <name>vsc_irq_adc2_timeout</name>
+          <initializer>=  (0x00000200UL)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa88d2916c6262d5cd64f010edc89fcf2f" prot="public">
+          <name>vsc_irq_adc1_timeout</name>
+          <initializer>=  (0x00000400UL)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa609601a94f5bec9df1057927c2a96c27" prot="public">
+          <name>vsc_irq_adc0_timeout</name>
+          <initializer>=  (0x00000800UL)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa548d7850f04254f221723fef8023e1c3" prot="public">
+          <name>vsc_irq_convert_conflict</name>
+          <initializer>=  (0x00001000UL)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>vsc irq mask bit </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="81" column="1" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="81" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__vsc__interface_1gabcfce5a839beec2fc48876a187c95998" prot="public" static="no">
+        <type>enum <ref refid="group__vsc__interface_1gad831675b3cdf332b5713643d9c2a4f11" kindref="member">vsc_phase_mode</ref></type>
+        <definition>typedef enum vsc_phase_mode vsc_phase_mode_t</definition>
+        <argsstring></argsstring>
+        <name>vsc_phase_mode_t</name>
+        <briefdescription>
+<para>vsc phase mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para>vsc_phase_mode_t </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="28" column="24"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__vsc__interface_1ga4beda06843b8e5fd3f5b371450be1d47" prot="public" static="no">
+        <type>enum <ref refid="group__vsc__interface_1ga5fb335e5da41c6eb5e72e4148f3489d3" kindref="member">vsc_data_opr_mode</ref></type>
+        <definition>typedef enum vsc_data_opr_mode vsc_data_opr_mode_t</definition>
+        <argsstring></argsstring>
+        <name>vsc_data_opr_mode_t</name>
+        <briefdescription>
+<para>vsc data operation mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para>vsc_data_opr_mode_t </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="45" column="27"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__vsc__interface_1ga96197f245ebe640b369854d7ef382bc3" prot="public" static="no">
+        <type>enum <ref refid="group__vsc__interface_1ga784f29338a2220342e1a1d8982b018ed" kindref="member">vsc_adc_sel</ref></type>
+        <definition>typedef enum vsc_adc_sel vsc_adc_sel_t</definition>
+        <argsstring></argsstring>
+        <name>vsc_adc_sel_t</name>
+        <briefdescription>
+<para>vsc select adc instance </para>
+        </briefdescription>
+        <detaileddescription>
+<para>vsc_adc_sel_t </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="55" column="21"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__vsc__interface_1ga9a795929238c78f1d1abe2ca064880d0" prot="public" static="no">
+        <type>enum <ref refid="group__vsc__interface_1ga890ae1ed99ce9a8181f5eb9c162ac030" kindref="member">vsc_pos_cap_mode</ref></type>
+        <definition>typedef enum vsc_pos_cap_mode vsc_pos_cap_mode_t</definition>
+        <argsstring></argsstring>
+        <name>vsc_pos_cap_mode_t</name>
+        <briefdescription>
+<para>vsc position capture mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para>vsc_pos_cap_mode_t </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="65" column="26"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__vsc__interface_1ga596d7c0dc1c1db0acd931ef5f26850bf" prot="public" static="no">
+        <type>enum <ref refid="group__vsc__interface_1ga2ac0e8bed686eb5e574d05882a0038be" kindref="member">vsc_timestamp_sel</ref></type>
+        <definition>typedef enum vsc_timestamp_sel vsc_timestamp_sel_t</definition>
+        <argsstring></argsstring>
+        <name>vsc_timestamp_sel_t</name>
+        <briefdescription>
+<para>vsc select adc timestamp </para>
+        </briefdescription>
+        <detaileddescription>
+<para>vsc_timestamp_sel_t </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="75" column="27"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__vsc__interface_1ga036c4e24b32e6731da7281012837de0a" prot="public" static="no">
+        <type>enum <ref refid="group__vsc__interface_1ga33048dcae1eb0629759630e26940251a" kindref="member">vsc_irq_mask</ref></type>
+        <definition>typedef enum vsc_irq_mask vsc_irq_mask_t</definition>
+        <argsstring></argsstring>
+        <name>vsc_irq_mask_t</name>
+        <briefdescription>
+<para>vsc irq mask bit </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="95" column="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__vsc__interface_1ga6640b539833847cdfa6de582fef0e89b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void vsc_set_enable</definition>
+        <argsstring>(VSC_Type *vsc, bool enable)</argsstring>
+        <name>vsc_set_enable</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>vsc enable or disable </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VSC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true-enable, false-disable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="145" column="20" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="145" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1ga219dbc435116372871234c432cdc7b69" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void vsc_config_pos_capture_mode</definition>
+        <argsstring>(VSC_Type *vsc, vsc_pos_cap_mode_t mode)</argsstring>
+        <name>vsc_config_pos_capture_mode</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__vsc__interface_1ga9a795929238c78f1d1abe2ca064880d0" kindref="member">vsc_pos_cap_mode_t</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>vsc config position capture mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VSC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__vsc__interface_1ga9a795929238c78f1d1abe2ca064880d0" kindref="member">vsc_pos_cap_mode_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="160" column="20" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="160" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1gaba4ca4ed03435383a1163ba2e75d2557" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void vsc_config_adc_timestamp</definition>
+        <argsstring>(VSC_Type *vsc, vsc_timestamp_sel_t select, uint8_t num)</argsstring>
+        <name>vsc_config_adc_timestamp</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__vsc__interface_1ga596d7c0dc1c1db0acd931ef5f26850bf" kindref="member">vsc_timestamp_sel_t</ref></type>
+          <declname>select</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+<para>vsc config adc timestamp </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VSC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">select</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timestamp select from value a/b/c. <ref refid="group__vsc__interface_1ga596d7c0dc1c1db0acd931ef5f26850bf" kindref="member">vsc_timestamp_sel_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timestamp use which number index of <ref refid="group__vsc__interface_1ga596d7c0dc1c1db0acd931ef5f26850bf" kindref="member">vsc_timestamp_sel_t</ref> used. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="173" column="20" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="173" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1ga192726566571abb2e03eeaf16ce6162a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void vsc_set_irq_enable</definition>
+        <argsstring>(VSC_Type *vsc, uint32_t irq_mask, bool enable)</argsstring>
+        <name>vsc_set_irq_enable</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>irq_mask</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>vsc set irq enable or disable </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CLC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">irq_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>irq mask, <ref refid="group__vsc__interface_1ga036c4e24b32e6731da7281012837de0a" kindref="member">vsc_irq_mask_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enable or disable <itemizedlist>
+<listitem><para>true enable </para>
+</listitem>
+<listitem><para>false disable </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="187" column="20" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="187" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1ga2e8309ea9748346ad2404d342e666d52" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t vsc_get_irq_status</definition>
+        <argsstring>(VSC_Type *vsc)</argsstring>
+        <name>vsc_get_irq_status</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <briefdescription>
+<para>vsc get irq status </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CLC base address</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>irq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="202" column="24" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="202" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1gaef80850b3542923c612a8896113abdc3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void vsc_clear_irq_status</definition>
+        <argsstring>(VSC_Type *vsc, uint32_t irq_mask)</argsstring>
+        <name>vsc_clear_irq_status</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>irq_mask</declname>
+        </param>
+        <briefdescription>
+<para>vsc clear irq status </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CLC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">irq_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>irq mask, <ref refid="group__vsc__interface_1ga036c4e24b32e6731da7281012837de0a" kindref="member">vsc_irq_mask_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="212" column="20" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="212" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1gad7952064fb378faa083253707205f55a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool vsc_get_irq_flag</definition>
+        <argsstring>(VSC_Type *vsc, uint32_t irq_mask)</argsstring>
+        <name>vsc_get_irq_flag</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>irq_mask</declname>
+        </param>
+        <briefdescription>
+<para>vsc check irq request flag </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CLC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">irq_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>irq mask, <ref refid="group__vsc__interface_1ga036c4e24b32e6731da7281012837de0a" kindref="member">vsc_irq_mask_t</ref></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true-has</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>irq req, false-no irq req. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="224" column="20" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="224" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1gab2e1e74a9557babaf1df4206aa49cec6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void vsc_set_adc_wait_cycle</definition>
+        <argsstring>(VSC_Type *vsc, uint32_t wait_cycle)</argsstring>
+        <name>vsc_set_adc_wait_cycle</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>wait_cycle</declname>
+        </param>
+        <briefdescription>
+<para>vsc set adc wait cycles </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CLC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wait_cycle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>adc wait cycle for exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="234" column="20" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="234" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1ga041b9803d2ff191180c8780ab724a643" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void vsc_set_pos_wait_cycle</definition>
+        <argsstring>(VSC_Type *vsc, uint32_t wait_cycle)</argsstring>
+        <name>vsc_set_pos_wait_cycle</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>wait_cycle</declname>
+        </param>
+        <briefdescription>
+<para>vsc set position wait cycles </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CLC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wait_cycle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position wait cycle for exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="244" column="20" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="244" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1ga0f6642aa480630b949bea712f6509331" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void vsc_set_adc_tolerate</definition>
+        <argsstring>(VSC_Type *vsc, uint32_t tolerate)</argsstring>
+        <name>vsc_set_adc_tolerate</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>tolerate</declname>
+        </param>
+        <briefdescription>
+<para>vsc set abc phase value tolerate </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CLC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tolerate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value a/b/c total value tolerate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="254" column="20" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="254" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1ga12e4cb4c255dcdeb6773e5aef4eaf406" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void vsc_set_pos_pole_pairs</definition>
+        <argsstring>(VSC_Type *vsc, uint32_t pole_pairs)</argsstring>
+        <name>vsc_set_pos_pole_pairs</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>pole_pairs</declname>
+        </param>
+        <briefdescription>
+<para>vsc set position pole pairs </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CLC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pole_pairs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pole pairs number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="264" column="20" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="264" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1ga862973bdb7d74408f3629c4d118bc1e3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void vsc_set_sw_trig_in</definition>
+        <argsstring>(VSC_Type *vsc)</argsstring>
+        <name>vsc_set_sw_trig_in</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <briefdescription>
+<para>vsc set software trigger in </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CLC base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="273" column="20" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="273" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1ga9c1a8e90877a6aa64096190b9e45af5d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t vsc_get_d_axis_value</definition>
+        <argsstring>(VSC_Type *vsc, bool positive_seq)</argsstring>
+        <name>vsc_get_d_axis_value</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>positive_seq</declname>
+        </param>
+        <briefdescription>
+<para>vsc get d-axis value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CLC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">positive_seq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true - positive order; false - reverse order </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>d-axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="284" column="23" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="284" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1ga7e8dbcc06bbbeba73978bc133737597c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t vsc_get_q_axis_value</definition>
+        <argsstring>(VSC_Type *vsc, bool positive_seq)</argsstring>
+        <name>vsc_get_q_axis_value</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>positive_seq</declname>
+        </param>
+        <briefdescription>
+<para>vsc get q-axis value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CLC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">positive_seq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true - positive order; false - reverse order </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>q-axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="299" column="23" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="299" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1gaada0bde3a65a096fe1a9691a123166f3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t vsc_get_alpha_axis_value</definition>
+        <argsstring>(VSC_Type *vsc, bool positive_seq)</argsstring>
+        <name>vsc_get_alpha_axis_value</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>positive_seq</declname>
+        </param>
+        <briefdescription>
+<para>vsc get alpha-axis value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CLC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">positive_seq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true - positive order; false - reverse order </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>alpha-axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="314" column="23" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="314" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1ga3b6edbf30f904e2348fdb9dfe5249913" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t vsc_get_beta_axis_value</definition>
+        <argsstring>(VSC_Type *vsc, bool positive_seq)</argsstring>
+        <name>vsc_get_beta_axis_value</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>positive_seq</declname>
+        </param>
+        <briefdescription>
+<para>vsc get beta-axis value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CLC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">positive_seq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true - positive order; false - reverse order </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>beta-axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="329" column="23" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="329" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1ga33ea702f5c5166a5ab33d0aaba5855b6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t vsc_get_adc_timestamp</definition>
+        <argsstring>(VSC_Type *vsc)</argsstring>
+        <name>vsc_get_adc_timestamp</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <briefdescription>
+<para>vsc get adc timestamp value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CLC base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>adc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timestamp value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="347" column="24" bodyfile="drivers/inc/hpm_vsc_drv.h" bodystart="347" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1ga45841394de6bab10cb59da0e928e6ecb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vsc_get_default_config</definition>
+        <argsstring>(VSC_Type *vsc, vsc_config_t *config)</argsstring>
+        <name>vsc_get_default_config</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type><ref refid="structvsc__config__t" kindref="compound">vsc_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>vsc get default config </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VSC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vsc default config </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="358" column="6" bodyfile="drivers/src/hpm_vsc_drv.c" bodystart="10" bodyend="43" declfile="drivers/inc/hpm_vsc_drv.h" declline="358" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1gab5ab705a267269fba9410d6035cd802c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vsc_config_init</definition>
+        <argsstring>(VSC_Type *vsc, vsc_config_t *config)</argsstring>
+        <name>vsc_config_init</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type><ref refid="structvsc__config__t" kindref="compound">vsc_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>vsc config initialization </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VSC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vsc config struct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="366" column="6" bodyfile="drivers/src/hpm_vsc_drv.c" bodystart="45" bodyend="80" declfile="drivers/inc/hpm_vsc_drv.h" declline="366" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1gaaf43d19e3a99fdf442a0b759a3939cbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vsc_sw_inject_abc_value</definition>
+        <argsstring>(VSC_Type *vsc, int32_t value_a, int32_t value_b, int32_t value_c)</argsstring>
+        <name>vsc_sw_inject_abc_value</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>value_a</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>value_b</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>value_c</declname>
+        </param>
+        <briefdescription>
+<para>vsc software inject phase a/b/c value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VSC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value_a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phase a value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phase b value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value_c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phase c value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="376" column="6" bodyfile="drivers/src/hpm_vsc_drv.c" bodystart="82" bodyend="89" declfile="drivers/inc/hpm_vsc_drv.h" declline="376" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__vsc__interface_1ga0a135de6ac93c298649988460e43684d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vsc_sw_inject_pos_value</definition>
+        <argsstring>(VSC_Type *vsc, uint32_t pos)</argsstring>
+        <name>vsc_sw_inject_pos_value</name>
+        <param>
+          <type><ref refid="structVSC__Type" kindref="compound">VSC_Type</ref> *</type>
+          <declname>vsc</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>vsc software inject position value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vsc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VSC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_vsc_drv.h" line="384" column="6" bodyfile="drivers/src/hpm_vsc_drv.c" bodystart="91" bodyend="94" declfile="drivers/inc/hpm_vsc_drv.h" declline="384" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2024<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPM_VSC_DRV_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_VSC_DRV_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__common_8h" kindref="compound">hpm_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_vsc_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="group__vsc__interface_1gad831675b3cdf332b5713643d9c2a4f11" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1gad831675b3cdf332b5713643d9c2a4f11" kindref="member">vsc_phase_mode</ref><sp/>{</highlight></codeline>
+<codeline lineno="26" refid="group__vsc__interface_1ggad831675b3cdf332b5713643d9c2a4f11a0d16b3593dca7b4b28e9684075ef51ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1ggad831675b3cdf332b5713643d9c2a4f11a0d16b3593dca7b4b28e9684075ef51ee" kindref="member">vsc_abc_phase</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="27" refid="group__vsc__interface_1ggad831675b3cdf332b5713643d9c2a4f11ab701f100704178ad254528f0ca694417" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1ggad831675b3cdf332b5713643d9c2a4f11ab701f100704178ad254528f0ca694417" kindref="member">vsc_ab_phase</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="28" refid="group__vsc__interface_1gabcfce5a839beec2fc48876a187c95998" refkind="member"><highlight class="normal">}<sp/><ref refid="group__vsc__interface_1gabcfce5a839beec2fc48876a187c95998" kindref="member">vsc_phase_mode_t</ref>;<sp/></highlight></codeline>
+<codeline lineno="34" refid="group__vsc__interface_1ga5fb335e5da41c6eb5e72e4148f3489d3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1ga5fb335e5da41c6eb5e72e4148f3489d3" kindref="member">vsc_data_opr_mode</ref><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3ae9f5c8af9efabeb91f861d02fa19a9b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3ae9f5c8af9efabeb91f861d02fa19a9b1" kindref="member">vsc_data_opr_plus_mul_1</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="36" refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3ad143eb0235a4acea9b24cf71167c22bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3ad143eb0235a4acea9b24cf71167c22bc" kindref="member">vsc_data_opr_plus_mul_2</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="37" refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a490ccf54e29b4001399974c7d37befef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a490ccf54e29b4001399974c7d37befef" kindref="member">vsc_data_opr_plus_div_2</ref><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="38" refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a58ca675f0bd0afc13727a032bcdf7739" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a58ca675f0bd0afc13727a032bcdf7739" kindref="member">vsc_data_opr_plus_div_3</ref><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="39" refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3adac757c82fe5ba5a63d29122d8e6501b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3adac757c82fe5ba5a63d29122d8e6501b" kindref="member">vsc_data_opr_plus_div_4</ref><sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="40" refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3acf588618488b878946de285ae2324c6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3acf588618488b878946de285ae2324c6c" kindref="member">vsc_data_opr_minus_mul_1</ref><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="41" refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a9c290b674e6201703f50f52d4d7733e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a9c290b674e6201703f50f52d4d7733e7" kindref="member">vsc_data_opr_minus_mul_2</ref><sp/>=<sp/>9,</highlight></codeline>
+<codeline lineno="42" refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a1eeb1f52c5608f34c27fe38342edd7ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a1eeb1f52c5608f34c27fe38342edd7ed" kindref="member">vsc_data_opr_minus_div_2</ref><sp/>=<sp/>13,</highlight></codeline>
+<codeline lineno="43" refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3ab8905e7b48221fec52f3f17c95fad451" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3ab8905e7b48221fec52f3f17c95fad451" kindref="member">vsc_data_opr_minus_div_3</ref><sp/>=<sp/>14,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a82bb2f4c6b96870120abb1601dda4052" kindref="member">vsc_data_opr_minus_div_4</ref><sp/>=<sp/>15</highlight></codeline>
+<codeline lineno="45" refid="group__vsc__interface_1gga5fb335e5da41c6eb5e72e4148f3489d3a82bb2f4c6b96870120abb1601dda4052" refkind="member"><highlight class="normal">}<sp/><ref refid="group__vsc__interface_1ga4beda06843b8e5fd3f5b371450be1d47" kindref="member">vsc_data_opr_mode_t</ref>;<sp/></highlight></codeline>
+<codeline lineno="51" refid="group__vsc__interface_1ga784f29338a2220342e1a1d8982b018ed" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1ga784f29338a2220342e1a1d8982b018ed" kindref="member">vsc_adc_sel</ref><sp/>{</highlight></codeline>
+<codeline lineno="52" refid="group__vsc__interface_1gga784f29338a2220342e1a1d8982b018edaa02722be497b2981d0cb7d0f323c9025" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga784f29338a2220342e1a1d8982b018edaa02722be497b2981d0cb7d0f323c9025" kindref="member">vsc_sel_adc0</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="53" refid="group__vsc__interface_1gga784f29338a2220342e1a1d8982b018eda18923068495d1ecf94e739315393c930" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga784f29338a2220342e1a1d8982b018eda18923068495d1ecf94e739315393c930" kindref="member">vsc_sel_adc1</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga784f29338a2220342e1a1d8982b018eda37d9741410e1de95ff105721f1cff780" kindref="member">vsc_sel_adc2</ref><sp/>=<sp/>3</highlight></codeline>
+<codeline lineno="55" refid="group__vsc__interface_1ga96197f245ebe640b369854d7ef382bc3" refkind="member"><highlight class="normal">}<sp/><ref refid="group__vsc__interface_1ga96197f245ebe640b369854d7ef382bc3" kindref="member">vsc_adc_sel_t</ref>;<sp/></highlight></codeline>
+<codeline lineno="61" refid="group__vsc__interface_1ga890ae1ed99ce9a8181f5eb9c162ac030" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1ga890ae1ed99ce9a8181f5eb9c162ac030" kindref="member">vsc_pos_cap_mode</ref><sp/>{</highlight></codeline>
+<codeline lineno="62" refid="group__vsc__interface_1gga890ae1ed99ce9a8181f5eb9c162ac030a8b8afdb44207d85dbc166ee2fab7dd82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga890ae1ed99ce9a8181f5eb9c162ac030a8b8afdb44207d85dbc166ee2fab7dd82" kindref="member">vsc_pos_use_last_data_when_adc_sample_finish</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="63" refid="group__vsc__interface_1gga890ae1ed99ce9a8181f5eb9c162ac030a33a07fedd09acc6f6786f779cf0504e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga890ae1ed99ce9a8181f5eb9c162ac030a33a07fedd09acc6f6786f779cf0504e4" kindref="member">vsc_pos_use_first_data_after_adc_sample_start</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga890ae1ed99ce9a8181f5eb9c162ac030a8e58d69c4418ddd1fffb1e9d5301b5cb" kindref="member">vsc_pos_use_last_data_before_adc_sample_start</ref><sp/>=<sp/>2</highlight></codeline>
+<codeline lineno="65" refid="group__vsc__interface_1ga9a795929238c78f1d1abe2ca064880d0" refkind="member"><highlight class="normal">}<sp/><ref refid="group__vsc__interface_1ga9a795929238c78f1d1abe2ca064880d0" kindref="member">vsc_pos_cap_mode_t</ref>;<sp/></highlight></codeline>
+<codeline lineno="71" refid="group__vsc__interface_1ga2ac0e8bed686eb5e574d05882a0038be" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1ga2ac0e8bed686eb5e574d05882a0038be" kindref="member">vsc_timestamp_sel</ref><sp/>{</highlight></codeline>
+<codeline lineno="72" refid="group__vsc__interface_1gga2ac0e8bed686eb5e574d05882a0038bea9ecd7866f32dd3be37af919b5f056c25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga2ac0e8bed686eb5e574d05882a0038bea9ecd7866f32dd3be37af919b5f056c25" kindref="member">vsc_timestamp_sel_value_a</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="73" refid="group__vsc__interface_1gga2ac0e8bed686eb5e574d05882a0038bea31ffa832984510ceb8108bc9a77ef571" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga2ac0e8bed686eb5e574d05882a0038bea31ffa832984510ceb8108bc9a77ef571" kindref="member">vsc_timestamp_sel_value_b</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga2ac0e8bed686eb5e574d05882a0038beabacc68f83b2ede6b5a2e8f3dc61eab57" kindref="member">vsc_timestamp_sel_value_c</ref><sp/>=<sp/>3</highlight></codeline>
+<codeline lineno="75" refid="group__vsc__interface_1ga596d7c0dc1c1db0acd931ef5f26850bf" refkind="member"><highlight class="normal">}<sp/><ref refid="group__vsc__interface_1ga596d7c0dc1c1db0acd931ef5f26850bf" kindref="member">vsc_timestamp_sel_t</ref>;<sp/></highlight></codeline>
+<codeline lineno="81" refid="group__vsc__interface_1ga33048dcae1eb0629759630e26940251a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1ga33048dcae1eb0629759630e26940251a" kindref="member">vsc_irq_mask</ref><sp/>{</highlight></codeline>
+<codeline lineno="82" refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa1d8ae6b953710624098bb5fbb3fe5401" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa1d8ae6b953710624098bb5fbb3fe5401" kindref="member">vsc_irq_convert_done</ref><sp/>=<sp/><ref refid="group__common__interface_1gadd50893ff5f5bc55497a9f6d7e265ef9" kindref="member">BIT0_MASK</ref>,</highlight></codeline>
+<codeline lineno="83" refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa831fe4cfb6fd998f946a852370b68167" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa831fe4cfb6fd998f946a852370b68167" kindref="member">vsc_irq_abc_over_tolerate</ref><sp/>=<sp/><ref refid="group__common__interface_1ga4d6a0d98f52a25f6ff6ff1b519ef663c" kindref="member">BIT1_MASK</ref>,</highlight></codeline>
+<codeline lineno="84" refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aab75331b6471beb2b3510d6c3cce16e78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aab75331b6471beb2b3510d6c3cce16e78" kindref="member">vsc_irq_c_overflow</ref><sp/>=<sp/><ref refid="group__common__interface_1ga1d1dbd806d14df9516e092d996df7d03" kindref="member">BIT2_MASK</ref>,</highlight></codeline>
+<codeline lineno="85" refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aacd8fd76463c17fcb6388b2fba4139501" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aacd8fd76463c17fcb6388b2fba4139501" kindref="member">vsc_irq_b_overflow</ref><sp/>=<sp/><ref refid="group__common__interface_1gaba81c2db01945bbf220930737a7e1f83" kindref="member">BIT3_MASK</ref>,</highlight></codeline>
+<codeline lineno="86" refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa86fa89099e0844049c98656cc6104930" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa86fa89099e0844049c98656cc6104930" kindref="member">vsc_irq_a_overflow</ref><sp/>=<sp/><ref refid="group__common__interface_1ga0437ab515e31994a1b57bf14d5a42e10" kindref="member">BIT4_MASK</ref>,</highlight></codeline>
+<codeline lineno="87" refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa741e503b82f89ed5c0351a43f6c32410" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa741e503b82f89ed5c0351a43f6c32410" kindref="member">vsc_irq_adc2_cap_not_enough</ref><sp/>=<sp/><ref refid="group__common__interface_1ga466255081601f06f0b1542e998c28187" kindref="member">BIT5_MASK</ref>,</highlight></codeline>
+<codeline lineno="88" refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aaab6fc959c7b45aa6934a1a95aaf76816" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aaab6fc959c7b45aa6934a1a95aaf76816" kindref="member">vsc_irq_adc1_cap_not_enough</ref><sp/>=<sp/><ref refid="group__common__interface_1gac177d7cd0cf5191a5a5f82f366e3f258" kindref="member">BIT6_MASK</ref>,</highlight></codeline>
+<codeline lineno="89" refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aaf9dfe16d715055b632b7d0d1924b0e11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aaf9dfe16d715055b632b7d0d1924b0e11" kindref="member">vsc_irq_adc0_cap_not_enough</ref><sp/>=<sp/><ref refid="group__common__interface_1ga6b4e07dfac3758845ce0e92fc5df7cd0" kindref="member">BIT7_MASK</ref>,</highlight></codeline>
+<codeline lineno="90" refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aaac861944e5f53ea0173d3f3c01b8bd4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aaac861944e5f53ea0173d3f3c01b8bd4d" kindref="member">vsc_irq_pos_timeout</ref><sp/>=<sp/><ref refid="group__common__interface_1ga0a5ba6c899024fea92c209c4c09bc371" kindref="member">BIT8_MASK</ref>,</highlight></codeline>
+<codeline lineno="91" refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aae082d0179c0902cc465efc4b54268ada" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aae082d0179c0902cc465efc4b54268ada" kindref="member">vsc_irq_adc2_timeout</ref><sp/>=<sp/><ref refid="group__common__interface_1gafd75122c0e2741b4dd720d5d5b0d69ec" kindref="member">BIT9_MASK</ref>,</highlight></codeline>
+<codeline lineno="92" refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa88d2916c6262d5cd64f010edc89fcf2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa88d2916c6262d5cd64f010edc89fcf2f" kindref="member">vsc_irq_adc1_timeout</ref><sp/>=<sp/><ref refid="group__common__interface_1ga7aa7dafef61d2ac0b8f0a4634c2ab5e3" kindref="member">BIT10_MASK</ref>,</highlight></codeline>
+<codeline lineno="93" refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa609601a94f5bec9df1057927c2a96c27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa609601a94f5bec9df1057927c2a96c27" kindref="member">vsc_irq_adc0_timeout</ref><sp/>=<sp/><ref refid="group__common__interface_1gad10140227d8d0a771c20f8e9f6fb901b" kindref="member">BIT11_MASK</ref>,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa548d7850f04254f221723fef8023e1c3" kindref="member">vsc_irq_convert_conflict</ref><sp/>=<sp/><ref refid="group__common__interface_1ga7e91ca4e5e8c7fb74a4ed735e5dcd238" kindref="member">BIT12_MASK</ref></highlight></codeline>
+<codeline lineno="95" refid="group__vsc__interface_1gga33048dcae1eb0629759630e26940251aa548d7850f04254f221723fef8023e1c3" refkind="member"><highlight class="normal">}<sp/><ref refid="group__vsc__interface_1ga036c4e24b32e6731da7281012837de0a" kindref="member">vsc_irq_mask_t</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="structvsc__adc__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101" refid="structvsc__adc__config__t_1aeec0e4c722b3c5b9230384188615e9df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1ga96197f245ebe640b369854d7ef382bc3" kindref="member">vsc_adc_sel_t</ref><sp/><ref refid="structvsc__adc__config__t_1aeec0e4c722b3c5b9230384188615e9df" kindref="member">adc_sel</ref>;</highlight></codeline>
+<codeline lineno="102" refid="structvsc__adc__config__t_1ab433e76c5174d762ffd0df927118ec3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structvsc__adc__config__t_1ab433e76c5174d762ffd0df927118ec3f" kindref="member">adc_chn</ref>;</highlight></codeline>
+<codeline lineno="103" refid="structvsc__adc__config__t_1a1bb0186a570b8e90dc28de3b64a011ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structvsc__adc__config__t_1a1bb0186a570b8e90dc28de3b64a011ab" kindref="member">adc_offset</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}<sp/><ref refid="structvsc__adc__config__t" kindref="compound">vsc_adc_config_t</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="structvsc__data__opr__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110" refid="structvsc__data__opr__config__t_1a4d42fc0f2978d53b8f32606a3cd7ba21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1ga4beda06843b8e5fd3f5b371450be1d47" kindref="member">vsc_data_opr_mode_t</ref><sp/><ref refid="structvsc__data__opr__config__t_1a4d42fc0f2978d53b8f32606a3cd7ba21" kindref="member">opr_0</ref>;</highlight></codeline>
+<codeline lineno="111" refid="structvsc__data__opr__config__t_1a7529b7a09a4b417f79c155078c0b3c68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1ga4beda06843b8e5fd3f5b371450be1d47" kindref="member">vsc_data_opr_mode_t</ref><sp/><ref refid="structvsc__data__opr__config__t_1a7529b7a09a4b417f79c155078c0b3c68" kindref="member">opr_1</ref>;</highlight></codeline>
+<codeline lineno="112" refid="structvsc__data__opr__config__t_1aeaaeefc661e852246dc956220aea5926" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1ga4beda06843b8e5fd3f5b371450be1d47" kindref="member">vsc_data_opr_mode_t</ref><sp/><ref refid="structvsc__data__opr__config__t_1aeaaeefc661e852246dc956220aea5926" kindref="member">opr_2</ref>;</highlight></codeline>
+<codeline lineno="113" refid="structvsc__data__opr__config__t_1a049f58e1b0163441cbab985e6ffdf063" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1ga4beda06843b8e5fd3f5b371450be1d47" kindref="member">vsc_data_opr_mode_t</ref><sp/><ref refid="structvsc__data__opr__config__t_1a049f58e1b0163441cbab985e6ffdf063" kindref="member">opr_3</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}<sp/><ref refid="structvsc__data__opr__config__t" kindref="compound">vsc_data_opr_config_t</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="structvsc__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120" refid="structvsc__config__t_1a5ad8e05de2decce49ea27eeae76952b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1gabcfce5a839beec2fc48876a187c95998" kindref="member">vsc_phase_mode_t</ref><sp/><ref refid="structvsc__config__t_1a5ad8e05de2decce49ea27eeae76952b8" kindref="member">phase_mode</ref>;</highlight></codeline>
+<codeline lineno="121" refid="structvsc__config__t_1a1812bbeb80a2fe2460db8ffa576c95ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structvsc__config__t_1a1812bbeb80a2fe2460db8ffa576c95ce" kindref="member">a_data_cnt</ref>;</highlight></codeline>
+<codeline lineno="122" refid="structvsc__config__t_1ab82d80dd9f21967988179891d6d8da2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structvsc__config__t_1ab82d80dd9f21967988179891d6d8da2b" kindref="member">b_data_cnt</ref>;</highlight></codeline>
+<codeline lineno="123" refid="structvsc__config__t_1ae77e67b6f9620cf0d7782af5076ded2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structvsc__config__t_1ae77e67b6f9620cf0d7782af5076ded2e" kindref="member">c_data_cnt</ref>;</highlight></codeline>
+<codeline lineno="124" refid="structvsc__config__t_1a728ac7d77e80f15a893f3d7ba13609dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvsc__data__opr__config__t" kindref="compound">vsc_data_opr_config_t</ref><sp/><ref refid="structvsc__config__t_1a728ac7d77e80f15a893f3d7ba13609dd" kindref="member">a_data_opr_config</ref>;</highlight></codeline>
+<codeline lineno="125" refid="structvsc__config__t_1a1ee10c093432f73e355f243caa241f55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvsc__data__opr__config__t" kindref="compound">vsc_data_opr_config_t</ref><sp/><ref refid="structvsc__config__t_1a1ee10c093432f73e355f243caa241f55" kindref="member">b_data_opr_config</ref>;</highlight></codeline>
+<codeline lineno="126" refid="structvsc__config__t_1a9d42abfa0d3283aa59d263edda29c93f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvsc__data__opr__config__t" kindref="compound">vsc_data_opr_config_t</ref><sp/><ref refid="structvsc__config__t_1a9d42abfa0d3283aa59d263edda29c93f" kindref="member">c_data_opr_config</ref>;</highlight></codeline>
+<codeline lineno="127" refid="structvsc__config__t_1a0d228df82dd729035fe64ea4663e6363" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvsc__adc__config__t" kindref="compound">vsc_adc_config_t</ref><sp/><ref refid="structvsc__config__t_1a0d228df82dd729035fe64ea4663e6363" kindref="member">a_adc_config</ref>;</highlight></codeline>
+<codeline lineno="128" refid="structvsc__config__t_1a4adb4a7b70aa2242665440148f8647b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvsc__adc__config__t" kindref="compound">vsc_adc_config_t</ref><sp/><ref refid="structvsc__config__t_1a4adb4a7b70aa2242665440148f8647b2" kindref="member">b_adc_config</ref>;</highlight></codeline>
+<codeline lineno="129" refid="structvsc__config__t_1ac6a43b6c4100b969783a0bcd546eaf14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvsc__adc__config__t" kindref="compound">vsc_adc_config_t</ref><sp/><ref refid="structvsc__config__t_1ac6a43b6c4100b969783a0bcd546eaf14" kindref="member">c_adc_config</ref>;</highlight></codeline>
+<codeline lineno="130" refid="structvsc__config__t_1a8e817cd650225934d826b767750e14c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__vsc__interface_1ga9a795929238c78f1d1abe2ca064880d0" kindref="member">vsc_pos_cap_mode_t</ref><sp/><ref refid="structvsc__config__t_1a8e817cd650225934d826b767750e14c1" kindref="member">pos_cap_mode</ref>;</highlight></codeline>
+<codeline lineno="131" refid="structvsc__config__t_1a3ea7534e61d80ea4cf5d0e91d680b5a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structvsc__config__t_1a3ea7534e61d80ea4cf5d0e91d680b5a2" kindref="member">pole_pairs</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}<sp/><ref refid="structvsc__config__t" kindref="compound">vsc_config_t</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="group__vsc__interface_1ga6640b539833847cdfa6de582fef0e89b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1ga6640b539833847cdfa6de582fef0e89b" kindref="member">vsc_set_enable</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enable)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vsc-&gt;<ref refid="structVSC__Type_1a04be6e40b8573e87029324b7eefb2d46" kindref="member">ABC_MODE</ref><sp/>|=<sp/><ref refid="HPM6E00_2ip_2hpm__vsc__regs_8h_1a8a5f21cb84219d00a62d4ab70e714923" kindref="member">VSC_ABC_MODE_ENABLE_VSC_MASK</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vsc-&gt;<ref refid="structVSC__Type_1a04be6e40b8573e87029324b7eefb2d46" kindref="member">ABC_MODE</ref><sp/>&amp;=<sp/>~<ref refid="HPM6E00_2ip_2hpm__vsc__regs_8h_1a8a5f21cb84219d00a62d4ab70e714923" kindref="member">VSC_ABC_MODE_ENABLE_VSC_MASK</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="group__vsc__interface_1ga219dbc435116372871234c432cdc7b69" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1ga219dbc435116372871234c432cdc7b69" kindref="member">vsc_config_pos_capture_mode</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/><ref refid="group__vsc__interface_1ga9a795929238c78f1d1abe2ca064880d0" kindref="member">vsc_pos_cap_mode_t</ref><sp/>mode)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>vsc-&gt;<ref refid="structVSC__Type_1a67a6697485efb4acca9323aa09e48789" kindref="member">TIMELOCK</ref><sp/>=<sp/>(vsc-&gt;<ref refid="structVSC__Type_1a67a6697485efb4acca9323aa09e48789" kindref="member">TIMELOCK</ref><sp/>&amp;<sp/>~(<ref refid="HPM6E00_2ip_2hpm__vsc__regs_8h_1a227722be60ab1b7673d0bb401ec494d6" kindref="member">VSC_TIMELOCK_POSITION_CAPTURE_MODE_MASK</ref>))</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6E00_2ip_2hpm__vsc__regs_8h_1a83e9a2af57db3d81d4ac1df159bbafee" kindref="member">VSC_TIMELOCK_POSITION_CAPTURE_MODE_SET</ref>(mode);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="group__vsc__interface_1gaba4ca4ed03435383a1163ba2e75d2557" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1gaba4ca4ed03435383a1163ba2e75d2557" kindref="member">vsc_config_adc_timestamp</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/><ref refid="group__vsc__interface_1ga596d7c0dc1c1db0acd931ef5f26850bf" kindref="member">vsc_timestamp_sel_t</ref><sp/>select,<sp/>uint8_t<sp/>num)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>vsc-&gt;<ref refid="structVSC__Type_1a67a6697485efb4acca9323aa09e48789" kindref="member">TIMELOCK</ref><sp/>=<sp/>(vsc-&gt;<ref refid="structVSC__Type_1a67a6697485efb4acca9323aa09e48789" kindref="member">TIMELOCK</ref><sp/>&amp;<sp/>~(<ref refid="HPM6E00_2ip_2hpm__vsc__regs_8h_1ae15285775ebf8f45768d54ba28a28192" kindref="member">VSC_TIMELOCK_ADC_TIMESTAMP_SEL_MASK</ref><sp/>|<sp/><ref refid="HPM6E00_2ip_2hpm__vsc__regs_8h_1a147a9d5d7e4902f147f79f6857ab484b" kindref="member">VSC_TIMELOCK_VALUE_COUNTER_SEL_MASK</ref>))</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6E00_2ip_2hpm__vsc__regs_8h_1a11f417806ecb78deeae5ee747231c7fb" kindref="member">VSC_TIMELOCK_ADC_TIMESTAMP_SEL_SET</ref>(select)<sp/>|<sp/><ref refid="HPM6E00_2ip_2hpm__vsc__regs_8h_1a7e8b8570b3bd8f9f6c1d3ad897b0c26f" kindref="member">VSC_TIMELOCK_VALUE_COUNTER_SEL_SET</ref>(num);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="group__vsc__interface_1ga192726566571abb2e03eeaf16ce6162a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1ga192726566571abb2e03eeaf16ce6162a" kindref="member">vsc_set_irq_enable</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/>uint32_t<sp/>irq_mask,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enable)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vsc-&gt;<ref refid="structVSC__Type_1a390a056dd07a93de9d9c462efb7b1fec" kindref="member">IRQ_ENABLE</ref><sp/>|=<sp/>irq_mask;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vsc-&gt;<ref refid="structVSC__Type_1a390a056dd07a93de9d9c462efb7b1fec" kindref="member">IRQ_ENABLE</ref><sp/>&amp;=<sp/>~irq_mask;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="group__vsc__interface_1ga2e8309ea9748346ad2404d342e666d52" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__vsc__interface_1ga2e8309ea9748346ad2404d342e666d52" kindref="member">vsc_get_irq_status</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vsc-&gt;<ref refid="structVSC__Type_1ad2c409e51ef975e1d2502ce39775a9cb" kindref="member">IRQ_STATUS</ref>;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="group__vsc__interface_1gaef80850b3542923c612a8896113abdc3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1gaef80850b3542923c612a8896113abdc3" kindref="member">vsc_clear_irq_status</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/>uint32_t<sp/>irq_mask)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>vsc-&gt;<ref refid="structVSC__Type_1ad2c409e51ef975e1d2502ce39775a9cb" kindref="member">IRQ_STATUS</ref><sp/>=<sp/>irq_mask;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="group__vsc__interface_1gad7952064fb378faa083253707205f55a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1gad7952064fb378faa083253707205f55a" kindref="member">vsc_get_irq_flag</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/>uint32_t<sp/>irq_mask)</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((vsc-&gt;<ref refid="structVSC__Type_1ad2c409e51ef975e1d2502ce39775a9cb" kindref="member">IRQ_STATUS</ref><sp/>&amp;<sp/>irq_mask)<sp/>==<sp/>irq_mask)<sp/>?<sp/>true<sp/>:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="group__vsc__interface_1gab2e1e74a9557babaf1df4206aa49cec6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1gab2e1e74a9557babaf1df4206aa49cec6" kindref="member">vsc_set_adc_wait_cycle</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/>uint32_t<sp/>wait_cycle)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>vsc-&gt;<ref refid="structVSC__Type_1aa5e28f20d4cb86363d39c11d77d0b297" kindref="member">ADC_WAIT_CYCLE</ref><sp/>=<sp/><ref refid="HPM6E00_2ip_2hpm__vsc__regs_8h_1a278c80ad040269b12cfd495806a85ab8" kindref="member">VSC_ADC_WAIT_CYCLE_ADC_WAIT_CYCLE_SET</ref>(wait_cycle);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="group__vsc__interface_1ga041b9803d2ff191180c8780ab724a643" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1ga041b9803d2ff191180c8780ab724a643" kindref="member">vsc_set_pos_wait_cycle</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/>uint32_t<sp/>wait_cycle)</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>vsc-&gt;<ref refid="structVSC__Type_1a2331b52b82a8382ee70d371acb135c40" kindref="member">POS_WAIT_CYCLE</ref><sp/>=<sp/><ref refid="HPM6E00_2ip_2hpm__vsc__regs_8h_1a20f8c7c9001ac6cd654206436e37d49b" kindref="member">VSC_POS_WAIT_CYCLE_POS_WAIT_CYCLE_SET</ref>(wait_cycle);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="group__vsc__interface_1ga0f6642aa480630b949bea712f6509331" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1ga0f6642aa480630b949bea712f6509331" kindref="member">vsc_set_adc_tolerate</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/>uint32_t<sp/>tolerate)</highlight></codeline>
+<codeline lineno="255"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>vsc-&gt;<ref refid="structVSC__Type_1aa5fe5cda4baceeb4e422d31fa5095d89" kindref="member">ADC_PHASE_TOLERATE</ref><sp/>=<sp/><ref refid="HPM6E00_2ip_2hpm__vsc__regs_8h_1ada0d93da4de03b7195e2b12b394665cc" kindref="member">VSC_ADC_PHASE_TOLERATE_ADC_PHASE_TOLERATE_SET</ref>(tolerate);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264" refid="group__vsc__interface_1ga12e4cb4c255dcdeb6773e5aef4eaf406" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1ga12e4cb4c255dcdeb6773e5aef4eaf406" kindref="member">vsc_set_pos_pole_pairs</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/>uint32_t<sp/>pole_pairs)</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>vsc-&gt;<ref refid="structVSC__Type_1aeb723a24b0f3b855ce052cb7da1126d3" kindref="member">POS_POLE</ref><sp/>=<sp/>(vsc-&gt;<ref refid="structVSC__Type_1aeb723a24b0f3b855ce052cb7da1126d3" kindref="member">POS_POLE</ref><sp/>&amp;<sp/>~<ref refid="HPM6E00_2ip_2hpm__vsc__regs_8h_1abd1a2212e735ab9d1f07267b28d61cd6" kindref="member">VSC_POS_POLE_POS_POLE_MASK</ref>)<sp/>|<sp/><ref refid="HPM6E00_2ip_2hpm__vsc__regs_8h_1ade31d4695bde07cf73baf7cdfa0b48cc" kindref="member">VSC_POS_POLE_POS_POLE_SET</ref>(pole_pairs);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273" refid="group__vsc__interface_1ga862973bdb7d74408f3629c4d118bc1e3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1ga862973bdb7d74408f3629c4d118bc1e3" kindref="member">vsc_set_sw_trig_in</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>vsc-&gt;<ref refid="structVSC__Type_1abfbd657f47e4e35d093add1c2635c357" kindref="member">TRIGGER_SW</ref><sp/>=<sp/><ref refid="HPM6E00_2ip_2hpm__vsc__regs_8h_1a4f4feb02f0c358f56ba69014f3eaf84a" kindref="member">VSC_TRIGGER_SW_TRIGGER_SW_MASK</ref>;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284" refid="group__vsc__interface_1ga9c1a8e90877a6aa64096190b9e45af5d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>int32_t<sp/><ref refid="group__vsc__interface_1ga9c1a8e90877a6aa64096190b9e45af5d" kindref="member">vsc_get_d_axis_value</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>positive_seq)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(positive_seq)<sp/>{</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(int32_t)vsc-&gt;<ref refid="structVSC__Type_1a38d0fc27bc6470bf47fb2b999acefe2e" kindref="member">ID_POSEDGE</ref>;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(int32_t)vsc-&gt;<ref refid="structVSC__Type_1a3f2c67289713e84bae43ebb36e222fa2" kindref="member">ID_NEGEDGE</ref>;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299" refid="group__vsc__interface_1ga7e8dbcc06bbbeba73978bc133737597c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>int32_t<sp/><ref refid="group__vsc__interface_1ga7e8dbcc06bbbeba73978bc133737597c" kindref="member">vsc_get_q_axis_value</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>positive_seq)</highlight></codeline>
+<codeline lineno="300"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(positive_seq)<sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(int32_t)vsc-&gt;<ref refid="structVSC__Type_1a1baaecb80aea5c812c8c07a5504268bb" kindref="member">IQ_POSEDGE</ref>;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(int32_t)vsc-&gt;<ref refid="structVSC__Type_1a03e213ad45544e573ab699677fd11bd8" kindref="member">IQ_NEGEDGE</ref>;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314" refid="group__vsc__interface_1gaada0bde3a65a096fe1a9691a123166f3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>int32_t<sp/><ref refid="group__vsc__interface_1gaada0bde3a65a096fe1a9691a123166f3" kindref="member">vsc_get_alpha_axis_value</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>positive_seq)</highlight></codeline>
+<codeline lineno="315"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(positive_seq)<sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(int32_t)vsc-&gt;<ref refid="structVSC__Type_1a267d8d4f1c357db17545f785b9a1da65" kindref="member">ALPHA_POSEDGE</ref>;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(int32_t)vsc-&gt;<ref refid="structVSC__Type_1aa34cd05b115f06f970b6757a4d685a32" kindref="member">ALPHA_NEGEDGE</ref>;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329" refid="group__vsc__interface_1ga3b6edbf30f904e2348fdb9dfe5249913" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>int32_t<sp/><ref refid="group__vsc__interface_1ga3b6edbf30f904e2348fdb9dfe5249913" kindref="member">vsc_get_beta_axis_value</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>positive_seq)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(positive_seq)<sp/>{</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(int32_t)vsc-&gt;<ref refid="structVSC__Type_1ad29ed97b11921cc235654da01a7628ca" kindref="member">BETA_POSEDGE</ref>;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vsc-&gt;<ref refid="structVSC__Type_1a64069d32fd8333782062ccffabe1e9e8" kindref="member">BETA_NEGEDGE</ref><sp/>==<sp/>0x80000000)<sp/>{</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0x7FFFFFFF;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(int32_t)vsc-&gt;<ref refid="structVSC__Type_1a64069d32fd8333782062ccffabe1e9e8" kindref="member">BETA_NEGEDGE</ref>;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="340"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347" refid="group__vsc__interface_1ga33ea702f5c5166a5ab33d0aaba5855b6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__vsc__interface_1ga33ea702f5c5166a5ab33d0aaba5855b6" kindref="member">vsc_get_adc_timestamp</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc)</highlight></codeline>
+<codeline lineno="348"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vsc-&gt;<ref refid="structVSC__Type_1a1e0d364c4a172996044c29cf5c4b11d6" kindref="member">TIMESTAMP_LOCKED</ref>;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1ga45841394de6bab10cb59da0e928e6ecb" kindref="member">vsc_get_default_config</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/><ref refid="structvsc__config__t" kindref="compound">vsc_config_t</ref><sp/>*config);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1gab5ab705a267269fba9410d6035cd802c" kindref="member">vsc_config_init</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/><ref refid="structvsc__config__t" kindref="compound">vsc_config_t</ref><sp/>*config);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1gaaf43d19e3a99fdf442a0b759a3939cbd" kindref="member">vsc_sw_inject_abc_value</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/>int32_t<sp/>value_a,<sp/>int32_t<sp/>value_b,<sp/>int32_t<sp/>value_c);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__vsc__interface_1ga0a135de6ac93c298649988460e43684d" kindref="member">vsc_sw_inject_pos_value</ref>(<ref refid="structVSC__Type" kindref="compound">VSC_Type</ref><sp/>*vsc,<sp/>uint32_t<sp/>pos);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HPM_VSC_DRV_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="drivers/inc/hpm_vsc_drv.h"/>
+  </compounddef>
+</doxygen>

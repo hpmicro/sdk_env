@@ -1,0 +1,1914 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hpm__gptmr__drv_8h" kind="file" language="C++">
+    <compoundname>hpm_gptmr_drv.h</compoundname>
+    <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
+    <includes local="yes">hpm_gptmr_regs.h</includes>
+    <includes local="yes">hpm_soc_feature.h</includes>
+    <includedby refid="hpm__gptmr__drv_8c" local="yes">drivers/src/hpm_gptmr_drv.c</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="1">
+        <label>drivers/inc/hpm_gptmr_drv.h</label>
+        <link refid="hpm__gptmr__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="8">
+        <label>hpm_gptmr_regs.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>drivers/inc/hpm_gptmr_drv.h</label>
+        <link refid="hpm__gptmr__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>drivers/src/hpm_gptmr_drv.c</label>
+        <link refid="hpm__gptmr__drv_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structgptmr__channel__config" prot="public">gptmr_channel_config</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__gptmr__interface_1ga813a7a3564707e2abdc1ffc3243baeb5" prot="public" static="no">
+        <name>GPTMR_CH_CMP_IRQ_MASK</name>
+        <param><defname>ch</defname></param>
+        <param><defname>cmp</defname></param>
+        <initializer>(1 &lt;&lt; (ch * 4 + 2 + cmp))</initializer>
+        <briefdescription>
+<para>GPTMR channel IRQ mask. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="24" column="9" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__gptmr__interface_1ga0aa272b07e4f120ab3df8ea018ba36f3" prot="public" static="no">
+        <name>GPTMR_CH_CAP_IRQ_MASK</name>
+        <param><defname>ch</defname></param>
+        <initializer>(1 &lt;&lt; (ch * 4 + 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="25" column="9" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__gptmr__interface_1gaaf1fc6b5889cb5dbb84cd4ec1fcb3e59" prot="public" static="no">
+        <name>GPTMR_CH_RLD_IRQ_MASK</name>
+        <param><defname>ch</defname></param>
+        <initializer>(1 &lt;&lt; (ch * 4))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="26" column="9" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__gptmr__interface_1ga18bf38a4144e9eb2cb12e2ba5cfd8487" prot="public" static="no">
+        <name>GPTMR_CH_CMP_STAT_MASK</name>
+        <param><defname>ch</defname></param>
+        <param><defname>cmp</defname></param>
+        <initializer>(1 &lt;&lt; (ch * 4 + 2 + cmp))</initializer>
+        <briefdescription>
+<para>GPTMR channel status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="31" column="9" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__gptmr__interface_1ga1e45ebd5d0d2211497a5cfb2b04ed16f" prot="public" static="no">
+        <name>GPTMR_CH_CAP_STAT_MASK</name>
+        <param><defname>ch</defname></param>
+        <initializer>(1 &lt;&lt; (ch * 4 + 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="32" column="9" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__gptmr__interface_1gab1fc7dd2b978fa48e351bc1ab8370e9d" prot="public" static="no">
+        <name>GPTMR_CH_RLD_STAT_MASK</name>
+        <param><defname>ch</defname></param>
+        <initializer>(1 &lt;&lt; (ch * 4))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="33" column="9" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__gptmr__interface_1ga25586ca5c4fe3e70e0a4f12002a8839d" prot="public" static="no">
+        <name>GPTMR_CH_GCR_SWSYNCT_MASK</name>
+        <param><defname>ch</defname></param>
+        <initializer>(1 &lt;&lt; ch)</initializer>
+        <briefdescription>
+<para>GPTMR channel swsynct mask. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="38" column="9" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__gptmr__interface_1gaf76378d84f27d3345ed014581d8d1660" prot="public" static="no">
+        <name>GPTMR_CH_CMP_COUNT</name>
+        <initializer>(2U)</initializer>
+        <briefdescription>
+<para>GPTMR one channel support output comparator count. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="43" column="9" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__gptmr__interface_1ga495387c7ab901953466249a137bffb0c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>gptmr_synci_edge</name>
+        <enumvalue id="group__gptmr__interface_1gga495387c7ab901953466249a137bffb0cad4abb0ab26f2be3de500f7d8db58d35e" prot="public">
+          <name>gptmr_synci_edge_none</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1gga495387c7ab901953466249a137bffb0ca2b92aed362f8683c5cb551366a82e124" prot="public">
+          <name>gptmr_synci_edge_falling</name>
+          <initializer>= GPTMR_CHANNEL_CR_SYNCIFEN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1gga495387c7ab901953466249a137bffb0caecafd442a53750e7d031a109f9edad4b" prot="public">
+          <name>gptmr_synci_edge_rising</name>
+          <initializer>= GPTMR_CHANNEL_CR_SYNCIREN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1gga495387c7ab901953466249a137bffb0ca93c86a8da7d75a3afb9b066c1e8a8ae1" prot="public">
+          <name>gptmr_synci_edge_both</name>
+          <initializer>= gptmr_synci_edge_falling | gptmr_synci_edge_rising</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>GPTMR synci valid edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="48" column="1" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="48" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__gptmr__interface_1ga78170ad26f3ed5e225107d5a148dcce9" prot="public" static="no" strong="no">
+        <type></type>
+        <name>gptmr_work_mode</name>
+        <enumvalue id="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9a2375a0b03c72a93185282c1f43150697" prot="public">
+          <name>gptmr_work_mode_no_capture</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9a0644ca8c29e9d7e4798135cd3adab1df" prot="public">
+          <name>gptmr_work_mode_capture_at_rising_edge</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9abf88951b878ef1f7d8754cdbb1fc517d" prot="public">
+          <name>gptmr_work_mode_capture_at_falling_edge</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9a698e82e551cf9c6076ffbd50d7cdb41d" prot="public">
+          <name>gptmr_work_mode_capture_at_both_edge</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9a95e6ab64454022968e6a4ee4553ba7ca" prot="public">
+          <name>gptmr_work_mode_measure_width</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>GPTMR work mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="58" column="1" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="58" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__gptmr__interface_1ga1e0df932756831fea4f9bf4f81b1d6dd" prot="public" static="no" strong="no">
+        <type></type>
+        <name>gptmr_dma_request_event</name>
+        <enumvalue id="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6dda54f985226adac652cd37f8a3e0ffec0f" prot="public">
+          <name>gptmr_dma_request_on_cmp0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6dda5019dc13bdc18dc9a411456d5ab3fda2" prot="public">
+          <name>gptmr_dma_request_on_cmp1</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6dda8c217265ec783a25c78fef7eb26edc70" prot="public">
+          <name>gptmr_dma_request_on_input_signal_toggle</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6ddad864f4bff05f45cfb94b4611468b79cd" prot="public">
+          <name>gptmr_dma_request_on_reload</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6ddafe0cea07920b82d7bd8260ae7b0783a4" prot="public">
+          <name>gptmr_dma_request_disabled</name>
+          <initializer>= 0xFF</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>GPTMR DMA request event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="69" column="1" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="69" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__gptmr__interface_1gaf9b031dd043fef84aeb7b29ac0775e53" prot="public" static="no" strong="no">
+        <type></type>
+        <name>gptmr_counter_type</name>
+        <enumvalue id="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53a5bdb2a27de542161b5a394922a8fea6b" prot="public">
+          <name>gptmr_counter_type_rising_edge</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53afb3f966f6441308654ae9ccd34638dc8" prot="public">
+          <name>gptmr_counter_type_falling_edge</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53ae2a02b1aa0d8f386a2eed0dab2c573f9" prot="public">
+          <name>gptmr_counter_type_measured_period</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53a84624a5849d1cf1541cda41dd98b166f" prot="public">
+          <name>gptmr_counter_type_measured_duty_cycle</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53a885ec08eaa1c2043e0acfed4929af98d" prot="public">
+          <name>gptmr_counter_type_normal</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>GPTMR counter type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="80" column="1" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="80" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__gptmr__interface_1ga8746dc389b2e4d490a6918e7e416e5b6" prot="public" static="no">
+        <type>enum <ref refid="group__gptmr__interface_1ga495387c7ab901953466249a137bffb0c" kindref="member">gptmr_synci_edge</ref></type>
+        <definition>typedef enum gptmr_synci_edge gptmr_synci_edge_t</definition>
+        <argsstring></argsstring>
+        <name>gptmr_synci_edge_t</name>
+        <briefdescription>
+<para>GPTMR synci valid edge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="53" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__gptmr__interface_1ga4d306473008e3c262627dfe9cf09af0c" prot="public" static="no">
+        <type>enum <ref refid="group__gptmr__interface_1ga78170ad26f3ed5e225107d5a148dcce9" kindref="member">gptmr_work_mode</ref></type>
+        <definition>typedef enum gptmr_work_mode gptmr_work_mode_t</definition>
+        <argsstring></argsstring>
+        <name>gptmr_work_mode_t</name>
+        <briefdescription>
+<para>GPTMR work mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="64" column="19"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__gptmr__interface_1ga33c7837690a0c1d169e3492302123867" prot="public" static="no">
+        <type>enum <ref refid="group__gptmr__interface_1ga1e0df932756831fea4f9bf4f81b1d6dd" kindref="member">gptmr_dma_request_event</ref></type>
+        <definition>typedef enum gptmr_dma_request_event gptmr_dma_request_event_t</definition>
+        <argsstring></argsstring>
+        <name>gptmr_dma_request_event_t</name>
+        <briefdescription>
+<para>GPTMR DMA request event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="75" column="27"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__gptmr__interface_1gaf611bd36e1590316f8a740a22842d707" prot="public" static="no">
+        <type>enum <ref refid="group__gptmr__interface_1gaf9b031dd043fef84aeb7b29ac0775e53" kindref="member">gptmr_counter_type</ref></type>
+        <definition>typedef enum gptmr_counter_type gptmr_counter_type_t</definition>
+        <argsstring></argsstring>
+        <name>gptmr_counter_type_t</name>
+        <briefdescription>
+<para>GPTMR counter type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="86" column="22"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__gptmr__interface_1ga321e76e4cdae6b46ce3714587192acc8" prot="public" static="no">
+        <type>struct <ref refid="structgptmr__channel__config" kindref="compound">gptmr_channel_config</ref></type>
+        <definition>typedef struct gptmr_channel_config gptmr_channel_config_t</definition>
+        <argsstring></argsstring>
+        <name>gptmr_channel_config_t</name>
+        <briefdescription>
+<para>GPTMR counter mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>GPTMR channel config </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="113" column="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__gptmr__interface_1ga384b95a380283e373f4c1d5d07318497" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_channel_enable</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index, bool enable)</argsstring>
+        <name>gptmr_channel_enable</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel enable </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>true: enable </para>
+</listitem>
+<listitem><para>false: disable </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="141" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="141" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1gafb8defc3dad0162acdea039259515de9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_channel_reset_count</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index)</argsstring>
+        <name>gptmr_channel_reset_count</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel reset counter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="154" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="154" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1gafcdb159db0c7c8d09abe243a54c665ab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_channel_update_count</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index, uint32_t value)</argsstring>
+        <name>gptmr_channel_update_count</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel update counter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>updated vaue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="167" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="167" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1gae4ba7b1503c01590d9756153aa156b07" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_channel_select_synci_valid_edge</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index, gptmr_synci_edge_t edge)</argsstring>
+        <name>gptmr_channel_select_synci_valid_edge</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__gptmr__interface_1ga8746dc389b2e4d490a6918e7e416e5b6" kindref="member">gptmr_synci_edge_t</ref></type>
+          <declname>edge</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel slect synci valid edge </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gptmr_synci_edge_t </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="185" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="185" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1ga33831c10a9f551765d7758524d3d7be4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_channel_enable_dma_request</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index, bool enable)</argsstring>
+        <name>gptmr_channel_enable_dma_request</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel enable dma request </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>true: enable </para>
+</listitem>
+<listitem><para>false: disable </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="203" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="203" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1ga1b82b6f3133d06aaee76376714e10419" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t gptmr_channel_get_counter</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index, gptmr_counter_type_t capture)</argsstring>
+        <name>gptmr_channel_get_counter</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__gptmr__interface_1gaf611bd36e1590316f8a740a22842d707" kindref="member">gptmr_counter_type_t</ref></type>
+          <declname>capture</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel get counter value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">capture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gptmr_counter_type_t </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="218" column="24" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="218" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1ga701e46eeac502215e184a5b4bf378951" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_trigger_channel_software_sync</definition>
+        <argsstring>(GPTMR_Type *ptr, uint32_t ch_index_mask)</argsstring>
+        <name>gptmr_trigger_channel_software_sync</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ch_index_mask</declname>
+        </param>
+        <briefdescription>
+<para>gptmr trigger channel software sync </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index mask </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="249" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="249" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1ga562215822bb5267cc54accab7c737c0f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_enable_irq</definition>
+        <argsstring>(GPTMR_Type *ptr, uint32_t irq_mask)</argsstring>
+        <name>gptmr_enable_irq</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>irq_mask</declname>
+        </param>
+        <briefdescription>
+<para>gptmr enable irq </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">irq_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>irq mask </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="260" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="260" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1gafc4c41011fc6725c7883fd38270de74c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_disable_irq</definition>
+        <argsstring>(GPTMR_Type *ptr, uint32_t irq_mask)</argsstring>
+        <name>gptmr_disable_irq</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>irq_mask</declname>
+        </param>
+        <briefdescription>
+<para>gptmr disable irq </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">irq_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>irq mask </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="271" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="271" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1ga180f9b95070865bc10c7de7808b9ea88" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool gptmr_check_status</definition>
+        <argsstring>(GPTMR_Type *ptr, uint32_t mask)</argsstring>
+        <name>gptmr_check_status</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>gptmr check status </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel flag mask </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="282" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="282" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1gaf778a64bdd6cf80356c08b3dedf4fc5b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_clear_status</definition>
+        <argsstring>(GPTMR_Type *ptr, uint32_t mask)</argsstring>
+        <name>gptmr_clear_status</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>gptmr clear status </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel flag mask </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="293" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="293" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1ga17ee335ab1dad58fa551fe5ee1ef3da8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t gptmr_get_status</definition>
+        <argsstring>(GPTMR_Type *ptr)</argsstring>
+        <name>gptmr_get_status</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>gptmr get status </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>SR</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>register value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="304" column="24" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="304" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1ga58f680c468d7b8d3eaba476546e77162" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_start_counter</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index)</argsstring>
+        <name>gptmr_start_counter</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel start counter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="315" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="315" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1gaf16ff57ecd3fd9a2124c50d2bb09c530" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_stop_counter</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index)</argsstring>
+        <name>gptmr_stop_counter</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel stop counter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="326" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="326" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1gaf33ccc370bbb75c8208b2c51896aa433" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_enable_cmp_output</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index)</argsstring>
+        <name>gptmr_enable_cmp_output</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel enable compare output </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="337" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="337" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1gaa8b8c8fe891ff2968c776aa69508e1c9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_disable_cmp_output</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index)</argsstring>
+        <name>gptmr_disable_cmp_output</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel disable compare output </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="348" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="348" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1gaef846a356ff5c95d248198f599fa9234" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_channel_set_capmode</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index, gptmr_work_mode_t mode)</argsstring>
+        <name>gptmr_channel_set_capmode</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__gptmr__interface_1ga4d306473008e3c262627dfe9cf09af0c" kindref="member">gptmr_work_mode_t</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel set capmode </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum gptmr_work_mode_capture_at_rising_edge or gptmr_work_mode_capture_at_falling_edge and so on </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="360" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="360" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1ga526ad86c76e89c776d7d72f0e6a69c3e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__gptmr__interface_1ga4d306473008e3c262627dfe9cf09af0c" kindref="member">gptmr_work_mode_t</ref></type>
+        <definition>static gptmr_work_mode_t gptmr_channel_get_capmode</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index)</argsstring>
+        <name>gptmr_channel_get_capmode</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel get capmode </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>gptmr_work_mode_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum gptmr_work_mode_capture_at_rising_edge or gptmr_work_mode_capture_at_falling_edge </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="372" column="33" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="372" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1ga89d11bb7fc062cd0fe54e22f52e5c7d6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_update_cmp</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index, uint8_t cmp_index, uint32_t cmp)</argsstring>
+        <name>gptmr_update_cmp</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmp_index</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>cmp</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel update comparator </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>comparator index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>comparator value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="385" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="385" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1ga2a400f3773d33774adaefa14b1b85834" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t gptmr_channel_get_reload</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index)</argsstring>
+        <name>gptmr_channel_get_reload</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel get reload </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RLD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>register value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="400" column="24" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="400" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1gae25871b06b4d84e8080c991194071aaa" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gptmr_channel_config_update_reload</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index, uint32_t reload)</argsstring>
+        <name>gptmr_channel_config_update_reload</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>reload</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel update reload </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">reload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reload value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="412" column="20" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="412" bodyend="418"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1gacc2a84e2f6f4476901d155cde32a0e62" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__gptmr__interface_1ga33c7837690a0c1d169e3492302123867" kindref="member">gptmr_dma_request_event_t</ref></type>
+        <definition>static gptmr_dma_request_event_t gptmr_channel_get_dma_request_event</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index)</argsstring>
+        <name>gptmr_channel_get_dma_request_event</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel get dma request event </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>gptmr_dma_request_event_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gptmr_dma_request_on_cmp0 or gptmr_dma_request_on_reload </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="427" column="41" bodyfile="drivers/inc/hpm_gptmr_drv.h" bodystart="427" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1gae16d0ba6475ab599328953195f87a1dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t gptmr_channel_config</definition>
+        <argsstring>(GPTMR_Type *ptr, uint8_t ch_index, gptmr_channel_config_t *config, bool enable)</argsstring>
+        <name>gptmr_channel_config</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__gptmr__interface_1ga321e76e4cdae6b46ce3714587192acc8" kindref="member">gptmr_channel_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel config </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gptmr_channel_config_t </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>true: enable </para>
+</listitem>
+<listitem><para>false: disable</para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_invalid_argument or status_success </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="444" column="12" bodyfile="drivers/src/hpm_gptmr_drv.c" bodystart="27" bodyend="66" declfile="drivers/inc/hpm_gptmr_drv.h" declline="444" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__gptmr__interface_1gaa0f6ed9cdd9b7a88b8f1db2825e8bf02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gptmr_channel_get_default_config</definition>
+        <argsstring>(GPTMR_Type *ptr, gptmr_channel_config_t *config)</argsstring>
+        <name>gptmr_channel_get_default_config</name>
+        <param>
+          <type><ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__gptmr__interface_1ga321e76e4cdae6b46ce3714587192acc8" kindref="member">gptmr_channel_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>gptmr channel get default config </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPTMR base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gptmr_channel_config_t </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_gptmr_drv.h" line="455" column="6" bodyfile="drivers/src/hpm_gptmr_drv.c" bodystart="10" bodyend="25" declfile="drivers/inc/hpm_gptmr_drv.h" declline="455" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPM_GPTMR_DRV_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_GPTMR_DRV_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__common_8h" kindref="compound">hpm_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_gptmr_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_soc_feature.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="group__gptmr__interface_1ga813a7a3564707e2abdc1ffc3243baeb5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPTMR_CH_CMP_IRQ_MASK(ch,<sp/>cmp)<sp/>(1<sp/>&lt;&lt;<sp/>(ch<sp/>*<sp/>4<sp/>+<sp/>2<sp/>+<sp/>cmp))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="group__gptmr__interface_1ga0aa272b07e4f120ab3df8ea018ba36f3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPTMR_CH_CAP_IRQ_MASK(ch)<sp/>(1<sp/>&lt;&lt;<sp/>(ch<sp/>*<sp/>4<sp/>+<sp/>1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="group__gptmr__interface_1gaaf1fc6b5889cb5dbb84cd4ec1fcb3e59" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPTMR_CH_RLD_IRQ_MASK(ch)<sp/>(1<sp/>&lt;&lt;<sp/>(ch<sp/>*<sp/>4))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="group__gptmr__interface_1ga18bf38a4144e9eb2cb12e2ba5cfd8487" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPTMR_CH_CMP_STAT_MASK(ch,<sp/>cmp)<sp/>(1<sp/>&lt;&lt;<sp/>(ch<sp/>*<sp/>4<sp/>+<sp/>2<sp/>+<sp/>cmp))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="group__gptmr__interface_1ga1e45ebd5d0d2211497a5cfb2b04ed16f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPTMR_CH_CAP_STAT_MASK(ch)<sp/>(1<sp/>&lt;&lt;<sp/>(ch<sp/>*<sp/>4<sp/>+<sp/>1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="group__gptmr__interface_1gab1fc7dd2b978fa48e351bc1ab8370e9d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPTMR_CH_RLD_STAT_MASK(ch)<sp/>(1<sp/>&lt;&lt;<sp/>(ch<sp/>*<sp/>4))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="group__gptmr__interface_1ga25586ca5c4fe3e70e0a4f12002a8839d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPTMR_CH_GCR_SWSYNCT_MASK(ch)<sp/>(1<sp/>&lt;&lt;<sp/>ch)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="group__gptmr__interface_1gaf76378d84f27d3345ed014581d8d1660" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPTMR_CH_CMP_COUNT<sp/>(2U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="group__gptmr__interface_1ga495387c7ab901953466249a137bffb0c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ga495387c7ab901953466249a137bffb0c" kindref="member">gptmr_synci_edge</ref><sp/>{</highlight></codeline>
+<codeline lineno="49" refid="group__gptmr__interface_1gga495387c7ab901953466249a137bffb0cad4abb0ab26f2be3de500f7d8db58d35e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gga495387c7ab901953466249a137bffb0cad4abb0ab26f2be3de500f7d8db58d35e" kindref="member">gptmr_synci_edge_none</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="50" refid="group__gptmr__interface_1gga495387c7ab901953466249a137bffb0ca2b92aed362f8683c5cb551366a82e124" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gga495387c7ab901953466249a137bffb0ca2b92aed362f8683c5cb551366a82e124" kindref="member">gptmr_synci_edge_falling</ref><sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a7d255d56be96080e74ceecc19b9ecec0" kindref="member">GPTMR_CHANNEL_CR_SYNCIFEN_MASK</ref>,</highlight></codeline>
+<codeline lineno="51" refid="group__gptmr__interface_1gga495387c7ab901953466249a137bffb0caecafd442a53750e7d031a109f9edad4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gga495387c7ab901953466249a137bffb0caecafd442a53750e7d031a109f9edad4b" kindref="member">gptmr_synci_edge_rising</ref><sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1acac980a5d4e35999b1f93baf79183428" kindref="member">GPTMR_CHANNEL_CR_SYNCIREN_MASK</ref>,</highlight></codeline>
+<codeline lineno="52" refid="group__gptmr__interface_1gga495387c7ab901953466249a137bffb0ca93c86a8da7d75a3afb9b066c1e8a8ae1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gga495387c7ab901953466249a137bffb0ca93c86a8da7d75a3afb9b066c1e8a8ae1" kindref="member">gptmr_synci_edge_both</ref><sp/>=<sp/><ref refid="group__gptmr__interface_1gga495387c7ab901953466249a137bffb0ca2b92aed362f8683c5cb551366a82e124" kindref="member">gptmr_synci_edge_falling</ref><sp/>|<sp/><ref refid="group__gptmr__interface_1gga495387c7ab901953466249a137bffb0caecafd442a53750e7d031a109f9edad4b" kindref="member">gptmr_synci_edge_rising</ref>,</highlight></codeline>
+<codeline lineno="53" refid="group__gptmr__interface_1ga8746dc389b2e4d490a6918e7e416e5b6" refkind="member"><highlight class="normal">}<sp/><ref refid="group__gptmr__interface_1ga8746dc389b2e4d490a6918e7e416e5b6" kindref="member">gptmr_synci_edge_t</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="group__gptmr__interface_1ga78170ad26f3ed5e225107d5a148dcce9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ga78170ad26f3ed5e225107d5a148dcce9" kindref="member">gptmr_work_mode</ref><sp/>{</highlight></codeline>
+<codeline lineno="59" refid="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9a2375a0b03c72a93185282c1f43150697" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9a2375a0b03c72a93185282c1f43150697" kindref="member">gptmr_work_mode_no_capture</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="60" refid="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9a0644ca8c29e9d7e4798135cd3adab1df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9a0644ca8c29e9d7e4798135cd3adab1df" kindref="member">gptmr_work_mode_capture_at_rising_edge</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="61" refid="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9abf88951b878ef1f7d8754cdbb1fc517d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9abf88951b878ef1f7d8754cdbb1fc517d" kindref="member">gptmr_work_mode_capture_at_falling_edge</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="62" refid="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9a698e82e551cf9c6076ffbd50d7cdb41d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9a698e82e551cf9c6076ffbd50d7cdb41d" kindref="member">gptmr_work_mode_capture_at_both_edge</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="63" refid="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9a95e6ab64454022968e6a4ee4553ba7ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gga78170ad26f3ed5e225107d5a148dcce9a95e6ab64454022968e6a4ee4553ba7ca" kindref="member">gptmr_work_mode_measure_width</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="64" refid="group__gptmr__interface_1ga4d306473008e3c262627dfe9cf09af0c" refkind="member"><highlight class="normal">}<sp/><ref refid="group__gptmr__interface_1ga4d306473008e3c262627dfe9cf09af0c" kindref="member">gptmr_work_mode_t</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="group__gptmr__interface_1ga1e0df932756831fea4f9bf4f81b1d6dd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ga1e0df932756831fea4f9bf4f81b1d6dd" kindref="member">gptmr_dma_request_event</ref><sp/>{</highlight></codeline>
+<codeline lineno="70" refid="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6dda54f985226adac652cd37f8a3e0ffec0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6dda54f985226adac652cd37f8a3e0ffec0f" kindref="member">gptmr_dma_request_on_cmp0</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="71" refid="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6dda5019dc13bdc18dc9a411456d5ab3fda2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6dda5019dc13bdc18dc9a411456d5ab3fda2" kindref="member">gptmr_dma_request_on_cmp1</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="72" refid="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6dda8c217265ec783a25c78fef7eb26edc70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6dda8c217265ec783a25c78fef7eb26edc70" kindref="member">gptmr_dma_request_on_input_signal_toggle</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="73" refid="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6ddad864f4bff05f45cfb94b4611468b79cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6ddad864f4bff05f45cfb94b4611468b79cd" kindref="member">gptmr_dma_request_on_reload</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="74" refid="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6ddafe0cea07920b82d7bd8260ae7b0783a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gga1e0df932756831fea4f9bf4f81b1d6ddafe0cea07920b82d7bd8260ae7b0783a4" kindref="member">gptmr_dma_request_disabled</ref><sp/>=<sp/>0xFF,</highlight></codeline>
+<codeline lineno="75" refid="group__gptmr__interface_1ga33c7837690a0c1d169e3492302123867" refkind="member"><highlight class="normal">}<sp/><ref refid="group__gptmr__interface_1ga33c7837690a0c1d169e3492302123867" kindref="member">gptmr_dma_request_event_t</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="group__gptmr__interface_1gaf9b031dd043fef84aeb7b29ac0775e53" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1gaf9b031dd043fef84aeb7b29ac0775e53" kindref="member">gptmr_counter_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="81" refid="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53a5bdb2a27de542161b5a394922a8fea6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53a5bdb2a27de542161b5a394922a8fea6b" kindref="member">gptmr_counter_type_rising_edge</ref>,</highlight></codeline>
+<codeline lineno="82" refid="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53afb3f966f6441308654ae9ccd34638dc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53afb3f966f6441308654ae9ccd34638dc8" kindref="member">gptmr_counter_type_falling_edge</ref>,</highlight></codeline>
+<codeline lineno="83" refid="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53ae2a02b1aa0d8f386a2eed0dab2c573f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53ae2a02b1aa0d8f386a2eed0dab2c573f9" kindref="member">gptmr_counter_type_measured_period</ref>,</highlight></codeline>
+<codeline lineno="84" refid="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53a84624a5849d1cf1541cda41dd98b166f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53a84624a5849d1cf1541cda41dd98b166f" kindref="member">gptmr_counter_type_measured_duty_cycle</ref>,</highlight></codeline>
+<codeline lineno="85" refid="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53a885ec08eaa1c2043e0acfed4929af98d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53a885ec08eaa1c2043e0acfed4929af98d" kindref="member">gptmr_counter_type_normal</ref>,</highlight></codeline>
+<codeline lineno="86" refid="group__gptmr__interface_1gaf611bd36e1590316f8a740a22842d707" refkind="member"><highlight class="normal">}<sp/><ref refid="group__gptmr__interface_1gaf611bd36e1590316f8a740a22842d707" kindref="member">gptmr_counter_type_t</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPM_IP_FEATURE_GPTMR_CNT_MODE)<sp/>&amp;&amp;<sp/>(HPM_IP_FEATURE_GPTMR_CNT_MODE<sp/><sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>gptmr_counter_mode<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>gptmr_counter_mode_internal<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>gptmr_counter_mode_external,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}<sp/>gptmr_counter_mode_t;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="structgptmr__channel__config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgptmr__channel__config" kindref="compound">gptmr_channel_config</ref><sp/>{</highlight></codeline>
+<codeline lineno="103" refid="structgptmr__channel__config_1aebddbb4058ea107036102f2784ec564b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1ga4d306473008e3c262627dfe9cf09af0c" kindref="member">gptmr_work_mode_t</ref><sp/><ref refid="structgptmr__channel__config_1aebddbb4058ea107036102f2784ec564b" kindref="member">mode</ref>;</highlight></codeline>
+<codeline lineno="104" refid="structgptmr__channel__config_1a3b8ee229cfa9abd1422721cece031640" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1ga33c7837690a0c1d169e3492302123867" kindref="member">gptmr_dma_request_event_t</ref><sp/><ref refid="structgptmr__channel__config_1a3b8ee229cfa9abd1422721cece031640" kindref="member">dma_request_event</ref>;</highlight></codeline>
+<codeline lineno="105" refid="structgptmr__channel__config_1a0518a55dcbb70691e6fd8c9a372ef6d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1ga8746dc389b2e4d490a6918e7e416e5b6" kindref="member">gptmr_synci_edge_t</ref><sp/><ref refid="structgptmr__channel__config_1a0518a55dcbb70691e6fd8c9a372ef6d1" kindref="member">synci_edge</ref>;</highlight></codeline>
+<codeline lineno="106" refid="structgptmr__channel__config_1abcff8c07885d004c2b0feabb43c26873" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structgptmr__channel__config_1abcff8c07885d004c2b0feabb43c26873" kindref="member">cmp</ref>[<ref refid="group__gptmr__interface_1gaf76378d84f27d3345ed014581d8d1660" kindref="member">GPTMR_CH_CMP_COUNT</ref>];</highlight></codeline>
+<codeline lineno="107" refid="structgptmr__channel__config_1ac50f7a8f07d5e9f214ac8fb4a71b0b36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structgptmr__channel__config_1ac50f7a8f07d5e9f214ac8fb4a71b0b36" kindref="member">reload</ref>;</highlight></codeline>
+<codeline lineno="108" refid="structgptmr__channel__config_1a93b4aa0e83f110d2ffd306042bbb5784" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structgptmr__channel__config_1a93b4aa0e83f110d2ffd306042bbb5784" kindref="member">cmp_initial_polarity_high</ref>;</highlight></codeline>
+<codeline lineno="109" refid="structgptmr__channel__config_1ab9f0788db17d11cf4a6567f184a668c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structgptmr__channel__config_1ab9f0788db17d11cf4a6567f184a668c3" kindref="member">enable_cmp_output</ref>;</highlight></codeline>
+<codeline lineno="110" refid="structgptmr__channel__config_1aae5fe02485e88a8719d962bc9458fe50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structgptmr__channel__config_1aae5fe02485e88a8719d962bc9458fe50" kindref="member">enable_sync_follow_previous_channel</ref>;</highlight></codeline>
+<codeline lineno="111" refid="structgptmr__channel__config_1a2f1490ec6091d59206cee639860b119c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structgptmr__channel__config_1a2f1490ec6091d59206cee639860b119c" kindref="member">enable_software_sync</ref>;</highlight></codeline>
+<codeline lineno="112" refid="structgptmr__channel__config_1af808f36009f5d35dff1d95e9d98ef355" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structgptmr__channel__config_1af808f36009f5d35dff1d95e9d98ef355" kindref="member">debug_mode</ref>;</highlight></codeline>
+<codeline lineno="113" refid="group__gptmr__interface_1ga321e76e4cdae6b46ce3714587192acc8" refkind="member"><highlight class="normal">}<sp/><ref refid="group__gptmr__interface_1ga321e76e4cdae6b46ce3714587192acc8" kindref="member">gptmr_channel_config_t</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPM_IP_FEATURE_GPTMR_MONITOR)<sp/>&amp;&amp;<sp/>(HPM_IP_FEATURE_GPTMR_MONITOR<sp/><sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>gptmr_channel_monitor_type<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>monitor_signal_period<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>monitor_signal_high_level_time,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}<sp/>gptmr_channel_monitor_type_t;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">gptmr_channel_monitor_config<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>gptmr_channel_monitor_type_t<sp/>monitor_type;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>max_value;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>min_value;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}<sp/>gptmr_channel_monitor_config_t;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="group__gptmr__interface_1ga384b95a380283e373f4c1d5d07318497" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ga384b95a380283e373f4c1d5d07318497" kindref="member">gptmr_channel_enable</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~(<ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1acb760bbbca6d7264e5f6a938b58c6d12" kindref="member">GPTMR_CHANNEL_CR_CNTRST_MASK</ref><sp/>|<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a35b907662bf4ebc790e3169e3cbf95c5" kindref="member">GPTMR_CHANNEL_CR_CMPEN_MASK</ref>))</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a94a0c9fea5ac87c40e57334a187ad8ee" kindref="member">GPTMR_CHANNEL_CR_CMPEN_SET</ref>(enable);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="group__gptmr__interface_1gafb8defc3dad0162acdea039259515de9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1gafb8defc3dad0162acdea039259515de9" kindref="member">gptmr_channel_reset_count</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1acb760bbbca6d7264e5f6a938b58c6d12" kindref="member">GPTMR_CHANNEL_CR_CNTRST_MASK</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1acb760bbbca6d7264e5f6a938b58c6d12" kindref="member">GPTMR_CHANNEL_CR_CNTRST_MASK</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="group__gptmr__interface_1gafcdb159db0c7c8d09abe243a54c665ab" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1gafcdb159db0c7c8d09abe243a54c665ab" kindref="member">gptmr_channel_update_count</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>ch_index,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>value)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value--;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a04c90c94aecef11336bbe46ecf953d24" kindref="member">CNTUPTVAL</ref><sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a2ce82e94f65a5014503257c256c1c9b4" kindref="member">GPTMR_CHANNEL_CNTUPTVAL_CNTUPTVAL_SET</ref>(value);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a791571bcd7d837d03b52d1e439e14512" kindref="member">GPTMR_CHANNEL_CR_CNTUPT_MASK</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="group__gptmr__interface_1gae4ba7b1503c01590d9756153aa156b07" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1gae4ba7b1503c01590d9756153aa156b07" kindref="member">gptmr_channel_select_synci_valid_edge</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>ch_index,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1ga8746dc389b2e4d490a6918e7e416e5b6" kindref="member">gptmr_synci_edge_t</ref><sp/>edge)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~(<ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a7d255d56be96080e74ceecc19b9ecec0" kindref="member">GPTMR_CHANNEL_CR_SYNCIFEN_MASK</ref></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1acac980a5d4e35999b1f93baf79183428" kindref="member">GPTMR_CHANNEL_CR_SYNCIREN_MASK</ref>))<sp/>|<sp/>edge;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="group__gptmr__interface_1ga33831c10a9f551765d7758524d3d7be4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ga33831c10a9f551765d7758524d3d7be4" kindref="member">gptmr_channel_enable_dma_request</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>ch_index,</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~(<ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a94e6278214f2406bb302d0d35cb341b2" kindref="member">GPTMR_CHANNEL_CR_DMAEN_MASK</ref>))<sp/>|<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a483ee52d068c1e109c81165084b11ab5" kindref="member">GPTMR_CHANNEL_CR_DMAEN_SET</ref>(enable);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="group__gptmr__interface_1ga1b82b6f3133d06aaee76376714e10419" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__gptmr__interface_1ga1b82b6f3133d06aaee76376714e10419" kindref="member">gptmr_channel_get_counter</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>ch_index,</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__gptmr__interface_1gaf611bd36e1590316f8a740a22842d707" kindref="member">gptmr_counter_type_t</ref><sp/>capture)</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(capture)<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53a5bdb2a27de542161b5a394922a8fea6b" kindref="member">gptmr_counter_type_rising_edge</ref>:</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>(ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a43b760ebccd0301fef0991a8de597d20" kindref="member">CAPPOS</ref><sp/>&amp;<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a7859f17d85c278c0e9c1a5aeb48dc6bd" kindref="member">GPTMR_CHANNEL_CAPPOS_CAPPOS_MASK</ref>)<sp/>&gt;&gt;<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a3a5ab479971d1574d6076c8a82baacda" kindref="member">GPTMR_CHANNEL_CAPPOS_CAPPOS_SHIFT</ref>;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53afb3f966f6441308654ae9ccd34638dc8" kindref="member">gptmr_counter_type_falling_edge</ref>:</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>(ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a0b657ce536683bce6c184f61b34c3d8a" kindref="member">CAPNEG</ref><sp/>&amp;<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a64d2588a98eeb1544b8879d5c669cbc0" kindref="member">GPTMR_CHANNEL_CAPNEG_CAPNEG_MASK</ref>)<sp/>&gt;&gt;<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a07cc77988158e8f0d0f08f29810e2466" kindref="member">GPTMR_CHANNEL_CAPNEG_CAPNEG_SHIFT</ref>;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53ae2a02b1aa0d8f386a2eed0dab2c573f9" kindref="member">gptmr_counter_type_measured_period</ref>:</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>(ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a415b77d63bc876ddae97c80c1e2d7261" kindref="member">CAPPRD</ref><sp/>&amp;<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1acd4260770945ffcce5df921f34d54835" kindref="member">GPTMR_CHANNEL_CAPPRD_CAPPRD_MASK</ref>)<sp/>&gt;&gt;<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a398e941b495e0df199e420f1ebfc9e65" kindref="member">GPTMR_CHANNEL_CAPPRD_CAPPRD_SHIFT</ref>;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ggaf9b031dd043fef84aeb7b29ac0775e53a84624a5849d1cf1541cda41dd98b166f" kindref="member">gptmr_counter_type_measured_duty_cycle</ref>:</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>(ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1aaf01ba7009eb46e498b18fdd09c1e34b" kindref="member">CAPDTY</ref><sp/>&amp;<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1af184b87532e4bc65e7212ad648acba13" kindref="member">GPTMR_CHANNEL_CAPDTY_MEAS_HIGH_MASK</ref>)<sp/>&gt;&gt;<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a6ad0a02daa91eb97959e926c9b3cd90b" kindref="member">GPTMR_CHANNEL_CAPDTY_MEAS_HIGH_SHIFT</ref>;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>(ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a649ad26ab078134061e627b30f853c52" kindref="member">CNT</ref><sp/>&amp;<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a87a61a950b5db5a70b409eed1e192810" kindref="member">GPTMR_CHANNEL_CNT_COUNTER_MASK</ref>)<sp/>&gt;&gt;<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a3fc3144b33517fa3a833d3369696b3b6" kindref="member">GPTMR_CHANNEL_CNT_COUNTER_SHIFT</ref>;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249" refid="group__gptmr__interface_1ga701e46eeac502215e184a5b4bf378951" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ga701e46eeac502215e184a5b4bf378951" kindref="member">gptmr_trigger_channel_software_sync</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>ch_index_mask)</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1af16f775f98cbb5618a5752f6c3cf5310" kindref="member">GCR</ref><sp/>=<sp/>ch_index_mask;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="group__gptmr__interface_1ga562215822bb5267cc54accab7c737c0f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ga562215822bb5267cc54accab7c737c0f" kindref="member">gptmr_enable_irq</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>irq_mask)</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1a75930bfb9e9db8ce917e5a30a4bb7139" kindref="member">IRQEN</ref><sp/>|=<sp/>irq_mask;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271" refid="group__gptmr__interface_1gafc4c41011fc6725c7883fd38270de74c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1gafc4c41011fc6725c7883fd38270de74c" kindref="member">gptmr_disable_irq</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>irq_mask)</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1a75930bfb9e9db8ce917e5a30a4bb7139" kindref="member">IRQEN</ref><sp/>&amp;=<sp/>~irq_mask;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282" refid="group__gptmr__interface_1ga180f9b95070865bc10c7de7808b9ea88" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ga180f9b95070865bc10c7de7808b9ea88" kindref="member">gptmr_check_status</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>mask)</highlight></codeline>
+<codeline lineno="283"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(ptr-&gt;<ref refid="structGPTMR__Type_1a424bda5f2df5c0c0fc6c15bc2271d237" kindref="member">SR</ref><sp/>&amp;<sp/>mask)<sp/>==<sp/>mask;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293" refid="group__gptmr__interface_1gaf778a64bdd6cf80356c08b3dedf4fc5b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1gaf778a64bdd6cf80356c08b3dedf4fc5b" kindref="member">gptmr_clear_status</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>mask)</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1a424bda5f2df5c0c0fc6c15bc2271d237" kindref="member">SR</ref><sp/>=<sp/>mask;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304" refid="group__gptmr__interface_1ga17ee335ab1dad58fa551fe5ee1ef3da8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__gptmr__interface_1ga17ee335ab1dad58fa551fe5ee1ef3da8" kindref="member">gptmr_get_status</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="305"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1a424bda5f2df5c0c0fc6c15bc2271d237" kindref="member">SR</ref>;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315" refid="group__gptmr__interface_1ga58f680c468d7b8d3eaba476546e77162" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ga58f680c468d7b8d3eaba476546e77162" kindref="member">gptmr_start_counter</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a4ff3b6765f25852df583b1552e24f74c" kindref="member">GPTMR_CHANNEL_CR_CEN_MASK</ref>;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326" refid="group__gptmr__interface_1gaf16ff57ecd3fd9a2124c50d2bb09c530" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1gaf16ff57ecd3fd9a2124c50d2bb09c530" kindref="member">gptmr_stop_counter</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="327"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a4ff3b6765f25852df583b1552e24f74c" kindref="member">GPTMR_CHANNEL_CR_CEN_MASK</ref>;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337" refid="group__gptmr__interface_1gaf33ccc370bbb75c8208b2c51896aa433" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1gaf33ccc370bbb75c8208b2c51896aa433" kindref="member">gptmr_enable_cmp_output</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="338"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a35b907662bf4ebc790e3169e3cbf95c5" kindref="member">GPTMR_CHANNEL_CR_CMPEN_MASK</ref>;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348" refid="group__gptmr__interface_1gaa8b8c8fe891ff2968c776aa69508e1c9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1gaa8b8c8fe891ff2968c776aa69508e1c9" kindref="member">gptmr_disable_cmp_output</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="349"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a35b907662bf4ebc790e3169e3cbf95c5" kindref="member">GPTMR_CHANNEL_CR_CMPEN_MASK</ref>;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360" refid="group__gptmr__interface_1gaef846a356ff5c95d248198f599fa9234" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1gaef846a356ff5c95d248198f599fa9234" kindref="member">gptmr_channel_set_capmode</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index,<sp/><ref refid="group__gptmr__interface_1ga4d306473008e3c262627dfe9cf09af0c" kindref="member">gptmr_work_mode_t</ref><sp/>mode)</highlight></codeline>
+<codeline lineno="361"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>&amp;<sp/>~<ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1aa147bcd7c74375c9b40d7bcabfe8d5f3" kindref="member">GPTMR_CHANNEL_CR_CAPMODE_MASK</ref>)<sp/>|<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a859e6e9829c6b73d989af266803209e7" kindref="member">GPTMR_CHANNEL_CR_CAPMODE_SET</ref>(mode);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372" refid="group__gptmr__interface_1ga526ad86c76e89c776d7d72f0e6a69c3e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ga4d306473008e3c262627dfe9cf09af0c" kindref="member">gptmr_work_mode_t</ref><sp/><ref refid="group__gptmr__interface_1ga526ad86c76e89c776d7d72f0e6a69c3e" kindref="member">gptmr_channel_get_capmode</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="373"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group__gptmr__interface_1ga4d306473008e3c262627dfe9cf09af0c" kindref="member">gptmr_work_mode_t</ref>)<ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a630511e001788d9006498b32a36c9525" kindref="member">GPTMR_CHANNEL_CR_CAPMODE_GET</ref>(ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref>);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385" refid="group__gptmr__interface_1ga89d11bb7fc062cd0fe54e22f52e5c7d6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ga89d11bb7fc062cd0fe54e22f52e5c7d6" kindref="member">gptmr_update_cmp</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index,<sp/>uint8_t<sp/>cmp_index,<sp/>uint32_t<sp/>cmp)</highlight></codeline>
+<codeline lineno="386"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cmp<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmp--;</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1aba199a4bbd16851c732fe7ac22a5639b" kindref="member">CMP</ref>[cmp_index]<sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a4ae45bba40f21f41de46f3d1ac0e1a13" kindref="member">GPTMR_CHANNEL_CMP_CMP_SET</ref>(cmp);</highlight></codeline>
+<codeline lineno="391"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400" refid="group__gptmr__interface_1ga2a400f3773d33774adaefa14b1b85834" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__gptmr__interface_1ga2a400f3773d33774adaefa14b1b85834" kindref="member">gptmr_channel_get_reload</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="401"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1aac3a9e946db076863d5423020bedb148" kindref="member">RLD</ref>;</highlight></codeline>
+<codeline lineno="403"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412" refid="group__gptmr__interface_1gae25871b06b4d84e8080c991194071aaa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1gae25871b06b4d84e8080c991194071aaa" kindref="member">gptmr_channel_config_update_reload</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index,<sp/>uint32_t<sp/>reload)</highlight></codeline>
+<codeline lineno="413"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(reload<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reload--;</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1aac3a9e946db076863d5423020bedb148" kindref="member">RLD</ref><sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a0679fcf16ce11fc53c241fbf33ee6f97" kindref="member">GPTMR_CHANNEL_RLD_RLD_SET</ref>(reload);</highlight></codeline>
+<codeline lineno="418"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="427" refid="group__gptmr__interface_1gacc2a84e2f6f4476901d155cde32a0e62" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1ga33c7837690a0c1d169e3492302123867" kindref="member">gptmr_dma_request_event_t</ref><sp/><ref refid="group__gptmr__interface_1gacc2a84e2f6f4476901d155cde32a0e62" kindref="member">gptmr_channel_get_dma_request_event</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="428"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group__gptmr__interface_1ga33c7837690a0c1d169e3492302123867" kindref="member">gptmr_dma_request_event_t</ref>)<ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a5e9f90d0f507fce511154ef36d156dd8" kindref="member">GPTMR_CHANNEL_CR_DMASEL_GET</ref>(ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref>);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__gptmr__interface_1gae16d0ba6475ab599328953195f87a1dd" kindref="member">gptmr_channel_config</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>ch_index,</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgptmr__channel__config" kindref="compound">gptmr_channel_config_t</ref><sp/>*config,</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gptmr__interface_1gaa0f6ed9cdd9b7a88b8f1db2825e8bf02" kindref="member">gptmr_channel_get_default_config</ref>(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/><ref refid="structgptmr__channel__config" kindref="compound">gptmr_channel_config_t</ref><sp/>*config);</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPM_IP_FEATURE_GPTMR_CNT_MODE)<sp/>&amp;&amp;<sp/>(HPM_IP_FEATURE_GPTMR_CNT_MODE<sp/><sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="466"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gptmr_channel_set_counter_mode(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index,<sp/>gptmr_counter_mode_t<sp/>mode)</highlight></codeline>
+<codeline lineno="467"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>&amp;<sp/>~<ref refid="HPM6E00_2ip_2hpm__gptmr__regs_8h_1a3ef9caad2ad91c79fb7d31af26981232" kindref="member">GPTMR_CHANNEL_CR_CNT_MODE_MASK</ref>)<sp/>|<sp/><ref refid="HPM6E00_2ip_2hpm__gptmr__regs_8h_1a2849479e64a1f07fb5a810a67e11ac13" kindref="member">GPTMR_CHANNEL_CR_CNT_MODE_SET</ref>(mode);</highlight></codeline>
+<codeline lineno="469"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>gptmr_counter_mode_t<sp/>gptmr_channel_get_counter_mode(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="479"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>&amp;<sp/><ref refid="HPM6E00_2ip_2hpm__gptmr__regs_8h_1a3ef9caad2ad91c79fb7d31af26981232" kindref="member">GPTMR_CHANNEL_CR_CNT_MODE_MASK</ref>)<sp/>==</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HPM6E00_2ip_2hpm__gptmr__regs_8h_1a3ef9caad2ad91c79fb7d31af26981232" kindref="member">GPTMR_CHANNEL_CR_CNT_MODE_MASK</ref>)<sp/>?</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gptmr_counter_mode_external<sp/>:<sp/>gptmr_counter_mode_internal;</highlight></codeline>
+<codeline lineno="483"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"></highlight></codeline>
+<codeline lineno="485"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="486"><highlight class="normal"></highlight></codeline>
+<codeline lineno="487"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPM_IP_FEATURE_GPTMR_OP_MODE)<sp/>&amp;&amp;<sp/>(HPM_IP_FEATURE_GPTMR_OP_MODE<sp/><sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="496"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gptmr_channel_enable_opmode(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="497"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1ace5b53fb20d3dc12728a6d7dad7a3086" kindref="member">GPTMR_CHANNEL_CR_OPMODE_MASK</ref>;</highlight></codeline>
+<codeline lineno="499"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gptmr_channel_disable_opmode(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="508"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1ace5b53fb20d3dc12728a6d7dad7a3086" kindref="member">GPTMR_CHANNEL_CR_OPMODE_MASK</ref>;</highlight></codeline>
+<codeline lineno="510"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"></highlight></codeline>
+<codeline lineno="519"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>gptmr_channel_is_opmode(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="520"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>&amp;<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1ace5b53fb20d3dc12728a6d7dad7a3086" kindref="member">GPTMR_CHANNEL_CR_OPMODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1ace5b53fb20d3dc12728a6d7dad7a3086" kindref="member">GPTMR_CHANNEL_CR_OPMODE_MASK</ref>)<sp/>?<sp/>true<sp/>:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="522"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="524"><highlight class="normal"></highlight></codeline>
+<codeline lineno="525"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPM_IP_FEATURE_GPTMR_MONITOR)<sp/>&amp;&amp;<sp/>(HPM_IP_FEATURE_GPTMR_MONITOR<sp/><sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="532"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gptmr_channel_enable_monitor(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="533"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a71a9bfbbd0b7056960b587d4a9edb3ef" kindref="member">GPTMR_CHANNEL_CR_MONITOR_EN_MASK</ref>;</highlight></codeline>
+<codeline lineno="535"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="543"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gptmr_channel_disable_monitor(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="544"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a71a9bfbbd0b7056960b587d4a9edb3ef" kindref="member">GPTMR_CHANNEL_CR_MONITOR_EN_MASK</ref>;</highlight></codeline>
+<codeline lineno="546"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="547"><highlight class="normal"></highlight></codeline>
+<codeline lineno="555"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gptmr_channel_set_monitor_type(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index,<sp/>gptmr_channel_monitor_type_t<sp/>type)</highlight></codeline>
+<codeline lineno="556"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref><sp/>&amp;<sp/>~<ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1a95afac20dd8275b869f560938a78d8f0" kindref="member">GPTMR_CHANNEL_CR_MONITOR_SEL_MASK</ref>)<sp/>|<sp/><ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1aef352927be145d02c7cf8abd0cf7f8b1" kindref="member">GPTMR_CHANNEL_CR_MONITOR_SEL_SET</ref>(type);</highlight></codeline>
+<codeline lineno="558"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"></highlight></codeline>
+<codeline lineno="567"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>gptmr_channel_monitor_type_t<sp/>gptmr_channel_get_monitor_type(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index)</highlight></codeline>
+<codeline lineno="568"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(gptmr_channel_monitor_type_t)<ref refid="HPM5300_2ip_2hpm__gptmr__regs_8h_1ab450e20192fc99e1f17c91861a79757f" kindref="member">GPTMR_CHANNEL_CR_MONITOR_SEL_GET</ref>(ptr-&gt;<ref refid="structGPTMR__Type_1aaa98430bea0747c0a5f097956cbc3057" kindref="member">CHANNEL</ref>[ch_index].<ref refid="structGPTMR__Type_1a4d82a3c1f60b3e24ea63ed49c4cb80a7" kindref="member">CR</ref>);</highlight></codeline>
+<codeline lineno="570"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gptmr_channel_get_default_monitor_config(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>gptmr_channel_monitor_config_t<sp/>*config);</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"></highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>gptmr_channel_monitor_config(<ref refid="structGPTMR__Type" kindref="compound">GPTMR_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_index,</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gptmr_channel_monitor_config_t<sp/>*config,</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight></codeline>
+<codeline lineno="596"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="597"><highlight class="normal"></highlight></codeline>
+<codeline lineno="598"><highlight class="normal"></highlight></codeline>
+<codeline lineno="603"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="604"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="606"><highlight class="normal"></highlight></codeline>
+<codeline lineno="607"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HPM_GPTMR_DRV_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="drivers/inc/hpm_gptmr_drv.h"/>
+  </compounddef>
+</doxygen>

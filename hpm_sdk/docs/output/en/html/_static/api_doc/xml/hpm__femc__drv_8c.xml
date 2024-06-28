@@ -1,0 +1,892 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hpm__femc__drv_8c" kind="file" language="C++">
+    <compoundname>hpm_femc_drv.c</compoundname>
+    <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
+    <includes refid="hpm__femc__drv_8h" local="yes">hpm_femc_drv.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>drivers/src/hpm_femc_drv.c</label>
+        <link refid="hpm__femc__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_femc_regs.h</label>
+      </node>
+      <node id="8">
+        <label>hpm_femc_drv.h</label>
+        <link refid="hpm__femc__drv_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hpm__femc__drv_8c_1a4b80d428f89ed5b8dc4557c6a2c766c0" prot="public" static="no">
+        <name>HPM_FEMC_DRV_DEFAULT_PRESCALER</name>
+        <initializer>(0x3UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="12" column="9" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__femc__drv_8c_1ab3c0d644e295fef5771cdb160577e8e2" prot="public" static="no">
+        <name>HPM_FEMC_DRV_RETRY_COUNT</name>
+        <initializer>(5000U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="16" column="9" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__femc__drv_8c_1a1d6f50c4ee12043348c76690e31ed260" prot="public" static="no">
+        <name>FEMC_PRESCALER_MAX</name>
+        <initializer>(256UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="19" column="9" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hpm__femc__drv_8c_1a981e832ff4442de8008a02ec2a7acaf4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void femc_config_delay_cell</definition>
+        <argsstring>(FEMC_Type *ptr, bool delay_cell_en, uint32_t delay_cell_value)</argsstring>
+        <name>femc_config_delay_cell</name>
+        <param>
+          <type><ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>delay_cell_en</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>delay_cell_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="21" column="13" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="21" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__femc__drv_8c_1ade2df07bfd352e53411d26b48a028f52" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>static hpm_stat_t femc_ip_cmd_done</definition>
+        <argsstring>(FEMC_Type *ptr)</argsstring>
+        <name>femc_ip_cmd_done</name>
+        <param>
+          <type><ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="28" column="19" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="28" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__femc__drv_8c_1ab3d3e0a9962bf93c32219c58fad78622" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t femc_make_cmd</definition>
+        <argsstring>(uint32_t opcode)</argsstring>
+        <name>femc_make_cmd</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>opcode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="52" column="17" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__femc__drv_8c_1acec8919aeed571b1f8a971bb4ded4bd9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool femc_is_write_cmd</definition>
+        <argsstring>(uint32_t opcode)</argsstring>
+        <name>femc_is_write_cmd</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>opcode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="57" column="13" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__femc__drv_8c_1aa8c0c6bef844d55df59e3fb1516fec24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t femc_issue_ip_cmd</definition>
+        <argsstring>(FEMC_Type *ptr, uint32_t base_address, femc_cmd_t *cmd)</argsstring>
+        <name>femc_issue_ip_cmd</name>
+        <param>
+          <type><ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>base_address</declname>
+        </param>
+        <param>
+          <type><ref refid="structfemc__cmd__t" kindref="compound">femc_cmd_t</ref> *</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="62" column="10" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="62" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dram__interface_1gad4598f76fb91836974e0371971eff480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void femc_default_config</definition>
+        <argsstring>(FEMC_Type *ptr, femc_config_t *config)</argsstring>
+        <name>femc_default_config</name>
+        <param>
+          <type><ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structfemc__config__t" kindref="compound">femc_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>femc get default config </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get FEMC default parameters</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FEMC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structfemc__config__t" kindref="compound">femc_config_t</ref> address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="81" column="6" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="81" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dram__interface_1gaa84a6bec298eeaa2fc1747555844b5c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void femc_get_typical_sdram_config</definition>
+        <argsstring>(FEMC_Type *ptr, femc_sdram_config_t *config)</argsstring>
+        <name>femc_get_typical_sdram_config</name>
+        <param>
+          <type><ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structfemc__sdram__config__t" kindref="compound">femc_sdram_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>femc get typical sdram config </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Fill out the structure of <ref refid="structfemc__sdram__config__t" kindref="compound">femc_sdram_config_t</ref> with typical SDRAM parameters which should work with most SDRAMs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FEMC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structfemc__sdram__config__t" kindref="compound">femc_sdram_config_t</ref> sdram configuration struction to config femc </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="104" column="6" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="104" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dram__interface_1ga5acf321e3cde7b319282e99a01ae5f31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void femc_init</definition>
+        <argsstring>(FEMC_Type *ptr, femc_config_t *config)</argsstring>
+        <name>femc_init</name>
+        <param>
+          <type><ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structfemc__config__t" kindref="compound">femc_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>femc init controller </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize FEMC with give <ref refid="structfemc__config__t" kindref="compound">femc_config_t</ref></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FEMC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structfemc__config__t" kindref="compound">femc_config_t</ref> to initialize femc </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="129" column="6" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="129" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__femc__drv_8c_1a9ac169cbca2441814003a308663116c8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t femc_convert_actual_size_to_memory_size</definition>
+        <argsstring>(uint32_t size_in_kb)</argsstring>
+        <name>femc_convert_actual_size_to_memory_size</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>size_in_kb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="167" column="16" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="167" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__femc__drv_8c_1a6572a6352807d410f1f7818b9c0acac4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t femc_convert_burst_len</definition>
+        <argsstring>(uint8_t burst_len_in_byte)</argsstring>
+        <name>femc_convert_burst_len</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>burst_len_in_byte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="187" column="16" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="187" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t ns2cycle</definition>
+        <argsstring>(uint32_t freq_in_hz, uint32_t ns, uint32_t max_cycle)</argsstring>
+        <name>ns2cycle</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>freq_in_hz</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ns</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>max_cycle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="206" column="17" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="206" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dram__interface_1ga45f77237d47d51c79c453c57d5e980b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t femc_config_sdram</definition>
+        <argsstring>(FEMC_Type *ptr, uint32_t clk_in_hz, femc_sdram_config_t *config)</argsstring>
+        <name>femc_config_sdram</name>
+        <param>
+          <type><ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>clk_in_hz</declname>
+        </param>
+        <param>
+          <type><ref refid="structfemc__sdram__config__t" kindref="compound">femc_sdram_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>femc config sdram </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Configure FEMC controlling external SDRAM using parameters specified in <ref refid="structfemc__sdram__config__t" kindref="compound">femc_sdram_config_t</ref></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FEMC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">clk_in_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>femc source clock frequency in Hz </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structfemc__sdram__config__t" kindref="compound">femc_sdram_config_t</ref> sdram configuration struction to config femc </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="219" column="12" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="219" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dram__interface_1ga05f9c55c035b9d1aca6de06d95d515ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void femc_get_typical_sram_config</definition>
+        <argsstring>(FEMC_Type *ptr, femc_sram_config_t *config)</argsstring>
+        <name>femc_get_typical_sram_config</name>
+        <param>
+          <type><ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structfemc__sram__config__t" kindref="compound">femc_sram_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>femc get typical sram config </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Fill out the structure of <ref refid="structfemc__sram__config__t" kindref="compound">femc_sram_config_t</ref> with typical SRAM parameters which should work with most SRAMs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FEMC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structfemc__sdram__config__t" kindref="compound">femc_sdram_config_t</ref> sdram configuration struction to config femc </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="318" column="6" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="318" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dram__interface_1gaee9729014949c9432ff57ccc5147cf0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t femc_config_sram</definition>
+        <argsstring>(FEMC_Type *ptr, uint32_t clk_in_hz, femc_sram_config_t *config)</argsstring>
+        <name>femc_config_sram</name>
+        <param>
+          <type><ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>clk_in_hz</declname>
+        </param>
+        <param>
+          <type><ref refid="structfemc__sram__config__t" kindref="compound">femc_sram_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>femc config sram </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Configure FEMC controlling external SRAM using parameters specified in <ref refid="structfemc__sram__config__t" kindref="compound">femc_sram_config_t</ref></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FEMC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">clk_in_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>femc source clock frequency in Hz </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structfemc__sram__config__t" kindref="compound">femc_sram_config_t</ref> sram configuration struction to config femc </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_femc_drv.c" line="337" column="12" bodyfile="drivers/src/hpm_femc_drv.c" bodystart="337" bodyend="362"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2022<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__common_8h" kindref="compound">hpm_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__femc__drv_8h" kindref="compound">hpm_femc_drv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPM_FEMC_DRV_DEFAULT_PRESCALER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_FEMC_DRV_DEFAULT_PRESCALER<sp/>(0x3UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPM_FEMC_DRV_RETRY_COUNT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_FEMC_DRV_RETRY_COUNT<sp/>(5000U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FEMC_PRESCALER_MAX<sp/>(256UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__femc__drv_8c_1a981e832ff4442de8008a02ec2a7acaf4" kindref="member">femc_config_delay_cell</ref>(<ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>delay_cell_en,<sp/>uint32_t<sp/>delay_cell_value)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a2fd7a0feec72a8778575453d4bb4498a" kindref="member">DLYCFG</ref><sp/>&amp;=<sp/>~<ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ad68a3e0fa6043e22e829374b8c1ecd9e" kindref="member">FEMC_DLYCFG_OE_MASK</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a2fd7a0feec72a8778575453d4bb4498a" kindref="member">DLYCFG</ref><sp/>=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ad19db612a6356dfe5027f78df30ef87b" kindref="member">FEMC_DLYCFG_DLYSEL_SET</ref>(delay_cell_value)<sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ac19801f45890280644aa0418aaf4c32a" kindref="member">FEMC_DLYCFG_DLYEN_SET</ref>(delay_cell_en);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a2fd7a0feec72a8778575453d4bb4498a" kindref="member">DLYCFG</ref><sp/>|=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ad68a3e0fa6043e22e829374b8c1ecd9e" kindref="member">FEMC_DLYCFG_OE_MASK</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__femc__drv_8c_1ade2df07bfd352e53411d26b48a028f52" kindref="member">femc_ip_cmd_done</ref>(<ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>intr_status<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>retry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__femc__drv_8c_1ab3c0d644e295fef5771cdb160577e8e2" kindref="member">HPM_FEMC_DRV_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry++;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intr_status<sp/>=<sp/>ptr-&gt;<ref refid="structFEMC__Type_1afa03189cab9e8f8060c719e7a79e0c71" kindref="member">INTR</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>(uint32_t)(<ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ac46f29a18607dd4d2994b5edff1ea23d" kindref="member">FEMC_INTR_IPCMDDONE_MASK</ref><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a405ca38fb60fc0f78c52bc2e473e107d" kindref="member">FEMC_INTR_IPCMDERR_MASK</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(intr_status<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__femc__drv_8c_1ab3c0d644e295fef5771cdb160577e8e2" kindref="member">HPM_FEMC_DRV_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1afa03189cab9e8f8060c719e7a79e0c71" kindref="member">INTR</ref><sp/>|=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ac46f29a18607dd4d2994b5edff1ea23d" kindref="member">FEMC_INTR_IPCMDDONE_MASK</ref><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a405ca38fb60fc0f78c52bc2e473e107d" kindref="member">FEMC_INTR_IPCMDERR_MASK</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(intr_status<sp/>&amp;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a405ca38fb60fc0f78c52bc2e473e107d" kindref="member">FEMC_INTR_IPCMDERR_MASK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__dram__interface_1gga550cb4231d535863c55643bbd2d3c6baa86c4e0027fad08319239dd5ae00f609a" kindref="member">status_femc_cmd_err</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="hpm__femc__drv_8c_1ab3d3e0a9962bf93c32219c58fad78622" kindref="member">femc_make_cmd</ref>(uint32_t<sp/>opcode)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(opcode<sp/>&amp;<sp/>~<ref refid="group__dram__interface_1gaf468ee6eedd3eb60d885ad86de24a7c4" kindref="member">FEMC_CMD_WRITE_FLAG</ref>)<sp/>|<sp/><ref refid="group__dram__interface_1ga6d9d1a67c2c12794710c79e17999abbd" kindref="member">FEMC_CMD_KEY</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="hpm__femc__drv_8c_1acec8919aeed571b1f8a971bb4ded4bd9" kindref="member">femc_is_write_cmd</ref>(uint32_t<sp/>opcode)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((opcode<sp/>&amp;<sp/><ref refid="group__dram__interface_1gaf468ee6eedd3eb60d885ad86de24a7c4" kindref="member">FEMC_CMD_WRITE_FLAG</ref>)<sp/>==<sp/><ref refid="group__dram__interface_1gaf468ee6eedd3eb60d885ad86de24a7c4" kindref="member">FEMC_CMD_WRITE_FLAG</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">uint32_t<sp/><ref refid="hpm__femc__drv_8c_1aa8c0c6bef844d55df59e3fb1516fec24" kindref="member">femc_issue_ip_cmd</ref>(<ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>base_address,<sp/><ref refid="structfemc__cmd__t" kindref="compound">femc_cmd_t</ref><sp/>*cmd)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>read_data<sp/>=<sp/>!<ref refid="hpm__femc__drv_8c_1acec8919aeed571b1f8a971bb4ded4bd9" kindref="member">femc_is_write_cmd</ref>(cmd-&gt;<ref refid="structfemc__cmd__t_1a5fea027eb9fa65d18aac83ff9176fe72" kindref="member">opcode</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1aaf1c1292cea7e63cef5633901652edf4" kindref="member">SADDR</ref><sp/>=<sp/>base_address;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!read_data)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a518a1b968de2ffeadf175820b5122e45" kindref="member">IPTX</ref><sp/>=<sp/>cmd-&gt;<ref refid="structfemc__cmd__t_1a6543de0d88f9baaf7453d25dd5324d4d" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a0c9104640287d9db20c84ceeb7ff3716" kindref="member">IPCMD</ref><sp/>=<sp/><ref refid="hpm__femc__drv_8c_1ab3d3e0a9962bf93c32219c58fad78622" kindref="member">femc_make_cmd</ref>(cmd-&gt;<ref refid="structfemc__cmd__t_1a5fea027eb9fa65d18aac83ff9176fe72" kindref="member">opcode</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="hpm__femc__drv_8c_1ade2df07bfd352e53411d26b48a028f52" kindref="member">femc_ip_cmd_done</ref>(ptr)<sp/>!=<sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__dram__interface_1gga550cb4231d535863c55643bbd2d3c6baa86c4e0027fad08319239dd5ae00f609a" kindref="member">status_femc_cmd_err</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(read_data)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmd-&gt;<ref refid="structfemc__cmd__t_1a6543de0d88f9baaf7453d25dd5324d4d" kindref="member">data</ref><sp/>=<sp/>ptr-&gt;<ref refid="structFEMC__Type_1a84dc06d424d83236ea8fcc2666812b08" kindref="member">IPRX</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__dram__interface_1gad4598f76fb91836974e0371971eff480" kindref="member">femc_default_config</ref>(<ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref><sp/>*ptr,<sp/><ref refid="structfemc__config__t" kindref="compound">femc_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<sp/>ptr;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfemc__axi__q__weight__t" kindref="compound">femc_axi_q_weight_t</ref><sp/>*q;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__config__t_1a5b8822040d51635978bc22665d9f4d76" kindref="member">dqs</ref><sp/>=<sp/><ref refid="group__dram__interface_1gaa0eb8ec46b0528c31875c8eb6e96e560" kindref="member">FEMC_DQS_FROM_PAD</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__config__t_1aa68484d0563638c36beadda51d61dba9" kindref="member">cmd_timeout</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__config__t_1a4d22afd166012527d0e5c276a0627aad" kindref="member">bus_timeout</ref><sp/>=<sp/>0x10;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>q<sp/>=<sp/>&amp;config-&gt;<ref refid="structfemc__config__t_1aa75b32527cc99a160686ca122e502f8e" kindref="member">axi_q_weight</ref>[<ref refid="group__dram__interface_1gaaa1b058c000188cbdc158e29ff644cf2" kindref="member">FEMC_AXI_Q_A</ref>];</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structfemc__axi__q__weight__t_1ad3c38e39fd4f696bf21f0094e136e19f" kindref="member">enable</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structfemc__axi__q__weight__t_1a469607f7ad2d57bdf9e22877246ad2b3" kindref="member">qos</ref><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structfemc__axi__q__weight__t_1a283838221cbfa45e87dabec477badeef" kindref="member">age</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structfemc__axi__q__weight__t_1a3687a5d50d8fe88a09e13edfea2fdb54" kindref="member">slave_hit</ref><sp/>=<sp/>0x5;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structfemc__axi__q__weight__t_1a22ec4fa28af44f91be1d69e6da183d62" kindref="member">slave_hit_wo_rw</ref><sp/>=<sp/>0x3;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>q<sp/>=<sp/>&amp;config-&gt;<ref refid="structfemc__config__t_1aa75b32527cc99a160686ca122e502f8e" kindref="member">axi_q_weight</ref>[<ref refid="group__dram__interface_1ga48b51e029b73afc259dba8a22d4aa251" kindref="member">FEMC_AXI_Q_B</ref>];</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structfemc__axi__q__weight__t_1ad3c38e39fd4f696bf21f0094e136e19f" kindref="member">enable</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structfemc__axi__q__weight__t_1a469607f7ad2d57bdf9e22877246ad2b3" kindref="member">qos</ref><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structfemc__axi__q__weight__t_1a283838221cbfa45e87dabec477badeef" kindref="member">age</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structfemc__axi__q__weight__t_1ab32cbdfa5c207ffedc70b033b7100d99" kindref="member">page_hit</ref><sp/>=<sp/>0x5;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structfemc__axi__q__weight__t_1a22ec4fa28af44f91be1d69e6da183d62" kindref="member">slave_hit_wo_rw</ref><sp/>=<sp/>0x3;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structfemc__axi__q__weight__t_1ab80af1ffc3d9b1ebf38d7b160b8c4d58" kindref="member">bank_rotation</ref><sp/>=<sp/>0x6;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__dram__interface_1gaa84a6bec298eeaa2fc1747555844b5c5" kindref="member">femc_get_typical_sdram_config</ref>(<ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref><sp/>*ptr,<sp/><ref refid="structfemc__sdram__config__t" kindref="compound">femc_sdram_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<sp/>ptr;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1aa670810ac8440828418c034f82a374d9" kindref="member">col_addr_bits</ref><sp/>=<sp/><ref refid="group__dram__interface_1gadee0a277cd03970a48d2cfc5b15d7717" kindref="member">FEMC_SDRAM_COLUMN_ADDR_9_BITS</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a01d2a4a654bc4f267003ed8c3db71c2a" kindref="member">cas_latency</ref><sp/>=<sp/><ref refid="group__dram__interface_1ga148a9006352799084110dfed0b5d4168" kindref="member">FEMC_SDRAM_CAS_LATENCY_3</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1aae1f97ca088f31e109a8e91ac2a42a94" kindref="member">bank_num</ref><sp/>=<sp/><ref refid="group__dram__interface_1gace89273a31027766f80d0fc30f1fae14" kindref="member">FEMC_SDRAM_BANK_NUM_4</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1ae3f61c49439e3d497d307d20311a2912" kindref="member">prescaler</ref><sp/>=<sp/><ref refid="hpm__femc__drv_8c_1a4b80d428f89ed5b8dc4557c6a2c766c0" kindref="member">HPM_FEMC_DRV_DEFAULT_PRESCALER</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1acf161a488e7b79fc276d3626f2f36277" kindref="member">burst_len_in_byte</ref><sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a0f11cad862dfb41747a1c1c4bf2d58e5" kindref="member">auto_refresh_count_in_one_burst</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1ac86ac9d084746910958656105c7e8cb0" kindref="member">precharge_to_act_in_ns</ref><sp/>=<sp/>18;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1ad38ab011b656f21d8e71c877c77215da" kindref="member">act_to_rw_in_ns</ref><sp/>=<sp/>18;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a8748fd167bf3c71777111c78d9629706" kindref="member">refresh_recover_in_ns</ref><sp/>=<sp/>60;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1aea6171187d6fc045517d8707966d3bc7" kindref="member">write_recover_in_ns</ref><sp/>=<sp/>12;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a51610a24c0b8b7ef9b89b985a60cda6e" kindref="member">cke_off_in_ns</ref><sp/>=<sp/>42;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a3c9425213a300440b14962bd93487d55" kindref="member">act_to_precharge_in_ns</ref><sp/>=<sp/>42;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a0b276f7f06d78f20ce5a195341a1813e" kindref="member">self_refresh_recover_in_ns</ref><sp/>=<sp/>72;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1adefc7c1e8230866b0a3afa1576b6609c" kindref="member">refresh_to_refresh_in_ns</ref><sp/>=<sp/>60;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a0f08ea1dc69257400ae19fe23dc46e7a" kindref="member">act_to_act_in_ns</ref><sp/>=<sp/>12;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a7d8ecc941652eb1af5e031ebf814dd4f" kindref="member">idle_timeout_in_ns</ref><sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1ac58e1a5bc50f6bf82de144996019c426" kindref="member">cs_mux_pin</ref><sp/>=<sp/><ref refid="group__dram__interface_1ga20cb58a5fbdde64963f465e518be1651" kindref="member">FEMC_IO_MUX_NOT_USED</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a5df8663b6b9ef3d76649cbc060fedc6e" kindref="member">cmd_data_width</ref><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__dram__interface_1ga5acf321e3cde7b319282e99a01ae5f31" kindref="member">femc_init</ref>(<ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref><sp/>*ptr,<sp/><ref refid="structfemc__config__t" kindref="compound">femc_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>i;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfemc__axi__q__weight__t" kindref="compound">femc_axi_q_weight_t</ref><sp/>*q;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="group__dram__interface_1ga1d07546a9a29b65ddbb865f1f134a69c" kindref="member">FEMC_BR_COUNT</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a0f291f698a6d10a31d7a5c74e38ec253" kindref="member">BR</ref>[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__dram__interface_1ga25be0b4f8efa83a3af66ef56c670a12c" kindref="member">femc_sw_reset</ref>(ptr);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__dram__interface_1ga6cf27f64dc5b947fc21b707bafb09d02" kindref="member">femc_disable</ref>(ptr);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1aa7b7f6ac8bffdba8d1b5231886d28dca" kindref="member">CTRL</ref><sp/>|=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a8e2cedf45210e43110c216b063085411" kindref="member">FEMC_CTRL_BTO_SET</ref>(config-&gt;<ref refid="structfemc__config__t_1a4d22afd166012527d0e5c276a0627aad" kindref="member">bus_timeout</ref>)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1aa50a68c56de5df9251837989f8a54cd7" kindref="member">FEMC_CTRL_CTO_SET</ref>(config-&gt;<ref refid="structfemc__config__t_1aa68484d0563638c36beadda51d61dba9" kindref="member">cmd_timeout</ref>)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ab05d679679afa8e5aa40daef1286eb15" kindref="member">FEMC_CTRL_DQS_SET</ref>(config-&gt;<ref refid="structfemc__config__t_1a5b8822040d51635978bc22665d9f4d76" kindref="member">dqs</ref>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>q<sp/>=<sp/>&amp;config-&gt;<ref refid="structfemc__config__t_1aa75b32527cc99a160686ca122e502f8e" kindref="member">axi_q_weight</ref>[<ref refid="group__dram__interface_1gaaa1b058c000188cbdc158e29ff644cf2" kindref="member">FEMC_AXI_Q_A</ref>];</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(q-&gt;<ref refid="structfemc__axi__q__weight__t_1ad3c38e39fd4f696bf21f0094e136e19f" kindref="member">enable</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a0d1f719b680aa3f63956f4f175952882" kindref="member">BMW0</ref><sp/>=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a622ed1385dcf0313eca2e119c8f7836d" kindref="member">FEMC_BMW0_QOS_SET</ref>(q-&gt;<ref refid="structfemc__axi__q__weight__t_1a469607f7ad2d57bdf9e22877246ad2b3" kindref="member">qos</ref>)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ad360f363efc664267e844c3dd8f3a33b" kindref="member">FEMC_BMW0_AGE_SET</ref>(q-&gt;<ref refid="structfemc__axi__q__weight__t_1a283838221cbfa45e87dabec477badeef" kindref="member">age</ref>)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a5f3416d69d7cd128a27ba48e0323cde0" kindref="member">FEMC_BMW0_SH_SET</ref>(q-&gt;<ref refid="structfemc__axi__q__weight__t_1a3687a5d50d8fe88a09e13edfea2fdb54" kindref="member">slave_hit</ref>)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a8ce5888c3fc1fe469231d9dfd4d4546e" kindref="member">FEMC_BMW0_RWS_SET</ref>(q-&gt;<ref refid="structfemc__axi__q__weight__t_1a22ec4fa28af44f91be1d69e6da183d62" kindref="member">slave_hit_wo_rw</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a0d1f719b680aa3f63956f4f175952882" kindref="member">BMW0</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>q<sp/>=<sp/>&amp;config-&gt;<ref refid="structfemc__config__t_1aa75b32527cc99a160686ca122e502f8e" kindref="member">axi_q_weight</ref>[<ref refid="group__dram__interface_1ga48b51e029b73afc259dba8a22d4aa251" kindref="member">FEMC_AXI_Q_B</ref>];</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(q-&gt;<ref refid="structfemc__axi__q__weight__t_1ad3c38e39fd4f696bf21f0094e136e19f" kindref="member">enable</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a83e0d9db6244b653e6e4961d2b1a31cf" kindref="member">BMW1</ref><sp/>=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a2848c73531fb407dbd39512d34335a38" kindref="member">FEMC_BMW1_QOS_SET</ref>(q-&gt;<ref refid="structfemc__axi__q__weight__t_1a469607f7ad2d57bdf9e22877246ad2b3" kindref="member">qos</ref>)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a5f20f60a313418de5aca55bc2f6d34f9" kindref="member">FEMC_BMW1_AGE_SET</ref>(q-&gt;<ref refid="structfemc__axi__q__weight__t_1a283838221cbfa45e87dabec477badeef" kindref="member">age</ref>)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a255e9b4aff081106a728d5c4eb9b5432" kindref="member">FEMC_BMW1_PH_SET</ref>(q-&gt;<ref refid="structfemc__axi__q__weight__t_1ab32cbdfa5c207ffedc70b033b7100d99" kindref="member">page_hit</ref>)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a827ce2968b8cd23ceb33f8bae21bb01a" kindref="member">FEMC_BMW1_BR_SET</ref>(q-&gt;<ref refid="structfemc__axi__q__weight__t_1ab80af1ffc3d9b1ebf38d7b160b8c4d58" kindref="member">bank_rotation</ref>)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a7b17b2f0606a96fb4782233fdfbe3e98" kindref="member">FEMC_BMW1_RWS_SET</ref>(q-&gt;<ref refid="structfemc__axi__q__weight__t_1a22ec4fa28af44f91be1d69e6da183d62" kindref="member">slave_hit_wo_rw</ref>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a83e0d9db6244b653e6e4961d2b1a31cf" kindref="member">BMW1</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__dram__interface_1ga804aee3f7e6ac88c2ffb97479e0afaee" kindref="member">femc_enable</ref>(ptr);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="hpm__femc__drv_8c_1a9ac169cbca2441814003a308663116c8" kindref="member">femc_convert_actual_size_to_memory_size</ref>(uint32_t<sp/>size_in_kb)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="group__nnactivation_1ga1a644b4eb69881039bfc5f6ab842160f" kindref="member">size</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size_in_kb<sp/>==<sp/>4)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size_in_kb<sp/>&gt;<sp/>2<sp/>*<sp/>1<sp/>&lt;&lt;<sp/>20)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0x1F;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__nnactivation_1ga1a644b4eb69881039bfc5f6ab842160f" kindref="member">size</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>size_in_kb<sp/>&gt;&gt;=<sp/>3;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(size_in_kb<sp/>&gt;<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size_in_kb<sp/>&gt;&gt;=<sp/>1;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__nnactivation_1ga1a644b4eb69881039bfc5f6ab842160f" kindref="member">size</ref>++;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__nnactivation_1ga1a644b4eb69881039bfc5f6ab842160f" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="hpm__femc__drv_8c_1a6572a6352807d410f1f7818b9c0acac4" kindref="member">femc_convert_burst_len</ref>(uint8_t<sp/>burst_len_in_byte)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((burst_len_in_byte<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>(burst_len_in_byte<sp/>&gt;<sp/><ref refid="group__dram__interface_1gaeb2872d4cf06262a9962a79140a302fb" kindref="member">FEMC_SDRAM_MAX_BURST_LENGTH_IN_BYTE</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__dram__interface_1gaeb2872d4cf06262a9962a79140a302fb" kindref="member">FEMC_SDRAM_MAX_BURST_LENGTH_IN_BYTE</ref><sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(burst_len_in_byte)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>4:</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>burst_len_in_byte<sp/>&gt;&gt;<sp/>1;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>8:</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(burst_len_in_byte<sp/>-<sp/>1)<sp/>&gt;&gt;<sp/>1;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__dram__interface_1gaeb2872d4cf06262a9962a79140a302fb" kindref="member">FEMC_SDRAM_MAX_BURST_LENGTH_IN_BYTE</ref><sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(uint32_t<sp/>freq_in_hz,<sp/>uint32_t<sp/>ns,<sp/>uint32_t<sp/>max_cycle)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ns_per_cycle;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>cycle;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>ns_per_cycle<sp/>=<sp/>1000000000<sp/>/<sp/>freq_in_hz;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>cycle<sp/>=<sp/>ns<sp/>/<sp/>ns_per_cycle;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cycle<sp/>&gt;<sp/>max_cycle)<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cycle<sp/>=<sp/>max_cycle;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cycle;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__dram__interface_1ga45f77237d47d51c79c453c57d5e980b6" kindref="member">femc_config_sdram</ref>(<ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>clk_in_hz,<sp/><ref refid="structfemc__sdram__config__t" kindref="compound">femc_sdram_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>err;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>prescaler;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>refresh_cycle;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>clk_in_khz<sp/>=<sp/>clk_in_hz<sp/>/<sp/>1000;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfemc__cmd__t" kindref="compound">femc_cmd_t</ref><sp/>cmd<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="group__nnactivation_1ga1a644b4eb69881039bfc5f6ab842160f" kindref="member">size</ref><sp/>=<sp/><ref refid="hpm__femc__drv_8c_1a9ac169cbca2441814003a308663116c8" kindref="member">femc_convert_actual_size_to_memory_size</ref>(config-&gt;<ref refid="structfemc__sdram__config__t_1a5f61c2a8163fe0bbb6be523ca648e551" kindref="member">size_in_byte</ref><sp/>&gt;&gt;<sp/>10);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>burst_len<sp/>=<sp/><ref refid="hpm__femc__drv_8c_1a6572a6352807d410f1f7818b9c0acac4" kindref="member">femc_convert_burst_len</ref>(config-&gt;<ref refid="structfemc__sdram__config__t_1acf161a488e7b79fc276d3626f2f36277" kindref="member">burst_len_in_byte</ref>);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>prescaler<sp/>=<sp/>((config-&gt;<ref refid="structfemc__sdram__config__t_1ae3f61c49439e3d497d307d20311a2912" kindref="member">prescaler</ref><sp/>==<sp/>0)<sp/>?<sp/><ref refid="hpm__femc__drv_8c_1a1d6f50c4ee12043348c76690e31ed260" kindref="member">FEMC_PRESCALER_MAX</ref><sp/>:<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1ae3f61c49439e3d497d307d20311a2912" kindref="member">prescaler</ref>);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>refresh_cycle<sp/>=<sp/>clk_in_khz<sp/>*<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a28fd59e837e84e6b4c477046d755b7c4" kindref="member">refresh_in_ms</ref><sp/>/<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a37b5b15f8b0315bc2e9ccfccbb611c48" kindref="member">refresh_count</ref><sp/>/<sp/>(prescaler<sp/>&lt;&lt;<sp/>4);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((prescaler<sp/>==<sp/>0)<sp/>||<sp/>(prescaler<sp/>&gt;<sp/><ref refid="hpm__femc__drv_8c_1a1d6f50c4ee12043348c76690e31ed260" kindref="member">FEMC_PRESCALER_MAX</ref>)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>(refresh_cycle<sp/>==<sp/>0)<sp/>||<sp/>(refresh_cycle<sp/>&gt;<sp/><ref refid="hpm__femc__drv_8c_1a1d6f50c4ee12043348c76690e31ed260" kindref="member">FEMC_PRESCALER_MAX</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prescaler<sp/>==<sp/><ref refid="hpm__femc__drv_8c_1a1d6f50c4ee12043348c76690e31ed260" kindref="member">FEMC_PRESCALER_MAX</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prescaler<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(refresh_cycle<sp/>==<sp/><ref refid="hpm__femc__drv_8c_1a1d6f50c4ee12043348c76690e31ed260" kindref="member">FEMC_PRESCALER_MAX</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>refresh_cycle<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a0f291f698a6d10a31d7a5c74e38ec253" kindref="member">BR</ref>[config-&gt;<ref refid="structfemc__sdram__config__t_1ae2e7010929e70b5c4787d2becb165d3d" kindref="member">cs</ref>]<sp/>=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ae995f63e04f4e40c4f6b5c6f5832ad6c" kindref="member">FEMC_BR_BASE_SET</ref>(config-&gt;<ref refid="structfemc__sdram__config__t_1a64de6c73ec24d2b1d5eade1bcf32e033" kindref="member">base_address</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a45734ca25ca8548a1118fcbda3475e5c" kindref="member">FEMC_BR_BASE_SHIFT</ref>)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a1e0beb2c7f7775aa2ea36d94d790614d" kindref="member">FEMC_BR_SIZE_SET</ref>(<ref refid="group__nnactivation_1ga1a644b4eb69881039bfc5f6ab842160f" kindref="member">size</ref>)<sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a53689ce434154ad8782f2ae3a7feb982" kindref="member">FEMC_BR_VLD_MASK</ref>;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1ad9f11b220fc5549e92bfbb004dd67ea5" kindref="member">SDRCTRL0</ref><sp/>=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a040798fffb3dfc6414fea671cddad586" kindref="member">FEMC_SDRCTRL0_PORTSZ_SET</ref>(config-&gt;<ref refid="structfemc__sdram__config__t_1ae3bfe51b06f936fc2dc9d8cad7147653" kindref="member">port_size</ref>)</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1adbdb8bb1024d7c0cbfc789766654a172" kindref="member">FEMC_SDRCTRL0_BURSTLEN_SET</ref>(burst_len)</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a62b63c839451cb30fecdc597ca417528" kindref="member">FEMC_SDRCTRL0_COL_SET</ref>(config-&gt;<ref refid="structfemc__sdram__config__t_1aa670810ac8440828418c034f82a374d9" kindref="member">col_addr_bits</ref>)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1aa0754e5ca333395c5e93cd1109f7e29a" kindref="member">FEMC_SDRCTRL0_COL8_SET</ref>(config-&gt;<ref refid="structfemc__sdram__config__t_1aa670810ac8440828418c034f82a374d9" kindref="member">col_addr_bits</ref><sp/>==<sp/><ref refid="group__dram__interface_1gad3e7aa0becbffcb1b3a874539316266d" kindref="member">FEMC_SDRAM_COLUMN_ADDR_8_BITS</ref>)</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ae2aac4f4525dfa5694feff404f021818" kindref="member">FEMC_SDRCTRL0_CAS_SET</ref>(config-&gt;<ref refid="structfemc__sdram__config__t_1a01d2a4a654bc4f267003ed8c3db71c2a" kindref="member">cas_latency</ref>)</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a26779bcf3a8da95f35fba480932232e3" kindref="member">FEMC_SDRCTRL0_BANK2_SET</ref>(config-&gt;<ref refid="structfemc__sdram__config__t_1aae1f97ca088f31e109a8e91ac2a42a94" kindref="member">bank_num</ref>);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a5250134b52b47657b6da159e8e7a8f64" kindref="member">SDRCTRL1</ref><sp/>=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a7e9d29c084a9e8450fd1f27fff1c0fe3" kindref="member">FEMC_SDRCTRL1_PRE2ACT_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1ac86ac9d084746910958656105c7e8cb0" kindref="member">precharge_to_act_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a7f5da91ea1e7c590574e225be04a1965" kindref="member">FEMC_SDRCTRL1_PRE2ACT_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a66130d1697f41beb0acf860934873586" kindref="member">FEMC_SDRCTRL1_PRE2ACT_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ac7b1012d182b6cd85951a024b2cba6f3" kindref="member">FEMC_SDRCTRL1_ACT2RW_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1ad38ab011b656f21d8e71c877c77215da" kindref="member">act_to_rw_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ac083c4f3a61f38f59731f9fd9380f0f9" kindref="member">FEMC_SDRCTRL1_ACT2RW_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a76ca9c3adb0c9513363c9ae81e9f148d" kindref="member">FEMC_SDRCTRL1_ACT2RW_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1abc70e694ad57cf4d4a1fd3432830ee66" kindref="member">FEMC_SDRCTRL1_RFRC_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a8748fd167bf3c71777111c78d9629706" kindref="member">refresh_recover_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1adea4e076968ebb617b84049dc5656973" kindref="member">FEMC_SDRCTRL1_RFRC_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a63bca10068047b983bc821839e05e43d" kindref="member">FEMC_SDRCTRL1_RFRC_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1acca656b21340e415842b85d8e4d8b8b2" kindref="member">FEMC_SDRCTRL1_WRC_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1aea6171187d6fc045517d8707966d3bc7" kindref="member">write_recover_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a1369599d8bf480f32a1d953a109a78e0" kindref="member">FEMC_SDRCTRL1_WRC_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a48fd71093c6c0cb16ea55cf341762f14" kindref="member">FEMC_SDRCTRL1_WRC_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a8317ab862003a54d078f67f6db568039" kindref="member">FEMC_SDRCTRL1_CKEOFF_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a51610a24c0b8b7ef9b89b985a60cda6e" kindref="member">cke_off_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a6a25d920fe210c4e25bc2cb27107fefb" kindref="member">FEMC_SDRCTRL1_CKEOFF_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1aab843937069ca50a383abdc0e31e3e7a" kindref="member">FEMC_SDRCTRL1_CKEOFF_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a7e90a3a6b232ff1d08773f0eecadd78c" kindref="member">FEMC_SDRCTRL1_ACT2PRE_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a3c9425213a300440b14962bd93487d55" kindref="member">act_to_precharge_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1aea2c6e28e015185c7b9cbe85b3ce798f" kindref="member">FEMC_SDRCTRL1_ACT2PRE_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a2fb17674a8c6c4832c94c2dbb350a417" kindref="member">FEMC_SDRCTRL1_ACT2PRE_SHIFT</ref>));</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a0a6ea51bdec596cc8584cf4d4525c7b0" kindref="member">SDRCTRL2</ref><sp/>=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ae81960ceddc3034018183f5a67a1cee0" kindref="member">FEMC_SDRCTRL2_SRRC_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a0b276f7f06d78f20ce5a195341a1813e" kindref="member">self_refresh_recover_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ab87881f34ccebdec36444d65bf2481d7" kindref="member">FEMC_SDRCTRL2_SRRC_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ac3b5302064ed1de71d409125164ab5fa" kindref="member">FEMC_SDRCTRL2_SRRC_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a32dc69a35a18afc5bcc33621a6afa51c" kindref="member">FEMC_SDRCTRL2_REF2REF_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1adefc7c1e8230866b0a3afa1576b6609c" kindref="member">refresh_to_refresh_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1aa0c1ad053c33ea341302080db4eb2cd7" kindref="member">FEMC_SDRCTRL2_REF2REF_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1afd2cf5c5119138eba0a5003d54c1d52e" kindref="member">FEMC_SDRCTRL2_REF2REF_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a4d6694f760757103bafca37557dbe37c" kindref="member">FEMC_SDRCTRL2_ACT2ACT_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a0f08ea1dc69257400ae19fe23dc46e7a" kindref="member">act_to_act_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a1d6a70d90378dee0de764ce753156605" kindref="member">FEMC_SDRCTRL2_ACT2ACT_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1aaf19d9ecbb4e43dd7931f515e3042032" kindref="member">FEMC_SDRCTRL2_ACT2ACT_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a821eb4d556971588bfe55ae3a194edec" kindref="member">FEMC_SDRCTRL2_ITO_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a7d8ecc941652eb1af5e031ebf814dd4f" kindref="member">idle_timeout_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a37f86fe0c5307c0e3c406690d7f057de" kindref="member">FEMC_SDRCTRL2_ITO_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1aa2db73d3e68f2f2459c2441dd0b4a232" kindref="member">FEMC_SDRCTRL2_ITO_SHIFT</ref>));</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a0aa560c21cc78917e37040f352d7bf9a" kindref="member">SDRCTRL3</ref><sp/>=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ad22fd79f620f9c3afc57e4ec5ce302e2" kindref="member">FEMC_SDRCTRL3_PRESCALE_SET</ref>(prescaler)</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a97064b26a7e5e6764535a3f566028e4d" kindref="member">FEMC_SDRCTRL3_RT_SET</ref>(refresh_cycle)</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a4ff3f342af2f0db1a27ab63863b6d3b0" kindref="member">FEMC_SDRCTRL3_UT_SET</ref>(refresh_cycle)</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a4bb1c38d4d18130064fd5b49ba766782" kindref="member">FEMC_SDRCTRL3_REBL_SET</ref>(config-&gt;<ref refid="structfemc__sdram__config__t_1a0f11cad862dfb41747a1c1c4bf2d58e5" kindref="member">auto_refresh_count_in_one_burst</ref><sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="273"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>config<sp/>delay<sp/>cell</highlight></codeline>
+<codeline lineno="274"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__femc__drv_8c_1a981e832ff4442de8008a02ec2a7acaf4" kindref="member">femc_config_delay_cell</ref>(ptr,<sp/>!config-&gt;<ref refid="structfemc__sdram__config__t_1ae85a7796aabff05d4870e987e8a05521" kindref="member">delay_cell_disable</ref>,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a6928bb76427d1a8f5ffc42ea50f902e3" kindref="member">delay_cell_value</ref>);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="278"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="279"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>DATSZ[2:0]:<sp/>Data<sp/>size<sp/>in<sp/>byte</highlight></codeline>
+<codeline lineno="280"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>0b<sp/>-<sp/>4</highlight></codeline>
+<codeline lineno="281"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>1b<sp/>-<sp/>1</highlight></codeline>
+<codeline lineno="282"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>2b<sp/>-<sp/>2</highlight></codeline>
+<codeline lineno="283"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>3b<sp/>-<sp/>3</highlight></codeline>
+<codeline lineno="284"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>&gt;<sp/>3b<sp/>-<sp/>4</highlight></codeline>
+<codeline lineno="285"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a1cc12aad898c264e59f0b129b8f5674c" kindref="member">DATSZ</ref><sp/>=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ab452f8038ba144cfd13de13c077ebb1a" kindref="member">FEMC_DATSZ_DATSZ_SET</ref>((config-&gt;<ref refid="structfemc__sdram__config__t_1a5df8663b6b9ef3d76649cbc060fedc6e" kindref="member">cmd_data_width</ref><sp/>&amp;<sp/>(0x3UL)));</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a13e9231d448da19d2831134f01ca78e8" kindref="member">BYTEMSK</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>cmd.<ref refid="structfemc__cmd__t_1a5fea027eb9fa65d18aac83ff9176fe72" kindref="member">opcode</ref><sp/>=<sp/><ref refid="group__dram__interface_1gaaba2490741236b15aad3ff1948dccf0d" kindref="member">FEMC_CMD_SDRAM_PRECHARGE_ALL</ref>;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>cmd.<ref refid="structfemc__cmd__t_1a6543de0d88f9baaf7453d25dd5324d4d" kindref="member">data</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="hpm__femc__drv_8c_1aa8c0c6bef844d55df59e3fb1516fec24" kindref="member">femc_issue_ip_cmd</ref>(ptr,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a64de6c73ec24d2b1d5eade1bcf32e033" kindref="member">base_address</ref>,<sp/>&amp;cmd);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref><sp/>!=<sp/>err)<sp/>{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>cmd.<ref refid="structfemc__cmd__t_1a5fea027eb9fa65d18aac83ff9176fe72" kindref="member">opcode</ref><sp/>=<sp/><ref refid="group__dram__interface_1gad0130b69f3bb856026f181ba13e2819f" kindref="member">FEMC_CMD_SDRAM_AUTO_REFRESH</ref>;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="hpm__femc__drv_8c_1aa8c0c6bef844d55df59e3fb1516fec24" kindref="member">femc_issue_ip_cmd</ref>(ptr,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a64de6c73ec24d2b1d5eade1bcf32e033" kindref="member">base_address</ref>,<sp/>&amp;cmd);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref><sp/>!=<sp/>err)<sp/>{</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="hpm__femc__drv_8c_1aa8c0c6bef844d55df59e3fb1516fec24" kindref="member">femc_issue_ip_cmd</ref>(ptr,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a64de6c73ec24d2b1d5eade1bcf32e033" kindref="member">base_address</ref>,<sp/>&amp;cmd);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref><sp/>!=<sp/>err)<sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>cmd.<ref refid="structfemc__cmd__t_1a5fea027eb9fa65d18aac83ff9176fe72" kindref="member">opcode</ref><sp/>=<sp/><ref refid="group__dram__interface_1ga4ea8fdd879b32ea10f96a6755770ebcf" kindref="member">FEMC_CMD_SDRAM_MODE_SET</ref>;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>FIXME:<sp/>the<sp/>mode<sp/>register<sp/>layout<sp/>definition<sp/>better<sp/>to<sp/>be<sp/>passed<sp/>in?<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>cmd.<ref refid="structfemc__cmd__t_1a6543de0d88f9baaf7453d25dd5324d4d" kindref="member">data</ref><sp/>=<sp/>(uint32_t)(burst_len<sp/>|<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a01d2a4a654bc4f267003ed8c3db71c2a" kindref="member">cas_latency</ref><sp/>&lt;&lt;<sp/>4);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="hpm__femc__drv_8c_1aa8c0c6bef844d55df59e3fb1516fec24" kindref="member">femc_issue_ip_cmd</ref>(ptr,<sp/>config-&gt;<ref refid="structfemc__sdram__config__t_1a64de6c73ec24d2b1d5eade1bcf32e033" kindref="member">base_address</ref>,<sp/>&amp;cmd);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref><sp/>!=<sp/>err)<sp/>{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a0aa560c21cc78917e37040f352d7bf9a" kindref="member">SDRCTRL3</ref><sp/>|=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a9e49e1d0b0b20f6c16f8c2c115c46db2" kindref="member">FEMC_SDRCTRL3_REN_MASK</ref>;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__dram__interface_1ga05f9c55c035b9d1aca6de06d95d515ad" kindref="member">femc_get_typical_sram_config</ref>(<ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref><sp/>*ptr,<sp/><ref refid="structfemc__sram__config__t" kindref="compound">femc_sram_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="319"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<sp/>ptr;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sram__config__t_1a2c46e4164bef544cedb8aeac3112b380" kindref="member">base_address</ref><sp/>=<sp/>0x48000000;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sram__config__t_1ab093a42a7ba629ac82a214b4e3acf662" kindref="member">size_in_byte</ref><sp/>=<sp/>4096;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sram__config__t_1af630b94e1e1ed881110ced14ba67f36b" kindref="member">address_mode</ref><sp/>=<sp/><ref refid="group__dram__interface_1gaaf0a2d67765b93922ef1f423c1fb6963" kindref="member">FEMC_SRAM_AD_NONMUX_MODE</ref>;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sram__config__t_1a81cc429f3164f1aea0ada1286d1dbad2" kindref="member">port_size</ref><sp/>=<sp/><ref refid="group__dram__interface_1ga0e714179ab617de8a694665e7a759e33" kindref="member">FEMC_SRAM_PORT_SIZE_8_BITS</ref>;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sram__config__t_1a7f222645327d83306683a12e11122aa5" kindref="member">adv_hold_state</ref><sp/>=<sp/><ref refid="group__dram__interface_1gaec48ef5d48cacfec432954dca066c02c" kindref="member">FEMC_SRAM_ADV_HOLD_LOW</ref>;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sram__config__t_1ad94ba70321ff123e8f08608df8d96a48" kindref="member">adv_polarity</ref><sp/>=<sp/><ref refid="group__dram__interface_1ga2a7faa2d491b1187e8d2aedba5728fde" kindref="member">FEMC_SRAM_ADV_ACTIVE_HIGH</ref>;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sram__config__t_1ab94b2c51bf0438ebb18fdcf745640cae" kindref="member">oeh_in_ns</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sram__config__t_1a5275d3ae51334cb2c6a98d605a73722c" kindref="member">oel_in_ns</ref><sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sram__config__t_1a5cfcee7cda0fa5aaf4c493e2346eb677" kindref="member">weh_in_ns</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sram__config__t_1ae70a0f8d4aadab80e6200bdec9bfe675" kindref="member">wel_in_ns</ref><sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sram__config__t_1adff61f74ee5ceab6a70e338745a9d16a" kindref="member">ah_in_ns</ref><sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sram__config__t_1a5a3d1b4636504b157987990a0b6befd0" kindref="member">as_in_ns</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sram__config__t_1afbf889669878f706fa8522f52b653575" kindref="member">ceh_in_ns</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structfemc__sram__config__t_1abfe1d87a2d15785405d412b220c8f2b2" kindref="member">ces_in_ns</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__dram__interface_1gaee9729014949c9432ff57ccc5147cf0d" kindref="member">femc_config_sram</ref>(<ref refid="structFEMC__Type" kindref="compound">FEMC_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>clk_in_hz,<sp/><ref refid="structfemc__sram__config__t" kindref="compound">femc_sram_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="338"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="group__nnactivation_1ga1a644b4eb69881039bfc5f6ab842160f" kindref="member">size</ref><sp/>=<sp/><ref refid="hpm__femc__drv_8c_1a9ac169cbca2441814003a308663116c8" kindref="member">femc_convert_actual_size_to_memory_size</ref>(config-&gt;<ref refid="structfemc__sram__config__t_1ab093a42a7ba629ac82a214b4e3acf662" kindref="member">size_in_byte</ref><sp/>&gt;&gt;<sp/>10);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a20f896ed0cafd2511bf4c9f51b37c5e7" kindref="member">IOCTRL</ref><sp/>=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a002c87964137ca57580050c6faff6ea6" kindref="member">FEMC_IOCTRL_IO_CSX_SET</ref>(<ref refid="group__dram__interface_1ga453aaab2dd9c276fb2b75ad74339ce4b" kindref="member">FEMC_IO_CSX_SRAM_CE</ref>);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a0f291f698a6d10a31d7a5c74e38ec253" kindref="member">BR</ref>[<ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1abf0586571d2a642f5acafeb407371613" kindref="member">FEMC_BR_BASE6</ref>]<sp/>=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ae995f63e04f4e40c4f6b5c6f5832ad6c" kindref="member">FEMC_BR_BASE_SET</ref>(config-&gt;<ref refid="structfemc__sram__config__t_1a2c46e4164bef544cedb8aeac3112b380" kindref="member">base_address</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a45734ca25ca8548a1118fcbda3475e5c" kindref="member">FEMC_BR_BASE_SHIFT</ref>)</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a1e0beb2c7f7775aa2ea36d94d790614d" kindref="member">FEMC_BR_SIZE_SET</ref>(<ref refid="group__nnactivation_1ga1a644b4eb69881039bfc5f6ab842160f" kindref="member">size</ref>)</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a53689ce434154ad8782f2ae3a7feb982" kindref="member">FEMC_BR_VLD_MASK</ref>;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a2d053c42830e11309897fba9bf3d3e8b" kindref="member">SRCTRL0</ref><sp/>=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a380d7e9d53115d2c07a39bfc15ac9d7f" kindref="member">FEMC_SRCTRL0_ADVH_SET</ref>(config-&gt;<ref refid="structfemc__sram__config__t_1a7f222645327d83306683a12e11122aa5" kindref="member">adv_hold_state</ref>)</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1abd60848f7fb421488e440e50efe4b438" kindref="member">FEMC_SRCTRL0_ADVP_SET</ref>(config-&gt;<ref refid="structfemc__sram__config__t_1ad94ba70321ff123e8f08608df8d96a48" kindref="member">adv_polarity</ref>)</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a0155d7bbf61e1c86573ed09d3f0687fe" kindref="member">FEMC_SRCTRL0_ADM_SET</ref>(config-&gt;<ref refid="structfemc__sram__config__t_1af630b94e1e1ed881110ced14ba67f36b" kindref="member">address_mode</ref>)</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a3d06f9ae563624f0d982714545823864" kindref="member">FEMC_SRCTRL0_PORTSZ_SET</ref>(config-&gt;<ref refid="structfemc__sram__config__t_1a81cc429f3164f1aea0ada1286d1dbad2" kindref="member">port_size</ref>);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structFEMC__Type_1a88edb9427aab6e1ecba258eeae9a3ea7" kindref="member">SRCTRL1</ref><sp/>=<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a6a1a2f5a47658a139bbd73e958e53a65" kindref="member">FEMC_SRCTRL1_OEH_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sram__config__t_1ab94b2c51bf0438ebb18fdcf745640cae" kindref="member">oeh_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ab7f2fbc252f3d8383ac07156e399de85" kindref="member">FEMC_SRCTRL1_OEH_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a9948855331b1718368e9dc6cf09c05e1" kindref="member">FEMC_SRCTRL1_OEH_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1aed05160fc13eebbf9ed5b540f2fa0f1f" kindref="member">FEMC_SRCTRL1_OEL_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sram__config__t_1a5275d3ae51334cb2c6a98d605a73722c" kindref="member">oel_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a36bc8bc88893114df05b1d97a2c3b455" kindref="member">FEMC_SRCTRL1_OEL_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1adff243ee383f8725b6a7a88000a567e6" kindref="member">FEMC_SRCTRL1_OEL_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a596cb4dd343f96461a837ea089eb0ce6" kindref="member">FEMC_SRCTRL1_WEH_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sram__config__t_1a5cfcee7cda0fa5aaf4c493e2346eb677" kindref="member">weh_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ab8c08dd39b57ecf1fd3db323d3313e78" kindref="member">FEMC_SRCTRL1_WEH_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1abd5fa1d94a7761d71ba574663165f20f" kindref="member">FEMC_SRCTRL1_WEH_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a664a8cb4deb12bfb185b53faa2b0cdf8" kindref="member">FEMC_SRCTRL1_WEL_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sram__config__t_1ae70a0f8d4aadab80e6200bdec9bfe675" kindref="member">wel_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a06b1943ce3b71d7facb7afa30f93a1ec" kindref="member">FEMC_SRCTRL1_WEL_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a1247e6111dda8cf0e411a85b05632782" kindref="member">FEMC_SRCTRL1_WEL_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a778ac94059e49c2265fa73dd3e855be0" kindref="member">FEMC_SRCTRL1_AH_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sram__config__t_1adff61f74ee5ceab6a70e338745a9d16a" kindref="member">ah_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a0cc10f4eb538ca9cdfa762297eb06747" kindref="member">FEMC_SRCTRL1_AH_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1aa78348b670a52c4ea4459d9ee553c078" kindref="member">FEMC_SRCTRL1_AH_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1ae8ee0e19837e7391ae6736778722dfa2" kindref="member">FEMC_SRCTRL1_AS_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sram__config__t_1a5a3d1b4636504b157987990a0b6befd0" kindref="member">as_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1aa5661760ae82fa6fdccd7415583dc226" kindref="member">FEMC_SRCTRL1_AS_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a7c41b8db6762f2bde560ee989e3d5c6d" kindref="member">FEMC_SRCTRL1_AS_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a572901a37c79c0b4765a88bc0d07fd78" kindref="member">FEMC_SRCTRL1_CEH_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sram__config__t_1afbf889669878f706fa8522f52b653575" kindref="member">ceh_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1afb872b53f9032d98d326ac7a68a5e848" kindref="member">FEMC_SRCTRL1_CEH_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a2030db651e709b66fd90c5ce55ebdcb1" kindref="member">FEMC_SRCTRL1_CEH_SHIFT</ref>))</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a618ea69550d6f67b962fa06006a6b3a1" kindref="member">FEMC_SRCTRL1_CES_SET</ref>(<ref refid="hpm__femc__drv_8c_1a207a7a0a7e1904040c4af60fd6ffc7e0" kindref="member">ns2cycle</ref>(clk_in_hz,<sp/>config-&gt;<ref refid="structfemc__sram__config__t_1abfe1d87a2d15785405d412b220c8f2b2" kindref="member">ces_in_ns</ref>,<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1a9e368bd07c782eee72e71f21cd4cbfe0" kindref="member">FEMC_SRCTRL1_CES_MASK</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6300_2ip_2hpm__femc__regs_8h_1aaf472c12a34c30bfefd29ad5d6746114" kindref="member">FEMC_SRCTRL1_CES_SHIFT</ref>));</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="362"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="drivers/src/hpm_femc_drv.c"/>
+  </compounddef>
+</doxygen>

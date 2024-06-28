@@ -1,0 +1,617 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hpm__mbx__drv_8h" kind="file" language="C++">
+    <compoundname>hpm_mbx_drv.h</compoundname>
+    <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
+    <includes local="yes">hpm_mbx_regs.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="8">
+        <label>hpm_mbx_regs.h</label>
+      </node>
+      <node id="2">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="1">
+        <label>drivers/inc/hpm_mbx_drv.h</label>
+        <link refid="hpm__mbx__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__mbx__interface_1ga88a217f2d4584891014320787c1df818" prot="public" static="no">
+        <name>MBX_CR_ALL_INTERRUPTS_MASK</name>
+        <initializer>        (<ref refid="HPM6E00_2ip_2hpm__mbx__regs_8h_1afeee5c6056cc0d123c38984907adc279" kindref="member">MBX_CR_TFMAIE_MASK</ref> | <ref refid="HPM6E00_2ip_2hpm__mbx__regs_8h_1a87a074178d6299c20beffd444393a256" kindref="member">MBX_CR_RFMAIE_MASK</ref> \
+        | <ref refid="HPM6E00_2ip_2hpm__mbx__regs_8h_1aca6406b922a95ed0aeb9ee0c6ec39089" kindref="member">MBX_CR_RFMFIE_MASK</ref> | <ref refid="HPM6E00_2ip_2hpm__mbx__regs_8h_1a477b83036ba686b1f25c23f50f5b4811" kindref="member">MBX_CR_TWMEIE_MASK</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mbx_drv.h" line="36" column="9" bodyfile="drivers/inc/hpm_mbx_drv.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__mbx__interface_1gae3093239970728d6ccfe0ae56291a27c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mbx_bus_access_resp_t</name>
+        <enumvalue id="group__mbx__interface_1ggae3093239970728d6ccfe0ae56291a27caa19d26ae5cff269c6c7af819432341e9" prot="public">
+          <name>no_bus_error_no_wait</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mbx__interface_1ggae3093239970728d6ccfe0ae56291a27ca2bd03ade16a8ed4dc8b88e67126f0f94" prot="public">
+          <name>generate_bus_error</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mbx_drv.h" line="24" column="1" bodyfile="drivers/inc/hpm_mbx_drv.h" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mbx__interface_1ga70ad55be767ca0a42c9150d24618e4ca" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@79</name>
+        <enumvalue id="group__mbx__interface_1gga70ad55be767ca0a42c9150d24618e4caa79010cdaf5f6eb258155dcfe0a8bf20c" prot="public">
+          <name>status_mbx_not_available</name>
+          <initializer>= ((uint32_t)( status_group_mbx )*1000U + (uint32_t)( 2 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mbx_drv.h" line="32" column="1" bodyfile="drivers/inc/hpm_mbx_drv.h" bodystart="32" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__mbx__interface_1gaacf021feb830c93d75a69528042fb528" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mbx_set_bus_access_response</definition>
+        <argsstring>(MBX_Type *ptr, mbx_bus_access_resp_t resp)</argsstring>
+        <name>mbx_set_bus_access_response</name>
+        <param>
+          <type><ref refid="structMBX__Type" kindref="compound">MBX_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mbx__interface_1gae3093239970728d6ccfe0ae56291a27c" kindref="member">mbx_bus_access_resp_t</ref></type>
+          <declname>resp</declname>
+        </param>
+        <briefdescription>
+<para>Set bus access response. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MBX base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">resp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>response value type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mbx_drv.h" line="49" column="20" bodyfile="drivers/inc/hpm_mbx_drv.h" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mbx__interface_1ga2cb6fc9c0a9c9e3707e7827386587b7d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mbx_enable_intr</definition>
+        <argsstring>(MBX_Type *ptr, uint32_t mask)</argsstring>
+        <name>mbx_enable_intr</name>
+        <param>
+          <type><ref refid="structMBX__Type" kindref="compound">MBX_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Enable interrupt with mask. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MBX base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mask of interrupts to be enabled </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mbx_drv.h" line="60" column="20" bodyfile="drivers/inc/hpm_mbx_drv.h" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mbx__interface_1ga2dbcbfe3d3e22c698f2b6bbe715c3ae3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mbx_disable_intr</definition>
+        <argsstring>(MBX_Type *ptr, uint32_t mask)</argsstring>
+        <name>mbx_disable_intr</name>
+        <param>
+          <type><ref refid="structMBX__Type" kindref="compound">MBX_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Disable interrupt with mask. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MBX base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mask of interrupts to be disabled </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mbx_drv.h" line="71" column="20" bodyfile="drivers/inc/hpm_mbx_drv.h" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mbx__interface_1ga570583ef882ca0eb51fe912b3607be1d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mbx_empty_txfifo</definition>
+        <argsstring>(MBX_Type *ptr)</argsstring>
+        <name>mbx_empty_txfifo</name>
+        <param>
+          <type><ref refid="structMBX__Type" kindref="compound">MBX_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Empty fifo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MBX base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mbx_drv.h" line="81" column="20" bodyfile="drivers/inc/hpm_mbx_drv.h" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mbx__interface_1ga20e22b0159d87dcd962b4f8a696cb336" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mbx_init</definition>
+        <argsstring>(MBX_Type *ptr)</argsstring>
+        <name>mbx_init</name>
+        <param>
+          <type><ref refid="structMBX__Type" kindref="compound">MBX_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MBX base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mbx_drv.h" line="91" column="20" bodyfile="drivers/inc/hpm_mbx_drv.h" bodystart="91" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mbx__interface_1gaa8a81b671353fee7ad25e3a70c0bd86c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>static hpm_stat_t mbx_send_message</definition>
+        <argsstring>(MBX_Type *ptr, uint32_t msg)</argsstring>
+        <name>mbx_send_message</name>
+        <param>
+          <type><ref refid="structMBX__Type" kindref="compound">MBX_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Send message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MBX base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message data in 32 bits</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status_success if everything is okay </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mbx_drv.h" line="105" column="26" bodyfile="drivers/inc/hpm_mbx_drv.h" bodystart="105" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mbx__interface_1ga7fc40f2692ab0f89eb12d4f1a28b0e44" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>static hpm_stat_t mbx_retrieve_message</definition>
+        <argsstring>(MBX_Type *ptr, uint32_t *msg)</argsstring>
+        <name>mbx_retrieve_message</name>
+        <param>
+          <type><ref refid="structMBX__Type" kindref="compound">MBX_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MBX base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to buffer to save message data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status_success if everything is okay </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mbx_drv.h" line="123" column="26" bodyfile="drivers/inc/hpm_mbx_drv.h" bodystart="123" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mbx__interface_1ga0226b627df48f04eae3fabe8427da6e9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>static hpm_stat_t mbx_send_fifo</definition>
+        <argsstring>(MBX_Type *ptr, uint32_t *msg, uint32_t count)</argsstring>
+        <name>mbx_send_fifo</name>
+        <param>
+          <type><ref refid="structMBX__Type" kindref="compound">MBX_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Send message to fifo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MBX base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to message array to be sent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of 32-bit data to be sent</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status_success if everything is okay </para>
+</simplesect>
+<simplesect kind="return"><para>status_not_available if fifo is full </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mbx_drv.h" line="142" column="26" bodyfile="drivers/inc/hpm_mbx_drv.h" bodystart="142" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mbx__interface_1gab721a467cb556269d5cc28252616129e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>static hpm_stat_t mbx_retrieve_fifo</definition>
+        <argsstring>(MBX_Type *ptr, uint32_t *msg, uint32_t count)</argsstring>
+        <name>mbx_retrieve_fifo</name>
+        <param>
+          <type><ref refid="structMBX__Type" kindref="compound">MBX_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve data from fifo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MBX base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer of buffer to receive data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of 32-bit data to be retrieved</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status_success if everything is okay </para>
+</simplesect>
+<simplesect kind="return"><para>status_mbx_not_available if fifo is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mbx_drv.h" line="173" column="26" bodyfile="drivers/inc/hpm_mbx_drv.h" bodystart="173" bodyend="190"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPM_MBX_DRV_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_MBX_DRV_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__common_8h" kindref="compound">hpm_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_mbx_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Bus<sp/>access<sp/>responses</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="group__mbx__interface_1gae3093239970728d6ccfe0ae56291a27c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="25" refid="group__mbx__interface_1ggae3093239970728d6ccfe0ae56291a27caa19d26ae5cff269c6c7af819432341e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__mbx__interface_1ggae3093239970728d6ccfe0ae56291a27caa19d26ae5cff269c6c7af819432341e9" kindref="member">no_bus_error_no_wait</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="26" refid="group__mbx__interface_1ggae3093239970728d6ccfe0ae56291a27ca2bd03ade16a8ed4dc8b88e67126f0f94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__mbx__interface_1ggae3093239970728d6ccfe0ae56291a27ca2bd03ade16a8ed4dc8b88e67126f0f94" kindref="member">generate_bus_error</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}<sp/><ref refid="group__mbx__interface_1gae3093239970728d6ccfe0ae56291a27c" kindref="member">mbx_bus_access_resp_t</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>@brief<sp/>MBX<sp/>specific<sp/>status</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="33" refid="group__mbx__interface_1gga70ad55be767ca0a42c9150d24618e4caa79010cdaf5f6eb258155dcfe0a8bf20c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__mbx__interface_1gga70ad55be767ca0a42c9150d24618e4caa79010cdaf5f6eb258155dcfe0a8bf20c" kindref="member">status_mbx_not_available</ref><sp/>=<sp/><ref refid="group__common__interface_1gad76dfbb0423d0cd3a7b77cbcd9043146" kindref="member">MAKE_STATUS</ref>(<ref refid="group__common__interface_1ggadb49720dc49f7d4e4cf9adbf2948e409a5784536af25bae00e21cc313438b0d66" kindref="member">status_group_mbx</ref>,<sp/>2),</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="group__mbx__interface_1ga88a217f2d4584891014320787c1df818" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBX_CR_ALL_INTERRUPTS_MASK<sp/>(MBX_CR_TFMAIE_MASK<sp/>|<sp/>MBX_CR_RFMAIE_MASK<sp/>\</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>MBX_CR_RFMFIE_MASK<sp/>|<sp/>MBX_CR_TWMEIE_MASK)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="group__mbx__interface_1gaacf021feb830c93d75a69528042fb528" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__mbx__interface_1gaacf021feb830c93d75a69528042fb528" kindref="member">mbx_set_bus_access_response</ref>(<ref refid="structMBX__Type" kindref="compound">MBX_Type</ref><sp/>*ptr,<sp/><ref refid="group__mbx__interface_1gae3093239970728d6ccfe0ae56291a27c" kindref="member">mbx_bus_access_resp_t</ref><sp/>resp)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMBX__Type_1add87d8cce3984c29da363503ad3b777d" kindref="member">CR</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structMBX__Type_1add87d8cce3984c29da363503ad3b777d" kindref="member">CR</ref><sp/>&amp;<sp/>~(<ref refid="HPM5300_2ip_2hpm__mbx__regs_8h_1ac2cbf29e26c446a97da3cd1ebd88a938" kindref="member">MBX_CR_BARCTL_MASK</ref>))<sp/>|<sp/><ref refid="HPM5300_2ip_2hpm__mbx__regs_8h_1ab521a841e5b43a4b4e8fc0b5c3013fef" kindref="member">MBX_CR_BARCTL_SET</ref>(resp);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="group__mbx__interface_1ga2cb6fc9c0a9c9e3707e7827386587b7d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__mbx__interface_1ga2cb6fc9c0a9c9e3707e7827386587b7d" kindref="member">mbx_enable_intr</ref>(<ref refid="structMBX__Type" kindref="compound">MBX_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>mask)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMBX__Type_1add87d8cce3984c29da363503ad3b777d" kindref="member">CR</ref><sp/>|=<sp/>mask;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="group__mbx__interface_1ga2dbcbfe3d3e22c698f2b6bbe715c3ae3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__mbx__interface_1ga2dbcbfe3d3e22c698f2b6bbe715c3ae3" kindref="member">mbx_disable_intr</ref>(<ref refid="structMBX__Type" kindref="compound">MBX_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>mask)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMBX__Type_1add87d8cce3984c29da363503ad3b777d" kindref="member">CR</ref><sp/>&amp;=<sp/>~mask;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="group__mbx__interface_1ga570583ef882ca0eb51fe912b3607be1d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__mbx__interface_1ga570583ef882ca0eb51fe912b3607be1d" kindref="member">mbx_empty_txfifo</ref>(<ref refid="structMBX__Type" kindref="compound">MBX_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMBX__Type_1add87d8cce3984c29da363503ad3b777d" kindref="member">CR</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__mbx__regs_8h_1afcb2bc7bd0d114b8afb0751482e3b792" kindref="member">MBX_CR_TXRESET_MASK</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="group__mbx__interface_1ga20e22b0159d87dcd962b4f8a696cb336" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__mbx__interface_1ga20e22b0159d87dcd962b4f8a696cb336" kindref="member">mbx_init</ref>(<ref refid="structMBX__Type" kindref="compound">MBX_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__mbx__interface_1ga570583ef882ca0eb51fe912b3607be1d" kindref="member">mbx_empty_txfifo</ref>(ptr);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__mbx__interface_1ga2dbcbfe3d3e22c698f2b6bbe715c3ae3" kindref="member">mbx_disable_intr</ref>(ptr,<sp/><ref refid="group__mbx__interface_1ga88a217f2d4584891014320787c1df818" kindref="member">MBX_CR_ALL_INTERRUPTS_MASK</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="group__mbx__interface_1gaa8a81b671353fee7ad25e3a70c0bd86c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__mbx__interface_1gaa8a81b671353fee7ad25e3a70c0bd86c" kindref="member">mbx_send_message</ref>(<ref refid="structMBX__Type" kindref="compound">MBX_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>msg)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr-&gt;<ref refid="structMBX__Type_1abc507f745af98f993450ae04f4e4c282" kindref="member">SR</ref><sp/>&amp;<sp/><ref refid="HPM5300_2ip_2hpm__mbx__regs_8h_1a31956bf10e8f63d32df67c85150b850f" kindref="member">MBX_SR_TWME_MASK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMBX__Type_1a1096536eae8df334d34fd3bbcc3d32a6" kindref="member">TXREG</ref><sp/>=<sp/>msg;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__mbx__interface_1gga70ad55be767ca0a42c9150d24618e4caa79010cdaf5f6eb258155dcfe0a8bf20c" kindref="member">status_mbx_not_available</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="group__mbx__interface_1ga7fc40f2692ab0f89eb12d4f1a28b0e44" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__mbx__interface_1ga7fc40f2692ab0f89eb12d4f1a28b0e44" kindref="member">mbx_retrieve_message</ref>(<ref refid="structMBX__Type" kindref="compound">MBX_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>*msg)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr-&gt;<ref refid="structMBX__Type_1abc507f745af98f993450ae04f4e4c282" kindref="member">SR</ref><sp/>&amp;<sp/><ref refid="HPM5300_2ip_2hpm__mbx__regs_8h_1aaeffa5fb875658346e5d47b249c26d21" kindref="member">MBX_SR_RWMV_MASK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*msg<sp/>=<sp/>ptr-&gt;<ref refid="structMBX__Type_1af07727a20c0d52f8feac18de7d87f4ae" kindref="member">RXREG</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__mbx__interface_1gga70ad55be767ca0a42c9150d24618e4caa79010cdaf5f6eb258155dcfe0a8bf20c" kindref="member">status_mbx_not_available</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="group__mbx__interface_1ga0226b627df48f04eae3fabe8427da6e9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__mbx__interface_1ga0226b627df48f04eae3fabe8427da6e9" kindref="member">mbx_send_fifo</ref>(<ref refid="structMBX__Type" kindref="compound">MBX_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>*msg,<sp/>uint32_t<sp/>count)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>i;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>status<sp/>=<sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>4;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr-&gt;<ref refid="structMBX__Type_1abc507f745af98f993450ae04f4e4c282" kindref="member">SR</ref><sp/>&amp;<sp/><ref refid="HPM5300_2ip_2hpm__mbx__regs_8h_1a8c2911e07a1fd6921708ad4d0dc488cc" kindref="member">MBX_SR_TFMA_MASK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMBX__Type_1aadf96d202034a5ecc6ae120b3bc9b4e5" kindref="member">TXWRD</ref>[0]<sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__mbx__regs_8h_1a03b6ea75c67cf7b83d0b9b39312a021f" kindref="member">MBX_TXWRD_TXFIFO_SET</ref>(*(msg<sp/>+<sp/>i));</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count--;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!count)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="group__mbx__interface_1gga70ad55be767ca0a42c9150d24618e4caa79010cdaf5f6eb258155dcfe0a8bf20c" kindref="member">status_mbx_not_available</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="group__mbx__interface_1gab721a467cb556269d5cc28252616129e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__mbx__interface_1gab721a467cb556269d5cc28252616129e" kindref="member">mbx_retrieve_fifo</ref>(<ref refid="structMBX__Type" kindref="compound">MBX_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>*msg,<sp/>uint32_t<sp/>count)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>i;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>status<sp/>=<sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>4;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr-&gt;<ref refid="structMBX__Type_1abc507f745af98f993450ae04f4e4c282" kindref="member">SR</ref><sp/>&amp;<sp/><ref refid="HPM5300_2ip_2hpm__mbx__regs_8h_1ab4a555fb028ae8aa1106976d2521cef4" kindref="member">MBX_SR_RFMA_MASK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(msg<sp/>+<sp/>i)<sp/>=<sp/>(ptr-&gt;<ref refid="structMBX__Type_1ad163628ef61563876056ea874150d051" kindref="member">RXWRD</ref>[0]<sp/>&amp;<sp/><ref refid="HPM5300_2ip_2hpm__mbx__regs_8h_1a264e7706ae67e0a82a598f110afb88cc" kindref="member">MBX_RXWRD_RXFIFO_MASK</ref>)<sp/>&gt;&gt;<sp/><ref refid="HPM5300_2ip_2hpm__mbx__regs_8h_1ab0497f64920e916d73bb065bc8ee7a84" kindref="member">MBX_RXWRD_RXFIFO_SHIFT</ref>;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count--;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!count)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="group__mbx__interface_1gga70ad55be767ca0a42c9150d24618e4caa79010cdaf5f6eb258155dcfe0a8bf20c" kindref="member">status_mbx_not_available</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HPM_MBX_DRV_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="drivers/inc/hpm_mbx_drv.h"/>
+  </compounddef>
+</doxygen>

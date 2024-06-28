@@ -1,0 +1,27 @@
+var HPM6E00_2HPM6E60_2hpm__batt__iomux_8h =
+[
+    [ "BIOC_PZ00_FUNC_CTL_BGPIO_Z_00", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#ad6a532b2dcfdc0304643eaa10599b79d", null ],
+    [ "BIOC_PZ00_FUNC_CTL_SOC_PZ_00", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a32194795e346c09f0adfa7df0b9ae7da", null ],
+    [ "BIOC_PZ00_FUNC_CTL_TAMP_PZ_00", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a0ba4e8f5abe772009a3aac0d9ec91849", null ],
+    [ "BIOC_PZ01_FUNC_CTL_BGPIO_Z_01", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a15548b0c866286fe6cf83c0128dce361", null ],
+    [ "BIOC_PZ01_FUNC_CTL_SOC_PZ_01", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a1035e1f8661833e0f15f446917be802b", null ],
+    [ "BIOC_PZ01_FUNC_CTL_TAMP_PZ_01", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a07447c19796ee24106a82242ebaca1a8", null ],
+    [ "BIOC_PZ02_FUNC_CTL_BGPIO_Z_02", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a9527a84e130c42a1f022c5212152a473", null ],
+    [ "BIOC_PZ02_FUNC_CTL_SOC_PZ_02", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#ae20579d060727a7d25f00c5b7b79a398", null ],
+    [ "BIOC_PZ02_FUNC_CTL_TAMP_PZ_02", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a0a9d681d62a32b75a406951cb3fd545a", null ],
+    [ "BIOC_PZ03_FUNC_CTL_BGPIO_Z_03", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a6a9c4ff302705f5dc6a906383836a5c0", null ],
+    [ "BIOC_PZ03_FUNC_CTL_SOC_PZ_03", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a90da12a68e0e8d61a0e1391ee587bcbe", null ],
+    [ "BIOC_PZ03_FUNC_CTL_TAMP_PZ_03", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#acdedc9c52ab07b9a5f5f4efe27802b10", null ],
+    [ "BIOC_PZ04_FUNC_CTL_BGPIO_Z_04", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a58b1939e397cd45c6cbd7c2e05f7ba1a", null ],
+    [ "BIOC_PZ04_FUNC_CTL_SOC_PZ_04", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#afbd1204d4db9a8e0d9e0548ad59a291c", null ],
+    [ "BIOC_PZ04_FUNC_CTL_TAMP_PZ_04", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#ad3e926e3fdf88fa97b7f00370eb8d740", null ],
+    [ "BIOC_PZ05_FUNC_CTL_BGPIO_Z_05", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#ac2ed5ae61f156e31f5da646e7fce0182", null ],
+    [ "BIOC_PZ05_FUNC_CTL_SOC_PZ_05", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a46ae6bfd82b0f77cea4d9f769d5c015c", null ],
+    [ "BIOC_PZ05_FUNC_CTL_TAMP_PZ_05", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a898827295e9cc1a879c528e83d09265c", null ],
+    [ "BIOC_PZ06_FUNC_CTL_BGPIO_Z_06", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a7f5e42005d2da400d91df116d33de2f0", null ],
+    [ "BIOC_PZ06_FUNC_CTL_SOC_PZ_06", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#afe8d4d47b75716500f76e1a34553c4b2", null ],
+    [ "BIOC_PZ06_FUNC_CTL_TAMP_PZ_06", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#ab08f30640aeab0ba5cdda6c7e956a825", null ],
+    [ "BIOC_PZ07_FUNC_CTL_BGPIO_Z_07", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a354c71463cc2cad04b408b1750c7a276", null ],
+    [ "BIOC_PZ07_FUNC_CTL_SOC_PZ_07", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a5f0191c55fc8d442495e647f00fc4659", null ],
+    [ "BIOC_PZ07_FUNC_CTL_TAMP_PZ_07", "HPM6E00_2HPM6E60_2hpm__batt__iomux_8h.html#a2027b73746f0a629215280ecb7712ab6", null ]
+];

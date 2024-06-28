@@ -1,0 +1,1380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hpm__tsw__drv_8c" kind="file" language="C++">
+    <compoundname>hpm_tsw_drv.c</compoundname>
+    <includes refid="hpm__tsw__drv_8h" local="yes">hpm_tsw_drv.h</includes>
+    <includes refid="hpm__swap_8h" local="yes">hpm_swap.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="10">
+        <label>hpm_tsw_regs.h</label>
+        <link refid="hpm__tsw__regs_8h"/>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="11">
+        <label>hpm_swap.h</label>
+        <link refid="hpm__swap_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="1">
+        <label>drivers/src/hpm_tsw_drv.c</label>
+        <link refid="hpm__tsw__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="2">
+        <label>hpm_tsw_drv.h</label>
+        <link refid="hpm__tsw__drv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__tsw__interface_1ga8f9ef553623940cb2c369831243af8e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t tsw_ep_set_mdio_config</definition>
+        <argsstring>(TSW_Type *ptr, uint8_t port, uint8_t clk_div)</argsstring>
+        <name>tsw_ep_set_mdio_config</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>clk_div</declname>
+        </param>
+        <briefdescription>
+<para>MDIO Interface Config. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW port number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">clk_div</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW clock division </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of MDIO interface config </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="11" column="12" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="11" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga43f610c57807ba7dcbdea807b16255fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t tsw_ep_mdio_read</definition>
+        <argsstring>(TSW_Type *ptr, uint8_t port, uint32_t phy_addr, uint32_t reg_addr, uint16_t *data)</argsstring>
+        <name>tsw_ep_mdio_read</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>phy_addr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>MDIO Read. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW port number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">phy_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW clock division </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PHY register address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to data memory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of MDIO read </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="18" column="12" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="18" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga74216cdd4c2ac6f6c1fd71baef2eab6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t tsw_ep_mdio_write</definition>
+        <argsstring>(TSW_Type *ptr, uint8_t port, uint32_t phy_addr, uint32_t reg_addr, uint16_t data)</argsstring>
+        <name>tsw_ep_mdio_write</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>phy_addr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>MDIO Write. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW port number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">phy_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW clock division </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PHY register address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of MDIO write </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="39" column="12" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="39" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1gac67a2e64a0b1608d526b31e3e47c706d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t tsw_ep_enable_mac_ctrl</definition>
+        <argsstring>(TSW_Type *ptr, uint8_t port, uint8_t mac_type, bool enable)</argsstring>
+        <name>tsw_ep_enable_mac_ctrl</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>mac_type</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Enable MAC Controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW port number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mac_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MAC type 0:EMAC/1:PMAC </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enable MAC Controller: Set true to enable; Set false to disable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of controlling MAC controller </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="54" column="12" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="54" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga7b0b82fe781660ef039331d807196ce6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t tsw_ep_set_mac_addr</definition>
+        <argsstring>(TSW_Type *ptr, uint8_t port, uint8_t *mac_addr, bool promisc)</argsstring>
+        <name>tsw_ep_set_mac_addr</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>mac_addr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>promisc</declname>
+        </param>
+        <briefdescription>
+<para>Set MAC Address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW port number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mac_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to MAC address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">promisc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Promiscuous Mode: Set true to enable; set false to disable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of setting MAC address </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="73" column="12" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="73" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1gabdc814c7a30a9a0dbcdc6977f48dfd7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t tsw_ep_set_mac_mode</definition>
+        <argsstring>(TSW_Type *ptr, uint8_t port, uint8_t gmii)</argsstring>
+        <name>tsw_ep_set_mac_mode</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>gmii</declname>
+        </param>
+        <briefdescription>
+<para>Set MAC Mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW port number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mac_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to MAC address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">promisc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Promiscuous Mode: Set true to enable; set false to disable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of setting MAC address </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="93" column="12" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="93" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga244fdc699c6350b32e5ee9a61ae1ab0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t tsw_send</definition>
+        <argsstring>(TSW_Type *ptr, uint32_t *buffer, uint32_t length, uint8_t id)</argsstring>
+        <name>tsw_send</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Send a frame from CPU port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frame length </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frame index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of the transmission </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="117" column="12" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="117" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga286766d3965c48844aaaffc7222d8267" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t tsw_recv_setup</definition>
+        <argsstring>(TSW_Type *ptr, uint32_t *buffer, uint32_t length, uint8_t id)</argsstring>
+        <name>tsw_recv_setup</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Setup a receive description. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the specified receive buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frame length </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frame index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of the setup of a receive description </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="159" column="12" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="159" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1gaa814b4f067063ce6d23e307830855f5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t tsw_recv</definition>
+        <argsstring>(TSW_Type *ptr, uint32_t *buffer, uint32_t length, uint8_t id)</argsstring>
+        <name>tsw_recv</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Receive a frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the specified receive buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer length </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frame index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of the received frame </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="179" column="10" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="179" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga04929992062d05459dd92b6b44e2c3f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsw_mac_lookup_bypass</definition>
+        <argsstring>(TSW_Type *ptr, uint8_t dst_port)</argsstring>
+        <name>tsw_mac_lookup_bypass</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dst_port</declname>
+        </param>
+        <briefdescription>
+<para>Lookup Bypass Setting. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dst_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination port number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="211" column="6" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="211" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga4858eef76b44f9c94637d88488431a52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsw_set_cam_vlan_port</definition>
+        <argsstring>(TSW_Type *ptr)</argsstring>
+        <name>tsw_set_cam_vlan_port</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>CAM VLAN Setting. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dst_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination port number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="218" column="6" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="218" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga9790b67ec99da2ed0317026658e97f1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsw_port_gpr</definition>
+        <argsstring>(TSW_Type *ptr, uint8_t port, uint8_t speed, uint8_t itf, uint8_t tx_dly, uint8_t rx_dly)</argsstring>
+        <name>tsw_port_gpr</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>speed</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>itf</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tx_dly</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>rx_dly</declname>
+        </param>
+        <briefdescription>
+<para>Set Port GPR. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>speed: 00 1000mbps, 11 100mbps, 10 10mpbs itf: 000 MII; 001 RGMII; 100 RMII </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="231" column="6" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="231" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga4d7e423938763863dee8f5ed19b83619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsw_set_lookup_table</definition>
+        <argsstring>(TSW_Type *ptr, uint16_t entry_num, uint8_t dest_port, uint64_t dest_mac)</argsstring>
+        <name>tsw_set_lookup_table</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>entry_num</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dest_port</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>dest_mac</declname>
+        </param>
+        <briefdescription>
+<para>Set Lookup Table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">entry_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entry number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dest_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination port number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dest_mac</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination MAC address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="237" column="6" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="237" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga3c7cb9abc04cbf13027ddc492adb89c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsw_set_internal_frame_action</definition>
+        <argsstring>(TSW_Type *ptr, uint8_t dest_port)</argsstring>
+        <name>tsw_set_internal_frame_action</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dest_port</declname>
+        </param>
+        <briefdescription>
+<para>Set Internal Frame Action. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dest_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination port number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="272" column="6" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="272" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga2469bc2b4edb058814aef0879d500af1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsw_set_broadcast_frame_action</definition>
+        <argsstring>(TSW_Type *ptr, uint8_t dest_port)</argsstring>
+        <name>tsw_set_broadcast_frame_action</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dest_port</declname>
+        </param>
+        <briefdescription>
+<para>Set Broadcast Frame Action. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dest_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination port number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="278" column="6" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="278" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga18db692399537b84d6ec8e3cc8d26293" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsw_set_unknown_frame_action</definition>
+        <argsstring>(TSW_Type *ptr, uint8_t dest_port)</argsstring>
+        <name>tsw_set_unknown_frame_action</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dest_port</declname>
+        </param>
+        <briefdescription>
+<para>Set Unknow Frame Action. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dest_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination port number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="284" column="6" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="284" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga3ed2976d888b9e4a0cf258ff64b380c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsw_clear_cam</definition>
+        <argsstring>(TSW_Type *ptr)</argsstring>
+        <name>tsw_clear_cam</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Clear CAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="290" column="6" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="290" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga6c842083388bbcfc1767977a7c3780ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsw_enable_store_forward_mode</definition>
+        <argsstring>(TSW_Type *ptr, uint8_t port)</argsstring>
+        <name>tsw_enable_store_forward_mode</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para>Enable RXFIFO to store and forward mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW port number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="296" column="6" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="296" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="group__tsw__interface_1ga27014466da324a5bc79a02c20ebf8a69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tsw_disable_store_forward_mode</definition>
+        <argsstring>(TSW_Type *ptr, uint8_t port)</argsstring>
+        <name>tsw_disable_store_forward_mode</name>
+        <param>
+          <type><ref refid="structTSW__Type" kindref="compound">TSW_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para>Disable RXFIFO to store and forward mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TSW port number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_tsw_drv.c" line="301" column="6" bodyfile="drivers/src/hpm_tsw_drv.c" bodystart="301" bodyend="304"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2023-2024<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__tsw__drv_8h" kindref="compound">hpm_tsw_drv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__swap_8h" kindref="compound">hpm_swap.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__tsw__interface_1ga8f9ef553623940cb2c369831243af8e1" kindref="member">tsw_ep_set_mdio_config</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>port,<sp/>uint8_t<sp/>clk_div)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[<ref refid="hpm__tsw__regs_8h_1a8d00c72c672a717c4eb9a9c209c49ed4" kindref="member">TSW_RXFIFO_E1</ref>].MAC_MDIO_CFG<sp/>=<sp/><ref refid="hpm__tsw__regs_8h_1a815fc3a3b74ac83bd52544184bc71412" kindref="member">TSW_TSNPORT_MAC_MAC_MDIO_CFG_ENABLE_MASK</ref><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1aa2b66bd6b2c1e332cd86c4bf97e43b2a" kindref="member">TSW_TSNPORT_MAC_MAC_MDIO_CFG_MDC_CLKDIV_SET</ref>(clk_div);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__tsw__interface_1ga43f610c57807ba7dcbdea807b16255fa" kindref="member">tsw_ep_mdio_read</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>port,<sp/>uint32_t<sp/>phy_addr,<sp/>uint32_t<sp/>reg_addr,<sp/>uint16_t<sp/>*data)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[<ref refid="hpm__tsw__regs_8h_1a8d00c72c672a717c4eb9a9c209c49ed4" kindref="member">TSW_RXFIFO_E1</ref>].MAC_MDIO_CTRL<sp/>=<sp/><ref refid="hpm__tsw__regs_8h_1adcf88c6ba38b2884e76f60f970ae98dd" kindref="member">TSW_TSNPORT_MAC_MAC_MDIO_CTRL_OP_SET</ref>(<ref refid="group__tsw__interface_1gac7f0d8ac3cb4aa66a8a58e76605313c1" kindref="member">MAC_MDIO_CTRL_OP_RD</ref>)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1ad34ecd8f43af47fbc793c4bf2176b08c" kindref="member">TSW_TSNPORT_MAC_MAC_MDIO_CTRL_PHYAD_SET</ref>(phy_addr)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1a73f369f434eef3526c6a62e5facd304a" kindref="member">TSW_TSNPORT_MAC_MAC_MDIO_CTRL_REGAD_SET</ref>(reg_addr)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1ab71466ad7a78d17acdc7a7008bd45b48" kindref="member">TSW_TSNPORT_MAC_MAC_MDIO_CTRL_INIT_SET</ref>(1);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="hpm__tsw__regs_8h_1a00acd41e930caf80a46fda57eff84e2d" kindref="member">TSW_TSNPORT_MAC_MAC_MDIO_CTRL_READY_GET</ref>(ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[<ref refid="hpm__tsw__regs_8h_1a8d00c72c672a717c4eb9a9c209c49ed4" kindref="member">TSW_RXFIFO_E1</ref>].MAC_MDIO_CTRL)<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>*data<sp/>=<sp/><ref refid="hpm__tsw__regs_8h_1a722359cc1aa4283326e9df3d9e812b5b" kindref="member">TSW_TSNPORT_MAC_MAC_MDIO_RD_DATA_RD_DATA_GET</ref>(ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[<ref refid="hpm__tsw__regs_8h_1a8d00c72c672a717c4eb9a9c209c49ed4" kindref="member">TSW_RXFIFO_E1</ref>].MAC_MDIO_RD_DATA);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__tsw__interface_1ga74216cdd4c2ac6f6c1fd71baef2eab6e" kindref="member">tsw_ep_mdio_write</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>port,<sp/>uint32_t<sp/>phy_addr,<sp/>uint32_t<sp/>reg_addr,<sp/>uint16_t<sp/>data)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[<ref refid="hpm__tsw__regs_8h_1a8d00c72c672a717c4eb9a9c209c49ed4" kindref="member">TSW_RXFIFO_E1</ref>].MAC_MDIO_WR_DATA<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[<ref refid="hpm__tsw__regs_8h_1a8d00c72c672a717c4eb9a9c209c49ed4" kindref="member">TSW_RXFIFO_E1</ref>].MAC_MDIO_CTRL<sp/>=<sp/><ref refid="hpm__tsw__regs_8h_1adcf88c6ba38b2884e76f60f970ae98dd" kindref="member">TSW_TSNPORT_MAC_MAC_MDIO_CTRL_OP_SET</ref>(<ref refid="group__tsw__interface_1gae0746947b48fbe23e1c054143aa44695" kindref="member">MAC_MDIO_CTRL_OP_WR</ref>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1ad34ecd8f43af47fbc793c4bf2176b08c" kindref="member">TSW_TSNPORT_MAC_MAC_MDIO_CTRL_PHYAD_SET</ref>(phy_addr)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1a73f369f434eef3526c6a62e5facd304a" kindref="member">TSW_TSNPORT_MAC_MAC_MDIO_CTRL_REGAD_SET</ref>(reg_addr)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1ab71466ad7a78d17acdc7a7008bd45b48" kindref="member">TSW_TSNPORT_MAC_MAC_MDIO_CTRL_INIT_SET</ref>(1);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="hpm__tsw__regs_8h_1a00acd41e930caf80a46fda57eff84e2d" kindref="member">TSW_TSNPORT_MAC_MAC_MDIO_CTRL_READY_GET</ref>(ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[<ref refid="hpm__tsw__regs_8h_1a8d00c72c672a717c4eb9a9c209c49ed4" kindref="member">TSW_RXFIFO_E1</ref>].MAC_MDIO_CTRL)<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__tsw__interface_1gac67a2e64a0b1608d526b31e3e47c706d" kindref="member">tsw_ep_enable_mac_ctrl</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>port,<sp/>uint8_t<sp/>mac_type,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>temp;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[mac_type].MAC_MAC_CTRL;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>temp<sp/>&amp;=<sp/>~(<ref refid="hpm__tsw__regs_8h_1a82362069223c0446055e4ef859bb2e44" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_TX_EN_MASK</ref><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1a59c1b0a1ccb1f61b465b43a2bf674e4a" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_RX_EN_MASK</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>temp<sp/>|=<sp/><ref refid="hpm__tsw__regs_8h_1ac04c54b04196abe12b39b88a370fe87d" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_TX_EN_SET</ref>(enable)<sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1abac8ed8da4523f0a62a69a32a48f2db9" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_RX_EN_SET</ref>(enable);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[mac_type].MAC_MAC_CTRL<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!enable)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[mac_type].MAC_MAC_CTRL;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="hpm__tsw__regs_8h_1a5ec61814570e34a22b00b5414223a594" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_RX_EN_GET</ref>(temp)<sp/>||<sp/><ref refid="hpm__tsw__regs_8h_1affd071ef14baaf7eee9ea420e9ef2747" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_TX_EN_GET</ref>(temp));</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__tsw__interface_1ga7b0b82fe781660ef039331d807196ce6" kindref="member">tsw_ep_set_mac_addr</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>port,<sp/>uint8_t<sp/>*mac_addr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>promisc)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>temp;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mac_addr<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>MAC<sp/>must<sp/>be<sp/>disabled<sp/>when<sp/>changing<sp/>mode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[<ref refid="hpm__tsw__regs_8h_1a8d00c72c672a717c4eb9a9c209c49ed4" kindref="member">TSW_RXFIFO_E1</ref>].MAC_MAC_CTRL;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="hpm__tsw__regs_8h_1a5ec61814570e34a22b00b5414223a594" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_RX_EN_GET</ref>(temp)<sp/>||<sp/><ref refid="hpm__tsw__regs_8h_1affd071ef14baaf7eee9ea420e9ef2747" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_TX_EN_GET</ref>(temp))<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9ab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[<ref refid="hpm__tsw__regs_8h_1a8d00c72c672a717c4eb9a9c209c49ed4" kindref="member">TSW_RXFIFO_E1</ref>].MAC_MACADDR_L<sp/>=<sp/><ref refid="group__tsw__interface_1ga335e8cfacef7c3ddfc023b1034e1388b" kindref="member">MAC_LO</ref>(mac_addr);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[<ref refid="hpm__tsw__regs_8h_1a8d00c72c672a717c4eb9a9c209c49ed4" kindref="member">TSW_RXFIFO_E1</ref>].MAC_MACADDR_H<sp/>=<sp/><ref refid="group__tsw__interface_1ga5323361a0547ea2f51aa6a89561f0116" kindref="member">MAC_HI</ref>(mac_addr)<sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1ad4583f1c08528f3427d2d03669a4573d" kindref="member">TSW_TSNPORT_MAC_MAC_MACADDR_H_PROMISC_SET</ref>(promisc);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__tsw__interface_1gabdc814c7a30a9a0dbcdc6977f48dfd7f" kindref="member">tsw_ep_set_mac_mode</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>port,<sp/>uint8_t<sp/>gmii)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>temp;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>MAC<sp/>must<sp/>be<sp/>disabled<sp/>when<sp/>changing<sp/>mode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[<ref refid="hpm__tsw__regs_8h_1a8d00c72c672a717c4eb9a9c209c49ed4" kindref="member">TSW_RXFIFO_E1</ref>].MAC_MAC_CTRL;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="hpm__tsw__regs_8h_1a5ec61814570e34a22b00b5414223a594" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_RX_EN_GET</ref>(temp)<sp/>||<sp/><ref refid="hpm__tsw__regs_8h_1affd071ef14baaf7eee9ea420e9ef2747" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_TX_EN_GET</ref>(temp))<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9ab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>temp<sp/>&amp;=<sp/>~(<ref refid="hpm__tsw__regs_8h_1afcc50be890c1c3dead1906eb8a29339e" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_CLKSEL_MASK</ref><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1ad288512619254a2cb037a62ee85b5b80" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_PHYSEL_MASK</ref><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1acb50205019b97c3e92e1dd9119c2f1af" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_GMIIMODE_MASK</ref>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>temp<sp/>&amp;=<sp/>~<ref refid="hpm__tsw__regs_8h_1aa345c7b09769c68fc5716d7eb8f07ee6" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_RESSTAT_MASK</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>temp<sp/>|=<sp/><ref refid="hpm__tsw__regs_8h_1a59fd24985cdcd9df8282066daed3b0ec" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_CLKSEL_SET</ref>(1)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1a73b83e3ca7e902268f055186feb13e0a" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_PHYSEL_SET</ref>(1)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1a6c2f2eb213773aab97a7747cd7ffb7c7" kindref="member">TSW_TSNPORT_MAC_MAC_MAC_CTRL_GMIIMODE_SET</ref>(gmii);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1acdd29978ecc11e7e4d339aa798fd16ce" kindref="member">MAC</ref>[<ref refid="hpm__tsw__regs_8h_1a8d00c72c672a717c4eb9a9c209c49ed4" kindref="member">TSW_RXFIFO_E1</ref>].MAC_MAC_CTRL<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>data:<sp/>the<sp/>start<sp/>address<sp/>of<sp/>data<sp/>buffer<sp/>must<sp/>be<sp/>aligned<sp/>with<sp/>4<sp/>bytes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>length<sp/>in<sp/>bytes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__tsw__interface_1ga244fdc699c6350b32e5ee9a61ae1ab0b" kindref="member">tsw_send</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>*buffer,<sp/>uint32_t<sp/>length,<sp/>uint8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>resp;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Enable<sp/>DMA:<sp/>Write<sp/>MM2S<sp/>DMA<sp/>CR<sp/>(Run=1,<sp/>SOE=0,<sp/>IRQEN=0)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1a46af250792967d2ef7868a209c473fbb" kindref="member">MM2S_DMA_CR</ref><sp/>|=<sp/><ref refid="hpm__tsw__regs_8h_1a7e534ed71d27e79f550bd4a1553877bb" kindref="member">TSW_MM2S_DMA_CR_RUN_MASK</ref><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1a5f5be439fce7d92f68b59919a420ffdc" kindref="member">TSW_MM2S_DMA_CR_MXLEN_SET</ref>(0xff);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>ADDRL<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1a77a2ad48a90a36b0b91955eb7d07f565" kindref="member">MM2S_ADDRLO</ref><sp/>=<sp/>(uint32_t)buffer;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>Length<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1afab1d9a729607b680244298b211fe06e" kindref="member">MM2S_LENGTH</ref><sp/>=<sp/>length;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>Ctrl<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1aa61ae5058037ea2592d9a17b324c73b4" kindref="member">MM2S_CTRL</ref><sp/>&amp;=<sp/>~<ref refid="hpm__tsw__regs_8h_1ac45e0951b7027ac9a212cb9ce8376849" kindref="member">TSW_MM2S_CTRL_ID_MASK</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1aa61ae5058037ea2592d9a17b324c73b4" kindref="member">MM2S_CTRL</ref><sp/>|=<sp/><ref refid="hpm__tsw__regs_8h_1af77e59a92af4d5adb372895d7a1e5fd0" kindref="member">TSW_MM2S_CTRL_GO_MASK</ref><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1a78340fbed2815122126e773445e081c6" kindref="member">TSW_MM2S_CTRL_ID_SET</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Wait<sp/>for<sp/>DMA<sp/>to<sp/>finish<sp/>transmission<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="hpm__tsw__regs_8h_1abe7bbf5c4f78235164cb8d80e64dee35" kindref="member">TSW_MM2S_DMA_SR_RBUFE_GET</ref>(ptr-&gt;<ref refid="structTSW__Type_1a20e16f54e2c01b0586bbe4cec958d3cd" kindref="member">MM2S_DMA_SR</ref>));</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>response<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>resp<sp/>=<sp/>ptr-&gt;<ref refid="structTSW__Type_1a266fb0ec822fea18bd1bdcdfae195f0a" kindref="member">MM2S_RESP</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="hpm__tsw__regs_8h_1a3be9ec1ec683ff4bdbc7607dc324cd68" kindref="member">TSW_MM2S_RESP_ID_GET</ref>(resp)<sp/>==<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Check<sp/>decode<sp/>error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="hpm__tsw__regs_8h_1ae3e31fc5e6af049c0e9c26aff06bcd06" kindref="member">TSW_MM2S_RESP_DECERR_GET</ref>(resp))<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>check<sp/>slave<sp/>error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="hpm__tsw__regs_8h_1a1dff04590c521a491ff822b038a52e58" kindref="member">TSW_MM2S_RESP_SLVERR_GET</ref>(resp))<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__tsw__interface_1ga286766d3965c48844aaaffc7222d8267" kindref="member">tsw_recv_setup</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>*buffer,<sp/>uint32_t<sp/>length,<sp/>uint8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Enable<sp/>DMA-CTRL:<sp/>Write<sp/>S2MM_DMA_CR<sp/>(Run=1,<sp/>SOE=0,<sp/>IRQEN=1)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1abb698da78f1288eb63aa08835bc04292" kindref="member">S2MM_DMA_CR</ref><sp/>&amp;=<sp/>~<ref refid="hpm__tsw__regs_8h_1aae5ee2d3f30aad8235765b14cfc2d3de" kindref="member">TSW_S2MM_DMA_CR_SOE_MASK</ref>;<sp/></highlight><highlight class="comment">/*<sp/>SOE=0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1abb698da78f1288eb63aa08835bc04292" kindref="member">S2MM_DMA_CR</ref><sp/>|=<sp/><ref refid="hpm__tsw__regs_8h_1a12f4e79cefd63310aabb16738f6b8d55" kindref="member">TSW_S2MM_DMA_CR_RUN_MASK</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>ADDRL<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1abbfa51e3b1793de050f035c8279cc7c0" kindref="member">S2MM_ADDRLO</ref><sp/>=<sp/>(uint32_t)buffer;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>Length<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1a7b1d2c3e9d6059374fde3694cfd5ea89" kindref="member">S2MM_LENGTH</ref><sp/>=<sp/>length;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>Ctrl<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ab3120ddd84e1358c1c271b8e5428de22" kindref="member">S2MM_CTRL</ref><sp/>&amp;=<sp/>~<ref refid="hpm__tsw__regs_8h_1ab8433ae01ed4b3ede929e5fc7180e792" kindref="member">TSW_S2MM_CTRL_ID_MASK</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ab3120ddd84e1358c1c271b8e5428de22" kindref="member">S2MM_CTRL</ref><sp/>|=<sp/><ref refid="hpm__tsw__regs_8h_1a8b5da828b49cc1ae923b3a211e52b6c2" kindref="member">TSW_S2MM_CTRL_GO_MASK</ref><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1aee89c8de4c7c78673fc798fdcecf9d36" kindref="member">TSW_S2MM_CTRL_ID_SET</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal">uint32_t<sp/><ref refid="group__tsw__interface_1gaa814b4f067063ce6d23e307830855f5b" kindref="member">tsw_recv</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>*buffer,<sp/>uint32_t<sp/>length,<sp/>uint8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>resp;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Wait<sp/>for<sp/>DMA<sp/>to<sp/>finish<sp/>transmission<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="hpm__tsw__regs_8h_1a5f179ce235ed8225c77cf73c2b66e673" kindref="member">TSW_S2MM_DMA_SR_RBUFE_GET</ref>(ptr-&gt;<ref refid="structTSW__Type_1a460237d9591844012b8c3a16384b638a" kindref="member">S2MM_DMA_SR</ref>));</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="HPM6E00_2HPM6E80_2hpm__soc_8h_1afb5ca6fe84991c033e198328bf6b1a98" kindref="member">HPM_TSW</ref>-&gt;S2MM_DMA_SR<sp/>=<sp/><ref refid="hpm__tsw__regs_8h_1a68ad8440917a58f2b2b3b705cfe6d81d" kindref="member">TSW_S2MM_DMA_SR_IRQ_MASK</ref>;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>response<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>resp<sp/>=<sp/>ptr-&gt;<ref refid="structTSW__Type_1a1a1357d5e8726aa369bc9b188e165766" kindref="member">S2MM_RESP</ref>;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="hpm__tsw__regs_8h_1a9ca64782d01573ef2610b2ed5ca66197" kindref="member">TSW_S2MM_RESP_ID_GET</ref>(resp)<sp/>==<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Check<sp/>decode<sp/>error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="hpm__tsw__regs_8h_1a3663a3db77e6bbf518db5b43405add9b" kindref="member">TSW_S2MM_RESP_DECERR_GET</ref>(resp))<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>printf(&quot;decode<sp/>error\n&quot;);<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>check<sp/>slave<sp/>error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="hpm__tsw__regs_8h_1aee876e4255fd43533f4b5df2ffe5b6f7" kindref="member">TSW_S2MM_RESP_SLVERR_GET</ref>(resp))<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>printf(&quot;slave<sp/>error\n&quot;);<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="HPM6E00_2HPM6E80_2hpm__soc_8h_1afb5ca6fe84991c033e198328bf6b1a98" kindref="member">HPM_TSW</ref>-&gt;S2MM_CTRL<sp/>|=<sp/><ref refid="hpm__tsw__regs_8h_1a8b5da828b49cc1ae923b3a211e52b6c2" kindref="member">TSW_S2MM_CTRL_GO_MASK</ref>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structTSW__Type_1a7b1d2c3e9d6059374fde3694cfd5ea89" kindref="member">S2MM_LENGTH</ref>;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__tsw__interface_1ga04929992062d05459dd92b6b44e2c3f8" kindref="member">tsw_mac_lookup_bypass</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>dst_port)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac1600313beaeee6d12ba043829c0916f" kindref="member">LU_MAIN_BYPASS</ref><sp/>&amp;=<sp/>~<ref refid="hpm__tsw__regs_8h_1a216036ab7f3b5c039ab8f1c606413aa6" kindref="member">TSW_LU_MAIN_BYPASS_DEST_MASK</ref>;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac1600313beaeee6d12ba043829c0916f" kindref="member">LU_MAIN_BYPASS</ref><sp/>|=<sp/><ref refid="hpm__tsw__regs_8h_1ab0693b1dc2ba13fadfc2654cf10888d7" kindref="member">TSW_LU_MAIN_BYPASS_HIT_MASK</ref><sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1a7a5e0f7826d6012be90c9646236054ac" kindref="member">TSW_LU_MAIN_BYPASS_DEST_SET</ref>(dst_port);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1a19d3a09f594ac32dbd393d408e559e46" kindref="member">LU_MAIN_CTRL</ref><sp/><sp/><sp/>|=<sp/><ref refid="hpm__tsw__regs_8h_1adec8923d4e26e2ca56bb5b2714f6888d" kindref="member">TSW_LU_MAIN_CTRL_BYP_EN_MASK</ref>;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__tsw__interface_1ga4858eef76b44f9c94637d88488431a52" kindref="member">tsw_set_cam_vlan_port</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1a3bc9677ca0e58759d3085aaad1467d48" kindref="member">APB2AXI_CAM_REQDATA_1</ref><sp/>=<sp/>0x0f;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac447733ac2460484c434ce80d634bdb7" kindref="member">APB2AXI_CAM_REQDATA_0</ref><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>16)<sp/><sp/></highlight><highlight class="comment">/*<sp/>VID<sp/>=<sp/>1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>8)<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>1:<sp/>Set<sp/>one<sp/>VLAN_PORT<sp/>entry<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>0);<sp/><sp/></highlight><highlight class="comment">/*<sp/>CAM<sp/>APB2AXIS<sp/>channel<sp/>selection.<sp/>Always<sp/>1<sp/>for<sp/>writing<sp/>to<sp/>VLAN_PORT<sp/>table.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__tsw__interface_1ga9790b67ec99da2ed0317026658e97f1a" kindref="member">tsw_port_gpr</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>port,<sp/>uint8_t<sp/>speed,<sp/>uint8_t<sp/>itf,<sp/>uint8_t<sp/>tx_dly,<sp/>uint8_t<sp/>rx_dly)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1ad1d25070b166e5c05aaf0ad4737b31f4" kindref="member">GPR_CTRL0</ref><sp/>=<sp/><ref refid="hpm__tsw__regs_8h_1aad777d09aafdb638e73f4173e7d70f92" kindref="member">TSW_TSNPORT_GPR_CTRL0_RXCLK_DLY_SEL_SET</ref>(rx_dly)<sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1a6fef1d70f7a91c7b65ffecccf09c35e0" kindref="member">TSW_TSNPORT_GPR_CTRL0_TXCLK_DLY_SEL_SET</ref>(tx_dly);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1a7b74725a0f2dcb7f1895dd738b463973" kindref="member">GPR_CTRL2</ref><sp/>=<sp/><ref refid="hpm__tsw__regs_8h_1a95d33c2e965f18ad6eaa2db68ed3774e" kindref="member">TSW_TSNPORT_GPR_CTRL2_MAC_SPEED_SET</ref>(speed)<sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1a1e418a1dc139991d1b3796724a529dcd" kindref="member">TSW_TSNPORT_GPR_CTRL2_PHY_INTF_SEL_SET</ref>(itf);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__tsw__interface_1ga4d7e423938763863dee8f5ed19b83619" kindref="member">tsw_set_lookup_table</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint16_t<sp/>entry_num,<sp/>uint8_t<sp/>dest_port,<sp/>uint64_t<sp/>dest_mac)</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>dest_mac_temp;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>a<sp/>new<sp/>ALMEM<sp/>entry.<sp/>This<sp/>will<sp/>specify<sp/>what<sp/>will<sp/>be<sp/>done<sp/>with<sp/>those<sp/>detected<sp/>frames<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="hpm__tsw__regs_8h_1aae3ca80820bfc214727ac5f594abc02d" kindref="member">TSW_APB2AXIS_ALMEM_STS_RDY_GET</ref>(ptr-&gt;<ref refid="structTSW__Type_1aa8e7594eb57bbbe8d119e11ae8c69045" kindref="member">APB2AXIS_ALMEM_STS</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ae2cf18f705a494aab9d52be40316f17e" kindref="member">APB2AXIS_ALMEM_REQDATA_1</ref><sp/>=<sp/><ref refid="hpm__tsw__regs_8h_1aa21a8b706d845667f2a67ce1723c1e3d" kindref="member">TSW_APB2AXIS_ALMEM_REQDATA_1_WR_NRD_SET</ref>(1)<sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1a4d7cf1062fc91d8b1db5b8790f8e8b2c" kindref="member">TSW_APB2AXIS_ALMEM_REQDATA_1_ENTRY_NUM_SET</ref>(entry_num);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>forward<sp/>to<sp/>destination<sp/>port,<sp/>use<sp/>PCP<sp/>field,<sp/>UTAG<sp/>1<sp/>and<sp/>trigger<sp/>the<sp/>interface<sp/>for<sp/>sending<sp/>the<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1afde3a05f35c7ab9e53390089a90485d6" kindref="member">APB2AXIS_ALMEM_REQDATA_0</ref><sp/>=<sp/><ref refid="hpm__tsw__regs_8h_1af5258ef75dcaa0be92d7f50e04ddd0be" kindref="member">TSW_APB2AXIS_ALMEM_REQDATA_0_UTAG_SET</ref>(1)<sp/>|</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__tsw__regs_8h_1a3a69fae6604d2d67b19885073c6fe77e" kindref="member">TSW_APB2AXIS_ALMEM_REQDATA_0_QSEL_SET</ref>(0)<sp/>|</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__tsw__regs_8h_1a775516ca2ca0ebe1f9d45346310238b1" kindref="member">TSW_APB2AXIS_ALMEM_REQDATA_0_DROP_SET</ref>(0)<sp/>|</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__tsw__regs_8h_1a3556d0574bcb7ccb464dc3d1e2af8eca" kindref="member">TSW_APB2AXIS_ALMEM_REQDATA_0_QUEUE_SET</ref>(0)<sp/>|</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__tsw__regs_8h_1a22e88c5b4671559a2cc470ef9ca2c488" kindref="member">TSW_APB2AXIS_ALMEM_REQDATA_0_DEST_SET</ref>(dest_port);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>a<sp/>new<sp/>CAM<sp/>entry<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>dest_mac_temp<sp/>=<sp/>__bswapdi2(dest_mac)<sp/>&gt;&gt;<sp/>16;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1a6ed5538ce7fee022c174545dab493cd5" kindref="member">APB2AXI_CAM_REQDATA_2</ref><sp/>=<sp/><ref refid="hpm__tsw__regs_8h_1aa62e0297501a464f8674151324224a29" kindref="member">TSW_APB2AXI_CAM_REQDATA_2_VID_SET</ref>(1)<sp/>|<sp/><ref refid="hpm__tsw__regs_8h_1a6128396d38460adf4168380e20d6ca3d" kindref="member">TSW_APB2AXI_CAM_REQDATA_2_DESTMAC_HI_SET</ref>((dest_mac_temp<sp/>&gt;&gt;<sp/>32));</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1a3bc9677ca0e58759d3085aaad1467d48" kindref="member">APB2AXI_CAM_REQDATA_1</ref><sp/>=<sp/><ref refid="hpm__tsw__regs_8h_1a7054eb561ed1f79a035894e95ce7ab3c" kindref="member">TSW_APB2AXI_CAM_REQDATA_1_DESTMAC_LO_PORT_VEC_SET</ref>(dest_mac_temp);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac447733ac2460484c434ce80d634bdb7" kindref="member">APB2AXI_CAM_REQDATA_0</ref><sp/>=<sp/><ref refid="hpm__tsw__regs_8h_1aed6883bdc68d517269147216aaabca3a" kindref="member">TSW_APB2AXI_CAM_REQDATA_0_ENTRY_NUM_SET</ref>(entry_num)<sp/>|</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__tsw__regs_8h_1a63e6c14e34fbdd04f55a8adf66285bca" kindref="member">TSW_APB2AXI_CAM_REQDATA_0_TYPE_SET</ref>(1)<sp/>|<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>one<sp/>DEST_MAC/VLAN_ID<sp/>entry<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__tsw__regs_8h_1a055a6d09eae166ec86baa91cd8c9887d" kindref="member">TSW_APB2AXI_CAM_REQDATA_0_CH_SET</ref>(0);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>CAM<sp/>APB2AXIS<sp/>channel<sp/>selection.<sp/>Always<sp/>0<sp/>for<sp/>writing<sp/>to<sp/>DEST_MAC/VLAN_ID<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Add<sp/>a<sp/>new<sp/>VLAN_PORT<sp/>entry<sp/>(VID<sp/>1)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1a3bc9677ca0e58759d3085aaad1467d48" kindref="member">APB2AXI_CAM_REQDATA_1</ref><sp/>=<sp/>0x0f;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac447733ac2460484c434ce80d634bdb7" kindref="member">APB2AXI_CAM_REQDATA_0</ref><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>16)<sp/><sp/></highlight><highlight class="comment">/*<sp/>VID<sp/>=<sp/>1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>8)<sp/><sp/></highlight><highlight class="comment">/*<sp/>1:<sp/>Set<sp/>one<sp/>VLAN_PORT<sp/>entry<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>0);<sp/></highlight><highlight class="comment">/*<sp/>CAM<sp/>APB2AXIS<sp/>channel<sp/>selection.<sp/>Always<sp/>1<sp/>for<sp/>writing<sp/>to<sp/>VLAN_PORT<sp/>table.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__tsw__interface_1ga3c7cb9abc04cbf13027ddc492adb89c5" kindref="member">tsw_set_internal_frame_action</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>dest_port)</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1a0d76c8e057a43dc53dcaab46c2b702b6" kindref="member">LU_MAIN_INTF_ACTION</ref><sp/>&amp;=<sp/>~<ref refid="hpm__tsw__regs_8h_1aa1f0dda95888ecec5bebb9e94f9458a9" kindref="member">TSW_LU_MAIN_INTF_ACTION_DEST_MASK</ref>;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1a0d76c8e057a43dc53dcaab46c2b702b6" kindref="member">LU_MAIN_INTF_ACTION</ref><sp/>|=<sp/><ref refid="hpm__tsw__regs_8h_1a9c106779db80c566ac99332eeb93392d" kindref="member">TSW_LU_MAIN_INTF_ACTION_DEST_SET</ref>(dest_port);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__tsw__interface_1ga2469bc2b4edb058814aef0879d500af1" kindref="member">tsw_set_broadcast_frame_action</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>dest_port)</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1aa1bf7bf5b8d256d874935689d4ad5b1e" kindref="member">LU_MAIN_BC_ACTION</ref><sp/>&amp;=<sp/>~<ref refid="hpm__tsw__regs_8h_1a4e32081a82f263806fd89b6a1d75d734" kindref="member">TSW_LU_MAIN_BC_ACTION_DEST_MASK</ref>;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1aa1bf7bf5b8d256d874935689d4ad5b1e" kindref="member">LU_MAIN_BC_ACTION</ref><sp/>|=<sp/><ref refid="hpm__tsw__regs_8h_1ab95a331ded53fad92ec6bbabe3022ea4" kindref="member">TSW_LU_MAIN_BC_ACTION_DEST_SET</ref>(dest_port);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__tsw__interface_1ga18db692399537b84d6ec8e3cc8d26293" kindref="member">tsw_set_unknown_frame_action</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>dest_port)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1a617ba4d45f7e60dd265f8efcfc9008dc" kindref="member">LU_MAIN_NN_ACTION</ref><sp/>&amp;=<sp/>~<ref refid="hpm__tsw__regs_8h_1acdd099dcaaedf895d0c47187b1f76169" kindref="member">TSW_LU_MAIN_NN_ACTION_DEST_MASK</ref>;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1a617ba4d45f7e60dd265f8efcfc9008dc" kindref="member">LU_MAIN_NN_ACTION</ref><sp/>|=<sp/><ref refid="hpm__tsw__regs_8h_1a8098be905791e5a681a4269f14e2e316" kindref="member">TSW_LU_MAIN_NN_ACTION_DEST_SET</ref>(dest_port);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__tsw__interface_1ga3ed2976d888b9e4a0cf258ff64b380c7" kindref="member">tsw_clear_cam</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="291"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ad1ed8f0164ef4d151127bf6f643190ea" kindref="member">LU_MAIN_HITMEM</ref><sp/>&amp;=<sp/>~<ref refid="hpm__tsw__regs_8h_1a2dadc34939536059713f08e200d827d1" kindref="member">TSW_LU_MAIN_HITMEM_CAMMEMCLR_MASK</ref>;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ad1ed8f0164ef4d151127bf6f643190ea" kindref="member">LU_MAIN_HITMEM</ref><sp/>|=<sp/><ref refid="hpm__tsw__regs_8h_1a2dadc34939536059713f08e200d827d1" kindref="member">TSW_LU_MAIN_HITMEM_CAMMEMCLR_MASK</ref>;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__tsw__interface_1ga6c842083388bbcfc1767977a7c3780ca" kindref="member">tsw_enable_store_forward_mode</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>port)</highlight></codeline>
+<codeline lineno="297"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1a81dd0a5c7d1de404854ee26743a1e3fa" kindref="member">RXFIFO</ref>[<ref refid="hpm__tsw__regs_8h_1a8d00c72c672a717c4eb9a9c209c49ed4" kindref="member">TSW_RXFIFO_E1</ref>].SW_CTRL_IGRESS_RX_FDFIFO_E_OUT_CONFIG<sp/>|=<sp/><ref refid="hpm__tsw__regs_8h_1a65c4c34661fa90d4acc11dd807c9832f" kindref="member">TSW_TSNPORT_RXFIFO_SW_CTRL_IGRESS_RX_FDFIFO_E_OUT_CONFIG_MODE_STORE_FW_MASK</ref>;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__tsw__interface_1ga27014466da324a5bc79a02c20ebf8a69" kindref="member">tsw_disable_store_forward_mode</ref>(<ref refid="structTSW__Type" kindref="compound">TSW_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>port)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structTSW__Type_1ac0ab3d3a559b811e9e5589582a29f10f" kindref="member">TSNPORT</ref>[port].<ref refid="structTSW__Type_1a81dd0a5c7d1de404854ee26743a1e3fa" kindref="member">RXFIFO</ref>[<ref refid="hpm__tsw__regs_8h_1a8d00c72c672a717c4eb9a9c209c49ed4" kindref="member">TSW_RXFIFO_E1</ref>].SW_CTRL_IGRESS_RX_FDFIFO_E_OUT_CONFIG<sp/>&amp;=<sp/>~<ref refid="hpm__tsw__regs_8h_1a65c4c34661fa90d4acc11dd807c9832f" kindref="member">TSW_TSNPORT_RXFIFO_SW_CTRL_IGRESS_RX_FDFIFO_E_OUT_CONFIG_MODE_STORE_FW_MASK</ref>;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="drivers/src/hpm_tsw_drv.c"/>
+  </compounddef>
+</doxygen>

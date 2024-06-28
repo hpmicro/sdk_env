@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__nnsoftmax" kind="group">
+    <compoundname>nnsoftmax</compoundname>
+    <title>NN Softmax Functions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__nnsoftmax_1ga8a6ade9f71c2a881445c85a0c998887c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_nn_softmax_s8_fast</definition>
+        <argsstring>(const q7_t *in_vec, const uint16_t size, q7_t *out_vec)</argsstring>
+        <name>hpm_nn_softmax_s8_fast</name>
+        <param>
+          <type>const q7_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <briefdescription>
+<para>This is a softmax function for signed 8-bit integer input vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Example:</bold> <programlisting><codeline><highlight class="normal">#define<sp/>LENGTH<sp/>10</highlight></codeline>
+<codeline><highlight class="normal">q7_t<sp/>in_data[LENGTH]<sp/>=<sp/>{...};</highlight></codeline>
+<codeline><highlight class="normal">q7_t<sp/>out_data[LENGTH];</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">hpm_nn_softmax_s8_fast(in_data,<sp/>LENGTH,<sp/>out_data);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="15796" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="15796" bodyend="15805"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnsoftmax_1gaff3136d670da611c3e107256596efd1b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_nn_softmax_s16_fast</definition>
+        <argsstring>(const q15_t *in_vec, const uint16_t size, q15_t *out_vec)</argsstring>
+        <name>hpm_nn_softmax_s16_fast</name>
+        <param>
+          <type>const q15_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <briefdescription>
+<para>This is a softmax function for signed 16-bit integer input vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="15814" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="15814" bodyend="15823"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnsoftmax_1ga11ab4f2a71735cfd5348319c00d440ca" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_nn_softmax_s8_hp</definition>
+        <argsstring>(const int8_t *in_tensor, const int32_t in_tensor_row, const int32_t in_tensor_col, const int32_t scale, const int32_t lshift, const int32_t diff_min, int8_t *out_tensor)</argsstring>
+        <name>hpm_nn_softmax_s8_hp</name>
+        <param>
+          <type>const int8_t *</type>
+          <declname>in_tensor</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>in_tensor_row</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>in_tensor_col</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>lshift</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>diff_min</declname>
+        </param>
+        <param>
+          <type>int8_t *</type>
+          <declname>out_tensor</declname>
+        </param>
+        <briefdescription>
+<para>This is a softmax function for signed 8-bit integer input tensor with high precision algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tensor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input tensor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tensor_row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the input tensor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tensor_col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of columns in the input tensor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scaling value for input quantization </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">lshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left shift amount for input quantization </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">diff_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum threshold to perform the quantized exponential operation. The difference can be obtained by subtracting the input from the maximum in row. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_tensor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output tensor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="15839" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="15839" bodyend="15854"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnsoftmax_1ga1631ad53a279f4839d39b43cdf563f8d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_nn_softmax_u8_hp</definition>
+        <argsstring>(const uint8_t *in_tensor, const int32_t in_tensor_row, const int32_t in_tensor_col, const int32_t scale, const int32_t lshift, const int32_t diff_min, uint8_t *out_tensor)</argsstring>
+        <name>hpm_nn_softmax_u8_hp</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>in_tensor</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>in_tensor_row</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>in_tensor_col</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>lshift</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>diff_min</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>out_tensor</declname>
+        </param>
+        <briefdescription>
+<para>This is a softmax function for unsigned 8-bit integer input tensor with high precision algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tensor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input tensor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tensor_row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the input tensor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tensor_col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of columns in the input tensor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scaling value for input quantization </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">lshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left shift amount for input quantization </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">diff_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum threshold to perform the quantized exponential operation. The difference can be obtained by subtracting the input from the maximum in row. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_tensor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output tensor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="15870" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="15870" bodyend="15885"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The softmax functions are exponential functions with base 2. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

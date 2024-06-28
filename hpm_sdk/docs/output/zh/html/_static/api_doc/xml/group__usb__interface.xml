@@ -1,0 +1,2516 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__usb__interface" kind="group">
+    <compoundname>usb_interface</compoundname>
+    <title>USB driver APIs</title>
+    <innerclass refid="structusb__endpoint__config__t" prot="public">usb_endpoint_config_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__usb__interface_1gac8a76acd5a4f562121857c3b5fa12f62" prot="public" static="no" strong="no">
+        <type></type>
+        <name>usb_dir_t</name>
+        <enumvalue id="group__usb__interface_1ggac8a76acd5a4f562121857c3b5fa12f62aeaa12a81a0e999bc935e4e102a1a6d52" prot="public">
+          <name>usb_dir_out</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1ggac8a76acd5a4f562121857c3b5fa12f62a7e072c1670e0569278bf13f7254468b4" prot="public">
+          <name>usb_dir_in</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1ggac8a76acd5a4f562121857c3b5fa12f62a221cb59897a7fb73e55c7da15e555fd5" prot="public">
+          <name>usb_dir_in_mask</name>
+          <initializer>= 0x80</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>USB transfer direction types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="39" column="1" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="39" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__usb__interface_1gad74e07f65d6e7c0bd897ffeffedbd0c9" prot="public" static="no" strong="no">
+        <type></type>
+        <name>usb_xfer_type_t</name>
+        <enumvalue id="group__usb__interface_1ggad74e07f65d6e7c0bd897ffeffedbd0c9ae1c42deb77d05e7eb5bfdd07572a499d" prot="public">
+          <name>usb_xfer_control</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1ggad74e07f65d6e7c0bd897ffeffedbd0c9a74b1e326fd6b9902b3e1087ad5e1116e" prot="public">
+          <name>usb_xfer_isochronous</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1ggad74e07f65d6e7c0bd897ffeffedbd0c9a25bd25d04dd90fb57cc44e70c72a255f" prot="public">
+          <name>usb_xfer_bulk</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1ggad74e07f65d6e7c0bd897ffeffedbd0c9a27f6f81da60ada963b24b8eca8e425f4" prot="public">
+          <name>usb_xfer_interrupt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>USB transfer types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="48" column="1" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="48" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__usb__interface_1gaca5d4f37e7d8e31787c6009341537914" prot="public" static="no" strong="no">
+        <type></type>
+        <name>usb_controller_mode_t</name>
+        <enumvalue id="group__usb__interface_1ggaca5d4f37e7d8e31787c6009341537914a62a82ec6e2773d9d9fef90e6d7ddb4df" prot="public">
+          <name>usb_ctrl_mode_otg</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1ggaca5d4f37e7d8e31787c6009341537914a1889c80b318fac7d6fc528f67fe966ab" prot="public">
+          <name>usb_ctrl_mode_device</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1ggaca5d4f37e7d8e31787c6009341537914a4c4700adf6ab553a3f58769abcb83806" prot="public">
+          <name>usb_ctrl_mode_host</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>USB controller work modes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="58" column="1" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="58" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__usb__interface_1ga685cf8597bcb51d5290f93fedb57d948" prot="public" static="no" strong="no">
+        <type></type>
+        <name>usb_line_state_t</name>
+        <enumvalue id="group__usb__interface_1gga685cf8597bcb51d5290f93fedb57d948abe4875891a55ad4af5e1835150267b20" prot="public">
+          <name>usb_line_state0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1gga685cf8597bcb51d5290f93fedb57d948a0bec168a8e4b7ff9d58a23b3f6f85048" prot="public">
+          <name>usb_line_state1</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1gga685cf8597bcb51d5290f93fedb57d948a38e6adc51df2b4901e16260ed31c4a56" prot="public">
+          <name>usb_line_state2</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>USB line state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="67" column="1" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="67" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__usb__interface_1gabb913c906ebdab67d51368a0d79d4f76" prot="public" static="no" strong="no">
+        <type></type>
+        <name>usb_transceiver_t</name>
+        <enumvalue id="group__usb__interface_1ggabb913c906ebdab67d51368a0d79d4f76ae4d9da7a25dfe8f360dd05e403e53df0" prot="public">
+          <name>usb_tran_parallel</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1ggabb913c906ebdab67d51368a0d79d4f76a5b1d81d437dcc85e4f221870a21eb947" prot="public">
+          <name>usb_tran_serial</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>USB transceiver. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="76" column="1" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__usb__interface_1ga6b26e9b4631d854f44e6578f1588dbec" prot="public" static="no" strong="no">
+        <type></type>
+        <name>usb_test_mode_t</name>
+        <enumvalue id="group__usb__interface_1gga6b26e9b4631d854f44e6578f1588dbeca5ab921b0a1a87b57f00a207c2397bad2" prot="public">
+          <name>usb_test_mode_disable</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1gga6b26e9b4631d854f44e6578f1588dbeca78322dc11d557ca634e21f8447da3d7c" prot="public">
+          <name>usb_test_j_state</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1gga6b26e9b4631d854f44e6578f1588dbeca172cae3ff7e9220e085f55047eaa2635" prot="public">
+          <name>usb_test_k_state</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1gga6b26e9b4631d854f44e6578f1588dbeca2801a26739e6b3237a688655a54a883b" prot="public">
+          <name>usb_test_se0_nak</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1gga6b26e9b4631d854f44e6578f1588dbecac5d65e6531fcfd8adac839e83bbc754c" prot="public">
+          <name>usb_test_packet</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1gga6b26e9b4631d854f44e6578f1588dbecabb6b7de77cf139ec08ead0cc83f790f0" prot="public">
+          <name>usb_test_force_hs</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1gga6b26e9b4631d854f44e6578f1588dbecab7b3171151db55e444636dde8ed59e47" prot="public">
+          <name>usb_test_force_fs</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1gga6b26e9b4631d854f44e6578f1588dbecaaa2bea72a632b90975b50c9ddd1eece7" prot="public">
+          <name>usb_test_force_ls</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>USB test modes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="84" column="1" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="84" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__usb__interface_1ga73d8465a8d3e82001a52657d149ef0bd" prot="public" static="no" strong="no">
+        <type></type>
+        <name>usb_vbus_wakeup_source_t</name>
+        <enumvalue id="group__usb__interface_1gga73d8465a8d3e82001a52657d149ef0bda86d2d0698260096aa144d73145a955f5" prot="public">
+          <name>usb_vbus_wakeup_vbus_valid</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__usb__interface_1gga73d8465a8d3e82001a52657d149ef0bda810489cc0de5e5933f56b6312f57dc6b" prot="public">
+          <name>usb_vbus_wakeup_session_valid</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>USB vbus wakeup source. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="98" column="1" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="98" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__usb__interface_1gae147b28fcfb6c35c2bfa5b8805c3343e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>usb_control_request_t</definition>
+        <argsstring></argsstring>
+        <name>usb_control_request_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="125" column="2" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__usb__interface_1gaaaf873d0073c24e1322cb78040785bd9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t usb_get_interrupts</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_get_interrupts</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get the mask of all enabled interrupts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>Mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of all enabled interrupts. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="151" column="24" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="151" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga90b58bdcf539cd729484d23dee83de12" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_enable_interrupts</definition>
+        <argsstring>(USB_Type *ptr, uint32_t mask)</argsstring>
+        <name>usb_enable_interrupts</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Enable interrupts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mask value for interrupt events </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="162" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="162" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga4f6763a3c0dba2fce55d681a0cc46bb9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t usb_get_status_flags</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_get_status_flags</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get all USB status flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>USB interrupt status flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="173" column="24" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="173" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gab758df15c9c7b620f14c721bc35eff9b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_clear_status_flags</definition>
+        <argsstring>(USB_Type *ptr, uint32_t mask)</argsstring>
+        <name>usb_clear_status_flags</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Clear status flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Only the specified flags can be cleared by writing USBSTS register.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mask value for flags to be cleared. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="187" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="187" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga142ce90e906c714e1fafd99fb579575f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_otg_enable_vbus_wakeup</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_otg_enable_vbus_wakeup</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Enable otg vbus wakeup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="197" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="197" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gac4a51f077a28d1265c4c734d62baa777" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_otg_disable_vbus_wakeup</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_otg_disable_vbus_wakeup</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Disbable otg vbus wakeup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="207" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="207" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga12b9c3bdace88e7a1b117ddb44eb6041" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_otg_set_vbus_wakeup_source</definition>
+        <argsstring>(USB_Type *ptr, usb_vbus_wakeup_source_t src)</argsstring>
+        <name>usb_otg_set_vbus_wakeup_source</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__usb__interface_1ga73d8465a8d3e82001a52657d149ef0bd" kindref="member">usb_vbus_wakeup_source_t</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Set otg vbus wakeup source. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>wakeup source, <ref refid="group__usb__interface_1ga73d8465a8d3e82001a52657d149ef0bd" kindref="member">usb_vbus_wakeup_source_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="218" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga00a45a7d2c03b94ae676d7e93cdfcf97" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_otg_enable_wakeup_int</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_otg_enable_wakeup_int</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Enable otg wakeup interrupt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="228" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="228" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga3009816fbb58761911be3d66f145f305" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_otg_disable_wakeup_int</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_otg_disable_wakeup_int</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Disable otg wakeup interrupt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="238" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="238" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga19c4aa4f5165188795a44c600fdf6356" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool usb_get_otg_wakeup_int_flag</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_get_otg_wakeup_int_flag</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get otg wakeup status flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>USB otg wakeup interrupt status flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="249" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="249" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga21870c361bfd4242f6bab55ce1572dd7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t usb_get_suspend_status</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_get_suspend_status</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get USB suspend status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>USB controller suspend status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="260" column="23" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="260" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga0ea35987674289f35787ab42935c4ef4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool usb_get_port_reset_status</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_get_port_reset_status</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get USB reset status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>USB controller reset status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="271" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="271" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gab042236cf3fd048b9fd38a45db340244" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool usb_get_port_ccs</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_get_port_ccs</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get USB current connect status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>USB controller reset status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="282" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="282" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga14d1d0f4ba442713328d0e9a6f3d89ee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t usb_get_port_speed</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_get_port_speed</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get USB port speed status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>USB controller port speed status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="293" column="23" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="293" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga67dbd8e3c2aa1ed942c22b8e36dad5ca" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_set_port_test_mode</definition>
+        <argsstring>(USB_Type *ptr, usb_test_mode_t test_mode)</argsstring>
+        <name>usb_set_port_test_mode</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__usb__interface_1ga6b26e9b4631d854f44e6578f1588dbec" kindref="member">usb_test_mode_t</ref></type>
+          <declname>test_mode</declname>
+        </param>
+        <briefdescription>
+<para>Set port test control mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">test_mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>usb test mode, <ref refid="group__usb__interface_1ga6b26e9b4631d854f44e6578f1588dbec" kindref="member">usb_test_mode_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="304" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="304" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga7105d897b2041e8a60c8021763a9507b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_set_port_suspend</definition>
+        <argsstring>(USB_Type *ptr, bool suspend)</argsstring>
+        <name>usb_set_port_suspend</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>suspend</declname>
+        </param>
+        <briefdescription>
+<para>USB set port suspend. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">suspend</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true - suspend, false - not suspend </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="315" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="315" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gaa8d7b1f4160c160fac1a1d048bc927b7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_force_port_resume</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_force_port_resume</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>USB force port resume. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="325" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="325" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga599237cef768dca6cf6aa62d3718f37b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_phy_enter_low_power_suspend</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_phy_enter_low_power_suspend</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>USB phy enter low power suspend. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="335" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="335" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga473d391beec25c0f14adfa16d7455b44" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_phy_exit_low_power_suspend</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_phy_exit_low_power_suspend</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>USB phy exit low power suspend. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="345" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="345" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga3b906bc33a8c2889e9b0dd8e06aaf226" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool usb_phy_get_session_valid_flag</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_phy_get_session_valid_flag</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get phy session valid flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phy session valid flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="361" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="361" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga41c17f40229de80fa7717facaf93b875" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_otgsc_enable_session_valid_chg_int</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_otgsc_enable_session_valid_chg_int</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>enable otgsc session valid change interrupt </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="371" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="371" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga48580cdbe46b621f6a0f476c02d159bf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_otgsc_disable_session_valid_chg_int</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_otgsc_disable_session_valid_chg_int</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>disable otgsc session valid change interrupt </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="381" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="381" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gab301a0a1796d377338dd4fa63e95ab10" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool usb_otgsc_get_session_valid_chg_flag</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_otgsc_get_session_valid_chg_flag</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>get otgsc session valid change flag </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>otgsc session valid flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="392" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="392" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gaddc48af892c48e38a9d22c8f4da78c1a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_otgsc_clear_session_valid_chg_flag</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_otgsc_clear_session_valid_chg_flag</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>clear otgsc session valid change flag </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="402" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="402" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gae0720072561815f9a9b94b42b0becd6f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool usb_otgsc_get_session_valid_flag</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_otgsc_get_session_valid_flag</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get otgsc session valid flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>otgsc session valid flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="413" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="413" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gadd0eb9457097bc5b9bb5538b59043f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usb_phy_init</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_phy_init</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Initialize USB phy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="423" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="52" bodyend="84" declfile="drivers/inc/hpm_usb_drv.h" declline="423" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gaf4db15f9ad88140c5cb1a91996fd9d19" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t usb_phy_get_line_state</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_phy_get_line_state</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>USB phy get line status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="430" column="23" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="430" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga7d0c8f1b7fad5111bb5c077e5b4760d9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_phy_using_internal_vbus</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_phy_using_internal_vbus</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>USB phy using internal vbus. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="440" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="440" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga5a05b0fa6a2f03d790ea1050aaf1969c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_phy_using_external_vbus</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_phy_using_external_vbus</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>USB phy using external vbus. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="451" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="451" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gac2f61d1cb7b9fa4a1659e285dcde415c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_phy_disable_dp_dm_pulldown</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_phy_disable_dp_dm_pulldown</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>USB phy disconnect dp/dm pins pulldown resistance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="462" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="462" bodyend="465"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gaeaab6bfcb5b96868f46e6cd2c6763910" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_phy_enable_dp_dm_pulldown</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_phy_enable_dp_dm_pulldown</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>USB phy connect dp/dm pins pulldown resistance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="472" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="472" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gaf003972896197cb2c108dabcdde737b0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_phyctrl1_set_not_utmi_suspend</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_phyctrl1_set_not_utmi_suspend</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Set phyctrl1 not utmi suspend. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="482" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="482" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga5656966fc46a5c1c45b05ad42ca0f1b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usb_dcd_bus_reset</definition>
+        <argsstring>(USB_Type *ptr, uint16_t ep0_max_packet_size)</argsstring>
+        <name>usb_dcd_bus_reset</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>ep0_max_packet_size</declname>
+        </param>
+        <briefdescription>
+<para>USB device bus reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ep0_max_packet_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum packet size of endpoint 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="498" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="86" bodyend="112" declfile="drivers/inc/hpm_usb_drv.h" declline="498" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gaff93d59e0f375b4edd7195e12f21fc0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usb_dcd_init</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_dcd_init</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Initialize controller to device mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="505" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="114" bodyend="153" declfile="drivers/inc/hpm_usb_drv.h" declline="505" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga45bce816a6316b47c9a0a26b566988af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usb_dcd_deinit</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_dcd_deinit</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Deinitialize controller to device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="512" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="155" bodyend="176" declfile="drivers/inc/hpm_usb_drv.h" declline="512" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gaba25dc7f740483fca43efae2d35eab71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usb_dcd_remote_wakeup</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_dcd_remote_wakeup</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Wakeup from host. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="519" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="290" bodyend="293" declfile="drivers/inc/hpm_usb_drv.h" declline="519" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gab2450ed6584f4fc6056d785c4b340f19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usb_dcd_edpt_open</definition>
+        <argsstring>(USB_Type *ptr, usb_endpoint_config_t *config)</argsstring>
+        <name>usb_dcd_edpt_open</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structusb__endpoint__config__t" kindref="compound">usb_endpoint_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Open an endpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the specified endpoint config struct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="527" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="208" bodyend="218" declfile="drivers/inc/hpm_usb_drv.h" declline="527" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga6615e90df81dfa952badf5cbe5a2853a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t usb_dcd_edpt_get_type</definition>
+        <argsstring>(USB_Type *ptr, uint8_t ep_addr)</argsstring>
+        <name>usb_dcd_edpt_get_type</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <briefdescription>
+<para>get a specified endpoint type </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Endpoint address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="535" column="9" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="220" bodyend="227" declfile="drivers/inc/hpm_usb_drv.h" declline="535" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gaadf458a5102a42b971d1ff9c69cdc712" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usb_dcd_edpt_xfer</definition>
+        <argsstring>(USB_Type *ptr, uint8_t ep_idx)</argsstring>
+        <name>usb_dcd_edpt_xfer</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_idx</declname>
+        </param>
+        <briefdescription>
+<para>Submit a transfer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ep_idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An index of the specified endpoint </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="543" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="229" bodyend="235" declfile="drivers/inc/hpm_usb_drv.h" declline="543" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga363402a353d7b62397b3e742f3013ef9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usb_dcd_edpt_stall</definition>
+        <argsstring>(USB_Type *ptr, uint8_t ep_addr)</argsstring>
+        <name>usb_dcd_edpt_stall</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <briefdescription>
+<para>Stall endpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An address of the specified endpoint </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="551" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="237" bodyend="243" declfile="drivers/inc/hpm_usb_drv.h" declline="551" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gae98b1372cf7dda04bf8669fbe56ba969" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usb_dcd_edpt_clear_stall</definition>
+        <argsstring>(USB_Type *ptr, uint8_t ep_addr)</argsstring>
+        <name>usb_dcd_edpt_clear_stall</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <briefdescription>
+<para>Clear stall. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An address of the specified endpoint </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="559" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="245" bodyend="253" declfile="drivers/inc/hpm_usb_drv.h" declline="559" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga83beef7b50abe7cca5684662b13b25f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool usb_dcd_edpt_check_stall</definition>
+        <argsstring>(USB_Type *ptr, uint8_t ep_addr)</argsstring>
+        <name>usb_dcd_edpt_check_stall</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <briefdescription>
+<para>Clear stall. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An address of the specified endpoint </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status of endpoint stall, true is stall, false is not stall </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="568" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="255" bodyend="261" declfile="drivers/inc/hpm_usb_drv.h" declline="568" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga206094a9ee1dab3d52df63a36185b9b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usb_dcd_edpt_close</definition>
+        <argsstring>(USB_Type *ptr, uint8_t ep_addr)</argsstring>
+        <name>usb_dcd_edpt_close</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <briefdescription>
+<para>Close a specified endpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An address of the specified endpoint </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="576" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="263" bodyend="288" declfile="drivers/inc/hpm_usb_drv.h" declline="576" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga3526d2d96452fe0f905cb41a44cbad03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usb_dcd_connect</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_dcd_connect</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Connect by enabling internal pull-up resistor on D+/D-. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="583" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="179" bodyend="182" declfile="drivers/inc/hpm_usb_drv.h" declline="583" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gab7681ff335b3134cf4fe056a4d06be49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usb_dcd_disconnect</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_dcd_disconnect</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Disconnect by disabling internal pull-up resistor on D+/D-. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="590" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="185" bodyend="202" declfile="drivers/inc/hpm_usb_drv.h" declline="590" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga458e6353080c3188117e60c451d85a96" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t usb_dcd_get_edpt_setup_status</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_dcd_get_edpt_setup_status</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get setup status of endpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status of setup endpoint </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="598" column="24" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="598" bodyend="601"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gae5aea3d230463140c4ecb3b0b7f098b4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_dcd_clear_edpt_setup_status</definition>
+        <argsstring>(USB_Type *ptr, uint32_t mask)</argsstring>
+        <name>usb_dcd_clear_edpt_setup_status</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Clear the setup status of all specified endpoints. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A mask of all specified endpoints </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="609" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="609" bodyend="612"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga56f4485460fb8e69291a267a755b6870" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_dcd_set_address</definition>
+        <argsstring>(USB_Type *ptr, uint8_t dev_addr)</argsstring>
+        <name>usb_dcd_set_address</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dev_addr</declname>
+        </param>
+        <briefdescription>
+<para>Set address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dev_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An assigned endpoint address from USB host </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="620" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="620" bodyend="623"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga4d330448bb7abef5ff1273927cebac81" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_dcd_set_edpt_list_addr</definition>
+        <argsstring>(USB_Type *ptr, uint32_t addr)</argsstring>
+        <name>usb_dcd_set_edpt_list_addr</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+<para>Set endpoint list address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A start address of the endpoint qtd list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="631" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="631" bodyend="634"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gab785d17f2e833df64a42695d726f4157" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t usb_dcd_get_device_addr</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_dcd_get_device_addr</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get device address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>endpoint address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="642" column="23" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="642" bodyend="645"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga7eff2d319dc7c0a51fbd50cb68f4b713" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t usb_dcd_get_edpt_complete_status</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_dcd_get_edpt_complete_status</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get complete status of endpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>complete status od endpoint </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="653" column="24" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="653" bodyend="656"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga82811e6be34b432b2e744744d30da1e2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_dcd_clear_edpt_complete_status</definition>
+        <argsstring>(USB_Type *ptr, uint32_t mask)</argsstring>
+        <name>usb_dcd_clear_edpt_complete_status</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Clear complete status of endpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A mask of the specified endpoints </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="664" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="664" bodyend="667"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga0570e2f862011ae43270784768f347b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool usb_hcd_init</definition>
+        <argsstring>(USB_Type *ptr, uint32_t int_mask, uint16_t framelist_size)</argsstring>
+        <name>usb_hcd_init</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>int_mask</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>framelist_size</declname>
+        </param>
+        <briefdescription>
+<para>Initialize controller to host mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">int_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A mask of all required interrupts </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">framelist_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A size of the frame list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="680" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="295" bodyend="342" declfile="drivers/inc/hpm_usb_drv.h" declline="680" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga9bcce6385820752906a63201939d4170" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usb_hcd_port_reset</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_hcd_port_reset</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Initialize controller to host modeHost Reset port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="687" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="344" bodyend="358" declfile="drivers/inc/hpm_usb_drv.h" declline="687" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga4ae736cf1c923257d9bb16a692536bf6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_hcd_set_command</definition>
+        <argsstring>(USB_Type *ptr, uint32_t mask)</argsstring>
+        <name>usb_hcd_set_command</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Initialize controller to host modeHost set command register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A mask of all required commands </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="695" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="695" bodyend="698"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga38d5124bffeb5eb639b182346f0d96b0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t usb_hcd_get_frame_index</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_hcd_get_frame_index</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get frame index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the current frame list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="706" column="24" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="706" bodyend="709"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga330e7a78985b4fa69d85d3a14e4410dd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool usb_hcd_get_port_csc</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_hcd_get_port_csc</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get port connect status change. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>connect status change </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="717" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="717" bodyend="720"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga3d2d648e5012d244d006b0255c5949da" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_hcd_set_power_ctrl_polarity</definition>
+        <argsstring>(USB_Type *ptr, bool high)</argsstring>
+        <name>usb_hcd_set_power_ctrl_polarity</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>high</declname>
+        </param>
+        <briefdescription>
+<para>Set power ctrl polarity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">high</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true - vbus high level enable, false - vbus low level enable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="728" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="728" bodyend="735"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gaf2018b3df6e99d84ca0a5f3c30a67103" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_hcd_enable_port_power</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_hcd_enable_port_power</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Enable port power. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="742" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="742" bodyend="745"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gac06958a62e1061688cdc0f60e8f783dd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_hcd_set_async_list_addr</definition>
+        <argsstring>(USB_Type *ptr, uint32_t addr)</argsstring>
+        <name>usb_hcd_set_async_list_addr</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+<para>Get port connect status changeSet async list address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An the start address of the async endpoint list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="753" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="753" bodyend="756"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga772642c91cf81c227d201d4a39e81d67" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_hcd_set_periodic_list_addr</definition>
+        <argsstring>(USB_Type *ptr, uint32_t addr)</argsstring>
+        <name>usb_hcd_set_periodic_list_addr</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+<para>Set periodic list address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An start address of the periodic endpoint list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="764" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="764" bodyend="767"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga72c81c5dcd874b15192fa072aa50a129" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_hcd_run</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_hcd_run</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Start hcd controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="774" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="774" bodyend="777"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga641f92202a1b5877b2d5d53334f80bc2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_hcd_stop</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_hcd_stop</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Stop hcd controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="784" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="784" bodyend="787"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__usb__interface_1ga3fd7b002744275ddfda479972a64d190" prot="public" static="no">
+        <name>USB_PHY_INIT_DELAY_COUNT</name>
+        <initializer>(16U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>a delay count for USB phy initialization </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="29" column="9" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usb__interface_1gabba486df2e6dd2326995116094d526b8" prot="public" static="no">
+        <name>USB_HOST_FRAMELIST_SIZE</name>
+        <initializer>(8U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>a frame list size in USB host mode </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="30" column="9" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>USB driver APIs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

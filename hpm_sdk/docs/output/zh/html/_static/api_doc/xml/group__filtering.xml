@@ -1,0 +1,2760 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__filtering" kind="group">
+    <compoundname>filtering</compoundname>
+    <title>DSP Filtering Functions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__filtering_1ga4d968e779b3ec4f7cd019742f1185da0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_fir_f32</definition>
+        <argsstring>(const riscv_dsp_fir_f32_t *instance, float32_t *src, float32_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_fir_f32</name>
+        <param>
+          <type>const riscv_dsp_fir_f32_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Function for the floating-point FIR filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to an instance of the FIR structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the input block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of the blocksize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3310" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3310" bodyend="3315"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga9ab3ad7d2df866b79e10ca428b7a44b5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_fir_q31</definition>
+        <argsstring>(const riscv_dsp_fir_q31_t *instance, q31_t *src, q31_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_fir_q31</name>
+        <param>
+          <type>const riscv_dsp_fir_q31_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Function for the q31 FIR filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to an instance of the FIR structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the input block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of the blocksize.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function notes: Both coefficients and state variables are represented in 1.31 format and multiplications yield a 2.62 result. The 2.62 results are accumulated in a 64-bit accumulator and is right shifted by 31 bits and saturated to 1.31 formatthe to yield the final result. In order to avoid overflows completely the input signal must be scaled down by log2(coeff_size) bits. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3331" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3331" bodyend="3336"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gac52cfd7df3aac9f85d641300cab54502" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_fir_fast_q31</definition>
+        <argsstring>(const riscv_dsp_fir_q31_t *instance, q31_t *src, q31_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_fir_fast_q31</name>
+        <param>
+          <type>const riscv_dsp_fir_q31_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Function for the q31 FIR filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to an instance of the FIR structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the input block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of the blocksize.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function notes: Both coefficients and state variables are represented in 1.31 format. These intermediate multiplications results are added to a 2.30 accumulator. Finally, the accumulator is saturated and converted to a 1.31 result. In order to avoid overflows completely the input signal must be scaled down by log2(coeff_size) bits. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3352" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3352" bodyend="3357"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga67ea163e762468fc5a05756e6cf961ea" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_fir_q15</definition>
+        <argsstring>(const riscv_dsp_fir_q15_t *instance, q15_t *src, q15_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_fir_q15</name>
+        <param>
+          <type>const riscv_dsp_fir_q15_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Function for the q15 FIR filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to an instance of the FIR structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the input block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of the blocksize.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function notes: Both coefficients and state variables are represented in 1.15 format and multiplications yield a 2.30 result. The 2.30 results are accumulated in a 64-bit accumulator in 34.30 format and the results is truncated to 34.15 format by discarding low 15 bits. Lastly, the outputs is saturated to yield a result in 1.15 format. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3372" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3372" bodyend="3377"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga350f0ccb0e3163f9b2f2d80c1a4b4a1a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_fir_fast_q15</definition>
+        <argsstring>(const riscv_dsp_fir_q15_t *instance, q15_t *src, q15_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_fir_fast_q15</name>
+        <param>
+          <type>const riscv_dsp_fir_q15_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Function for the q15 FIR filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to an instance of the FIR structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the input block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of the blocksize.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function notes: Both coefficients and state variables are represented in Q15 format and multiplications yield a Q30 result. The results are accumulated in a 32-bit accumulator in Q2.30 format. Lastly, the outputs are saturated to yield a result in Q1.15 format. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3391" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3391" bodyend="3396"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gaff2707d5d0630c7f1632f61e4af38027" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_fir_q7</definition>
+        <argsstring>(const riscv_dsp_fir_q7_t *instance, q7_t *src, q7_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_fir_q7</name>
+        <param>
+          <type>const riscv_dsp_fir_q7_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Function for the q7 FIR filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to an instance of the FIR structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the input block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of the blocksize.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function notes: Both inputs are in 1.7 format and multiplications yield a 2.14 result. The 2.14 intermediate results are accumulated in a 32-bit accumulator in 18.14 format. The 18.14 result is then converted to 18.7 format by discarding the low 7 bits and then saturated to 1.7 format. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3410" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3410" bodyend="3415"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga084e1fc0471ba324afa9d46cd8d23b4a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_lfir_f32</definition>
+        <argsstring>(const riscv_dsp_lfir_f32_t *instance, float32_t *src, float32_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_lfir_f32</name>
+        <param>
+          <type>const riscv_dsp_lfir_f32_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Function for the floating-point lattice FIR filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to an instance of the lattice FIR structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the input block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of the blocksize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3425" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3425" bodyend="3430"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga6c7bb5727770068ccc1a1cf60766a376" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_lfir_q15</definition>
+        <argsstring>(const riscv_dsp_lfir_q15_t *instance, q15_t *src, q15_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_lfir_q15</name>
+        <param>
+          <type>const riscv_dsp_lfir_q15_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Function for the q15 lattice FIR filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to an instance of the lattice FIR structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the input block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of the blocksize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3440" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3440" bodyend="3445"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gaa22d3dcb0e2be301e857c55d6ba93469" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_lfir_q31</definition>
+        <argsstring>(const riscv_dsp_lfir_q31_t *instance, q31_t *src, q31_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_lfir_q31</name>
+        <param>
+          <type>const riscv_dsp_lfir_q31_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Function for the q31 lattice FIR filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to an instance of the lattice FIR structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the input block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of the blocksize.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function notes: In order to avoid overflows the input signal must be scaled down by 2*log2(stage) bits. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3459" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3459" bodyend="3464"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga7ab17b494a8c99806cf85a3d681755ff" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_dcmfir_f32</definition>
+        <argsstring>(const riscv_dsp_dcmfir_f32_t *instance, float32_t *src, float32_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_dcmfir_f32</name>
+        <param>
+          <type>const riscv_dsp_dcmfir_f32_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3465" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3465" bodyend="3470"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga8f6e7aa621aa0157b00bd30087477eee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_dcmfir_q15</definition>
+        <argsstring>(const riscv_dsp_dcmfir_q15_t *instance, q15_t *src, q15_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_dcmfir_q15</name>
+        <param>
+          <type>const riscv_dsp_dcmfir_q15_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3471" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3471" bodyend="3476"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga15f43341502c4c75ac5746052cc301db" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_dcmfir_q31</definition>
+        <argsstring>(const riscv_dsp_dcmfir_q31_t *instance, q31_t *src, q31_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_dcmfir_q31</name>
+        <param>
+          <type>const riscv_dsp_dcmfir_q31_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3477" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3477" bodyend="3482"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga954a36c85b530592265d3afdeafb5077" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_dcmfir_fast_q31</definition>
+        <argsstring>(const riscv_dsp_dcmfir_q31_t *instance, q31_t *src, q31_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_dcmfir_fast_q31</name>
+        <param>
+          <type>const riscv_dsp_dcmfir_q31_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3483" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3483" bodyend="3488"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga46fdb018ead4e1c961dc6132f7d7bbf9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_dcmfir_fast_q15</definition>
+        <argsstring>(const riscv_dsp_dcmfir_q15_t *instance, q15_t *src, q15_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_dcmfir_fast_q15</name>
+        <param>
+          <type>const riscv_dsp_dcmfir_q15_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3489" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3489" bodyend="3494"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gaaefb1607ae2d58820a87b55a94305545" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_upsplfir_f32</definition>
+        <argsstring>(const riscv_dsp_upsplfir_f32_t *instance, float32_t *src, float32_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_upsplfir_f32</name>
+        <param>
+          <type>const riscv_dsp_upsplfir_f32_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3495" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3495" bodyend="3500"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga8c437e69efb5744881da1e809a62464d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_upsplfir_q15</definition>
+        <argsstring>(const riscv_dsp_upsplfir_q15_t *instance, q15_t *src, q15_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_upsplfir_q15</name>
+        <param>
+          <type>const riscv_dsp_upsplfir_q15_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3501" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3501" bodyend="3506"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga8f417cd672b8c83898ca33355e045d58" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_upsplfir_q31</definition>
+        <argsstring>(const riscv_dsp_upsplfir_q31_t *instance, q31_t *src, q31_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_upsplfir_q31</name>
+        <param>
+          <type>const riscv_dsp_upsplfir_q31_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3507" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3507" bodyend="3512"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga267fa5f1a6f0677861ceb55a04b46e8b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_spafir_f32</definition>
+        <argsstring>(riscv_dsp_spafir_f32_t *instance, float32_t *src, float32_t *dst, float32_t *buf, uint32_t size)</argsstring>
+        <name>hpm_dsp_spafir_f32</name>
+        <param>
+          <type>riscv_dsp_spafir_f32_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3513" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3513" bodyend="3518"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga094681ae28d948821c54a56a1e49a9c5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_spafir_q15</definition>
+        <argsstring>(riscv_dsp_spafir_q15_t *instance, q15_t *src, q15_t *dst, q15_t *buf1, q31_t *buf2, uint32_t size)</argsstring>
+        <name>hpm_dsp_spafir_q15</name>
+        <param>
+          <type>riscv_dsp_spafir_q15_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>buf1</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>buf2</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3519" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3519" bodyend="3524"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga99ec238f09a360df15e5c071d69d79b3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_spafir_q31</definition>
+        <argsstring>(riscv_dsp_spafir_q31_t *instance, q31_t *src, q31_t *dst, q31_t *buf, uint32_t size)</argsstring>
+        <name>hpm_dsp_spafir_q31</name>
+        <param>
+          <type>riscv_dsp_spafir_q31_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3525" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3525" bodyend="3530"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga33994c90d0cfc5321f256741cc8d5399" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_spafir_q7</definition>
+        <argsstring>(riscv_dsp_spafir_q7_t *instance, q7_t *src, q7_t *dst, q7_t *buf1, q31_t *buf2, uint32_t size)</argsstring>
+        <name>hpm_dsp_spafir_q7</name>
+        <param>
+          <type>riscv_dsp_spafir_q7_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>buf1</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>buf2</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3531" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3531" bodyend="3536"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga5c9fb175b6db030b8fca0f49134cbe66" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_lms_f32</definition>
+        <argsstring>(const riscv_dsp_lms_f32_t *instance, float32_t *src, float32_t *ref, float32_t *dst, float32_t *err, uint32_t size)</argsstring>
+        <name>hpm_dsp_lms_f32</name>
+        <param>
+          <type>const riscv_dsp_lms_f32_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>ref</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>err</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Structure for the floatint-point standard LMS Filters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Function for the floating-point LMS filter. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to an instance of the LMS structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the input block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*ref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the reference data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the error data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of the blocksize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3552" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3552" bodyend="3557"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga4b75751a1db8eaca9ed8988dcc7c762c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_lms_q31</definition>
+        <argsstring>(const riscv_dsp_lms_q31_t *instance, q31_t *src, q31_t *ref, q31_t *dst, q31_t *err, uint32_t size)</argsstring>
+        <name>hpm_dsp_lms_q31</name>
+        <param>
+          <type>const riscv_dsp_lms_q31_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>ref</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>err</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Function for the q31 LMS filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to an instance of the LMS structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the input block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*ref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the reference data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the error data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of the blocksize.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function notes: Both coefficients and state variables are represented in 1.31 format and multiplications yield a 2.62 result. The 2.62 results are accumulated in a 64-bit accumulator and is right shifted by 31 bits and saturated to 1.31 formatthe to yield the final result. In order to avoid overflows completely the input signal must be scaled down by log2(coeff_size) bits. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3575" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3575" bodyend="3580"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gae67bd21265828239d887a5c64ad50965" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_lms_q15</definition>
+        <argsstring>(const riscv_dsp_lms_q15_t *instance, q15_t *src, q15_t *ref, q15_t *dst, q15_t *err, uint32_t size)</argsstring>
+        <name>hpm_dsp_lms_q15</name>
+        <param>
+          <type>const riscv_dsp_lms_q15_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>ref</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>err</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Function for the q15 LMS filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to an instance of the LMS structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the input block data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*ref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the reference data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the error data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of the blocksize.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function notes: Both coefficients and state variables are represented in 1.15 format and multiplications yield a 2.30 result. The 2.30 results are accumulated in a 64-bit accumulator in 34.30 format and the results is truncated to 34.15 format by discarding low 15 bits. Lastly, the outputs is saturated to yield a result in 1.15 format. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3598" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3598" bodyend="3603"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga8afab7bf3bfed7c69dc198209a8ad678" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_nlms_f32</definition>
+        <argsstring>(riscv_dsp_nlms_f32_t *instance, float32_t *src, float32_t *ref, float32_t *dst, float32_t *err, uint32_t size)</argsstring>
+        <name>hpm_dsp_nlms_f32</name>
+        <param>
+          <type>riscv_dsp_nlms_f32_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>ref</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>err</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Structure for the f32 normalized LMS filter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3609" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3609" bodyend="3614"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gaf5f1a55f89ebbcc1d79a19bfdf2b0ebf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_nlms_q31</definition>
+        <argsstring>(riscv_dsp_nlms_q31_t *instance, q31_t *src, q31_t *ref, q31_t *dst, q31_t *err, uint32_t size)</argsstring>
+        <name>hpm_dsp_nlms_q31</name>
+        <param>
+          <type>riscv_dsp_nlms_q31_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>ref</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>err</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Structure for the q31 normalized LMS filter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3621" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3621" bodyend="3626"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga1a696fc5a1995fa1bbc20845c64ebb36" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_nlms_q15</definition>
+        <argsstring>(riscv_dsp_nlms_q15_t *instance, q15_t *src, q15_t *ref, q15_t *dst, q15_t *err, uint32_t size)</argsstring>
+        <name>hpm_dsp_nlms_q15</name>
+        <param>
+          <type>riscv_dsp_nlms_q15_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>ref</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>err</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3629" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3629" bodyend="3634"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga27e6a8cf544e653c582aa8588cc34f64" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_conv_f32</definition>
+        <argsstring>(float32_t *src1, uint32_t len1, float32_t *src2, uint32_t len2, float32_t *dst)</argsstring>
+        <name>hpm_dsp_conv_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len1</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>src2</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len2</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Convolution of the floating-point vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*src1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output vector where the length is len1 + len2 - 1. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3647" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3647" bodyend="3656"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga8dab87c45b4a2e9fc8da0b2e64192dd2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_conv_q15</definition>
+        <argsstring>(q15_t *src1, uint32_t len1, q15_t *src2, uint32_t len2, q15_t *dst)</argsstring>
+        <name>hpm_dsp_conv_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len1</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src2</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len2</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Convolution of the q15 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*src1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output vector where the length is len1 + len2 - 1.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function notes: Both inputs are in 1.15 format and multiplications yield a 2.30 result. The 2.30 intermediate results are accumulated in a 64-bit accumulator in 34.30 format. The 34.30 result is then truncated to 34.15 format by discarding the low 15 bits and then saturated to 1.15 format. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3673" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3673" bodyend="3682"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga4fded11c34091870942bf1cdacfa143f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_conv_q31</definition>
+        <argsstring>(q31_t *src1, uint32_t len1, q31_t *src2, uint32_t len2, q31_t *dst)</argsstring>
+        <name>hpm_dsp_conv_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len1</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src2</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len2</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Convolution of the q31 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*src1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output vector where the length is len1 + len2 - 1.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function notes: Both inputs are in 1.31 format and the 64-bit accumulator has a 2.62 format and maintains full precision of the intermediate multiplication results but provides only a single guard bit. The input signals should be scaled down to avoid intermediate overflows. Scale down the inputs by log2(min(srcALen, srcBLen)), The 2.62 accumulator is right shifted by 31 bits and saturated to 1.31 forma t to yield the final result. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3701" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3701" bodyend="3710"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gacc74ec51c4ca00fec913db7123f2ab9a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_conv_q7</definition>
+        <argsstring>(q7_t *src1, uint32_t len1, q7_t *src2, uint32_t len2, q7_t *dst)</argsstring>
+        <name>hpm_dsp_conv_q7</name>
+        <param>
+          <type>q7_t *</type>
+          <declname>src1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len1</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>src2</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len2</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Convolution of the q7 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*src1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output vector where the length is len1 + len2 - 1.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function notes: Both inputs are in 1.7 format and multiplications yield a 2.14 result. The 2.14 intermediate results are accumulated in a 32-bit accumulator in 18.14 format. The 18.14 result is then truncated to 18.7 format by discarding the low 7 bits and then saturated to 1.7 format. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3727" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3727" bodyend="3736"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gab37867245ca9645f9114a47e8b656e0f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_conv_partial_f32</definition>
+        <argsstring>(float32_t *src1, uint32_t len1, float32_t *src2, uint32_t len2, float32_t *dst, uint32_t startindex, uint32_t size)</argsstring>
+        <name>hpm_dsp_conv_partial_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len1</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>src2</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len2</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>startindex</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Convolution Partial of the floating-point vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*src1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output vector where the length is len1 + len2 - 1. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">startindex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the first output sample to start with. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of output points to be computed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0; success -1; fail, the input subset are not between 0 and len1+len2-2. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3752" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3752" bodyend="3762"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga71441a91e0614a6ff7698fea8105077a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_conv_partial_q15</definition>
+        <argsstring>(q15_t *src1, uint32_t len1, q15_t *src2, uint32_t len2, q15_t *dst, uint32_t startindex, uint32_t size)</argsstring>
+        <name>hpm_dsp_conv_partial_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len1</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src2</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len2</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>startindex</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Convolution Partial of the q15 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*src1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output vector where the length is len1 + len2 - 1. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">startindex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the first output sample to start with. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of output points to be computed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0; success -1; fail, the input subset are not between 0 and len1+len2-2. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3778" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3778" bodyend="3788"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gab27a4b274c01206e3f70b75f8c86ec75" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_conv_partial_q31</definition>
+        <argsstring>(q31_t *src1, uint32_t len1, q31_t *src2, uint32_t len2, q31_t *dst, uint32_t startindex, uint32_t size)</argsstring>
+        <name>hpm_dsp_conv_partial_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len1</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src2</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len2</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>startindex</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Convolution Partial of the q31 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*src1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output vector where the length is len1 + len2 - 1. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">startindex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the first output sample to start with. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of output points to be computed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0; success -1; fail, the input subset are not between 0 and len1+len2-2. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3804" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3804" bodyend="3814"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gad5733aa4a0ad65f41de2c0cbcc7ae39f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_conv_partial_q7</definition>
+        <argsstring>(q7_t *src1, uint32_t len1, q7_t *src2, uint32_t len2, q7_t *dst, uint32_t startindex, uint32_t size)</argsstring>
+        <name>hpm_dsp_conv_partial_q7</name>
+        <param>
+          <type>q7_t *</type>
+          <declname>src1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len1</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>src2</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len2</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>startindex</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Convolution Partial of the q7 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*src1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output vector where the length is len1 + len2 - 1. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">startindex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the first output sample to start with. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the number of output points to be computed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0; success -1; fail, the input subset are not between 0 and len1+len2-2. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3830" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3830" bodyend="3840"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga65a88836464f37af1f450e9700015e9e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_corr_f32</definition>
+        <argsstring>(float32_t *src1, uint32_t len1, float32_t *src2, uint32_t len2, float32_t *dst)</argsstring>
+        <name>hpm_dsp_corr_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len1</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>src2</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len2</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Correlation of the floating-point vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*src1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output vector where the length is 2 * max(len1, len2) - 1. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3853" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3853" bodyend="3862"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gad1f7dcf423229ee704843c3662a2a282" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_corr_q15</definition>
+        <argsstring>(q15_t *src1, uint32_t len1, q15_t *src2, uint32_t len2, q15_t *dst)</argsstring>
+        <name>hpm_dsp_corr_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len1</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src2</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len2</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Correlation of the q15 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*src1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output vector where the length is 2 * max(len1, len2) - 1.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function notes: Both inputs are in 1.15 format and multiplications yield a 2.30 result. The 2.30 intermediate results are accumulated in a 64-bit accumulator in 34.30 format. The 34.30 result is then truncated to 34.15 format by discarding the low 15 bits and then saturated to 1.15 format. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3879" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3879" bodyend="3888"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga01227b2a5c3c1a9729d43d76cbd08a82" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_corr_q31</definition>
+        <argsstring>(q31_t *src1, uint32_t len1, q31_t *src2, uint32_t len2, q31_t *dst)</argsstring>
+        <name>hpm_dsp_corr_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len1</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src2</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len2</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Convolution of the q31 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*src1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output vector where the length is len1 + len2 - 1.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function notes: Both inputs are in 1.31 format and the 64-bit accumulator has a 2.62 format and maintains full precision of the intermediate multiplication results but provides only a single guard bit. The input signals should be scaled down to avoid intermediate overflows. Scale down one of the inputs by <computeroutput>1/min(srcALen, srcBLen)</computeroutput> to avoid overflows since a maximum of <computeroutput>min(srcALen, srcBLen)</computeroutput> number of additions is carried internally. The 2.62 accumulator is right shifted by 31 bits and saturated to 1.31 forma t to yield the final result. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3909" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3909" bodyend="3918"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga158701e4c93246b5c5386fd7a5acb09c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_corr_q7</definition>
+        <argsstring>(q7_t *src1, uint32_t len1, q7_t *src2, uint32_t len2, q7_t *dst)</argsstring>
+        <name>hpm_dsp_corr_q7</name>
+        <param>
+          <type>q7_t *</type>
+          <declname>src1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len1</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>src2</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len2</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Correlation of the q7 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">*src1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the first input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">*src2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the second input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the output vector where the length is 2 * max(len1, len2) - 1.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function notes: Both inputs are in 1.7 format and multiplications yield a 2.14 result. The 2.14 intermediate results are accumulated in a 32-bit accumulator in 18.14 format. The 18.14 result is then truncated to 18.7 format by discarding the low 7 bits and then saturated to 1.7 format. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3935" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3935" bodyend="3944"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga1f8993a488451f5360a77eafdf7c0c6b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_bq_df1_f32</definition>
+        <argsstring>(const riscv_dsp_bq_df1_f32_t *instance, float32_t *src, float32_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_bq_df1_f32</name>
+        <param>
+          <type>const riscv_dsp_bq_df1_f32_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3945" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3945" bodyend="3950"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gaccc9a7154e1ba085eb4fbc6641a488b1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_bq_df1_q15</definition>
+        <argsstring>(const riscv_dsp_bq_df1_q15_t *instance, q15_t *src, q15_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_bq_df1_q15</name>
+        <param>
+          <type>const riscv_dsp_bq_df1_q15_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3951" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3951" bodyend="3956"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga41d6c66ee80146c1d127e12258f4eca2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_bq_df1_fast_q15</definition>
+        <argsstring>(const riscv_dsp_bq_df1_q15_t *instance, q15_t *src, q15_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_bq_df1_fast_q15</name>
+        <param>
+          <type>const riscv_dsp_bq_df1_q15_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3957" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3957" bodyend="3962"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gad9fa617a5e2b37b24ec11af415378d50" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_bq_df1_q31</definition>
+        <argsstring>(const riscv_dsp_bq_df1_q31_t *instance, q31_t *src, q31_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_bq_df1_q31</name>
+        <param>
+          <type>const riscv_dsp_bq_df1_q31_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3963" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3963" bodyend="3968"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gacc95120b95f3f066dca0367dc648d174" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_bq_df1_fast_q31</definition>
+        <argsstring>(const riscv_dsp_bq_df1_q31_t *instance, q31_t *src, q31_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_bq_df1_fast_q31</name>
+        <param>
+          <type>const riscv_dsp_bq_df1_q31_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3969" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3969" bodyend="3974"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga05f9ac5550291bd6ac2cf46dbeb38325" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_bq_df1_32x64_q31</definition>
+        <argsstring>(const riscv_dsp_bq_df1_32x64_q31_t *instance, q31_t *src, q31_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_bq_df1_32x64_q31</name>
+        <param>
+          <type>const riscv_dsp_bq_df1_32x64_q31_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3975" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3975" bodyend="3980"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga53cf5366d6fb61264485bafa050bb5b0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_bq_df2T_f32</definition>
+        <argsstring>(const riscv_dsp_bq_df2T_f32_t *instance, float32_t *src, float32_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_bq_df2T_f32</name>
+        <param>
+          <type>const riscv_dsp_bq_df2T_f32_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3981" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3981" bodyend="3986"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga3a83d5794ebc3bfe9a45870101adf2d4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_bq_df2T_f64</definition>
+        <argsstring>(const riscv_dsp_bq_df2T_f64_t *instance, float64_t *src, float64_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_bq_df2T_f64</name>
+        <param>
+          <type>const riscv_dsp_bq_df2T_f64_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>float64_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float64_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3987" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3987" bodyend="3992"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gaeb6bcbf2fd3f2173d2f8268f045a5837" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_bq_stereo_df2T_f32</definition>
+        <argsstring>(const riscv_dsp_bq_stereo_df2T_f32_t *instance, float32_t *src, float32_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_bq_stereo_df2T_f32</name>
+        <param>
+          <type>const riscv_dsp_bq_stereo_df2T_f32_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="3993" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="3993" bodyend="3998"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gac7d4aa7ae687f7be1439de813601246a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_liir_f32</definition>
+        <argsstring>(const riscv_dsp_liir_f32_t *instance, float32_t *src, float32_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_liir_f32</name>
+        <param>
+          <type>const riscv_dsp_liir_f32_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float32_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="4000" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="4000" bodyend="4005"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gab2c9912a4eb3cf9f83365aec9a83a4f4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_liir_q31</definition>
+        <argsstring>(const riscv_dsp_liir_q31_t *instance, q31_t *src, q31_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_liir_q31</name>
+        <param>
+          <type>const riscv_dsp_liir_q31_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="4006" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="4006" bodyend="4011"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga49d94f3232a999428c84fea54b517bec" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_liir_fast_q31</definition>
+        <argsstring>(const riscv_dsp_liir_q31_t *instance, q31_t *src, q31_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_liir_fast_q31</name>
+        <param>
+          <type>const riscv_dsp_liir_q31_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q31_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="4012" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="4012" bodyend="4017"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1ga1ac87e633f1ffaf64c564bc42418774c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_liir_q15</definition>
+        <argsstring>(const riscv_dsp_liir_q15_t *instance, q15_t *src, q15_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_liir_q15</name>
+        <param>
+          <type>const riscv_dsp_liir_q15_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="4018" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="4018" bodyend="4023"/>
+      </memberdef>
+      <memberdef kind="function" id="group__filtering_1gad570347c20680570d1b3638ce58589e8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_liir_fast_q15</definition>
+        <argsstring>(const riscv_dsp_liir_q15_t *instance, q15_t *src, q15_t *dst, uint32_t size)</argsstring>
+        <name>hpm_dsp_liir_fast_q15</name>
+        <param>
+          <type>const riscv_dsp_liir_q15_t *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="4024" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="4024" bodyend="4029"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

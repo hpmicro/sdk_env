@@ -1,6 +1,9 @@
 # Change Log 
 
-## [1.5.0] - 2023-03-29:
+## [1.6.0] - 2024-06-30:
+- update SDK to v1.6.0
+
+## [1.5.0] - 2024-03-29:
 - update SDK to v1.5.0
 - update toolchain to gcc 13.2
 - start_gui:

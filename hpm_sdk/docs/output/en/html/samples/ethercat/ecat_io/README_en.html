@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>37.1. ECAT_IO &mdash; HPMicro Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Drivers Examples" href="../../drivers/index_en.html" />
+    <link rel="prev" title="37. EtherCAT" href="../index_en.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../boards/index_en.html">Evaluation Boards</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index_en.html">Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../audio_codec/index_en.html">1. Audio Codec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryrb/README_en.html">2. CherryRB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryusb/index_en.html">3. CherryUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coremark/README_en.html">4. CoreMark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dhrystone/README_en.html">5. Dhrystone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dma_manager/README_en.html">6. DMA Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dsp/README_en.html">7. DSP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../eeprom_emulation/index_en.html">8. EEPROM Emulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freemaster/README_en.html">9. Freemaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hello_world/README_en.html">10. Hello World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hpm_math/index_en.html">11. HPM Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image/index_en.html">12. IMAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lvgl/index_en.html">13. LVGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lwip/index_en.html">14. lwIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mbedtls/README_en.html">15. Mbedtls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../memstress/index_en.html">16. Memory Stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../microros/index_en.html">17. Microros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modbus/index_en.html">18. Modbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motor_ctrl/index_en.html">19. HPM Motor Ctrl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multicore/index_en.html">20. Multicore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../power_mode_switch/README_en.html">21. Power Mode Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rgb_led/README_en.html">22. RGB LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rom_api/index_en.html">23. ROM API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rtos/index_en.html">24. RTOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../segger_rtt/README_en.html">25. Segger RTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tflm/index_en.html">26. TensorFlowLiteMicro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinycrypt/index_en.html">27. Tinycrypt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyengine/person_obj/README_en.html">28. Person Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyuf2/README_en.html">29. TinyUF2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyusb/index_en.html">30. TinyUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../touch_panel/README_en.html">31. Touch Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vglite/index_en.html">32. VGLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_components/index_en.html">33. SPI_COMPONENTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2s_emulation/README_en.html">34. I2S EMULATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_sdcard/index_en.html">35. SPI_SDCARD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherrysh/index_en.html">36. CherrySH</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_en.html">37. EtherCAT</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">37.1. ECAT_IO</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">37.1.1. 1. Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prepare">37.1.2. 2. Prepare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project-setting">37.1.3. 3. Project Setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-ethercat-slave-stack-code">37.1.4. 4. Generate EtherCAT slave stack code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#twincat-project-setting">37.1.5. 5. TwinCAT Project setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-example">37.1.6. 6. Running the example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../drivers/index_en.html">Drivers Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_doc.html">SDK API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HPMicro Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index_en.html">Samples</a></li>
+          <li class="breadcrumb-item"><a href="../index_en.html"><span class="section-number">37. </span>EtherCAT</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">37.1. </span>ECAT_IO</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/samples/ethercat/ecat_io/README_en.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="ecat-io">
+<h1><span class="section-number">37.1. </span>ECAT_IO<a class="headerlink" href="#ecat-io" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<h2><span class="section-number">37.1.1. </span>1. Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>The ECAT_IO example demonstrates the steps to implement an ECAT digital IO slave station with the slave stack code (SSC).</p>
+<ul class="simple">
+<li><p>Input IO(2bit): SW6</p></li>
+<li><p>Output IO(2bit): LED8/LED3</p></li>
+<li><p>RUN LED: LED7</p></li>
+<li><p>ERR LED: LED6</p></li>
+</ul>
+</section>
+<section id="prepare">
+<h2><span class="section-number">37.1.2. </span>2. Prepare<a class="headerlink" href="#prepare" title="Permalink to this heading"></a></h2>
+<section id="hardware">
+<h3><span class="section-number">37.1.2.1. </span>2.1 Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>HPM6E00EVK(RevA)</p></li>
+<li><p>PC with Ethernet port</p>
+<ul>
+<li><p>TWinCAT3 software has compatibility issues with PC network cards. <a class="reference external" href="https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_overview/9309844363.html&amp;id=1489698440745036069">some supported Intel network cards</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="software">
+<h3><span class="section-number">37.1.2.2. </span>2.2 Software<a class="headerlink" href="#software" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>TwinCAT3.1(Build 4024.56)</p></li>
+<li><p>SSC Tool(SSC Version: 5.13; Config File Vers: 1.5.3.0)
+<img alt="" src="../../../_images/ssc_version.png" /></p></li>
+</ul>
+</section>
+</section>
+<section id="project-setting">
+<h2><span class="section-number">37.1.3. </span>3. Project Setting<a class="headerlink" href="#project-setting" title="Permalink to this heading"></a></h2>
+<section id="eeprom-emulation-setting">
+<h3><span class="section-number">37.1.3.1. </span>3.1 EEPROM Emulation Setting<a class="headerlink" href="#eeprom-emulation-setting" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>The default setting is to use Flash to simulate EEPROM</p></li>
+</ul>
+</section>
+<section id="using-actual-eeprom">
+<h3><span class="section-number">37.1.3.2. </span>3.2 Using actual EEPROM<a class="headerlink" href="#using-actual-eeprom" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>set the “ESC_EEPROM_EMULATION” and “CREATE_EEPROM_CONTENT” under the “Hardware” attribute to 0 in SSC Tool, then generate the slave protocol stack code.</p></li>
+<li><p>Modify <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> context to “set(CONFIG_EEPROM_EMULATION 0)”.</p></li>
+</ul>
+</section>
+</section>
+<section id="generate-ethercat-slave-stack-code">
+<h2><span class="section-number">37.1.4. </span>4. Generate EtherCAT slave stack code<a class="headerlink" href="#generate-ethercat-slave-stack-code" title="Permalink to this heading"></a></h2>
+<p>Due to licensing issues, HPMSDK does not provide EtherCAT slave protocol stack code (SSC). Users have download the SSC Tool from Beckoff’s official website and generate the slave stack code according to the steps.</p>
+<section id="download-ssc-tool">
+<h3><span class="section-number">37.1.4.1. </span>4.1. Download SSC Tool<a class="headerlink" href="#download-ssc-tool" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Enter<a class="reference external" href="https://www.ethercat.org/en/downloads.html">ETG Download website</a>, input “SSC” to fliter resource.
+<img alt="" src="../../../_images/SSC_download_1.png" />
+<img alt="" src="../../../_images/SSC_download_2.png" /></p>
+<p><u><strong>To download, you need to provide an ETG member account and a valid vendor ID</strong></u></p>
+</li>
+<li><p>Download and install SSC Tool</p></li>
+</ol>
+</section>
+<section id="ssc-tool-import-configuration-files">
+<h3><span class="section-number">37.1.4.2. </span>4.2 SSC Tool import configuration files<a class="headerlink" href="#ssc-tool-import-configuration-files" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Open SSC Tool, click <strong>Tool-&gt;Options</strong>
+<img alt="" src="../../../_images/SSC_Tool_Options.png" /></p></li>
+<li><p>click Configurations, import configuration file(&lt;hpm_sdk&gt;/samples/ethercat/ecat_io/SSC/Config/HPM_ECAT_IO_Config.xml)
+<img alt="" src="../../../_images/SSC_Import_Configuration.png" /></p></li>
+</ol>
+</section>
+<section id="ssc-tool-create-new-project">
+<h3><span class="section-number">37.1.4.3. </span>4.3 SSC Tool create new project<a class="headerlink" href="#ssc-tool-create-new-project" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>click <strong>File-&gt;New</strong>
+<img alt="" src="../../../_images/SSC_File_New.png" /></p></li>
+<li><p>Click <strong>Custom</strong> option, and select <strong>HPMicro ECAT Digital IO <HPMicro></strong> from the drop-down list
+<img alt="" src="../../../_images/SSC_New_Project_Custom.png" /></p></li>
+<li><p>Save project, specify the file path
+<img alt="" src="../../../_images/SSC_Project_Save.png" /></p></li>
+<li><p>import application
+- Click <strong>Tool-&gt;Application-&gt;Import</strong>, Import &lt;hpm_sdk&gt;/samples/ethercat/ecat_io/SSC/digital_io.xlsx
+<img alt="" src="../../../_images/SSC_Application_Import_1.png" />
+<img alt="" src="../../../_images/SSC_Application_Import_2.png" />
+- Click <strong>OK</strong>
+<img alt="" src="../../../_images/SSC_Application_Import_3.png" /></p></li>
+</ol>
+</section>
+<section id="create-slave-stack-files">
+<h3><span class="section-number">37.1.4.4. </span>4.4 Create slave stack files<a class="headerlink" href="#create-slave-stack-files" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Click <strong>Project-&gt;Create new Slave Files</strong>
+<img alt="" src="../../../_images/SSC_Create_Slave_1.png" /></p></li>
+<li><p>Specify the output path, the output source folder have to set to &lt;ecat_io sample path&gt;/SSC/Src, if other path, have to copy generated SRC folder to &lt;ecat_io sample path&gt;/SSC/Src
+<img alt="" src="../../../_images/SSC_Create_Slave_2.png" /></p></li>
+</ol>
+</section>
+</section>
+<section id="twincat-project-setting">
+<h2><span class="section-number">37.1.5. </span>5. TwinCAT Project setting<a class="headerlink" href="#twincat-project-setting" title="Permalink to this heading"></a></h2>
+<section id="add-esi-file">
+<h3><span class="section-number">37.1.5.1. </span>5.1. Add ESI file<a class="headerlink" href="#add-esi-file" title="Permalink to this heading"></a></h3>
+<p>Copy the generated (<strong>ECAT-IO.xml</strong>) by SSC tool in previous steps to TwinCAT(<strong>C:\TwinCAT\3.1\Config\Io\EtherCAT</strong>).</p>
+</section>
+<section id="create-project">
+<h3><span class="section-number">37.1.5.2. </span>5.2 Create Project<a class="headerlink" href="#create-project" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Open TwinCAT，click <strong>File-&gt;New-&gt;Project</strong>
+<img alt="" src="../../../_images/Twincat_new_project_1.png" /></p></li>
+<li><p>Click <strong>TwinCAT Project</strong>, after naming, click <strong>OK</strong>
+<img alt="" src="../../../_images/Twincat_new_project_2.png" /></p></li>
+</ol>
+</section>
+<section id="software-configuration">
+<h3><span class="section-number">37.1.5.3. </span>5.3 Software Configuration<a class="headerlink" href="#software-configuration" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Update network card driver (required for first use)
+<img alt="" src="../../../_images/Twincat_ethernet_driver.png" />
+<img alt="" src="../../../_images/Twincat_ethernet_driver_2.png" /></p></li>
+<li><p>clock setting
+The TwinCAT may report the following error during runtime, win8settick.bat needs to run with administrator privileges(C：\TwinCAT\3.1\System\win8settick.bat)</p>
+<hr class="docutils" />
+<p><em>Init4\RTime：Start Interrupt：Ticker started &gt;&gt; AdsWarning4115 （0x1013,RTIME：system clock setup failed）</em></p>
+<hr class="docutils" />
+<p><img alt="" src="../../../_images/Twincat_set_tick.png" /></p>
+</li>
+</ol>
+</section>
+<section id="scan-device">
+<h3><span class="section-number">37.1.5.4. </span>5.4 Scan device<a class="headerlink" href="#scan-device" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Right click Device, then click Scan
+<img alt="" src="../../../_images/Twincat_scan.png" /></p></li>
+<li><p>Choose correct network
+<img alt="" src="../../../_images/Twincat_scan_2.png" /></p></li>
+</ol>
+</section>
+<section id="update-eeprom-context">
+<h3><span class="section-number">37.1.5.5. </span>5.5 Update EEPROM context<a class="headerlink" href="#update-eeprom-context" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Double click on the scanned device, click <strong>Online</strong>, right click<strong>Box</strong>, then click <strong>EEPROM Update</strong>。</p>
+<p><em><strong>For cases where the EEPROM content is empty, it is not possible to find a matching Box when scanning the device. In this case, it is necessary to update the EEPROM content。</strong></em></p>
+<p><em><strong>In the case where EEPROM content is empty, When ESC is powered on to load EEPROM data, a checksum error will occur, which will cause PDI to not work. At this time, EtherCAT communication is possible and EEPROM content can be updated through the main station.</strong></em></p>
+<p><img alt="" src="../../../_images/Twincat_eeprom_update.png" /></p>
+</li>
+<li><p>chosse correct files, click <strong>OK</strong>, wait for completion
+<img alt="" src="../../../_images/Twincat_eeprom_update_3.png" /></p></li>
+<li><p>Reset the board, delete the scanned devices and rescanning
+<img alt="" src="../../../_images/Twincat_device_remove.png" />
+<img alt="" src="../../../_images/Twincat_scan_device_2.png" /></p></li>
+</ol>
+</section>
+<section id="io-control">
+<h3><span class="section-number">37.1.5.6. </span>5.6 IO Control<a class="headerlink" href="#io-control" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Input IO, change DIP switch, “InputCounter” value change in TwinCAT
+<img alt="" src="../../../_images/Twincat_input.png" /></p></li>
+<li><p>Output IO, write “OutputCounter” value in Twincat, Output LED change
+<img alt="" src="../../../_images/Twincat_output.png" /></p></li>
+<li><p>Check RUN LED and ERR_LED status</p></li>
+</ol>
+</section>
+<section id="dc-setting">
+<h3><span class="section-number">37.1.5.7. </span>5.7 DC setting<a class="headerlink" href="#dc-setting" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>double clcik “Box”, click “DC”, click “Advanced Settings”
+<img alt="" src="../../../_images/Twincat_DC_1.png" /></p></li>
+<li><p>Set mode  to “DC-Synchron”, set Shift Time(Usually 20% to 30% of Sync Unit Cycle time)
+<img alt="" src="../../../_images/Twincat_DC_2.png" /></p></li>
+<li><p>double click “Device”, click “EtherCAT”, click “Advanced Settings”
+<img alt="" src="../../../_images/Twincat_DC_3.png" /></p></li>
+<li><p>click “Distributed Clock”, choose “DC in use”, click “OK”
+<img alt="" src="../../../_images/Twincat_DC_4.png" /></p></li>
+<li><p>Restart TwinCAT
+<img alt="" src="../../../_images/Twincat_DC_5.png" /></p></li>
+</ol>
+</section>
+</section>
+<section id="running-the-example">
+<h2><span class="section-number">37.1.6. </span>6. Running the example<a class="headerlink" href="#running-the-example" title="Permalink to this heading"></a></h2>
+<p>After the project is running correctly, the serial terminal will output the following information, and the input-output IO status corresponds to the TwinCAT project configuration:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">EtherCAT IO sample</span>
+<span class="go">EEPROM loading with checksum error.</span>
+<span class="go">EtherCAT communication is possible even if the EEPROM is blank(checksum error),</span>
+<span class="go">but PDI not operational, please update eeprom  context.</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">EtherCAT IO sample</span>
+<span class="go">EEPROM loading successful, no checksum error.</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, HPMicro.
+      <span class="lastupdated">Last updated on Jun 28, 2024.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

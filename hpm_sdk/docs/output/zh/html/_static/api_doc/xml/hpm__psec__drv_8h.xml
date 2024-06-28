@@ -1,0 +1,1057 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hpm__psec__drv_8h" kind="file" language="C++">
+    <compoundname>hpm_psec_drv.h</compoundname>
+    <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
+    <includes local="yes">hpm_psec_regs.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="1">
+        <label>drivers/inc/hpm_psec_drv.h</label>
+        <link refid="hpm__psec__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>hpm_psec_regs.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hpm__psec__drv_8h_1a4617dcbfc3dc9a940aff70130a205f44" prot="public" static="no">
+        <name>PSEC_PSECURE_STATE_MASK</name>
+        <initializer>    (0xFU &lt;&lt; <ref refid="HPM6E00_2ip_2hpm__psec__regs_8h_1a2323399bac3296f76320f4c474211e6f" kindref="member">PSEC_SECURE_STATE_PMIC_INS_SHIFT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="42" column="9" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__psec__drv_8h_1adacbbeae8385e77886f504246ecb4ca8" prot="public" static="no">
+        <name>PSEC_BATT_SECURE_STATE_MASK</name>
+        <initializer>    (0xFU &lt;&lt; PSEC_SECURE_STATE_BATT_INS_SHIFT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="44" column="9" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367" prot="public" static="no" strong="no">
+        <type></type>
+        <name>psec_lifecycle</name>
+        <enumvalue id="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367ab8f404599fec94b138fd460a5cbf36b9" prot="public">
+          <name>psec_lifecycle_unknown</name>
+          <initializer>= 1 &lt;&lt; 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367af7805d7f1d70ba9971c4796b52f5279e" prot="public">
+          <name>psec_lifecycle_create</name>
+          <initializer>= 1 &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367a9f6b982baad5e04cf4883ffeaea897d8" prot="public">
+          <name>psec_lifecycle_nonsecucre</name>
+          <initializer>= 1 &lt;&lt; 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367a1f811bb105be20216c553837ec808598" prot="public">
+          <name>psec_lifecycle_secucre</name>
+          <initializer>= 1 &lt;&lt; 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367adf50e03814101692159a838169137f5d" prot="public">
+          <name>psec_lifecycle_return</name>
+          <initializer>= 1 &lt;&lt; 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367a5a7de503841aa9b396cd9b1e7198e250" prot="public">
+          <name>psec_lifecycle_no_return</name>
+          <initializer>= 1 &lt;&lt; 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367a5290ffaca2ede771e1b2d96136e922f9" prot="public">
+          <name>psec_lifecycle_scribe</name>
+          <initializer>= 1 &lt;&lt; 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367ae3544616f5215a453ea84c1938bd656e" prot="public">
+          <name>psec_lifecycle_debate</name>
+          <initializer>= 1 &lt;&lt; 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="13" column="1" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="13" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="enum" id="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>batt_sec_state</name>
+        <enumvalue id="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8a4a9a324d2a452fdba51be5aafddec8b9" prot="public">
+          <name>batt_sec_state_ins</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8acc127fe197a6c69d19fbdb140e65baa7" prot="public">
+          <name>batt_sec_state_secure</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8a1f8fb4a031d47b93347def7656e43785" prot="public">
+          <name>batt_sec_state_non_secure</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8a7a1bb675250c101b3c01e003181ea601" prot="public">
+          <name>batt_sec_state_fail</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="24" column="1" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="24" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="enum" id="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>psec_state</name>
+        <enumvalue id="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8a6ff729c62505ca81b2eb3abb48723d80" prot="public">
+          <name>psec_state_ins</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8a988a974283ddf6dbec383758926b78e5" prot="public">
+          <name>psec_state_secure</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8a5ca33dccb2472e359d99b19a22a9f4b4" prot="public">
+          <name>psec_state_non_secure</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8a75569d506b6335b3f76024637c6f9187" prot="public">
+          <name>psec_state_fail</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="31" column="1" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="31" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="enum" id="hpm__psec__drv_8h_1ac8dc960ed0e83a06356ee2589564f7a9" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@176</name>
+        <enumvalue id="hpm__psec__drv_8h_1ac8dc960ed0e83a06356ee2589564f7a9aa7a183190e845d69d8889e2e35d0a3ef" prot="public">
+          <name>status_psec_switch_state_not_allowed</name>
+          <initializer>= ((uint32_t)( status_group_psec )*1000U + (uint32_t)( 1 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="38" column="1" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="38" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="hpm__psec__drv_8h_1aba62c68ef2d516e6b6fff72230597725" prot="public" static="no">
+        <type>enum <ref refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367" kindref="member">psec_lifecycle</ref></type>
+        <definition>typedef enum psec_lifecycle psec_lifecycle_t</definition>
+        <argsstring></argsstring>
+        <name>psec_lifecycle_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="22" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpm__psec__drv_8h_1aea36353b03c5f07435e64729187d7996" prot="public" static="no">
+        <type>enum <ref refid="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8" kindref="member">batt_sec_state</ref></type>
+        <definition>typedef enum batt_sec_state batt_sec_state_t</definition>
+        <argsstring></argsstring>
+        <name>batt_sec_state_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="29" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpm__psec__drv_8h_1a74b7ad5995f0ad092f0469b38afe4a3a" prot="public" static="no">
+        <type>enum <ref refid="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8" kindref="member">psec_state</ref></type>
+        <definition>typedef enum psec_state psec_state_t</definition>
+        <argsstring></argsstring>
+        <name>psec_state_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="36" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hpm__psec__drv_8h_1af6f21784f46441efaf09e91edef6aa54" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="hpm__psec__drv_8h_1aba62c68ef2d516e6b6fff72230597725" kindref="member">psec_lifecycle_t</ref></type>
+        <definition>static psec_lifecycle_t psec_get_pmic_lifecycle</definition>
+        <argsstring>(PSEC_Type *ptr)</argsstring>
+        <name>psec_get_pmic_lifecycle</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="51" column="32" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1ac22530d5deb2712319d70979f7e8e2e6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>static hpm_stat_t psec_switch_pmic_state</definition>
+        <argsstring>(PSEC_Type *ptr, psec_state_t state)</argsstring>
+        <name>psec_switch_pmic_state</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__psec__drv_8h_1a74b7ad5995f0ad092f0469b38afe4a3a" kindref="member">psec_state_t</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="56" column="26" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="56" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1ad9119155c865e2c93a8a7520e7790ee6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_allow_psecure_state_restart</definition>
+        <argsstring>(PSEC_Type *ptr, bool allow)</argsstring>
+        <name>psec_allow_psecure_state_restart</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="72" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="72" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1a09d82ef545ce4180c4815760358248eb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_lock_psecure_state_restart</definition>
+        <argsstring>(PSEC_Type *ptr, bool lock)</argsstring>
+        <name>psec_lock_psecure_state_restart</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="79" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="79" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1a708f5f9310a56e0d3d7ebf8ecd0f5e22" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_pmic_rom_secrets_present</definition>
+        <argsstring>(PSEC_Type *ptr, bool presented)</argsstring>
+        <name>psec_pmic_rom_secrets_present</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>presented</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="86" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="86" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1aab05c8addafc0075a30533f85594cab4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_psec_secure_state_config</definition>
+        <argsstring>(PSEC_Type *ptr, bool rom_secrets_presented, bool allow_secure_state_restart, bool lock_secure_state_restart)</argsstring>
+        <name>psec_psec_secure_state_config</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>rom_secrets_presented</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow_secure_state_restart</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>lock_secure_state_restart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="93" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="93" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1a43ee6a10a9eadc5aaf35af17bf439bee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_pmic_non_secure_violation_config</definition>
+        <argsstring>(PSEC_Type *ptr, uint32_t violation_setting, bool lock)</argsstring>
+        <name>psec_pmic_non_secure_violation_config</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>violation_setting</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="103" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="103" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1aed46be4f5ab77330c1dc96129b6e458b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_psecure_violation_config</definition>
+        <argsstring>(PSEC_Type *ptr, uint32_t violation_setting, bool lock)</argsstring>
+        <name>psec_psecure_violation_config</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>violation_setting</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="114" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="114" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1acd96d09d7febee0d8093282dfd3add53" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_pmic_non_secure_escalate_config</definition>
+        <argsstring>(PSEC_Type *ptr, uint32_t violation_setting, bool lock)</argsstring>
+        <name>psec_pmic_non_secure_escalate_config</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>violation_setting</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="125" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="125" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1a0ddf03b0fdfffb735866470be41630c6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_psecure_escalate_config</definition>
+        <argsstring>(PSEC_Type *ptr, uint32_t violation_setting, bool lock)</argsstring>
+        <name>psec_psecure_escalate_config</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>violation_setting</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="136" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="136" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1abb4eb13f6046910cabd2c899af245206" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t psec_get_pmic_status</definition>
+        <argsstring>(PSEC_Type *ptr)</argsstring>
+        <name>psec_get_pmic_status</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="147" column="24" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="147" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1a0b4b944c0e91679d20ee107d7d9ba2f5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="hpm__psec__drv_8h_1aba62c68ef2d516e6b6fff72230597725" kindref="member">psec_lifecycle_t</ref></type>
+        <definition>static psec_lifecycle_t psec_get_batt_lifecycle</definition>
+        <argsstring>(PSEC_Type *ptr)</argsstring>
+        <name>psec_get_batt_lifecycle</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="152" column="32" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1a1ebaa3de4e719ae6f18d042a547d9dc7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>static hpm_stat_t psec_switch_batt_state</definition>
+        <argsstring>(PSEC_Type *ptr, batt_sec_state_t state)</argsstring>
+        <name>psec_switch_batt_state</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__psec__drv_8h_1aea36353b03c5f07435e64729187d7996" kindref="member">batt_sec_state_t</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="157" column="26" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="157" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1a647dd4db948ead74af6e65a767519ee0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_allow_batt_secure_state_restart</definition>
+        <argsstring>(PSEC_Type *ptr, bool allow)</argsstring>
+        <name>psec_allow_batt_secure_state_restart</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="173" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="173" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1aa0ac136b20f360aca2305ce679d14a96" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_lock_batt_secure_state_restart</definition>
+        <argsstring>(PSEC_Type *ptr, bool lock)</argsstring>
+        <name>psec_lock_batt_secure_state_restart</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="180" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="180" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1a4ed5ca56dd561d7f1705289ad68f447e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_batt_rom_secrets_present</definition>
+        <argsstring>(PSEC_Type *ptr, bool presented)</argsstring>
+        <name>psec_batt_rom_secrets_present</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>presented</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="187" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="187" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1afc7e26c31e7c169c0b269f9c6021c1ba" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_batt_set_secure_state_config</definition>
+        <argsstring>(PSEC_Type *ptr, bool rom_secrets_presented, bool allow_secure_state_restart, bool lock_secure_state_restart)</argsstring>
+        <name>psec_batt_set_secure_state_config</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>rom_secrets_presented</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow_secure_state_restart</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>lock_secure_state_restart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="194" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="194" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1a6a1d20241e2211bcd5a78b4804211dc8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_batt_non_secure_violation_config</definition>
+        <argsstring>(PSEC_Type *ptr, uint32_t violation_setting, bool lock)</argsstring>
+        <name>psec_batt_non_secure_violation_config</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>violation_setting</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="204" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="204" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1aa02f018c6c4b1929ff16ccad524f17c4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_batt_secure_violation_config</definition>
+        <argsstring>(PSEC_Type *ptr, uint32_t violation_setting, bool lock)</argsstring>
+        <name>psec_batt_secure_violation_config</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>violation_setting</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="215" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="215" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1a338b2815be76379789ef0c0dc02e5800" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_batt_non_secure_escalate_config</definition>
+        <argsstring>(PSEC_Type *ptr, uint32_t violation_setting, bool lock)</argsstring>
+        <name>psec_batt_non_secure_escalate_config</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>violation_setting</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="226" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="226" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1a3909b45f148450b6284b4b6ac33d6de4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psec_batt_secure_escalate_config</definition>
+        <argsstring>(PSEC_Type *ptr, uint32_t violation_setting, bool lock)</argsstring>
+        <name>psec_batt_secure_escalate_config</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>violation_setting</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="237" column="20" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="237" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__psec__drv_8h_1a7758765d9ca6d0f50f32dd55402595f2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t psec_get_batt_status</definition>
+        <argsstring>(PSEC_Type *ptr)</argsstring>
+        <name>psec_get_batt_status</name>
+        <param>
+          <type><ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_psec_drv.h" line="248" column="24" bodyfile="drivers/inc/hpm_psec_drv.h" bodystart="248" bodyend="251"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPM_PSEC_DRV_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PSEC_DRV_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__common_8h" kindref="compound">hpm_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_psec_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367" kindref="member">psec_lifecycle</ref><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367ab8f404599fec94b138fd460a5cbf36b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367ab8f404599fec94b138fd460a5cbf36b9" kindref="member">psec_lifecycle_unknown</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>0,</highlight></codeline>
+<codeline lineno="15" refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367af7805d7f1d70ba9971c4796b52f5279e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367af7805d7f1d70ba9971c4796b52f5279e" kindref="member">psec_lifecycle_create</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>1,</highlight></codeline>
+<codeline lineno="16" refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367a9f6b982baad5e04cf4883ffeaea897d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367a9f6b982baad5e04cf4883ffeaea897d8" kindref="member">psec_lifecycle_nonsecucre</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>2,</highlight></codeline>
+<codeline lineno="17" refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367a1f811bb105be20216c553837ec808598" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367a1f811bb105be20216c553837ec808598" kindref="member">psec_lifecycle_secucre</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>3,</highlight></codeline>
+<codeline lineno="18" refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367adf50e03814101692159a838169137f5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367adf50e03814101692159a838169137f5d" kindref="member">psec_lifecycle_return</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>4,</highlight></codeline>
+<codeline lineno="19" refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367a5a7de503841aa9b396cd9b1e7198e250" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367a5a7de503841aa9b396cd9b1e7198e250" kindref="member">psec_lifecycle_no_return</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>5,</highlight></codeline>
+<codeline lineno="20" refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367a5290ffaca2ede771e1b2d96136e922f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367a5290ffaca2ede771e1b2d96136e922f9" kindref="member">psec_lifecycle_scribe</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>6,</highlight></codeline>
+<codeline lineno="21" refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367ae3544616f5215a453ea84c1938bd656e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1ac868489ef2edc5f8a8a578dd3b24f367ae3544616f5215a453ea84c1938bd656e" kindref="member">psec_lifecycle_debate</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>7,</highlight></codeline>
+<codeline lineno="22" refid="hpm__psec__drv_8h_1aba62c68ef2d516e6b6fff72230597725" refkind="member"><highlight class="normal">}<sp/><ref refid="hpm__psec__drv_8h_1aba62c68ef2d516e6b6fff72230597725" kindref="member">psec_lifecycle_t</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8" kindref="member">batt_sec_state</ref><sp/>{</highlight></codeline>
+<codeline lineno="25" refid="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8a4a9a324d2a452fdba51be5aafddec8b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8a4a9a324d2a452fdba51be5aafddec8b9" kindref="member">batt_sec_state_ins</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="26" refid="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8acc127fe197a6c69d19fbdb140e65baa7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8acc127fe197a6c69d19fbdb140e65baa7" kindref="member">batt_sec_state_secure</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="27" refid="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8a1f8fb4a031d47b93347def7656e43785" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8a1f8fb4a031d47b93347def7656e43785" kindref="member">batt_sec_state_non_secure</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="28" refid="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8a7a1bb675250c101b3c01e003181ea601" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8a7a1bb675250c101b3c01e003181ea601" kindref="member">batt_sec_state_fail</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="29" refid="hpm__psec__drv_8h_1aea36353b03c5f07435e64729187d7996" refkind="member"><highlight class="normal">}<sp/><ref refid="hpm__psec__drv_8h_1aea36353b03c5f07435e64729187d7996" kindref="member">batt_sec_state_t</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8" kindref="member">psec_state</ref><sp/>{</highlight></codeline>
+<codeline lineno="32" refid="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8a6ff729c62505ca81b2eb3abb48723d80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8a6ff729c62505ca81b2eb3abb48723d80" kindref="member">psec_state_ins</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="33" refid="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8a988a974283ddf6dbec383758926b78e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8a988a974283ddf6dbec383758926b78e5" kindref="member">psec_state_secure</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="34" refid="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8a5ca33dccb2472e359d99b19a22a9f4b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8a5ca33dccb2472e359d99b19a22a9f4b4" kindref="member">psec_state_non_secure</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="35" refid="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8a75569d506b6335b3f76024637c6f9187" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8a75569d506b6335b3f76024637c6f9187" kindref="member">psec_state_fail</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="36" refid="hpm__psec__drv_8h_1a74b7ad5995f0ad092f0469b38afe4a3a" refkind="member"><highlight class="normal">}<sp/><ref refid="hpm__psec__drv_8h_1a74b7ad5995f0ad092f0469b38afe4a3a" kindref="member">psec_state_t</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39" refid="hpm__psec__drv_8h_1ac8dc960ed0e83a06356ee2589564f7a9aa7a183190e845d69d8889e2e35d0a3ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__psec__drv_8h_1ac8dc960ed0e83a06356ee2589564f7a9aa7a183190e845d69d8889e2e35d0a3ef" kindref="member">status_psec_switch_state_not_allowed</ref><sp/>=<sp/><ref refid="group__common__interface_1gad76dfbb0423d0cd3a7b77cbcd9043146" kindref="member">MAKE_STATUS</ref>(status_group_psec,<sp/>1),</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="hpm__psec__drv_8h_1a4617dcbfc3dc9a940aff70130a205f44" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PSEC_PSECURE_STATE_MASK<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(0xFU<sp/>&lt;&lt;<sp/>PSEC_SECURE_STATE_PMIC_INS_SHIFT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="hpm__psec__drv_8h_1adacbbeae8385e77886f504246ecb4ca8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PSEC_BATT_SECURE_STATE_MASK<sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(0xFU<sp/>&lt;&lt;<sp/>PSEC_SECURE_STATE_BATT_INS_SHIFT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="hpm__psec__drv_8h_1af6f21784f46441efaf09e91edef6aa54" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1aba62c68ef2d516e6b6fff72230597725" kindref="member">psec_lifecycle_t</ref><sp/><ref refid="hpm__psec__drv_8h_1af6f21784f46441efaf09e91edef6aa54" kindref="member">psec_get_pmic_lifecycle</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="hpm__psec__drv_8h_1aba62c68ef2d516e6b6fff72230597725" kindref="member">psec_lifecycle_t</ref>)<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a85c2236c2f63baa4d67601e73a262b8c" kindref="member">PSEC_LIFECYCLE_LIFECYCLE_GET</ref>(ptr-&gt;<ref refid="structPSEC__Type_1ad629d11c7d1106c66694a9427187d3c0" kindref="member">LIFECYCLE</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="hpm__psec__drv_8h_1ac22530d5deb2712319d70979f7e8e2e6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__psec__drv_8h_1ac22530d5deb2712319d70979f7e8e2e6" kindref="member">psec_switch_pmic_state</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,<sp/><ref refid="hpm__psec__drv_8h_1a74b7ad5995f0ad092f0469b38afe4a3a" kindref="member">psec_state_t</ref><sp/>state)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state<sp/>==<sp/><ref refid="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8a988a974283ddf6dbec383758926b78e5" kindref="member">psec_state_secure</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1ab744d9f21a3e7a5b31d234e60408721d" kindref="member">PSEC_SECURE_STATE_ALLOW_SEC_GET</ref>(ptr-&gt;<ref refid="structPSEC__Type_1abd1ed90a431ba09a6d92633716867d45" kindref="member">SECURE_STATE</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1ac8dc960ed0e83a06356ee2589564f7a9aa7a183190e845d69d8889e2e35d0a3ef" kindref="member">status_psec_switch_state_not_allowed</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state<sp/>==<sp/><ref refid="hpm__psec__drv_8h_1abacbcd46b5fca70cc1db438cbe8d28c8a5ca33dccb2472e359d99b19a22a9f4b4" kindref="member">psec_state_non_secure</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a29e7cbd98de7794bef8cfee3085656a2" kindref="member">PSEC_SECURE_STATE_ALLOW_NSC_GET</ref>(ptr-&gt;<ref refid="structPSEC__Type_1abd1ed90a431ba09a6d92633716867d45" kindref="member">SECURE_STATE</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1ac8dc960ed0e83a06356ee2589564f7a9aa7a183190e845d69d8889e2e35d0a3ef" kindref="member">status_psec_switch_state_not_allowed</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1abd1ed90a431ba09a6d92633716867d45" kindref="member">SECURE_STATE</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1abd1ed90a431ba09a6d92633716867d45" kindref="member">SECURE_STATE</ref><sp/>&amp;<sp/>~<ref refid="hpm__psec__drv_8h_1a4617dcbfc3dc9a940aff70130a205f44" kindref="member">PSEC_PSECURE_STATE_MASK</ref>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>(1U<sp/>&lt;&lt;<sp/>(<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a2323399bac3296f76320f4c474211e6f" kindref="member">PSEC_SECURE_STATE_PMIC_INS_SHIFT</ref><sp/>+<sp/>state));</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="hpm__psec__drv_8h_1ad9119155c865e2c93a8a7520e7790ee6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1ad9119155c865e2c93a8a7520e7790ee6" kindref="member">psec_allow_psecure_state_restart</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>allow)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a56dc70e104a5cae2124f465cb52c7d9d" kindref="member">SECURE_STATE_CONFIG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1a56dc70e104a5cae2124f465cb52c7d9d" kindref="member">SECURE_STATE_CONFIG</ref></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a7e51b3a5c850a9db57759b28450c58c7" kindref="member">PSEC_SECURE_STATE_CONFIG_ALLOW_RESTART_MASK</ref>)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1aa49f2c2764ccdc594ac15715a6f216e9" kindref="member">PSEC_SECURE_STATE_CONFIG_ALLOW_RESTART_SET</ref>(allow);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="hpm__psec__drv_8h_1a09d82ef545ce4180c4815760358248eb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1a09d82ef545ce4180c4815760358248eb" kindref="member">psec_lock_psecure_state_restart</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>lock)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a56dc70e104a5cae2124f465cb52c7d9d" kindref="member">SECURE_STATE_CONFIG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1a56dc70e104a5cae2124f465cb52c7d9d" kindref="member">SECURE_STATE_CONFIG</ref></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1ae3af064caec5ae85309ecb461f0a277e" kindref="member">PSEC_SECURE_STATE_CONFIG_LOCK_MASK</ref>)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a29af7da2637e7c94c3a9b7ffb4704616" kindref="member">PSEC_SECURE_STATE_CONFIG_LOCK_SET</ref>(lock);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="hpm__psec__drv_8h_1a708f5f9310a56e0d3d7ebf8ecd0f5e22" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1a708f5f9310a56e0d3d7ebf8ecd0f5e22" kindref="member">psec_pmic_rom_secrets_present</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>presented)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a56dc70e104a5cae2124f465cb52c7d9d" kindref="member">SECURE_STATE_CONFIG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1a56dc70e104a5cae2124f465cb52c7d9d" kindref="member">SECURE_STATE_CONFIG</ref></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~PSEC_SECURE_STATE_CONFIG_ROM_SECRETS_MASK)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>PSEC_SECURE_STATE_CONFIG_ROM_SECRETS_SET(presented);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="hpm__psec__drv_8h_1aab05c8addafc0075a30533f85594cab4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1aab05c8addafc0075a30533f85594cab4" kindref="member">psec_psec_secure_state_config</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>rom_secrets_presented,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>allow_secure_state_restart,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>lock_secure_state_restart)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a56dc70e104a5cae2124f465cb52c7d9d" kindref="member">SECURE_STATE_CONFIG</ref><sp/>=<sp/>PSEC_SECURE_STATE_CONFIG_ROM_SECRETS_SET(rom_secrets_presented)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1aa49f2c2764ccdc594ac15715a6f216e9" kindref="member">PSEC_SECURE_STATE_CONFIG_ALLOW_RESTART_SET</ref>(allow_secure_state_restart)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a29af7da2637e7c94c3a9b7ffb4704616" kindref="member">PSEC_SECURE_STATE_CONFIG_LOCK_SET</ref>(lock_secure_state_restart);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="hpm__psec__drv_8h_1a43ee6a10a9eadc5aaf35af17bf439bee" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1a43ee6a10a9eadc5aaf35af17bf439bee" kindref="member">psec_pmic_non_secure_violation_config</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>violation_setting,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>lock)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a6e2a6aea9f472dd6bbd0698fd816af73" kindref="member">VIOLATION_CONFIG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1a6e2a6aea9f472dd6bbd0698fd816af73" kindref="member">VIOLATION_CONFIG</ref></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~(<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1ad2bb6731c5dbb758375d8714c3f2b2e6" kindref="member">PSEC_VIOLATION_CONFIG_LOCK_NSC_MASK</ref></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1aed17b09a48a0de356dda470f67065186" kindref="member">PSEC_VIOLATION_CONFIG_NSC_VIO_CFG_MASK</ref>))</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a5de7a20fa2feaba9aa1cb4b4eb04ab5d" kindref="member">PSEC_VIOLATION_CONFIG_LOCK_NSC_SET</ref>(lock)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a49d11bcc48c285c020dcfcd539e9c3ed" kindref="member">PSEC_VIOLATION_CONFIG_NSC_VIO_CFG_SET</ref>(violation_setting);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="hpm__psec__drv_8h_1aed46be4f5ab77330c1dc96129b6e458b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1aed46be4f5ab77330c1dc96129b6e458b" kindref="member">psec_psecure_violation_config</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>violation_setting,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>lock)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a6e2a6aea9f472dd6bbd0698fd816af73" kindref="member">VIOLATION_CONFIG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1a6e2a6aea9f472dd6bbd0698fd816af73" kindref="member">VIOLATION_CONFIG</ref></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~(<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1aa6789563097882e8b2a41f897cb2ed74" kindref="member">PSEC_VIOLATION_CONFIG_LOCK_SEC_MASK</ref></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a3d2bff67f8c170c4c8529078e14f4495" kindref="member">PSEC_VIOLATION_CONFIG_SEC_VIO_CFG_MASK</ref>))</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1af325703b23e6c89edb911432eeaee74c" kindref="member">PSEC_VIOLATION_CONFIG_LOCK_SEC_SET</ref>(lock)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a82fa3aef7d053b775e3cc8a40b864ca6" kindref="member">PSEC_VIOLATION_CONFIG_SEC_VIO_CFG_SET</ref>(violation_setting);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="hpm__psec__drv_8h_1acd96d09d7febee0d8093282dfd3add53" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1acd96d09d7febee0d8093282dfd3add53" kindref="member">psec_pmic_non_secure_escalate_config</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>violation_setting,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>lock)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a2187ffc8bcb92a1c701790b101600341" kindref="member">ESCALATE_CONFIG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1a2187ffc8bcb92a1c701790b101600341" kindref="member">ESCALATE_CONFIG</ref></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~(<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1adac2ddce253a457ed6c9e84c17969d06" kindref="member">PSEC_ESCALATE_CONFIG_LOCK_NSC_MASK</ref></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a554a659ef178d29a1032b364d41a145f" kindref="member">PSEC_ESCALATE_CONFIG_NSC_VIO_CFG_MASK</ref>))</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a64aa5bad9d70e54106c9fc37af281377" kindref="member">PSEC_ESCALATE_CONFIG_LOCK_NSC_SET</ref>(lock)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a4aa9061ae7e2a662cdd595d29df26588" kindref="member">PSEC_ESCALATE_CONFIG_NSC_VIO_CFG_SET</ref>(violation_setting);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="hpm__psec__drv_8h_1a0ddf03b0fdfffb735866470be41630c6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1a0ddf03b0fdfffb735866470be41630c6" kindref="member">psec_psecure_escalate_config</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>violation_setting,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>lock)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a2187ffc8bcb92a1c701790b101600341" kindref="member">ESCALATE_CONFIG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1a2187ffc8bcb92a1c701790b101600341" kindref="member">ESCALATE_CONFIG</ref></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~(<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a447e5e1b2f5748edf0a112c848e7019d" kindref="member">PSEC_ESCALATE_CONFIG_LOCK_SEC_MASK</ref></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a7d8a5a2e6b674ed09ea6a1372d4459fe" kindref="member">PSEC_ESCALATE_CONFIG_SEC_VIO_CFG_MASK</ref>))</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1adbbf5a6b593f385d986df612b2605afb" kindref="member">PSEC_ESCALATE_CONFIG_LOCK_SEC_SET</ref>(lock)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1aa9040979b61af0be6332d643fa1703ab" kindref="member">PSEC_ESCALATE_CONFIG_SEC_VIO_CFG_SET</ref>(violation_setting);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="hpm__psec__drv_8h_1abb4eb13f6046910cabd2c899af245206" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="hpm__psec__drv_8h_1abb4eb13f6046910cabd2c899af245206" kindref="member">psec_get_pmic_status</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a40adf7e7833e40bcafe0e0735da8c8af" kindref="member">EVENT</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="hpm__psec__drv_8h_1a0b4b944c0e91679d20ee107d7d9ba2f5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1aba62c68ef2d516e6b6fff72230597725" kindref="member">psec_lifecycle_t</ref><sp/><ref refid="hpm__psec__drv_8h_1a0b4b944c0e91679d20ee107d7d9ba2f5" kindref="member">psec_get_batt_lifecycle</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="hpm__psec__drv_8h_1aba62c68ef2d516e6b6fff72230597725" kindref="member">psec_lifecycle_t</ref>)<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a85c2236c2f63baa4d67601e73a262b8c" kindref="member">PSEC_LIFECYCLE_LIFECYCLE_GET</ref>(ptr-&gt;<ref refid="structPSEC__Type_1ad629d11c7d1106c66694a9427187d3c0" kindref="member">LIFECYCLE</ref>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="hpm__psec__drv_8h_1a1ebaa3de4e719ae6f18d042a547d9dc7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__psec__drv_8h_1a1ebaa3de4e719ae6f18d042a547d9dc7" kindref="member">psec_switch_batt_state</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,<sp/><ref refid="hpm__psec__drv_8h_1aea36353b03c5f07435e64729187d7996" kindref="member">batt_sec_state_t</ref><sp/>state)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state<sp/>==<sp/><ref refid="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8acc127fe197a6c69d19fbdb140e65baa7" kindref="member">batt_sec_state_secure</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1ab744d9f21a3e7a5b31d234e60408721d" kindref="member">PSEC_SECURE_STATE_ALLOW_SEC_GET</ref>(ptr-&gt;<ref refid="structPSEC__Type_1abd1ed90a431ba09a6d92633716867d45" kindref="member">SECURE_STATE</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1ac8dc960ed0e83a06356ee2589564f7a9aa7a183190e845d69d8889e2e35d0a3ef" kindref="member">status_psec_switch_state_not_allowed</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state<sp/>==<sp/><ref refid="hpm__psec__drv_8h_1ae8d78e2cf70fd206352bffa91040ade8a1f8fb4a031d47b93347def7656e43785" kindref="member">batt_sec_state_non_secure</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a29e7cbd98de7794bef8cfee3085656a2" kindref="member">PSEC_SECURE_STATE_ALLOW_NSC_GET</ref>(ptr-&gt;<ref refid="structPSEC__Type_1abd1ed90a431ba09a6d92633716867d45" kindref="member">SECURE_STATE</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1ac8dc960ed0e83a06356ee2589564f7a9aa7a183190e845d69d8889e2e35d0a3ef" kindref="member">status_psec_switch_state_not_allowed</ref>;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1abd1ed90a431ba09a6d92633716867d45" kindref="member">SECURE_STATE</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1abd1ed90a431ba09a6d92633716867d45" kindref="member">SECURE_STATE</ref><sp/>&amp;<sp/>~<ref refid="hpm__psec__drv_8h_1adacbbeae8385e77886f504246ecb4ca8" kindref="member">PSEC_BATT_SECURE_STATE_MASK</ref>)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>(1U<sp/>&lt;&lt;<sp/>(PSEC_SECURE_STATE_BATT_INS_SHIFT<sp/>+<sp/>state));</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="hpm__psec__drv_8h_1a647dd4db948ead74af6e65a767519ee0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1a647dd4db948ead74af6e65a767519ee0" kindref="member">psec_allow_batt_secure_state_restart</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>allow)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a56dc70e104a5cae2124f465cb52c7d9d" kindref="member">SECURE_STATE_CONFIG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1a56dc70e104a5cae2124f465cb52c7d9d" kindref="member">SECURE_STATE_CONFIG</ref></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a7e51b3a5c850a9db57759b28450c58c7" kindref="member">PSEC_SECURE_STATE_CONFIG_ALLOW_RESTART_MASK</ref>)</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1aa49f2c2764ccdc594ac15715a6f216e9" kindref="member">PSEC_SECURE_STATE_CONFIG_ALLOW_RESTART_SET</ref>(allow);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="hpm__psec__drv_8h_1aa0ac136b20f360aca2305ce679d14a96" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1aa0ac136b20f360aca2305ce679d14a96" kindref="member">psec_lock_batt_secure_state_restart</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>lock)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a56dc70e104a5cae2124f465cb52c7d9d" kindref="member">SECURE_STATE_CONFIG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1a56dc70e104a5cae2124f465cb52c7d9d" kindref="member">SECURE_STATE_CONFIG</ref></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1ae3af064caec5ae85309ecb461f0a277e" kindref="member">PSEC_SECURE_STATE_CONFIG_LOCK_MASK</ref>)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a29af7da2637e7c94c3a9b7ffb4704616" kindref="member">PSEC_SECURE_STATE_CONFIG_LOCK_SET</ref>(lock);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="hpm__psec__drv_8h_1a4ed5ca56dd561d7f1705289ad68f447e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1a4ed5ca56dd561d7f1705289ad68f447e" kindref="member">psec_batt_rom_secrets_present</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>presented)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a56dc70e104a5cae2124f465cb52c7d9d" kindref="member">SECURE_STATE_CONFIG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1a56dc70e104a5cae2124f465cb52c7d9d" kindref="member">SECURE_STATE_CONFIG</ref></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~PSEC_SECURE_STATE_CONFIG_ROM_SECRETS_MASK)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>PSEC_SECURE_STATE_CONFIG_ROM_SECRETS_SET(presented);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="hpm__psec__drv_8h_1afc7e26c31e7c169c0b269f9c6021c1ba" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1afc7e26c31e7c169c0b269f9c6021c1ba" kindref="member">psec_batt_set_secure_state_config</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>rom_secrets_presented,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>allow_secure_state_restart,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>lock_secure_state_restart)</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a56dc70e104a5cae2124f465cb52c7d9d" kindref="member">SECURE_STATE_CONFIG</ref><sp/>=<sp/>PSEC_SECURE_STATE_CONFIG_ROM_SECRETS_SET(rom_secrets_presented)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1aa49f2c2764ccdc594ac15715a6f216e9" kindref="member">PSEC_SECURE_STATE_CONFIG_ALLOW_RESTART_SET</ref>(allow_secure_state_restart)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a29af7da2637e7c94c3a9b7ffb4704616" kindref="member">PSEC_SECURE_STATE_CONFIG_LOCK_SET</ref>(lock_secure_state_restart);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="hpm__psec__drv_8h_1a6a1d20241e2211bcd5a78b4804211dc8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1a6a1d20241e2211bcd5a78b4804211dc8" kindref="member">psec_batt_non_secure_violation_config</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>violation_setting,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>lock)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a6e2a6aea9f472dd6bbd0698fd816af73" kindref="member">VIOLATION_CONFIG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1a6e2a6aea9f472dd6bbd0698fd816af73" kindref="member">VIOLATION_CONFIG</ref></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~(<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1ad2bb6731c5dbb758375d8714c3f2b2e6" kindref="member">PSEC_VIOLATION_CONFIG_LOCK_NSC_MASK</ref></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1aed17b09a48a0de356dda470f67065186" kindref="member">PSEC_VIOLATION_CONFIG_NSC_VIO_CFG_MASK</ref>))</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a5de7a20fa2feaba9aa1cb4b4eb04ab5d" kindref="member">PSEC_VIOLATION_CONFIG_LOCK_NSC_SET</ref>(lock)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a49d11bcc48c285c020dcfcd539e9c3ed" kindref="member">PSEC_VIOLATION_CONFIG_NSC_VIO_CFG_SET</ref>(violation_setting);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="hpm__psec__drv_8h_1aa02f018c6c4b1929ff16ccad524f17c4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1aa02f018c6c4b1929ff16ccad524f17c4" kindref="member">psec_batt_secure_violation_config</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>violation_setting,</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>lock)</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a6e2a6aea9f472dd6bbd0698fd816af73" kindref="member">VIOLATION_CONFIG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1a6e2a6aea9f472dd6bbd0698fd816af73" kindref="member">VIOLATION_CONFIG</ref></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~(<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1aa6789563097882e8b2a41f897cb2ed74" kindref="member">PSEC_VIOLATION_CONFIG_LOCK_SEC_MASK</ref></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a3d2bff67f8c170c4c8529078e14f4495" kindref="member">PSEC_VIOLATION_CONFIG_SEC_VIO_CFG_MASK</ref>))</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1af325703b23e6c89edb911432eeaee74c" kindref="member">PSEC_VIOLATION_CONFIG_LOCK_SEC_SET</ref>(lock)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a82fa3aef7d053b775e3cc8a40b864ca6" kindref="member">PSEC_VIOLATION_CONFIG_SEC_VIO_CFG_SET</ref>(violation_setting);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="hpm__psec__drv_8h_1a338b2815be76379789ef0c0dc02e5800" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1a338b2815be76379789ef0c0dc02e5800" kindref="member">psec_batt_non_secure_escalate_config</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>violation_setting,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>lock)</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a2187ffc8bcb92a1c701790b101600341" kindref="member">ESCALATE_CONFIG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1a2187ffc8bcb92a1c701790b101600341" kindref="member">ESCALATE_CONFIG</ref></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~(<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1adac2ddce253a457ed6c9e84c17969d06" kindref="member">PSEC_ESCALATE_CONFIG_LOCK_NSC_MASK</ref></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a554a659ef178d29a1032b364d41a145f" kindref="member">PSEC_ESCALATE_CONFIG_NSC_VIO_CFG_MASK</ref>))</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a64aa5bad9d70e54106c9fc37af281377" kindref="member">PSEC_ESCALATE_CONFIG_LOCK_NSC_SET</ref>(lock)</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a4aa9061ae7e2a662cdd595d29df26588" kindref="member">PSEC_ESCALATE_CONFIG_NSC_VIO_CFG_SET</ref>(violation_setting);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237" refid="hpm__psec__drv_8h_1a3909b45f148450b6284b4b6ac33d6de4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__psec__drv_8h_1a3909b45f148450b6284b4b6ac33d6de4" kindref="member">psec_batt_secure_escalate_config</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr,</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>violation_setting,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>lock)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a2187ffc8bcb92a1c701790b101600341" kindref="member">ESCALATE_CONFIG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPSEC__Type_1a2187ffc8bcb92a1c701790b101600341" kindref="member">ESCALATE_CONFIG</ref></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~(<ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a447e5e1b2f5748edf0a112c848e7019d" kindref="member">PSEC_ESCALATE_CONFIG_LOCK_SEC_MASK</ref></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1a7d8a5a2e6b674ed09ea6a1372d4459fe" kindref="member">PSEC_ESCALATE_CONFIG_SEC_VIO_CFG_MASK</ref>))</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1adbbf5a6b593f385d986df612b2605afb" kindref="member">PSEC_ESCALATE_CONFIG_LOCK_SEC_SET</ref>(lock)</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__psec__regs_8h_1aa9040979b61af0be6332d643fa1703ab" kindref="member">PSEC_ESCALATE_CONFIG_SEC_VIO_CFG_SET</ref>(violation_setting);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="hpm__psec__drv_8h_1a7758765d9ca6d0f50f32dd55402595f2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="hpm__psec__drv_8h_1a7758765d9ca6d0f50f32dd55402595f2" kindref="member">psec_get_batt_status</ref>(<ref refid="structPSEC__Type" kindref="compound">PSEC_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structPSEC__Type_1a40adf7e7833e40bcafe0e0735da8c8af" kindref="member">EVENT</ref>;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HPM_PSEC_DRV_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="drivers/inc/hpm_psec_drv.h"/>
+  </compounddef>
+</doxygen>

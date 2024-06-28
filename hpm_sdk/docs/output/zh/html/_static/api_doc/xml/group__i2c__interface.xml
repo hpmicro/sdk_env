@@ -1,0 +1,2617 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__i2c__interface" kind="group">
+    <compoundname>i2c_interface</compoundname>
+    <title>I2C driver APIs</title>
+    <innerclass refid="structi2c__config__t" prot="public">i2c_config_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__i2c__interface_1ga68c01102755fc7d1c810bb0b0635fa90" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@72</name>
+        <enumvalue id="group__i2c__interface_1gga68c01102755fc7d1c810bb0b0635fa90ab82b07e617d3b9182e390846257e82d0" prot="public">
+          <name>status_i2c_no_ack</name>
+          <initializer>= ((uint32_t)( status_group_i2c )*1000U + (uint32_t)( 1 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__i2c__interface_1gga68c01102755fc7d1c810bb0b0635fa90a207906923653c26a23879c4d09b2f0df" prot="public">
+          <name>status_i2c_invalid_data</name>
+          <initializer>= ((uint32_t)( status_group_i2c )*1000U + (uint32_t)( 2 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__i2c__interface_1gga68c01102755fc7d1c810bb0b0635fa90a29df3e1817110c936c78e13a324e51f7" prot="public">
+          <name>status_i2c_no_addr_hit</name>
+          <initializer>= ((uint32_t)( status_group_i2c )*1000U + (uint32_t)( 3 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__i2c__interface_1gga68c01102755fc7d1c810bb0b0635fa90a23ce76a1b8b224a249c628d63fa4ef03" prot="public">
+          <name>status_i2c_transmit_not_completed</name>
+          <initializer>= ((uint32_t)( status_group_i2c )*1000U + (uint32_t)( 4 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__i2c__interface_1gga68c01102755fc7d1c810bb0b0635fa90ad81df1d1a675a6afc2efab35c8da5314" prot="public">
+          <name>status_i2c_not_supported</name>
+          <initializer>= ((uint32_t)( status_group_i2c )*1000U + (uint32_t)( 9 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>I2C status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="24" column="1" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="24" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__i2c__interface_1ga9e7157514d73fc7628b8150ad6844b70" prot="public" static="no" strong="no">
+        <type></type>
+        <name>i2c_mode</name>
+        <enumvalue id="group__i2c__interface_1gga9e7157514d73fc7628b8150ad6844b70add7e9b08db65db145a62fa6c3c098224" prot="public">
+          <name>i2c_mode_normal</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__i2c__interface_1gga9e7157514d73fc7628b8150ad6844b70addb91a007e7287f2353f09491fa44fe1" prot="public">
+          <name>i2c_mode_fast</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__i2c__interface_1gga9e7157514d73fc7628b8150ad6844b70a77cc85af18bbee252e768b9a3b37cce4" prot="public">
+          <name>i2c_mode_fast_plus</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>I2C mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="106" column="1" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="106" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__i2c__interface_1ga2a32f75955dee93fd48534ff446c2c31" prot="public" static="no" strong="no">
+        <type></type>
+        <name>i2c_seq_transfer_opt</name>
+        <enumvalue id="group__i2c__interface_1gga2a32f75955dee93fd48534ff446c2c31a6e99d63798117a090c8ec01058cedf09" prot="public">
+          <name>i2c_frist_frame</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__i2c__interface_1gga2a32f75955dee93fd48534ff446c2c31a459540552890348db37ffc5b639b57f9" prot="public">
+          <name>i2c_next_frame</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__i2c__interface_1gga2a32f75955dee93fd48534ff446c2c31a5065fd7758ca532e5b478136a4c5a484" prot="public">
+          <name>i2c_last_frame</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>I2c sequential transfer options. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>: i2c_frist_frame: has start signal </para>
+</listitem>
+<listitem><para>: i2c_next_frame: middle transfer </para>
+</listitem>
+<listitem><para>: i2c_last_frame: has stop signal </para>
+</listitem>
+</itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="118" column="1" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="118" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__i2c__interface_1gae1ff7126fb6f404391717fbde555149c" prot="public" static="no">
+        <type>enum <ref refid="group__i2c__interface_1ga9e7157514d73fc7628b8150ad6844b70" kindref="member">i2c_mode</ref></type>
+        <definition>typedef enum i2c_mode i2c_mode_t</definition>
+        <argsstring></argsstring>
+        <name>i2c_mode_t</name>
+        <briefdescription>
+<para>I2C mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="110" column="12"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__i2c__interface_1ga22b03cb19f5ee510a6cee7ad02b432c8" prot="public" static="no">
+        <type>enum <ref refid="group__i2c__interface_1ga2a32f75955dee93fd48534ff446c2c31" kindref="member">i2c_seq_transfer_opt</ref></type>
+        <definition>typedef enum i2c_seq_transfer_opt i2c_seq_transfer_opt_t</definition>
+        <argsstring></argsstring>
+        <name>i2c_seq_transfer_opt_t</name>
+        <briefdescription>
+<para>I2c sequential transfer options. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>: i2c_frist_frame: has start signal </para>
+</listitem>
+<listitem><para>: i2c_next_frame: middle transfer </para>
+</listitem>
+<listitem><para>: i2c_last_frame: has stop signal </para>
+</listitem>
+</itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="122" column="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__i2c__interface_1ga71d7a2c595c5b5c7665312522c5eed6b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2c_respond_Nack</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_respond_Nack</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>respond NACK </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="133" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga0520319291de88c74fd772761c578150" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2c_respond_ack</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_respond_ack</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>respond ACK </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="143" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga020e48df31a0ef5ec203dcb484692f41" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2c_clear_fifo</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_clear_fifo</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>clear I2C fifo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="153" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="153" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga4e198e4332806c2fa1e13720def4d260" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>static uint16_t i2c_get_data_count</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_get_data_count</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>check data count </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It indicates number of bytes to transfer</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>count value in byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="166" column="24" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="166" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gab2fec1bdaaf6a96bf0e9e010f27e5dda" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool i2c_fifo_is_full</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_fifo_is_full</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>check if I2C FIFO is full </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if FIFO is full </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="182" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="182" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga46b580955c97523fcbe167aacbe63cb9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool i2c_fifo_is_half</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_fifo_is_half</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>check if I2C FIFO is half </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>When I2C is transmitting data, it indicates if fifo is half-empty; </para>
+</simplesect>
+<simplesect kind="note"><para>When I2C is receiving data, it indicates if fifo is half full.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if FIFO is half empty or full </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="196" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="196" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga75d41916ac03e3826116b76d3d326f81" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool i2c_fifo_is_empty</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_fifo_is_empty</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>check if I2C FIFO is empty </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if FIFO is empty </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="207" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="207" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gabc794afb749b4a4e7d81694fa71df29e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool i2c_is_writing</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_is_writing</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>check if I2C is writing </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value <itemizedlist>
+<listitem><para>true: receive data if master mode, send data in slave mode </para>
+</listitem>
+<listitem><para>false: send data if master mode, reveive data in slave mode </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="221" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="221" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga56540991fc74fe22627d08bcf3a0c07d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool i2c_is_reading</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_is_reading</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>check if I2C is reading </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value <itemizedlist>
+<listitem><para>true: send data if master mode, receive data in slave mode </para>
+</listitem>
+<listitem><para>false: receive data if master mode, send data in slave mode </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="235" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="235" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga7af6a0105a319b196b0401fb0e298ca4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool i2c_get_line_sda_status</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_get_line_sda_status</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>get i2c sda line status </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value <itemizedlist>
+<listitem><para>true: the sda line is high </para>
+</listitem>
+<listitem><para>false: the sda line is low </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="249" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="249" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga04a79f352de57a368d07d7253878b181" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool i2c_get_line_scl_status</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_get_line_scl_status</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>get i2c scl line status </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value <itemizedlist>
+<listitem><para>true: the scl line is high </para>
+</listitem>
+<listitem><para>false: the scl line is low </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="263" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="263" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gaafec08679095cc82d2d5a12cc335327e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2c_clear_status</definition>
+        <argsstring>(I2C_Type *ptr, uint32_t mask)</argsstring>
+        <name>i2c_clear_status</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>clear status </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear status based on mask</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mask to clear status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="276" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="276" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga975e4af1ae245576ca8a3a7459582b5f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t i2c_get_status</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_get_status</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>get status </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get current I2C status bits</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>current</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="289" column="24" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="289" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga84e04fded36984f3a23d2d7cac95dd59" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t i2c_get_irq_setting</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_get_irq_setting</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>i2c get interrupts setting </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get interrupt setting register value</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>[out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>uint32_t interrupt setting register value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="302" column="24" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="302" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gaac110912e42ce731435ebc5cda63f538" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2c_disable_irq</definition>
+        <argsstring>(I2C_Type *ptr, uint32_t mask)</argsstring>
+        <name>i2c_disable_irq</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>disable interrupts </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Disable interrupts based on given mask</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>interrupt mask to be disabled </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="315" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="315" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gadf46401b04438cbf57a380da22f9230d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2c_enable_irq</definition>
+        <argsstring>(I2C_Type *ptr, uint32_t mask)</argsstring>
+        <name>i2c_enable_irq</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>enable interrupts </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable interrupts based on given mask</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>interrupt mask to be enabled </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="328" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="328" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga5f3a12d32445085bcea00086740b758a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2c_disable_auto_ack</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_disable_auto_ack</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>disable auto ack </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Disable I2C auto generates proper acknowledgements for each byte received</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="340" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="340" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga545b31bccac78bef160f223ad2494c1b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2c_enable_auto_ack</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_enable_auto_ack</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>enable auto ack </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable I2C auto generates proper acknowledgements for each byte received</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="352" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="352" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gad25133c94cea4b9d6522d7d28b2b2714" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2c_enable_10bit_address_mode</definition>
+        <argsstring>(I2C_Type *ptr, bool enable)</argsstring>
+        <name>i2c_enable_10bit_address_mode</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>enable 10 bit address mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para>enable 10 bit address mode, if not, address is 7 bit mode</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>true: enable 10 bit address mode </para>
+</listitem>
+<listitem><para>false: enable 7 bit address mode </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="367" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="367" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga98ba3b3648f7e7027e16b02af560bc31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_init_master</definition>
+        <argsstring>(I2C_Type *ptr, uint32_t src_clk_in_hz, i2c_config_t *config)</argsstring>
+        <name>i2c_init_master</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>src_clk_in_hz</declname>
+        </param>
+        <param>
+          <type><ref refid="structi2c__config__t" kindref="compound">i2c_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>I2C master initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialized I2C controller working at master mode</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src_clk_in_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C controller source clock source frequency in Hz </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structi2c__config__t" kindref="compound">i2c_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if initialization is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="382" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="135" bodyend="159" declfile="drivers/inc/hpm_i2c_drv.h" declline="382" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga19bed50d02b008bb83acc23cda5ae5c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_master_address_write</definition>
+        <argsstring>(I2C_Type *ptr, const uint16_t device_address, uint8_t *addr, uint32_t addr_size_in_byte, uint8_t *buf, const uint32_t size_in_byte)</argsstring>
+        <name>i2c_master_address_write</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>device_address</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr_size_in_byte</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>size_in_byte</declname>
+        </param>
+        <briefdescription>
+<para>I2C master write data to specific address of certain slave device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Write to certain I2C device at specific address within that device <simplesect kind="note"><para>the sum of addr_size_in_byte and size_in_byte should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>address in that I2C device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">addr_size_in_byte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C address in byte </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the data to be sent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size_in_byte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be sent in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if writing is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="400" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="280" bodyend="372" declfile="drivers/inc/hpm_i2c_drv.h" declline="400" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga60246f25bb1994cdf9438b98617f6904" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_master_address_read</definition>
+        <argsstring>(I2C_Type *ptr, const uint16_t device_address, uint8_t *addr, uint32_t addr_size_in_byte, uint8_t *buf, const uint32_t size_in_byte)</argsstring>
+        <name>i2c_master_address_read</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>device_address</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr_size_in_byte</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>size_in_byte</declname>
+        </param>
+        <briefdescription>
+<para>I2C master read data from specific address of certain slave device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Read fram certain I2C device at specific address within that device <simplesect kind="note"><para>both addr_size_in_byte and size_in_byte should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>address in that I2C device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">addr_size_in_byte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C address in byte </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the buffer to receive data read from the device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size_in_byte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be read in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if reading is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="421" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="161" bodyend="278" declfile="drivers/inc/hpm_i2c_drv.h" declline="421" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga14e1065a0ea6722b9aa9f22667adf33c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_master_write</definition>
+        <argsstring>(I2C_Type *ptr, const uint16_t device_address, uint8_t *buf, const uint32_t size)</argsstring>
+        <name>i2c_master_write</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>device_address</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>I2C master write data to certain slave device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Write data to I2C device <simplesect kind="note"><para>size should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the data to be sent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be sent in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if writing is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="440" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="466" bodyend="557" declfile="drivers/inc/hpm_i2c_drv.h" declline="440" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga047a2df47406b613cb1bdc07a3026856" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_master_start_dma_write</definition>
+        <argsstring>(I2C_Type *i2c_ptr, const uint16_t device_address, uint32_t size)</argsstring>
+        <name>i2c_master_start_dma_write</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>i2c_ptr</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>device_address</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>I2C master start write data by DMA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Write data to I2C device by DMA <simplesect kind="note"><para>size should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">i2c_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be sent in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if starting transmission without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="456" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="719" bodyend="755" declfile="drivers/inc/hpm_i2c_drv.h" declline="456" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gaec469d9e6a92e934fc456481e11c8a9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_master_start_dma_read</definition>
+        <argsstring>(I2C_Type *i2c_ptr, const uint16_t device_address, uint32_t size)</argsstring>
+        <name>i2c_master_start_dma_read</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>i2c_ptr</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>device_address</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>I2C master start read data by DMA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Read data to I2C device by DMA <simplesect kind="note"><para>size should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">i2c_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be read in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if starting transmission without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="469" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="757" bodyend="792" declfile="drivers/inc/hpm_i2c_drv.h" declline="469" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gaa838ed222310fa510b6d0ad2fe84b065" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_master_read</definition>
+        <argsstring>(I2C_Type *ptr, const uint16_t device_address, uint8_t *buf, const uint32_t size)</argsstring>
+        <name>i2c_master_read</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>device_address</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>I2C master read data from certain slave device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Read data from I2C device <simplesect kind="note"><para>size should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the buffer to store data read from device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be read in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if reading is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="483" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="374" bodyend="464" declfile="drivers/inc/hpm_i2c_drv.h" declline="483" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga1441d4a0d033b13dfe8c345569124c00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_init_slave</definition>
+        <argsstring>(I2C_Type *ptr, uint32_t src_clk_in_hz, i2c_config_t *config, const uint16_t slave_address)</argsstring>
+        <name>i2c_init_slave</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>src_clk_in_hz</declname>
+        </param>
+        <param>
+          <type><ref refid="structi2c__config__t" kindref="compound">i2c_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>slave_address</declname>
+        </param>
+        <briefdescription>
+<para>I2C slave initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize I2C controller working at slave mode</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src_clk_in_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C controller source clock source frequency in Hz </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C configuration structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slave_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C address to be used at slave mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if initialization is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="498" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="559" bodyend="585" declfile="drivers/inc/hpm_i2c_drv.h" declline="498" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gafd10781c9ce78632402cf4c83b8b19af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_slave_read</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t *buf, const uint32_t size)</argsstring>
+        <name>i2c_slave_read</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>I2C slave read data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Read data at slave mode <simplesect kind="note"><para>size should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the buffer to store data read from device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be read in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if reading is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="512" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="652" bodyend="717" declfile="drivers/inc/hpm_i2c_drv.h" declline="512" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gafe1d428a366d7e75ef4d470a263c487a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_slave_write</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t *buf, const uint32_t size)</argsstring>
+        <name>i2c_slave_write</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>I2C slave write data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Write data at slave mode. <simplesect kind="note"><para>size should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the buffer to store data sent from device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be sent in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if writing is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="525" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="587" bodyend="650" declfile="drivers/inc/hpm_i2c_drv.h" declline="525" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga9cb4a1912d4819324b28ccb5eafe20d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void i2c_reset</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_reset</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>reset I2C </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="532" column="6" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="128" bodyend="133" declfile="drivers/inc/hpm_i2c_drv.h" declline="532" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga6124fcfef43816c28ef4889222c6952b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2c_dma_enable</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_dma_enable</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Enable i2c DMA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="539" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="539" bodyend="542"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga7a1a6d26d62aa637d2b7030344ac9125" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2c_dma_disable</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_dma_disable</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Disable i2c DMA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="549" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="549" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga1d9466a592989852a71ebc987b43058a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_slave_dma_transfer</definition>
+        <argsstring>(I2C_Type *ptr, const uint32_t size)</argsstring>
+        <name>i2c_slave_dma_transfer</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>I2C slave dma transfer data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The direction of data transmission depends on Master setting</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if configuring transmission without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="563" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="794" bodyend="814" declfile="drivers/inc/hpm_i2c_drv.h" declline="563" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga25c50964cd228de22193f6ccc59ca721" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2c_write_byte</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t data)</argsstring>
+        <name>i2c_write_byte</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>I2C write byte into FIFO. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] ptr I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] byte to ne sent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="571" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="571" bodyend="574"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gab870b908ecf3eef93b29b81763c2fdbc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t i2c_read_byte</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_read_byte</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>I2C read byte into FIFO. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] ptr I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uint8_t read byte </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="582" column="23" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="582" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga9c79a6b06b86fae1ffed17e77db6d265" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t i2c_get_direction</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>i2c_get_direction</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>I2C get direction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The same value has different meanings in master and slave modes</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] ptr I2C base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uint8_t direction value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="595" column="23" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="595" bodyend="598"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gad8aa723f3d3f80470ab7316d2744dbb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_master_configure_transfer</definition>
+        <argsstring>(I2C_Type *i2c_ptr, const uint16_t device_address, uint32_t size, bool read)</argsstring>
+        <name>i2c_master_configure_transfer</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>i2c_ptr</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>device_address</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>read</declname>
+        </param>
+        <briefdescription>
+<para>I2C master configure transfer setting. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i2c_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] ptr I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>device_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] I2C slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] size of data to be transferred in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>read</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] true for receive, false for transmit </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if configuring transmission without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="609" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="816" bodyend="849" declfile="drivers/inc/hpm_i2c_drv.h" declline="609" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1ga1fef797bdd77f88c400158c6e361a938" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_master_seq_transmit</definition>
+        <argsstring>(I2C_Type *ptr, const uint16_t device_address, uint8_t *buf, const uint32_t size, i2c_seq_transfer_opt_t opt)</argsstring>
+        <name>i2c_master_seq_transmit</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>device_address</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="group__i2c__interface_1ga22b03cb19f5ee510a6cee7ad02b432c8" kindref="member">i2c_seq_transfer_opt_t</ref></type>
+          <declname>opt</declname>
+        </param>
+        <briefdescription>
+<para>sequential transmit in master I2C mode an amount of data in blocking </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ptr I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the buffer to store data sent from device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be sent in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">opt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2c sequential transfer options </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if transmit is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="621" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="851" bodyend="928" declfile="drivers/inc/hpm_i2c_drv.h" declline="621" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gabaf4004f5931bfa8dadcddb7364a46b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_master_seq_receive</definition>
+        <argsstring>(I2C_Type *ptr, const uint16_t device_address, uint8_t *buf, const uint32_t size, i2c_seq_transfer_opt_t opt)</argsstring>
+        <name>i2c_master_seq_receive</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>device_address</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="group__i2c__interface_1ga22b03cb19f5ee510a6cee7ad02b432c8" kindref="member">i2c_seq_transfer_opt_t</ref></type>
+          <declname>opt</declname>
+        </param>
+        <briefdescription>
+<para>sequential receive in master I2C mode an amount of data in blocking </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ptr I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the buffer to store data sent from device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be sent in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">opt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2c sequential transfer options </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if receive is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="634" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="930" bodyend="1018" declfile="drivers/inc/hpm_i2c_drv.h" declline="634" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gae37d92c344c8807116c079fc9072b338" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2s_gen_reset_signal</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t clk_len)</argsstring>
+        <name>i2s_gen_reset_signal</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>clk_len</declname>
+        </param>
+        <briefdescription>
+<para>generate SCL clock as reset signal </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] ptr I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">clk_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SCL clock length </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="644" column="20" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="644" bodyend="648"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2c__interface_1gae763d01089c1093c5d0cd2a6e3600dac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2c_master_transfer</definition>
+        <argsstring>(I2C_Type *ptr, const uint16_t device_address, uint8_t *buf, const uint32_t size, uint16_t flags)</argsstring>
+        <name>i2c_master_transfer</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>device_address</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>data transfer on master I2C mode in blocking </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ptr I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the buffer to store data sent from device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be sent in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flag bit, which can be other flag bits except I2C_WR I2C_RD, and can perform &quot;|&quot; operation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if receive is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="661" column="12" bodyfile="drivers/src/hpm_i2c_drv.c" bodystart="1020" bodyend="1124" declfile="drivers/inc/hpm_i2c_drv.h" declline="661" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__i2c__interface_1ga62e38db9626c4c1bfd4959b1cd6829ff" prot="public" static="no">
+        <name>I2C_DATACNT_MAP</name>
+        <param><defname>x</defname></param>
+        <initializer>(((x) == <ref refid="HPM__IP__VALIDATION_2HPM__VAL__D25_2hpm__soc__feature_8h_1a214369ce4fafa9caa85c2bf60449caf6" kindref="member">I2C_SOC_TRANSFER_COUNT_MAX</ref>) ? 0 : x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="35" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga145250842ff61650941e361d8037d4e0" prot="public" static="no">
+        <name>I2C_CMD_NO_ACTION</name>
+        <initializer>(<ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1aae1c995f5d567ad2a52408f97ec8ff61" kindref="member">I2C_CMD_CMD_SET</ref>(0))</initializer>
+        <briefdescription>
+<para>I2C CMD. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="40" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga24de391a72922ae74976eac16b0c7a7a" prot="public" static="no">
+        <name>I2C_CMD_ISSUE_DATA_TRANSMISSION</name>
+        <initializer>(<ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1aae1c995f5d567ad2a52408f97ec8ff61" kindref="member">I2C_CMD_CMD_SET</ref>(1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="41" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga984bfbaf552cbbcd3968e5e43497ef9a" prot="public" static="no">
+        <name>I2C_CMD_ACK</name>
+        <initializer>(<ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1aae1c995f5d567ad2a52408f97ec8ff61" kindref="member">I2C_CMD_CMD_SET</ref>(2))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="42" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga0ca785703eb12d53e1bb80154006dce7" prot="public" static="no">
+        <name>I2C_CMD_NACK</name>
+        <initializer>(<ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1aae1c995f5d567ad2a52408f97ec8ff61" kindref="member">I2C_CMD_CMD_SET</ref>(3))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="43" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gabfe3c120ebcc98d295010433d76e14b0" prot="public" static="no">
+        <name>I2C_CMD_CLEAR_FIFO</name>
+        <initializer>(<ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1aae1c995f5d567ad2a52408f97ec8ff61" kindref="member">I2C_CMD_CMD_SET</ref>(4))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="44" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gadc1830d8be5b456a015a7ea905a603dd" prot="public" static="no">
+        <name>I2C_CMD_RESET</name>
+        <initializer>(<ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1aae1c995f5d567ad2a52408f97ec8ff61" kindref="member">I2C_CMD_CMD_SET</ref>(5))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="45" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gaa0c75bc99981a9797ae33555b9d1cd53" prot="public" static="no">
+        <name>I2C_DIR_MASTER_WRITE</name>
+        <initializer>(0U)</initializer>
+        <briefdescription>
+<para>I2C data direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="50" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga4df4850244dc050233a212061a027143" prot="public" static="no">
+        <name>I2C_DIR_MASTER_READ</name>
+        <initializer>(1U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="51" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga868c938c391b8ffcfc4c259495c86628" prot="public" static="no">
+        <name>I2C_DIR_SLAVE_READ</name>
+        <initializer>(0U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="52" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gac350a4154f2bb780c7e29b330339f88c" prot="public" static="no">
+        <name>I2C_DIR_SLAVE_WRITE</name>
+        <initializer>(1U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="53" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gaf33bf093595b7cb0109d49b921d10af6" prot="public" static="no">
+        <name>I2C_EVENT_TRANSACTION_COMPLETE</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1ad49a44838299f9cdfe15fc37e3c1b624" kindref="member">I2C_INTEN_CMPL_MASK</ref></initializer>
+        <briefdescription>
+<para>I2C events for interrupt enable and status check. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="58" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga18c415b8ebf586c237d337fd2527d4a5" prot="public" static="no">
+        <name>I2C_EVENT_BYTE_RECEIVED</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1af6e95f3bc105d7bdea893577754df372" kindref="member">I2C_INTEN_BYTERECV_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="59" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gaad4cca7ae07b500c7b55abf2f9e36846" prot="public" static="no">
+        <name>I2C_EVENT_BYTE_TRANSMIT</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1a858d905d5f9948b671a5aee863923ee6" kindref="member">I2C_INTEN_BYTETRANS_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="60" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga1514335ae4c02dc9aea98b9138991293" prot="public" static="no">
+        <name>I2C_EVENT_START_CONDITION</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1a5442d4974efc69e6cd5ffd91e0d06421" kindref="member">I2C_INTEN_START_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="61" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gab8cda17cf2a54a8e68d944d231e46f98" prot="public" static="no">
+        <name>I2C_EVENT_STOP_CONDITION</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1ae7eced251c84add83f28ef8a4a45ba66" kindref="member">I2C_INTEN_STOP_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="62" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gaee985ce9751eb9dad27dc2f499c7e633" prot="public" static="no">
+        <name>I2C_EVENT_LOSS_ARBITRATION</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1a0c586c5982b7b5736add8edb81af473f" kindref="member">I2C_INTEN_ARBLOSE_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="63" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga996adc9125f9a49734ade0dd78a7cd71" prot="public" static="no">
+        <name>I2C_EVENT_ADDRESS_HIT</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1a782093fde670a306c00fe25a5ff58fc2" kindref="member">I2C_INTEN_ADDRHIT_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="64" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga2fc541b910a66b7cd06da13fc83e5f0b" prot="public" static="no">
+        <name>I2C_EVENT_FIFO_HALF</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1a34f951ce84f8c13136da7d4ce17db92f" kindref="member">I2C_INTEN_FIFOHALF_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="65" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gadf9ceff5f1651daaae43c08bbb2be195" prot="public" static="no">
+        <name>I2C_EVENT_FIFO_FULL</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1a658f8a3bc25601288936ef3795074f04" kindref="member">I2C_INTEN_FIFOFULL_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="66" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga41a8212b3ef72470c6a2e17ed2cb418c" prot="public" static="no">
+        <name>I2C_EVENT_FIFO_EMPTY</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1aebc308c813ec206034b2e9a303b437d7" kindref="member">I2C_INTEN_FIFOEMPTY_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="67" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gafb7467c689c9968d7459f6b6de06f9f6" prot="public" static="no">
+        <name>I2C_EVENT_ALL_MASK</name>
+        <initializer>                                        (<ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1ad49a44838299f9cdfe15fc37e3c1b624" kindref="member">I2C_INTEN_CMPL_MASK</ref> \
+                                        | <ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1af6e95f3bc105d7bdea893577754df372" kindref="member">I2C_INTEN_BYTERECV_MASK</ref> \
+                                        | <ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1a858d905d5f9948b671a5aee863923ee6" kindref="member">I2C_INTEN_BYTETRANS_MASK</ref> \
+                                        | <ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1a5442d4974efc69e6cd5ffd91e0d06421" kindref="member">I2C_INTEN_START_MASK</ref> \
+                                        | <ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1ae7eced251c84add83f28ef8a4a45ba66" kindref="member">I2C_INTEN_STOP_MASK</ref> \
+                                        | <ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1a0c586c5982b7b5736add8edb81af473f" kindref="member">I2C_INTEN_ARBLOSE_MASK</ref> \
+                                        | <ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1a782093fde670a306c00fe25a5ff58fc2" kindref="member">I2C_INTEN_ADDRHIT_MASK</ref> \
+                                        | <ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1a34f951ce84f8c13136da7d4ce17db92f" kindref="member">I2C_INTEN_FIFOHALF_MASK</ref> \
+                                        | <ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1a658f8a3bc25601288936ef3795074f04" kindref="member">I2C_INTEN_FIFOFULL_MASK</ref> \
+                                        | <ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1aebc308c813ec206034b2e9a303b437d7" kindref="member">I2C_INTEN_FIFOEMPTY_MASK</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="69" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga22f3b82dfe97b96e39b41dc9ab4bab28" prot="public" static="no">
+        <name>I2C_STATUS_LINE_SDA</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1a9186a1ebd0ed64c21288d85ac9624c19" kindref="member">I2C_STATUS_LINESDA_MASK</ref></initializer>
+        <briefdescription>
+<para>I2C status for status check only. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="82" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gaaba72c55d7ba18251cff6aa1d14758f7" prot="public" static="no">
+        <name>I2C_STATUS_LINE_SCL</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1af81a8867a26255f8c91be5298f4575ae" kindref="member">I2C_STATUS_LINESCL_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="83" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gad8c0457d822aa052032a998e04ddeadb" prot="public" static="no">
+        <name>I2C_STATUS_GENERAL_CALL</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1ab4c742b37852eb6782e836c23b8446a6" kindref="member">I2C_STATUS_GENCALL_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="84" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gaf7455cb02ee12dfc513ceb28323b4b8d" prot="public" static="no">
+        <name>I2C_STATUS_BUS_BUSY</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1abaa07f1883e06f82d99e622df46b2db0" kindref="member">I2C_STATUS_BUSBUSY_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="85" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga3feec347d5ac532cadafb1e29e79ef6f" prot="public" static="no">
+        <name>I2C_STATUS_ACK</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__i2c__regs_8h_1aeb8775eea248b55360b7a70855a94379" kindref="member">I2C_STATUS_ACK_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="86" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga5a3e7b03fa275ec2d334e95a2caf6477" prot="public" static="no">
+        <name>I2C_WR</name>
+        <initializer>0x0000    /* not operable with read flags*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="88" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gacb13e35c5e812ea51d29e833be1b72be" prot="public" static="no">
+        <name>I2C_RD</name>
+        <initializer>(1u &lt;&lt; 0)  /* not operable with write flags*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="89" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga3cb9baa1b76a560de0a7b695c26531fc" prot="public" static="no">
+        <name>I2C_ADDR_10BIT</name>
+        <initializer>(1u &lt;&lt; 2)  /* this is a ten bit chip <ref refid="group__l1cache__interface_1gac0d31ca829f934cccd89f8054e02773e" kindref="member">address</ref> */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="90" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga195853b1c095946d44b02780bc737258" prot="public" static="no">
+        <name>I2C_NO_START</name>
+        <initializer>(1u &lt;&lt; 4)  /* no start */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="91" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1ga1b25e670e092f1111930f5eacde26b75" prot="public" static="no">
+        <name>I2C_NO_READ_ACK</name>
+        <initializer>(1u &lt;&lt; 6)  /* when I2C reading, we do not ACK */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="92" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2c__interface_1gadda0d20bd6472bbee03bd0ac07256ef3" prot="public" static="no">
+        <name>I2C_NO_STOP</name>
+        <initializer>(1u &lt;&lt; 7)  /* no stop */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2c_drv.h" line="93" column="9" bodyfile="drivers/inc/hpm_i2c_drv.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>I2C driver APIs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

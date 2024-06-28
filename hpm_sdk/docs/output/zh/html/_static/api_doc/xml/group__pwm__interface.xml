@@ -1,0 +1,3075 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__pwm__interface" kind="group">
+    <compoundname>pwm_interface</compoundname>
+    <title>PWM driver APIs</title>
+    <innerclass refid="structpwm__cmp__config" prot="public">pwm_cmp_config</innerclass>
+    <innerclass refid="structpwm__output__channel" prot="public">pwm_output_channel</innerclass>
+    <innerclass refid="structpwm__fault__source__config" prot="public">pwm_fault_source_config</innerclass>
+    <innerclass refid="structpwm__config" prot="public">pwm_config</innerclass>
+    <innerclass refid="structpwm__pair__config" prot="public">pwm_pair_config</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__pwm__interface_1gab722df1d1ac2cc77fffd900b7d85d77f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>pwm_counter_type</name>
+        <enumvalue id="group__pwm__interface_1ggab722df1d1ac2cc77fffd900b7d85d77fa9e01f68d8263bba4a3c5adbca5f679f0" prot="public">
+          <name>pwm_counter_type_capture_rising_edge</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>rising edge trigger </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggab722df1d1ac2cc77fffd900b7d85d77fa392aada69ee65d242d96adf3b926f9c8" prot="public">
+          <name>pwm_counter_type_capture_falling_edge</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>falling edge trigger </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>pwm trigger mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="40" column="1" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__pwm__interface_1gab1b3e070e2af3cc5eb482dab71f7779d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>pwm_cmp_mode</name>
+        <enumvalue id="group__pwm__interface_1ggab1b3e070e2af3cc5eb482dab71f7779da3900537ae3530f4ab7c56396bc5915a1" prot="public">
+          <name>pwm_cmp_mode_output_compare</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>output compare </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggab1b3e070e2af3cc5eb482dab71f7779dabf592813d8257d40cfe7d81fd706049f" prot="public">
+          <name>pwm_cmp_mode_input_capture</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>input compare </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>pwm cmp mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="49" column="1" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__pwm__interface_1gae02ab6ff3147923e82edbad37e7d9c52" prot="public" static="no" strong="no">
+        <type></type>
+        <name>pwm_register_update</name>
+        <enumvalue id="group__pwm__interface_1ggae02ab6ff3147923e82edbad37e7d9c52a5b721facda59702f0a3e6f535b173353" prot="public">
+          <name>pwm_shadow_register_update_on_shlk</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>after software set shlk bit of shlk register </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggae02ab6ff3147923e82edbad37e7d9c52a7dd1665b2594690e88e09f53c8c505fb" prot="public">
+          <name>pwm_shadow_register_update_on_modify</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>immediately after the register being modified </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggae02ab6ff3147923e82edbad37e7d9c52ac61ee6d1b6a36ff83edb242d5857f716" prot="public">
+          <name>pwm_shadow_register_update_on_hw_event</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>after hardware event assert </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggae02ab6ff3147923e82edbad37e7d9c52a4830b7e6ca79faea0cb7b07f0516b9ff" prot="public">
+          <name>pwm_shadow_register_update_on_sh_synci</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>after SHSYNCI assert </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>update time of the shadow register </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="58" column="1" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="58" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__pwm__interface_1ga0d42bad91e7455430a9734844df9ec91" prot="public" static="no" strong="no">
+        <type></type>
+        <name>pwm_fault_mode</name>
+        <enumvalue id="group__pwm__interface_1gga0d42bad91e7455430a9734844df9ec91a38e422204e3be30888772a92ee67e244" prot="public">
+          <name>pwm_fault_mode_force_output_0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>fault forced output logic 0 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1gga0d42bad91e7455430a9734844df9ec91a16057f03e9fca04903af20a7bdadaa8c" prot="public">
+          <name>pwm_fault_mode_force_output_1</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>fault forced output logic 1 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1gga0d42bad91e7455430a9734844df9ec91a20e1afaa7567c64ff88e7ed9c727ca2c" prot="public">
+          <name>pwm_fault_mode_force_output_highz</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>turn off output, pin becomes high resistance </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>configure the state of channel 0-7 outputs when the forced output is in effect </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="69" column="1" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="69" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__pwm__interface_1gaf35eff1680f4d7b390d39428c2a4d396" prot="public" static="no" strong="no">
+        <type></type>
+        <name>pwm_fault_recovery_trigger</name>
+        <enumvalue id="group__pwm__interface_1ggaf35eff1680f4d7b390d39428c2a4d396a75992a2dbaf3d15474caee50d617f13f" prot="public">
+          <name>pwm_fault_recovery_immediately</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>immediately </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggaf35eff1680f4d7b390d39428c2a4d396aa125d1a86ab216a1548d996cda6fdaae" prot="public">
+          <name>pwm_fault_recovery_on_reload</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>after pwm timer counter reload time </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggaf35eff1680f4d7b390d39428c2a4d396a21656ad5027fc14497ce661c276dc99e" prot="public">
+          <name>pwm_fault_recovery_on_hw_event</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>after hardware event assert </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggaf35eff1680f4d7b390d39428c2a4d396a3d3f3807ff4d2e29894cf536d5363617" prot="public">
+          <name>pwm_fault_recovery_on_fault_clear</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>after software write faultclr bit in GCR register </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>select when to recover PWM output after fault </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="79" column="1" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="79" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__pwm__interface_1gaf6f8960279949962022630450c38e4aa" prot="public" static="no" strong="no">
+        <type></type>
+        <name>pwm_fault_source</name>
+        <enumvalue id="group__pwm__interface_1ggaf6f8960279949962022630450c38e4aaa3a04788e943e9868589ad1123b7b4213" prot="public">
+          <name>pwm_fault_source_internal_0</name>
+          <initializer>= PWM_GCR_FAULTI0EN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>FAULTI0 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggaf6f8960279949962022630450c38e4aaa64a75a41f2137626d2d849084585c0b9" prot="public">
+          <name>pwm_fault_source_internal_1</name>
+          <initializer>= PWM_GCR_FAULTI1EN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>FAULTI1 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggaf6f8960279949962022630450c38e4aaa487af9fa69ae654cd41ca9723e7a5f97" prot="public">
+          <name>pwm_fault_source_internal_2</name>
+          <initializer>= PWM_GCR_FAULTI2EN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>FAULTI2 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggaf6f8960279949962022630450c38e4aaa7f9fc8f5a398ba1a8cd819d0f50a2a17" prot="public">
+          <name>pwm_fault_source_internal_3</name>
+          <initializer>= PWM_GCR_FAULTI3EN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>FAULTI3 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggaf6f8960279949962022630450c38e4aaa88a2998eca07a622f714fc20a516b818" prot="public">
+          <name>pwm_fault_source_external_0</name>
+          <initializer>= PWM_GCR_FAULTE0EN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>EXFAULTI0 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggaf6f8960279949962022630450c38e4aaa818afbebdafebec71f1b8568b826edc8" prot="public">
+          <name>pwm_fault_source_external_1</name>
+          <initializer>= PWM_GCR_FAULTE1EN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>EXFAULTI1 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggaf6f8960279949962022630450c38e4aaaba91f399ce85e9c1af8575cbc93d7c62" prot="public">
+          <name>pwm_fault_source_debug</name>
+          <initializer>= PWM_GCR_DEBUGFAULT_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Debug fault </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>fault input signal </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="90" column="1" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="90" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__pwm__interface_1ga3fc437624c9f7a21e0e24b2c61a22d7c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>pwm_force_source</name>
+        <enumvalue id="group__pwm__interface_1gga3fc437624c9f7a21e0e24b2c61a22d7cae1fe1700910a89171f0cf9c400875154" prot="public">
+          <name>pwm_force_source_force_input</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>force output is enabled when FRCI assert </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1gga3fc437624c9f7a21e0e24b2c61a22d7ca0e155e5c8fc4b217341eb3388c4db4ab" prot="public">
+          <name>pwm_force_source_software</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>force output is enabled by software write swfrc to 1 </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Select sources for force output. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="104" column="1" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__pwm__interface_1ga2702c654e23b2cdc4d916993a5cd109a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>pwm_force_cmd_timing</name>
+        <enumvalue id="group__pwm__interface_1gga2702c654e23b2cdc4d916993a5cd109aa8e6b18ce2009822a6202f3c23b1f8fba" prot="public">
+          <name>pwm_force_immediately</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>after software set shlk bit of shlk register </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1gga2702c654e23b2cdc4d916993a5cd109aae9677b3f355feb1452cf944f4e7c5886" prot="public">
+          <name>pwm_force_at_reload</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>immediately after the register being modified </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1gga2702c654e23b2cdc4d916993a5cd109aa2e81cbc23e8567513a17d6c4ba9901aa" prot="public">
+          <name>pwm_force_at_synci</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>after hardware event assert </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1gga2702c654e23b2cdc4d916993a5cd109aa51b088cd80eb9cddfc6b50746fdf3152" prot="public">
+          <name>pwm_force_none</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>after SHSYNCI assert </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>select when the FRCMD shadow register will be loaded to its work register </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="112" column="1" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="112" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__pwm__interface_1gaabec28444de7dc80e245b2ebcf206c34" prot="public" static="no" strong="no">
+        <type></type>
+        <name>pwm_output_type</name>
+        <enumvalue id="group__pwm__interface_1ggaabec28444de7dc80e245b2ebcf206c34a1c6800b6803dd16e42898bfd35724f29" prot="public">
+          <name>pwm_output_0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>output 0 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggaabec28444de7dc80e245b2ebcf206c34a6fbba2608cbfeb2a6fe6318bb944f514" prot="public">
+          <name>pwm_output_1</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>output 1 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggaabec28444de7dc80e245b2ebcf206c34ac3fd89f53e3f1b613bce309bcec63859" prot="public">
+          <name>pwm_output_high_z</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>output </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__pwm__interface_1ggaabec28444de7dc80e245b2ebcf206c34aed3b2e0f277dcf9a812892fd9baa51db" prot="public">
+          <name>pwm_output_no_force</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>pwm output type </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="123" column="1" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="123" bodyend="128"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__pwm__interface_1ga45b2e594765c6628f867361592b6aed3" prot="public" static="no">
+        <type>enum <ref refid="group__pwm__interface_1gab722df1d1ac2cc77fffd900b7d85d77f" kindref="member">pwm_counter_type</ref></type>
+        <definition>typedef enum pwm_counter_type pwm_counter_type_t</definition>
+        <argsstring></argsstring>
+        <name>pwm_counter_type_t</name>
+        <briefdescription>
+<para>pwm trigger mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="43" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pwm__interface_1gac01cec9e736c01f83f9c68d18618f319" prot="public" static="no">
+        <type>enum <ref refid="group__pwm__interface_1gab1b3e070e2af3cc5eb482dab71f7779d" kindref="member">pwm_cmp_mode</ref></type>
+        <definition>typedef enum pwm_cmp_mode pwm_cmp_mode_t</definition>
+        <argsstring></argsstring>
+        <name>pwm_cmp_mode_t</name>
+        <briefdescription>
+<para>pwm cmp mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="52" column="16"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pwm__interface_1gada54d1b5e6d985dd83d1735515efbff1" prot="public" static="no">
+        <type>enum <ref refid="group__pwm__interface_1gae02ab6ff3147923e82edbad37e7d9c52" kindref="member">pwm_register_update</ref></type>
+        <definition>typedef enum pwm_register_update pwm_shadow_register_update_trigger_t</definition>
+        <argsstring></argsstring>
+        <name>pwm_shadow_register_update_trigger_t</name>
+        <briefdescription>
+<para>update time of the shadow register </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="63" column="38"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pwm__interface_1ga5bad281a83b94df9fcbb3b7fa0091874" prot="public" static="no">
+        <type>enum <ref refid="group__pwm__interface_1ga0d42bad91e7455430a9734844df9ec91" kindref="member">pwm_fault_mode</ref></type>
+        <definition>typedef enum pwm_fault_mode pwm_fault_mode_t</definition>
+        <argsstring></argsstring>
+        <name>pwm_fault_mode_t</name>
+        <briefdescription>
+<para>configure the state of channel 0-7 outputs when the forced output is in effect </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="73" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pwm__interface_1ga78814398812cc7a99c4033437ed3fec6" prot="public" static="no">
+        <type>enum <ref refid="group__pwm__interface_1gaf35eff1680f4d7b390d39428c2a4d396" kindref="member">pwm_fault_recovery_trigger</ref></type>
+        <definition>typedef enum pwm_fault_recovery_trigger pwm_fault_recovery_trigger_t</definition>
+        <argsstring></argsstring>
+        <name>pwm_fault_recovery_trigger_t</name>
+        <briefdescription>
+<para>select when to recover PWM output after fault </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="84" column="30"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pwm__interface_1ga67ea5af30a3521ad5c9f88db18b8aec1" prot="public" static="no">
+        <type>enum <ref refid="group__pwm__interface_1gaf6f8960279949962022630450c38e4aa" kindref="member">pwm_fault_source</ref></type>
+        <definition>typedef enum pwm_fault_source pwm_fault_source_t</definition>
+        <argsstring></argsstring>
+        <name>pwm_fault_source_t</name>
+        <briefdescription>
+<para>fault input signal </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="98" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pwm__interface_1ga4a89dfc93eeb8696e01ab35642b307b6" prot="public" static="no">
+        <type>enum <ref refid="group__pwm__interface_1ga3fc437624c9f7a21e0e24b2c61a22d7c" kindref="member">pwm_force_source</ref></type>
+        <definition>typedef enum pwm_force_source pwm_force_source_t</definition>
+        <argsstring></argsstring>
+        <name>pwm_force_source_t</name>
+        <briefdescription>
+<para>Select sources for force output. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="107" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pwm__interface_1ga50036f09edbb59ea9dc3b1544872b6c5" prot="public" static="no">
+        <type>enum <ref refid="group__pwm__interface_1ga2702c654e23b2cdc4d916993a5cd109a" kindref="member">pwm_force_cmd_timing</ref></type>
+        <definition>typedef enum pwm_force_cmd_timing pwm_force_cmd_timing_t</definition>
+        <argsstring></argsstring>
+        <name>pwm_force_cmd_timing_t</name>
+        <briefdescription>
+<para>select when the FRCMD shadow register will be loaded to its work register </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="117" column="24"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pwm__interface_1ga151842627b7b3b6b7cbb96ef3038da39" prot="public" static="no">
+        <type>enum <ref refid="group__pwm__interface_1gaabec28444de7dc80e245b2ebcf206c34" kindref="member">pwm_output_type</ref></type>
+        <definition>typedef enum pwm_output_type pwm_output_type_t</definition>
+        <argsstring></argsstring>
+        <name>pwm_output_type_t</name>
+        <briefdescription>
+<para>pwm output type </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="128" column="19"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pwm__interface_1ga45d0bbf64983fdf8d5790fe1e7f082ca" prot="public" static="no">
+        <type>struct <ref refid="structpwm__cmp__config" kindref="compound">pwm_cmp_config</ref></type>
+        <definition>typedef struct pwm_cmp_config pwm_cmp_config_t</definition>
+        <argsstring></argsstring>
+        <name>pwm_cmp_config_t</name>
+        <briefdescription>
+<para>pwm compare config </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="148" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pwm__interface_1ga34e3025180efe7e28f0b9363f8b9562d" prot="public" static="no">
+        <type>struct <ref refid="structpwm__output__channel" kindref="compound">pwm_output_channel</ref></type>
+        <definition>typedef struct pwm_output_channel pwm_output_channel_t</definition>
+        <argsstring></argsstring>
+        <name>pwm_output_channel_t</name>
+        <briefdescription>
+<para>pwm output channel config </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="158" column="22"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pwm__interface_1gadc0c4d4093de7327553706b9a1e532ed" prot="public" static="no">
+        <type>struct <ref refid="structpwm__fault__source__config" kindref="compound">pwm_fault_source_config</ref></type>
+        <definition>typedef struct pwm_fault_source_config pwm_fault_source_config_t</definition>
+        <argsstring></argsstring>
+        <name>pwm_fault_source_config_t</name>
+        <briefdescription>
+<para>pwm fault source config </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="169" column="27"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pwm__interface_1ga2c0bb5092bbbf753f94b4fc27d90509b" prot="public" static="no">
+        <type>struct <ref refid="structpwm__config" kindref="compound">pwm_config</ref></type>
+        <definition>typedef struct pwm_config pwm_config_t</definition>
+        <argsstring></argsstring>
+        <name>pwm_config_t</name>
+        <briefdescription>
+<para>pwm config data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="186" column="14"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pwm__interface_1ga3f454b7805db859c03c86be12e97c20f" prot="public" static="no">
+        <type>struct <ref refid="structpwm__pair__config" kindref="compound">pwm_pair_config</ref></type>
+        <definition>typedef struct pwm_pair_config pwm_pair_config_t</definition>
+        <argsstring></argsstring>
+        <name>pwm_pair_config_t</name>
+        <briefdescription>
+<para>pair pwm config </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="194" column="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__pwm__interface_1ga0363410b3172937c6430741d7ba8dd58" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_deinit</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_deinit</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>pwm deinitialize function </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="206" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="206" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gaec2550949b95539897d79eb023dfaaaf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_issue_shadow_register_lock_event</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_issue_shadow_register_lock_event</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>issue all shawdow register </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="234" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="234" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga622defe99faf465e86c592bb7ad47760" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_shadow_register_lock</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_shadow_register_lock</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>lock all shawdow register </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="251" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="251" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga8d60daaaacabde15b02b6c90417ab4c8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_shadow_register_unlock</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_shadow_register_unlock</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>unlock all shadow register </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="262" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="262" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga15679617073dcd1485dbd7a7e0387d81" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_set_start_count</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t ex_start, uint32_t start)</argsstring>
+        <name>pwm_set_start_count</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ex_start</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+<para>set counter start value and extended start value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ex_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm timer counter extended start value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm timer counter start value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="274" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="274" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gab877674b072c0b6bb70b30f7c904d251" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_set_reload</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t ex_reload, uint32_t reload)</argsstring>
+        <name>pwm_set_reload</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ex_reload</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>reload</declname>
+        </param>
+        <briefdescription>
+<para>set the reload value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ex_reload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm timer counter extended reload value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">reload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm timer counter reload value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="305" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="305" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gafc78b9d33fe88de46d57ba49b58185e3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_clear_status</definition>
+        <argsstring>(PWM_Type *pwm_x, uint32_t mask)</argsstring>
+        <name>pwm_clear_status</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>clear pwm status register </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: <itemizedlist>
+<listitem><para>PWM_IRQ_FAULT: fault condition flag </para>
+</listitem>
+<listitem><para>PWM_IRQ_EX_RELOAD : extended reload flag, this flag set when xcnt count to xrld value or when SYNCI assert </para>
+</listitem>
+<listitem><para>PWM_IRQ_HALF_RELOAD: half reload flag, this flag set when cnt count to rld/2 </para>
+</listitem>
+<listitem><para>PWM_IRQ_RELOAD: reload flag, this flag set when cnt count to rld value or when SYNCI assert </para>
+</listitem>
+<listitem><para><ref refid="group__pwm__interface_1ga06b52a73bf14f35074f12d8ebcdb01fa" kindref="member">PWM_IRQ_CMP(x)</ref>(x=0...n): comparator output compare or input capture flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="345" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="345" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga34d6d86fd8fd26a5de0db51b038ebaca" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t pwm_get_status</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_get_status</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>get pwm status register </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>uint32_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SR register value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="370" column="24" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="370" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga22bad887f209288b453b13c3d057faa0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_disable_irq</definition>
+        <argsstring>(PWM_Type *pwm_x, uint32_t mask)</argsstring>
+        <name>pwm_disable_irq</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>disable pwm irq </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: <itemizedlist>
+<listitem><para>PWM_IRQ_FAULT: fault condition interrupt enable </para>
+</listitem>
+<listitem><para>PWM_IRQ_EX_RELOAD: extended reload flag interrupt enable </para>
+</listitem>
+<listitem><para>PWM_IRQ_HALF_RELOAD: half reload flag interrupt enable </para>
+</listitem>
+<listitem><para>PWM_IRQ_RELOAD: reload flag interrupt enable </para>
+</listitem>
+<listitem><para><ref refid="group__pwm__interface_1ga06b52a73bf14f35074f12d8ebcdb01fa" kindref="member">PWM_IRQ_CMP(x)</ref>(x=0...n): comparator output compare or input capture flag interrupt enable </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="386" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="386" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga883000fc54d54f1de223c1a02f44b73c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_enable_irq</definition>
+        <argsstring>(PWM_Type *pwm_x, uint32_t mask)</argsstring>
+        <name>pwm_enable_irq</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>enable pwm irq </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: <itemizedlist>
+<listitem><para>PWM_IRQ_FAULT: fault condition interrupt enable </para>
+</listitem>
+<listitem><para>PWM_IRQ_EX_RELOAD: extended reload flag interrupt enable </para>
+</listitem>
+<listitem><para>PWM_IRQ_HALF_RELOAD: half reload flag interrupt enable </para>
+</listitem>
+<listitem><para>PWM_IRQ_RELOAD: reload flag interrupt enable </para>
+</listitem>
+<listitem><para><ref refid="group__pwm__interface_1ga06b52a73bf14f35074f12d8ebcdb01fa" kindref="member">PWM_IRQ_CMP(x)</ref>(x=0...n): comparator output compare or input capture flag interrupt enable </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="402" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="402" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga38de8a1faad23ef06ac5b288fcbf4bd7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_disable_dma_request</definition>
+        <argsstring>(PWM_Type *pwm_x, uint32_t mask)</argsstring>
+        <name>pwm_disable_dma_request</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>disable pwm dma request </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: <itemizedlist>
+<listitem><para>PWM_IRQ_FAULT: fault condition DMA request enable </para>
+</listitem>
+<listitem><para>PWM_IRQ_EX_RELOAD: extended reload flag DMA request enable </para>
+</listitem>
+<listitem><para>PWM_IRQ_HALF_RELOAD: half reload flag DMA request enable </para>
+</listitem>
+<listitem><para>PWM_IRQ_RELOAD: reload flag DMA request enable </para>
+</listitem>
+<listitem><para><ref refid="group__pwm__interface_1ga06b52a73bf14f35074f12d8ebcdb01fa" kindref="member">PWM_IRQ_CMP(x)</ref>(x=0...n): comparator output compare or input capture flag DMA request enable </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="419" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="419" bodyend="422"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga3cb1fd7bc7dbf7a419b28a279c4a4523" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_enable_dma_request</definition>
+        <argsstring>(PWM_Type *pwm_x, uint32_t mask)</argsstring>
+        <name>pwm_enable_dma_request</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>enable pwm dma request </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: <itemizedlist>
+<listitem><para>PWM_IRQ_FAULT: fault condition DMA request enable </para>
+</listitem>
+<listitem><para>PWM_IRQ_EX_RELOAD: extended reload flag DMA request enable </para>
+</listitem>
+<listitem><para>PWM_IRQ_HALF_RELOAD: half reload flag DMA request enable </para>
+</listitem>
+<listitem><para>PWM_IRQ_RELOAD: reload flag DMA request enable </para>
+</listitem>
+<listitem><para><ref refid="group__pwm__interface_1ga06b52a73bf14f35074f12d8ebcdb01fa" kindref="member">PWM_IRQ_CMP(x)</ref>(x=0...n): comparator output compare or input capture flag DMA request enable </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="436" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="436" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga94af36b0a34e89a4ed55ca361df708ef" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_set_force_cmd_shadow_register_hwevent</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t target_cmp_index)</argsstring>
+        <name>pwm_set_force_cmd_shadow_register_hwevent</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>target_cmp_index</declname>
+        </param>
+        <briefdescription>
+<para>set target cmp as hardware event to trigger force cmd output </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">target_cmp_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cmp index select one of the cmp as hardware event time to load FRCMD shadow registers [0-23] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="447" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="447" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga5e7b25d4caf48bdf9884725379bf23e3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_set_load_counter_shadow_register_trigger</definition>
+        <argsstring>(PWM_Type *pwm_x, pwm_shadow_register_update_trigger_t trigger, uint8_t target_cmp_index)</argsstring>
+        <name>pwm_set_load_counter_shadow_register_trigger</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1gada54d1b5e6d985dd83d1735515efbff1" kindref="member">pwm_shadow_register_update_trigger_t</ref></type>
+          <declname>trigger</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>target_cmp_index</declname>
+        </param>
+        <briefdescription>
+<para>set shadow register control register </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>if trigger is not set to hardware event, target_cmp_index can be passed with any value</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>select when the counter related shadow registers <ref refid="group__pwm__interface_1gada54d1b5e6d985dd83d1735515efbff1" kindref="member">pwm_shadow_register_update_trigger_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">target_cmp_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>select one of the comparators as hardware event (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="466" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="466" bodyend="479"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga6bbfdf3c1ab05b1b394ef9bbfaa2f19c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_load_cmp_shadow_on_capture</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index, bool is_falling_edge)</argsstring>
+        <name>pwm_load_cmp_shadow_on_capture</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_falling_edge</declname>
+        </param>
+        <briefdescription>
+<para>Configure input capture cmp to trigger shadow register updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cmp index (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">is_falling_edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which edge is used as shadow register hardware load event <itemizedlist>
+<listitem><para>1- falling edge </para>
+</listitem>
+<listitem><para>0- rising edge </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="490" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="490" bodyend="498"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga6dfe72fff59cd9a3c6d6668477cb89af" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_cmp_disable_half_clock</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index)</argsstring>
+        <name>pwm_cmp_disable_half_clock</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>disable pwn cmp half clock </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cmp index (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="551" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="551" bodyend="554"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gaf6276b63203a02ddb4a8038335a814e4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_cmp_enable_half_clock</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index)</argsstring>
+        <name>pwm_cmp_enable_half_clock</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>enable pwm cmp half clock </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cmp index (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="562" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="562" bodyend="565"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gae0eff51b13322ba010249ddef3f7b74a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_cmp_update_jitter_value</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index, uint8_t jitter)</argsstring>
+        <name>pwm_cmp_update_jitter_value</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>jitter</declname>
+        </param>
+        <briefdescription>
+<para>update pwm cmp jitter counter compare value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cmp index (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">jitter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>jitter value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="574" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="574" bodyend="577"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga996d3cc87106819c86c84a4211896baf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_cmp_update_cmp_value</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index, uint32_t cmp, uint16_t ex_cmp)</argsstring>
+        <name>pwm_cmp_update_cmp_value</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>cmp</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>ex_cmp</declname>
+        </param>
+        <briefdescription>
+<para>update pwm cmp value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cmp index (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>clock counter compare value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ex_cmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>extended counter compare value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="587" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="587" bodyend="592"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga8848a309237e0ff575539b4a56ff2aab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_cmp_force_value</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index, uint32_t cmp)</argsstring>
+        <name>pwm_cmp_force_value</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>cmp</declname>
+        </param>
+        <briefdescription>
+<para>Forced update of pwm cmp register value, cmp content guaranteed accurate by user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cmp index (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cmp register data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="618" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="618" bodyend="621"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gae558b81939126252a9f4133e270a1db2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_config_cmp</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index, pwm_cmp_config_t *config)</argsstring>
+        <name>pwm_config_cmp</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1ga45d0bbf64983fdf8d5790fe1e7f082ca" kindref="member">pwm_cmp_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>config pwm cmp </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cmp index (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1ga45d0bbf64983fdf8d5790fe1e7f082ca" kindref="member">pwm_cmp_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="630" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="630" bodyend="653"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga7f7334138f8be2ba6185be01d25d7894" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_config_output_channel</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index, pwm_output_channel_t *config)</argsstring>
+        <name>pwm_config_output_channel</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1ga34e3025180efe7e28f0b9363f8b9562d" kindref="member">pwm_output_channel_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>config pwm output channel </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index (0..(PWM_SOC_PWM_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1ga34e3025180efe7e28f0b9363f8b9562d" kindref="member">pwm_output_channel_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="662" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="662" bodyend="667"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gaab40c6308dd36f75a8a7c874353525c0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_config_fault_source</definition>
+        <argsstring>(PWM_Type *pwm_x, pwm_fault_source_config_t *config)</argsstring>
+        <name>pwm_config_fault_source</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1gadc0c4d4093de7327553706b9a1e532ed" kindref="member">pwm_fault_source_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>config pwm fault source </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1gadc0c4d4093de7327553706b9a1e532ed" kindref="member">pwm_fault_source_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="675" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="675" bodyend="686"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga80b94a84805bed2a91c1dd40fd07d623" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_clear_fault</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_clear_fault</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>clear pwm fault status </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="693" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="693" bodyend="697"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gaf264cad56f1f5b28b3119543be96ef39" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_stop_counter</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_stop_counter</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>stop the pwm timer counter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="704" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="704" bodyend="707"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gad309e48c2c0d25ad2737e5b79161b13b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_start_counter</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_start_counter</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>start pwm timer counter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="714" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="714" bodyend="717"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga46434e8e77deacac85e24a544cb1aa7f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_enable_sw_force</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_enable_sw_force</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>enable software force </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="724" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="724" bodyend="727"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga7a9c0859f91079777d1d80daf96679cc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_disable_sw_force</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_disable_sw_force</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>disable software force , force will take effect </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="734" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="734" bodyend="737"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga610b6ab30f0aec10308434bf8dabe495" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_enable_reload_at_synci</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_enable_reload_at_synci</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>enable pwm reload value by synci </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="744" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="744" bodyend="747"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga5aedb1cbe162042b4f0602140858d73b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_disable_output</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index)</argsstring>
+        <name>pwm_disable_output</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>disable pwm output </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm index (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="755" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="755" bodyend="758"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga22c7f7c49707127683758a7889828efd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_enable_output</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index)</argsstring>
+        <name>pwm_enable_output</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>enable pwm output </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm index (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="766" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="766" bodyend="769"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga4e43e56bdd123dde299979d8d3b6bc13" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_set_force_output</definition>
+        <argsstring>(PWM_Type *pwm_x, uint32_t output_mask)</argsstring>
+        <name>pwm_set_force_output</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>output_mask</declname>
+        </param>
+        <briefdescription>
+<para>config pwm force output level per output channel </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">output_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM output channel force level, set it using the macro <itemizedlist>
+<listitem><para><ref refid="group__pwm__interface_1ga3565fe004fcc1bb8b474c52f5ec9b47d" kindref="member">PWM_FORCE_OUTPUT(pwm_index, force_output)</ref> </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="777" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="777" bodyend="780"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gaa682109c815dc832442634d3fb97a840" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_config_force_polarity</definition>
+        <argsstring>(PWM_Type *pwm_x, bool polarity)</argsstring>
+        <name>pwm_config_force_polarity</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>polarity</declname>
+        </param>
+        <briefdescription>
+<para>config pwm force polarity </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">polarity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>polarity of input pwm_force <itemizedlist>
+<listitem><para>1- active low </para>
+</listitem>
+<listitem><para>0- active high </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="790" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="790" bodyend="793"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga80af2ff06c4e2e0f7888d7790513ad04" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_config_force_cmd_timing</definition>
+        <argsstring>(PWM_Type *pwm_x, pwm_force_cmd_timing_t timing)</argsstring>
+        <name>pwm_config_force_cmd_timing</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1ga50036f09edbb59ea9dc3b1544872b6c5" kindref="member">pwm_force_cmd_timing_t</ref></type>
+          <declname>timing</declname>
+        </param>
+        <briefdescription>
+<para>config the force effective time </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">timing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1ga50036f09edbb59ea9dc3b1544872b6c5" kindref="member">pwm_force_cmd_timing_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="801" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="801" bodyend="804"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gab705dcf315bddfd0275004d8b0751b56" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_enable_pwm_sw_force_output</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index)</argsstring>
+        <name>pwm_enable_pwm_sw_force_output</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>enable pwm sw force output </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm cmp index (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="812" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="812" bodyend="816"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga9145d3222f7df98f658045774820da4f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_disable_pwm_sw_force_output</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index)</argsstring>
+        <name>pwm_disable_pwm_sw_force_output</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>disable pwm sw force output </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm cmp index (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="824" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="824" bodyend="827"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga099adc8553c2dfd7bf910e979f875a51" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_config_pwm</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index, pwm_config_t *config, bool enable_pair_mode)</argsstring>
+        <name>pwm_config_pwm</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1ga2c0bb5092bbbf753f94b4fc27d90509b" kindref="member">pwm_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable_pair_mode</declname>
+        </param>
+        <briefdescription>
+<para>config PWM channel configure registe </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm channel index (0..(PWM_SOC_PWM_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1ga2c0bb5092bbbf753f94b4fc27d90509b" kindref="member">pwm_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable_pair_mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enable pair mode <itemizedlist>
+<listitem><para>1- PWM output is in pair mode </para>
+</listitem>
+<listitem><para>0- PWM output is in indepandent mode </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="839" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="839" bodyend="852"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga3f2bb59665b2484b11b2200ea26f072d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t pwm_get_reload_val</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_get_reload_val</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>getting the counter reload value for a pwm timer </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>pwm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reload value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="860" column="24" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="860" bodyend="863"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga4e9f9360d278d4b918e69558521957bd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t pwm_get_ex_reload_val</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_get_ex_reload_val</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>getting the extended counter reload value for a pwm timer </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>pwm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>extended reload value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="871" column="24" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="871" bodyend="874"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gac53acc32bb2a1aa56b3f64ca2ef05711" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t pwm_get_counter_val</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_get_counter_val</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>getting the value of the pwm counter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>pwm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>counter value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="882" column="24" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="882" bodyend="885"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga463a517aeb30835d44dac8a774e3f5eb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t pwm_get_ex_counter_val</definition>
+        <argsstring>(PWM_Type *pwm_x)</argsstring>
+        <name>pwm_get_ex_counter_val</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <briefdescription>
+<para>getting the value of the pwm extended counter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>pwm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>counter value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="893" column="24" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="893" bodyend="896"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga875c3b524878f89b2cfc4c8c65ac031b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t pwm_load_cmp_shadow_on_match</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index, pwm_cmp_config_t *config)</argsstring>
+        <name>pwm_load_cmp_shadow_on_match</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1ga45d0bbf64983fdf8d5790fe1e7f082ca" kindref="member">pwm_cmp_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>pwm load cmp shadow on match </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cmp index (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1ga45d0bbf64983fdf8d5790fe1e7f082ca" kindref="member">pwm_cmp_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>or status_success </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="906" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="11" bodyend="22" declfile="drivers/inc/hpm_pwm_drv.h" declline="906" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga4abbe229029451c21d4a3b9a885fec17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pwm_get_captured_count</definition>
+        <argsstring>(PWM_Type *pwm_x, uint32_t *buf, pwm_counter_type_t counter, uint8_t start_index, uint8_t num)</argsstring>
+        <name>pwm_get_captured_count</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1ga45b2e594765c6628f867361592b6aed3" kindref="member">pwm_counter_type_t</ref></type>
+          <declname>counter</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>start_index</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+<para>pwm get captured count </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>count value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">counter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1ga45b2e594765c6628f867361592b6aed3" kindref="member">pwm_counter_type_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">start_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start capture index (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>capture num (1..PWM_SOC_CMP_MAX_COUNT) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="919" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="24" bodyend="36" declfile="drivers/inc/hpm_pwm_drv.h" declline="919" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga16fbbe430ce2777f41b952d1296babcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pwm_get_default_cmp_config</definition>
+        <argsstring>(PWM_Type *pwm_x, pwm_cmp_config_t *config)</argsstring>
+        <name>pwm_get_default_cmp_config</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1ga45d0bbf64983fdf8d5790fe1e7f082ca" kindref="member">pwm_cmp_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>get default cmp config </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1ga45d0bbf64983fdf8d5790fe1e7f082ca" kindref="member">pwm_cmp_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="927" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="38" bodyend="52" declfile="drivers/inc/hpm_pwm_drv.h" declline="927" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gaf29fd181099584eb7ee2f9e676369b8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pwm_get_default_output_channel_config</definition>
+        <argsstring>(PWM_Type *pwm_x, pwm_output_channel_t *config)</argsstring>
+        <name>pwm_get_default_output_channel_config</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1ga34e3025180efe7e28f0b9363f8b9562d" kindref="member">pwm_output_channel_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>get default output channel config </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1ga34e3025180efe7e28f0b9363f8b9562d" kindref="member">pwm_output_channel_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="935" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="54" bodyend="60" declfile="drivers/inc/hpm_pwm_drv.h" declline="935" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gaa3fffce1616954cd9c582421cb4c5eb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pwm_get_default_pwm_config</definition>
+        <argsstring>(PWM_Type *pwm_x, pwm_config_t *config)</argsstring>
+        <name>pwm_get_default_pwm_config</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1ga2c0bb5092bbbf753f94b4fc27d90509b" kindref="member">pwm_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>get default pwm config </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1ga2c0bb5092bbbf753f94b4fc27d90509b" kindref="member">pwm_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="943" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="62" bodyend="71" declfile="drivers/inc/hpm_pwm_drv.h" declline="943" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga6c3f63e3c2bd9fd7f785763994173d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pwm_get_default_pwm_pair_config</definition>
+        <argsstring>(PWM_Type *pwm_x, pwm_pair_config_t *config)</argsstring>
+        <name>pwm_get_default_pwm_pair_config</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1ga3f454b7805db859c03c86be12e97c20f" kindref="member">pwm_pair_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>get default pwm pair config </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1ga3f454b7805db859c03c86be12e97c20f" kindref="member">pwm_pair_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="951" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="73" bodyend="77" declfile="drivers/inc/hpm_pwm_drv.h" declline="951" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga97f5c1519173b5c73d24d55f7cf5a725" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t pwm_setup_waveform</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t pwm_index, pwm_config_t *pwm_config, uint8_t cmp_start_index, pwm_cmp_config_t *cmp, uint8_t cmp_num)</argsstring>
+        <name>pwm_setup_waveform</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>pwm_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1ga2c0bb5092bbbf753f94b4fc27d90509b" kindref="member">pwm_config_t</ref> *</type>
+          <declname>pwm_config</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmp_start_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1ga45d0bbf64983fdf8d5790fe1e7f082ca" kindref="member">pwm_cmp_config_t</ref> *</type>
+          <declname>cmp</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmp_num</declname>
+        </param>
+        <briefdescription>
+<para>setup waveform </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm channel index (0..(PWM_SOC_PWM_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in"><ref refid="structpwm__config" kindref="compound">pwm_config</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1ga2c0bb5092bbbf753f94b4fc27d90509b" kindref="member">pwm_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp_start_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm cmp index (0..(PWM_SOC_PWM_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1ga45d0bbf64983fdf8d5790fe1e7f082ca" kindref="member">pwm_cmp_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cmp num (1..PWM_SOC_CMP_MAX_COUNT), cmp[cmp_num-1] must not overflow </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="964" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="115" bodyend="138" declfile="drivers/inc/hpm_pwm_drv.h" declline="964" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga5c174ee4e7326813fc3a5c3719d39bbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t pwm_setup_waveform_in_pair</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t pwm_index, pwm_pair_config_t *pwm_pair_config, uint8_t cmp_start_index, pwm_cmp_config_t *cmp, uint8_t cmp_num)</argsstring>
+        <name>pwm_setup_waveform_in_pair</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>pwm_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1ga3f454b7805db859c03c86be12e97c20f" kindref="member">pwm_pair_config_t</ref> *</type>
+          <declname>pwm_pair_config</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmp_start_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pwm__interface_1ga45d0bbf64983fdf8d5790fe1e7f082ca" kindref="member">pwm_cmp_config_t</ref> *</type>
+          <declname>cmp</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmp_num</declname>
+        </param>
+        <briefdescription>
+<para>setup pwm waveform in pair </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm channel index (0..(PWM_SOC_PWM_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in"><ref refid="structpwm__pair__config" kindref="compound">pwm_pair_config</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1ga3f454b7805db859c03c86be12e97c20f" kindref="member">pwm_pair_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp_start_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pwm cmp index (0..(PWM_SOC_PWM_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__pwm__interface_1ga45d0bbf64983fdf8d5790fe1e7f082ca" kindref="member">pwm_cmp_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cmp num (1..PWM_SOC_CMP_MAX_COUNT), cmp[cmp_num-1] must not overflow </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref> or <ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="978" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="79" bodyend="113" declfile="drivers/inc/hpm_pwm_drv.h" declline="978" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga6392dab670e8f4ae9e6476af3c58bacd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t pwm_update_raw_cmp_edge_aligned</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t cmp_index, uint32_t target_cmp)</argsstring>
+        <name>pwm_update_raw_cmp_edge_aligned</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmp_index</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>target_cmp</declname>
+        </param>
+        <briefdescription>
+<para>update raw compare value for edge aligned waveform </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of cmp to be adjusted (0..(PWM_SOC_PWM_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">target_cmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target compare value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref> or <ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="990" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="140" bodyend="145" declfile="drivers/inc/hpm_pwm_drv.h" declline="990" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gaaa52e327abf31dd95477c8a9daf432d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t pwm_update_raw_cmp_central_aligned</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t cmp1_index, uint8_t cmp2_index, uint32_t target_cmp1, uint32_t target_cmp2)</argsstring>
+        <name>pwm_update_raw_cmp_central_aligned</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmp1_index</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmp2_index</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>target_cmp1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>target_cmp2</declname>
+        </param>
+        <briefdescription>
+<para>update raw compare value for central aligned waveform </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp1_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of cmp1 to be adjusted (cmp1_index must be even number) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp2_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of cmp2 to be adjusted (cmp2_index must be odd number) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">target_cmp1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target compare value for cmp1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">target_cmp2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target compare value for cmp2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref> or <ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref> cmp1_index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="1003" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="147" bodyend="161" declfile="drivers/inc/hpm_pwm_drv.h" declline="1003" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__pwm__interface_1gaf5f46e40ddde95d913d0a4ba9809d007" prot="public" static="no">
+        <name>PWM_UNLOCK_KEY</name>
+        <initializer>(0xB0382607UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="21" column="9" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pwm__interface_1ga41e3e49216607a2255830976ae54765e" prot="public" static="no">
+        <name>PWM_IRQ_FAULT</name>
+        <initializer><ref refid="HPM6700_2ip_2hpm__pwm__regs_8h_1a9dc9c7834be67d5544affe2d79664ae5" kindref="member">PWM_IRQEN_FAULTIRQE_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="24" column="9" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pwm__interface_1ga6027230b009bab73a4c6faed03336234" prot="public" static="no">
+        <name>PWM_IRQ_EX_RELOAD</name>
+        <initializer><ref refid="HPM6700_2ip_2hpm__pwm__regs_8h_1a58f02f0824228dfe801806eec5eaa4f9" kindref="member">PWM_IRQEN_XRLDIRQE_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="25" column="9" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pwm__interface_1gaff362eb90ec8c478297709219aef1a9d" prot="public" static="no">
+        <name>PWM_IRQ_HALF_RELOAD</name>
+        <initializer><ref refid="HPM6700_2ip_2hpm__pwm__regs_8h_1a58b35db11e328af2d21b47f56ba44879" kindref="member">PWM_IRQEN_HALFRLDIRQE_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="26" column="9" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pwm__interface_1gadb62c3b73963f70dc050a540d01d3abf" prot="public" static="no">
+        <name>PWM_IRQ_RELOAD</name>
+        <initializer><ref refid="HPM6700_2ip_2hpm__pwm__regs_8h_1a178822356605020880bed1aaa5595e2a" kindref="member">PWM_IRQEN_RLDIRQE_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="27" column="9" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pwm__interface_1ga06b52a73bf14f35074f12d8ebcdb01fa" prot="public" static="no">
+        <name>PWM_IRQ_CMP</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="HPM6700_2ip_2hpm__pwm__regs_8h_1a65d7650089d76d1083131baa15491f09" kindref="member">PWM_IRQEN_CMPIRQEX_SET</ref>((1 &lt;&lt; x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="28" column="9" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pwm__interface_1ga3565fe004fcc1bb8b474c52f5ec9b47d" prot="public" static="no">
+        <name>PWM_FORCE_OUTPUT</name>
+        <param><defname>pwm_index</defname></param>
+        <param><defname>force_output</defname></param>
+        <initializer>    (force_output &lt;&lt; (pwm_index &lt;&lt; 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="31" column="9" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pwm__interface_1gaa956730210c5ce163a30e78269cd1eb0" prot="public" static="no">
+        <name>PWM_DUTY_CYCLE_FP_MAX</name>
+        <initializer>((1U &lt;&lt; 24) - 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="34" column="9" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PWM driver APIs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

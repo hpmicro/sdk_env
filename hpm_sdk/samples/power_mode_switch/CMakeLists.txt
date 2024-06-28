@@ -1,0 +1,31 @@
+# Copyright (c) 2021 HPMicro
+# SPDX-License-Identifier: BSD-3-Clause
+
+cmake_minimum_required(VERSION 3.13)
+
+if("${HPM_BUILD_TYPE}" STREQUAL "")
+    SET(HPM_BUILD_TYPE flash_xip)
+endif()
+
+find_package(hpm-sdk REQUIRED HINTS $ENV{HPM_SDK_BASE})
+
+project(power_mode_switch)
+
+sdk_compile_definitions(-DBOARD_CONSOLE_UART_BASE=HPM_PUART)
+sdk_compile_definitions(-DBOARD_CONSOLE_UART_CLK_NAME=clock_puart)
+sdk_app_src(src/power_mode_switch.c)
+
+if("${HPM_SOC}" STREQUAL "HPM6750")
+    sdk_app_src(src/hpm67xx/low_power.c)
+elseif("${HPM_SOC}" STREQUAL "HPM6360")
+    sdk_app_src(src/hpm63xx/low_power.c)
+elseif("${HPM_SOC}" STREQUAL "HPM6280")
+    sdk_app_src(src/hpm62xx/low_power.c)
+elseif("${HPM_SOC}" STREQUAL "HPM6880")
+    sdk_app_src(src/hpm68xx/low_power.c)
+elseif("${HPM_SOC}" MATCHES "^HPM53")
+    sdk_app_src(src/hpm53xx/low_power.c)
+elseif("${HPM_SOC}" STREQUAL "HPM6E80")
+    sdk_app_src(src/hpm6exx/low_power.c)
+endif()
+generate_ide_projects()

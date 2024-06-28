@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.3. Audio Wav Decoder &mdash; HPMico Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="1.4. lv_demo_music" href="../lvgl_audio_player/README_zh.html" />
+    <link rel="prev" title="1.2. Audio MP3 Decoder" href="../decoder_mp3/README_zh.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">使用说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../boards/index_zh.html">开发板介绍</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index_zh.html">例程</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index_zh.html">1. Audio Codec</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../audio_loopback/README_zh.html">1.1. Audio Codec Loopback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../decoder_mp3/README_zh.html">1.2. Audio MP3 Decoder</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.3. Audio Wav Decoder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">1.3.1. 概述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1.3.2. 工程配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">1.3.3. 硬件设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">1.3.4. 已知问题</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">1.3.5. 运行现象</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lvgl_audio_player/README_zh.html">1.4. lv_demo_music</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryrb/README_zh.html">2. CherryRB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryusb/index_zh.html">3. CherryUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coremark/README_zh.html">4. CoreMark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dhrystone/README_zh.html">5. Dhrystone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dma_manager/README_zh.html">6. DMA Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dsp/README_zh.html">7. DSP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../eeprom_emulation/index_zh.html">8. EEPROM Emulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freemaster/README_zh.html">9. Freemaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hello_world/README_zh.html">10. Hello World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hpm_math/index_zh.html">11. HPM Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image/index_zh.html">12. IMAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lvgl/index_zh.html">13. LVGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lwip/index_zh.html">14. lwIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mbedtls/README_zh.html">15. Mbedtls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../memstress/index_zh.html">16. Memory Stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../microros/index_zh.html">17. Microros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modbus/index_zh.html">18. Modbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motor_ctrl/index_zh.html">19. HPM Motor Ctrl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multicore/index_zh.html">20. Multicore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../power_mode_switch/README_zh.html">21. Power Mode Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rgb_led/README_zh.html">22. RGB LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rom_api/index_zh.html">23. ROM API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rtos/index_zh.html">24. RTOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../segger_rtt/README_zh.html">25. Segger RTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tflm/index_zh.html">26. TensorFlowLiteMicro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinycrypt/index_zh.html">27. Tinycrypt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyengine/person_obj/README_zh.html">28. Person Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyuf2/README_zh.html">29. TinyUF2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyusb/index_zh.html">30. TinyUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../touch_panel/README_zh.html">31. Touch Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vglite/index_zh.html">32. VGLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_components/index_zh.html">33. SPI_COMPONENTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2s_emulation/README_zh.html">34. SPI模拟I2S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_sdcard/index_zh.html">35. SPI驱动SD卡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherrysh/index_zh.html">36. CherrySH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ethercat/index_zh.html">37. EtherCAT</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../drivers/index_zh.html">驱动示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_doc.html">SDK API 参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HPMico Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index_zh.html">例程</a></li>
+          <li class="breadcrumb-item"><a href="../index_zh.html"><span class="section-number">1. </span>Audio Codec</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.3. </span>Audio Wav Decoder</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/samples/audio_codec/decoder_wav/README_zh.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="audio-wav-decoder">
+<h1><span class="section-number">1.3. </span>Audio Wav Decoder<a class="headerlink" href="#audio-wav-decoder" title="Permalink to this heading"></a></h1>
+<section id="id1">
+<h2><span class="section-number">1.3.1. </span>概述<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>音频编解码示例工程展示了如何播放WAV格式音频。
+在这个工程中，读取SD卡中的wav格式文件然后进行播放
+MCU会通过I2S接口将解码的数据发送给音频编解码器，音频编解码器会解码收到的数据并播放。</p>
+</section>
+<section id="id2">
+<h2><span class="section-number">1.3.2. </span>工程配置<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>在文件<code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>中, 根据需求设置音频播放器件的类型，默认使用DAO播放。如存在板载音频编解码芯片， 可以设置匹配的音频编解码芯片类型， 例如：“set(CONFIG_CODEC “sgtl5000”)”。</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2><span class="section-number">1.3.3. </span>硬件设置<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>根据工程配置， 使用DAO播放时将喇叭接到<a class="reference internal" href="../../../boards/index_zh.html#lab-board-app-dao"><span class="std std-ref">DAO</span></a>接口， 使用音频编解码芯片播放时将耳机接到音频编解码芯片的<a class="reference internal" href="../../../boards/index_zh.html#lab-board-app-headphone"><span class="std std-ref">耳机</span></a>接口。</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2><span class="section-number">1.3.4. </span>已知问题<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<p>使用DAO播放某些音频时会产生噪声。</p>
+</section>
+<section id="id5">
+<h2><span class="section-number">1.3.5. </span>运行现象<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<p>当工程正确运行后，选择音乐名称，然后耳机会播放这首音乐，而串口终端会输出如下信息：</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">audio codec example</span>
+<span class="go">SD card has been mounted successfully</span>
+
+
+<span class="go">***********Music List**********</span>
+
+<span class="go">**Enter any non-numeric key to change pages or music number to choose music**</span>
+
+
+<span class="go">***********Page**********</span>
+<span class="go">0: music1.wav</span>
+
+<span class="go">1: music2.wav</span>
+
+<span class="go">2: music3.wav</span>
+
+<span class="go">3: music4.wav</span>
+
+<span class="go">4: music5.wav</span>
+
+<span class="go">5: music6.wav</span>
+
+<span class="go">6: mucsic7.wav</span>
+
+<span class="go">7: Ring10.wav</span>
+
+<span class="go">8: on_phone.wav</span>
+
+<span class="go">9: calling.wav</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, HPMicro.
+      <span class="lastupdated">Last updated on Jun 28, 2024.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+var HPM6E00_2ip_2hpm__pmon__regs_8h =
+[
+    [ "PMON_Type", "structPMON__Type.html", "structPMON__Type" ],
+    [ "PMON_IRQ_ENABLE_ENABLE_GET", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#a352ff546fa83f8cd221f53c6d04a9fda", null ],
+    [ "PMON_IRQ_ENABLE_ENABLE_MASK", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#a0cab6d611fcade951770c6eb16ceb43e", null ],
+    [ "PMON_IRQ_ENABLE_ENABLE_SET", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#a8901cc8fe8542e804db5939a0c9e8257", null ],
+    [ "PMON_IRQ_ENABLE_ENABLE_SHIFT", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#aa84d01757868f812a4548046e20b2fb8", null ],
+    [ "PMON_IRQ_FLAG_FLAG_GET", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#afb6b1218fc825c7e684c0059a329e5c0", null ],
+    [ "PMON_IRQ_FLAG_FLAG_MASK", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#a6c4b818c02999422b4111c35330350b7", null ],
+    [ "PMON_IRQ_FLAG_FLAG_SET", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#acea0326d0ddf39f50deb78ed8da6b7f0", null ],
+    [ "PMON_IRQ_FLAG_FLAG_SHIFT", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#a280fc884c7617b2bb34ca41284285ce4", null ],
+    [ "PMON_MONITOR_CLOCK0", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#a26612008f470dcf793f5ba64ef57e876", null ],
+    [ "PMON_MONITOR_CLOCK1", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#aae7b4c90b1cb55dfa9fe37cb52fbf9b7", null ],
+    [ "PMON_MONITOR_CONTROL_ACTIVE_GET", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#a0d7e5ecdd2be8b14560a9e8deed6e0db", null ],
+    [ "PMON_MONITOR_CONTROL_ACTIVE_MASK", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#a4ed347d42f6778b2f0b81bf2566afd1a", null ],
+    [ "PMON_MONITOR_CONTROL_ACTIVE_SET", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#acaae226d763ee4335c2547af2dcfff7d", null ],
+    [ "PMON_MONITOR_CONTROL_ACTIVE_SHIFT", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#a54da62f353080086ff16b8c275009223", null ],
+    [ "PMON_MONITOR_CONTROL_ENABLE_GET", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#a94d305abcebc7a51b59005ed92a429c4", null ],
+    [ "PMON_MONITOR_CONTROL_ENABLE_MASK", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#aae7ad74cc14c35a657fb5a5da9bfaa8d", null ],
+    [ "PMON_MONITOR_CONTROL_ENABLE_SET", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#a549325e09032a9c2a403eb394b47a613", null ],
+    [ "PMON_MONITOR_CONTROL_ENABLE_SHIFT", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#aaff679f7381f8086d1b6d99c946cf3a5", null ],
+    [ "PMON_MONITOR_GLITCH0", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#a1a47f6c88d2ec5ec193feced29416140", null ],
+    [ "PMON_MONITOR_GLITCH1", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#a29b951fcadcfefd0d32324ebc7327e3c", null ],
+    [ "PMON_MONITOR_STATUS_FLAG_GET", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#a18f094ca41c4565d3cba5274f5844329", null ],
+    [ "PMON_MONITOR_STATUS_FLAG_MASK", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#af5c5b7049acb325ef23ca4ec51ce4fa4", null ],
+    [ "PMON_MONITOR_STATUS_FLAG_SET", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#af8c6bc5479662de8ccc23caea15ae438", null ],
+    [ "PMON_MONITOR_STATUS_FLAG_SHIFT", "HPM6E00_2ip_2hpm__pmon__regs_8h.html#aa835de3184441d9381eb60ed71fda346", null ]
+];

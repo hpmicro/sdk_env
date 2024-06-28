@@ -6,7 +6,6 @@ path:
   NINJA: tools/ninja
   OPENOCD: tools/openocd
   PYTHON3: tools/python3
-  SCRIPTS: tools/scripts
 env:
   HPM_SDK_BASE: ~
   GNURISCV_TOOLCHAIN_PATH: ~
@@ -14,29 +13,24 @@ env:
     - gcc
     - nds-gcc
     - nds-llvm
-build-type:
-  release: ~
-  debug: ~
+    - zcc
+hpm-build-type:
+  ram: ~
   flash_xip: ~
-  flash_xip_release: ~
   flash_sdram_xip:
     on-board-ram: [sdram]
-  flash_sdram_xip_release:
-    on-board-ram: [sdram]
   flash_uf2:
-    feature: ~
-  flash_uf2_release:
     feature: ~
   flash_sdram_uf2:
     on-board-ram: [sdram]
     feature: ~
-  flash_sdram_uf2_release:
-    on-board-ram: [sdram]
-    feature: ~
   sec_core_img:
     feature: [multicore]
-  sec_core_img_release:
-    feature: [multicore]
-default-type: [flash_sdram_xip, flash_xip]
+cmake-build-type:
+  - debug
+  - release
+default-type:
+  default: [flash_sdram_xip, flash_xip]
+  HPM6E80: [flash_xip, flash_sdram_xip]
 default-sample: hello_world
 default-board: hpm6750evkmini

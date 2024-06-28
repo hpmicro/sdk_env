@@ -1,0 +1,48 @@
+var hpm__tsns__drv_8h =
+[
+    [ "TSNS_TEMP_SCALE", "group__tsns__interface.html#gaddb3a248abbf35e45c6a22fd255ff60d", null ],
+    [ "tsns_clear_type_mask_t", "group__tsns__interface.html#gaccf7290fac507e5a9e3da0f9ba4cb0c4", [
+      [ "tsns_clear_min", "group__tsns__interface.html#ggaccf7290fac507e5a9e3da0f9ba4cb0c4aeea53002130fcbf0d87fe948e34e23c9", null ],
+      [ "tsns_clear_max", "group__tsns__interface.html#ggaccf7290fac507e5a9e3da0f9ba4cb0c4ab25f430f89cca0f25bb242979c7b415c", null ],
+      [ "tsns_clear_under_temp", "group__tsns__interface.html#ggaccf7290fac507e5a9e3da0f9ba4cb0c4a037b929701a78e6212d4915759d5e06c", null ],
+      [ "tsns_clear_over_temp", "group__tsns__interface.html#ggaccf7290fac507e5a9e3da0f9ba4cb0c4a2a57d339c7d43c5ffc920c690ea86aed", null ],
+      [ "tsns_clear_irq", "group__tsns__interface.html#ggaccf7290fac507e5a9e3da0f9ba4cb0c4ab592ea5f02f8ce68dcbb1f1b5a557653", null ]
+    ] ],
+    [ "tsns_event_t", "group__tsns__interface.html#ga3f015866b6ebe0b187af80df5b5420e3", [
+      [ "tsns_event_irq", "group__tsns__interface.html#gga3f015866b6ebe0b187af80df5b5420e3ac4288dbf5eddc129392c08df35416bb1", null ],
+      [ "tsns_event_reset", "group__tsns__interface.html#gga3f015866b6ebe0b187af80df5b5420e3ab56657606991456fa2bdfdd0d3379ea5", null ]
+    ] ],
+    [ "tsns_clear_with_mask", "group__tsns__interface.html#gad40f24ac33637222de8d11f9801f0304", null ],
+    [ "tsns_config_irq_threshold", "group__tsns__interface.html#ga9b3d128b08687dd004cdccf46b8d408b", null ],
+    [ "tsns_config_reset_threshold", "group__tsns__interface.html#ga8bdf73f5d81c43e601fad11bac53a40d", null ],
+    [ "tsns_configure_high_limit_event", "group__tsns__interface.html#ga068e0012bf5e447ce60ca3938ad77714", null ],
+    [ "tsns_configure_limit_event", "group__tsns__interface.html#ga3488d4905f959751347ca194f63b4724", null ],
+    [ "tsns_configure_low_limit_event", "group__tsns__interface.html#ga26fd8bd4ac335d928dd693e0785c4f79", null ],
+    [ "tsns_disable", "group__tsns__interface.html#gaeff7aff358b7590c597af71507d02ad1", null ],
+    [ "tsns_disable_async_mode", "group__tsns__interface.html#ga9b44bca38eee18ba69f8d09c26093988", null ],
+    [ "tsns_disable_compare_max", "group__tsns__interface.html#gaf5f50a9bda2606053537032da4969ba1", null ],
+    [ "tsns_disable_compare_min", "group__tsns__interface.html#gadef4f7a0bbfa6e883c20fa4b2ccc5a33", null ],
+    [ "tsns_disable_limit_trigger_irq", "group__tsns__interface.html#ga2f9e07a8b1b58b81293e891f088c412f", null ],
+    [ "tsns_enable", "group__tsns__interface.html#ga003af7fd8314ca8d51f56cdfa0bdb857", null ],
+    [ "tsns_enable_async_mode", "group__tsns__interface.html#gac8d3011fdeb35749a23dba4d726b658f", null ],
+    [ "tsns_enable_compare_max", "group__tsns__interface.html#ga51fd8a3edcb0646fad151513b2e12717", null ],
+    [ "tsns_enable_compare_min", "group__tsns__interface.html#gae8e755822c3d86ea7233d163c980ab12", null ],
+    [ "tsns_enable_continuous_mode", "group__tsns__interface.html#ga2e653f560d7c6a933a7ce234f8a741e2", null ],
+    [ "tsns_enable_limit_trigger_irq", "group__tsns__interface.html#ga94dad415c1d0694fb90d0a6f5207b734", null ],
+    [ "tsns_enable_limit_trigger_reset", "group__tsns__interface.html#gaec1427d18bc57db6f23fde5f32fadf21", null ],
+    [ "tsns_enable_trigger_mode", "group__tsns__interface.html#ga95320404d8553dbf1fe4c37660e6475a", null ],
+    [ "tsns_get_current_temp", "group__tsns__interface.html#ga5efe0f5c08235140fbfeb8e77bc1ae0c", null ],
+    [ "tsns_get_current_temp_in_raw", "group__tsns__interface.html#gafb1eeee69e47e53f9d004bb8697257b1", null ],
+    [ "tsns_get_max_temp_raw", "group__tsns__interface.html#gadf2cfa88df587c70cfc744ae2f7e2851", null ],
+    [ "tsns_get_min_temp_raw", "group__tsns__interface.html#gacebf3fffe8939d169650d6206a88f967", null ],
+    [ "tsns_get_temp_age", "group__tsns__interface.html#ga455239eca0fe7e00aa725261b7e85f5c", null ],
+    [ "tsns_set_average", "group__tsns__interface.html#ga50e3be4f1fc20dcaaec6e60e221f5035", null ],
+    [ "tsns_set_irq_threshold_high", "group__tsns__interface.html#ga742018eae9bbd7ddddd7fceb818ceb7b", null ],
+    [ "tsns_set_irq_threshold_low", "group__tsns__interface.html#ga1fc39c72e39f9f1f0a46ef47313db0a8", null ],
+    [ "tsns_set_reset_threshold_high", "group__tsns__interface.html#gaedfa7316bd0dac33bcbae3ed8ea00001", null ],
+    [ "tsns_set_reset_threshold_low", "group__tsns__interface.html#gad04272513d6c0b6edd2591a874a3a101", null ],
+    [ "tsns_set_speed", "group__tsns__interface.html#gae97c2d1806b437f60eed64952a1f6630", null ],
+    [ "tsns_set_validity", "group__tsns__interface.html#ga446955dc64b283ce7cc217a4d4d0974b", null ],
+    [ "tsns_temperature_is_valid", "group__tsns__interface.html#gadba880b333bc141fc2cb08d417856fa5", null ],
+    [ "tsns_trigger_measurement", "group__tsns__interface.html#gaf82ae1e8de602cd046415e98a67ec051", null ]
+];

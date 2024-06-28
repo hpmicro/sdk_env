@@ -1,0 +1,1792 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__transform" kind="group">
+    <compoundname>transform</compoundname>
+    <title>DSP Transform Functions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__transform_1ga1ca5d48ae62a65107507c38c790e385e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_cfft_rd2_f32</definition>
+        <argsstring>(float32_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cfft_rd2_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cfft_rd2 of f32 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 13 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Example</bold> <preformatted>
+Given 128 samples (that is, FFT_LOGN = 7), the example of floating-point Radix-2 CFFT and
+CIFFT is as follows:
+     #define FFT_LOGN 7
+     float32_t src[2* (1 &lt;&lt; FFT_LOGN)] = {};
+     int32_t ret;
+     ret = hpm_dsp_cfft_rd2_f32(src, FFT_LOGN);
+     if (ret == 0)
+         Success
+     Else
+         Fail
+     ret = hpm_dsp_cifft_rd2_f32(src, FFT_LOGN);
+     if (ret == 0)
+          Success
+     Else
+          Fail
+
+This example also serves as a reference for examples of Q31 and Q15 Radix-2 CFFT and
+CIFFT functions.
+    </preformatted> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="4916" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="4916" bodyend="4925"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga8f8a9339650f53476e976474f3303129" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_cifft_rd2_f32</definition>
+        <argsstring>(float32_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cifft_rd2_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cifft_rd2 of f32 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 13 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="4934" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="4934" bodyend="4944"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1gad0224df7d8e32c31149ce9cdf2c55707" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_cfft_rd2_q15</definition>
+        <argsstring>(q15_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cfft_rd2_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cfft_rd2 of q15 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 13 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="4959" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="4959" bodyend="4968"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1gae7fb6317f565c4d11559678ff18ed955" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_cifft_rd2_q15</definition>
+        <argsstring>(q15_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cifft_rd2_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cifft_rd2 of q15 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 13 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="4983" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="4983" bodyend="4992"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga8fc38e35f132462a9a4b34ab216b7196" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_cfft_rd2_q31</definition>
+        <argsstring>(q31_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cfft_rd2_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cfft_rd2 of q31 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 13 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5007" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5007" bodyend="5017"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga571b6dee2ca287f93d546a3e62df172e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_cifft_rd2_q31</definition>
+        <argsstring>(q31_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cifft_rd2_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cfft_rd2 of q31 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 13 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5032" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5032" bodyend="5042"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1gadffca35ffc5078eec074116a599225af" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_cfft_rd4_f32</definition>
+        <argsstring>(float32_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cfft_rd4_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cfft_rd4 of f32 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set as 4, 6, 8 or 10 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Example</bold> <preformatted>
+Given 256 samples (that is, FFT_LOGN = 8), the example of floating-point Radix-4 CFFT and
+CIFFT is as follows:
+     #define FFT_LOGN 8
+     float32_t src[2* (1 &lt;&lt; FFT_LOGN)] = {};
+     int32_t ret;
+     ret = hpm_dsp_cfft_rd4_f32(src, FFT_LOGN);
+     if (ret == 0)
+         Success
+     Else
+         Fail
+     ret = riscv_dsp_cifft_rd4_f32(src, FFT_LOGN);
+     if (ret == 0)
+         Success
+     Else
+         Fail
+
+This example also serves as a reference for examples of Q31 or Q15 Radix-4 CFFT and
+CIFFT functions.
+    </preformatted> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5073" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5073" bodyend="5083"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga7af4f1d3c15b67eed5f21726bb0f404c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_cifft_rd4_f32</definition>
+        <argsstring>(float32_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cifft_rd4_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cifft_rd4 of f32 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set as 4, 6, 8 or 10 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5092" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5092" bodyend="5101"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga773ad5f6dbd964231307fed9a53d9b50" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_cfft_rd4_q15</definition>
+        <argsstring>(q15_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cfft_rd4_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cfft_rd4 of q15 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set as 4, 6, 8 or 10 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5116" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5116" bodyend="5125"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga34edf2668cdf71c343eb37367b4f8d60" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_cifft_rd4_q15</definition>
+        <argsstring>(q15_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cifft_rd4_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cifft_rd4 of q15 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set as 4, 6, 8 or 10 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5140" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5140" bodyend="5149"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga4fd0b94ec991439b7c6bd022fca0caae" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_cfft_rd4_q31</definition>
+        <argsstring>(q31_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cfft_rd4_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cfft_rd4 of q31 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set as 4, 6, 8 or 10 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5164" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5164" bodyend="5173"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1gad85c0cf525a168fe33a2f14217926871" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_cifft_rd4_q31</definition>
+        <argsstring>(q31_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cifft_rd4_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cifft_rd4 of q31 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set as 4, 6, 8 or 10 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5188" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5188" bodyend="5197"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga6187157d51fd9cc481346deb207ac680" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_cfft_f32</definition>
+        <argsstring>(float32_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cfft_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cfft of f32 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 13</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Example</bold> <preformatted>
+Given 128 samples (that is, FFT_LOGN = 7), the example of floating-point CFFT and
+CIFFT is as follows:
+     #define FFT_LOGN 7
+     float32_t src[2* (1 &lt;&lt; FFT_LOGN)] = {};
+     int32_t ret;
+     hpm_dsp_cfft_f32(src, FFT_LOGN);
+     hpm_dsp_cifft_f32(src, FFT_LOGN);
+
+This example also serves as a reference for examples of F16, F64, Q31 and Q15 CFFT and
+CIFFT functions.
+    </preformatted> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5219" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5219" bodyend="5228"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga25328b55bccd5470a5241f207db32889" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_cfft_f64</definition>
+        <argsstring>(float64_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cfft_f64</name>
+        <param>
+          <type>float64_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cfft of f64 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 13 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5236" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5236" bodyend="5245"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga2d1b6b117ceffd15340befdc2459cd5c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_cifft_f32</definition>
+        <argsstring>(float32_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cifft_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cifft of f32 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 13 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5253" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5253" bodyend="5262"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga80d30593248d81b533431bce10835bf3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_cifft_f64</definition>
+        <argsstring>(float64_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cifft_f64</name>
+        <param>
+          <type>float64_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cifft of f64 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 13 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5270" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5270" bodyend="5279"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga5ff435e352bd69171ebbc599e4e20b91" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_cfft_q15</definition>
+        <argsstring>(q15_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cfft_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cfft of q15 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 13</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5294" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5294" bodyend="5303"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga0965bc052276e874a04f766dc2263cd6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_cifft_q15</definition>
+        <argsstring>(q15_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cifft_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cifft of q15 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 13</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5317" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5317" bodyend="5326"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga853a2cba60d4ca179ed4ddb1dc59f564" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_cfft_q31</definition>
+        <argsstring>(q31_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cfft_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cfft of q31 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 13</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5340" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5340" bodyend="5349"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga777ed959fbe108e28adf4f8b941fba0d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_cifft_q31</definition>
+        <argsstring>(q31_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_cifft_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>cifft of q31 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 13</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5363" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5363" bodyend="5372"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1gaedb73a0185a23a37fc3a62e5830d174c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_rfft_f32</definition>
+        <argsstring>(float32_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_rfft_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>rfft of f32 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 4 to 14 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Example</bold> <preformatted>
+Given 128 samples (that is, FFT_LOGN = 7), the example of floating-point RFFT and RIFFT
+is as follows:
+     #define FFT_LOGN 7
+     float32_t src[(1 &lt;&lt; FFT_LOGN)] = {};
+     int32_t ret;
+     ret = hpm_dsp_rfft_f32(src, FFT_LOGN);
+     if (ret == 0)
+         Success
+     else
+         Fail
+     ret = riscv_dsp_rifft_f32(src, FFT_LOGN);
+     if (ret == 0)
+         Success
+     else
+         Fail
+
+This example also serves as a reference for examples of Q31 or Q15 RFFT and RIFFT
+functions.
+    </preformatted> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5403" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5403" bodyend="5412"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga73d9e92c9fed62ba566d03c4887928d8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_rfft_f64</definition>
+        <argsstring>(float64_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_rfft_f64</name>
+        <param>
+          <type>float64_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>rfft of f64 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 4 to 14 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5421" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5421" bodyend="5430"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga4162f89a895be19f3a6115040caf68cc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_rifft_f32</definition>
+        <argsstring>(float32_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_rifft_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>rifft of f32 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 4 to 14 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5439" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5439" bodyend="5444"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1gac7fbf1b2ff9de4cdd41ac57f2f61218e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_rifft_f64</definition>
+        <argsstring>(float64_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_rifft_f64</name>
+        <param>
+          <type>float64_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>rifft of f64 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 4 to 14 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5453" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5453" bodyend="5458"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1gabc4c70ef2b76bb2d5f9ceee7eca852dc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_rfft_q15</definition>
+        <argsstring>(q15_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_rfft_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>rfft of q15 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 4 to 14 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5473" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5473" bodyend="5478"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga505fbc56b39ce54d16d4ebd0a5f96bff" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_rifft_q15</definition>
+        <argsstring>(q15_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_rifft_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>rifft of q15 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 4 to 14 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5493" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5493" bodyend="5498"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1gaab3001c9fef7ae187ee349e86ceb99c0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_rfft_q31</definition>
+        <argsstring>(q31_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_rfft_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>rfft of q31 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 4 to 14 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5513" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5513" bodyend="5518"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga626758fc27f839e2cf75fa53c405f918" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_dsp_rifft_q31</definition>
+        <argsstring>(q31_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_rifft_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>rifft of q31 vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 4 to 14 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 success; -1 failure</para>
+</simplesect>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5533" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5533" bodyend="5538"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga7f8d458e22b61d58fb1800a728da2b9a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_dct_f32</definition>
+        <argsstring>(float32_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_dct_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 8</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Example</bold> <preformatted>
+Given 256 samples (that is, FFT_LOGN = 8), the example of floating-point (DCT) type II and
+IDCT is as follows:
+     #define FFT_LOGN 8
+     float32_t src[(1 &lt;&lt; FFT_LOGN)] = {};
+     riscv_dsp_dct_f32(src, FFT_LOGN);
+     riscv_dsp_idct_f32(src, FFT_LOGN);
+This example also serves as a reference for examples of Q31 or Q15 DCT type II and IDCT
+functions.
+ </preformatted> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5558" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5558" bodyend="5563"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga72de4b5b653430b7d6ceaa1a5d1e28b1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_idct_f32</definition>
+        <argsstring>(float32_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_idct_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 8 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5571" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5571" bodyend="5576"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1gaa17a75e3643c6539a835486a9ba2c7a4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_dct_q15</definition>
+        <argsstring>(q15_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_dct_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 8</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5590" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5590" bodyend="5595"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga6d883eaf5ba24d31dd7a9fea16db8124" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_idct_q15</definition>
+        <argsstring>(q15_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_idct_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 8</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5609" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5609" bodyend="5614"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga677a6eb14053beb4034903b19e2b9138" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_dct_q31</definition>
+        <argsstring>(q31_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_dct_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 8</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5628" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5628" bodyend="5633"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga945efbfea727d0f813b5953316b36f92" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_idct_q31</definition>
+        <argsstring>(q31_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_idct_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 8</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5647" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5647" bodyend="5652"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1gaf5ff7cda593cb1c4f299cd4af3048f6e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_dct4_f32</definition>
+        <argsstring>(float32_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_dct4_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 7</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Example</bold> <preformatted>
+Given 128 samples (that is, FFT_LOGN = 7), the example of floating-point DCT or IDCT type
+IV transform is as follows:
+     #define FFT_LOGN 7
+     float32_t src[(1 &lt;&lt; FFT_LOGN)] = {};
+     riscv_dsp_dct4_f32(src, FFT_LOGN);
+     riscv_dsp_idct4_f32(src, FFT_LOGN);
+This example also serves as a reference for examples of Q31 or Q15 DCT type IV and IDCT
+functions.
+ </preformatted> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5672" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5672" bodyend="5677"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga730dbfa7e1d4dbefa7ecb6b2754f6bba" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_idct4_f32</definition>
+        <argsstring>(float32_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_idct4_f32</name>
+        <param>
+          <type>float32_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 7 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5685" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5685" bodyend="5690"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1gac26604dc96991b421e2b222781d758bf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_dct4_q15</definition>
+        <argsstring>(q15_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_dct4_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 7</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5704" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5704" bodyend="5709"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1gabeb2e269c1c024e993bcba4fd40f79c5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_idct4_q15</definition>
+        <argsstring>(q15_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_idct4_q15</name>
+        <param>
+          <type>q15_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 7</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5723" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5723" bodyend="5728"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga1239d88d30b23ea5f088ac2999f45b9c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_dct4_q31</definition>
+        <argsstring>(q31_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_dct4_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 7</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5742" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5742" bodyend="5747"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1ga28ba4965c2ec93d686de73a09e17f332" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_dsp_idct4_q31</definition>
+        <argsstring>(q31_t *src, uint32_t m)</argsstring>
+        <name>hpm_dsp_idct4_q31</name>
+        <param>
+          <type>q31_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector. After the function is executed, the output will be stored in the input vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base 2 logarithm value of the sample number and it can be set from 3 to 7</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<bold>Note:</bold> </para>
+<para>The input and output formats are listed below. To satisfy the input format corresponding to your input size, you may need to perform an arithmetic shift operation before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5761" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="5761" bodyend="5766"/>
+      </memberdef>
+      <memberdef kind="function" id="group__transform_1gad95aa86da64b9d2875dd28fff34e051f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_software_cfft_float</definition>
+        <argsstring>(float *src, uint32_t m)</argsstring>
+        <name>hpm_software_cfft_float</name>
+        <param>
+          <type>float *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Software implementation does not depend on any hardware. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a new hpm software cfft float object</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>requires double the space than other interfaces, 0-n for input data, n-2n for buffers, 0-n for output data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2^n sampling points, including real and imaginary parts </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="5779" column="6" declfile="middleware/hpm_math/hpm_math.h" declline="5779" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

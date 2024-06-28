@@ -1,0 +1,801 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__dao__interface" kind="group">
+    <compoundname>dao_interface</compoundname>
+    <title>DAO driver APIs</title>
+    <innerclass refid="structdao__config" prot="public">dao_config</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__dao__interface_1ga28e4b28ac87d9fc7af87609d01a35baa" prot="public" static="no" strong="no">
+        <type></type>
+        <name>dao_channel_t</name>
+        <enumvalue id="group__dao__interface_1gga28e4b28ac87d9fc7af87609d01a35baaa034046cedc70ac1363a01799e17d1b3f" prot="public">
+          <name>dao_right_channel</name>
+          <initializer>= DAO_CTRL_RIGHT_EN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__dao__interface_1gga28e4b28ac87d9fc7af87609d01a35baaa78cb39a88e450f9c2538b06fd5b36417" prot="public">
+          <name>dao_left_channel</name>
+          <initializer>= DAO_CTRL_LEFT_EN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="57" column="1" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="57" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__dao__interface_1gae0aa4bd4e23e0cae15585629078afbbf" prot="public" static="no">
+        <type>struct <ref refid="structdao__config" kindref="compound">dao_config</ref></type>
+        <definition>typedef struct dao_config dao_config_t</definition>
+        <argsstring></argsstring>
+        <name>dao_config_t</name>
+        <briefdescription>
+<para>DAO config. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="55" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__dao__interface_1ga171469e00217aeadce93037a7b2e3491" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_config_hpf</definition>
+        <argsstring>(DAO_Type *ptr, uint32_t hpf_coef_ma, uint32_t hpf_coef_b, bool enable)</argsstring>
+        <name>dao_config_hpf</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>hpf_coef_ma</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>hpf_coef_b</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>config high pass filter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hpf_coef_ma</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>high pass filter a coefficient&apos;s complement </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hpf_coef_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>high pass filter b coefficient </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>true: enable </para>
+</listitem>
+<listitem><para>false: disable </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="76" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="76" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1ga462cec8c6845133ebfba4d5d322cd4f1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_enable_hpf</definition>
+        <argsstring>(DAO_Type *ptr)</argsstring>
+        <name>dao_enable_hpf</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>enable high pass filter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="92" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1gae79c8cc2d0f3b4fa1a901890419f125f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_disable_hpf</definition>
+        <argsstring>(DAO_Type *ptr)</argsstring>
+        <name>dao_disable_hpf</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>disable high pass filter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="102" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1gae91ba054f6bce1e988118193cd043965" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_enable_channel</definition>
+        <argsstring>(DAO_Type *ptr, uint32_t ch)</argsstring>
+        <name>dao_enable_channel</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para>enable channel </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel defined in dao_channel_t </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="113" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1ga2487ef3e3423fa4bb813cd9b87fc750c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_disable_channel</definition>
+        <argsstring>(DAO_Type *ptr, uint32_t ch)</argsstring>
+        <name>dao_disable_channel</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para>disable channel </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel defined in dao_channel_t </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="124" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1gaaab4e305cb3c3db9a41c2d0ec370f6e8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_enable_mono_output</definition>
+        <argsstring>(DAO_Type *ptr)</argsstring>
+        <name>dao_enable_mono_output</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>enable mono output </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="134" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="134" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1ga95d1247da990457d4bb13c4d94c555d9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_disable_mono_output</definition>
+        <argsstring>(DAO_Type *ptr)</argsstring>
+        <name>dao_disable_mono_output</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>disable mono output </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="144" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1ga41bd736ab635871a0e2f505a0ac6a224" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_enable_remap</definition>
+        <argsstring>(DAO_Type *ptr)</argsstring>
+        <name>dao_enable_remap</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>enable remap </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="154" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1gaae1f353d51dabd08ad47dbf7295161a4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_disable_remap</definition>
+        <argsstring>(DAO_Type *ptr)</argsstring>
+        <name>dao_disable_remap</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>disable remap </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="164" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="164" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1ga3d494788d0f6476daea52214e0aa024d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_invert_output</definition>
+        <argsstring>(DAO_Type *ptr, bool invert)</argsstring>
+        <name>dao_invert_output</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>invert</declname>
+        </param>
+        <briefdescription>
+<para>invert output </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">invert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>true: invert output </para>
+</listitem>
+<listitem><para>false: not invert output </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="177" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="177" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1ga65b178dfff9c7c4b3119ec7704360fc4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_force_output</definition>
+        <argsstring>(DAO_Type *ptr, uint8_t output)</argsstring>
+        <name>dao_force_output</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>force pads output with certain level </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output level </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="189" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="189" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1ga7eec2234656fa6ede1f3d870d7270e2a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_enable_false_run</definition>
+        <argsstring>(DAO_Type *ptr, bool enable)</argsstring>
+        <name>dao_enable_false_run</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>enable false run when false run mode is enabled, the module continues to consume data, no actual output on pads. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>true: enable </para>
+</listitem>
+<listitem><para>false: disable </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="203" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="203" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1ga8c0ed186c298a5d473ca3361a6519a1f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_software_reset</definition>
+        <argsstring>(DAO_Type *ptr)</argsstring>
+        <name>dao_software_reset</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>software reset </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="214" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="214" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1gaa92ebf98ea210ef0b61bc22233ce08fd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool dao_is_running</definition>
+        <argsstring>(DAO_Type *ptr)</argsstring>
+        <name>dao_is_running</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>check whether DAO is running </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if dao is running </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="226" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="226" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1gad4d969218c80da980f56a26f920a0347" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_start</definition>
+        <argsstring>(DAO_Type *ptr)</argsstring>
+        <name>dao_start</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>start </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="236" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="236" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1ga55b3757fcb63d38dcc9ad6fd4f109267" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dao_stop</definition>
+        <argsstring>(DAO_Type *ptr)</argsstring>
+        <name>dao_stop</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>stop </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="246" column="20" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="246" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1ga26a4a803c6d94f2e302656cbab476f3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t dao_init</definition>
+        <argsstring>(DAO_Type *ptr, dao_config_t *config)</argsstring>
+        <name>dao_init</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__dao__interface_1gae0aa4bd4e23e0cae15585629078afbbf" kindref="member">dao_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>initlization </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dao_config_t </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_invalid_argument or status_success </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="258" column="12" bodyfile="drivers/src/hpm_dao_drv.c" bodystart="26" bodyend="52" declfile="drivers/inc/hpm_dao_drv.h" declline="258" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dao__interface_1ga6199e0de0b8d8cdfc6226be13d316e42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dao_get_default_config</definition>
+        <argsstring>(DAO_Type *ptr, dao_config_t *config)</argsstring>
+        <name>dao_get_default_config</name>
+        <param>
+          <type><ref refid="structDAO__Type" kindref="compound">DAO_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__dao__interface_1gae0aa4bd4e23e0cae15585629078afbbf" kindref="member">dao_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>get default config </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DAO base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dao_config_t </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="266" column="6" bodyfile="drivers/src/hpm_dao_drv.c" bodystart="10" bodyend="24" declfile="drivers/inc/hpm_dao_drv.h" declline="266" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__dao__interface_1ga0ab6bbe36a25a3fd91cb1d847bab35ec" prot="public" static="no">
+        <name>DAO_CHANNEL_LEFT_ONLY</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__dao__regs_8h_1a9a7b0c4c4676ed7376a0ef529a1777ca" kindref="member">DAO_CTRL_LEFT_EN_MASK</ref></initializer>
+        <briefdescription>
+<para>DAO channel selection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="27" column="9" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__dao__interface_1gac94264d4914b0f4b3ded902f535e42cc" prot="public" static="no">
+        <name>DAO_CHANNEL_RIGHT_ONLY</name>
+        <initializer><ref refid="HPM6E00_2ip_2hpm__dao__regs_8h_1aefe738117f906fd1bb23de526c531ac0" kindref="member">DAO_CTRL_RIGHT_EN_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="28" column="9" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__dao__interface_1ga612d516dad17fbd92a22f00f0c170635" prot="public" static="no">
+        <name>DAO_CHANNEL_BOTH</name>
+        <initializer>    (<ref refid="HPM6E00_2ip_2hpm__dao__regs_8h_1aefe738117f906fd1bb23de526c531ac0" kindref="member">DAO_CTRL_RIGHT_EN_MASK</ref> | <ref refid="HPM6E00_2ip_2hpm__dao__regs_8h_1a9a7b0c4c4676ed7376a0ef529a1777ca" kindref="member">DAO_CTRL_LEFT_EN_MASK</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="29" column="9" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__dao__interface_1gafc7cc9fce19112c331ecb47717760288" prot="public" static="no">
+        <name>DAO_DEFAULT_OUTPUT_ALL_LOW</name>
+        <initializer>(0U)</initializer>
+        <briefdescription>
+<para>DAO default output. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="35" column="9" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__dao__interface_1ga162a6a55665ac59a55cb6f0715aab67a" prot="public" static="no">
+        <name>DAO_DEFAULT_OUTPUT_ALL_HIGH</name>
+        <initializer>(1U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="36" column="9" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__dao__interface_1ga9e407fbe8b1ee020b2912255455c22f1" prot="public" static="no">
+        <name>DAO_DEFAULT_OUTPUT_P_HIGH_N_LOW</name>
+        <initializer>(2U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="37" column="9" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__dao__interface_1gaffce6f42494c8c24b30dbe50e1d84250" prot="public" static="no">
+        <name>DAO_DEFAULT_OUTPUT_DISABLED</name>
+        <initializer>(3U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_dao_drv.h" line="38" column="9" bodyfile="drivers/inc/hpm_dao_drv.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>DAO driver APIs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

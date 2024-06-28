@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8.1. Eeprom emulation base test &mdash; HPMicro Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="8.2. Eeprom emulation performance test" href="../perf/README_en.html" />
+    <link rel="prev" title="8. EEPROM Emulation" href="../index_en.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../boards/index_en.html">Evaluation Boards</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index_en.html">Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../audio_codec/index_en.html">1. Audio Codec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryrb/README_en.html">2. CherryRB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryusb/index_en.html">3. CherryUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coremark/README_en.html">4. CoreMark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dhrystone/README_en.html">5. Dhrystone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dma_manager/README_en.html">6. DMA Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dsp/README_en.html">7. DSP</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_en.html">8. EEPROM Emulation</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">8.1. Eeprom emulation base test</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">8.1.1. Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#board-setting">8.1.2. Board setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#notice">8.1.3. Notice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-example">8.1.4. Running the example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../perf/README_en.html">8.2. Eeprom emulation performance test</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../freemaster/README_en.html">9. Freemaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hello_world/README_en.html">10. Hello World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hpm_math/index_en.html">11. HPM Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image/index_en.html">12. IMAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lvgl/index_en.html">13. LVGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lwip/index_en.html">14. lwIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mbedtls/README_en.html">15. Mbedtls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../memstress/index_en.html">16. Memory Stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../microros/index_en.html">17. Microros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modbus/index_en.html">18. Modbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motor_ctrl/index_en.html">19. HPM Motor Ctrl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multicore/index_en.html">20. Multicore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../power_mode_switch/README_en.html">21. Power Mode Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rgb_led/README_en.html">22. RGB LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rom_api/index_en.html">23. ROM API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rtos/index_en.html">24. RTOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../segger_rtt/README_en.html">25. Segger RTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tflm/index_en.html">26. TensorFlowLiteMicro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinycrypt/index_en.html">27. Tinycrypt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyengine/person_obj/README_en.html">28. Person Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyuf2/README_en.html">29. TinyUF2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyusb/index_en.html">30. TinyUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../touch_panel/README_en.html">31. Touch Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vglite/index_en.html">32. VGLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_components/index_en.html">33. SPI_COMPONENTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2s_emulation/README_en.html">34. I2S EMULATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_sdcard/index_en.html">35. SPI_SDCARD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherrysh/index_en.html">36. CherrySH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ethercat/index_en.html">37. EtherCAT</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../drivers/index_en.html">Drivers Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_doc.html">SDK API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HPMicro Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index_en.html">Samples</a></li>
+          <li class="breadcrumb-item"><a href="../index_en.html"><span class="section-number">8. </span>EEPROM Emulation</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">8.1. </span>Eeprom emulation base test</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/samples/eeprom_emulation/base/README_en.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="eeprom-emulation-base-test">
+<h1><span class="section-number">8.1. </span>Eeprom emulation base test<a class="headerlink" href="#eeprom-emulation-base-test" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<h2><span class="section-number">8.1.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>EEPROM BASE example tests the write, read, and flush interfaces. It’s contain the follow:</p>
+<p><strong>write</strong></p>
+<ul class="simple">
+<li><p>write data</p></li>
+<li><p>check return value</p></li>
+</ul>
+<p><strong>read</strong></p>
+<ul class="simple">
+<li><p>read written data</p></li>
+<li><p>check return value</p></li>
+<li><p>compare data</p></li>
+</ul>
+<p><strong>update data</strong></p>
+<ul class="simple">
+<li><p>update written data</p></li>
+<li><p>view updates</p></li>
+</ul>
+<p><strong>flush data</strong></p>
+<ul class="simple">
+<li><p>flush the data of the set area, keep the latest data</p></li>
+</ul>
+</section>
+<section id="board-setting">
+<h2><span class="section-number">8.1.2. </span>Board setting<a class="headerlink" href="#board-setting" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>No special settings</p></li>
+</ul>
+</section>
+<section id="notice">
+<h2><span class="section-number">8.1.3. </span>Notice<a class="headerlink" href="#notice" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Do not write more than one erase size data once</p></li>
+<li><p>EEPROM_MAX_VAR_CNT which default count 100 needs to be set in user_config.h to limit the maximum number of blocks</p></li>
+</ul>
+</section>
+<section id="running-the-example">
+<h2><span class="section-number">8.1.4. </span>Running the example<a class="headerlink" href="#running-the-example" title="Permalink to this heading"></a></h2>
+<p>The serial port output is shown below:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">------------ flash-&gt;eeprom init ok -----------</span>
+
+<span class="go">start address: 0x80080000</span>
+<span class="go">sector count: 128</span>
+<span class="go">flash earse granularity: 4096</span>
+<span class="go">version: 0x4553</span>
+<span class="go">end address: 0x80100000</span>
+<span class="go">data write addr = 0x80080000, info write addr = 0x800fffe0, remain flash size = 0x7ffe0</span>
+
+<span class="go">valid count percent info count( 0 / 0 )</span>
+
+<span class="go">----------------------------------------------</span>
+
+<span class="go"> eeprom emulation demo</span>
+<span class="go">----------------------------------------</span>
+<span class="go"> 1 - Test eeprom write</span>
+<span class="go"> 2 - Test eeprom read</span>
+<span class="go"> 3 - Test eeprom update data</span>
+<span class="go"> 4 - Test eeprom flush whole area</span>
+<span class="go"> 5 - show area base info</span>
+<span class="go"> Others - Show index menu</span>
+
+<span class="go">◆1</span>
+<span class="go">block_id[0x48504d43] success write, data addr=0x80080000, remain size=0x0007ffc9 crc=0xe2fc9e5d</span>
+
+<span class="go">block_id[0x41000000] success write, data addr=0x80080007, remain size=0x0007ffb4 crc=0x9d46fe3f</span>
+
+<span class="go">block_id[0x41420000] success write, data addr=0x8008000c, remain size=0x0007ff98 crc=0x887db847</span>
+
+<span class="go">block_id[0x41424300] success write, data addr=0x80080018, remain size=0x0007ff7c crc=0x1ee95571</span>
+
+<span class="go">◆2</span>
+<span class="go">var1 = abcdef</span>
+<span class="go">var2 = 1234</span>
+<span class="go">var3 = hello,world</span>
+<span class="go">var4 = eeprom_demo</span>
+
+<span class="go">◆3</span>
+<span class="go">block_id[0x48504d43] success write, data addr=0x80080024, remain size=0x0007ff65 crc=0xe2fc9e5d</span>
+
+<span class="go">block_id[0x41000000] success write, data addr=0x8008002b, remain size=0x0007ff50 crc=0x9d46fe3f</span>
+
+<span class="go">block_id[0x41420000] success write, data addr=0x80080030, remain size=0x0007ff34 crc=0x887db847</span>
+
+<span class="go">block_id[0x41424300] success write, data addr=0x8008003c, remain size=0x0007ff18 crc=0x1ee95571</span>
+
+<span class="go">block_id[0x48504d43] success write, data addr=0x80080048, remain size=0x0007ff04 crc=0xbbf3f9d2</span>
+
+<span class="go">block_id[0x41000000] success write, data addr=0x8008004c, remain size=0x0007feef crc=0x4c182878</span>
+
+<span class="go">◆5</span>
+<span class="go">------------ flash-&gt;eeprom init ok -----------</span>
+
+<span class="go">start address: 0x80080000</span>
+<span class="go">sector count: 128</span>
+<span class="go">flash earse granularity: 4096</span>
+<span class="go">version: 0x4553</span>
+<span class="go">end address: 0x80100000</span>
+<span class="go">data</span>
+<span class="go">[11:39:52.133]收←◆write addr = 0x8008004e, info write addr = 0x800fff40, remain flash size = 0x7fef2</span>
+
+<span class="go">valid count percent info count( 4 / 10 )</span>
+
+<span class="go">----------------------------------------------</span>
+
+<span class="go">◆2</span>
+<span class="go">var1 = qwe</span>
+<span class="go">var2 = 5678</span>
+<span class="go">var3 = hello,world</span>
+<span class="go">var4 = eeprom_demo</span>
+
+<span class="go">◆4</span>
+
+<span class="go">block_id[0x41420000] success write, data addr=0x80080000, remain size=0x0007ffc4 crc=0x887db847</span>
+
+<span class="go">block_id[0x41424300] success write, data addr=0x8008000c, remain size=0x0007ffa8 crc=0x1ee95571</span>
+
+<span class="go">block_id[0x48504d43] success write, data addr=0x80080018, remain size=0x0007ff94 crc=0xbbf3f9d2</span>
+
+<span class="go">block_id[0x41000000] success write, data addr=0x8008001c, remain size=0x0007ff7f crc=0x4c182878</span>
+
+<span class="go">------------ flash-&gt;eeprom init ok -----------</span>
+
+<span class="go">start address: 0x80080000</span>
+<span class="go">sector count: 128</span>
+<span class="go">flash earse granularity: 4096</span>
+<span class="go">version: 0x4553</span>
+<span class="go">end address: 0x80100000</span>
+<span class="go">data write addr = 0x80080021, info write addr = 0x800fffa0, remain flash size = 0x7ff7f</span>
+
+<span class="go">valid count percent info count( 4 / 4 )</span>
+
+<span class="go">----------------------------------------------</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, HPMicro.
+      <span class="lastupdated">Last updated on Jun 28, 2024.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,749 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__trgm__interface" kind="group">
+    <compoundname>trgm_interface</compoundname>
+    <title>TRGM driver APIs</title>
+    <innerclass refid="structtrgm__input__filter" prot="public">trgm_input_filter</innerclass>
+    <innerclass refid="structtrgm__output" prot="public">trgm_output</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__trgm__interface_1gacffb722a7799f4657bb946398552f583" prot="public" static="no" strong="no">
+        <type></type>
+        <name>trgm_filter_mode</name>
+        <enumvalue id="group__trgm__interface_1ggacffb722a7799f4657bb946398552f583ab519f9295c007f7ea7292ba53bcf53ad" prot="public">
+          <name>trgm_filter_mode_bypass</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__trgm__interface_1ggacffb722a7799f4657bb946398552f583a13cb9b087eee300c274b79e73d2410fb" prot="public">
+          <name>trgm_filter_mode_rapid_change</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__trgm__interface_1ggacffb722a7799f4657bb946398552f583a8ba294523ec3972ab60ca810a69606c5" prot="public">
+          <name>trgm_filter_mode_delay</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__trgm__interface_1ggacffb722a7799f4657bb946398552f583acd3fcc30138953dad91289621e9a0da8" prot="public">
+          <name>trgm_filter_mode_stable_high</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__trgm__interface_1ggacffb722a7799f4657bb946398552f583ad9a74fe0a6804f561f3d2926cd006ad0" prot="public">
+          <name>trgm_filter_mode_stable_low</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Filter mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="25" column="1" bodyfile="drivers/inc/hpm_trgm_drv.h" bodystart="25" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__trgm__interface_1ga06d91800a6a89291a4ce822231dbde75" prot="public" static="no" strong="no">
+        <type></type>
+        <name>trgm_output_type</name>
+        <enumvalue id="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75aeead3c910b8a94d942ed87c2357c197d" prot="public">
+          <name>trgm_output_same_as_input</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a249b3dfb27e6bcab296667a733ffbd2e" prot="public">
+          <name>trgm_output_pulse_at_input_falling_edge</name>
+          <initializer>= TRGM_TRGOCFG_FEDG2PEN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" prot="public">
+          <name>trgm_output_pulse_at_input_rising_edge</name>
+          <initializer>= TRGM_TRGOCFG_REDG2PEN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a7288c47c3db81599af8cc9327a9f4dc1" prot="public">
+          <name>trgm_output_pulse_at_input_both_edge</name>
+          <initializer>= trgm_output_pulse_at_input_falling_edge
+                                    | trgm_output_pulse_at_input_rising_edge</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Output type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="36" column="1" bodyfile="drivers/inc/hpm_trgm_drv.h" bodystart="36" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__trgm__interface_1ga786704af55d598d72208aba099b43206" prot="public" static="no">
+        <type>enum <ref refid="group__trgm__interface_1gacffb722a7799f4657bb946398552f583" kindref="member">trgm_filter_mode</ref></type>
+        <definition>typedef enum trgm_filter_mode trgm_filter_mode_t</definition>
+        <argsstring></argsstring>
+        <name>trgm_filter_mode_t</name>
+        <briefdescription>
+<para>Filter mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="31" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__trgm__interface_1ga8d96b1f9bad5cebcd17b93566313a16e" prot="public" static="no">
+        <type>enum <ref refid="group__trgm__interface_1ga06d91800a6a89291a4ce822231dbde75" kindref="member">trgm_output_type</ref></type>
+        <definition>typedef enum trgm_output_type trgm_output_type_t</definition>
+        <argsstring></argsstring>
+        <name>trgm_output_type_t</name>
+        <briefdescription>
+<para>Output type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="42" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__trgm__interface_1ga9f2369cf5885c95974a0f6134f836e73" prot="public" static="no">
+        <type>struct <ref refid="structtrgm__input__filter" kindref="compound">trgm_input_filter</ref></type>
+        <definition>typedef struct trgm_input_filter trgm_input_filter_t</definition>
+        <argsstring></argsstring>
+        <name>trgm_input_filter_t</name>
+        <briefdescription>
+<para>Input filter configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="52" column="21"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__trgm__interface_1ga58e3ca86d242fb418571db5a847f2098" prot="public" static="no">
+        <type>struct <ref refid="structtrgm__output" kindref="compound">trgm_output</ref></type>
+        <definition>typedef struct trgm_output trgm_output_t</definition>
+        <argsstring></argsstring>
+        <name>trgm_output_t</name>
+        <briefdescription>
+<para>Output configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="61" column="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__trgm__interface_1gad4388dcd01f86bdd25b5c88dad22e683" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void trgm_enable_io_output</definition>
+        <argsstring>(TRGM_Type *ptr, uint32_t mask)</argsstring>
+        <name>trgm_enable_io_output</name>
+        <param>
+          <type><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Enable IO output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TRGM base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mask of IOs to be enabled </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="73" column="20" bodyfile="drivers/inc/hpm_trgm_drv.h" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="group__trgm__interface_1gae9c09b4c0a271bd4a1b50be1399e7721" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void trgm_disable_io_output</definition>
+        <argsstring>(TRGM_Type *ptr, uint32_t mask)</argsstring>
+        <name>trgm_disable_io_output</name>
+        <param>
+          <type><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Disable IO output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TRGM base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mask of IOs to be disabled </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="84" column="20" bodyfile="drivers/inc/hpm_trgm_drv.h" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="group__trgm__interface_1ga95941c06c118dff1462e4e68463540c7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void trgm_input_filter_set_filter_length</definition>
+        <argsstring>(TRGM_Type *ptr, uint8_t input, uint32_t length)</argsstring>
+        <name>trgm_input_filter_set_filter_length</name>
+        <param>
+          <type><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Set filter length. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TRGM base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input selection </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filter length in TRGM clock cycles </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="96" column="20" bodyfile="drivers/inc/hpm_trgm_drv.h" bodystart="96" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="group__trgm__interface_1ga461f4273f2c6e98c276e42aab0e02620" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void trgm_input_filter_set_filter_shift</definition>
+        <argsstring>(TRGM_Type *ptr, uint8_t input, uint8_t shift)</argsstring>
+        <name>trgm_input_filter_set_filter_shift</name>
+        <param>
+          <type><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>shift</declname>
+        </param>
+        <briefdescription>
+<para>Set filter length. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TRGM base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input selection </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">shift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filter length shift </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="128" column="20" bodyfile="drivers/inc/hpm_trgm_drv.h" bodystart="128" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="group__trgm__interface_1ga524ffc9d6255e5dd270472ae168b611e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void trgm_input_filter_enable_sync</definition>
+        <argsstring>(TRGM_Type *ptr, uint8_t input)</argsstring>
+        <name>trgm_input_filter_enable_sync</name>
+        <param>
+          <type><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Enable sync input with TRGM clock. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TRGM base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input selection </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="146" column="20" bodyfile="drivers/inc/hpm_trgm_drv.h" bodystart="146" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="group__trgm__interface_1ga97741e65a8a3143e09349501908eca08" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void trgm_input_filter_disable_sync</definition>
+        <argsstring>(TRGM_Type *ptr, uint8_t input)</argsstring>
+        <name>trgm_input_filter_disable_sync</name>
+        <param>
+          <type><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Disable sync input with TRGM clock. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TRGM base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input selection </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="157" column="20" bodyfile="drivers/inc/hpm_trgm_drv.h" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="group__trgm__interface_1ga6b5f4ca8c87ff641e2e63bcb1fe47fa7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void trgm_input_filter_set_mode</definition>
+        <argsstring>(TRGM_Type *ptr, uint8_t input, trgm_filter_mode_t mode)</argsstring>
+        <name>trgm_input_filter_set_mode</name>
+        <param>
+          <type><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type><ref refid="group__trgm__interface_1ga786704af55d598d72208aba099b43206" kindref="member">trgm_filter_mode_t</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Set filter working mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TRGM base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input selection </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Working mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="169" column="20" bodyfile="drivers/inc/hpm_trgm_drv.h" bodystart="169" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="group__trgm__interface_1gad6c8d6b970727fd06ae6537fadac5816" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void trgm_input_filter_invert</definition>
+        <argsstring>(TRGM_Type *ptr, uint8_t input, bool invert)</argsstring>
+        <name>trgm_input_filter_invert</name>
+        <param>
+          <type><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>invert</declname>
+        </param>
+        <briefdescription>
+<para>Invert filter output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TRGM base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input selection </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">invert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set true to invert output </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="182" column="20" bodyfile="drivers/inc/hpm_trgm_drv.h" bodystart="182" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="group__trgm__interface_1ga20a96cc4542dee5bf00975a63080ddf2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void trgm_input_filter_config</definition>
+        <argsstring>(TRGM_Type *ptr, uint8_t input, trgm_input_filter_t *filter)</argsstring>
+        <name>trgm_input_filter_config</name>
+        <param>
+          <type><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type><ref refid="group__trgm__interface_1ga9f2369cf5885c95974a0f6134f836e73" kindref="member">trgm_input_filter_t</ref> *</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+<para>Configure filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TRGM base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input selection </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to filter configuration </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="195" column="20" bodyfile="drivers/inc/hpm_trgm_drv.h" bodystart="195" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="group__trgm__interface_1ga677518bfdd9160895a61a404af6a86d1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void trgm_output_update_source</definition>
+        <argsstring>(TRGM_Type *ptr, uint8_t output, uint8_t source)</argsstring>
+        <name>trgm_output_update_source</name>
+        <param>
+          <type><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Update source for TRGM output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TRGM base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source for output </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="210" column="20" bodyfile="drivers/inc/hpm_trgm_drv.h" bodystart="210" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void trgm_output_config</definition>
+        <argsstring>(TRGM_Type *ptr, uint8_t output, trgm_output_t *config)</argsstring>
+        <name>trgm_output_config</name>
+        <param>
+          <type><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type><ref refid="group__trgm__interface_1ga58e3ca86d242fb418571db5a847f2098" kindref="member">trgm_output_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Configure output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TRGM base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to output configuration </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="223" column="20" bodyfile="drivers/inc/hpm_trgm_drv.h" bodystart="223" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="group__trgm__interface_1gaaf5605cb46ad30d89ed7eb018728e12a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void trgm_dma_request_config</definition>
+        <argsstring>(TRGM_Type *ptr, uint8_t dma_out, uint8_t dma_src)</argsstring>
+        <name>trgm_dma_request_config</name>
+        <param>
+          <type><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dma_out</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dma_src</declname>
+        </param>
+        <briefdescription>
+<para>Configure DMA request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TRGM base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dma_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target DMA out </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dma_src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DMA source selection </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_trgm_drv.h" line="238" column="20" bodyfile="drivers/inc/hpm_trgm_drv.h" bodystart="238" bodyend="245"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>TRGM driver APIs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

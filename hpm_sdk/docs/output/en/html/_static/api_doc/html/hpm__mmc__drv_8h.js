@@ -1,0 +1,106 @@
+var hpm__mmc__drv_8h =
+[
+    [ "mmc_coef_update_cmd_mask_t", "group__mmc__interface.html#ga3cd9f50e046fdcf1dca392d15fad28c5", [
+      [ "mmc_coef_not_update", "group__mmc__interface.html#gga3cd9f50e046fdcf1dca392d15fad28c5a00f93fd9e6f42f63bfac85ae4cf90e65", null ],
+      [ "mmc_coef_p_update", "group__mmc__interface.html#gga3cd9f50e046fdcf1dca392d15fad28c5a4fba288dfecc052928f216f2173827c7", null ],
+      [ "mmc_coef_i_update", "group__mmc__interface.html#gga3cd9f50e046fdcf1dca392d15fad28c5a6ae9616f4c3fd3d30180bcdfdea3cb17", null ],
+      [ "mmc_coef_a_update", "group__mmc__interface.html#gga3cd9f50e046fdcf1dca392d15fad28c5a69f50f4779768b07fcdc94ded749f30a", null ],
+      [ "mmc_coef_update_all", "group__mmc__interface.html#gga3cd9f50e046fdcf1dca392d15fad28c5a47cb2c0c2b316ba9be6a8e46e8a32d0f", null ]
+    ] ],
+    [ "mmc_pos_update_cmd_mask_t", "group__mmc__interface.html#ga63e37eb0243db63f2405b72b5e0a2719", [
+      [ "mmc_pos_update_none", "group__mmc__interface.html#gga63e37eb0243db63f2405b72b5e0a2719a4d11d695cf344f9c8044df7a54647b5b", null ],
+      [ "mmc_pos_update_position", "group__mmc__interface.html#gga63e37eb0243db63f2405b72b5e0a2719a0a0efd419829f03ee5ecb9cc1ab944e3", null ],
+      [ "mmc_pos_update_revolution", "group__mmc__interface.html#gga63e37eb0243db63f2405b72b5e0a2719ab97b3f577243cd76a4cad1a2dc599ed7", null ],
+      [ "mmc_pos_update_speed", "group__mmc__interface.html#gga63e37eb0243db63f2405b72b5e0a2719a71855c15dd1207cc621182ab979fe58f", null ],
+      [ "mmc_pos_update_accel", "group__mmc__interface.html#gga63e37eb0243db63f2405b72b5e0a2719abc5cf9863db1d4af8dcfd4c68e0a6981", null ],
+      [ "mmc_pos_update_all", "group__mmc__interface.html#gga63e37eb0243db63f2405b72b5e0a2719abc59417a4422df1d85b2e71a4f31fc78", null ]
+    ] ],
+    [ "mmc_pos_update_trigger_t", "group__mmc__interface.html#ga09696b17b82a9bf3e48b15382824b607", [
+      [ "mmc_pos_update_by_timestamp", "group__mmc__interface.html#gga09696b17b82a9bf3e48b15382824b607ae7efe43cfad7d6dc7d3414e9ccb78b20", null ],
+      [ "mmc_pos_update_by_intrgr0_rise_edge", "group__mmc__interface.html#gga09696b17b82a9bf3e48b15382824b607ab2178e400e37da6ad2673c73b7486370", null ],
+      [ "mmc_pos_update_by_intrgr1_rise_edge", "group__mmc__interface.html#gga09696b17b82a9bf3e48b15382824b607a3adb30beb65624de240af37c7d3fbc7f", null ],
+      [ "mmc_pos_update_by_outtrgr0_rise_edge", "group__mmc__interface.html#gga09696b17b82a9bf3e48b15382824b607a1fa4229799c566284b70773cec4ba884", null ],
+      [ "mmc_pos_update_by_outtrgr1_rise_edge", "group__mmc__interface.html#gga09696b17b82a9bf3e48b15382824b607ab62e1cf7f77190e058523bb98c1e5e84", null ],
+      [ "mmc_pos_update_by_self_pos_thr", "group__mmc__interface.html#gga09696b17b82a9bf3e48b15382824b607a35cb40d92bf553fbf566eca32813c679", null ],
+      [ "mmc_pos_update_by_self_speed_thr", "group__mmc__interface.html#gga09696b17b82a9bf3e48b15382824b607af2c3b99b9a7a278a8d74034ec451a7dc", null ]
+    ] ],
+    [ "mmc_pred_event_t", "group__mmc__interface.html#ga456e2ef6f5ac2fbd91e1ddedb0c51585", [
+      [ "mmc_pred_idle", "group__mmc__interface.html#gga456e2ef6f5ac2fbd91e1ddedb0c51585a9e4e8381ef948249ef6b21e5d6ec4864", null ],
+      [ "mmc_pred_init_delta_pos_done", "group__mmc__interface.html#gga456e2ef6f5ac2fbd91e1ddedb0c51585a944c54eb90acc0872cc08b426e168744", null ],
+      [ "mmc_pred_pos_trig_valid", "group__mmc__interface.html#gga456e2ef6f5ac2fbd91e1ddedb0c51585a00193cb724a5b8c7598626cc6ec1046c", null ],
+      [ "mmc_pred_speed_trig_valid", "group__mmc__interface.html#gga456e2ef6f5ac2fbd91e1ddedb0c51585a81140cb3aac0b0c6da4699c6afb3ac51", null ],
+      [ "mmc_pred_open_loop", "group__mmc__interface.html#gga456e2ef6f5ac2fbd91e1ddedb0c51585adf78ed5bf79c77654c97ca0ef3f466eb", null ]
+    ] ],
+    [ "mmc_pred_int_t", "group__mmc__interface.html#ga0a77d803b22ec5fb72e8c7a077d6ba10", [
+      [ "mmc_pred_pos_trig_valid_int", "group__mmc__interface.html#gga0a77d803b22ec5fb72e8c7a077d6ba10a18b45af57a03f98156ec83a17555a5d2", null ],
+      [ "mmc_pred_speed_trig_valid_int", "group__mmc__interface.html#gga0a77d803b22ec5fb72e8c7a077d6ba10a468b06370ea9f48b80bfd960fa98371d", null ],
+      [ "mmc_pred_init_delta_pos_done_int", "group__mmc__interface.html#gga0a77d803b22ec5fb72e8c7a077d6ba10a0e275d779c2fcd57aae9613c0310e4a8", null ]
+    ] ],
+    [ "mmc_pred_reload_pos_cmd_t", "group__mmc__interface.html#gabdeabe2a517912e70e8218619bc9ba1d", [
+      [ "mmc_pred_not_reload_pos_cmd", "group__mmc__interface.html#ggabdeabe2a517912e70e8218619bc9ba1dadb4cc223b2190ff02504dbeec96162a8", null ],
+      [ "mmc_pred_0_reload_pos_cmd", "group__mmc__interface.html#ggabdeabe2a517912e70e8218619bc9ba1da0756fad67493b13c73ef7dd8abca4675", null ],
+      [ "mmc_pred_1_reload_pos_cmd", "group__mmc__interface.html#ggabdeabe2a517912e70e8218619bc9ba1dabb17ea7f4bac29dfdc5d470af4f00948", null ],
+      [ "mmc_pred_both_reload_pos_cmd", "group__mmc__interface.html#ggabdeabe2a517912e70e8218619bc9ba1da63263ac1af4324c6d74e78d6fb60ad62", null ]
+    ] ],
+    [ "mmc_pred_time_t", "group__mmc__interface.html#ga5ea45dda5c49cdf8643d4f7a91fc014a", [
+      [ "mmc_pred_by_period", "group__mmc__interface.html#gga5ea45dda5c49cdf8643d4f7a91fc014aa0f9833d83d44191e51adc6774a66d335", null ],
+      [ "mmc_pred_continuously_repeat", "group__mmc__interface.html#gga5ea45dda5c49cdf8643d4f7a91fc014aad11a46b4d1fa9c5bc44a2bfe4aa2953a", null ],
+      [ "mmc_pred_only_once", "group__mmc__interface.html#gga5ea45dda5c49cdf8643d4f7a91fc014aa8f2d51898c571b3ea8500dfd08a137c6", null ]
+    ] ],
+    [ "mmc_track_event_t", "group__mmc__interface.html#gaf5dbeeb020ca2d59888173d0e4343f12", [
+      [ "mmc_track_shadow_read_done", "group__mmc__interface.html#ggaf5dbeeb020ca2d59888173d0e4343f12a2dc17565c4d7874867090de2b4487b2e", null ],
+      [ "mmc_track_init_coefs_done", "group__mmc__interface.html#ggaf5dbeeb020ca2d59888173d0e4343f12aa60a88120b84ffbf1c9a92e70ce4d128", null ],
+      [ "mmc_track_init_pos_done", "group__mmc__interface.html#ggaf5dbeeb020ca2d59888173d0e4343f12a91decfd9958e3c83cac97774bbad6db7", null ],
+      [ "mmc_track_oosync", "group__mmc__interface.html#ggaf5dbeeb020ca2d59888173d0e4343f12a64a1a9025ff63a5c3a35a2a28b32a92b", null ],
+      [ "mmc_track_idle", "group__mmc__interface.html#ggaf5dbeeb020ca2d59888173d0e4343f12ae0faffb2eac1f458a5b7d7dc6fcba5d3", null ],
+      [ "mmc_pred1_init_pos_done", "group__mmc__interface.html#ggaf5dbeeb020ca2d59888173d0e4343f12a390b769f8405563aafc472f79f9abf09", null ],
+      [ "mmc_pred0_init_pos_done", "group__mmc__interface.html#ggaf5dbeeb020ca2d59888173d0e4343f12a0770831bfdd5968b57ee538f18f70d41", null ],
+      [ "mmc_track_init_delta_pos_done", "group__mmc__interface.html#ggaf5dbeeb020ca2d59888173d0e4343f12adb1c2dc1b28fe42e2334472f26644d12", null ],
+      [ "mmc_track_pos_trig_valid", "group__mmc__interface.html#ggaf5dbeeb020ca2d59888173d0e4343f12a8c6341c7e26afb27d044750038b28c07", null ],
+      [ "mmc_track_speed_trig_valid", "group__mmc__interface.html#ggaf5dbeeb020ca2d59888173d0e4343f12aca708c0ecf1a1461fb70aeec6777688b", null ]
+    ] ],
+    [ "mmc_disable_module", "group__mmc__interface.html#ga32b8c6ad533b64b523a7e4b3f1c94ff0", null ],
+    [ "mmc_disable_pred", "group__mmc__interface.html#gaf72924cc9038d447e73652a697f83a17", null ],
+    [ "mmc_enable_module", "group__mmc__interface.html#gae0ff80b3dec3741cf6ef507c5e0f1625", null ],
+    [ "mmc_enable_pred", "group__mmc__interface.html#ga2a7a5c90818b94d043264df18f78ca45", null ],
+    [ "mmc_get_default_pos_or_delta_pos_para", "group__mmc__interface.html#gac76d921d736584d0a1cf39c100069913", null ],
+    [ "mmc_pred_clear_status", "group__mmc__interface.html#ga7aecf8e8f521802cf5eb736affb43e79", null ],
+    [ "mmc_pred_config_delta_para", "group__mmc__interface.html#gaee4e22eddb75510ad8b06926058c3219", null ],
+    [ "mmc_pred_config_mode", "group__mmc__interface.html#ga588d2e8ad99101981820c9bad1ffa6de", null ],
+    [ "mmc_pred_config_period_time", "group__mmc__interface.html#gac964e290b5809cb4ffa68e61fcd7a5b1", null ],
+    [ "mmc_pred_config_pos_para", "group__mmc__interface.html#ga72c6d2831d75fcfc0a4446aab9779de0", null ],
+    [ "mmc_pred_config_position_trig", "group__mmc__interface.html#ga9835a69a9c7ea88a954178c0c291ef25", null ],
+    [ "mmc_pred_config_speed_trig", "group__mmc__interface.html#ga81d4407393a56754be875cf6eaada2bd", null ],
+    [ "mmc_pred_disable_interrupt", "group__mmc__interface.html#ga0d92030be16b274738af8e0b8b8e8dc6", null ],
+    [ "mmc_pred_disable_position_trig", "group__mmc__interface.html#gab06951d577f4d48d81332a03e8ba5773", null ],
+    [ "mmc_pred_disable_speed_trig", "group__mmc__interface.html#ga89b9d64613f52789eaa8e4b3ae9ae203", null ],
+    [ "mmc_pred_enable_interrupt", "group__mmc__interface.html#gafd4aa213b135bad6db56c591a2e470d4", null ],
+    [ "mmc_pred_get_default_mode_config", "group__mmc__interface.html#ga60740b3b88ddffcffad34e160c45104b", null ],
+    [ "mmc_pred_get_result", "group__mmc__interface.html#gaff6ab08cf69df908dfecfb14c8c3c79f", null ],
+    [ "mmc_pred_get_status", "group__mmc__interface.html#gaeee02d5d7caa8827d672749b909fb694", null ],
+    [ "mmc_pred_reload_pos_cmd", "group__mmc__interface.html#ga69279c6568493411e05d1bea752bbfe2", null ],
+    [ "mmc_pred_set_open_loop_mode", "group__mmc__interface.html#gad24c78e90811430d3ae48c6773dc3859", null ],
+    [ "mmc_pred_set_pred_time", "group__mmc__interface.html#ga938f62bdae8129c5f0b3af15d12a0c63", null ],
+    [ "mmc_set_sysclk_freq", "group__mmc__interface.html#ga85a00b599f8040cdeff03222b30b68e3", null ],
+    [ "mmc_software_reset", "group__mmc__interface.html#gad89f82854dcb67013234f041b9ca80fc", null ],
+    [ "mmc_track_clear_status", "group__mmc__interface.html#gabfd4ee6074045ecd1a7df152d1609721", null ],
+    [ "mmc_track_config_coef_para", "group__mmc__interface.html#ga289f11bb956b00f07c3523a4aabc4c53", null ],
+    [ "mmc_track_config_coef_trig", "group__mmc__interface.html#ga4cd7ad48e5dfb5a06069b9680e01aeb9", null ],
+    [ "mmc_track_config_delta_para", "group__mmc__interface.html#gafa722ddc07690077c103ecd16039e6d9", null ],
+    [ "mmc_track_config_mode", "group__mmc__interface.html#gad59799a0cea721121d23709ce4168b34", null ],
+    [ "mmc_track_config_pos_mode", "group__mmc__interface.html#ga236be37d97e7042f3ddc20051551405f", null ],
+    [ "mmc_track_config_pos_para", "group__mmc__interface.html#ga6a89e991d63716429fa6807c3020828e", null ],
+    [ "mmc_track_config_position_trig", "group__mmc__interface.html#gad3fabae99f436dd5bf5e1efc3aa333bc", null ],
+    [ "mmc_track_config_speed_trig", "group__mmc__interface.html#gad276e02a10e0d7fa10c40b634e2e4a8b", null ],
+    [ "mmc_track_disable_interrupt", "group__mmc__interface.html#ga66ae6c9d6272bdea01b8b75f635f8791", null ],
+    [ "mmc_track_disable_position_trig", "group__mmc__interface.html#ga398b19542d689b6e1685cc0769c47007", null ],
+    [ "mmc_track_disable_speed_trig", "group__mmc__interface.html#gaf5635e654cfbdb6b119a510bafe1bf29", null ],
+    [ "mmc_track_enable_interrupt", "group__mmc__interface.html#ga72add3a25ad86cfeddd8fbe437fd098f", null ],
+    [ "mmc_track_enable_shadow_read", "group__mmc__interface.html#ga57c2669c91f3b60798830799dcec5600", null ],
+    [ "mmc_track_get_default_mode_config", "group__mmc__interface.html#ga6607d2d39768a22304897f95eb700c68", null ],
+    [ "mmc_track_get_result", "group__mmc__interface.html#ga089f0a03ce12f3c698dfbc3493d9fe36", null ],
+    [ "mmc_track_get_status", "group__mmc__interface.html#ga21dfcc5227d865e29c79de4178f54c80", null ],
+    [ "mmc_track_set_adjop_mode", "group__mmc__interface.html#ga5e8cec8bfc01e714c7b51ba2fa180c3e", null ],
+    [ "mmc_track_set_oosync_theta_threshold", "group__mmc__interface.html#ga9a279e98dea42c97460bc007c137ef23", null ],
+    [ "mmc_track_set_open_loop_mode", "group__mmc__interface.html#ga5ad80a4a719aad38c9fda5936d937c2b", null ]
+];

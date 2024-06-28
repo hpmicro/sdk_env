@@ -107,7 +107,7 @@ if !ERRORLEVEL!==0 (
             )
             md %%t
             cd %%t
-            cmake -GNinja -DBOARD=%2 -DCMAKE_BUILD_TYPE=%%t %4 >build.log 2>&1
+            cmake -GNinja -DBOARD=%2 -DHPM_BUILD_TYPE=%%t %4 >build.log 2>&1
             if !ERRORLEVEL!==0 (
                 goto FIND_AVAILABLE_TYPE_AND_COMPILE_EXIT
             ) else (
@@ -126,7 +126,7 @@ exit /b 0
 
 
 :EXAMPLE_COMPILE BOARD_NAME BUILD_TYPE SAMPLE_DIR
-cmake -GNinja -DBOARD=%1  -DCMAKE_BUILD_TYPE=%2 %3 >build.log 2>&1
+cmake -GNinja -DBOARD=%1  -DHPM_BUILD_TYPE=%2 %3 >build.log 2>&1
 if not %ERRORLEVEL%==0 (
     type build.log | findstr /c:"can not support this sample" >nul 2>&1
     if !ERRORLEVEL!==0 (
@@ -151,7 +151,7 @@ call :STR_STR core0 %2 POSITION_CORE0
 if not "!POSITION_CORE0!"=="0" (
     cmake -GNinja -DBOARD=%1  %2 >build.log 2>&1
 ) else (
-    cmake -GNinja -DBOARD=%1 -DCMAKE_BUILD_TYPE="sec_core_img" %2 >build.log 2>&1
+    cmake -GNinja -DBOARD=%1 -DHPM_BUILD_TYPE="sec_core_img" %2 >build.log 2>&1
 )
 exit /b 0
 

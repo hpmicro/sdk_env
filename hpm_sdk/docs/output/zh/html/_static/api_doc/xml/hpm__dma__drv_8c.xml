@@ -1,0 +1,654 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hpm__dma__drv_8c" kind="file" language="C++">
+    <compoundname>hpm_dma_drv.c</compoundname>
+    <includes refid="hpm__dma__drv_8h" local="yes">hpm_dma_drv.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="10">
+        <label>hpm_dma_regs.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="1">
+        <label>drivers/src/hpm_dma_drv.c</label>
+        <link refid="hpm__dma__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hpm_dma_drv.h</label>
+        <link refid="hpm__dma__drv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__dma__interface_1ga4e06185c6cfab347b9bde8032bae380c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t dma_setup_channel</definition>
+        <argsstring>(DMA_Type *ptr, uint8_t ch_num, dma_channel_config_t *ch, bool start_transfer)</argsstring>
+        <name>dma_setup_channel</name>
+        <param>
+          <type><ref refid="structDMA__Type" kindref="compound">DMA_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_num</declname>
+        </param>
+        <param>
+          <type><ref refid="group__dma__interface_1ga96b9a1318af382070de60d3ac3b6bedd" kindref="member">dma_channel_config_t</ref> *</type>
+          <declname>ch</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>start_transfer</declname>
+        </param>
+        <briefdescription>
+<para>Setup DMA channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DMA base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target channel index to be configured </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">start_transfer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set true to start transfer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status_success if everything is okay </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_dma_drv.c" line="10" column="12" bodyfile="drivers/src/hpm_dma_drv.c" bodystart="10" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dma__interface_1ga68a6913c8d41fc26a2da98874833badd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dma_default_channel_config</definition>
+        <argsstring>(DMA_Type *ptr, dma_channel_config_t *ch)</argsstring>
+        <name>dma_default_channel_config</name>
+        <param>
+          <type><ref refid="structDMA__Type" kindref="compound">DMA_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__dma__interface_1ga96b9a1318af382070de60d3ac3b6bedd" kindref="member">dma_channel_config_t</ref> *</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para>Get default channel config. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DMA base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel config </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_dma_drv.c" line="62" column="6" bodyfile="drivers/src/hpm_dma_drv.c" bodystart="62" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dma__interface_1ga34614c9ae36c862cd152aa51068e2082" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t dma_config_linked_descriptor</definition>
+        <argsstring>(DMA_Type *ptr, dma_linked_descriptor_t *descriptor, uint8_t ch_num, dma_channel_config_t *config)</argsstring>
+        <name>dma_config_linked_descriptor</name>
+        <param>
+          <type><ref refid="structDMA__Type" kindref="compound">DMA_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__dma__interface_1ga6978af946aa984b0e6e73e14061b0dfa" kindref="member">dma_linked_descriptor_t</ref> *</type>
+          <declname>descriptor</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_num</declname>
+        </param>
+        <param>
+          <type><ref refid="group__dma__interface_1ga96b9a1318af382070de60d3ac3b6bedd" kindref="member">dma_channel_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Config linked descriptor function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DMA base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">descriptor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linked descriptor pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target channel index to be configured </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Descriptor config pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status_success if everything is okay </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_dma_drv.c" line="78" column="12" bodyfile="drivers/src/hpm_dma_drv.c" bodystart="78" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dma__interface_1gaca671e22616ff09fe52de24a09bbda4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t dma_start_memcpy</definition>
+        <argsstring>(DMA_Type *ptr, uint8_t ch_num, uint32_t dst, uint32_t src, uint32_t size, uint32_t burst_len_in_byte)</argsstring>
+        <name>dma_start_memcpy</name>
+        <param>
+          <type><ref refid="structDMA__Type" kindref="compound">DMA_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch_num</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size_in_byte</declname>
+          <defname>size</defname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>burst_len_in_byte</declname>
+        </param>
+        <briefdescription>
+<para>Start DMA copy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DMA base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target channel index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source Address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size_in_byte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size in byte </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">burst_len_in_byte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Burst length in byte</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status_success if everthing is okay </para>
+</simplesect>
+<simplesect kind="note"><para>: dst, src, size should be aligned with burst_len_in_byte </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_dma_drv.c" line="127" column="12" bodyfile="drivers/src/hpm_dma_drv.c" bodystart="127" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dma__interface_1ga58b2a7329e217e39a5787efa41f33e3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dma_default_handshake_config</definition>
+        <argsstring>(DMA_Type *ptr, dma_handshake_config_t *config)</argsstring>
+        <name>dma_default_handshake_config</name>
+        <param>
+          <type><ref refid="structDMA__Type" kindref="compound">DMA_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__dma__interface_1ga6d6f4f5ff9740a0016f93c215a00d0bf" kindref="member">dma_handshake_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Get default handshake config. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DMA base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>default config </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_dma_drv.c" line="189" column="6" bodyfile="drivers/src/hpm_dma_drv.c" bodystart="189" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="group__dma__interface_1gae3aa3d5d4812c36d6cbb138576053eb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t dma_setup_handshake</definition>
+        <argsstring>(DMA_Type *ptr, dma_handshake_config_t *pconfig, bool start_transfer)</argsstring>
+        <name>dma_setup_handshake</name>
+        <param>
+          <type><ref refid="structDMA__Type" kindref="compound">DMA_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__dma__interface_1ga6d6f4f5ff9740a0016f93c215a00d0bf" kindref="member">dma_handshake_config_t</ref> *</type>
+          <declname>pconfig</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>start_transfer</declname>
+        </param>
+        <briefdescription>
+<para>config dma handshake function </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DMA base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pconfig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dma handshake config pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">start_transfer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set true to start transfer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status_success if everything is okay </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_dma_drv.c" line="195" column="12" bodyfile="drivers/src/hpm_dma_drv.c" bodystart="195" bodyend="226"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2022<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__dma__drv_8h" kindref="compound">hpm_dma_drv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__dma__interface_1ga4e06185c6cfab347b9bde8032bae380c" kindref="member">dma_setup_channel</ref>(<ref refid="structDMA__Type" kindref="compound">DMA_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_num,<sp/><ref refid="structdma__channel__config" kindref="compound">dma_channel_config_t</ref><sp/>*ch,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>start_transfer)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>tmp;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ch-&gt;<ref refid="structdma__channel__config_1aeb58ed3b8d289bda735d3ce3e63db0d0" kindref="member">dst_width</ref><sp/>&gt;<sp/><ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a77458aa6f01a836f6463b3f0f39a2fd2" kindref="member">DMA_SOC_TRANSFER_WIDTH_MAX</ref>(ptr))</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>(ch-&gt;<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref><sp/>&gt;<sp/><ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a77458aa6f01a836f6463b3f0f39a2fd2" kindref="member">DMA_SOC_TRANSFER_WIDTH_MAX</ref>(ptr))</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>(ch_num<sp/>&gt;=<sp/><ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a656f45b6bf057f160f7d3d40c15bfd64" kindref="member">DMA_SOC_CHANNEL_NUM</ref>)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>((ch-&gt;<ref refid="structdma__channel__config_1aba4e194bd2d515fd5eb21f1fcd23d570" kindref="member">dst_mode</ref><sp/>==<sp/><ref refid="group__dma__interface_1ga118bec6d1d493e9cefc5022575d76675" kindref="member">DMA_HANDSHAKE_MODE_HANDSHAKE</ref>)<sp/>&amp;&amp;<sp/>(ch-&gt;<ref refid="structdma__channel__config_1a72a8a4710ccb94a1a40c40a7d940415d" kindref="member">src_mode</ref><sp/>==<sp/><ref refid="group__dma__interface_1ga118bec6d1d493e9cefc5022575d76675" kindref="member">DMA_HANDSHAKE_MODE_HANDSHAKE</ref>)))<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ch-&gt;<ref refid="structdma__channel__config_1a9c26d92bb6bc973c8da648515ea2a879" kindref="member">size_in_byte</ref><sp/>&amp;<sp/>((1<sp/>&lt;&lt;<sp/>ch-&gt;<ref refid="structdma__channel__config_1aeb58ed3b8d289bda735d3ce3e63db0d0" kindref="member">dst_width</ref>)<sp/>-<sp/>1))</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>||<sp/>(ch-&gt;<ref refid="structdma__channel__config_1a6ea3c68e5abe00f23dfb6619dc7f522e" kindref="member">src_addr</ref><sp/>&amp;<sp/>((1<sp/>&lt;&lt;<sp/>ch-&gt;<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref>)<sp/>-<sp/>1))</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>||<sp/>(ch-&gt;<ref refid="structdma__channel__config_1a61573001cee2cf4c07fafa82008376a9" kindref="member">dst_addr</ref><sp/>&amp;<sp/>((1<sp/>&lt;&lt;<sp/>ch-&gt;<ref refid="structdma__channel__config_1aeb58ed3b8d289bda735d3ce3e63db0d0" kindref="member">dst_width</ref>)<sp/>-<sp/>1))</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>||<sp/>((1<sp/>&lt;&lt;<sp/>ch-&gt;<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref>)<sp/>&amp;<sp/>((1<sp/>&lt;&lt;<sp/>ch-&gt;<ref refid="structdma__channel__config_1aeb58ed3b8d289bda735d3ce3e63db0d0" kindref="member">dst_width</ref>)<sp/>-<sp/>1))</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>||<sp/>((ch-&gt;<ref refid="structdma__channel__config_1a30d87b0f09b2ee86ea52bcfdc9ee0c89" kindref="member">linked_ptr</ref><sp/>&amp;<sp/>0x7)))<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__dma__interface_1ggae4d5251432e1a9e6803c0240cc492e18ae7b72aef0fb575677f9a51c7028fd853" kindref="member">status_dma_alignment_error</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDMA__Type_1a61a15737924b2c4d9bc4513a40673b69" kindref="member">CHCTRL</ref>[ch_num].<ref refid="structDMA__Type_1a4962330f2f02bde1760c204098977baa" kindref="member">SRCADDR</ref><sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a9c158d827af8fc2bb340ca31497739af" kindref="member">DMA_CHCTRL_SRCADDR_SRCADDRL_SET</ref>(ch-&gt;<ref refid="structdma__channel__config_1a6ea3c68e5abe00f23dfb6619dc7f522e" kindref="member">src_addr</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDMA__Type_1a61a15737924b2c4d9bc4513a40673b69" kindref="member">CHCTRL</ref>[ch_num].<ref refid="structDMA__Type_1a7270be8bd84f318d84455dc804e6ba7c" kindref="member">DSTADDR</ref><sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1ae988d8789e33aae7e7c1756de305ed95" kindref="member">DMA_CHCTRL_DSTADDR_DSTADDRL_SET</ref>(ch-&gt;<ref refid="structdma__channel__config_1a61573001cee2cf4c07fafa82008376a9" kindref="member">dst_addr</ref>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDMA__Type_1a61a15737924b2c4d9bc4513a40673b69" kindref="member">CHCTRL</ref>[ch_num].<ref refid="structDMA__Type_1a37ff9876deb70b43a0332cf09f00e1b2" kindref="member">TRANSIZE</ref><sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a914c4b097e668eee6c269df8c1c1731e" kindref="member">DMA_CHCTRL_TRANSIZE_TRANSIZE_SET</ref>(ch-&gt;<ref refid="structdma__channel__config_1a9c26d92bb6bc973c8da648515ea2a879" kindref="member">size_in_byte</ref><sp/>&gt;&gt;<sp/>ch-&gt;<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDMA__Type_1a61a15737924b2c4d9bc4513a40673b69" kindref="member">CHCTRL</ref>[ch_num].<ref refid="structDMA__Type_1a28bd9572e0c83e47d9aa01d7df550e50" kindref="member">LLPOINTER</ref><sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a65d29b1adbe93455b8cf8178ea8dbfb7" kindref="member">DMA_CHCTRL_LLPOINTER_LLPOINTERL_SET</ref>(ch-&gt;<ref refid="structdma__channel__config_1a30d87b0f09b2ee86ea52bcfdc9ee0c89" kindref="member">linked_ptr</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a365846933d3f483f910d8ffc399be120" kindref="member">DMA_CHCTRL_LLPOINTER_LLPOINTERL_SHIFT</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>DMA_SUPPORT_64BIT_ADDR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDMA__Type_1a61a15737924b2c4d9bc4513a40673b69" kindref="member">CHCTRL</ref>[ch_num].<ref refid="structDMA__Type_1a700d7f0f25d59ad653f80dbd44ef1c82" kindref="member">SRCADDRH</ref><sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a0e8ae77fda1c060892a771185e2513f4" kindref="member">DMA_CHCTRL_SRCADDRH_SRCADDRH_SET</ref>(ch-&gt;src_addr_high);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDMA__Type_1a61a15737924b2c4d9bc4513a40673b69" kindref="member">CHCTRL</ref>[ch_num].<ref refid="structDMA__Type_1a93ade2a3eae7c7776aac9d92240f2ca0" kindref="member">DSTADDRH</ref><sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a5fd7322457b0b23d15fc4faf9e575c01" kindref="member">DMA_CHCTRL_DSTADDRH_DSTADDRH_SET</ref>(ch-&gt;dst_addr_high);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDMA__Type_1a61a15737924b2c4d9bc4513a40673b69" kindref="member">CHCTRL</ref>[ch_num].<ref refid="structDMA__Type_1ad88859be39aa374e388fdeb8e8ceeca5" kindref="member">LLPOINTERH</ref><sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a1130903e856e18209bc9303d00b02d43" kindref="member">DMA_CHCTRL_LLPOINTERH_LLPOINTERH_SET</ref>(ch-&gt;linked_ptr_high);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDMA__Type_1ab1c4f5e177d9cfaaa9277a19c1e1ff47" kindref="member">INTSTATUS</ref><sp/>=<sp/>(<ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a91a193eaab24f4a52c6ebb4d2775622b" kindref="member">DMA_INTSTATUS_TC_SET</ref>(1)<sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a23162a5e36169fcf80a3128016b74581" kindref="member">DMA_INTSTATUS_ABORT_SET</ref>(1)<sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1afb170b9f1b6329464956380cc5779592" kindref="member">DMA_INTSTATUS_ERROR_SET</ref>(1))<sp/>&lt;&lt;<sp/>ch_num;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>tmp<sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a92aea90f49c0b3e151c495ea1e2a9933" kindref="member">DMA_CHCTRL_CTRL_SRCBUSINFIDX_SET</ref>(0)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a8d4e96fdb7fceb4789b7ca580f39ce79" kindref="member">DMA_CHCTRL_CTRL_DSTBUSINFIDX_SET</ref>(0)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1ab13429eecba62c23b75d06579f6c8edc" kindref="member">DMA_CHCTRL_CTRL_PRIORITY_SET</ref>(ch-&gt;<ref refid="structdma__channel__config_1a8cf3deba183b106bec1b3d90f5143862" kindref="member">priority</ref>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a7d716236eb614fc22bc24a9f90de675a" kindref="member">DMA_CHCTRL_CTRL_SRCBURSTSIZE_SET</ref>(ch-&gt;<ref refid="structdma__channel__config_1a8f39273df46e8b495b02fa3f2970b3c6" kindref="member">src_burst_size</ref>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a5c37b21046dd4eb22e141244c0f96ae6" kindref="member">DMA_CHCTRL_CTRL_SRCWIDTH_SET</ref>(ch-&gt;<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref>)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a2ad49e17c846d16d80c8a5ad1293f8ee" kindref="member">DMA_CHCTRL_CTRL_DSTWIDTH_SET</ref>(ch-&gt;<ref refid="structdma__channel__config_1aeb58ed3b8d289bda735d3ce3e63db0d0" kindref="member">dst_width</ref>)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1afe4f84f9fc5ca1fcbdc845e2bac9df0c" kindref="member">DMA_CHCTRL_CTRL_SRCMODE_SET</ref>(ch-&gt;<ref refid="structdma__channel__config_1a72a8a4710ccb94a1a40c40a7d940415d" kindref="member">src_mode</ref>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a1e2ba69d88ea4d125c9673ff6afd78c1" kindref="member">DMA_CHCTRL_CTRL_DSTMODE_SET</ref>(ch-&gt;<ref refid="structdma__channel__config_1aba4e194bd2d515fd5eb21f1fcd23d570" kindref="member">dst_mode</ref>)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a3b8b2bce0eb40d8a8dd7f86908b63150" kindref="member">DMA_CHCTRL_CTRL_SRCADDRCTRL_SET</ref>(ch-&gt;<ref refid="structdma__channel__config_1a9ac6d6dbb0fbd143fab5f0e587380a19" kindref="member">src_addr_ctrl</ref>)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a6875138947915ffe9ae8f0db33880b78" kindref="member">DMA_CHCTRL_CTRL_DSTADDRCTRL_SET</ref>(ch-&gt;<ref refid="structdma__channel__config_1a32da0a6928757a89be43722aaba86598" kindref="member">dst_addr_ctrl</ref>)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a37e3a703afd379e1efd4e5c085efbe29" kindref="member">DMA_CHCTRL_CTRL_SRCREQSEL_SET</ref>(ch_num)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1af1b9cdbfc72669d556b5f58ea47000ae" kindref="member">DMA_CHCTRL_CTRL_DSTREQSEL_SET</ref>(ch_num)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>ch-&gt;<ref refid="structdma__channel__config_1ac0cd07780af29eebce45ec26f408ba32" kindref="member">interrupt_mask</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(start_transfer)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp<sp/>|=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a0b3bd1abaadd9326afc9c90ef4224442" kindref="member">DMA_CHCTRL_CTRL_ENABLE_MASK</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDMA__Type_1a61a15737924b2c4d9bc4513a40673b69" kindref="member">CHCTRL</ref>[ch_num].<ref refid="structDMA__Type_1a5eb7b20222326896e9c787a3232b6a05" kindref="member">CTRL</ref><sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__dma__interface_1ga68a6913c8d41fc26a2da98874833badd" kindref="member">dma_default_channel_config</ref>(<ref refid="structDMA__Type" kindref="compound">DMA_Type</ref><sp/>*ptr,<sp/><ref refid="structdma__channel__config" kindref="compound">dma_channel_config_t</ref><sp/>*ch)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<sp/>ptr;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>ch-&gt;<ref refid="structdma__channel__config_1a8cf3deba183b106bec1b3d90f5143862" kindref="member">priority</ref><sp/>=<sp/><ref refid="group__dma__interface_1gaebef45648957c1a19c3d8f1e125de09a" kindref="member">DMA_CHANNEL_PRIORITY_LOW</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>ch-&gt;<ref refid="structdma__channel__config_1a72a8a4710ccb94a1a40c40a7d940415d" kindref="member">src_mode</ref><sp/>=<sp/><ref refid="group__dma__interface_1gaf99b37b0d669fbde75576b5d6c5dc82f" kindref="member">DMA_HANDSHAKE_MODE_NORMAL</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>ch-&gt;<ref refid="structdma__channel__config_1aba4e194bd2d515fd5eb21f1fcd23d570" kindref="member">dst_mode</ref><sp/>=<sp/><ref refid="group__dma__interface_1gaf99b37b0d669fbde75576b5d6c5dc82f" kindref="member">DMA_HANDSHAKE_MODE_NORMAL</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>ch-&gt;<ref refid="structdma__channel__config_1a8f39273df46e8b495b02fa3f2970b3c6" kindref="member">src_burst_size</ref><sp/>=<sp/><ref refid="group__dma__interface_1ga4c2aae66f2ff42fd7b2b843845ea53a3" kindref="member">DMA_NUM_TRANSFER_PER_BURST_1T</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>ch-&gt;<ref refid="structdma__channel__config_1a9ac6d6dbb0fbd143fab5f0e587380a19" kindref="member">src_addr_ctrl</ref><sp/>=<sp/><ref refid="group__dma__interface_1gac26c5a0b3cb46ddddc026ca3123c893f" kindref="member">DMA_ADDRESS_CONTROL_INCREMENT</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>ch-&gt;<ref refid="structdma__channel__config_1a32da0a6928757a89be43722aaba86598" kindref="member">dst_addr_ctrl</ref><sp/>=<sp/><ref refid="group__dma__interface_1gac26c5a0b3cb46ddddc026ca3123c893f" kindref="member">DMA_ADDRESS_CONTROL_INCREMENT</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>ch-&gt;<ref refid="structdma__channel__config_1ac0cd07780af29eebce45ec26f408ba32" kindref="member">interrupt_mask</ref><sp/>=<sp/><ref refid="group__dma__interface_1ga073e49f6f503e4e15d565d6d0b26af53" kindref="member">DMA_INTERRUPT_MASK_NONE</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>ch-&gt;<ref refid="structdma__channel__config_1a30d87b0f09b2ee86ea52bcfdc9ee0c89" kindref="member">linked_ptr</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>DMA_SUPPORT_64BIT_ADDR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>ch-&gt;linked_ptr_high<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__dma__interface_1ga34614c9ae36c862cd152aa51068e2082" kindref="member">dma_config_linked_descriptor</ref>(<ref refid="structDMA__Type" kindref="compound">DMA_Type</ref><sp/>*ptr,<sp/><ref refid="structdma__linked__descriptor" kindref="compound">dma_linked_descriptor_t</ref><sp/>*descriptor,<sp/>uint8_t<sp/>ch_num,<sp/><ref refid="structdma__channel__config" kindref="compound">dma_channel_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>tmp;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((config-&gt;<ref refid="structdma__channel__config_1aeb58ed3b8d289bda735d3ce3e63db0d0" kindref="member">dst_width</ref><sp/>&gt;<sp/><ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a77458aa6f01a836f6463b3f0f39a2fd2" kindref="member">DMA_SOC_TRANSFER_WIDTH_MAX</ref>(ptr))</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>||<sp/>(config-&gt;<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref><sp/>&gt;<sp/><ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a77458aa6f01a836f6463b3f0f39a2fd2" kindref="member">DMA_SOC_TRANSFER_WIDTH_MAX</ref>(ptr))</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>||<sp/>(ch_num<sp/>&gt;=<sp/><ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a656f45b6bf057f160f7d3d40c15bfd64" kindref="member">DMA_SOC_CHANNEL_NUM</ref>)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>||<sp/>((config-&gt;<ref refid="structdma__channel__config_1aba4e194bd2d515fd5eb21f1fcd23d570" kindref="member">dst_mode</ref><sp/>==<sp/><ref refid="group__dma__interface_1ga118bec6d1d493e9cefc5022575d76675" kindref="member">DMA_HANDSHAKE_MODE_HANDSHAKE</ref>)<sp/>&amp;&amp;<sp/>(config-&gt;<ref refid="structdma__channel__config_1a72a8a4710ccb94a1a40c40a7d940415d" kindref="member">src_mode</ref><sp/>==<sp/><ref refid="group__dma__interface_1ga118bec6d1d493e9cefc5022575d76675" kindref="member">DMA_HANDSHAKE_MODE_HANDSHAKE</ref>)))<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((config-&gt;<ref refid="structdma__channel__config_1a9c26d92bb6bc973c8da648515ea2a879" kindref="member">size_in_byte</ref><sp/>&amp;<sp/>((1<sp/>&lt;&lt;<sp/>config-&gt;<ref refid="structdma__channel__config_1aeb58ed3b8d289bda735d3ce3e63db0d0" kindref="member">dst_width</ref>)<sp/>-<sp/>1))</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>||<sp/>(config-&gt;<ref refid="structdma__channel__config_1a6ea3c68e5abe00f23dfb6619dc7f522e" kindref="member">src_addr</ref><sp/>&amp;<sp/>((1<sp/>&lt;&lt;<sp/>config-&gt;<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref>)<sp/>-<sp/>1))</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>||<sp/>(config-&gt;<ref refid="structdma__channel__config_1a61573001cee2cf4c07fafa82008376a9" kindref="member">dst_addr</ref><sp/>&amp;<sp/>((1<sp/>&lt;&lt;<sp/>config-&gt;<ref refid="structdma__channel__config_1aeb58ed3b8d289bda735d3ce3e63db0d0" kindref="member">dst_width</ref>)<sp/>-<sp/>1))</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>||<sp/>((1<sp/>&lt;&lt;<sp/>config-&gt;<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref>)<sp/>&amp;<sp/>((1<sp/>&lt;&lt;<sp/>config-&gt;<ref refid="structdma__channel__config_1aeb58ed3b8d289bda735d3ce3e63db0d0" kindref="member">dst_width</ref>)<sp/>-<sp/>1))</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>||<sp/>((config-&gt;<ref refid="structdma__channel__config_1a30d87b0f09b2ee86ea52bcfdc9ee0c89" kindref="member">linked_ptr</ref><sp/>&amp;<sp/>0x7)))<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__dma__interface_1ggae4d5251432e1a9e6803c0240cc492e18ae7b72aef0fb575677f9a51c7028fd853" kindref="member">status_dma_alignment_error</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor-&gt;<ref refid="structdma__linked__descriptor_1a5d5d7698c67d2274bfd293fb634b37cd" kindref="member">src_addr</ref><sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a9c158d827af8fc2bb340ca31497739af" kindref="member">DMA_CHCTRL_SRCADDR_SRCADDRL_SET</ref>(config-&gt;<ref refid="structdma__channel__config_1a6ea3c68e5abe00f23dfb6619dc7f522e" kindref="member">src_addr</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor-&gt;<ref refid="structdma__linked__descriptor_1a1f3b7926762967cdf1152e35fe36be64" kindref="member">dst_addr</ref><sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1ae988d8789e33aae7e7c1756de305ed95" kindref="member">DMA_CHCTRL_DSTADDR_DSTADDRL_SET</ref>(config-&gt;<ref refid="structdma__channel__config_1a61573001cee2cf4c07fafa82008376a9" kindref="member">dst_addr</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor-&gt;<ref refid="structdma__linked__descriptor_1a6150699f6388cd71b180138d55164a32" kindref="member">trans_size</ref><sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a914c4b097e668eee6c269df8c1c1731e" kindref="member">DMA_CHCTRL_TRANSIZE_TRANSIZE_SET</ref>(config-&gt;<ref refid="structdma__channel__config_1a9c26d92bb6bc973c8da648515ea2a879" kindref="member">size_in_byte</ref><sp/>&gt;&gt;<sp/>config-&gt;<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor-&gt;<ref refid="structdma__linked__descriptor_1a60834fff767ebed7a87f7cf36cc0f7cc" kindref="member">linked_ptr</ref><sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a65d29b1adbe93455b8cf8178ea8dbfb7" kindref="member">DMA_CHCTRL_LLPOINTER_LLPOINTERL_SET</ref>(config-&gt;<ref refid="structdma__channel__config_1a30d87b0f09b2ee86ea52bcfdc9ee0c89" kindref="member">linked_ptr</ref><sp/>&gt;&gt;<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a365846933d3f483f910d8ffc399be120" kindref="member">DMA_CHCTRL_LLPOINTER_LLPOINTERL_SHIFT</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>DMA_SUPPORT_64BIT_ADDR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor-&gt;<ref refid="structdma__linked__descriptor_1a880d2f77f612ef417e9a014e234eff60" kindref="member">src_addr_high</ref><sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a0e8ae77fda1c060892a771185e2513f4" kindref="member">DMA_CHCTRL_SRCADDRH_SRCADDRH_SET</ref>(config-&gt;src_addr_high);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor-&gt;<ref refid="structdma__linked__descriptor_1adc08d5ca025c6265ba7d7d4643e56323" kindref="member">dst_addr_high</ref><sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a5fd7322457b0b23d15fc4faf9e575c01" kindref="member">DMA_CHCTRL_DSTADDRH_DSTADDRH_SET</ref>(config-&gt;dst_addr_high);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor-&gt;<ref refid="structdma__linked__descriptor_1adda6da8bd685cc3535d4e0b580b5fd70" kindref="member">linked_ptr_high</ref><sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a1130903e856e18209bc9303d00b02d43" kindref="member">DMA_CHCTRL_LLPOINTERH_LLPOINTERH_SET</ref>(config-&gt;linked_ptr_high);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>tmp<sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a92aea90f49c0b3e151c495ea1e2a9933" kindref="member">DMA_CHCTRL_CTRL_SRCBUSINFIDX_SET</ref>(0)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a8d4e96fdb7fceb4789b7ca580f39ce79" kindref="member">DMA_CHCTRL_CTRL_DSTBUSINFIDX_SET</ref>(0)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1ab13429eecba62c23b75d06579f6c8edc" kindref="member">DMA_CHCTRL_CTRL_PRIORITY_SET</ref>(config-&gt;<ref refid="structdma__channel__config_1a8cf3deba183b106bec1b3d90f5143862" kindref="member">priority</ref>)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a7d716236eb614fc22bc24a9f90de675a" kindref="member">DMA_CHCTRL_CTRL_SRCBURSTSIZE_SET</ref>(config-&gt;<ref refid="structdma__channel__config_1a8f39273df46e8b495b02fa3f2970b3c6" kindref="member">src_burst_size</ref>)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a5c37b21046dd4eb22e141244c0f96ae6" kindref="member">DMA_CHCTRL_CTRL_SRCWIDTH_SET</ref>(config-&gt;<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref>)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a2ad49e17c846d16d80c8a5ad1293f8ee" kindref="member">DMA_CHCTRL_CTRL_DSTWIDTH_SET</ref>(config-&gt;<ref refid="structdma__channel__config_1aeb58ed3b8d289bda735d3ce3e63db0d0" kindref="member">dst_width</ref>)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1afe4f84f9fc5ca1fcbdc845e2bac9df0c" kindref="member">DMA_CHCTRL_CTRL_SRCMODE_SET</ref>(config-&gt;<ref refid="structdma__channel__config_1a72a8a4710ccb94a1a40c40a7d940415d" kindref="member">src_mode</ref>)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a1e2ba69d88ea4d125c9673ff6afd78c1" kindref="member">DMA_CHCTRL_CTRL_DSTMODE_SET</ref>(config-&gt;<ref refid="structdma__channel__config_1aba4e194bd2d515fd5eb21f1fcd23d570" kindref="member">dst_mode</ref>)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a3b8b2bce0eb40d8a8dd7f86908b63150" kindref="member">DMA_CHCTRL_CTRL_SRCADDRCTRL_SET</ref>(config-&gt;<ref refid="structdma__channel__config_1a9ac6d6dbb0fbd143fab5f0e587380a19" kindref="member">src_addr_ctrl</ref>)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a6875138947915ffe9ae8f0db33880b78" kindref="member">DMA_CHCTRL_CTRL_DSTADDRCTRL_SET</ref>(config-&gt;<ref refid="structdma__channel__config_1a32da0a6928757a89be43722aaba86598" kindref="member">dst_addr_ctrl</ref>)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a37e3a703afd379e1efd4e5c085efbe29" kindref="member">DMA_CHCTRL_CTRL_SRCREQSEL_SET</ref>(ch_num)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1af1b9cdbfc72669d556b5f58ea47000ae" kindref="member">DMA_CHCTRL_CTRL_DSTREQSEL_SET</ref>(ch_num)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>config-&gt;<ref refid="structdma__channel__config_1ac0cd07780af29eebce45ec26f408ba32" kindref="member">interrupt_mask</ref></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__dma__regs_8h_1a0b3bd1abaadd9326afc9c90ef4224442" kindref="member">DMA_CHCTRL_CTRL_ENABLE_MASK</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>descriptor-&gt;<ref refid="structdma__linked__descriptor_1a4ebb85d442f2d06bb117f1eaa7e848dc" kindref="member">ctrl</ref><sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__dma__interface_1gaca671e22616ff09fe52de24a09bbda4d" kindref="member">dma_start_memcpy</ref>(<ref refid="structDMA__Type" kindref="compound">DMA_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch_num,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>dst,<sp/>uint32_t<sp/>src,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="group__nnactivation_1ga1a644b4eb69881039bfc5f6ab842160f" kindref="member">size</ref>,<sp/>uint32_t<sp/>burst_len_in_byte)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat<sp/>=<sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>width,<sp/>count;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>burst_size;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdma__channel__config" kindref="compound">dma_channel_config_t</ref><sp/>config<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__dma__interface_1ga68a6913c8d41fc26a2da98874833badd" kindref="member">dma_default_channel_config</ref>(ptr,<sp/>&amp;config);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>burst<sp/>size<sp/>checking<sp/>(1-byte<sp/>burst<sp/>length<sp/>will<sp/>cause<sp/>heavy<sp/>overhead<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!burst_len_in_byte<sp/>||<sp/>burst_len_in_byte<sp/>==<sp/>1<sp/>||<sp/>burst_len_in_byte<sp/>&gt;<sp/><ref refid="group__nnactivation_1ga1a644b4eb69881039bfc5f6ab842160f" kindref="member">size</ref></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>burst_len_in_byte<sp/>&gt;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)<sp/>((1<sp/>&lt;&lt;<sp/><ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a77458aa6f01a836f6463b3f0f39a2fd2" kindref="member">DMA_SOC_TRANSFER_WIDTH_MAX</ref>(ptr))<sp/>&lt;&lt;<sp/><ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a9385b7b952ec07732e3ceddabb3c5e21" kindref="member">DMA_SOC_TRANSFER_PER_BURST_MAX</ref>(ptr)))<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>count<sp/>=<sp/><ref refid="group__common__interface_1ga7a93af7cf68c85eb272a2f62d497ab4a" kindref="member">count_set_bits</ref>(burst_len_in_byte);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((count<sp/>&gt;<sp/>1)<sp/>||<sp/>(burst_len_in_byte<sp/>&amp;<sp/>0x1))<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>dma<sp/>only<sp/>supports<sp/>2^n<sp/>bytes<sp/>as<sp/>burst<sp/>size<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="group__nnactivation_1ga1a644b4eb69881039bfc5f6ab842160f" kindref="member">size</ref><sp/>&amp;<sp/>(burst_len_in_byte<sp/>-<sp/>1)))<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__dma__interface_1ggae4d5251432e1a9e6803c0240cc492e18ae7b72aef0fb575677f9a51c7028fd853" kindref="member">status_dma_alignment_error</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>burst_size<sp/>=<sp/><ref refid="group__common__interface_1ga033636d44c4b9c37ad20428cb3ef7d1d" kindref="member">get_first_set_bit_from_lsb</ref>(burst_len_in_byte);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref><sp/>=<sp/><ref refid="group__dma__interface_1gad8d06c3e8fbc475fba6f4de642a86c04" kindref="member">DMA_TRANSFER_WIDTH_HALF_WORD</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1aeb58ed3b8d289bda735d3ce3e63db0d0" kindref="member">dst_width</ref><sp/>=<sp/><ref refid="group__dma__interface_1gad8d06c3e8fbc475fba6f4de642a86c04" kindref="member">DMA_TRANSFER_WIDTH_HALF_WORD</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(width<sp/>=<sp/><ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a77458aa6f01a836f6463b3f0f39a2fd2" kindref="member">DMA_SOC_TRANSFER_WIDTH_MAX</ref>(ptr);<sp/>width<sp/>&gt;<sp/><ref refid="group__dma__interface_1gad8d06c3e8fbc475fba6f4de642a86c04" kindref="member">DMA_TRANSFER_WIDTH_HALF_WORD</ref>;<sp/>width--)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(burst_len_in_byte<sp/>&amp;<sp/>((1<sp/>&lt;&lt;<sp/>width)<sp/>-<sp/>1))</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>!(dst<sp/>&amp;<sp/>((1<sp/>&lt;&lt;<sp/>width)<sp/>-<sp/>1))</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>!(src<sp/>&amp;<sp/>((1<sp/>&lt;&lt;<sp/>width)<sp/>-<sp/>1))</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>!(<ref refid="group__nnactivation_1ga1a644b4eb69881039bfc5f6ab842160f" kindref="member">size</ref><sp/>&amp;<sp/>((1<sp/>&lt;&lt;<sp/>width)<sp/>-<sp/>1)))<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref><sp/>=<sp/>width;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1aeb58ed3b8d289bda735d3ce3e63db0d0" kindref="member">dst_width</ref><sp/>=<sp/>width;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>burst_size<sp/>-=<sp/>config.<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(src<sp/>&amp;<sp/>(((1<sp/>&lt;&lt;<sp/>config.<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref>)<sp/>&lt;&lt;<sp/>burst_size)<sp/>-<sp/>1)))<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>burst_size--;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(burst_size<sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1a6ea3c68e5abe00f23dfb6619dc7f522e" kindref="member">src_addr</ref><sp/>=<sp/>src;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1a61573001cee2cf4c07fafa82008376a9" kindref="member">dst_addr</ref><sp/>=<sp/>dst;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1a9c26d92bb6bc973c8da648515ea2a879" kindref="member">size_in_byte</ref><sp/>=<sp/><ref refid="group__nnactivation_1ga1a644b4eb69881039bfc5f6ab842160f" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1a8f39273df46e8b495b02fa3f2970b3c6" kindref="member">src_burst_size</ref><sp/>=<sp/>burst_size;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__dma__interface_1ga4e06185c6cfab347b9bde8032bae380c" kindref="member">dma_setup_channel</ref>(ptr,<sp/>ch_num,<sp/>&amp;config,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stat<sp/>!=<sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__dma__interface_1ga58b2a7329e217e39a5787efa41f33e3e" kindref="member">dma_default_handshake_config</ref>(<ref refid="structDMA__Type" kindref="compound">DMA_Type</ref><sp/>*ptr,<sp/><ref refid="structdma__handshake__config" kindref="compound">dma_handshake_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<sp/>ptr;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(config,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structdma__handshake__config" kindref="compound">dma_handshake_config_t</ref>));</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__dma__interface_1gae3aa3d5d4812c36d6cbb138576053eb7" kindref="member">dma_setup_handshake</ref>(<ref refid="structDMA__Type" kindref="compound">DMA_Type</ref><sp/>*ptr,<sp/><sp/><ref refid="structdma__handshake__config" kindref="compound">dma_handshake_config_t</ref><sp/>*pconfig,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>start_transfer)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat<sp/>=<sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdma__channel__config" kindref="compound">dma_channel_config_t</ref><sp/>config<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__dma__interface_1ga68a6913c8d41fc26a2da98874833badd" kindref="member">dma_default_channel_config</ref>(ptr,<sp/>&amp;config);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>==<sp/>pconfig-&gt;<ref refid="structdma__handshake__config_1a267383e1d74800d3ba7bff7d9319059a" kindref="member">dst_fixed</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1a32da0a6928757a89be43722aaba86598" kindref="member">dst_addr_ctrl</ref><sp/>=<sp/><ref refid="group__dma__interface_1gadec283cc248f55399685c1f27b2bcc08" kindref="member">DMA_ADDRESS_CONTROL_FIXED</ref>;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1aba4e194bd2d515fd5eb21f1fcd23d570" kindref="member">dst_mode</ref><sp/>=<sp/><ref refid="group__dma__interface_1ga118bec6d1d493e9cefc5022575d76675" kindref="member">DMA_HANDSHAKE_MODE_HANDSHAKE</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>==<sp/>pconfig-&gt;<ref refid="structdma__handshake__config_1a86c0cd8b083c431905dbac6223fb1f20" kindref="member">src_fixed</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1a9ac6d6dbb0fbd143fab5f0e587380a19" kindref="member">src_addr_ctrl</ref><sp/>=<sp/><ref refid="group__dma__interface_1gadec283cc248f55399685c1f27b2bcc08" kindref="member">DMA_ADDRESS_CONTROL_FIXED</ref>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1a72a8a4710ccb94a1a40c40a7d940415d" kindref="member">src_mode</ref><sp/>=<sp/><ref refid="group__dma__interface_1ga118bec6d1d493e9cefc5022575d76675" kindref="member">DMA_HANDSHAKE_MODE_HANDSHAKE</ref>;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pconfig-&gt;<ref refid="structdma__handshake__config_1aac5cbfdee49d393422457655c61af5fa" kindref="member">ch_index</ref><sp/>&gt;=<sp/><ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a656f45b6bf057f160f7d3d40c15bfd64" kindref="member">DMA_SOC_CHANNEL_NUM</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1aa624d53a8b5cc9e855c680df10a79800" kindref="member">src_width</ref><sp/>=<sp/>pconfig-&gt;<ref refid="structdma__handshake__config_1a05621e2b0dce236028862cb8af9bcc3d" kindref="member">data_width</ref>;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1aeb58ed3b8d289bda735d3ce3e63db0d0" kindref="member">dst_width</ref><sp/>=<sp/>pconfig-&gt;<ref refid="structdma__handshake__config_1a05621e2b0dce236028862cb8af9bcc3d" kindref="member">data_width</ref>;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1a6ea3c68e5abe00f23dfb6619dc7f522e" kindref="member">src_addr</ref><sp/>=<sp/>pconfig-&gt;<ref refid="structdma__handshake__config_1ab768fb1619f65a9faf7da6a5bec1817c" kindref="member">src</ref>;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1a61573001cee2cf4c07fafa82008376a9" kindref="member">dst_addr</ref><sp/>=<sp/>pconfig-&gt;<ref refid="structdma__handshake__config_1a59a125f3cb57c7b31651a03d5194c821" kindref="member">dst</ref>;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1a9c26d92bb6bc973c8da648515ea2a879" kindref="member">size_in_byte</ref><sp/>=<sp/>pconfig-&gt;<ref refid="structdma__handshake__config_1a4cdc1f8688c0e9038e2d1310a22511ef" kindref="member">size_in_byte</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>In<sp/>DMA<sp/>handshake<sp/>case,<sp/>source<sp/>burst<sp/>size<sp/>must<sp/>be<sp/>1<sp/>transfer,<sp/>that<sp/>is<sp/>0.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>config.<ref refid="structdma__channel__config_1a8f39273df46e8b495b02fa3f2970b3c6" kindref="member">src_burst_size</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__dma__interface_1ga4e06185c6cfab347b9bde8032bae380c" kindref="member">dma_setup_channel</ref>(ptr,<sp/>pconfig-&gt;<ref refid="structdma__handshake__config_1aac5cbfdee49d393422457655c61af5fa" kindref="member">ch_index</ref>,<sp/>&amp;config,<sp/>start_transfer);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stat<sp/>!=<sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="drivers/src/hpm_dma_drv.c"/>
+  </compounddef>
+</doxygen>

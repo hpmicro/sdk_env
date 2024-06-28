@@ -1,0 +1,485 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__rtc__interface" kind="group">
+    <compoundname>rtc_interface</compoundname>
+    <title>RTC driver APIs</title>
+    <innerclass refid="structrtc__alarm__config__t" prot="public">rtc_alarm_config_t</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__rtc__interface_1ga46a1ec510cd686e4f51310a7feaf27f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t rtc_config_time</definition>
+        <argsstring>(RTC_Type *base, time_t time)</argsstring>
+        <name>rtc_config_time</name>
+        <param>
+          <type><ref refid="structRTC__Type" kindref="compound">RTC_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>time_t</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Configure the RTC time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>seconds since 1970.1.1, 0:0:0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>API</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>execution status status_success or status_invalid_argument </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="59" column="12" bodyfile="drivers/src/hpm_rtc_drv.c" bodystart="12" bodyend="16" declfile="drivers/inc/hpm_rtc_drv.h" declline="59" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rtc__interface_1ga30692199d0c99ae87a06a56a2226b5d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t rtc_config_alarm</definition>
+        <argsstring>(RTC_Type *base, rtc_alarm_config_t *config)</argsstring>
+        <name>rtc_config_alarm</name>
+        <param>
+          <type><ref refid="structRTC__Type" kindref="compound">RTC_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="structrtc__alarm__config__t" kindref="compound">rtc_alarm_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Configure RTC Alarm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC alarm configuration pointer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>API</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>execution status status_success or status_invalid_argument; </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="67" column="12" bodyfile="drivers/src/hpm_rtc_drv.c" bodystart="39" bodyend="77" declfile="drivers/inc/hpm_rtc_drv.h" declline="67" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rtc__interface_1ga9b8c5cac50cbb55eefcc4c519860b576" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>time_t</type>
+        <definition>time_t rtc_get_time</definition>
+        <argsstring>(RTC_Type *base)</argsstring>
+        <name>rtc_get_time</name>
+        <param>
+          <type><ref refid="structRTC__Type" kindref="compound">RTC_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>Get the time returned by RTC module. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RTC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="74" column="8" bodyfile="drivers/src/hpm_rtc_drv.c" bodystart="18" bodyend="22" declfile="drivers/inc/hpm_rtc_drv.h" declline="74" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rtc__interface_1ga77c01d638e5e3d651a5af54151fdd8bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct timeval</type>
+        <definition>struct timeval rtc_get_timeval</definition>
+        <argsstring>(RTC_Type *base)</argsstring>
+        <name>rtc_get_timeval</name>
+        <param>
+          <type><ref refid="structRTC__Type" kindref="compound">RTC_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>Get accurate time return by RTC module. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC base address</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>accurate time(including second and subsecond) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="74" column="8" bodyfile="drivers/src/hpm_rtc_drv.c" bodystart="24" bodyend="37" declfile="drivers/inc/hpm_rtc_drv.h" declline="74" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rtc__interface_1ga1efc8809fdca0196484946c0c6812125" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void rtc_enable_alarm_interrupt</definition>
+        <argsstring>(RTC_Type *base, uint32_t index, bool enable)</argsstring>
+        <name>rtc_enable_alarm_interrupt</name>
+        <param>
+          <type><ref refid="structRTC__Type" kindref="compound">RTC_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Enable RTC alarm interrupt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC alarm index, valid value is 0 or 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC alarm enable flag <itemizedlist>
+<listitem><para>true Enable specified RTC alarm </para>
+</listitem>
+<listitem><para>false Disable specified RTC alarm </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="93" column="20" bodyfile="drivers/inc/hpm_rtc_drv.h" bodystart="93" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rtc__interface_1ga987e3fdafab0a6f45982b61f5ed453c9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void rtc_clear_alarm_flag</definition>
+        <argsstring>(RTC_Type *base, uint32_t index)</argsstring>
+        <name>rtc_clear_alarm_flag</name>
+        <param>
+          <type><ref refid="structRTC__Type" kindref="compound">RTC_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Clear RTC alarm flag based on alarm index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC alarm index, valid value is 0 or 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="113" column="20" bodyfile="drivers/inc/hpm_rtc_drv.h" bodystart="113" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rtc__interface_1ga746345a9859e0f56671c0ec896f2d125" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void rtc_clear_alarm_flags</definition>
+        <argsstring>(RTC_Type *base, uint32_t masks)</argsstring>
+        <name>rtc_clear_alarm_flags</name>
+        <param>
+          <type><ref refid="structRTC__Type" kindref="compound">RTC_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>masks</declname>
+        </param>
+        <briefdescription>
+<para>Clear RTC alarm flags based on flag masks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">masks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC alarm masks </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="128" column="20" bodyfile="drivers/inc/hpm_rtc_drv.h" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rtc__interface_1ga65ec985ccac96d78bd93d9b89ef2f409" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool rtc_is_alarm_flag_asserted</definition>
+        <argsstring>(RTC_Type *base, uint32_t index)</argsstring>
+        <name>rtc_is_alarm_flag_asserted</name>
+        <param>
+          <type><ref refid="structRTC__Type" kindref="compound">RTC_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Check whether RTC alarm flag is set or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC alarm index, valid value is 0 or 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>RTC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>alarm flag. Valid value is true or false </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="139" column="20" bodyfile="drivers/inc/hpm_rtc_drv.h" bodystart="139" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rtc__interface_1ga3f44b82471ee9f40366d008c79f1a6a9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t rtc_get_alarm_flags</definition>
+        <argsstring>(RTC_Type *base)</argsstring>
+        <name>rtc_get_alarm_flags</name>
+        <param>
+          <type><ref refid="structRTC__Type" kindref="compound">RTC_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>Get the RTC alarm flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RTC base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RTC alarm flags </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="154" column="24" bodyfile="drivers/inc/hpm_rtc_drv.h" bodystart="154" bodyend="157"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__rtc__interface_1ga28a0711453563eb0cdc9319fe6d303aa" prot="public" static="no">
+        <name>RTC_ALARM_TYPE_ONE_SHOT</name>
+        <initializer>(0U)</initializer>
+        <briefdescription>
+<para>RTC Alarm type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The RTC alarm will be triggered only once </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="37" column="9" bodyfile="drivers/inc/hpm_rtc_drv.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__rtc__interface_1gabf36dcfdb8f73e6fda4284c0006a064a" prot="public" static="no">
+        <name>RTC_ALARM_TYPE_PERIODIC</name>
+        <initializer>(1U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The RTC alarm will be triggered periodically </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="38" column="9" bodyfile="drivers/inc/hpm_rtc_drv.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__rtc__interface_1ga94ee529b25f5f602c1b1439f8fec4de5" prot="public" static="no">
+        <name>RTC_ALARM_TYPE_ABSOLUTE_TIME_ONE_SHOT</name>
+        <initializer>(2U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The RTC alarm will be triggered via the absolute time provided via period </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="39" column="9" bodyfile="drivers/inc/hpm_rtc_drv.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__rtc__interface_1ga0a5b7dbb2e186e59cf458124c1bee87d" prot="public" static="no">
+        <name>ALARM_PERIOD_ONE_SEC</name>
+        <initializer>(1UL)</initializer>
+        <briefdescription>
+<para>Typical RTC alarm period definitions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Alarm period: 1 second </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="44" column="9" bodyfile="drivers/inc/hpm_rtc_drv.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__rtc__interface_1ga3d1ad6d8d0dc3be5bd232eb779d16b32" prot="public" static="no">
+        <name>ALARM_PERIOD_ONE_MIN</name>
+        <initializer>(60UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Alarm period: 1 minute </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="45" column="9" bodyfile="drivers/inc/hpm_rtc_drv.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__rtc__interface_1gad123a7b36e5f6cbfa6f3fe0cab49f644" prot="public" static="no">
+        <name>ALARM_PERIOD_ONE_HOUR</name>
+        <initializer>(3600U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Alarm period: 1 hour </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="46" column="9" bodyfile="drivers/inc/hpm_rtc_drv.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__rtc__interface_1ga3a8bdec24cad8df4cbbcbea10c18eab2" prot="public" static="no">
+        <name>ALARM_PERIOD_ONE_DAY</name>
+        <initializer>(<ref refid="group__rtc__interface_1gad123a7b36e5f6cbfa6f3fe0cab49f644" kindref="member">ALARM_PERIOD_ONE_HOUR</ref> * 24UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Alarm period: 1 day </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_rtc_drv.h" line="47" column="9" bodyfile="drivers/inc/hpm_rtc_drv.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RTC driver APIs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,994 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__Jpeg__interface" kind="group">
+    <compoundname>Jpeg_interface</compoundname>
+    <title>JPEG driver APIs</title>
+    <innerclass refid="structjpeg__sampling__t" prot="public">jpeg_sampling_t</innerclass>
+    <innerclass refid="structjpeg__pixel__t" prot="public">jpeg_pixel_t</innerclass>
+    <innerclass refid="structjpeg__job__config__t" prot="public">jpeg_job_config_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__Jpeg__interface_1ga5f6ee13a4bf1e9df59d56d2a315b7a14" prot="public" static="no" strong="no">
+        <type></type>
+        <name>jpeg_table</name>
+        <enumvalue id="group__Jpeg__interface_1gga5f6ee13a4bf1e9df59d56d2a315b7a14a8b53695f2d7029f78ce798fe90377c6d" prot="public">
+          <name>jpeg_table_qmem</name>
+          <initializer>=     0x201002</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>definition Decoder and Encoder Q. values </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Jpeg__interface_1gga5f6ee13a4bf1e9df59d56d2a315b7a14a36bc535f88cfa2419673d0cc3dba83a2" prot="public">
+          <name>jpeg_table_huffenc</name>
+          <initializer>=  0x201803</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>definition Huffman Encoder table </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Jpeg__interface_1gga5f6ee13a4bf1e9df59d56d2a315b7a14a34fd7fdadb374a31f035067861cd43ac" prot="public">
+          <name>jpeg_table_huffmin</name>
+          <initializer>=  0x400104</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>definition Huffman min values </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Jpeg__interface_1gga5f6ee13a4bf1e9df59d56d2a315b7a14a71bfe656917a2bee46f8501c06333634" prot="public">
+          <name>jpeg_table_huffbase</name>
+          <initializer>= 0x200405</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>definition Huffman BASE mem values </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Jpeg__interface_1gga5f6ee13a4bf1e9df59d56d2a315b7a14a61960a9e7c836c2f95baff963b32b188" prot="public">
+          <name>jpeg_table_huffsymb</name>
+          <initializer>= 0x101506</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>definition Huffman SYMB mem values </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>jpeg encoding and decoding configuration parameters </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>bit: 31-27 --&gt; name </para>
+</listitem>
+<listitem><para>bit: 26-23 --&gt; WIDTH IN BYTE </para>
+</listitem>
+<listitem><para>bit: 22-3 --&gt; ELEMENT COUNT </para>
+</listitem>
+<listitem><para>bit: 2-0 --&gt; TYPE </para>
+</listitem>
+</itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="75" column="1" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="75" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__Jpeg__interface_1ga81f0371bcd94753ae19bce37847fb65f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>jpeg_pixel_format</name>
+        <enumvalue id="group__Jpeg__interface_1gga81f0371bcd94753ae19bce37847fb65fa2b8b8fe46c195ec0de4676b482ace5eb" prot="public">
+          <name>jpeg_pixel_format_argb8888</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Jpeg__interface_1gga81f0371bcd94753ae19bce37847fb65fa4b34179da8d7c6a438e39ebc0253278f" prot="public">
+          <name>jpeg_pixel_format_rgb565</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Jpeg__interface_1gga81f0371bcd94753ae19bce37847fb65fa223deffd88dc7a21e8397b0a3638120c" prot="public">
+          <name>jpeg_pixel_format_yuv422h1p</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Jpeg__interface_1gga81f0371bcd94753ae19bce37847fb65fa35b3a145a4e8ac2d78cc6fa6eeb53d02" prot="public">
+          <name>jpeg_pixel_format_yuv422h2p</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Jpeg__interface_1gga81f0371bcd94753ae19bce37847fb65faf64cab8129820cb9ffbb7fe0c320ac75" prot="public">
+          <name>jpeg_pixel_format_yuv420</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Jpeg__interface_1gga81f0371bcd94753ae19bce37847fb65fa3422665554771f1c6451dcfa51549b5a" prot="public">
+          <name>jpeg_pixel_format_y8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="83" column="1" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="83" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__Jpeg__interface_1ga1939e502ac946d68f76c3c36f0286254" prot="public" static="no">
+        <type>enum <ref refid="group__Jpeg__interface_1ga5f6ee13a4bf1e9df59d56d2a315b7a14" kindref="member">jpeg_table</ref></type>
+        <definition>typedef enum jpeg_table jpeg_table_t</definition>
+        <argsstring></argsstring>
+        <name>jpeg_table_t</name>
+        <briefdescription>
+<para>jpeg encoding and decoding configuration parameters </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>bit: 31-27 --&gt; name </para>
+</listitem>
+<listitem><para>bit: 26-23 --&gt; WIDTH IN BYTE </para>
+</listitem>
+<listitem><para>bit: 22-3 --&gt; ELEMENT COUNT </para>
+</listitem>
+<listitem><para>bit: 2-0 --&gt; TYPE </para>
+</listitem>
+</itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="81" column="14"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__Jpeg__interface_1gaa990e1fb6ea33451f65060e42168fe94" prot="public" static="no">
+        <type>enum <ref refid="group__Jpeg__interface_1ga81f0371bcd94753ae19bce37847fb65f" kindref="member">jpeg_pixel_format</ref></type>
+        <definition>typedef enum jpeg_pixel_format jpeg_pixel_format_t</definition>
+        <argsstring></argsstring>
+        <name>jpeg_pixel_format_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="90" column="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__Jpeg__interface_1gacbb900144db114e92a19e6cc394bc640" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void jpeg_clear_cfg</definition>
+        <argsstring>(JPEG_Type *ptr)</argsstring>
+        <name>jpeg_clear_cfg</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>clear jpeg cfg Register </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="117" column="20" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1gaaf35df19e281c79ffac0df8d297c9f21" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void jpeg_disable</definition>
+        <argsstring>(JPEG_Type *ptr)</argsstring>
+        <name>jpeg_disable</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>jpeg function disable </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="127" column="20" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1ga2877e6ef22225e670632a1ebdd990e16" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void jpeg_enable</definition>
+        <argsstring>(JPEG_Type *ptr)</argsstring>
+        <name>jpeg_enable</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>jpeg function enable </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="137" column="20" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1gacb7848423a3ef6e04b09667dc6c7ffa3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void jpeg_stop</definition>
+        <argsstring>(JPEG_Type *ptr)</argsstring>
+        <name>jpeg_stop</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>stop a encoder/decoder conversion </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="147" column="20" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="147" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1ga9d6ca413a2de61ccc14214d1c3506652" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void jpeg_start</definition>
+        <argsstring>(JPEG_Type *ptr)</argsstring>
+        <name>jpeg_start</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>start a new encoder/decoder conversion </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="157" column="20" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1ga3713a8d8aa3311decc3146c4a504d58a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t jpeg_get_status</definition>
+        <argsstring>(JPEG_Type *ptr)</argsstring>
+        <name>jpeg_get_status</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>obtain jpeg Status Register </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>jpeg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>register&apos;s status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="168" column="24" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1ga211981033925f7c40c95329a2ac03f70" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void jpeg_clear_status</definition>
+        <argsstring>(JPEG_Type *ptr, uint32_t mask)</argsstring>
+        <name>jpeg_clear_status</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>clear jpeg Status Register </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>JPEG_EVENT_BUSY: the module is busy doing conversion and data transfer </para>
+</listitem>
+<listitem><para>JPEG_EVENT_OUT_DMA_FINISH: OutDMA process done </para>
+</listitem>
+<listitem><para>JPEG_EVENT_IN_DMA_FINISH: InDMA process done </para>
+</listitem>
+<listitem><para>JPEG_EVENT_ERROR: the axi err </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="184" column="20" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="184" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1ga0ce6a67c3eaa1d7fad544ac2028c66c1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t jpeg_get_encoded_length</definition>
+        <argsstring>(JPEG_Type *ptr)</argsstring>
+        <name>jpeg_get_encoded_length</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Out DMA Bytes Counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>out DMA counter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="195" column="24" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="195" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1ga0e3585dfc768d43366450befa94dae06" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void jpeg_software_reset</definition>
+        <argsstring>(JPEG_Type *ptr)</argsstring>
+        <name>jpeg_software_reset</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>jpeg Software Reset </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="205" column="20" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="205" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1ga1b68ae13f410f3b2a26fa7924076915b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jpeg_reset</definition>
+        <argsstring>(JPEG_Type *ptr)</argsstring>
+        <name>jpeg_reset</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>stop a encoder/decoder conversion and Software Reset </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="216" column="6" bodyfile="drivers/src/hpm_jpeg_drv.c" bodystart="59" bodyend="65" declfile="drivers/inc/hpm_jpeg_drv.h" declline="216" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1ga0e35231581c3be97db0e365cde2a5aa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jpeg_enable_irq</definition>
+        <argsstring>(JPEG_Type *ptr, uint32_t mask)</argsstring>
+        <name>jpeg_enable_irq</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>jpeg enable interrupt </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>JPEG_EVENT_IN_DMA_FINISH: In DMA Done enable </para>
+</listitem>
+<listitem><para>JPEG_EVENT_OUT_DMA_FINISH: interrupt enable for all interrupt sources of In DMA module </para>
+</listitem>
+<listitem><para>JPEG_EVENT_ERROR: The jpg endec restart error interrupt enable </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="228" column="6" bodyfile="drivers/src/hpm_jpeg_drv.c" bodystart="44" bodyend="57" declfile="drivers/inc/hpm_jpeg_drv.h" declline="228" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1ga41ebc602e449bde9e59f39800d03a384" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jpeg_disable_irq</definition>
+        <argsstring>(JPEG_Type *ptr, uint32_t mask)</argsstring>
+        <name>jpeg_disable_irq</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>jpeg disable interrupt </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>JPEG_EVENT_IN_DMA_FINISH: In DMA Done disable </para>
+</listitem>
+<listitem><para>JPEG_EVENT_OUT_DMA_FINISH: interrupt disable for all interrupt sources of In DMA module </para>
+</listitem>
+<listitem><para>JPEG_EVENT_ERROR: The jpg endec restart error interrupt disable </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="240" column="6" bodyfile="drivers/src/hpm_jpeg_drv.c" bodystart="29" bodyend="42" declfile="drivers/inc/hpm_jpeg_drv.h" declline="240" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1ga31f3752442feb2f832b6f15b78763ed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jpeg_init</definition>
+        <argsstring>(JPEG_Type *ptr)</argsstring>
+        <name>jpeg_init</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>stop a encoder/decoder conversion and Software Reset </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="247" column="6" bodyfile="drivers/src/hpm_jpeg_drv.c" bodystart="67" bodyend="71" declfile="drivers/inc/hpm_jpeg_drv.h" declline="247" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1gae3b3e404e365c5bf4d4ccf28de62d7c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t jpeg_fill_table</definition>
+        <argsstring>(JPEG_Type *ptr, jpeg_table_t table, uint8_t *data, uint32_t count)</argsstring>
+        <name>jpeg_fill_table</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__Jpeg__interface_1ga1939e502ac946d68f76c3c36f0286254" kindref="member">jpeg_table_t</ref></type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>fill tables for jpeg controller </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>jpeg_table_qmem: file describe for Decoder and Encoder Q. values </para>
+</listitem>
+<listitem><para>jpeg_table_huffenc: file describe for Huffman Encoder table </para>
+</listitem>
+<listitem><para>jpeg_table_huffmin: file describe for Huffman min values </para>
+</listitem>
+<listitem><para>jpeg_table_huffbase: file describe for Huffman BASE mem values </para>
+</listitem>
+<listitem><para>jpeg_table_huffsymb: file describe for Huffman SYMB mem values </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>huffenc: data for Huffman Encoder table </para>
+</listitem>
+<listitem><para>huffmin: data for Huffman min values </para>
+</listitem>
+<listitem><para>huffbase: data for Huffman BASE mem values </para>
+</listitem>
+<listitem><para>huffsymb: data for Huffman SYMB mem values </para>
+</listitem>
+<listitem><para>qetable: data for Encoder Q. values </para>
+</listitem>
+<listitem><para>qdtable: data for Decoder Q. values </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data length </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>fill</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tables&apos;s status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="270" column="12" bodyfile="drivers/src/hpm_jpeg_drv.c" bodystart="307" bodyend="325" declfile="drivers/inc/hpm_jpeg_drv.h" declline="270" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1ga54945116d7d8d0b5c4a408cfdfa3bcbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t jpeg_start_decode</definition>
+        <argsstring>(JPEG_Type *ptr, jpeg_job_config_t *config, uint32_t length)</argsstring>
+        <name>jpeg_start_decode</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structjpeg__job__config__t" kindref="compound">jpeg_job_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>it will start decoding, and the process status needs to be checked by querying JPEG_EVENT </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>config A pointer to the configuration struct of &quot;jpeg_job_config_t&quot; </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Decoded data length </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>jpeg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>decoding&apos;s status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="282" column="12" bodyfile="drivers/src/hpm_jpeg_drv.c" bodystart="236" bodyend="300" declfile="drivers/inc/hpm_jpeg_drv.h" declline="282" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Jpeg__interface_1ga50902f03c37747a8c6f13366921b0fba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t jpeg_start_encode</definition>
+        <argsstring>(JPEG_Type *ptr, jpeg_job_config_t *config)</argsstring>
+        <name>jpeg_start_encode</name>
+        <param>
+          <type><ref refid="structJPEG__Type" kindref="compound">JPEG_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structjpeg__job__config__t" kindref="compound">jpeg_job_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para><itemizedlist>
+<listitem><para>it will start encoding, and the process status needs to be checked by querying JPEG_EVENT </para>
+</listitem></itemizedlist>
+</para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JPEG base address, HPM_JPEG </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>config A pointer to the configuration struct of &quot;jpeg_job_config_t&quot; </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>jpeg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>encoding&apos;s status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="293" column="12" bodyfile="drivers/src/hpm_jpeg_drv.c" bodystart="141" bodyend="233" declfile="drivers/inc/hpm_jpeg_drv.h" declline="293" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__Jpeg__interface_1ga6ecf2b0ca26f1cad7e392287bee64e3a" prot="public" static="no">
+        <name>JPEG_EVENT_BUSY</name>
+        <initializer><ref refid="HPM6800_2ip_2hpm__jpeg__regs_8h_1a22b9a05b5721cb03f095d2ae298020df" kindref="member">JPEG_STAT_BUSY_MASK</ref></initializer>
+        <briefdescription>
+<para>Define events of the jpeg module. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="24" column="9" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Jpeg__interface_1ga382e5545d8daae654d1d7c36e71caf6e" prot="public" static="no">
+        <name>JPEG_EVENT_OUT_DMA_FINISH</name>
+        <initializer><ref refid="HPM6800_2ip_2hpm__jpeg__regs_8h_1a3abf2aa6c46e54c6de6ff98c48e3bb3f" kindref="member">JPEG_STAT_OUT_DMA_TRANSFER_DONE_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="25" column="9" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Jpeg__interface_1ga7797cd7def5d6e254412d8d442b19b5c" prot="public" static="no">
+        <name>JPEG_EVENT_IN_DMA_FINISH</name>
+        <initializer><ref refid="HPM6800_2ip_2hpm__jpeg__regs_8h_1a19368dabd71fd5c6a7b671995009801f" kindref="member">JPEG_STAT_IN_DMA_TRANSFER_DONE_MASK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="26" column="9" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Jpeg__interface_1gac73eaf5cc012963cf97558d9ebf0cc2e" prot="public" static="no">
+        <name>JPEG_EVENT_ERROR</name>
+        <initializer>(<ref refid="HPM6800_2ip_2hpm__jpeg__regs_8h_1a53474483ced97b2646d00ff1c3b0a56f" kindref="member">JPEG_STAT_RESTART_MARKER_ERROR_MASK</ref> | (0xF &lt;&lt; 7))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="27" column="9" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Jpeg__interface_1ga007f468ce90e1aa93e6c095e49c8fc2f" prot="public" static="no">
+        <name>JPEG_BYTE_ORDER_3210</name>
+        <initializer>(0U)</initializer>
+        <briefdescription>
+<para>byte order in a word </para>
+        </briefdescription>
+        <detaileddescription>
+<para>no order change, {A3, A2, A1, A0} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="32" column="9" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Jpeg__interface_1ga1685f528ff4d90d82794250b9cc1af0d" prot="public" static="no">
+        <name>JPEG_BYTE_ORDER_2301</name>
+        <initializer>(1U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>order change, {A2, A3, A0, A1} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="33" column="9" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Jpeg__interface_1ga6909d5d4d4665ed6ea7cd53b16b47244" prot="public" static="no">
+        <name>JPEG_BYTE_ORDER_1032</name>
+        <initializer>(2U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>order change, {A1, A0, A2, A3} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="34" column="9" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Jpeg__interface_1ga37b17a63480d0a94e4681d73cd196b69" prot="public" static="no">
+        <name>JPEG_BYTE_ORDER_0123</name>
+        <initializer>(3U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>order change, {A0, A1, A2, A3} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="35" column="9" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Jpeg__interface_1ga7c320594b28e9fe00512436d2df8569b" prot="public" static="no">
+        <name>JPEG_SUPPORTED_FORMAT_420</name>
+        <initializer>(0U)</initializer>
+        <briefdescription>
+<para>jpeg pixel conversion format </para>
+        </briefdescription>
+        <detaileddescription>
+<para>jpeg data format definition hy=2, vy=2, hc=1, vc=1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="45" column="9" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Jpeg__interface_1gae24d5a3c44d25e27446897948836ac4f" prot="public" static="no">
+        <name>JPEG_SUPPORTED_FORMAT_422H</name>
+        <initializer>(1U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>hy=2, vy=1, hc=1, vc=1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="46" column="9" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Jpeg__interface_1ga22dc2568cb4e390c7a13ad44567b2aab" prot="public" static="no">
+        <name>JPEG_SUPPORTED_FORMAT_422V</name>
+        <initializer>(2U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>hy=1, vy=2, hc=1, vc=1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="47" column="9" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Jpeg__interface_1ga0a73b9370eba5d7ca8cfb2c186bad725" prot="public" static="no">
+        <name>JPEG_SUPPORTED_FORMAT_444</name>
+        <initializer>(3U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>hy=1, vy=1, hc=1, vc=1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="48" column="9" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Jpeg__interface_1gaa8d1d65837c8d7c0056fd59004cdab6c" prot="public" static="no">
+        <name>JPEG_SUPPORTED_FORMAT_400</name>
+        <initializer>(4U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>hy=2, vy=2, hc=0, vc=0 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_jpeg_drv.h" line="49" column="9" bodyfile="drivers/inc/hpm_jpeg_drv.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Jpeg driver APIs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

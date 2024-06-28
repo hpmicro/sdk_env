@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hpm__esc__drv_8c" kind="file" language="C++">
+    <compoundname>hpm_esc_drv.c</compoundname>
+    <includes refid="hpm__esc__drv_8h" local="yes">hpm_esc_drv.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>hpm_esc_drv.h</label>
+        <link refid="hpm__esc__drv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_esc_regs.h</label>
+        <link refid="hpm__esc__regs_8h"/>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="1">
+        <label>drivers/src/hpm_esc_drv.c</label>
+        <link refid="hpm__esc__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hpm__esc__drv_8c_1af5fc446f957bd4055580fe1148c02a60" prot="public" static="no">
+        <name>HPM_ESC_DRV_DEFAULT_RETRY_COUNT</name>
+        <initializer>(0xA0000000U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_esc_drv.c" line="11" column="9" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__esc__interface_1gaaeaf167df19c81d1f5fb0d0c361fd876" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t esc_mdio_read</definition>
+        <argsstring>(ESC_Type *ptr, uint8_t phy_addr, uint8_t reg_addr, uint16_t *data)</argsstring>
+        <name>esc_mdio_read</name>
+        <param>
+          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>phy_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>ESC read PHY register via ESC MII Management Interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ESC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">phy_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PHY address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Register address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PHY data returned. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_esc_drv.c" line="14" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="14" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="group__esc__interface_1ga34e62d5c1a185ea2af70471ff27541d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t esc_mdio_write</definition>
+        <argsstring>(ESC_Type *ptr, uint8_t phy_addr, uint8_t reg_addr, uint16_t data)</argsstring>
+        <name>esc_mdio_write</name>
+        <param>
+          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>phy_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>ESc write PHY register via ESC MII Management Interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ESC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">phy_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PHY address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Register address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Write to PHY register. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_esc_drv.c" line="66" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="66" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="group__esc__interface_1ga83d77fb518b47b541050b5803e137a3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t esc_check_eeprom_loading</definition>
+        <argsstring>(ESC_Type *ptr)</argsstring>
+        <name>esc_check_eeprom_loading</name>
+        <param>
+          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>ESC check eeprom loading data status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>EtherCAT communication is possible even if the EEPROM is blank</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ESC base address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>loding data successfully and correctlly. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_esc_eeprom_ack_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>loding data checksum error(eeprom blank). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_esc_eeprom_checksum_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>no ack error. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>loding data timeout. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_esc_drv.c" line="119" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="119" bodyend="150"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2024<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__esc__drv_8h" kindref="compound">hpm_esc_drv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPM_ESC_DRV_DEFAULT_RETRY_COUNT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_ESC_DRV_DEFAULT_RETRY_COUNT<sp/>(0xA0000000U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__esc__interface_1gaaeaf167df19c81d1f5fb0d0c361fd876" kindref="member">esc_mdio_read</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>phy_addr,<sp/>uint8_t<sp/>reg_addr,<sp/>uint16_t<sp/>*data)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>retry;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1aab3e40f10b967a7d4a1c13f0f79c08b3" kindref="member">MIIM_PDI_ACC_STAT</ref><sp/>=<sp/>1;<sp/></highlight><highlight class="comment">/*<sp/>PDI<sp/>access<sp/>MII<sp/>management<sp/>interface<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>wait<sp/>for<sp/>MII<sp/>idle<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>retry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>&amp;<sp/><ref refid="hpm__esc__regs_8h_1aa3a6b49258b3a02a8d34447e881afde1" kindref="member">ESC_MII_MNG_CS_BUSY_MASK</ref>)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__esc__drv_8c_1af5fc446f957bd4055580fe1148c02a60" kindref="member">HPM_ESC_DRV_DEFAULT_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry++;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__esc__drv_8c_1af5fc446f957bd4055580fe1148c02a60" kindref="member">HPM_ESC_DRV_DEFAULT_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>PHY<sp/>address<sp/>and<sp/>register<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a49922b8adaa062cf1fe7833797ffe3d9" kindref="member">PHY_ADDR</ref><sp/>=<sp/>phy_addr;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a7e608f6b894ce0463d66d28f2e2bc548" kindref="member">PHY_REG_ADDR</ref><sp/>=<sp/>reg_addr;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>command<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>&amp;<sp/>~<ref refid="hpm__esc__regs_8h_1a3057125e396e551a3b7ae4979a65d29b" kindref="member">ESC_MII_MNG_CS_CMD_MASK</ref>)<sp/>|<sp/><ref refid="hpm__esc__regs_8h_1a65c6d7c85ae82f6c73d398494d59e748" kindref="member">ESC_MII_MNG_CS_CMD_SET</ref>(1);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>wait<sp/>command<sp/>done<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>retry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>&amp;<sp/><ref refid="hpm__esc__regs_8h_1aa3a6b49258b3a02a8d34447e881afde1" kindref="member">ESC_MII_MNG_CS_BUSY_MASK</ref>)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__esc__drv_8c_1af5fc446f957bd4055580fe1148c02a60" kindref="member">HPM_ESC_DRV_DEFAULT_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry++;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__esc__drv_8c_1af5fc446f957bd4055580fe1148c02a60" kindref="member">HPM_ESC_DRV_DEFAULT_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>check<sp/>error<sp/>status<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>&amp;<sp/><ref refid="hpm__esc__regs_8h_1a7de16ae187b602c49a7fbc123a6b54e3" kindref="member">ESC_MII_MNG_CS_CMD_ERR_MASK</ref>)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9ab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>check<sp/>error<sp/>status<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>&amp;<sp/><ref refid="hpm__esc__regs_8h_1a7de16ae187b602c49a7fbc123a6b54e3" kindref="member">ESC_MII_MNG_CS_CMD_ERR_MASK</ref>)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9ab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>*data<sp/>=<sp/>ptr-&gt;<ref refid="structESC__Type_1ab5ec3d935a6a4f3403d4b820edfb4c0c" kindref="member">PHY_DATA</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__esc__interface_1ga34e62d5c1a185ea2af70471ff27541d2" kindref="member">esc_mdio_write</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>phy_addr,<sp/>uint8_t<sp/>reg_addr,<sp/>uint16_t<sp/>data)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>retry;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1aab3e40f10b967a7d4a1c13f0f79c08b3" kindref="member">MIIM_PDI_ACC_STAT</ref><sp/>=<sp/>1;<sp/></highlight><highlight class="comment">/*<sp/>PDI<sp/>access<sp/>MII<sp/>management<sp/>interface<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>wait<sp/>for<sp/>MII<sp/>idle<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>retry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>&amp;<sp/><ref refid="hpm__esc__regs_8h_1aa3a6b49258b3a02a8d34447e881afde1" kindref="member">ESC_MII_MNG_CS_BUSY_MASK</ref>)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__esc__drv_8c_1af5fc446f957bd4055580fe1148c02a60" kindref="member">HPM_ESC_DRV_DEFAULT_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry++;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__esc__drv_8c_1af5fc446f957bd4055580fe1148c02a60" kindref="member">HPM_ESC_DRV_DEFAULT_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>PHY<sp/>address,<sp/>register<sp/>address<sp/>and<sp/>register<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a49922b8adaa062cf1fe7833797ffe3d9" kindref="member">PHY_ADDR</ref><sp/>=<sp/>phy_addr;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a7e608f6b894ce0463d66d28f2e2bc548" kindref="member">PHY_REG_ADDR</ref><sp/>=<sp/>reg_addr;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1ab5ec3d935a6a4f3403d4b820edfb4c0c" kindref="member">PHY_DATA</ref><sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>write<sp/>command<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>&amp;<sp/>~<ref refid="hpm__esc__regs_8h_1a3057125e396e551a3b7ae4979a65d29b" kindref="member">ESC_MII_MNG_CS_CMD_MASK</ref>)<sp/>|<sp/><ref refid="hpm__esc__regs_8h_1ac5e2f9db55a985eb01be13e6fd2f327e" kindref="member">ESC_MII_MNG_CS_WEN_MASK</ref><sp/>|<sp/><ref refid="hpm__esc__regs_8h_1a65c6d7c85ae82f6c73d398494d59e748" kindref="member">ESC_MII_MNG_CS_CMD_SET</ref>(2);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>wait<sp/>command<sp/>done<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>retry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>&amp;<sp/><ref refid="hpm__esc__regs_8h_1aa3a6b49258b3a02a8d34447e881afde1" kindref="member">ESC_MII_MNG_CS_BUSY_MASK</ref>)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__esc__drv_8c_1af5fc446f957bd4055580fe1148c02a60" kindref="member">HPM_ESC_DRV_DEFAULT_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry++;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__esc__drv_8c_1af5fc446f957bd4055580fe1148c02a60" kindref="member">HPM_ESC_DRV_DEFAULT_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>check<sp/>error<sp/>status<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>&amp;<sp/><ref refid="hpm__esc__regs_8h_1a7de16ae187b602c49a7fbc123a6b54e3" kindref="member">ESC_MII_MNG_CS_CMD_ERR_MASK</ref>)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9ab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>check<sp/>error<sp/>status<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>&amp;<sp/><ref refid="hpm__esc__regs_8h_1a7de16ae187b602c49a7fbc123a6b54e3" kindref="member">ESC_MII_MNG_CS_CMD_ERR_MASK</ref>)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9ab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Loding<sp/>ESC<sp/>EEPROM,<sp/>EtherCAT<sp/>communication<sp/>is<sp/>possible<sp/>even<sp/>if<sp/>the<sp/>EEPROM<sp/>is<sp/>blank<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__esc__interface_1ga83d77fb518b47b541050b5803e137a3d" kindref="member">esc_check_eeprom_loading</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat<sp/>=<sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>retry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x110<sp/>bit0<sp/>eeprom<sp/>load<sp/>correctly<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structESC__Type_1a125258f4a59329b76544539b127f64dc" kindref="member">ESC_DL_STAT</ref><sp/>&amp;<sp/><ref refid="hpm__esc__regs_8h_1a4519c43f3f70c25e4441f6efc3c2827a" kindref="member">ESC_ESC_DL_STAT_EPLC_MASK</ref>)<sp/>==<sp/><ref refid="hpm__esc__regs_8h_1a4519c43f3f70c25e4441f6efc3c2827a" kindref="member">ESC_ESC_DL_STAT_EPLC_MASK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Loading<sp/>successful,<sp/>PDI<sp/>operations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0x502<sp/>bit13<sp/>ack<sp/>or<sp/>cmd<sp/>error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structESC__Type_1a2b08aa2b8f7764365aa929aec457d51b" kindref="member">EEPROM_CTRL_STAT</ref><sp/>&amp;<sp/><ref refid="hpm__esc__regs_8h_1abb2d897760b553e056c3e4701198d412" kindref="member">ESC_EEPROM_CTRL_STAT_ERR_ACK_CMD_MASK</ref>)<sp/>==<sp/><ref refid="hpm__esc__regs_8h_1abb2d897760b553e056c3e4701198d412" kindref="member">ESC_EEPROM_CTRL_STAT_ERR_ACK_CMD_MASK</ref>)<sp/>{<sp/></highlight><highlight class="comment">/*<sp/>ACMDERR<sp/>=<sp/>1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__esc__interface_1gga2f80701c36e79c0640d91c788feee0b3a615143de263ba9df39c1222356f097d2" kindref="member">status_esc_eeprom_ack_error</ref>;<sp/></highlight><highlight class="comment">/*<sp/>I2C<sp/>bus<sp/>error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structESC__Type_1a2b08aa2b8f7764365aa929aec457d51b" kindref="member">EEPROM_CTRL_STAT</ref><sp/>&amp;<sp/><ref refid="hpm__esc__regs_8h_1ad2105257e9a530940ace7e4c87b0adf7" kindref="member">ESC_EEPROM_CTRL_STAT_CKSM_ERR_MASK</ref>)<sp/>==<sp/><ref refid="hpm__esc__regs_8h_1ad2105257e9a530940ace7e4c87b0adf7" kindref="member">ESC_EEPROM_CTRL_STAT_CKSM_ERR_MASK</ref>)<sp/>{<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>ACMDERR,CKSUMERR<sp/>=<sp/>01<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__esc__interface_1gga2f80701c36e79c0640d91c788feee0b3abc27a7c058f4b013bdeb46229ba5b7cf" kindref="member">status_esc_eeprom_checksum_error</ref>;<sp/></highlight><highlight class="comment">/*<sp/>EEPROM<sp/>is<sp/>loaded,<sp/>but<sp/>it<sp/>is<sp/>blank<sp/>and<sp/>cause<sp/>checksum<sp/>error<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__esc__drv_8c_1af5fc446f957bd4055580fe1148c02a60" kindref="member">HPM_ESC_DRV_DEFAULT_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry++;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="drivers/src/hpm_esc_drv.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,27 @@
+var structmtg__event__param =
+[
+    [ "clock_count", "structmtg__event__param.html#a2f66edffed7a62863aa89ea2798f5523", null ],
+    [ "cmp_mode", "structmtg__event__param.html#a0c75339ef54cefeca5cb4b235fc7b71c", null ],
+    [ "cross_param", "structmtg__event__param.html#ab455a98ebb22e08cdf6ef70cfbd8d30f", null ],
+    [ "cross_value_h", "structmtg__event__param.html#ae8637ea7832875455439513664af282a", null ],
+    [ "cross_value_l", "structmtg__event__param.html#a9d370c3316133c4430e2a0daf7a5e669", null ],
+    [ "dir", "structmtg__event__param.html#ab98fb508a0050ae27afcabaefa8c4944", null ],
+    [ "dir_mode", "structmtg__event__param.html#afb96ad3f831f21ef57a5f76db770fca9", null ],
+    [ "enable", "structmtg__event__param.html#a350d3b34cd450c7ab496d261fd424fd5", null ],
+    [ "error_limit", "structmtg__event__param.html#a0fba30e29a53effac802bad6b1c1904b", null ],
+    [ "hold_clock_cnt", "structmtg__event__param.html#afb5cfa90d5d1ef94ad4dc014f7968f2b", null ],
+    [ "hold_param", "structmtg__event__param.html#a22d3ffc91acef3a253b36497ca74bd02", null ],
+    [ "hold_value_h", "structmtg__event__param.html#aa40875946a5a99f9bea8d1d3fe774c08", null ],
+    [ "hold_value_l", "structmtg__event__param.html#a3f99ef9266e81567804ddd16255651d7", null ],
+    [ "irq_en", "structmtg__event__param.html#ac1108cc00e1e000b8c6c2b3d32606e1f", null ],
+    [ "limit_value_h", "structmtg__event__param.html#a4c2973bf6ea284059ea4db80d9e883e2", null ],
+    [ "limit_value_l", "structmtg__event__param.html#ae9720954b5e626ddd33155dac90c4e38", null ],
+    [ "mode", "structmtg__event__param.html#a49e07ee5d2e7c944a0d50408437e539a", null ],
+    [ "obj", "structmtg__event__param.html#a96588bc2cd91804c7ae0ed8cc7809913", null ],
+    [ "obj_postion", "structmtg__event__param.html#af2aac39ae78823353cd57a3afea8948f", null ],
+    [ "over_protect_param", "structmtg__event__param.html#a5efecbb8fa76c3f53d517f55a07da0dd", null ],
+    [ "preset", "structmtg__event__param.html#aec74bfb02e140e8b2081f726b81b7b02", null ],
+    [ "preset", "structmtg__event__param.html#a47b9a3e799cabd180c92a841838f4c8d", null ],
+    [ "time_param", "structmtg__event__param.html#a364d0eabf41d02342d488c383c3db103", null ],
+    [ "trig_num", "structmtg__event__param.html#a248ab81ec1372444f9d1d39cbf9e9b42", null ]
+];

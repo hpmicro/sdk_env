@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>14.12. lwip_tcpecho &mdash; HPMicro Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="14.13. lwip_tcpecho_freertos" href="../lwip_tcpecho_freertos/README_en.html" />
+    <link rel="prev" title="14.11. lwip_tcpclient_freertos_socket" href="../lwip_tcpclient_freertos_socket/README_en.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../boards/index_en.html">Evaluation Boards</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index_en.html">Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../audio_codec/index_en.html">1. Audio Codec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryrb/README_en.html">2. CherryRB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryusb/index_en.html">3. CherryUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coremark/README_en.html">4. CoreMark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dhrystone/README_en.html">5. Dhrystone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dma_manager/README_en.html">6. DMA Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dsp/README_en.html">7. DSP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../eeprom_emulation/index_en.html">8. EEPROM Emulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freemaster/README_en.html">9. Freemaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hello_world/README_en.html">10. Hello World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hpm_math/index_en.html">11. HPM Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image/index_en.html">12. IMAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lvgl/index_en.html">13. LVGL</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_en.html">14. lwIP</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../doc/Ethernet_Common_Project_Settings_en.html">14.1. <strong>Ethernet Port Configurations</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_http_server/README_en.html">14.2. lwip_http_server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_https_server/README_en.html">14.3. lwip_https_server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_iperf/README_en.html">14.4. lwip_iperf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_iperf_multi_ports/README_en.html">14.5. lwip_iperf_multi_ports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_ptp/v1/master/README_en.html">14.6. lwip_ptp_v1_master</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_ptp/v1/slave/README_en.html">14.7. lwip_ptp_v1_slave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_ptp/v2/master/README_en.html">14.8. lwip_ptp_v2_master</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_ptp/v2/slave/README_en.html">14.9. lwip_ptp_v2_slave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_tcpclient/README_en.html">14.10. lwip_tcpclient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_tcpclient_freertos_socket/README_en.html">14.11. lwip_tcpclient_freertos_socket</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">14.12. lwip_tcpecho</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">14.12.1. Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#board-settings">14.12.2. Board Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project-configurations">14.12.3. Project Configurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-example">14.12.4. Run Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_tcpecho_freertos/README_en.html">14.13. lwip_tcpecho_freertos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_tcpecho_freertos_socket/README_en.html">14.14. lwip_tcpecho_freertos_socket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_tcpecho_multi_ports/README_en.html">14.15. lwip_tcpecho_multi_ports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_tcpecho_multi_ports_freertos/README_en.html">14.16. lwip_tcpecho_multi_ports_freertos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_tcpecho_multi_ports_rtthread-nano/README_en.html">14.17. lwip_tcpecho_multi_ports_rtthread-nano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lwip_tcpecho_rtthread-nano/README_en.html">14.18. lwip_tcpecho_rtthread-nano</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../mbedtls/README_en.html">15. Mbedtls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../memstress/index_en.html">16. Memory Stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../microros/index_en.html">17. Microros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modbus/index_en.html">18. Modbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motor_ctrl/index_en.html">19. HPM Motor Ctrl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multicore/index_en.html">20. Multicore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../power_mode_switch/README_en.html">21. Power Mode Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rgb_led/README_en.html">22. RGB LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rom_api/index_en.html">23. ROM API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rtos/index_en.html">24. RTOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../segger_rtt/README_en.html">25. Segger RTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tflm/index_en.html">26. TensorFlowLiteMicro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinycrypt/index_en.html">27. Tinycrypt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyengine/person_obj/README_en.html">28. Person Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyuf2/README_en.html">29. TinyUF2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyusb/index_en.html">30. TinyUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../touch_panel/README_en.html">31. Touch Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vglite/index_en.html">32. VGLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_components/index_en.html">33. SPI_COMPONENTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2s_emulation/README_en.html">34. I2S EMULATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_sdcard/index_en.html">35. SPI_SDCARD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherrysh/index_en.html">36. CherrySH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ethercat/index_en.html">37. EtherCAT</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../drivers/index_en.html">Drivers Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_doc.html">SDK API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HPMicro Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index_en.html">Samples</a></li>
+          <li class="breadcrumb-item"><a href="../index_en.html"><span class="section-number">14. </span>lwIP</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">14.12. </span>lwip_tcpecho</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/samples/lwip/lwip_tcpecho/README_en.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="lwip-tcpecho">
+<h1><span class="section-number">14.12. </span>lwip_tcpecho<a class="headerlink" href="#lwip-tcpecho" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<h2><span class="section-number">14.12.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>This example shows TCP echo communication.</p>
+<ul class="simple">
+<li><p>PC sends TCP data frames to MCU,  and then MCU sends the data frames back to PC</p></li>
+</ul>
+</section>
+<section id="board-settings">
+<h2><span class="section-number">14.12.2. </span>Board Settings<a class="headerlink" href="#board-settings" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Connect a USB port on PC to the PWR DEBUG port on the development board with a USB Type-C cable</p></li>
+<li><p>Connect an Ethernet port on PC to a RGMII port or a RMII port on the development board with an Ethernet cable</p></li>
+</ul>
+</section>
+<section id="project-configurations">
+<h2><span class="section-number">14.12.3. </span>Project Configurations<a class="headerlink" href="#project-configurations" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Ethernet Port Settings: Refer to <a class="reference internal" href="../doc/Ethernet_Common_Project_Settings_en.html"><span class="doc std std-doc">Ethernet common project settings</span></a></p></li>
+<li><p>Ethernet DHCP Configurations</p>
+<ul>
+<li><p>the configurations in the <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> as follows:</p>
+<ul>
+<li><p>sdk_compile_definitions(-DLWIP_DHCP=0): Disable DHCP feature</p></li>
+<li><p>sdk_compile_definitions(-DLWIP_DHCP=1): Enable DHCP feature</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="run-example">
+<h2><span class="section-number">14.12.4. </span>Run Example<a class="headerlink" href="#run-example" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p>Compiling and Downloading</p></li>
+<li><p>Running log is shown in the serial terminal as follows:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">This is an ethernet demo: TCP Echo (Polling Usage)</span>
+<span class="go">LwIP Version: 2.1.2</span>
+<span class="go">Enet phy init passed !</span>
+<span class="go">Link Status: Up</span>
+<span class="go">Link Speed:  1000Mbps</span>
+<span class="go">Link Duplex: Full duplex</span>
+<span class="go">IPv4 Address: 192.168.100.10</span>
+<span class="go">IPv4 Netmask: 255.255.255.0</span>
+<span class="go">IPv4 Gateway: 192.168.100.1</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run an Ethernet debugging tool</p>
+<ul>
+<li><p>create and set a TCP client:  TCP Server IP: 192.168.100.10/Port: 5001</p>
+<p><strong>Note: There is a necessary adjustment for Server IP according to the segment of  LAN where PC resides</strong></p>
+</li>
+<li><p>Connect</p></li>
+<li><p>Enter and send any characters in the edit window</p>
+<img alt="../../../_images/lwip_tcpecho_1.png" class="align-left" src="../../../_images/lwip_tcpecho_1.png" />
+</li>
+<li><p>Watch the characters echoed from MCU
+<img alt="../../../_images/lwip_tcpecho_2.png" class="align-left" src="../../../_images/lwip_tcpecho_2.png" /></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, HPMicro.
+      <span class="lastupdated">Last updated on Jun 28, 2024.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

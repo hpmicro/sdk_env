@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>README_zh</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    code[class*=language-],
+    pre[class*=language-] {
+      color: #333;
+      background: 0 0;
+      font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      word-wrap: normal;
+      line-height: 1.4;
+      -moz-tab-size: 8;
+      -o-tab-size: 8;
+      tab-size: 8;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none
+    }
+
+    pre[class*=language-] {
+      padding: .8em;
+      overflow: auto;
+      border-radius: 3px;
+      background: #f5f5f5
+    }
+
+    :not(pre)>code[class*=language-] {
+      padding: .1em;
+      border-radius: .3em;
+      white-space: normal;
+      background: #f5f5f5
+    }
+
+    .token.blockquote,
+    .token.comment {
+      color: #969896
+    }
+
+    .token.cdata {
+      color: #183691
+    }
+
+    .token.doctype,
+    .token.macro.property,
+    .token.punctuation,
+    .token.variable {
+      color: #333
+    }
+
+    .token.builtin,
+    .token.important,
+    .token.keyword,
+    .token.operator,
+    .token.rule {
+      color: #a71d5d
+    }
+
+    .token.attr-value,
+    .token.regex,
+    .token.string,
+    .token.url {
+      color: #183691
+    }
+
+    .token.atrule,
+    .token.boolean,
+    .token.code,
+    .token.command,
+    .token.constant,
+    .token.entity,
+    .token.number,
+    .token.property,
+    .token.symbol {
+      color: #0086b3
+    }
+
+    .token.prolog,
+    .token.selector,
+    .token.tag {
+      color: #63a35c
+    }
+
+    .token.attr-name,
+    .token.class,
+    .token.class-name,
+    .token.function,
+    .token.id,
+    .token.namespace,
+    .token.pseudo-class,
+    .token.pseudo-element,
+    .token.url-reference .token.variable {
+      color: #795da3
+    }
+
+    .token.entity {
+      cursor: help
+    }
+
+    .token.title,
+    .token.title .token.punctuation {
+      font-weight: 700;
+      color: #1d3e81
+    }
+
+    .token.list {
+      color: #ed6a43
+    }
+
+    .token.inserted {
+      background-color: #eaffea;
+      color: #55a532
+    }
+
+    .token.deleted {
+      background-color: #ffecec;
+      color: #bd2c00
+    }
+
+    .token.bold {
+      font-weight: 700
+    }
+
+    .token.italic {
+      font-style: italic
+    }
+
+    .language-json .token.property {
+      color: #183691
+    }
+
+    .language-markup .token.tag .token.punctuation {
+      color: #333
+    }
+
+    .language-css .token.function,
+    code.language-css {
+      color: #0086b3
+    }
+
+    .language-yaml .token.atrule {
+      color: #63a35c
+    }
+
+    code.language-yaml {
+      color: #183691
+    }
+
+    .language-ruby .token.function {
+      color: #333
+    }
+
+    .language-markdown .token.url {
+      color: #795da3
+    }
+
+    .language-makefile .token.symbol {
+      color: #795da3
+    }
+
+    .language-makefile .token.variable {
+      color: #183691
+    }
+
+    .language-makefile .token.builtin {
+      color: #0086b3
+    }
+
+    .language-bash .token.keyword {
+      color: #0086b3
+    }
+
+    pre[data-line] {
+      position: relative;
+      padding: 1em 0 1em 3em
+    }
+
+    pre[data-line] .line-highlight-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      display: block;
+      width: 100%
+    }
+
+    pre[data-line] .line-highlight {
+      position: absolute;
+      left: 0;
+      right: 0;
+      padding: inherit 0;
+      margin-top: 1em;
+      background: hsla(24, 20%, 50%, .08);
+      background: linear-gradient(to right, hsla(24, 20%, 50%, .1) 70%, hsla(24, 20%, 50%, 0));
+      pointer-events: none;
+      line-height: inherit;
+      white-space: pre
+    }
+
+    pre[data-line] .line-highlight:before,
+    pre[data-line] .line-highlight[data-end]:after {
+      content: attr(data-start);
+      position: absolute;
+      top: .4em;
+      left: .6em;
+      min-width: 1em;
+      padding: 0 .5em;
+      background-color: hsla(24, 20%, 50%, .4);
+      color: #f4f1ef;
+      font: bold 65%/1.5 sans-serif;
+      text-align: center;
+      vertical-align: .3em;
+      border-radius: 999px;
+      text-shadow: none;
+      box-shadow: 0 1px #fff
+    }
+
+    pre[data-line] .line-highlight[data-end]:after {
+      content: attr(data-end);
+      top: auto;
+      bottom: .4em
+    }
+
+    html body {
+      font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+      overflow: initial;
+      box-sizing: border-box;
+      word-wrap: break-word
+    }
+
+    html body>:first-child {
+      margin-top: 0
+    }
+
+    html body h1,
+    html body h2,
+    html body h3,
+    html body h4,
+    html body h5,
+    html body h6 {
+      line-height: 1.2;
+      margin-top: 1em;
+      margin-bottom: 16px;
+      color: #000
+    }
+
+    html body h1 {
+      font-size: 2.25em;
+      font-weight: 300;
+      padding-bottom: .3em
+    }
+
+    html body h2 {
+      font-size: 1.75em;
+      font-weight: 400;
+      padding-bottom: .3em
+    }
+
+    html body h3 {
+      font-size: 1.5em;
+      font-weight: 500
+    }
+
+    html body h4 {
+      font-size: 1.25em;
+      font-weight: 600
+    }
+
+    html body h5 {
+      font-size: 1.1em;
+      font-weight: 600
+    }
+
+    html body h6 {
+      font-size: 1em;
+      font-weight: 600
+    }
+
+    html body h1,
+    html body h2,
+    html body h3,
+    html body h4,
+    html body h5 {
+      font-weight: 600
+    }
+
+    html body h5 {
+      font-size: 1em
+    }
+
+    html body h6 {
+      color: #5c5c5c
+    }
+
+    html body strong {
+      color: #000
+    }
+
+    html body del {
+      color: #5c5c5c
+    }
+
+    html body a:not([href]) {
+      color: inherit;
+      text-decoration: none
+    }
+
+    html body a {
+      color: #08c;
+      text-decoration: none
+    }
+
+    html body a:hover {
+      color: #00a3f5;
+      text-decoration: none
+    }
+
+    html body img {
+      max-width: 100%
+    }
+
+    html body>p {
+      margin-top: 0;
+      margin-bottom: 16px;
+      word-wrap: break-word
+    }
+
+    html body>ol,
+    html body>ul {
+      margin-bottom: 16px
+    }
+
+    html body ol,
+    html body ul {
+      padding-left: 2em
+    }
+
+    html body ol.no-list,
+    html body ul.no-list {
+      padding: 0;
+      list-style-type: none
+    }
+
+    html body ol ol,
+    html body ol ul,
+    html body ul ol,
+    html body ul ul {
+      margin-top: 0;
+      margin-bottom: 0
+    }
+
+    html body li {
+      margin-bottom: 0
+    }
+
+    html body li.task-list-item {
+      list-style: none
+    }
+
+    html body li>p {
+      margin-top: 0;
+      margin-bottom: 0
+    }
+
+    html body .task-list-item-checkbox {
+      margin: 0 .2em .25em -1.8em;
+      vertical-align: middle
+    }
+
+    html body .task-list-item-checkbox:hover {
+      cursor: pointer
+    }
+
+    html body blockquote {
+      margin: 16px 0;
+      font-size: inherit;
+      padding: 0 15px;
+      color: #5c5c5c;
+      background-color: #f0f0f0;
+      border-left: 4px solid #d6d6d6
+    }
+
+    html body blockquote>:first-child {
+      margin-top: 0
+    }
+
+    html body blockquote>:last-child {
+      margin-bottom: 0
+    }
+
+    html body hr {
+      height: 4px;
+      margin: 32px 0;
+      background-color: #d6d6d6;
+      border: 0 none
+    }
+
+    html body table {
+      margin: 10px 0 15px 0;
+      border-collapse: collapse;
+      border-spacing: 0;
+      display: block;
+      width: 100%;
+      overflow: auto;
+      word-break: normal;
+      word-break: keep-all
+    }
+
+    html body table th {
+      font-weight: 700;
+      color: #000
+    }
+
+    html body table td,
+    html body table th {
+      border: 1px solid #d6d6d6;
+      padding: 6px 13px
+    }
+
+    html body dl {
+      padding: 0
+    }
+
+    html body dl dt {
+      padding: 0;
+      margin-top: 16px;
+      font-size: 1em;
+      font-style: italic;
+      font-weight: 700
+    }
+
+    html body dl dd {
+      padding: 0 16px;
+      margin-bottom: 16px
+    }
+
+    html body code {
+      font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+      font-size: .85em;
+      color: #000;
+      background-color: #f0f0f0;
+      border-radius: 3px;
+      padding: .2em 0
+    }
+
+    html body code::after,
+    html body code::before {
+      letter-spacing: -.2em;
+      content: '\00a0'
+    }
+
+    html body pre>code {
+      padding: 0;
+      margin: 0;
+      word-break: normal;
+      white-space: pre;
+      background: 0 0;
+      border: 0
+    }
+
+    html body .highlight {
+      margin-bottom: 16px
+    }
+
+    html body .highlight pre,
+    html body pre {
+      padding: 1em;
+      overflow: auto;
+      line-height: 1.45;
+      border: #d6d6d6;
+      border-radius: 3px
+    }
+
+    html body .highlight pre {
+      margin-bottom: 0;
+      word-break: normal
+    }
+
+    html body pre code,
+    html body pre tt {
+      display: inline;
+      max-width: initial;
+      padding: 0;
+      margin: 0;
+      overflow: initial;
+      line-height: inherit;
+      word-wrap: normal;
+      background-color: transparent;
+      border: 0
+    }
+
+    html body pre code:after,
+    html body pre code:before,
+    html body pre tt:after,
+    html body pre tt:before {
+      content: normal
+    }
+
+    html body blockquote,
+    html body dl,
+    html body ol,
+    html body p,
+    html body pre,
+    html body ul {
+      margin-top: 0;
+      margin-bottom: 16px
+    }
+
+    html body kbd {
+      color: #000;
+      border: 1px solid #d6d6d6;
+      border-bottom: 2px solid #c7c7c7;
+      padding: 2px 4px;
+      background-color: #f0f0f0;
+      border-radius: 3px
+    }
+
+    @media print {
+      html body {
+        background-color: #fff
+      }
+
+      html body h1,
+      html body h2,
+      html body h3,
+      html body h4,
+      html body h5,
+      html body h6 {
+        color: #000;
+        page-break-after: avoid
+      }
+
+      html body blockquote {
+        color: #5c5c5c
+      }
+
+      html body pre {
+        page-break-inside: avoid
+      }
+
+      html body table {
+        display: table
+      }
+
+      html body img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%
+      }
+
+      html body code,
+      html body pre {
+        word-wrap: break-word;
+        white-space: pre
+      }
+    }
+
+    .markdown-preview {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box
+    }
+
+    .markdown-preview ul {
+      list-style: disc
+    }
+
+    .markdown-preview ul ul {
+      list-style: circle
+    }
+
+    .markdown-preview ul ul ul {
+      list-style: square
+    }
+
+    .markdown-preview ol {
+      list-style: decimal
+    }
+
+    .markdown-preview ol ol,
+    .markdown-preview ul ol {
+      list-style-type: lower-roman
+    }
+
+    .markdown-preview ol ol ol,
+    .markdown-preview ol ul ol,
+    .markdown-preview ul ol ol,
+    .markdown-preview ul ul ol {
+      list-style-type: lower-alpha
+    }
+
+    .markdown-preview .newpage,
+    .markdown-preview .pagebreak {
+      page-break-before: always
+    }
+
+    .markdown-preview pre.line-numbers {
+      position: relative;
+      padding-left: 3.8em;
+      counter-reset: linenumber
+    }
+
+    .markdown-preview pre.line-numbers>code {
+      position: relative
+    }
+
+    .markdown-preview pre.line-numbers .line-numbers-rows {
+      position: absolute;
+      pointer-events: none;
+      top: 1em;
+      font-size: 100%;
+      left: 0;
+      width: 3em;
+      letter-spacing: -1px;
+      border-right: 1px solid #999;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none
+    }
+
+    .markdown-preview pre.line-numbers .line-numbers-rows>span {
+      pointer-events: none;
+      display: block;
+      counter-increment: linenumber
+    }
+
+    .markdown-preview pre.line-numbers .line-numbers-rows>span:before {
+      content: counter(linenumber);
+      color: #999;
+      display: block;
+      padding-right: .8em;
+      text-align: right
+    }
+
+    .markdown-preview .mathjax-exps .MathJax_Display {
+      text-align: center !important
+    }
+
+    .markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group {
+      display: none
+    }
+
+    .markdown-preview:not([data-for=preview]) .code-chunk .status {
+      display: none
+    }
+
+    .markdown-preview:not([data-for=preview]) .code-chunk .output-div {
+      margin-bottom: 16px
+    }
+
+    .markdown-preview .md-toc {
+      padding: 0
+    }
+
+    .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link {
+      display: inline;
+      padding: .25rem 0
+    }
+
+    .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,
+    .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p {
+      display: inline
+    }
+
+    .markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link {
+      font-weight: 800
+    }
+
+    .scrollbar-style::-webkit-scrollbar {
+      width: 8px
+    }
+
+    .scrollbar-style::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: transparent
+    }
+
+    .scrollbar-style::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: rgba(150, 150, 150, .66);
+      border: 4px solid rgba(150, 150, 150, .66);
+      background-clip: content-box
+    }
+
+    html body[for=html-export]:not([data-presentation-mode]) {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      overflow: auto
+    }
+
+    html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+      position: relative;
+      top: 0;
+      min-height: 100vh
+    }
+
+    @media screen and (min-width:914px) {
+      html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+        padding: 2em calc(50% - 457px + 2em)
+      }
+    }
+
+    @media screen and (max-width:914px) {
+      html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+        padding: 2em
+      }
+    }
+
+    @media screen and (max-width:450px) {
+      html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+        font-size: 14px !important;
+        padding: 1em
+      }
+    }
+
+    @media print {
+      html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn {
+        display: none
+      }
+    }
+
+    html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn {
+      position: fixed;
+      bottom: 8px;
+      left: 8px;
+      font-size: 28px;
+      cursor: pointer;
+      color: inherit;
+      z-index: 99;
+      width: 32px;
+      text-align: center;
+      opacity: .4
+    }
+
+    html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn {
+      opacity: 1
+    }
+
+    html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100%;
+      padding: 32px 0 48px 0;
+      font-size: 14px;
+      box-shadow: 0 0 4px rgba(150, 150, 150, .33);
+      box-sizing: border-box;
+      overflow: auto;
+      background-color: inherit
+    }
+
+    html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar {
+      width: 8px
+    }
+
+    html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: transparent
+    }
+
+    html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: rgba(150, 150, 150, .66);
+      border: 4px solid rgba(150, 150, 150, .66);
+      background-clip: content-box
+    }
+
+    html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a {
+      text-decoration: none
+    }
+
+    html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc {
+      padding: 0 16px
+    }
+
+    html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link {
+      display: inline;
+      padding: .25rem 0
+    }
+
+    html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,
+    html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p {
+      display: inline
+    }
+
+    html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link {
+      font-weight: 800
+    }
+
+    html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+      left: 300px;
+      width: calc(100% - 300px);
+      padding: 2em calc(50% - 457px - 300px / 2);
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    @media screen and (max-width:1274px) {
+      html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+        padding: 2em
+      }
+    }
+
+    @media screen and (max-width:450px) {
+      html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+        width: 100%
+      }
+    }
+
+    html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc {
+      display: none
+    }
+
+    /* Please visit the URL below for more information: */
+    /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+  </style>
+  <!-- The content below will be included at the end of the <head> element. -->
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      // your code here
+    });
+  </script>
+</head>
+
+<body for="html-export">
+
+
+  <div class="crossnote markdown-preview  ">
+
+    <h1 id="hpm-sdk-windows-开发环境配置工具">HPM SDK Windows 开发环境配置工具 </h1>
+    <h2 id="快速开始指南">快速开始指南 </h2>
+    <ol>
+      <li>安装FT2232驱动。<br>
+        <img src="img/ftdi_install.png" alt="驱动安装">
+      </li>
+      <li>双击<code>start_cmd.cmd</code>，该脚本将开启一个Windows命令行窗口，之后文中将以<em><strong>sdk
+            prompt</strong></em>指代该命令行窗口。（<em><strong>sdk prompt</strong></em>中将把所有HPM
+        SDK开发依赖的环境变量以及对应工具的路径设置正确，作用范围仅在<em><strong>sdk prompt</strong></em>内，不影响当前系统中的变量。）</li>
+      <li>双击<code>generate_all_ses_projects.cmd</code>，该脚本会在同级目录下生成文件夹samples_ses_project，该文件夹包含各种类型板子所有用例的segger工程</li>
+    </ol>
+    <h2 id="start_gui-快速上手">start_gui 快速上手 </h2>
+    <p><code>start_gui.exe</code> 是一款适配 <code>hpm_sdk</code> 的项目构建可视化工具。通过该工具，您可以方便地对 <code>hpm_sdk</code> 中的 samples
+      进行构建，也可以自定义 sample 目录来构建自己的应用程序。软件整体界面如下图所示:</p>
+    <p><img src="img/start_gui.png" alt="start_gui"></p>
+    <p>上方菜单栏支持设置中英双语以及打开当前使用指南。同时为方便用户查看使用 <code>hpm_sdk</code>，工具内置了三个快速打开 <code>hpm_sdk</code> 文档入口，即上图中三个浅紫色圆形按钮。
+      <code>SDK ENV</code> 右侧的帮助按钮会打开当前 <code>hpm_sdk</code> 的帮助文档首页。<code>SDK Boards</code>
+      下拉框右侧的帮助按钮会直接打开当前选择的开发板文档。<code>SDK Samples</code> 下拉框右侧的帮助按钮会直接打开当前选择的 sample 文档。您可以根据需要选择打开对应的文档。</p>
+    <p>工具通过不同的背景色分为了以下几个功能区：</p>
+    <ol>
+      <li>
+        <p>SDK ENV 设置：此处可手动配置 SDK ENV 路径，点击 <code>Advanced</code> 按钮后，可以对 <code>hpm_sdk</code> 以及
+          <code>CMake、Ninja</code> 等工具路径进行更详细的配置；</p>
+      </li>
+      <li>
+        <p>Board 设置：默认情况下，工具会列出 <code>hpm_sdk/boards</code>
+          文件夹下所有的开发板，您可以点击下拉框右侧的帮助按钮打开当前选择开发板的本地文档。同时，工具也支持加载用户自定义的开发板配置。用户需要首先勾选 <code>Enable User Board Path</code>
+          复选框启用 <code>User Board</code>
+          搜索功能，然后选择想要搜索的开发板文件夹，软件会搜索<code>当前文件夹</code>以及<code>第一级子文件夹</code>，当查找到文件夹下存在<code>CMakeLists.txt 以及 与文件夹同名的 yaml 配置文件</code>时，会识别当前文件夹为开发板配置，加入到列表项中。当<code>当前文件夹</code>被识别为开发板配置时，不会再搜索子文件夹；
+        </p>
+        <p><strong>注意：如果使用自定义 board，CMake 构建过程会尝试在自定义目录下搜索与 board 目录同名的 .cfg 文件作为板级 openocd 的配置文件，若无此文件，openocd
+            将不会添加任何板级配置文件</strong></p>
+      </li>
+      <li>
+        <p>Sample 设置：选择了开发板后，工具会根据开发板的yaml配置文件自动筛选符合条件的 sample。默认情况下，会展示<code>hpm_sdk/samples</code> 文件夹下经过筛选的
+          sample，您可以点击下拉框右侧的帮助按钮打开当前选择 sample 的本地文档。对于双核程序，该 sample 列表默认隐藏 core1 项目，用户如果想要展示 core1
+          项目，只需要点击右侧复选按钮进行设置即可。同时，工具也支持加载用户自定义的 sample 文件夹。用户需要首先勾选 <code>Enable User Application Path</code> 复选框启用
+          <code>User Applications</code> 搜索功能，然后选择想要搜索的 sample
+          文件夹，软件会搜索<code>当前文件夹</code>以及<code>所有子文件夹</code>，当查找到文件夹下存在
+          <code>CMakeLists.txt</code>时，会查找当前<code>CMakeLists.txt</code>是否调用了 <code>hpm-sdk</code>，符合条件的会识别为 sample
+          文件夹并加入到列表项中。当选择了 sample 之后，会自动识别当前 sample 支持的 hpm build type 以及 cmake build type 并加入到列表项中；当
+          <code>Enable User GCC Linker File</code> 未勾选时，hpm build type 切换时会自动将当前 hpm build type
+          使用的链接脚本加入到对应的输入框中，当勾选了该选项后，用户需要手动添加需要的链接脚本；</p>
+      </li>
+      <li>
+        <p>Output 设置：用户可以在 Output 区域定义工程的构建生成路径。默认情况下，项目会生成在 <code>${sample}/${board}_${build_type}</code>
+          文件夹。同时，工具支持选择一个父文件夹，将多个项目生成在当前父文件夹下。该功能需要用户勾选 <code>Use Same Parent Directory</code> 复选框，然后选择一个父文件夹，即
+          <code>Parent Directory</code>，之后构建生成的项目均会保存在当前文件夹下，<code>Build Folder</code>
+          为项目文件夹名称，工具会采用<code>${sample}_${board}_${build_type}</code>规则自动生成文件夹名称，用户也可以手动修改文件夹名称。在
+          <code>Build Path</code> 输入框右侧提供了打开 <code>Build Path</code> 控制台按钮以及打开 <code>Build Path</code>
+          资源管理器按钮。打开的控制台默认加载了 <code>SDK_ENV</code> 的环境变量，可以直接编译 <code>Build Path</code> 目录下程序以及运行命令；</p>
+      </li>
+      <li>
+        <p>构建选项： 当配置完毕后，用户可点击 <code>Generate</code> 按钮构建项目，当项目正确构建后，<code>Open with IDE</code>按钮会高亮，点击后会用默认选择的 IDE
+          拉起当前项目，用户可以通过右侧箭头选择想要使用的 IDE。工具也提供了 <code>GCC Compile</code> 按钮直接编译正确构建的程序。考虑到用户对于 <code>hpm_sdk</code>
+          的各种使用需求，工具也支持将当前构建项目使用的 <code>hpm_sdk</code> 文件提取到单独目录，即<code>Localize SDK for App</code>
+          按钮提供的功能。<code>hpm_sdk</code> 会被本地化到当前应用的 CMakeLists.txt 同级目录，以
+          <code>hpm_sdk_localized_sdk_for_${BOARDNAME}</code>命名。区域3中的<code>SDK Samples</code>
+          下拉框会对已本地化项目进行提示，同时已本地化的项目支持 <code>UnLocalize SDK for App</code> 操作转换回之前未本地化的工程。在区域5的最左侧，工具提供了启动 GDB Server
+          的快捷入口，当前支持的 GDB Server 为 OpenOCD，点击后用户可以进行简单配置并快速启动 GDB Server。GDB Server 默认会记录用户的配置，配置完成下次可直接启动，但当用户切换
+          <code>board</code> 后，再次启动 OpenOCD 需要重新配置。同时，工具也提供了FLASH镜像烧写快速烧写功能（不支持RAM镜像直接烧写），该功能通过调用 OpenOCD 来执行烧写操作，且与 GDB
+          Server 启动共用一套 OpenOCD 启动配置来简化操作。</p>
+      </li>
+      <li>
+        <p>日志窗口：日志窗口会显示当前的日志信息，日志信息支持清空和导出。</p>
+      </li>
+    </ol>
+    <h2 id="目录结构">目录结构: </h2>
+    <ul>
+      <li>hpm_sdk: hpm_sdk存放目录，当更新SDK时，需要将SDK解压至该文件夹，并确保可以存在hpm_sdk\cmake路径</li>
+      <li>toolchains:
+        工具链存放目录。当更新工具链时，将对应工具链解压至该文件夹(以TOOLCHAIN_NAME为例)，并确保可以在toolchains\TOOLCHAIN_NAME\bin路径下可以找到riscv32-elf-unknown-gcc.exe可执行文件
+        <ul>
+          <li>注意:
+            <ul>
+              <li>使用不同toolchain的时候，对应TOOLCHAIN_NAME需要在start_cmd.cmd中进行正确配置</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>tools:
+        <ul>
+          <li>ninja</li>
+          <li>cmake</li>
+          <li>python3</li>
+          <li>openocd</li>
+          <li>scripts</li>
+          <li>project_generator</li>
+          <li>FTDI_InstallDriver.exe: FT2232 windows 驱动</li>
+        </ul>
+      </li>
+      <li>doc: 文档目录</li>
+    </ul>
+    <h2 id="常见问题">常见问题： </h2>
+    <h3 id="无法找到ftdi调试器">无法找到ftdi调试器 </h3>
+    <ul>
+      <li>确保正确安装FTDI_InstallDriver.exe驱动。注意：如果更换了PC USB端口, 有可能需要重新安装驱动</li>
+    </ul>
+    <h3 id="segger-embedded-studio无法进行调试">Segger Embedded Studio无法进行调试 </h3>
+    <p>可以做下尝试</p>
+    <ul>
+      <li>重新打开Segger Embedded Studio</li>
+      <li>在Windows任务管理器中将残留的openocd进程终止</li>
+      <li>将开发板上启动模式拨成“在系统编程“或者“串行启动”，再按RESET按钮，再尝试调试</li>
+    </ul>
+    <h3 id="windows-10路径长度限制">Windows 10路径长度限制 </h3>
+    <p>若要解除路径长度限制可以通过导入tools/scripts/win10_enable_long_path.reg。 有关该限制的详细信息, 请参考<a
+        href="https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd">https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd</a>
+    </p>
+
+  </div>
+  <div class="md-sidebar-toc">
+    <div class="md-toc">
+      <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#hpm-sdk-windows-开发环境配置工具" class="md-toc-link">
+            <p>HPM SDK Windows 开发环境配置工具</p>
+          </a>
+        </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+            <a href="#快速开始指南" class="md-toc-link">
+              <p>快速开始指南</p>
+
+            </a>
+          </div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+            <a href="#start_gui-快速上手" class="md-toc-link">
+              <p>start_gui 快速上手</p>
+
+            </a>
+          </div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+            <a href="#目录结构" class="md-toc-link">
+              <p>目录结构:</p>
+
+            </a>
+          </div>
+          <details style="padding:0;;padding-left:24px;" open="">
+            <summary class="md-toc-link-wrapper">
+              <a href="#常见问题" class="md-toc-link">
+                <p>常见问题：</p>
+              </a>
+            </summary>
+            <div>
+              <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+                <a href="#无法找到ftdi调试器" class="md-toc-link">
+                  <p>无法找到ftdi调试器</p>
+
+                </a>
+              </div>
+              <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+                <a href="#segger-embedded-studio无法进行调试" class="md-toc-link">
+                  <p>Segger Embedded Studio无法进行调试</p>
+
+                </a>
+              </div>
+              <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+                <a href="#windows-10路径长度限制" class="md-toc-link">
+                  <p>Windows 10路径长度限制</p>
+
+                </a>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </details>
+
+    </div>
+  </div>
+  <a id="sidebar-toc-btn">≡</a>
+
+
+
+
+
+
+  <script>
+
+    var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+    sidebarTOCBtn.addEventListener('click', function (event) {
+      event.stopPropagation()
+      if (document.body.hasAttribute('html-show-sidebar-toc')) {
+        document.body.removeAttribute('html-show-sidebar-toc')
+      } else {
+        document.body.setAttribute('html-show-sidebar-toc', true)
+      }
+    })
+  </script>
+
+
+</body>
+
+</html>

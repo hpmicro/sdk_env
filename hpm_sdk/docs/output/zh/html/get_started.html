@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>使用说明 &mdash; HPMico Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="开发板介绍" href="boards/index_zh.html" />
+    <link rel="prev" title="HPM SDK 文档" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">使用说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">依赖软件最低版本要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">安装依赖</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">准备工具链与环境变量配置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="boards/index_zh.html">开发板介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samples/index_zh.html">例程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samples/drivers/index_zh.html">驱动示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_doc.html">SDK API 参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HPMico Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">使用说明</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/get_started.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>使用说明<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<section id="id2">
+<h2>依赖软件最低版本要求<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>软件名称</p></th>
+<th class="head"><p>版本号</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CMake</p></td>
+<td><p>3.13</p></td>
+</tr>
+<tr class="row-odd"><td><p>Python</p></td>
+<td><p>3.8</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id3">
+<h2>安装依赖<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Ubuntu:</p>
+<ul>
+<li><p>安装工具:</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>build-essential<span class="w"> </span>cmake<span class="w"> </span>ninja-build<span class="w"> </span>libc6-i386<span class="w"> </span>libc6-i386-cross<span class="w"> </span>libstdc++6-i386-cross
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>安装python3 (3.8.5 minimum) 与pip:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3<span class="w"> </span>python3-pip
+</pre></div>
+</div>
+<ul>
+<li><p>Windows:</p>
+<ul>
+<li><p>Windows命令行:
+以下所使用的命令都以Windows命令行(cmd.exe)为例:</p>
+<ul class="simple">
+<li><p>安装 Chocolatey (<a class="reference external" href="https://chocolatey.org/">https://chocolatey.org/</a>):
+该工具为Windows下的包管理软件,通过该工具可以方便地在Windows平台上安装依赖软件:</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>根据Chocolatey官方步骤进行安装(<a class="reference external" href="https://chocolatey.org/install">https://chocolatey.org/install</a>)</p></li>
+<li><p>以管理员身份打开”cmd.exe”</p></li>
+<li><p>禁用全局安装确认:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>choco<span class="w"> </span>feature<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>-n<span class="w"> </span>allowGlobalConfirmation
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>安装CMake:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>choco<span class="w"> </span>install<span class="w"> </span>cmake<span class="w"> </span>--installargs<span class="w"> </span><span class="s1">&#39;ADD_CMAKE_TO_PATH=System&#39;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>安装其他工具:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>choco<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>ninja
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>关闭该命令行窗口</p></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id4">
+<h2>准备工具链与环境变量配置<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p>支持的工具链:</p>
+<ul class="simple">
+<li><p>gnu-gcc &lt;– 缺省工具链</p></li>
+<li><p>nds-gcc</p></li>
+<li><p>zcc</p></li>
+</ul>
+</li>
+<li><p>工具链:</p>
+<ul>
+<li><p>gnu-gcc:</p>
+<ul class="simple">
+<li><p>下载工具链压缩包,并解压.假定TOOLCHAIN_PATH作为工具链的解压目录(需要满足在TOOLCHAIN_PATH\bin下可以找到riscv32-unknown-elf-gcc)</p></li>
+<li><p>申明系统环境变量”GNURISCV_TOOLCHAIN_PATH”指向工具链路径:</p>
+<ul>
+<li><p>Linux, 以zsh为例(确保将TOOLCHAIN_PATH替换成你自己的路径):</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">GNURISCV_TOOLCHAIN_PATH</span><span class="o">=</span>TOOLCHAIN_PATH
+<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">HPM_SDK_TOOLCHAIN_VARIANT</span><span class="o">=</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Windows命令行:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">set</span><span class="w"> </span><span class="nv">GNURISCV_TOOLCHAIN_PATH</span><span class="o">=</span>TOOLCHAIN_PATH
+<span class="w">  </span><span class="nb">set</span><span class="w"> </span><span class="nv">HPM_SDK_TOOLCHAIN_VARIANT</span><span class="o">=</span>
+</pre></div>
+</div>
+</li>
+<li><p>nds-gcc:</p>
+<ul class="simple">
+<li><p>下载工具链压缩包,并解压.假定TOOLCHAIN_PATH作为工具链的解压目录(需要满足在TOOLCHAIN_PATH\bin下可以找到riscv32-elf-gcc)</p></li>
+<li><p>申明系统环境变量”GNURISCV_TOOLCHAIN_PATH”指向工具链路径:</p>
+<ul>
+<li><p>Linux, 以zsh为例(确保将TOOLCHAIN_PATH替换成你自己的路径):</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">GNURISCV_TOOLCHAIN_PATH</span><span class="o">=</span>TOOLCHAIN_PATH
+<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">HPM_SDK_TOOLCHAIN_VARIANT</span><span class="o">=</span>nds-gcc
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Windows命令行:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">set</span><span class="w"> </span><span class="nv">GNURISCV_TOOLCHAIN_PATH</span><span class="o">=</span>TOOLCHAIN_PATH
+<span class="w">  </span><span class="nb">set</span><span class="w"> </span><span class="nv">HPM_SDK_TOOLCHAIN_VARIANT</span><span class="o">=</span>nds-gcc
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong><em>注意</em>：</strong> Windows平台上Andes toolchain需要以下cygwin库文件:
+- cygwin1.dll
+- cygncursesw-10.dll
+务必确保以上库文件所在目录被包含在系统环境变量PATH中</p>
+</div></blockquote>
+</li>
+<li><p>zcc:</p>
+<ul class="simple">
+<li><p>下载工具链压缩包,并解压.假定TOOLCHAIN_PATH作为工具链的解压目录</p></li>
+<li><p>申明系统环境变量”GNURISCV_TOOLCHAIN_PATH”指向工具链路径:</p>
+<ul>
+<li><p>Linux, 以zsh为例(确保将TOOLCHAIN_PATH替换成你自己的路径):</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">GNURISCV_TOOLCHAIN_PATH</span><span class="o">=</span>TOOLCHAIN_PATH
+<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">HPM_SDK_TOOLCHAIN_VARIANT</span><span class="o">=</span>zcc
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Windows命令行:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">set</span><span class="w"> </span><span class="nv">GNURISCV_TOOLCHAIN_PATH</span><span class="o">=</span>TOOLCHAIN_PATH
+<span class="w">  </span><span class="nb">set</span><span class="w"> </span><span class="nv">HPM_SDK_TOOLCHAIN_VARIANT</span><span class="o">=</span>zcc
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>SDK编译所需环境变量设置:</p>
+<ul>
+<li><p>通过运行提供的脚本执行:</p>
+<ul class="simple">
+<li><p>Linux:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">source</span><span class="w"> </span>env.sh
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Windows 命令行:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>env.cmd
+</pre></div>
+</div>
+</li>
+<li><p>手工设置环境变量”HPM_SDK_BASE”指向SDK根目录:</p>
+<ul class="simple">
+<li><p>Linux, 以zsh为例(假定$HOME/hpm_sdk为SDK根目录):</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">HPM_SDK_BASE</span><span class="o">=</span><span class="nv">$HOME</span>/hpm_sdk
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Windows 命令行(假定c:\hpm_sdk为SDK根目录):</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">set</span><span class="w"> </span><span class="nv">HPM_SDK_BASE</span><span class="o">=</span>c:<span class="se">\h</span>pm_sdk
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>安装Python依赖包:</p>
+<ul class="simple">
+<li><p>Linux:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>pip3<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HPM_SDK_BASE</span><span class="s2">/scripts/requirements.txt&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Window (Windows平台上Python 3.x 安装之后无法找到 python3/pip3, 只有python/pip):</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;%HPM_SDK_BASE%/scripts/requirements.txt&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>使用GNU GCC工具链编译示例应用:
+做完上述步骤之后, 就可以构建编译SDK示例工程.  以下步骤描述了如何编译hello_world:</p>
+<ol class="arabic simple">
+<li><p>切换到示例应用目录:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">cd</span><span class="w"> </span>samples/hello_world
+</pre></div>
+</div>
+<ol class="arabic" start="2">
+<li><p>创建build目录:</p>
+<ul class="simple">
+<li><p>Linux:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>mkdir<span class="w"> </span>build
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Windows:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>md<span class="w"> </span>build
+</pre></div>
+</div>
+</li>
+<li><p>切换目录到”build”</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">cd</span><span class="w"> </span>build
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>为Ninja-build产生构建文件:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>cmake<span class="w"> </span>-GNinja<span class="w"> </span>-DBOARD<span class="o">=</span>hpm6750evk<span class="w"> </span>..
+</pre></div>
+</div>
+<blockquote>
+<div><p>**<em>注意</em>：**如果提示”CMAKE_MAKE_PROGRAM is not set”, 可以通过在以上命令中追加”-DCMAKE_MAKE_PROGRAM=YOUR_MAKE_EXECUTABLE_PATH” (NINJA_PATH为ninja-build的目录,在其下可以找到ninja):
+# cmake -GNinja -DBOARD=hpm6750evk -DCMAKE_MAKE_PROGRAM=NINJA_PATH/ninja …</p>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>编译:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>ninja
+</pre></div>
+</div>
+<p>当编译完成后,生成的elf以及对应的其他文件可以在output目录中找到.</p>
+</li>
+<li><p>运行/调试示例程序说明(hello_world):</p>
+<ol class="arabic simple">
+<li><p>完成评估板连线,包括调试器,串口线以及电源线</p></li>
+<li><p>打开电源</p></li>
+<li><p>打开串口软件,设置baudrate为115200</p></li>
+<li><p>安装openocd(0.11以上)</p></li>
+<li><p>切换至SDK根目录, 运行设置环境变量脚本:</p></li>
+</ol>
+<ul>
+<li><p>Linux:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>env.sh
+</pre></div>
+</div>
+</li>
+<li><p>Windows command prompt:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>env.cmd
+</pre></div>
+</div>
+</li>
+</ul>
+<p>或者手动设置名为OPENOCD_SCRIPTS的环境变量:</p>
+<ul>
+<li><p>Linux:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">OPENOCD_SCRIPTS</span><span class="o">=</span><span class="si">${</span><span class="nv">HPM_SDK_BASE</span><span class="si">}</span>/boards/openocd
+</pre></div>
+</div>
+</li>
+<li><p>Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="nb">set</span> <span class="n">OPENOCD_SCRIPTS</span><span class="o">=%</span><span class="n">HPM_SDK_BASE</span><span class="o">%</span>\<span class="n">boards</span>\<span class="n">openocd</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<ol class="arabic simple" start="6">
+<li><p>运行openocd, 需要按顺序指定配置文件: 调试器配置, 内核配置, 目标板配置。例如，通过ft2232在hpm6750evk上进行单核调试，可以运行如下命令:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>openocd<span class="w"> </span>-f<span class="w"> </span>probes/ft2232.cfg<span class="w"> </span>-f<span class="w"> </span>soc/hpm6750-single-core.cfg<span class="w"> </span>-f<span class="w"> </span>boards/hpm6750evk.cfg
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong><em>注意</em>：</strong> 如果使用FTDI调试器并遇到提示<code class="docutils literal notranslate"><span class="pre">Error:</span> <span class="pre">libusb_open()</span> <span class="pre">failed</span> <span class="pre">with</span> <span class="pre">LIBUSB_ERROR_NOT_FOUND</span></code> , 请检查FTDI usb驱动。如果驱动未正确安装，使用 <a class="reference external" href="https://github.com/pbatard/libwdi/releases/download/b730/zadig-2.5.exe">zadig</a> 更新驱动：</p>
+</div></blockquote>
+<p>打开zadig，点击 Options-&gt;List All Devices.</p>
+<p><img alt="List All Devices" src="_images/zadig_list_all_devices.png" /></p>
+<p>选择 Dual RS232-HS (Interface 0).</p>
+<p><img alt="Select Dual RS232-HS (Interface 0)" src="_images/zadig_select_dual_rs232-hs.png" /></p>
+<p>然后点击 Install Driver 或 Replace Driver.</p>
+<p><img alt="Replace Driver" src="_images/zadig_replace_driver.png" /></p>
+<ol class="arabic simple" start="7">
+<li><p>切换到hello_world目录</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">cd</span><span class="w"> </span>samples/hello_world
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>打开另一个终端,启动GDB client:</p></li>
+</ol>
+<ul class="simple">
+<li><p>gnu-gcc:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>TOOLCHAIN_PATH/bin/riscv32-unknown-elf-gdb
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>nds-gcc:</p></li>
+</ul>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>TOOLCHAIN_PATH/bin/riscv32-elf-gdb
+</pre></div>
+</div>
+<ol class="arabic simple" start="9">
+<li><p>连接GDB client到openocd GDB server (缺省状态下, openocd gdbserver 端口为 3333)</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>gdb&gt;<span class="w"> </span>file<span class="w"> </span>build/output/demo.elf
+<span class="w">  </span>gdb&gt;<span class="w"> </span>target<span class="w"> </span>remote<span class="w"> </span>localhost:3333
+<span class="w">  </span>gdb&gt;<span class="w"> </span>load
+<span class="w">  </span>gdb&gt;<span class="w"> </span>b<span class="w"> </span>main
+<span class="w">  </span>gdb&gt;<span class="w"> </span>c
+</pre></div>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>顺利运行后可以在串口终端上打印”hello_world”.</p></li>
+</ol>
+</li>
+<li><p>使用Segger Embedded Studio for RISC-V编译应用</p>
+<ul class="simple">
+<li><p>Segger Embedded Studio for RISC-V 可以从 <a class="reference external" href="https://www.segger.cn/downloads/embedded-studio/">哲戈微系统科技</a>下载</p></li>
+<li><p>Segger Embedded Studio for RISC-V 工程文件会在 “使用GNU GCC工具链编译示例应用:” -&gt; “4. 为Ninja-build产生构建文件:” 描述的过程中</p></li>
+<li><p>产生的工程文件(.emProject)可以在build/segger_embedded_studio目录中找到</p></li>
+</ul>
+<blockquote>
+<div><p><strong><em>注意</em>：</strong> openocd可执行文件应该可以通过当前终端的PATH环境变量中可以找到, 否则无法在工程文件中生成相应的调试配置，需要之后在Segger Embedded Studio中手工配置。</p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, HPMicro.
+      <span class="lastupdated">Last updated on Jun 28, 2024.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

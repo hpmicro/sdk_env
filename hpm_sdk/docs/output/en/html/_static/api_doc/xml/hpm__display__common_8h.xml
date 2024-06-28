@@ -1,0 +1,1034 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hpm__display__common_8h" kind="file" language="C++">
+    <compoundname>hpm_display_common.h</compoundname>
+    <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
+    <includedby refid="hpm__cam__drv_8h" local="yes">drivers/inc/hpm_cam_drv.h</includedby>
+    <includedby refid="hpm__lcdc__drv_8h" local="yes">drivers/inc/hpm_lcdc_drv.h</includedby>
+    <includedby refid="hpm__pdma__drv_8h" local="yes">drivers/inc/hpm_pdma_drv.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="1">
+        <label>drivers/inc/hpm_display_common.h</label>
+        <link refid="hpm__display__common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>drivers/src/hpm_cam_drv.c</label>
+        <link refid="hpm__cam__drv_8c"/>
+      </node>
+      <node id="1">
+        <label>drivers/inc/hpm_display_common.h</label>
+        <link refid="hpm__display__common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>drivers/inc/hpm_cam_drv.h</label>
+        <link refid="hpm__cam__drv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>drivers/inc/hpm_pdma_drv.h</label>
+        <link refid="hpm__pdma__drv_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>drivers/src/hpm_lcdc_drv.c</label>
+        <link refid="hpm__lcdc__drv_8c"/>
+      </node>
+      <node id="7">
+        <label>drivers/src/hpm_pdma_drv.c</label>
+        <link refid="hpm__pdma__drv_8c"/>
+      </node>
+      <node id="4">
+        <label>drivers/inc/hpm_lcdc_drv.h</label>
+        <link refid="hpm__lcdc__drv_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="uniondisplay__color__32b" prot="public">display_color_32b</innerclass>
+    <innerclass refid="structdispaly__alphablend__option" prot="public">dispaly_alphablend_option</innerclass>
+    <innerclass refid="structdispaly__yuv2rgb__coef" prot="public">dispaly_yuv2rgb_coef</innerclass>
+    <innerclass refid="structdisplay__yuv2rgb__config" prot="public">display_yuv2rgb_config</innerclass>
+    <innerclass refid="structdisplay__rgb2yuv__config" prot="public">display_rgb2yuv_config</innerclass>
+    <innerclass refid="structdisplay__buf" prot="public">display_buf</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__Display__common__interface_1ga9965d40ba5b3f5ad802a0da0e1bc0994" prot="public" static="no" strong="no">
+        <type></type>
+        <name>display_alphablend_mode</name>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a79dc5ea6185c1dd8443577d885fb41cb" prot="public">
+          <name>display_alphablend_mode_clear</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994aa0446bc60a36fea50b54a0094ebb0298" prot="public">
+          <name>display_alphablend_mode_src</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a73b95b55b880911f1479202e1f95831b" prot="public">
+          <name>display_alphablend_mode_dst</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a1ee478ea39b7869b243ef5fff5a97ba0" prot="public">
+          <name>display_alphablend_mode_src_over</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a86e3c86361c81346a5a645d151283bc8" prot="public">
+          <name>display_alphablend_mode_dst_over</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a1a3d10ba3cf8d4de70fd77cf06fd9b5c" prot="public">
+          <name>display_alphablend_mode_src_in</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994aff9ec1fd43acdfa4b2686a1458c538ef" prot="public">
+          <name>display_alphablend_mode_dst_in</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994aa2205b456714c0d248fc4e93d0399f5c" prot="public">
+          <name>display_alphablend_mode_src_out</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994ae21b89461413ab58363a863b45f20535" prot="public">
+          <name>display_alphablend_mode_dst_out</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a04c2ac2b37c7827f4a85c95039c63cfc" prot="public">
+          <name>display_alphablend_mode_src_at_top</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994ae1124cefe9f2f64ba8f141f03bfb2cad" prot="public">
+          <name>display_alphablend_mode_dst_at_top</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a775bdb002c41ad51c496d8c76f12ef13" prot="public">
+          <name>display_alphablend_mode_xor</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a9a21d964612e6007d79148ec6c37e156" prot="public">
+          <name>display_alphablend_mode_plus</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a0cb6b1b318caebfc4332d9c1fe566d3f" prot="public">
+          <name>display_alphablend_mode_modulate</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a921d33f6d2ebecc36aba34f1c62a0dae" prot="public">
+          <name>display_alphablend_mode_src_org</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a29b83eb18ae84696c145f17b9aecb688" prot="public">
+          <name>display_alphablend_mode_dst_org</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>display alphablend mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="23" column="1" bodyfile="drivers/inc/hpm_display_common.h" bodystart="23" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__Display__common__interface_1gac346bc56771052a8fe919c3ec23d7c9c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>display_pixel_format</name>
+        <enumvalue id="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca7b3467724131b0dd2f4fbca8cd253849" prot="public">
+          <name>display_pixel_format_argb8888</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca435701cc14c5a558ec3e6f761ca18b4a" prot="public">
+          <name>display_pixel_format_rgb565</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9caefed447fa154f6b40d858f57c0da20a9" prot="public">
+          <name>display_pixel_format_rgb555</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9caf38f8ea04a5aa191afff274565d6270a" prot="public">
+          <name>display_pixel_format_rgb444</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca420e290b0a8e0d9bc1335b86ca436b45" prot="public">
+          <name>display_pixel_format_gbr422</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9cadd92021da86b2d931d85b7db7b2dbe6e" prot="public">
+          <name>display_pixel_format_yuv422</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9cae3ee6a687ea621f79d3cb71de4357c07" prot="public">
+          <name>display_pixel_format_ycbcr422</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca592ef15d8f648f802bfe4649a5ffcb20" prot="public">
+          <name>display_pixel_format_y8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9cad23afc08701022b252f132961b7ec228" prot="public">
+          <name>display_pixel_format_raw8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>display pixel format </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="45" column="1" bodyfile="drivers/inc/hpm_display_common.h" bodystart="45" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__Display__common__interface_1ga2d172b81de8c7ae7b74a7a87483b877b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>display_byteorder</name>
+        <enumvalue id="group__Display__common__interface_1gga2d172b81de8c7ae7b74a7a87483b877ba44b21d0a4004292fe20c719e887b6956" prot="public">
+          <name>display_byteorder_a3a2a1a0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga2d172b81de8c7ae7b74a7a87483b877ba6009d60f4e513887df7f15cd2706d2e3" prot="public">
+          <name>display_byteorder_a2a3a0a1</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga2d172b81de8c7ae7b74a7a87483b877bacd10d69762f59cf04cd92a843cdee98e" prot="public">
+          <name>display_byteorder_a1a0a3a2</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga2d172b81de8c7ae7b74a7a87483b877ba2ac9b29b3a623bf1dc3587e24626361c" prot="public">
+          <name>display_byteorder_a0a1a2a3</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>display data byte order </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="60" column="1" bodyfile="drivers/inc/hpm_display_common.h" bodystart="60" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__Display__common__interface_1ga46cfb210522fb7fa332acd7fe6462151" prot="public" static="no" strong="no">
+        <type></type>
+        <name>display_yuv_format</name>
+        <enumvalue id="group__Display__common__interface_1gga46cfb210522fb7fa332acd7fe6462151a440c7395f13084f60fc4d6b9d215f81a" prot="public">
+          <name>display_yuv_mode_422_u1y1v1y2</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga46cfb210522fb7fa332acd7fe6462151a2feb5503e9c1a8234e9194264af2191c" prot="public">
+          <name>display_yuv_mode_422_v1y1u1y2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga46cfb210522fb7fa332acd7fe6462151a937b485e8b64fb795147f097c1ad4b67" prot="public">
+          <name>display_yuv_mode_422_y1u1y2v1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga46cfb210522fb7fa332acd7fe6462151a399d0e8323fe8c6902df4da37ccfdab9" prot="public">
+          <name>display_yuv_mode_422_y1v1y2u1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>display yuv format </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="70" column="1" bodyfile="drivers/inc/hpm_display_common.h" bodystart="70" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__Display__common__interface_1ga22fe23fde4180f3e4253d3bf2dda3d74" prot="public" static="no" strong="no">
+        <type></type>
+        <name>display_alpha_op</name>
+        <enumvalue id="group__Display__common__interface_1gga22fe23fde4180f3e4253d3bf2dda3d74a3924bd3ffb4543c990cbbedf5b107029" prot="public">
+          <name>display_alpha_op_invalid</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga22fe23fde4180f3e4253d3bf2dda3d74ac11bbbc0c4d15e1de37bb9351556419d" prot="public">
+          <name>display_alpha_op_override</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga22fe23fde4180f3e4253d3bf2dda3d74a3af8a3ebd0b88ca92219dd3cc2352ee7" prot="public">
+          <name>display_alpha_op_scale</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>display data alpha value usage option </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="93" column="1" bodyfile="drivers/inc/hpm_display_common.h" bodystart="93" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__Display__common__interface_1ga01be6284bd6628c90b5a1a8d724c6aad" prot="public" static="no" strong="no">
+        <type></type>
+        <name>display_buf_format</name>
+        <enumvalue id="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada232bba1e22351cfd08dbaddcd888d53e" prot="public">
+          <name>display_buf_format_argb8888</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>memory layout in byte(low-&gt;high): b0[7:0], g0[7:0], r0[7:0], a0[7:0], b1[7:1], g1[7:1], r1[7:0], a1[7:0], ... </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada548ea8b5d60e2c49e52e5522b14b64a6" prot="public">
+          <name>display_buf_format_bgra8888</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>memory layout in byte(low-&gt;high): a0[7:0], r0[7:0], g0[7:0], b0[7:0], a1[7:1], r1[7:1], g1[7:0], b1[7:0], ... </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aadac92d61931aa89ebdfbeb5b1ed07266b3" prot="public">
+          <name>display_buf_format_rgb565</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>memory layout in byte(low-&gt;high): g0[2:0]:b0[4:0], r0[4:0]:g0[5:3], g1[2:0]:b1[4:0], r1[4:0]:g1[5:3], ... </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada75669e6d4128948c9870f3842b09c4d2" prot="public">
+          <name>display_buf_format_rgb565_swap</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>memory layout in byte(low-&gt;high): r0[4:0]:g0[5:3], g0[2:0]:b0[4:0], r2[4:0]:g2[5:3], g1[2:0]:b1[4:0], ... </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada3ce14d07dc8bac658ffdfdd7937c63fb" prot="public">
+          <name>display_buf_format_yuyv</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>memory layout in byte(low-&gt;high): y0, u0, y1, v0, y2, u2, y3, v2, ... </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aadaa3f830350076aae78d320aa495c9a518" prot="public">
+          <name>display_buf_format_uyvy</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>memory layout in byte(low-&gt;high): u0, y0, v0, y1, u2, y2, v2, y3, ... </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada2ca63dd12d8303957ab854ad7d274613" prot="public">
+          <name>display_buf_format_y8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>memory layout in byte(low-&gt;high): y0, y1, y2, y3, y4, y5, ... </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aadabe39d963d6c63f30d323edb89db92151" prot="public">
+          <name>display_buf_format_max</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="151" column="1" bodyfile="drivers/inc/hpm_display_common.h" bodystart="151" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__Display__common__interface_1gac662b4a0e0fa25ebae32f9640ee7da5f" prot="public" static="no">
+        <type>enum <ref refid="group__Display__common__interface_1ga9965d40ba5b3f5ad802a0da0e1bc0994" kindref="member">display_alphablend_mode</ref></type>
+        <definition>typedef enum display_alphablend_mode display_alphablend_mode_t</definition>
+        <argsstring></argsstring>
+        <name>display_alphablend_mode_t</name>
+        <briefdescription>
+<para>display alphablend mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="40" column="27"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__Display__common__interface_1ga3609d1a38c447089436d67c313916bf8" prot="public" static="no">
+        <type>enum <ref refid="group__Display__common__interface_1gac346bc56771052a8fe919c3ec23d7c9c" kindref="member">display_pixel_format</ref></type>
+        <definition>typedef enum display_pixel_format display_pixel_format_t</definition>
+        <argsstring></argsstring>
+        <name>display_pixel_format_t</name>
+        <briefdescription>
+<para>display pixel format </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="55" column="24"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__Display__common__interface_1gaed3db61ea26eebc8ef29feb463734ca8" prot="public" static="no">
+        <type>enum <ref refid="group__Display__common__interface_1ga2d172b81de8c7ae7b74a7a87483b877b" kindref="member">display_byteorder</ref></type>
+        <definition>typedef enum display_byteorder display_byteorder_t</definition>
+        <argsstring></argsstring>
+        <name>display_byteorder_t</name>
+        <briefdescription>
+<para>display data byte order </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="65" column="21"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__Display__common__interface_1ga83441eb67ce3c6d11bcdbd6c6777e31f" prot="public" static="no">
+        <type>enum <ref refid="group__Display__common__interface_1ga46cfb210522fb7fa332acd7fe6462151" kindref="member">display_yuv_format</ref></type>
+        <definition>typedef enum display_yuv_format display_yuv_format_t</definition>
+        <argsstring></argsstring>
+        <name>display_yuv_format_t</name>
+        <briefdescription>
+<para>display yuv format </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="75" column="22"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__Display__common__interface_1gad391a163a4166553135c8e5e8fa5b1a1" prot="public" static="no">
+        <type>union <ref refid="uniondisplay__color__32b" kindref="compound">display_color_32b</ref></type>
+        <definition>typedef union display_color_32b display_color_32b_t</definition>
+        <argsstring></argsstring>
+        <name>display_color_32b_t</name>
+        <briefdescription>
+<para>display data 32 bits argb </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="88" column="21"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__Display__common__interface_1ga2c40b3d4d0f65d1edc16b17d2551b6a7" prot="public" static="no">
+        <type>enum <ref refid="group__Display__common__interface_1ga22fe23fde4180f3e4253d3bf2dda3d74" kindref="member">display_alpha_op</ref></type>
+        <definition>typedef enum display_alpha_op display_alpha_op_t</definition>
+        <argsstring></argsstring>
+        <name>display_alpha_op_t</name>
+        <briefdescription>
+<para>display data alpha value usage option </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="97" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__Display__common__interface_1ga60dfd80dcb3c39a70a946c8f80608690" prot="public" static="no">
+        <type>struct <ref refid="structdispaly__alphablend__option" kindref="compound">dispaly_alphablend_option</ref></type>
+        <definition>typedef struct dispaly_alphablend_option display_alphablend_option_t</definition>
+        <argsstring></argsstring>
+        <name>display_alphablend_option_t</name>
+        <briefdescription>
+<para>display data alphablend option </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="108" column="29"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__Display__common__interface_1gacdbe8b79ef8511c5823e49e5b1b20c8d" prot="public" static="no">
+        <type>struct <ref refid="structdispaly__yuv2rgb__coef" kindref="compound">dispaly_yuv2rgb_coef</ref></type>
+        <definition>typedef struct dispaly_yuv2rgb_coef display_yuv2rgb_coef_t</definition>
+        <argsstring></argsstring>
+        <name>display_yuv2rgb_coef_t</name>
+        <briefdescription>
+<para>display yuv to rgb format conversion coefficient </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="121" column="24"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__Display__common__interface_1ga16af4492628c45bdfd87ec868ca192ca" prot="public" static="no">
+        <type>struct <ref refid="structdisplay__yuv2rgb__config" kindref="compound">display_yuv2rgb_config</ref></type>
+        <definition>typedef struct display_yuv2rgb_config display_yuv2rgb_config_t</definition>
+        <argsstring></argsstring>
+        <name>display_yuv2rgb_config_t</name>
+        <briefdescription>
+<para>display yuv to rgb format conversion config </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="130" column="26"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__Display__common__interface_1gaa4cc276ebd6bdf3cf55c41d9c8775d8c" prot="public" static="no">
+        <type>struct <ref refid="structdisplay__rgb2yuv__config" kindref="compound">display_rgb2yuv_config</ref></type>
+        <definition>typedef struct display_rgb2yuv_config display_rgb2yuv_config_t</definition>
+        <argsstring></argsstring>
+        <name>display_rgb2yuv_config_t</name>
+        <briefdescription>
+<para>display rgb to yuv format conversion config </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="149" column="26"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__Display__common__interface_1gab43e51ef4fb47c21f67fdf220e1166f3" prot="public" static="no">
+        <type>enum <ref refid="group__Display__common__interface_1ga01be6284bd6628c90b5a1a8d724c6aad" kindref="member">display_buf_format</ref></type>
+        <definition>typedef enum display_buf_format display_buf_format_t</definition>
+        <argsstring></argsstring>
+        <name>display_buf_format_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="160" column="22"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__Display__common__interface_1ga2f93ce396df0bd86b06e1168e6774b5c" prot="public" static="no">
+        <type>struct <ref refid="structdisplay__buf" kindref="compound">display_buf</ref></type>
+        <definition>typedef struct display_buf display_buf_t</definition>
+        <argsstring></argsstring>
+        <name>display_buf_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="172" column="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__Display__common__interface_1ga8d8129322ec6db35d5cd1e7b23cfe009" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t display_get_pixel_size_in_bit</definition>
+        <argsstring>(display_pixel_format_t format)</argsstring>
+        <name>display_get_pixel_size_in_bit</name>
+        <param>
+          <type><ref refid="group__Display__common__interface_1ga3609d1a38c447089436d67c313916bf8" kindref="member">display_pixel_format_t</ref></type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Display get pixel size in bit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>display_pixel_format_t</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>pixel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size in bit </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="186" column="13" bodyfile="drivers/inc/hpm_display_common.h" bodystart="186" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Display__common__interface_1ga5706caf464ced5440ca674f2dfbb5396" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool display_pixel_format_is_yuv_format</definition>
+        <argsstring>(display_pixel_format_t format)</argsstring>
+        <name>display_pixel_format_is_yuv_format</name>
+        <param>
+          <type><ref refid="group__Display__common__interface_1ga3609d1a38c447089436d67c313916bf8" kindref="member">display_pixel_format_t</ref></type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Check whether the pixel data is yuv format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>display_pixel_format_t</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true or false </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="213" column="20" bodyfile="drivers/inc/hpm_display_common.h" bodystart="213" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Display__common__interface_1gaff6d6adf68ca09e61224fae62ae61d86" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t display_get_pixel_size_in_byte</definition>
+        <argsstring>(display_pixel_format_t format)</argsstring>
+        <name>display_get_pixel_size_in_byte</name>
+        <param>
+          <type><ref refid="group__Display__common__interface_1ga3609d1a38c447089436d67c313916bf8" kindref="member">display_pixel_format_t</ref></type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Display get pixel size in byte. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>display_pixel_format_t</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>pixel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size in byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="233" column="13" bodyfile="drivers/inc/hpm_display_common.h" bodystart="233" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Display__common__interface_1ga3b97741536d362031de24c1566ede759" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t display_get_pitch_length_in_byte</definition>
+        <argsstring>(display_pixel_format_t format, uint32_t width_in_pixel)</argsstring>
+        <name>display_get_pitch_length_in_byte</name>
+        <param>
+          <type><ref refid="group__Display__common__interface_1ga3609d1a38c447089436d67c313916bf8" kindref="member">display_pixel_format_t</ref></type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>width_in_pixel</declname>
+        </param>
+        <briefdescription>
+<para>Display get pitch length in byte. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>display_pixel_format_t </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">width_in_pixel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pixel width</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>pitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length in byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_display_common.h" line="247" column="14" bodyfile="drivers/inc/hpm_display_common.h" bodystart="247" bodyend="251"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPM_DISPLAY_COMMON_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_DISPLAY_COMMON_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__common_8h" kindref="compound">hpm_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="group__Display__common__interface_1ga9965d40ba5b3f5ad802a0da0e1bc0994" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ga9965d40ba5b3f5ad802a0da0e1bc0994" kindref="member">display_alphablend_mode</ref><sp/>{</highlight></codeline>
+<codeline lineno="24" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a79dc5ea6185c1dd8443577d885fb41cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a79dc5ea6185c1dd8443577d885fb41cb" kindref="member">display_alphablend_mode_clear</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="25" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994aa0446bc60a36fea50b54a0094ebb0298" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994aa0446bc60a36fea50b54a0094ebb0298" kindref="member">display_alphablend_mode_src</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="26" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a73b95b55b880911f1479202e1f95831b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a73b95b55b880911f1479202e1f95831b" kindref="member">display_alphablend_mode_dst</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="27" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a1ee478ea39b7869b243ef5fff5a97ba0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a1ee478ea39b7869b243ef5fff5a97ba0" kindref="member">display_alphablend_mode_src_over</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="28" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a86e3c86361c81346a5a645d151283bc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a86e3c86361c81346a5a645d151283bc8" kindref="member">display_alphablend_mode_dst_over</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="29" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a1a3d10ba3cf8d4de70fd77cf06fd9b5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a1a3d10ba3cf8d4de70fd77cf06fd9b5c" kindref="member">display_alphablend_mode_src_in</ref><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="30" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994aff9ec1fd43acdfa4b2686a1458c538ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994aff9ec1fd43acdfa4b2686a1458c538ef" kindref="member">display_alphablend_mode_dst_in</ref><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="31" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994aa2205b456714c0d248fc4e93d0399f5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994aa2205b456714c0d248fc4e93d0399f5c" kindref="member">display_alphablend_mode_src_out</ref><sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="32" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994ae21b89461413ab58363a863b45f20535" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994ae21b89461413ab58363a863b45f20535" kindref="member">display_alphablend_mode_dst_out</ref><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="33" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a04c2ac2b37c7827f4a85c95039c63cfc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a04c2ac2b37c7827f4a85c95039c63cfc" kindref="member">display_alphablend_mode_src_at_top</ref><sp/>=<sp/>9,</highlight></codeline>
+<codeline lineno="34" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994ae1124cefe9f2f64ba8f141f03bfb2cad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994ae1124cefe9f2f64ba8f141f03bfb2cad" kindref="member">display_alphablend_mode_dst_at_top</ref><sp/>=<sp/>10,</highlight></codeline>
+<codeline lineno="35" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a775bdb002c41ad51c496d8c76f12ef13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a775bdb002c41ad51c496d8c76f12ef13" kindref="member">display_alphablend_mode_xor</ref><sp/>=<sp/>11,</highlight></codeline>
+<codeline lineno="36" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a9a21d964612e6007d79148ec6c37e156" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a9a21d964612e6007d79148ec6c37e156" kindref="member">display_alphablend_mode_plus</ref><sp/>=<sp/>12,</highlight></codeline>
+<codeline lineno="37" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a0cb6b1b318caebfc4332d9c1fe566d3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a0cb6b1b318caebfc4332d9c1fe566d3f" kindref="member">display_alphablend_mode_modulate</ref><sp/>=<sp/>13,</highlight></codeline>
+<codeline lineno="38" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a921d33f6d2ebecc36aba34f1c62a0dae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a921d33f6d2ebecc36aba34f1c62a0dae" kindref="member">display_alphablend_mode_src_org</ref><sp/>=<sp/>14,</highlight></codeline>
+<codeline lineno="39" refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a29b83eb18ae84696c145f17b9aecb688" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga9965d40ba5b3f5ad802a0da0e1bc0994a29b83eb18ae84696c145f17b9aecb688" kindref="member">display_alphablend_mode_dst_org</ref><sp/>=<sp/>15,</highlight></codeline>
+<codeline lineno="40" refid="group__Display__common__interface_1gac662b4a0e0fa25ebae32f9640ee7da5f" refkind="member"><highlight class="normal">}<sp/><ref refid="group__Display__common__interface_1gac662b4a0e0fa25ebae32f9640ee7da5f" kindref="member">display_alphablend_mode_t</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="group__Display__common__interface_1gac346bc56771052a8fe919c3ec23d7c9c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1gac346bc56771052a8fe919c3ec23d7c9c" kindref="member">display_pixel_format</ref><sp/>{</highlight></codeline>
+<codeline lineno="46" refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca7b3467724131b0dd2f4fbca8cd253849" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca7b3467724131b0dd2f4fbca8cd253849" kindref="member">display_pixel_format_argb8888</ref>,</highlight></codeline>
+<codeline lineno="47" refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca435701cc14c5a558ec3e6f761ca18b4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca435701cc14c5a558ec3e6f761ca18b4a" kindref="member">display_pixel_format_rgb565</ref>,</highlight></codeline>
+<codeline lineno="48" refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9caefed447fa154f6b40d858f57c0da20a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9caefed447fa154f6b40d858f57c0da20a9" kindref="member">display_pixel_format_rgb555</ref>,</highlight></codeline>
+<codeline lineno="49" refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9caf38f8ea04a5aa191afff274565d6270a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9caf38f8ea04a5aa191afff274565d6270a" kindref="member">display_pixel_format_rgb444</ref>,</highlight></codeline>
+<codeline lineno="50" refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca420e290b0a8e0d9bc1335b86ca436b45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca420e290b0a8e0d9bc1335b86ca436b45" kindref="member">display_pixel_format_gbr422</ref>,</highlight></codeline>
+<codeline lineno="51" refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9cadd92021da86b2d931d85b7db7b2dbe6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9cadd92021da86b2d931d85b7db7b2dbe6e" kindref="member">display_pixel_format_yuv422</ref>,</highlight></codeline>
+<codeline lineno="52" refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9cae3ee6a687ea621f79d3cb71de4357c07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9cae3ee6a687ea621f79d3cb71de4357c07" kindref="member">display_pixel_format_ycbcr422</ref>,</highlight></codeline>
+<codeline lineno="53" refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca592ef15d8f648f802bfe4649a5ffcb20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca592ef15d8f648f802bfe4649a5ffcb20" kindref="member">display_pixel_format_y8</ref>,</highlight></codeline>
+<codeline lineno="54" refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9cad23afc08701022b252f132961b7ec228" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9cad23afc08701022b252f132961b7ec228" kindref="member">display_pixel_format_raw8</ref>,</highlight></codeline>
+<codeline lineno="55" refid="group__Display__common__interface_1ga3609d1a38c447089436d67c313916bf8" refkind="member"><highlight class="normal">}<sp/><ref refid="group__Display__common__interface_1ga3609d1a38c447089436d67c313916bf8" kindref="member">display_pixel_format_t</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="group__Display__common__interface_1ga2d172b81de8c7ae7b74a7a87483b877b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ga2d172b81de8c7ae7b74a7a87483b877b" kindref="member">display_byteorder</ref><sp/>{</highlight></codeline>
+<codeline lineno="61" refid="group__Display__common__interface_1gga2d172b81de8c7ae7b74a7a87483b877ba44b21d0a4004292fe20c719e887b6956" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga2d172b81de8c7ae7b74a7a87483b877ba44b21d0a4004292fe20c719e887b6956" kindref="member">display_byteorder_a3a2a1a0</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="62" refid="group__Display__common__interface_1gga2d172b81de8c7ae7b74a7a87483b877ba6009d60f4e513887df7f15cd2706d2e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga2d172b81de8c7ae7b74a7a87483b877ba6009d60f4e513887df7f15cd2706d2e3" kindref="member">display_byteorder_a2a3a0a1</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="63" refid="group__Display__common__interface_1gga2d172b81de8c7ae7b74a7a87483b877bacd10d69762f59cf04cd92a843cdee98e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga2d172b81de8c7ae7b74a7a87483b877bacd10d69762f59cf04cd92a843cdee98e" kindref="member">display_byteorder_a1a0a3a2</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="64" refid="group__Display__common__interface_1gga2d172b81de8c7ae7b74a7a87483b877ba2ac9b29b3a623bf1dc3587e24626361c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga2d172b81de8c7ae7b74a7a87483b877ba2ac9b29b3a623bf1dc3587e24626361c" kindref="member">display_byteorder_a0a1a2a3</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="65" refid="group__Display__common__interface_1gaed3db61ea26eebc8ef29feb463734ca8" refkind="member"><highlight class="normal">}<sp/><ref refid="group__Display__common__interface_1gaed3db61ea26eebc8ef29feb463734ca8" kindref="member">display_byteorder_t</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="group__Display__common__interface_1ga46cfb210522fb7fa332acd7fe6462151" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ga46cfb210522fb7fa332acd7fe6462151" kindref="member">display_yuv_format</ref><sp/>{</highlight></codeline>
+<codeline lineno="71" refid="group__Display__common__interface_1gga46cfb210522fb7fa332acd7fe6462151a440c7395f13084f60fc4d6b9d215f81a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga46cfb210522fb7fa332acd7fe6462151a440c7395f13084f60fc4d6b9d215f81a" kindref="member">display_yuv_mode_422_u1y1v1y2</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="72" refid="group__Display__common__interface_1gga46cfb210522fb7fa332acd7fe6462151a2feb5503e9c1a8234e9194264af2191c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga46cfb210522fb7fa332acd7fe6462151a2feb5503e9c1a8234e9194264af2191c" kindref="member">display_yuv_mode_422_v1y1u1y2</ref>,</highlight></codeline>
+<codeline lineno="73" refid="group__Display__common__interface_1gga46cfb210522fb7fa332acd7fe6462151a937b485e8b64fb795147f097c1ad4b67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga46cfb210522fb7fa332acd7fe6462151a937b485e8b64fb795147f097c1ad4b67" kindref="member">display_yuv_mode_422_y1u1y2v1</ref>,</highlight></codeline>
+<codeline lineno="74" refid="group__Display__common__interface_1gga46cfb210522fb7fa332acd7fe6462151a399d0e8323fe8c6902df4da37ccfdab9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga46cfb210522fb7fa332acd7fe6462151a399d0e8323fe8c6902df4da37ccfdab9" kindref="member">display_yuv_mode_422_y1v1y2u1</ref>,</highlight></codeline>
+<codeline lineno="75" refid="group__Display__common__interface_1ga83441eb67ce3c6d11bcdbd6c6777e31f" refkind="member"><highlight class="normal">}<sp/><ref refid="group__Display__common__interface_1ga83441eb67ce3c6d11bcdbd6c6777e31f" kindref="member">display_yuv_format_t</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="uniondisplay__color__32b" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="uniondisplay__color__32b" kindref="compound">display_color_32b</ref><sp/>{</highlight></codeline>
+<codeline lineno="81" refid="uniondisplay__color__32b_1a69609d06971c149adf65e9b659522bf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="uniondisplay__color__32b_1a69609d06971c149adf65e9b659522bf1" kindref="member">u</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83" refid="uniondisplay__color__32b_1a34b9f3b5ac65bcc0ba49aaac6ac28780" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="uniondisplay__color__32b_1a34b9f3b5ac65bcc0ba49aaac6ac28780" kindref="member">b</ref>;</highlight></codeline>
+<codeline lineno="84" refid="uniondisplay__color__32b_1adf6777235edbe9967a102618890a7d2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="uniondisplay__color__32b_1adf6777235edbe9967a102618890a7d2c" kindref="member">g</ref>;</highlight></codeline>
+<codeline lineno="85" refid="uniondisplay__color__32b_1ad0aa237c13d4930e733e9d29377e34cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="uniondisplay__color__32b_1ad0aa237c13d4930e733e9d29377e34cb" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="86" refid="uniondisplay__color__32b_1abddc84698bad39a10d90ccdcebf875d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="uniondisplay__color__32b_1abddc84698bad39a10d90ccdcebf875d3" kindref="member">alpha</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="88" refid="group__Display__common__interface_1gad391a163a4166553135c8e5e8fa5b1a1" refkind="member"><highlight class="normal">}<sp/><ref refid="group__Display__common__interface_1gad391a163a4166553135c8e5e8fa5b1a1" kindref="member">display_color_32b_t</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="group__Display__common__interface_1ga22fe23fde4180f3e4253d3bf2dda3d74" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ga22fe23fde4180f3e4253d3bf2dda3d74" kindref="member">display_alpha_op</ref><sp/>{</highlight></codeline>
+<codeline lineno="94" refid="group__Display__common__interface_1gga22fe23fde4180f3e4253d3bf2dda3d74a3924bd3ffb4543c990cbbedf5b107029" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga22fe23fde4180f3e4253d3bf2dda3d74a3924bd3ffb4543c990cbbedf5b107029" kindref="member">display_alpha_op_invalid</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="95" refid="group__Display__common__interface_1gga22fe23fde4180f3e4253d3bf2dda3d74ac11bbbc0c4d15e1de37bb9351556419d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga22fe23fde4180f3e4253d3bf2dda3d74ac11bbbc0c4d15e1de37bb9351556419d" kindref="member">display_alpha_op_override</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="96" refid="group__Display__common__interface_1gga22fe23fde4180f3e4253d3bf2dda3d74a3af8a3ebd0b88ca92219dd3cc2352ee7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga22fe23fde4180f3e4253d3bf2dda3d74a3af8a3ebd0b88ca92219dd3cc2352ee7" kindref="member">display_alpha_op_scale</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="97" refid="group__Display__common__interface_1ga2c40b3d4d0f65d1edc16b17d2551b6a7" refkind="member"><highlight class="normal">}<sp/><ref refid="group__Display__common__interface_1ga2c40b3d4d0f65d1edc16b17d2551b6a7" kindref="member">display_alpha_op_t</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="structdispaly__alphablend__option" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdispaly__alphablend__option" kindref="compound">dispaly_alphablend_option</ref><sp/>{</highlight></codeline>
+<codeline lineno="103" refid="structdispaly__alphablend__option_1ab3e49ddbc53a9e93f8cd6f2f39c662f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structdispaly__alphablend__option_1ab3e49ddbc53a9e93f8cd6f2f39c662f6" kindref="member">dst_alpha</ref>;</highlight></codeline>
+<codeline lineno="104" refid="structdispaly__alphablend__option_1a79aa25688e11bc814f6e0b08e631f51d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structdispaly__alphablend__option_1a79aa25688e11bc814f6e0b08e631f51d" kindref="member">src_alpha</ref>;</highlight></codeline>
+<codeline lineno="105" refid="structdispaly__alphablend__option_1ae31814301365cb999c4c1735702cb864" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1ga2c40b3d4d0f65d1edc16b17d2551b6a7" kindref="member">display_alpha_op_t</ref><sp/><ref refid="structdispaly__alphablend__option_1ae31814301365cb999c4c1735702cb864" kindref="member">dst_alpha_op</ref>;</highlight></codeline>
+<codeline lineno="106" refid="structdispaly__alphablend__option_1a97ac79ae837e7951e85038c7b7c133fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1ga2c40b3d4d0f65d1edc16b17d2551b6a7" kindref="member">display_alpha_op_t</ref><sp/><ref refid="structdispaly__alphablend__option_1a97ac79ae837e7951e85038c7b7c133fc" kindref="member">src_alpha_op</ref>;</highlight></codeline>
+<codeline lineno="107" refid="structdispaly__alphablend__option_1adf94fc0132393f8d00156b300e6eec34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gac662b4a0e0fa25ebae32f9640ee7da5f" kindref="member">display_alphablend_mode_t</ref><sp/><ref refid="structdispaly__alphablend__option_1adf94fc0132393f8d00156b300e6eec34" kindref="member">mode</ref>;</highlight></codeline>
+<codeline lineno="108" refid="group__Display__common__interface_1ga60dfd80dcb3c39a70a946c8f80608690" refkind="member"><highlight class="normal">}<sp/><ref refid="group__Display__common__interface_1ga60dfd80dcb3c39a70a946c8f80608690" kindref="member">display_alphablend_option_t</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="structdispaly__yuv2rgb__coef" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdispaly__yuv2rgb__coef" kindref="compound">dispaly_yuv2rgb_coef</ref><sp/>{</highlight></codeline>
+<codeline lineno="114" refid="structdispaly__yuv2rgb__coef_1a32f2f3dd88c253782302734f640d42aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdispaly__yuv2rgb__coef_1a32f2f3dd88c253782302734f640d42aa" kindref="member">c0</ref>;</highlight></codeline>
+<codeline lineno="115" refid="structdispaly__yuv2rgb__coef_1af49c729c954e4a4429df7433f402f1d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdispaly__yuv2rgb__coef_1af49c729c954e4a4429df7433f402f1d6" kindref="member">c1</ref>;</highlight></codeline>
+<codeline lineno="116" refid="structdispaly__yuv2rgb__coef_1a9d1ad42d94e8dab9c1ac716f57624877" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdispaly__yuv2rgb__coef_1a9d1ad42d94e8dab9c1ac716f57624877" kindref="member">c2</ref>;</highlight></codeline>
+<codeline lineno="117" refid="structdispaly__yuv2rgb__coef_1a8d9cdca03473749eae314c4271a707d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdispaly__yuv2rgb__coef_1a8d9cdca03473749eae314c4271a707d3" kindref="member">c3</ref>;</highlight></codeline>
+<codeline lineno="118" refid="structdispaly__yuv2rgb__coef_1af25264f758ef67bc25b343ea5194b3f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdispaly__yuv2rgb__coef_1af25264f758ef67bc25b343ea5194b3f7" kindref="member">c4</ref>;</highlight></codeline>
+<codeline lineno="119" refid="structdispaly__yuv2rgb__coef_1a0cfeba1e266531069696d64970dce848" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdispaly__yuv2rgb__coef_1a0cfeba1e266531069696d64970dce848" kindref="member">uv_offset</ref>;</highlight></codeline>
+<codeline lineno="120" refid="structdispaly__yuv2rgb__coef_1a50a1a4c502bb052fa765ddbd13aa5281" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdispaly__yuv2rgb__coef_1a50a1a4c502bb052fa765ddbd13aa5281" kindref="member">y_offset</ref>;</highlight></codeline>
+<codeline lineno="121" refid="group__Display__common__interface_1gacdbe8b79ef8511c5823e49e5b1b20c8d" refkind="member"><highlight class="normal">}<sp/><ref refid="group__Display__common__interface_1gacdbe8b79ef8511c5823e49e5b1b20c8d" kindref="member">display_yuv2rgb_coef_t</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="structdisplay__yuv2rgb__config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdisplay__yuv2rgb__config" kindref="compound">display_yuv2rgb_config</ref><sp/>{</highlight></codeline>
+<codeline lineno="127" refid="structdisplay__yuv2rgb__config_1ab92eeddbc2ada424c5c53d1bf7dd5970" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structdisplay__yuv2rgb__config_1ab92eeddbc2ada424c5c53d1bf7dd5970" kindref="member">enable</ref>;</highlight></codeline>
+<codeline lineno="128" refid="structdisplay__yuv2rgb__config_1abd59b517d947ba3c4ee5db0fd58c31a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structdisplay__yuv2rgb__config_1abd59b517d947ba3c4ee5db0fd58c31a2" kindref="member">ycbcr_mode</ref>;</highlight></codeline>
+<codeline lineno="129" refid="structdisplay__yuv2rgb__config_1a1713931f4f3ba310feaff38368394bd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdispaly__yuv2rgb__coef" kindref="compound">display_yuv2rgb_coef_t</ref><sp/><ref refid="structdisplay__yuv2rgb__config_1a1713931f4f3ba310feaff38368394bd8" kindref="member">yuv2rgb_coef</ref>;</highlight></codeline>
+<codeline lineno="130" refid="group__Display__common__interface_1ga16af4492628c45bdfd87ec868ca192ca" refkind="member"><highlight class="normal">}<sp/><ref refid="group__Display__common__interface_1ga16af4492628c45bdfd87ec868ca192ca" kindref="member">display_yuv2rgb_config_t</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="structdisplay__rgb2yuv__config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdisplay__rgb2yuv__config" kindref="compound">display_rgb2yuv_config</ref><sp/>{</highlight></codeline>
+<codeline lineno="136" refid="structdisplay__rgb2yuv__config_1a3a14fc4f3cf5892deb11fbfb9e25ccca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structdisplay__rgb2yuv__config_1a3a14fc4f3cf5892deb11fbfb9e25ccca" kindref="member">enable</ref>;</highlight></codeline>
+<codeline lineno="137" refid="structdisplay__rgb2yuv__config_1a387e234376220458d13c21a0af2aaf22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structdisplay__rgb2yuv__config_1a387e234376220458d13c21a0af2aaf22" kindref="member">ycbcr_mode</ref>;</highlight></codeline>
+<codeline lineno="138" refid="structdisplay__rgb2yuv__config_1ace1862da2b6ab04adbbaf1678d956d6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdisplay__rgb2yuv__config_1ace1862da2b6ab04adbbaf1678d956d6d" kindref="member">c0</ref>;</highlight></codeline>
+<codeline lineno="139" refid="structdisplay__rgb2yuv__config_1a8205de47292fb64036e1aed4c92a5406" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdisplay__rgb2yuv__config_1a8205de47292fb64036e1aed4c92a5406" kindref="member">c1</ref>;</highlight></codeline>
+<codeline lineno="140" refid="structdisplay__rgb2yuv__config_1a9d7c8b2edeff3d38395e0ba9c533f4d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdisplay__rgb2yuv__config_1a9d7c8b2edeff3d38395e0ba9c533f4d6" kindref="member">c2</ref>;</highlight></codeline>
+<codeline lineno="141" refid="structdisplay__rgb2yuv__config_1a2ee80fa689a79278d9225224a0cae46f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdisplay__rgb2yuv__config_1a2ee80fa689a79278d9225224a0cae46f" kindref="member">c3</ref>;</highlight></codeline>
+<codeline lineno="142" refid="structdisplay__rgb2yuv__config_1ad75a86a256e4cdb56856bff1cc2a7d99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdisplay__rgb2yuv__config_1ad75a86a256e4cdb56856bff1cc2a7d99" kindref="member">c4</ref>;</highlight></codeline>
+<codeline lineno="143" refid="structdisplay__rgb2yuv__config_1ac38dcf8b23c7233a19f8f33438b65818" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdisplay__rgb2yuv__config_1ac38dcf8b23c7233a19f8f33438b65818" kindref="member">c5</ref>;</highlight></codeline>
+<codeline lineno="144" refid="structdisplay__rgb2yuv__config_1ae622604a2253c24f7978422285e138f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdisplay__rgb2yuv__config_1ae622604a2253c24f7978422285e138f6" kindref="member">c6</ref>;</highlight></codeline>
+<codeline lineno="145" refid="structdisplay__rgb2yuv__config_1a1a1d8b895624ea345a57ce7c9f1e9d0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdisplay__rgb2yuv__config_1a1a1d8b895624ea345a57ce7c9f1e9d0c" kindref="member">c7</ref>;</highlight></codeline>
+<codeline lineno="146" refid="structdisplay__rgb2yuv__config_1a028a4a382daabe78b9634d71fe7e4fbd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdisplay__rgb2yuv__config_1a028a4a382daabe78b9634d71fe7e4fbd" kindref="member">c8</ref>;</highlight></codeline>
+<codeline lineno="147" refid="structdisplay__rgb2yuv__config_1adad47cc3e43458fb0368eabe0eddd1eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdisplay__rgb2yuv__config_1adad47cc3e43458fb0368eabe0eddd1eb" kindref="member">uv_offset</ref>;</highlight></codeline>
+<codeline lineno="148" refid="structdisplay__rgb2yuv__config_1a2416617eb7f5f87eb953b0dafb68ce6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdisplay__rgb2yuv__config_1a2416617eb7f5f87eb953b0dafb68ce6e" kindref="member">y_offset</ref>;</highlight></codeline>
+<codeline lineno="149" refid="group__Display__common__interface_1gaa4cc276ebd6bdf3cf55c41d9c8775d8c" refkind="member"><highlight class="normal">}<sp/><ref refid="group__Display__common__interface_1gaa4cc276ebd6bdf3cf55c41d9c8775d8c" kindref="member">display_rgb2yuv_config_t</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="group__Display__common__interface_1ga01be6284bd6628c90b5a1a8d724c6aad" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ga01be6284bd6628c90b5a1a8d724c6aad" kindref="member">display_buf_format</ref><sp/>{</highlight></codeline>
+<codeline lineno="152" refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada232bba1e22351cfd08dbaddcd888d53e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada232bba1e22351cfd08dbaddcd888d53e" kindref="member">display_buf_format_argb8888</ref>,<sp/></highlight></codeline>
+<codeline lineno="153" refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada548ea8b5d60e2c49e52e5522b14b64a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada548ea8b5d60e2c49e52e5522b14b64a6" kindref="member">display_buf_format_bgra8888</ref>,<sp/></highlight></codeline>
+<codeline lineno="154" refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aadac92d61931aa89ebdfbeb5b1ed07266b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aadac92d61931aa89ebdfbeb5b1ed07266b3" kindref="member">display_buf_format_rgb565</ref>,<sp/></highlight></codeline>
+<codeline lineno="155" refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada75669e6d4128948c9870f3842b09c4d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada75669e6d4128948c9870f3842b09c4d2" kindref="member">display_buf_format_rgb565_swap</ref>,<sp/></highlight></codeline>
+<codeline lineno="156" refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada3ce14d07dc8bac658ffdfdd7937c63fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada3ce14d07dc8bac658ffdfdd7937c63fb" kindref="member">display_buf_format_yuyv</ref>,<sp/></highlight></codeline>
+<codeline lineno="157" refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aadaa3f830350076aae78d320aa495c9a518" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aadaa3f830350076aae78d320aa495c9a518" kindref="member">display_buf_format_uyvy</ref>,<sp/></highlight></codeline>
+<codeline lineno="158" refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada2ca63dd12d8303957ab854ad7d274613" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aada2ca63dd12d8303957ab854ad7d274613" kindref="member">display_buf_format_y8</ref>,<sp/></highlight></codeline>
+<codeline lineno="159" refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aadabe39d963d6c63f30d323edb89db92151" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gga01be6284bd6628c90b5a1a8d724c6aadabe39d963d6c63f30d323edb89db92151" kindref="member">display_buf_format_max</ref>,</highlight></codeline>
+<codeline lineno="160" refid="group__Display__common__interface_1gab43e51ef4fb47c21f67fdf220e1166f3" refkind="member"><highlight class="normal">}<sp/><ref refid="group__Display__common__interface_1gab43e51ef4fb47c21f67fdf220e1166f3" kindref="member">display_buf_format_t</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="structdisplay__buf" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdisplay__buf" kindref="compound">display_buf</ref><sp/>{</highlight></codeline>
+<codeline lineno="163" refid="structdisplay__buf_1a18c674a000787365649919fd96a759c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structdisplay__buf_1a18c674a000787365649919fd96a759c4" kindref="member">buf</ref>;<sp/></highlight></codeline>
+<codeline lineno="164" refid="structdisplay__buf_1a14fb2396bb0933efadabf040ff0c4149" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdisplay__buf_1a14fb2396bb0933efadabf040ff0c4149" kindref="member">width</ref>;<sp/></highlight></codeline>
+<codeline lineno="165" refid="structdisplay__buf_1a1e62dfdfbb4767477c2b38aa4a9b67ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structdisplay__buf_1a1e62dfdfbb4767477c2b38aa4a9b67ff" kindref="member">height</ref>;<sp/></highlight></codeline>
+<codeline lineno="166" refid="structdisplay__buf_1a267b10b179b7a671be4f13519b802050" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structdisplay__buf_1a267b10b179b7a671be4f13519b802050" kindref="member">stride</ref>;<sp/></highlight></codeline>
+<codeline lineno="167" refid="structdisplay__buf_1a7e1fd87a38469fb0f9e5b888c1dc798e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1gab43e51ef4fb47c21f67fdf220e1166f3" kindref="member">display_buf_format_t</ref><sp/><ref refid="structdisplay__buf_1a7e1fd87a38469fb0f9e5b888c1dc798e" kindref="member">format</ref>;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169" refid="structdisplay__buf_1a7876734718816dddcc93ea1f1211eccb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__Display__common__interface_1ga2c40b3d4d0f65d1edc16b17d2551b6a7" kindref="member">display_alpha_op_t</ref><sp/><ref refid="structdisplay__buf_1a7876734718816dddcc93ea1f1211eccb" kindref="member">op</ref>;</highlight></codeline>
+<codeline lineno="170" refid="structdisplay__buf_1aab33b83ce566dea8cb8da2b69a0e9c0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structdisplay__buf_1aab33b83ce566dea8cb8da2b69a0e9c0f" kindref="member">val</ref>;</highlight></codeline>
+<codeline lineno="171" refid="structdisplay__buf_1ac673de1e6eda84d36e325cab60a1baa1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structdisplay__buf_1ac673de1e6eda84d36e325cab60a1baa1" kindref="member">alpha</ref>;</highlight></codeline>
+<codeline lineno="172" refid="group__Display__common__interface_1ga2f93ce396df0bd86b06e1168e6774b5c" refkind="member"><highlight class="normal">}<sp/><ref refid="group__Display__common__interface_1ga2f93ce396df0bd86b06e1168e6774b5c" kindref="member">display_buf_t</ref>;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="group__Display__common__interface_1ga8d8129322ec6db35d5cd1e7b23cfe009" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="group__Display__common__interface_1ga8d8129322ec6db35d5cd1e7b23cfe009" kindref="member">display_get_pixel_size_in_bit</ref>(<ref refid="group__Display__common__interface_1ga3609d1a38c447089436d67c313916bf8" kindref="member">display_pixel_format_t</ref><sp/>format)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(format)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca7b3467724131b0dd2f4fbca8cd253849" kindref="member">display_pixel_format_argb8888</ref>:</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>32;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca435701cc14c5a558ec3e6f761ca18b4a" kindref="member">display_pixel_format_rgb565</ref>:</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>16;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9cadd92021da86b2d931d85b7db7b2dbe6e" kindref="member">display_pixel_format_yuv422</ref>:</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>16;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9cae3ee6a687ea621f79d3cb71de4357c07" kindref="member">display_pixel_format_ycbcr422</ref>:</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>16;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9ca592ef15d8f648f802bfe4649a5ffcb20" kindref="member">display_pixel_format_y8</ref>:</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>8;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9cad23afc08701022b252f132961b7ec228" kindref="member">display_pixel_format_raw8</ref>:</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>8;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="group__Display__common__interface_1ga5706caf464ced5440ca674f2dfbb5396" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ga5706caf464ced5440ca674f2dfbb5396" kindref="member">display_pixel_format_is_yuv_format</ref>(<ref refid="group__Display__common__interface_1ga3609d1a38c447089436d67c313916bf8" kindref="member">display_pixel_format_t</ref><sp/>format)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(format)<sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9cadd92021da86b2d931d85b7db7b2dbe6e" kindref="member">display_pixel_format_yuv422</ref>:</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ggac346bc56771052a8fe919c3ec23d7c9cae3ee6a687ea621f79d3cb71de4357c07" kindref="member">display_pixel_format_ycbcr422</ref>:</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="group__Display__common__interface_1gaff6d6adf68ca09e61224fae62ae61d86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="group__Display__common__interface_1gaff6d6adf68ca09e61224fae62ae61d86" kindref="member">display_get_pixel_size_in_byte</ref>(<ref refid="group__Display__common__interface_1ga3609d1a38c447089436d67c313916bf8" kindref="member">display_pixel_format_t</ref><sp/>format)</highlight></codeline>
+<codeline lineno="234"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__Display__common__interface_1ga8d8129322ec6db35d5cd1e7b23cfe009" kindref="member">display_get_pixel_size_in_bit</ref>(format)<sp/>&gt;&gt;<sp/>3;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="group__Display__common__interface_1ga3b97741536d362031de24c1566ede759" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="group__Display__common__interface_1ga3b97741536d362031de24c1566ede759" kindref="member">display_get_pitch_length_in_byte</ref>(<ref refid="group__Display__common__interface_1ga3609d1a38c447089436d67c313916bf8" kindref="member">display_pixel_format_t</ref><sp/>format,</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>width_in_pixel)</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>width_in_pixel<sp/>*<sp/>(<ref refid="group__Display__common__interface_1ga8d8129322ec6db35d5cd1e7b23cfe009" kindref="member">display_get_pixel_size_in_bit</ref>(format)<sp/>&gt;&gt;<sp/>3);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HPM_DISPLAY_COMMON_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="drivers/inc/hpm_display_common.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1910 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__qei__interface" kind="group">
+    <compoundname>qei_interface</compoundname>
+    <title>QEI driver APIs</title>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__qei__interface_1ga2b1b910151805bd952afdc9e2e633c04" prot="public" static="no" strong="no">
+        <type></type>
+        <name>qei_z_count_inc_mode</name>
+        <enumvalue id="group__qei__interface_1gga2b1b910151805bd952afdc9e2e633c04aa4eddefeb82fc85ba50e64d4cdb3d8bd" prot="public">
+          <name>qei_z_count_inc_on_z_input_assert</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>zcnt will increment or decrement when Z input assert </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__qei__interface_1gga2b1b910151805bd952afdc9e2e633c04a5e73568e6408dfb4092d2fd36dfa97d2" prot="public">
+          <name>qei_z_count_inc_on_phase_count_max</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>zcnt will increment when phcnt upcount to phmax, decrement when phcnt downcount to 0 </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>counting mode of Z-phase counter </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="29" column="1" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__qei__interface_1ga40144348a421147be80166c8752066c4" prot="public" static="no" strong="no">
+        <type></type>
+        <name>qei_rotation_dir_cmp</name>
+        <enumvalue id="group__qei__interface_1gga40144348a421147be80166c8752066c4ab51f2701346a604b6ece6b2978c30d22" prot="public">
+          <name>qei_rotation_dir_cmp_positive</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>position compare need positive rotation </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__qei__interface_1gga40144348a421147be80166c8752066c4a813f628a55bf866afd7c07c439b27157" prot="public">
+          <name>qei_rotation_dir_cmp_negative</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>position compare need negative rotation </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__qei__interface_1gga40144348a421147be80166c8752066c4aac8d89269bef6c0dbb1b1362e0650252" prot="public">
+          <name>qei_rotation_dir_cmp_ignore</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ignore </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>motor rotation direction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="38" column="1" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="38" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__qei__interface_1gaf64b6e8c16d4e5424d369aee2721b387" prot="public" static="no" strong="no">
+        <type></type>
+        <name>qei_counter_type</name>
+        <enumvalue id="group__qei__interface_1ggaf64b6e8c16d4e5424d369aee2721b387aef78d8e6b06efeeb608f03e60116082d" prot="public">
+          <name>qei_counter_type_z</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Z counter </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__qei__interface_1ggaf64b6e8c16d4e5424d369aee2721b387aa8f2ef580e7e95fe97e2fcf2de690bb5" prot="public">
+          <name>qei_counter_type_phase</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Phase counter </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__qei__interface_1ggaf64b6e8c16d4e5424d369aee2721b387a698661d1cda348fa2a61a9496ef5dc8c" prot="public">
+          <name>qei_counter_type_speed</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Speed counter </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__qei__interface_1ggaf64b6e8c16d4e5424d369aee2721b387a99bb7ce3cc8b0398f6f840c6188fceef" prot="public">
+          <name>qei_counter_type_timer</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Timer counter </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>counter type </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="48" column="1" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="48" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__qei__interface_1ga66a886e0ffd0408633b230d2a0fea26e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>qei_work_mode</name>
+        <enumvalue id="group__qei__interface_1gga66a886e0ffd0408633b230d2a0fea26ea40be9e9e87609b266f81be34daa42a81" prot="public">
+          <name>qei_work_mode_abz</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Orthogonal decoder mode </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__qei__interface_1gga66a886e0ffd0408633b230d2a0fea26eafca78a12a5ea44b2df1026ce5220db21" prot="public">
+          <name>qei_work_mode_pd</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Directional (PD) mode </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__qei__interface_1gga66a886e0ffd0408633b230d2a0fea26eaf3549849dbcc7fc687831f3f48d89c0a" prot="public">
+          <name>qei_work_mode_ud</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Up and Down (UD) mode </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>qei work mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="59" column="1" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__qei__interface_1ga5edba7e8bd589c33cdf41e99b20fabbe" prot="public" static="no" strong="no">
+        <type></type>
+        <name>qei_speed_his_type</name>
+        <enumvalue id="group__qei__interface_1gga5edba7e8bd589c33cdf41e99b20fabbea99a897b3a3e67eeb4d2044f823c28a7b" prot="public">
+          <name>qei_speed_his0</name>
+          <initializer>= QEI_SPDHIS_SPDHIS0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Speed history0 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__qei__interface_1gga5edba7e8bd589c33cdf41e99b20fabbeab7f0063ad694eb5c900f234495a2de64" prot="public">
+          <name>qei_speed_his1</name>
+          <initializer>= QEI_SPDHIS_SPDHIS1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Speed history1 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__qei__interface_1gga5edba7e8bd589c33cdf41e99b20fabbeab64b7dacad38599b48f6b979e7eba897" prot="public">
+          <name>qei_speed_his2</name>
+          <initializer>= QEI_SPDHIS_SPDHIS2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Speed history2 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__qei__interface_1gga5edba7e8bd589c33cdf41e99b20fabbea0118819d951a07273d7f6b3c09534494" prot="public">
+          <name>qei_speed_his3</name>
+          <initializer>= QEI_SPDHIS_SPDHIS3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Speed history3 </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>speed history type </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="69" column="1" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="69" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__qei__interface_1gaecf52717e59a823c2fc2363993ccc492" prot="public" static="no">
+        <type>enum <ref refid="group__qei__interface_1ga2b1b910151805bd952afdc9e2e633c04" kindref="member">qei_z_count_inc_mode</ref></type>
+        <definition>typedef enum qei_z_count_inc_mode qei_z_count_inc_mode_t</definition>
+        <argsstring></argsstring>
+        <name>qei_z_count_inc_mode_t</name>
+        <briefdescription>
+<para>counting mode of Z-phase counter </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="32" column="24"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__qei__interface_1gace7eae19b742874c13dc1b3429eae051" prot="public" static="no">
+        <type>enum <ref refid="group__qei__interface_1ga40144348a421147be80166c8752066c4" kindref="member">qei_rotation_dir_cmp</ref></type>
+        <definition>typedef enum qei_rotation_dir_cmp qei_rotation_dir_cmp_t</definition>
+        <argsstring></argsstring>
+        <name>qei_rotation_dir_cmp_t</name>
+        <briefdescription>
+<para>motor rotation direction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="42" column="24"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__qei__interface_1ga177b1091ea917ad3015cfb7e63199719" prot="public" static="no">
+        <type>enum <ref refid="group__qei__interface_1gaf64b6e8c16d4e5424d369aee2721b387" kindref="member">qei_counter_type</ref></type>
+        <definition>typedef enum qei_counter_type qei_counter_type_t</definition>
+        <argsstring></argsstring>
+        <name>qei_counter_type_t</name>
+        <briefdescription>
+<para>counter type </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="53" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__qei__interface_1ga447c4981d11416f35d3ea9e18b1184a2" prot="public" static="no">
+        <type>enum <ref refid="group__qei__interface_1ga66a886e0ffd0408633b230d2a0fea26e" kindref="member">qei_work_mode</ref></type>
+        <definition>typedef enum qei_work_mode qei_work_mode_t</definition>
+        <argsstring></argsstring>
+        <name>qei_work_mode_t</name>
+        <briefdescription>
+<para>qei work mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="63" column="17"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__qei__interface_1ga7dd66a9c2aa923277c1999e872b1823a" prot="public" static="no">
+        <type>enum <ref refid="group__qei__interface_1ga5edba7e8bd589c33cdf41e99b20fabbe" kindref="member">qei_speed_his_type</ref></type>
+        <definition>typedef enum qei_speed_his_type qei_speed_his_type_t</definition>
+        <argsstring></argsstring>
+        <name>qei_speed_his_type_t</name>
+        <briefdescription>
+<para>speed history type </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="74" column="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__qei__interface_1ga844be9f48844e37e30d73145a13e56c5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_wdog_enable</definition>
+        <argsstring>(QEI_Type *qei_x)</argsstring>
+        <name>qei_wdog_enable</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <briefdescription>
+<para>enable qei watchdog </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="85" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga02ff68b682a4808e4acad975c4c95bd0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_wdog_disable</definition>
+        <argsstring>(QEI_Type *qei_x)</argsstring>
+        <name>qei_wdog_disable</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <briefdescription>
+<para>disable qei watchdog </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="95" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga05b18f694c8da36d5e52b89c1466886e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_wdog_config</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t timeout, bool enable)</argsstring>
+        <name>qei_wdog_config</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>config watchdog </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>watchdog timeout time </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>1 - enable watchdog, You can use the <ref refid="group__qei__interface_1ga02ff68b682a4808e4acad975c4c95bd0" kindref="member">qei_wdog_disable</ref> open watchdog </para>
+</listitem>
+<listitem><para>0 - disable watchdog, You can use the <ref refid="group__qei__interface_1ga844be9f48844e37e30d73145a13e56c5" kindref="member">qei_wdog_enable</ref> open watchdog </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="109" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1gaebb3d3bf1f565b757c0fdbfc0d6c2f5b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_phase_config</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t phase_count, qei_z_count_inc_mode_t mode, bool z_calibrate)</argsstring>
+        <name>qei_phase_config</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>phase_count</declname>
+        </param>
+        <param>
+          <type><ref refid="group__qei__interface_1gaecf52717e59a823c2fc2363993ccc492" kindref="member">qei_z_count_inc_mode_t</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>z_calibrate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">phase_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum phcnt number, phcnt will rollover to 0 when it upcount to phmax </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>1 zcnt will increment when phcnt upcount to phmax, decrement when phcnt downcount to 0 </para>
+</listitem>
+<listitem><para>0 zcnt will increment or decrement when Z input assert </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">z_calibrate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1- phcnt will set to phidx when Z input assert </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="124" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="124" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1gadb7eba2502155c8b866a6c535dc98f21" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_phase_set_index</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t phase_index)</argsstring>
+        <name>qei_phase_set_index</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>phase_index</declname>
+        </param>
+        <briefdescription>
+<para>set phase index </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">phase_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phcnt reset value, phcnt will reset to phidx when phcaliz set to 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="137" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga02b1ef407cba8af730f5f34a83ff4194" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_output_trigger_event_enable</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t event_mask)</argsstring>
+        <name>qei_output_trigger_event_enable</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>event_mask</declname>
+        </param>
+        <briefdescription>
+<para>enable trigger event </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">event_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para><ref refid="group__qei__interface_1gadc5dd63376b2e4382ca2d1276764bb07" kindref="member">QEI_EVENT_WDOG_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gac0c6e2791824d93b0c0b17999c0f34f3" kindref="member">QEI_EVENT_HOME_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1ga9d8dd23997e4e61983c9bbe4149da34c" kindref="member">QEI_EVENT_POSITIVE_COMPARE_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gae7b0a583472a21c2d4082c2955e2eb3b" kindref="member">QEI_EVENT_Z_PHASE_FLAG_MASK</ref> </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="152" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga094379a51be2b892f53aee1d4f5284a2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_output_trigger_event_disable</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t event_mask)</argsstring>
+        <name>qei_output_trigger_event_disable</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>event_mask</declname>
+        </param>
+        <briefdescription>
+<para>disable trigger event </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">event_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para><ref refid="group__qei__interface_1gadc5dd63376b2e4382ca2d1276764bb07" kindref="member">QEI_EVENT_WDOG_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gac0c6e2791824d93b0c0b17999c0f34f3" kindref="member">QEI_EVENT_HOME_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1ga9d8dd23997e4e61983c9bbe4149da34c" kindref="member">QEI_EVENT_POSITIVE_COMPARE_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gae7b0a583472a21c2d4082c2955e2eb3b" kindref="member">QEI_EVENT_Z_PHASE_FLAG_MASK</ref> </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="167" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="167" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga46d2383b4260d2d8480d29dc0df3bbfb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_load_read_trigger_event_enable</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t event_mask)</argsstring>
+        <name>qei_load_read_trigger_event_enable</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>event_mask</declname>
+        </param>
+        <briefdescription>
+<para>enable load read trigger event </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">event_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para><ref refid="group__qei__interface_1gadc5dd63376b2e4382ca2d1276764bb07" kindref="member">QEI_EVENT_WDOG_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gac0c6e2791824d93b0c0b17999c0f34f3" kindref="member">QEI_EVENT_HOME_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1ga9d8dd23997e4e61983c9bbe4149da34c" kindref="member">QEI_EVENT_POSITIVE_COMPARE_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gae7b0a583472a21c2d4082c2955e2eb3b" kindref="member">QEI_EVENT_Z_PHASE_FLAG_MASK</ref> </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="182" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="182" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1gafdc71eaacedd75c39ce64287fef47104" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_load_read_trigger_event_disable</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t event_mask)</argsstring>
+        <name>qei_load_read_trigger_event_disable</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>event_mask</declname>
+        </param>
+        <briefdescription>
+<para>disable load read trigger event </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">event_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para><ref refid="group__qei__interface_1gadc5dd63376b2e4382ca2d1276764bb07" kindref="member">QEI_EVENT_WDOG_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gac0c6e2791824d93b0c0b17999c0f34f3" kindref="member">QEI_EVENT_HOME_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1ga9d8dd23997e4e61983c9bbe4149da34c" kindref="member">QEI_EVENT_POSITIVE_COMPARE_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gae7b0a583472a21c2d4082c2955e2eb3b" kindref="member">QEI_EVENT_Z_PHASE_FLAG_MASK</ref> </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="197" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="197" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga3a34fdf2cf9d9ad6d655143db34bdb60" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_z_cmp_set</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t cmp)</argsstring>
+        <name>qei_z_cmp_set</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>cmp</declname>
+        </param>
+        <briefdescription>
+<para>set zcnt postion compare value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcnt postion compare value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="208" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="208" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga35d0f810a49dead7aa937a5b28fa89fe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_speed_cmp_set</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t cmp)</argsstring>
+        <name>qei_speed_cmp_set</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>cmp</declname>
+        </param>
+        <briefdescription>
+<para>set spdcnt position compare value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>spdcnt position compare value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="219" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="219" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga18d02667d188cd9e41935ca1799805e8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_phase_cmp_set</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t cmp, bool cmp_z, qei_rotation_dir_cmp_t rotation_dir)</argsstring>
+        <name>qei_phase_cmp_set</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>cmp</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>cmp_z</declname>
+        </param>
+        <param>
+          <type><ref refid="group__qei__interface_1gace7eae19b742874c13dc1b3429eae051" kindref="member">qei_rotation_dir_cmp_t</ref></type>
+          <declname>rotation_dir</declname>
+        </param>
+        <briefdescription>
+<para>set Phase comparator value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phcnt position compare value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp_z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1- postion compare not include zcnt </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rotation_dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__qei__interface_1gace7eae19b742874c13dc1b3429eae051" kindref="member">qei_rotation_dir_cmp_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="232" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="232" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga4926b796dfd0591f45f8407f332bcfc7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_clear_status</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t mask)</argsstring>
+        <name>qei_clear_status</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>clear qei status register </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para><ref refid="group__qei__interface_1gadc5dd63376b2e4382ca2d1276764bb07" kindref="member">QEI_EVENT_WDOG_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gac0c6e2791824d93b0c0b17999c0f34f3" kindref="member">QEI_EVENT_HOME_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1ga9d8dd23997e4e61983c9bbe4149da34c" kindref="member">QEI_EVENT_POSITIVE_COMPARE_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gae7b0a583472a21c2d4082c2955e2eb3b" kindref="member">QEI_EVENT_Z_PHASE_FLAG_MASK</ref> </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="251" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="251" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga354f90090d69d0c37b5a268dbf7b17a3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t qei_get_status</definition>
+        <argsstring>(QEI_Type *qei_x)</argsstring>
+        <name>qei_get_status</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <briefdescription>
+<para>get qei status </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>qei</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status: <itemizedlist>
+<listitem><para><ref refid="group__qei__interface_1gadc5dd63376b2e4382ca2d1276764bb07" kindref="member">QEI_EVENT_WDOG_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gac0c6e2791824d93b0c0b17999c0f34f3" kindref="member">QEI_EVENT_HOME_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1ga9d8dd23997e4e61983c9bbe4149da34c" kindref="member">QEI_EVENT_POSITIVE_COMPARE_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gae7b0a583472a21c2d4082c2955e2eb3b" kindref="member">QEI_EVENT_Z_PHASE_FLAG_MASK</ref> </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="266" column="24" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="266" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga694d227d02fa179672b00628c914c80c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool qei_get_bit_status</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t mask)</argsstring>
+        <name>qei_get_bit_status</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>get qei bit status </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para><ref refid="group__qei__interface_1gadc5dd63376b2e4382ca2d1276764bb07" kindref="member">QEI_EVENT_WDOG_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gac0c6e2791824d93b0c0b17999c0f34f3" kindref="member">QEI_EVENT_HOME_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1ga9d8dd23997e4e61983c9bbe4149da34c" kindref="member">QEI_EVENT_POSITIVE_COMPARE_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gae7b0a583472a21c2d4082c2955e2eb3b" kindref="member">QEI_EVENT_Z_PHASE_FLAG_MASK</ref> </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>or false </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="282" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="282" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga27655c661ed59510fa69df467e55fe7e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_irq_enable</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t mask)</argsstring>
+        <name>qei_irq_enable</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>enable qei irq </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para><ref refid="group__qei__interface_1gadc5dd63376b2e4382ca2d1276764bb07" kindref="member">QEI_EVENT_WDOG_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gac0c6e2791824d93b0c0b17999c0f34f3" kindref="member">QEI_EVENT_HOME_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1ga9d8dd23997e4e61983c9bbe4149da34c" kindref="member">QEI_EVENT_POSITIVE_COMPARE_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gae7b0a583472a21c2d4082c2955e2eb3b" kindref="member">QEI_EVENT_Z_PHASE_FLAG_MASK</ref> </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="301" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="301" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1gaf8ad31727e4c91a8cf14e30192c8fee7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_irq_disable</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t mask)</argsstring>
+        <name>qei_irq_disable</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>disable qei irq </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para><ref refid="group__qei__interface_1gadc5dd63376b2e4382ca2d1276764bb07" kindref="member">QEI_EVENT_WDOG_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gac0c6e2791824d93b0c0b17999c0f34f3" kindref="member">QEI_EVENT_HOME_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1ga9d8dd23997e4e61983c9bbe4149da34c" kindref="member">QEI_EVENT_POSITIVE_COMPARE_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gae7b0a583472a21c2d4082c2955e2eb3b" kindref="member">QEI_EVENT_Z_PHASE_FLAG_MASK</ref> </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="316" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="316" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga9edbe02e99d9995dbe758552ba010c72" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_dma_request_enable</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t mask)</argsstring>
+        <name>qei_dma_request_enable</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>enable dma request </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para><ref refid="group__qei__interface_1gadc5dd63376b2e4382ca2d1276764bb07" kindref="member">QEI_EVENT_WDOG_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gac0c6e2791824d93b0c0b17999c0f34f3" kindref="member">QEI_EVENT_HOME_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1ga9d8dd23997e4e61983c9bbe4149da34c" kindref="member">QEI_EVENT_POSITIVE_COMPARE_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gae7b0a583472a21c2d4082c2955e2eb3b" kindref="member">QEI_EVENT_Z_PHASE_FLAG_MASK</ref> </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="331" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="331" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga5216d1ce943063aa5ad4a50dae4a9718" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_dma_request_disable</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t mask)</argsstring>
+        <name>qei_dma_request_disable</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>disable qei dma </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para><ref refid="group__qei__interface_1gadc5dd63376b2e4382ca2d1276764bb07" kindref="member">QEI_EVENT_WDOG_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gac0c6e2791824d93b0c0b17999c0f34f3" kindref="member">QEI_EVENT_HOME_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1ga9d8dd23997e4e61983c9bbe4149da34c" kindref="member">QEI_EVENT_POSITIVE_COMPARE_FLAG_MASK</ref> </para>
+</listitem>
+<listitem><para><ref refid="group__qei__interface_1gae7b0a583472a21c2d4082c2955e2eb3b" kindref="member">QEI_EVENT_Z_PHASE_FLAG_MASK</ref> </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="346" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="346" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga57f51805d1ec9ede64fd0fb299eeace8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t qei_get_current_count</definition>
+        <argsstring>(QEI_Type *qei_x, qei_counter_type_t type)</argsstring>
+        <name>qei_get_current_count</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type><ref refid="group__qei__interface_1ga177b1091ea917ad3015cfb7e63199719" kindref="member">qei_counter_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>get current counter value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__qei__interface_1ga177b1091ea917ad3015cfb7e63199719" kindref="member">qei_counter_type_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>counter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="358" column="24" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="358" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga28cf76d74856fb2a414a56eebd5b26c4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t qei_get_current_phase_phcnt</definition>
+        <argsstring>(QEI_Type *qei_x)</argsstring>
+        <name>qei_get_current_phase_phcnt</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <briefdescription>
+<para>get current phcnt value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>phcnt value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="370" column="24" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="370" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga63c245bed280af260265d509df6a6784" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool qei_get_current_phase_astat</definition>
+        <argsstring>(QEI_Type *qei_x)</argsstring>
+        <name>qei_get_current_phase_astat</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <briefdescription>
+<para>get current a phase status </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a phase level </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="381" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="381" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga75db8e56127d22939170eb24d1de5fbd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool qei_get_current_phase_bstat</definition>
+        <argsstring>(QEI_Type *qei_x)</argsstring>
+        <name>qei_get_current_phase_bstat</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <briefdescription>
+<para>get current b phase status </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>b phase level </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="392" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="392" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga669ea20513073d844605466796f53ee1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool qei_get_current_phase_dir</definition>
+        <argsstring>(QEI_Type *qei_x)</argsstring>
+        <name>qei_get_current_phase_dir</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <briefdescription>
+<para>get current phase dir </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>dir </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="403" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="403" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga0d66464eb8f02d97d2eb03165c72a816" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t qei_get_count_on_read_event</definition>
+        <argsstring>(QEI_Type *qei_x, qei_counter_type_t type)</argsstring>
+        <name>qei_get_count_on_read_event</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type><ref refid="group__qei__interface_1ga177b1091ea917ad3015cfb7e63199719" kindref="member">qei_counter_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>get read event count value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__qei__interface_1ga177b1091ea917ad3015cfb7e63199719" kindref="member">qei_counter_type_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>counter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="415" column="24" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="415" bodyend="419"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga18a582833e5641dd2b65182962f441dc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t qei_get_count_on_snap0_event</definition>
+        <argsstring>(QEI_Type *qei_x, qei_counter_type_t type)</argsstring>
+        <name>qei_get_count_on_snap0_event</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type><ref refid="group__qei__interface_1ga177b1091ea917ad3015cfb7e63199719" kindref="member">qei_counter_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>read the value of each phase snapshot 0 counter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__qei__interface_1ga177b1091ea917ad3015cfb7e63199719" kindref="member">qei_counter_type_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>counter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="428" column="24" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="428" bodyend="432"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga3a6a45411e2b247281882fb740f8f0a5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t qei_get_count_on_snap1_event</definition>
+        <argsstring>(QEI_Type *qei_x, qei_counter_type_t type)</argsstring>
+        <name>qei_get_count_on_snap1_event</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type><ref refid="group__qei__interface_1ga177b1091ea917ad3015cfb7e63199719" kindref="member">qei_counter_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>read the value of each phase snapshot 1 counter </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__qei__interface_1ga177b1091ea917ad3015cfb7e63199719" kindref="member">qei_counter_type_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>counter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="441" column="24" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="441" bodyend="445"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga6a1dbf66d4c0b178d81859d0ab8d4b79" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t qei_get_speed_history</definition>
+        <argsstring>(QEI_Type *qei_x, qei_speed_his_type_t hist_index)</argsstring>
+        <name>qei_get_speed_history</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type><ref refid="group__qei__interface_1ga7dd66a9c2aa923277c1999e872b1823a" kindref="member">qei_speed_his_type_t</ref></type>
+          <declname>hist_index</declname>
+        </param>
+        <briefdescription>
+<para>get speed history </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hist_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__qei__interface_1ga7dd66a9c2aa923277c1999e872b1823a" kindref="member">qei_speed_his_type_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>history value <itemizedlist>
+<listitem><para>counter value </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="455" column="24" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="455" bodyend="458"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga1f4eddfcb66938b1347994a7b20054f7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_load_counter_to_read_registers</definition>
+        <argsstring>(QEI_Type *qei_x)</argsstring>
+        <name>qei_load_counter_to_read_registers</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <briefdescription>
+<para>load phcnt, zcnt, spdcnt and tmrcnt into their read registers </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="465" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="465" bodyend="468"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga21462b00b5dd4536d5ff469b627277a1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_reset_counter_on_h_assert</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t counter_mask)</argsstring>
+        <name>qei_reset_counter_on_h_assert</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>counter_mask</declname>
+        </param>
+        <briefdescription>
+<para>reset spdcnt/phcnt/zcnt </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">counter_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>1 reset zcnt when H assert </para>
+</listitem>
+<listitem><para>(1&lt;&lt;1) reset phcnt when H assert </para>
+</listitem>
+<listitem><para>(1&lt;&lt;2) reset spdcnt when H assert </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="479" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="479" bodyend="483"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga3a92f676a10caf32208f28fe268b59e4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_pause_counter_on_pause</definition>
+        <argsstring>(QEI_Type *qei_x, uint32_t counter_mask)</argsstring>
+        <name>qei_pause_counter_on_pause</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>counter_mask</declname>
+        </param>
+        <briefdescription>
+<para>pause spdcnt when PAUSE assert </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">counter_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>1 pause spdcnt when PAUSE assert </para>
+</listitem>
+<listitem><para>(1&lt;&lt;1) pause spdcnt when PAUSE assert </para>
+</listitem>
+<listitem><para>(1&lt;&lt;2) pause spdcnt when PAUSE assert </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="494" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="494" bodyend="498"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga60997ebb4e48cc07fc9512f1b597f169" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_snap_enable</definition>
+        <argsstring>(QEI_Type *qei_x)</argsstring>
+        <name>qei_snap_enable</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <briefdescription>
+<para>load phcnt, zcnt, spdcnt and tmrcnt into their snap registers </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="505" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="505" bodyend="508"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1gaca7fed4d6269fb94f452c3496c6a02df" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_snap_disable</definition>
+        <argsstring>(QEI_Type *qei_x)</argsstring>
+        <name>qei_snap_disable</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <briefdescription>
+<para>disable snap </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="515" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="515" bodyend="518"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga6b19150c8f87f4448e96c3d1af7be4dd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_counter_reset_assert</definition>
+        <argsstring>(QEI_Type *qei_x)</argsstring>
+        <name>qei_counter_reset_assert</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <briefdescription>
+<para>reset zcnt, spdcnt and tmrcnt to 0 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="525" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="525" bodyend="528"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga113b660ae2f7ad730535b61a728ec5c0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_counter_reset_release</definition>
+        <argsstring>(QEI_Type *qei_x)</argsstring>
+        <name>qei_counter_reset_release</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <briefdescription>
+<para>qei counter reset release </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="535" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="535" bodyend="538"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qei__interface_1ga809a528daf62c7705092b2a01fb3a8b2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qei_set_work_mode</definition>
+        <argsstring>(QEI_Type *qei_x, qei_work_mode_t mode)</argsstring>
+        <name>qei_set_work_mode</name>
+        <param>
+          <type><ref refid="structQEI__Type" kindref="compound">QEI_Type</ref> *</type>
+          <declname>qei_x</declname>
+        </param>
+        <param>
+          <type><ref refid="group__qei__interface_1ga447c4981d11416f35d3ea9e18b1184a2" kindref="member">qei_work_mode_t</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>set work mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qei_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEI base address, HPM_QEIx(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__qei__interface_1ga447c4981d11416f35d3ea9e18b1184a2" kindref="member">qei_work_mode_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="546" column="20" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="546" bodyend="549"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__qei__interface_1gadc5dd63376b2e4382ca2d1276764bb07" prot="public" static="no">
+        <name>QEI_EVENT_WDOG_FLAG_MASK</name>
+        <initializer>(1U &lt;&lt; 31)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>watchdog flag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="20" column="9" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__qei__interface_1gac0c6e2791824d93b0c0b17999c0f34f3" prot="public" static="no">
+        <name>QEI_EVENT_HOME_FLAG_MASK</name>
+        <initializer>(1U &lt;&lt; 30)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>home flag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="21" column="9" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__qei__interface_1ga9d8dd23997e4e61983c9bbe4149da34c" prot="public" static="no">
+        <name>QEI_EVENT_POSITIVE_COMPARE_FLAG_MASK</name>
+        <initializer>(1U &lt;&lt; 29)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>postion compare match flag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="22" column="9" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__qei__interface_1gae7b0a583472a21c2d4082c2955e2eb3b" prot="public" static="no">
+        <name>QEI_EVENT_Z_PHASE_FLAG_MASK</name>
+        <initializer>(1U &lt;&lt; 28)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>z input flag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qei_drv.h" line="23" column="9" bodyfile="drivers/inc/hpm_qei_drv.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>QEI driver APIs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

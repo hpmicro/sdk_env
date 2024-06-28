@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>14.7. lwip_ptp_v1_slave &mdash; HPMicro Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/tabs.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../../_static/tabs.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="14.8. lwip_ptp_v2_master" href="../../v2/master/README_en.html" />
+    <link rel="prev" title="14.6. lwip_ptp_v1_master" href="../master/README_en.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html">
+            
+              <img src="../../../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../get_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../boards/index_en.html">Evaluation Boards</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index_en.html">Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../audio_codec/index_en.html">1. Audio Codec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cherryrb/README_en.html">2. CherryRB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cherryusb/index_en.html">3. CherryUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../coremark/README_en.html">4. CoreMark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dhrystone/README_en.html">5. Dhrystone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dma_manager/README_en.html">6. DMA Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../dsp/README_en.html">7. DSP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../eeprom_emulation/index_en.html">8. EEPROM Emulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../freemaster/README_en.html">9. Freemaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../hello_world/README_en.html">10. Hello World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../hpm_math/index_en.html">11. HPM Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../image/index_en.html">12. IMAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lvgl/index_en.html">13. LVGL</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index_en.html">14. lwIP</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../doc/Ethernet_Common_Project_Settings_en.html">14.1. <strong>Ethernet Port Configurations</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lwip_http_server/README_en.html">14.2. lwip_http_server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lwip_https_server/README_en.html">14.3. lwip_https_server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lwip_iperf/README_en.html">14.4. lwip_iperf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lwip_iperf_multi_ports/README_en.html">14.5. lwip_iperf_multi_ports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../master/README_en.html">14.6. lwip_ptp_v1_master</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">14.7. lwip_ptp_v1_slave</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">14.7.1. Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#board-settings">14.7.2. Board Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project-configurations">14.7.3. Project Configurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-example">14.7.4. Run Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../v2/master/README_en.html">14.8. lwip_ptp_v2_master</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../v2/slave/README_en.html">14.9. lwip_ptp_v2_slave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lwip_tcpclient/README_en.html">14.10. lwip_tcpclient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lwip_tcpclient_freertos_socket/README_en.html">14.11. lwip_tcpclient_freertos_socket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lwip_tcpecho/README_en.html">14.12. lwip_tcpecho</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lwip_tcpecho_freertos/README_en.html">14.13. lwip_tcpecho_freertos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lwip_tcpecho_freertos_socket/README_en.html">14.14. lwip_tcpecho_freertos_socket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lwip_tcpecho_multi_ports/README_en.html">14.15. lwip_tcpecho_multi_ports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lwip_tcpecho_multi_ports_freertos/README_en.html">14.16. lwip_tcpecho_multi_ports_freertos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lwip_tcpecho_multi_ports_rtthread-nano/README_en.html">14.17. lwip_tcpecho_multi_ports_rtthread-nano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lwip_tcpecho_rtthread-nano/README_en.html">14.18. lwip_tcpecho_rtthread-nano</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../mbedtls/README_en.html">15. Mbedtls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../memstress/index_en.html">16. Memory Stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../microros/index_en.html">17. Microros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modbus/index_en.html">18. Modbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motor_ctrl/index_en.html">19. HPM Motor Ctrl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../multicore/index_en.html">20. Multicore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../power_mode_switch/README_en.html">21. Power Mode Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rgb_led/README_en.html">22. RGB LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rom_api/index_en.html">23. ROM API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rtos/index_en.html">24. RTOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../segger_rtt/README_en.html">25. Segger RTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tflm/index_en.html">26. TensorFlowLiteMicro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tinycrypt/index_en.html">27. Tinycrypt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tinyengine/person_obj/README_en.html">28. Person Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tinyuf2/README_en.html">29. TinyUF2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../tinyusb/index_en.html">30. TinyUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../touch_panel/README_en.html">31. Touch Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../vglite/index_en.html">32. VGLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../spi_components/index_en.html">33. SPI_COMPONENTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../i2s_emulation/README_en.html">34. I2S EMULATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../spi_sdcard/index_en.html">35. SPI_SDCARD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cherrysh/index_en.html">36. CherrySH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ethercat/index_en.html">37. EtherCAT</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../drivers/index_en.html">Drivers Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../api_doc.html">SDK API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">HPMicro Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index_en.html">Samples</a></li>
+          <li class="breadcrumb-item"><a href="../../../index_en.html"><span class="section-number">14. </span>lwIP</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">14.7. </span>lwip_ptp_v1_slave</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/samples/lwip/lwip_ptp/v1/slave/README_en.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="lwip-ptp-v1-slave">
+<h1><span class="section-number">14.7. </span>lwip_ptp_v1_slave<a class="headerlink" href="#lwip-ptp-v1-slave" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<h2><span class="section-number">14.7.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>This example shows a functionality of PTP V1 Slave</p>
+<ul class="simple">
+<li><p>Master communicates with slave via the PTP protocol.</p></li>
+</ul>
+</section>
+<section id="board-settings">
+<h2><span class="section-number">14.7.2. </span>Board Settings<a class="headerlink" href="#board-settings" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Connect a USB port on PC to the PWR DEBUG port on the development board with a USB Type-C cable</p></li>
+<li><p>Connect an Ethernet RGMII port or RMII port on a development board with an Ethernet RGMII port or RMII port on another development board</p></li>
+</ul>
+</section>
+<section id="project-configurations">
+<h2><span class="section-number">14.7.3. </span>Project Configurations<a class="headerlink" href="#project-configurations" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Ethernet Port Settings: Refer to <a class="reference internal" href="../../../doc/Ethernet_Common_Project_Settings_en.html"><span class="doc std std-doc">Ethernet common project settings</span></a></p></li>
+<li><p>Ethernet DHCP Configurations</p>
+<ul>
+<li><p>the configurations in the <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> as follows:</p>
+<ul>
+<li><p>sdk_compile_definitions(-DLWIP_DHCP=0): Disable DHCP feature</p></li>
+<li><p>sdk_compile_definitions(-DLWIP_DHCP=1): Enable DHCP feature</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="run-example">
+<h2><span class="section-number">14.7.4. </span>Run Example<a class="headerlink" href="#run-example" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p>Compiling and Downloading</p></li>
+<li><p>Running log is shown in the serial terminal as follows:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">This is an ethernet demo: PTP V1 Slave</span>
+<span class="go">LwIP Version: 2.1.2</span>
+<span class="go">Enet phy init passed !</span>
+<span class="go">Link Status: Down</span>
+<span class="go">Link Status: Up</span>
+<span class="go">Link Speed:  1000Mbps</span>
+<span class="go">Link Duplex: Full duplex</span>
+<span class="go">IPv4 Address: 192.168.100.11</span>
+<span class="go">IPv4 Netmask: 255.255.255.0</span>
+<span class="go">IPv4 Gateway: 192.168.100.1</span>
+<span class="gp gp-VirtualEnv">(D 1651074123.993902300)</span> <span class="go">event POWER UP</span>
+<span class="gp gp-VirtualEnv">(D 1651074123.997489380)</span> <span class="go">initClock</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.000649820)</span> <span class="go">state PTP_INITIALIZING</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.004933940)</span> <span class="go">manufacturerIdentity: PTPd;1.0.1</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.010095340)</span> <span class="go">netShutdown</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.013421580)</span> <span class="go">netInit</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.016526860)</span> <span class="go">initData</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.019606220)</span> <span class="go">initTimer</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.022750940)</span> <span class="go">initClock</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.025905620)</span> <span class="go">sync message interval: 1000</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.030634220)</span> <span class="go">clock identifier: DFLT</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.034926540)</span> <span class="go">256*log2(clock variance): -4000</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.039995820)</span> <span class="go">clock stratum: 255</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.043927540)</span> <span class="go">clock preferred?: no</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.048035100)</span> <span class="go">bound interface name:</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.052314300)</span> <span class="go">communication technology: 1</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.057029420)</span> <span class="go">uuid: dc:00:00:00:20:71</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.061406540)</span> <span class="go">PTP subdomain name: _DFLT</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.065947540)</span> <span class="go">subdomain address: 224.0.1.129</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.070926140)</span> <span class="go">event port address: 3f 1</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.075381620)</span> <span class="go">general port address: 40 1</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.080016180)</span> <span class="go">initClock</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.083159380)</span> <span class="go">state PTP_LISTENING</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.087180620)</span> <span class="go">initClock</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.090327300)</span> <span class="go">state PTP_SLAVE</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.868703220)</span> <span class="go">addForeign: new record (0,1) 1 1 cc:00:00:00:80:85</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.875498660)</span> <span class="go">event MASTER_CLOCK_CHANGED</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.880117380)</span> <span class="go">state PTP_UNCALIBRATED</span>
+<span class="gp gp-VirtualEnv">(D 1651074124.884387660)</span> <span class="go">toState: Q = 0, R = 4</span>
+<span class="gp gp-VirtualEnv">(D 1651074125.868021740)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074125.871449820)</span> <span class="go">updateClock seconds</span>
+<span class="gp gp-VirtualEnv">(D 1651074131.029693340)</span> <span class="go">setTime: resetting system clock to 1651074131s 29693040ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074131.037027340)</span> <span class="go">initClock</span>
+<span class="gp gp-VirtualEnv">(D 1651074131.040176420)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074131.046027100)</span> <span class="go">offset from master:      -5s -154233620ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074131.051963740)</span> <span class="go">observed drift:          0</span>
+<span class="gp gp-VirtualEnv">(D 1651074132.022183220)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074132.025622140)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074132.031472420)</span> <span class="go">offset from master:      0s     -60440ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074132.037320540)</span> <span class="go">observed drift:          -4029</span>
+<span class="gp gp-VirtualEnv">(D 1651074133.022158920)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074133.025579460)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074133.031428620)</span> <span class="go">offset from master:      0s     -72640ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074133.037276680)</span> <span class="go">observed drift:          -8871</span>
+<span class="gp gp-VirtualEnv">(D 1651074134.022127220)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074134.026617500)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074134.030030460)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074134.035879680)</span> <span class="go">offset from master:      0s     -85410ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074134.041727880)</span> <span class="go">observed drift:          -14565</span>
+<span class="gp gp-VirtualEnv">(D 1651074135.022131000)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074135.025550520)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074135.031399780)</span> <span class="go">offset from master:      0s     -92475ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074135.037248140)</span> <span class="go">observed drift:          -20730</span>
+<span class="gp gp-VirtualEnv">(D 1651074136.022127940)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074136.026608280)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074136.030020940)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074136.035869880)</span> <span class="go">offset from master:      0s     -91798ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074136.041718460)</span> <span class="go">observed drift:          -26849</span>
+<span class="gp gp-VirtualEnv">(D 1651074137.022146280)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074137.025568320)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074137.031419120)</span> <span class="go">offset from master:      0s     -84349ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074137.037267600)</span> <span class="go">observed drift:          -32472</span>
+<span class="gp gp-VirtualEnv">(D 1651074138.022159560)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074138.026636640)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074138.030048900)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074138.035898340)</span> <span class="go">offset from master:      0s     -72564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074138.041746680)</span> <span class="go">observed drift:          -37309</span>
+<span class="gp gp-VirtualEnv">(D 1651074139.022181280)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074139.025603400)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074139.031456340)</span> <span class="go">offset from master:      0s     -59132ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074139.037307280)</span> <span class="go">observed drift:          -41251</span>
+<span class="gp gp-VirtualEnv">(D 1651074140.022187100)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074140.026660900)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074140.030068620)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074140.035916420)</span> <span class="go">offset from master:      0s     -46256ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074140.041764320)</span> <span class="go">observed drift:          -44334</span>
+<span class="gp gp-VirtualEnv">(D 1651074141.022201800)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074141.025622100)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074141.031473800)</span> <span class="go">offset from master:      0s     -35328ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074141.037322460)</span> <span class="go">observed drift:          -46689</span>
+<span class="gp gp-VirtualEnv">(D 1651074142.022198640)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074142.026674560)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074142.030085740)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074142.035935060)</span> <span class="go">offset from master:      0s     -26934ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074142.041783300)</span> <span class="go">observed drift:          -48484</span>
+<span class="gp gp-VirtualEnv">(D 1651074143.022206560)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074143.025624700)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074143.031477720)</span> <span class="go">offset from master:      0s     -21007ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074143.037333400)</span> <span class="go">observed drift:          -49884</span>
+<span class="gp gp-VirtualEnv">(D 1651074144.022204680)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074144.026683660)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074144.030092240)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074144.035940260)</span> <span class="go">offset from master:      0s     -17094ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074144.041788440)</span> <span class="go">observed drift:          -51023</span>
+<span class="gp gp-VirtualEnv">(D 1651074145.022213260)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074145.025630820)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074145.031485320)</span> <span class="go">offset from master:      0s     -14597ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074145.037341040)</span> <span class="go">observed drift:          -51996</span>
+<span class="gp gp-VirtualEnv">(D 1651074146.022207660)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074146.026685580)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074146.030100740)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074146.035953800)</span> <span class="go">offset from master:      0s     -12958ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074146.041802760)</span> <span class="go">observed drift:          -52859</span>
+<span class="gp gp-VirtualEnv">(D 1651074147.022217600)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074147.025629640)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074147.031482720)</span> <span class="go">offset from master:      0s     -11709ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074147.037338380)</span> <span class="go">observed drift:          -53639</span>
+<span class="gp gp-VirtualEnv">(D 1651074148.022209300)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074148.026685520)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074148.030095640)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074148.035945000)</span> <span class="go">offset from master:      0s     -10585ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074148.041795300)</span> <span class="go">observed drift:          -54344</span>
+<span class="gp gp-VirtualEnv">(D 1651074149.022222380)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074149.025633460)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074149.031484560)</span> <span class="go">offset from master:      0s      -9452ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074149.037334600)</span> <span class="go">observed drift:          -54974</span>
+<span class="gp gp-VirtualEnv">(D 1651074149.042400340)</span> <span class="go">event MASTER_CLOCK_SELECTED</span>
+<span class="gp gp-VirtualEnv">(D 1651074149.047105780)</span> <span class="go">state PTP_SLAVE</span>
+<span class="gp gp-VirtualEnv">(D 1651074150.022349200)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074150.026861380)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074150.030277440)</span> <span class="go">one-way delay:           0s          0ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074150.036131700)</span> <span class="go">offset from master:      0s      -8286ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074150.041987460)</span> <span class="go">observed drift:          -55526</span>
+<span class="gp gp-VirtualEnv">(D 1651074150.047118240)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074151.022244660)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074151.025669380)</span> <span class="go">one-way delay:           0s        560ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074151.031528020)</span> <span class="go">offset from master:      0s      -7383ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074151.037383640)</span> <span class="go">observed drift:          -56018</span>
+<span class="gp gp-VirtualEnv">(D 1651074152.022294860)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074152.026798240)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074152.030222160)</span> <span class="go">one-way delay:           0s        560ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074152.036076160)</span> <span class="go">offset from master:      0s      -6312ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074152.041924460)</span> <span class="go">observed drift:          -56438</span>
+<span class="gp gp-VirtualEnv">(D 1651074152.047037160)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074153.022235120)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074153.025661720)</span> <span class="go">one-way delay:           0s        565ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074153.031526120)</span> <span class="go">offset from master:      0s      -5218ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074153.037376700)</span> <span class="go">observed drift:          -56785</span>
+<span class="gp gp-VirtualEnv">(D 1651074154.022285480)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074154.026782980)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074154.030198080)</span> <span class="go">one-way delay:           0s        565ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074154.036049540)</span> <span class="go">offset from master:      0s      -4212ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074154.041900560)</span> <span class="go">observed drift:          -57065</span>
+<span class="gp gp-VirtualEnv">(D 1651074154.047022820)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074155.022246780)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074155.025667980)</span> <span class="go">one-way delay:           0s        567ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074155.031523320)</span> <span class="go">offset from master:      0s      -3369ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074155.037380940)</span> <span class="go">observed drift:          -57289</span>
+<span class="gp gp-VirtualEnv">(D 1651074156.022295180)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074156.026792780)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074156.030208820)</span> <span class="go">one-way delay:           0s        567ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074156.036062760)</span> <span class="go">offset from master:      0s      -2698ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074156.041913540)</span> <span class="go">observed drift:          -57468</span>
+<span class="gp gp-VirtualEnv">(D 1651074156.047027400)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074157.022244880)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074157.025664760)</span> <span class="go">one-way delay:           0s        568ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074157.031518220)</span> <span class="go">offset from master:      0s      -2183ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074157.037369980)</span> <span class="go">observed drift:          -57613</span>
+<span class="gp gp-VirtualEnv">(D 1651074158.022295760)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074158.026793260)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074158.030206820)</span> <span class="go">one-way delay:           0s        568ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074158.036059800)</span> <span class="go">offset from master:      0s      -1816ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074158.041908220)</span> <span class="go">observed drift:          -57734</span>
+<span class="gp gp-VirtualEnv">(D 1651074158.047010360)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074159.022246480)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074159.025662440)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074159.031516900)</span> <span class="go">offset from master:      0s      -1539ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074159.037367040)</span> <span class="go">observed drift:          -57836</span>
+<span class="gp gp-VirtualEnv">(D 1651074160.022280360)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074160.026776180)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074160.030191540)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074160.036043200)</span> <span class="go">offset from master:      0s      -1331ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074160.041891340)</span> <span class="go">observed drift:          -57924</span>
+<span class="gp gp-VirtualEnv">(D 1651074160.046988680)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074161.022237580)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074161.025659820)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074161.031508880)</span> <span class="go">offset from master:      0s      -1167ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074161.037357060)</span> <span class="go">observed drift:          -58001</span>
+<span class="gp gp-VirtualEnv">(D 1651074162.022277680)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074162.026779440)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074162.030200880)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074162.036057500)</span> <span class="go">offset from master:      0s      -1025ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074162.041905720)</span> <span class="go">observed drift:          -58069</span>
+<span class="gp gp-VirtualEnv">(D 1651074162.047007260)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074163.022242580)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074163.025651380)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074163.031503100)</span> <span class="go">offset from master:      0s       -895ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074163.037351040)</span> <span class="go">observed drift:          -58128</span>
+<span class="gp gp-VirtualEnv">(D 1651074164.022282960)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074164.026780900)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074164.030198860)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074164.036052260)</span> <span class="go">offset from master:      0s       -769ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074164.041900520)</span> <span class="go">observed drift:          -58179</span>
+<span class="gp gp-VirtualEnv">(D 1651074164.047005020)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074165.022235160)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074165.025646800)</span> <span class="go">one-way delay:           0s        565ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074165.031497740)</span> <span class="go">offset from master:      0s       -657ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074165.037345900)</span> <span class="go">observed drift:          -58222</span>
+<span class="gp gp-VirtualEnv">(D 1651074166.022270960)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074166.026802220)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074166.030221020)</span> <span class="go">one-way delay:           0s        565ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074166.036077800)</span> <span class="go">offset from master:      0s       -551ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074166.041926100)</span> <span class="go">observed drift:          -58258</span>
+<span class="gp gp-VirtualEnv">(D 1651074166.047003240)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074167.022234160)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074167.025647120)</span> <span class="go">one-way delay:           0s        566ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074167.031497680)</span> <span class="go">offset from master:      0s       -459ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074167.037345980)</span> <span class="go">observed drift:          -58288</span>
+<span class="gp gp-VirtualEnv">(D 1651074168.022290800)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074168.026784560)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074168.030199120)</span> <span class="go">one-way delay:           0s        566ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074168.036051740)</span> <span class="go">offset from master:      0s       -372ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074168.041901680)</span> <span class="go">observed drift:          -58312</span>
+<span class="gp gp-VirtualEnv">(D 1651074168.046999940)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074169.022239620)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074169.025654900)</span> <span class="go">one-way delay:           0s        566ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074169.031505680)</span> <span class="go">offset from master:      0s       -309ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074169.037353700)</span> <span class="go">observed drift:          -58332</span>
+<span class="gp gp-VirtualEnv">(D 1651074170.022282480)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074170.026775380)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074170.030190700)</span> <span class="go">one-way delay:           0s        566ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074170.036044240)</span> <span class="go">offset from master:      0s       -258ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074170.041892460)</span> <span class="go">observed drift:          -58349</span>
+<span class="gp gp-VirtualEnv">(D 1651074170.046989600)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074171.022240140)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074171.025655340)</span> <span class="go">one-way delay:           0s        567ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074171.031508000)</span> <span class="go">offset from master:      0s       -222ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074171.037358320)</span> <span class="go">observed drift:          -58363</span>
+<span class="gp gp-VirtualEnv">(D 1651074172.022279060)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074172.026776640)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074172.030201240)</span> <span class="go">one-way delay:           0s        567ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074172.036058380)</span> <span class="go">offset from master:      0s       -185ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074172.041909100)</span> <span class="go">observed drift:          -58375</span>
+<span class="gp gp-VirtualEnv">(D 1651074172.047019720)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074173.022239760)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074173.025654960)</span> <span class="go">one-way delay:           0s        566ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074173.031505680)</span> <span class="go">offset from master:      0s       -145ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074173.037354100)</span> <span class="go">observed drift:          -58384</span>
+<span class="gp gp-VirtualEnv">(D 1651074174.022284220)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074174.026784160)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074174.030205480)</span> <span class="go">one-way delay:           0s        566ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074174.036057360)</span> <span class="go">offset from master:      0s       -126ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074174.041905420)</span> <span class="go">observed drift:          -58392</span>
+<span class="gp gp-VirtualEnv">(D 1651074174.047008800)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074175.022231160)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074175.025646360)</span> <span class="go">one-way delay:           0s        565ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074175.031497740)</span> <span class="go">offset from master:      0s        -95ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074175.037345840)</span> <span class="go">observed drift:          -58398</span>
+<span class="gp gp-VirtualEnv">(D 1651074176.022266600)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074176.026763580)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074176.030178580)</span> <span class="go">one-way delay:           0s        565ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074176.036032100)</span> <span class="go">offset from master:      0s        -80ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074176.041880280)</span> <span class="go">observed drift:          -58403</span>
+<span class="gp gp-VirtualEnv">(D 1651074176.046985820)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074177.022241760)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074177.025661280)</span> <span class="go">one-way delay:           0s        566ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074177.031512060)</span> <span class="go">offset from master:      0s        -63ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074177.037360100)</span> <span class="go">observed drift:          -58407</span>
+<span class="gp gp-VirtualEnv">(D 1651074178.022274280)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074178.026769540)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074178.030184420)</span> <span class="go">one-way delay:           0s        566ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074178.036032460)</span> <span class="go">offset from master:      0s        -45ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074178.041880240)</span> <span class="go">observed drift:          -58410</span>
+<span class="gp gp-VirtualEnv">(D 1651074178.046976280)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074179.022229760)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074179.025651120)</span> <span class="go">one-way delay:           0s        565ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074179.031512020)</span> <span class="go">offset from master:      0s        -35ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074179.037367040)</span> <span class="go">observed drift:          -58412</span>
+<span class="gp gp-VirtualEnv">(D 1651074180.022265620)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074180.026772640)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074180.030192840)</span> <span class="go">one-way delay:           0s        565ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074180.036042560)</span> <span class="go">offset from master:      0s        -20ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074180.041890700)</span> <span class="go">observed drift:          -58413</span>
+<span class="gp gp-VirtualEnv">(D 1651074180.046984760)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074181.022233120)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074181.025649000)</span> <span class="go">one-way delay:           0s        565ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074181.031503780)</span> <span class="go">offset from master:      0s        -12ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074181.037351620)</span> <span class="go">observed drift:          -58413</span>
+<span class="gp gp-VirtualEnv">(D 1651074182.022272700)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074182.026771060)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074182.030187140)</span> <span class="go">one-way delay:           0s        565ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074182.036038120)</span> <span class="go">offset from master:      0s        -19ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074182.041886340)</span> <span class="go">observed drift:          -58414</span>
+<span class="gp gp-VirtualEnv">(D 1651074182.046995840)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074183.022237840)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074183.025656880)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074183.031513440)</span> <span class="go">offset from master:      0s        -11ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074183.037362820)</span> <span class="go">observed drift:          -58414</span>
+<span class="gp gp-VirtualEnv">(D 1651074184.022271060)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074184.026769580)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074184.030191700)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074184.036041040)</span> <span class="go">offset from master:      0s         -8ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074184.041891100)</span> <span class="go">observed drift:          -58414</span>
+<span class="gp gp-VirtualEnv">(D 1651074184.046989920)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074185.022235000)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074185.025659560)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074185.031507460)</span> <span class="go">offset from master:      0s          4ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074185.037355120)</span> <span class="go">observed drift:          -58414</span>
+<span class="gp gp-VirtualEnv">(D 1651074186.022271100)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074186.026764800)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074186.030182280)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074186.036034420)</span> <span class="go">offset from master:      0s         10ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074186.041882320)</span> <span class="go">observed drift:          -58414</span>
+<span class="gp gp-VirtualEnv">(D 1651074186.046983140)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074187.022232620)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074187.025655580)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074187.031505240)</span> <span class="go">offset from master:      0s         13ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074187.037353140)</span> <span class="go">observed drift:          -58414</span>
+<span class="gp gp-VirtualEnv">(D 1651074188.022262160)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074188.026775100)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074188.030200860)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074188.036052160)</span> <span class="go">offset from master:      0s         15ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074188.041900180)</span> <span class="go">observed drift:          -58413</span>
+<span class="gp gp-VirtualEnv">(D 1651074188.046981040)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074189.022237600)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074189.025657280)</span> <span class="go">one-way delay:           0s        565ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074189.031507980)</span> <span class="go">offset from master:      0s         15ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074189.037356080)</span> <span class="go">observed drift:          -58412</span>
+<span class="gp gp-VirtualEnv">(D 1651074190.022266640)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074190.026783840)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074190.030208440)</span> <span class="go">one-way delay:           0s        565ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074190.036058860)</span> <span class="go">offset from master:      0s         15ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074190.041906840)</span> <span class="go">observed drift:          -58411</span>
+<span class="gp gp-VirtualEnv">(D 1651074190.046988100)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074191.022243760)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074191.025664240)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074191.031513560)</span> <span class="go">offset from master:      0s         25ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074191.037361580)</span> <span class="go">observed drift:          -58410</span>
+<span class="gp gp-VirtualEnv">(D 1651074192.022267000)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074192.026788080)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074192.030214880)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074192.036067660)</span> <span class="go">offset from master:      0s         31ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074192.041916120)</span> <span class="go">observed drift:          -58408</span>
+<span class="gp gp-VirtualEnv">(D 1651074192.046993100)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074193.022242080)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074193.025659440)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074193.031511940)</span> <span class="go">offset from master:      0s         33ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074193.037359960)</span> <span class="go">observed drift:          -58406</span>
+<span class="gp gp-VirtualEnv">(D 1651074194.022273560)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074194.026770340)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074194.030187500)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074194.036040960)</span> <span class="go">offset from master:      0s         35ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074194.041889340)</span> <span class="go">observed drift:          -58404</span>
+<span class="gp gp-VirtualEnv">(D 1651074194.046990840)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074195.022238820)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074195.025663060)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074195.031512240)</span> <span class="go">offset from master:      0s         35ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074195.037360380)</span> <span class="go">observed drift:          -58402</span>
+<span class="gp gp-VirtualEnv">(D 1651074196.022269800)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074196.026787700)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074196.030206820)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074196.036061200)</span> <span class="go">offset from master:      0s         46ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074196.041909100)</span> <span class="go">observed drift:          -58399</span>
+<span class="gp gp-VirtualEnv">(D 1651074196.046985440)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074197.022238900)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074197.025653700)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074197.031504200)</span> <span class="go">offset from master:      0s         41ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074197.037352380)</span> <span class="go">observed drift:          -58397</span>
+<span class="gp gp-VirtualEnv">(D 1651074198.022269840)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074198.026767380)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074198.030185860)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074198.036039280)</span> <span class="go">offset from master:      0s         28ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074198.041887700)</span> <span class="go">observed drift:          -58396</span>
+<span class="gp gp-VirtualEnv">(D 1651074198.046983120)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074199.022242060)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074199.025656060)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074199.031505040)</span> <span class="go">offset from master:      0s         33ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074199.037353140)</span> <span class="go">observed drift:          -58394</span>
+<span class="gp gp-VirtualEnv">(D 1651074200.022269600)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074200.026792060)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074200.030217340)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074200.036074440)</span> <span class="go">offset from master:      0s         35ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074200.041931220)</span> <span class="go">observed drift:          -58392</span>
+<span class="gp gp-VirtualEnv">(D 1651074200.047010480)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074201.022237760)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074201.025656240)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074201.031511220)</span> <span class="go">offset from master:      0s         36ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074201.037367180)</span> <span class="go">observed drift:          -58390</span>
+<span class="gp gp-VirtualEnv">(D 1651074202.022276420)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074202.026770640)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074202.030187720)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074202.036036820)</span> <span class="go">offset from master:      0s         36ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074202.041884720)</span> <span class="go">observed drift:          -58388</span>
+<span class="gp gp-VirtualEnv">(D 1651074202.046981540)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074203.022239940)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074203.025653180)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074203.031504080)</span> <span class="go">offset from master:      0s         27ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074203.037353680)</span> <span class="go">observed drift:          -58387</span>
+<span class="gp gp-VirtualEnv">(D 1651074204.022274080)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074204.026769060)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074204.030191980)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074204.036042840)</span> <span class="go">offset from master:      0s         32ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074204.041893320)</span> <span class="go">observed drift:          -58385</span>
+<span class="gp gp-VirtualEnv">(D 1651074204.046992440)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074205.022238180)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074205.025649980)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074205.031499600)</span> <span class="go">offset from master:      0s         34ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074205.037348980)</span> <span class="go">observed drift:          -58383</span>
+<span class="gp gp-VirtualEnv">(D 1651074206.022273420)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074206.026776560)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074206.030201800)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074206.036054660)</span> <span class="go">offset from master:      0s         35ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074206.041905240)</span> <span class="go">observed drift:          -58381</span>
+<span class="gp gp-VirtualEnv">(D 1651074206.047009460)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074207.022241700)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074207.025657980)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074207.031517000)</span> <span class="go">offset from master:      0s         26ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074207.037371820)</span> <span class="go">observed drift:          -58380</span>
+<span class="gp gp-VirtualEnv">(D 1651074208.022269020)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074208.026778420)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074208.030195660)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074208.036053720)</span> <span class="go">offset from master:      0s         31ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074208.041908660)</span> <span class="go">observed drift:          -58378</span>
+<span class="gp gp-VirtualEnv">(D 1651074208.047015120)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074209.022237600)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074209.025652580)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074209.031505660)</span> <span class="go">offset from master:      0s         44ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074209.037355880)</span> <span class="go">observed drift:          -58376</span>
+<span class="gp gp-VirtualEnv">(D 1651074210.022269700)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074210.026770240)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074210.030191760)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074210.036045440)</span> <span class="go">offset from master:      0s         41ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074210.041896540)</span> <span class="go">observed drift:          -58374</span>
+<span class="gp gp-VirtualEnv">(D 1651074210.046996140)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074211.022243140)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074211.025659540)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074211.031507960)</span> <span class="go">offset from master:      0s         38ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074211.037355900)</span> <span class="go">observed drift:          -58372</span>
+<span class="gp gp-VirtualEnv">(D 1651074212.022273620)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074212.026770720)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074212.030189840)</span> <span class="go">one-way delay:           0s        564ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074212.036048860)</span> <span class="go">offset from master:      0s         27ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074212.041896960)</span> <span class="go">observed drift:          -58371</span>
+<span class="gp gp-VirtualEnv">(D 1651074212.046990100)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074213.022234920)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074213.025652640)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074213.031503380)</span> <span class="go">offset from master:      0s         32ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074213.037351380)</span> <span class="go">observed drift:          -58369</span>
+<span class="gp gp-VirtualEnv">(D 1651074214.022271240)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074214.026775420)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074214.030191500)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074214.036048200)</span> <span class="go">offset from master:      0s         25ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074214.041896140)</span> <span class="go">observed drift:          -58368</span>
+<span class="gp gp-VirtualEnv">(D 1651074214.046998200)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074215.022241400)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074215.025658400)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074215.031511460)</span> <span class="go">offset from master:      0s         31ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074215.037359640)</span> <span class="go">observed drift:          -58366</span>
+<span class="gp gp-VirtualEnv">(D 1651074216.022272320)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074216.026775780)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074216.030195700)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074216.036057280)</span> <span class="go">offset from master:      0s         24ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074216.041906700)</span> <span class="go">observed drift:          -58365</span>
+<span class="gp gp-VirtualEnv">(D 1651074216.047004240)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074217.022244300)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074217.025659540)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074217.031509920)</span> <span class="go">offset from master:      0s         20ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074217.037357900)</span> <span class="go">observed drift:          -58364</span>
+<span class="gp gp-VirtualEnv">(D 1651074218.022276340)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074218.026772200)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074218.030185840)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074218.036036540)</span> <span class="go">offset from master:      0s         19ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074218.041884800)</span> <span class="go">observed drift:          -58363</span>
+<span class="gp gp-VirtualEnv">(D 1651074218.046983500)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074219.022232880)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074219.025646720)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074219.031496500)</span> <span class="go">offset from master:      0s         18ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074219.037344520)</span> <span class="go">observed drift:          -58362</span>
+<span class="gp gp-VirtualEnv">(D 1651074220.022270600)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074220.026764380)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074220.030179940)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074220.036035680)</span> <span class="go">offset from master:      0s         27ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074220.041884020)</span> <span class="go">observed drift:          -58361</span>
+<span class="gp gp-VirtualEnv">(D 1651074220.046985640)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074221.022241580)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074221.025657740)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074221.031509000)</span> <span class="go">offset from master:      0s         32ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074221.037356880)</span> <span class="go">observed drift:          -58359</span>
+<span class="gp gp-VirtualEnv">(D 1651074222.022273620)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074222.026767720)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074222.030189560)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074222.036040300)</span> <span class="go">offset from master:      0s         35ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074222.041888960)</span> <span class="go">observed drift:          -58357</span>
+<span class="gp gp-VirtualEnv">(D 1651074222.046991100)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074223.022240400)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074223.025655320)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074223.031504380)</span> <span class="go">offset from master:      0s         46ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074223.037352320)</span> <span class="go">observed drift:          -58354</span>
+<span class="gp gp-VirtualEnv">(D 1651074224.022270680)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074224.026760180)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074224.030173420)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074224.036029920)</span> <span class="go">offset from master:      0s         51ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074224.041878460)</span> <span class="go">observed drift:          -58351</span>
+<span class="gp gp-VirtualEnv">(D 1651074224.046981400)</span> <span class="go">updateDelay</span>
+<span class="gp gp-VirtualEnv">(D 1651074225.022231840)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074225.025650000)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074225.031504140)</span> <span class="go">offset from master:      0s         34ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074225.037352320)</span> <span class="go">observed drift:          -58349</span>
+<span class="gp gp-VirtualEnv">(D 1651074226.022281340)</span> <span class="go">handleSync: Q = 0, R = 2</span>
+<span class="gp gp-VirtualEnv">(D 1651074226.026770800)</span> <span class="go">updateOffset</span>
+<span class="gp gp-VirtualEnv">(D 1651074226.030184960)</span> <span class="go">one-way delay:           0s        563ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074226.036039340)</span> <span class="go">offset from master:      0s         26ns</span>
+<span class="gp gp-VirtualEnv">(D 1651074226.041887840)</span> <span class="go">observed drift:          -58348</span>
+<span class="gp gp-VirtualEnv">(D 1651074226.046989140)</span> <span class="go">updateDelay</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, HPMicro.
+      <span class="lastupdated">Last updated on Jun 28, 2024.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

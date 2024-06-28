@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hpm__smc_8h" kind="file" language="C++">
+    <compoundname>hpm_smc.h</compoundname>
+    <includedby refid="hpm__hfi_8h" local="yes">middleware/hpm_mcl/inc/hpm_hfi.h</includedby>
+    <includedby refid="hpm__foc_8c" local="yes">middleware/hpm_mcl/sensor_control/hpm_foc.c</includedby>
+    <includedby refid="hpm__smc_8c" local="yes">middleware/hpm_mcl/sensorless_control/hpm_smc.c</includedby>
+    <invincdepgraph>
+      <node id="5">
+        <label>middleware/hpm_mcl/sensorless_control/hpm_smc.c</label>
+        <link refid="hpm__smc_8c"/>
+      </node>
+      <node id="2">
+        <label>middleware/hpm_mcl/inc/hpm_hfi.h</label>
+        <link refid="hpm__hfi_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>middleware/hpm_mcl/sensor_control/hpm_foc.c</label>
+        <link refid="hpm__foc_8c"/>
+      </node>
+      <node id="3">
+        <label>middleware/hpm_mcl/sensorless_control/hpm_hfi.c</label>
+        <link refid="hpm__hfi_8c"/>
+      </node>
+      <node id="1">
+        <label>middleware/hpm_mcl/inc/hpm_smc.h</label>
+        <link refid="hpm__smc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structhpm__smc__pll__para" prot="public">hpm_smc_pll_para</innerclass>
+    <innerclass refid="structhpm__mcl__para" prot="public">hpm_mcl_para</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__mcl__smc__interface_1gabbafeca517f306e7523771066c4d420f" prot="public" static="no">
+        <name>BLDC_CONTROL_SMC_PLL_PARA_DEFAULTS</name>
+        <initializer>                                            {0, 0, 0, 0,\
+                                            0, 0, 0, 0,\
+                                            0, 0, 0, 0, 0,\
+                                         NULL}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_mcl/inc/hpm_smc.h" line="42" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_smc.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__mcl__smc__interface_1gae3e279ae779631c4600081557134960f" prot="public" static="no">
+        <name>BLDC_CONTROL_SMC_PARA_DEFAULTS</name>
+        <initializer>                                        {0, 0, 0, NULL, NULL,\
+                                        NULL, NULL, 0, 0, 0,\
+                                        0, 0, 0,\
+                                        NULL,\
+                                         NULL}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_mcl/inc/hpm_smc.h" line="69" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_smc.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__mcl__smc__interface_1gacd7ae677b656d38b74b95793e4e1f85e" prot="public" static="no">
+        <type>struct <ref refid="structhpm__smc__pll__para" kindref="compound">hpm_smc_pll_para</ref></type>
+        <definition>typedef struct hpm_smc_pll_para hpm_smc_pll_para_t</definition>
+        <argsstring></argsstring>
+        <name>hpm_smc_pll_para_t</name>
+        <briefdescription>
+<para>smc phase locked loop parameters </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_mcl/inc/hpm_smc.h" line="40" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mcl__smc__interface_1gaa88fd86e0831e2c0166d9dc0d064bdf2" prot="public" static="no">
+        <type>struct <ref refid="structhpm__mcl__para" kindref="compound">hpm_mcl_para</ref></type>
+        <definition>typedef struct hpm_mcl_para hpm_mcl_para_t</definition>
+        <argsstring></argsstring>
+        <name>hpm_mcl_para_t</name>
+        <briefdescription>
+<para>sliding mode control(SMC) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_mcl/inc/hpm_smc.h" line="67" column="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__mcl__smc__interface_1ga4dbef9b782fbc6296c48fdb7b3aafa41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_mcl_smc_pos_cal</definition>
+        <argsstring>(hpm_mcl_para_t *par)</argsstring>
+        <name>hpm_mcl_smc_pos_cal</name>
+        <param>
+          <type><ref refid="group__mcl__smc__interface_1gaa88fd86e0831e2c0166d9dc0d064bdf2" kindref="member">hpm_mcl_para_t</ref> *</type>
+          <declname>par</declname>
+        </param>
+        <briefdescription>
+<para>Sliding mode control function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">par</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__mcl__smc__interface_1gaa88fd86e0831e2c0166d9dc0d064bdf2" kindref="member">hpm_mcl_para_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>LOW-PASS</para>
+        </inbodydescription>
+        <location file="middleware/hpm_mcl/inc/hpm_smc.h" line="80" column="6" bodyfile="middleware/hpm_mcl/sensorless_control/hpm_smc.c" bodystart="25" bodyend="58" declfile="middleware/hpm_mcl/inc/hpm_smc.h" declline="80" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mcl__smc__interface_1gab70126e180e81624523e3f77e297873f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_mcl_smc_const_cal</definition>
+        <argsstring>(hpm_motor_para_t *par)</argsstring>
+        <name>hpm_mcl_smc_const_cal</name>
+        <param>
+          <type><ref refid="group__mcl__common_1gaa1c8c368d71f93f073e05ed0e8dbaefa" kindref="member">hpm_motor_para_t</ref> *</type>
+          <declname>par</declname>
+        </param>
+        <briefdescription>
+<para>Calculation of sliding mode control static parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">par</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__mcl__common_1gaa1c8c368d71f93f073e05ed0e8dbaefa" kindref="member">hpm_motor_para_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_mcl/inc/hpm_smc.h" line="87" column="6" bodyfile="middleware/hpm_mcl/sensorless_control/hpm_smc.c" bodystart="60" bodyend="64" declfile="middleware/hpm_mcl/inc/hpm_smc.h" declline="87" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mcl__smc__interface_1ga47401abe81901c615e79f81f44a5f453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float hpm_mcl_smc_pll</definition>
+        <argsstring>(hpm_mcl_para_t *par, hpm_smc_pll_para_t *pll)</argsstring>
+        <name>hpm_mcl_smc_pll</name>
+        <param>
+          <type><ref refid="group__mcl__smc__interface_1gaa88fd86e0831e2c0166d9dc0d064bdf2" kindref="member">hpm_mcl_para_t</ref> *</type>
+          <declname>par</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mcl__smc__interface_1gacd7ae677b656d38b74b95793e4e1f85e" kindref="member">hpm_smc_pll_para_t</ref> *</type>
+          <declname>pll</declname>
+        </param>
+        <briefdescription>
+<para>Phase-locked loop filtering of angles after smc processing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">par</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__mcl__smc__interface_1gaa88fd86e0831e2c0166d9dc0d064bdf2" kindref="member">hpm_mcl_para_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">pll</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__mcl__smc__interface_1gacd7ae677b656d38b74b95793e4e1f85e" kindref="member">hpm_smc_pll_para_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>PI</para>
+        </inbodydescription>
+        <location file="middleware/hpm_mcl/inc/hpm_smc.h" line="96" column="7" bodyfile="middleware/hpm_mcl/sensorless_control/hpm_smc.c" bodystart="66" bodyend="100" declfile="middleware/hpm_mcl/inc/hpm_smc.h" declline="96" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mcl__smc__interface_1gaa00a27f4fc88629d58f7204065d1ec30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_mcl_smc_loop</definition>
+        <argsstring>(BLDC_CONTROL_FOC_PARA *par, hpm_mcl_para_t *smc, hpm_smc_pll_para_t *pll, uint8_t *is_smc_enable)</argsstring>
+        <name>hpm_mcl_smc_loop</name>
+        <param>
+          <type><ref refid="group__mcl__common_1ga3a102bd1f38d2949774b4acca548fd30" kindref="member">BLDC_CONTROL_FOC_PARA</ref> *</type>
+          <declname>par</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mcl__smc__interface_1gaa88fd86e0831e2c0166d9dc0d064bdf2" kindref="member">hpm_mcl_para_t</ref> *</type>
+          <declname>smc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mcl__smc__interface_1gacd7ae677b656d38b74b95793e4e1f85e" kindref="member">hpm_smc_pll_para_t</ref> *</type>
+          <declname>pll</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>is_smc_enable</declname>
+        </param>
+        <briefdescription>
+<para>smc current loop </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">par</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__mcl__common_1ga3a102bd1f38d2949774b4acca548fd30" kindref="member">BLDC_CONTROL_FOC_PARA</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">smc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__mcl__smc__interface_1gaa88fd86e0831e2c0166d9dc0d064bdf2" kindref="member">hpm_mcl_para_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">pll</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__mcl__smc__interface_1gacd7ae677b656d38b74b95793e4e1f85e" kindref="member">hpm_smc_pll_para_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">is_smc_enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true: smc enable, false: smc disable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_mcl/inc/hpm_smc.h" line="106" column="6" bodyfile="middleware/hpm_mcl/sensorless_control/hpm_smc.c" bodystart="102" bodyend="132" declfile="middleware/hpm_mcl/inc/hpm_smc.h" declline="106" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2023<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPM_SMC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_SMC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__cplusplus<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="structhpm__smc__pll__para" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/><sp/></highlight><highlight class="normal"><ref refid="structhpm__smc__pll__para" kindref="compound">hpm_smc_pll_para</ref><sp/>{</highlight></codeline>
+<codeline lineno="26" refid="structhpm__smc__pll__para_1a6d284adb07d15a4dc926530819b8d085" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__smc__pll__para_1a6d284adb07d15a4dc926530819b8d085" kindref="member">theta_last</ref>;<sp/></highlight></codeline>
+<codeline lineno="27" refid="structhpm__smc__pll__para_1ad3b3fb7c1d46d278ccabbc7f6e7804a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__smc__pll__para_1ad3b3fb7c1d46d278ccabbc7f6e7804a6" kindref="member">err</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="structhpm__smc__pll__para_1a7585145f0f30a23c716d0f3843224206" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__smc__pll__para_1a7585145f0f30a23c716d0f3843224206" kindref="member">speedout</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="structhpm__smc__pll__para_1a7a69b5d66827775797b3797d5861a5c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__smc__pll__para_1a7a69b5d66827775797b3797d5861a5c3" kindref="member">theta</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="structhpm__smc__pll__para_1a4cd88e8d1cbba2be73472d5d2f15fbb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__smc__pll__para_1a4cd88e8d1cbba2be73472d5d2f15fbb5" kindref="member">kp</ref>;<sp/></highlight></codeline>
+<codeline lineno="31" refid="structhpm__smc__pll__para_1a86ffbb3facb36ff353ebadbee91024fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__smc__pll__para_1a86ffbb3facb36ff353ebadbee91024fd" kindref="member">ki</ref>;<sp/></highlight></codeline>
+<codeline lineno="32" refid="structhpm__smc__pll__para_1a69a2d0a76033ffd8a2b353ef496e9579" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__smc__pll__para_1a69a2d0a76033ffd8a2b353ef496e9579" kindref="member">max_i</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33" refid="structhpm__smc__pll__para_1ad95ddc67a6ee86cea0deab19e7e18181" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__smc__pll__para_1ad95ddc67a6ee86cea0deab19e7e18181" kindref="member">min_i</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="structhpm__smc__pll__para_1aed04018094a3c915ea4231b33cdfb441" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__smc__pll__para_1aed04018094a3c915ea4231b33cdfb441" kindref="member">max_o</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="structhpm__smc__pll__para_1a20758d9e6bc9774d26cdc84c8058267d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__smc__pll__para_1a20758d9e6bc9774d26cdc84c8058267d" kindref="member">min_o</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="structhpm__smc__pll__para_1ae1ff6068e9d131bf4ac4d5c4eb5cd9e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__smc__pll__para_1ae1ff6068e9d131bf4ac4d5c4eb5cd9e7" kindref="member">mem</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="structhpm__smc__pll__para_1a991d9e825df0f9240f2c5b2cb061623b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__smc__pll__para_1a991d9e825df0f9240f2c5b2cb061623b" kindref="member">theta0</ref>;<sp/></highlight></codeline>
+<codeline lineno="38" refid="structhpm__smc__pll__para_1ad812256f4c79d72134f3bc203c16a161" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__smc__pll__para_1ad812256f4c79d72134f3bc203c16a161" kindref="member">loop_in_sec</ref>;<sp/></highlight></codeline>
+<codeline lineno="39" refid="structhpm__smc__pll__para_1a4d2d63abec0de6aa9eb8e37f575865a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/><sp/><sp/><sp/>(*<ref refid="structhpm__smc__pll__para_1a4d2d63abec0de6aa9eb8e37f575865a1" kindref="member">func_getspd</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*str);</highlight></codeline>
+<codeline lineno="40" refid="group__mcl__smc__interface_1gacd7ae677b656d38b74b95793e4e1f85e" refkind="member"><highlight class="normal">}<sp/><ref refid="group__mcl__smc__interface_1gacd7ae677b656d38b74b95793e4e1f85e" kindref="member">hpm_smc_pll_para_t</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="group__mcl__smc__interface_1gabbafeca517f306e7523771066c4d420f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLDC_CONTROL_SMC_PLL_PARA_DEFAULTS<sp/>{0,<sp/>0,<sp/>0,<sp/>0,\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>0,<sp/>0,\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="structhpm__mcl__para" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpm__mcl__para" kindref="compound">hpm_mcl_para</ref><sp/>{</highlight></codeline>
+<codeline lineno="52" refid="structhpm__mcl__para_1ad29865a44a08ccaeba7832fb7f4e0670" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__mcl__para_1ad29865a44a08ccaeba7832fb7f4e0670" kindref="member">zero</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="structhpm__mcl__para_1adce127cbc431917b7731417a4eb89c42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__mcl__para_1adce127cbc431917b7731417a4eb89c42" kindref="member">ksmc</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="structhpm__mcl__para_1a3a6b0aed87737f515f8be3dbe7164707" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__mcl__para_1a3a6b0aed87737f515f8be3dbe7164707" kindref="member">filter_coeff</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="structhpm__mcl__para_1a2eef947696c8a1c860bc40cf49c6d006" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structhpm__mcl__para_1a2eef947696c8a1c860bc40cf49c6d006" kindref="member">ualpha</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="structhpm__mcl__para_1ac54e203e3c3b4b832902a5732441ccd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structhpm__mcl__para_1ac54e203e3c3b4b832902a5732441ccd0" kindref="member">ubeta</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="structhpm__mcl__para_1a6b5fa9484b57c5ae03bb248b16001912" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structhpm__mcl__para_1a6b5fa9484b57c5ae03bb248b16001912" kindref="member">ialpha</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="structhpm__mcl__para_1a687ac7302f1dad40a3bfd8d109284b4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structhpm__mcl__para_1a687ac7302f1dad40a3bfd8d109284b4b" kindref="member">ibeta</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="structhpm__mcl__para_1a78c1303396e4eadd36d132b3163f57b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__mcl__para_1a78c1303396e4eadd36d132b3163f57b8" kindref="member">ialpha_mem</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="structhpm__mcl__para_1aaa9accb0a47220251a8f32aa26c09380" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__mcl__para_1aaa9accb0a47220251a8f32aa26c09380" kindref="member">ibeta_mem</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="structhpm__mcl__para_1a7f2331fcbb5fcac5800ee82853642452" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__mcl__para_1a7f2331fcbb5fcac5800ee82853642452" kindref="member">alpha_cal</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="structhpm__mcl__para_1abed08497e6d6980340840ffe13fe351f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__mcl__para_1abed08497e6d6980340840ffe13fe351f" kindref="member">zalpha_cal</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63" refid="structhpm__mcl__para_1a35a4c014f3c2897e143fd2cb6dbbbb85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__mcl__para_1a35a4c014f3c2897e143fd2cb6dbbbb85" kindref="member">beta_cal</ref>;<sp/></highlight></codeline>
+<codeline lineno="64" refid="structhpm__mcl__para_1a8e2517fb3fa5de17d7f3882b3551fdc4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpm__mcl__para_1a8e2517fb3fa5de17d7f3882b3551fdc4" kindref="member">zbeta_cal</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="structhpm__mcl__para_1a7cf55c49a04fdf159069c58551ffebee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structhpm__motor__par" kindref="compound">hpm_motor_para_t</ref><sp/><sp/><sp/><sp/><sp/>*<ref refid="structhpm__mcl__para_1a7cf55c49a04fdf159069c58551ffebee" kindref="member">i_motorpar</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="structhpm__mcl__para_1a68307dbdf9d8b5d3a0d90fd871802a92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structhpm__mcl__para_1a68307dbdf9d8b5d3a0d90fd871802a92" kindref="member">func_smc</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*str);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="group__mcl__smc__interface_1gaa88fd86e0831e2c0166d9dc0d064bdf2" refkind="member"><highlight class="normal">}<sp/><ref refid="group__mcl__smc__interface_1gaa88fd86e0831e2c0166d9dc0d064bdf2" kindref="member">hpm_mcl_para_t</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="group__mcl__smc__interface_1gae3e279ae779631c4600081557134960f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLDC_CONTROL_SMC_PARA_DEFAULTS<sp/>{0,<sp/>0,<sp/>0,<sp/>NULL,<sp/>NULL,\</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,<sp/>NULL,<sp/>0,<sp/>0,<sp/>0,\</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>0,\</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__mcl__smc__interface_1ga4dbef9b782fbc6296c48fdb7b3aafa41" kindref="member">hpm_mcl_smc_pos_cal</ref>(<ref refid="structhpm__mcl__para" kindref="compound">hpm_mcl_para_t</ref><sp/>*par);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__mcl__smc__interface_1gab70126e180e81624523e3f77e297873f" kindref="member">hpm_mcl_smc_const_cal</ref>(<ref refid="structhpm__motor__par" kindref="compound">hpm_motor_para_t</ref><sp/>*par);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="group__mcl__smc__interface_1ga47401abe81901c615e79f81f44a5f453" kindref="member">hpm_mcl_smc_pll</ref>(<ref refid="structhpm__mcl__para" kindref="compound">hpm_mcl_para_t</ref><sp/>*par,<sp/><ref refid="structhpm__smc__pll__para" kindref="compound">hpm_smc_pll_para_t</ref><sp/>*pll);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__mcl__smc__interface_1gaa00a27f4fc88629d58f7204065d1ec30" kindref="member">hpm_mcl_smc_loop</ref>(<ref refid="structbldc__contrl__foc__par" kindref="compound">BLDC_CONTROL_FOC_PARA</ref><sp/>*par,<sp/><ref refid="structhpm__mcl__para" kindref="compound">hpm_mcl_para_t</ref><sp/>*smc,<sp/><ref refid="structhpm__smc__pll__para" kindref="compound">hpm_smc_pll_para_t</ref><sp/>*pll,<sp/>uint8_t<sp/>*is_smc_enable);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__cplusplus<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="middleware/hpm_mcl/inc/hpm_smc.h"/>
+  </compounddef>
+</doxygen>

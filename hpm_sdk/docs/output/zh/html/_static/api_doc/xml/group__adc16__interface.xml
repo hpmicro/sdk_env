@@ -1,0 +1,1800 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__adc16__interface" kind="group">
+    <compoundname>adc16_interface</compoundname>
+    <title>ADC16 driver APIs</title>
+    <innerclass refid="structadc16__config__t" prot="public">adc16_config_t</innerclass>
+    <innerclass refid="structadc16__channel__config__t" prot="public">adc16_channel_config_t</innerclass>
+    <innerclass refid="structadc16__channel__threshold__t" prot="public">adc16_channel_threshold_t</innerclass>
+    <innerclass refid="structadc16__dma__config__t" prot="public">adc16_dma_config_t</innerclass>
+    <innerclass refid="structadc16__seq__dma__data__t" prot="public">adc16_seq_dma_data_t</innerclass>
+    <innerclass refid="structadc16__pmt__dma__data__t" prot="public">adc16_pmt_dma_data_t</innerclass>
+    <innerclass refid="structadc16__prd__config__t" prot="public">adc16_prd_config_t</innerclass>
+    <innerclass refid="structadc16__seq__queue__config__t" prot="public">adc16_seq_queue_config_t</innerclass>
+    <innerclass refid="structadc16__seq__config__t" prot="public">adc16_seq_config_t</innerclass>
+    <innerclass refid="structadc16__pmt__config__t" prot="public">adc16_pmt_config_t</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Initialization and Deinitialization</header>
+      <memberdef kind="function" id="group__adc16__interface_1ga528d2bc629d60cf2a651302d7b0b89de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void adc16_get_default_config</definition>
+        <argsstring>(adc16_config_t *config)</argsstring>
+        <name>adc16_get_default_config</name>
+        <param>
+          <type><ref refid="structadc16__config__t" kindref="compound">adc16_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Get a default configuration for an ADC16 instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the configuration struct of <ref refid="structadc16__config__t" kindref="compound">adc16_config_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="239" column="6" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="11" bodyend="20" declfile="drivers/inc/hpm_adc16_drv.h" declline="239" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1ga7092dae99754cdaf414a1927bc660764" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void adc16_get_channel_default_config</definition>
+        <argsstring>(adc16_channel_config_t *config)</argsstring>
+        <name>adc16_get_channel_default_config</name>
+        <param>
+          <type><ref refid="structadc16__channel__config__t" kindref="compound">adc16_channel_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Get a default configuration for an ADC16 Channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the configuration struct of <ref refid="structadc16__channel__config__t" kindref="compound">adc16_channel_config_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="246" column="6" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="22" bodyend="30" declfile="drivers/inc/hpm_adc16_drv.h" declline="246" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1gabfcf94c8763a15417942cafe4bcdc9d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t adc16_deinit</definition>
+        <argsstring>(ADC16_Type *ptr)</argsstring>
+        <name>adc16_deinit</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>De-initialize an ADC16 instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A result of de-initializing an ADC16 instance. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>De-initialize an ADC16 instance successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>De-initialize an ADC16 instance unsuccessfully due to passing one or more invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="256" column="12" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="146" bodyend="152" declfile="drivers/inc/hpm_adc16_drv.h" declline="256" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1ga29ae18f3a045b012e3a712bd57211aa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t adc16_init</definition>
+        <argsstring>(ADC16_Type *ptr, adc16_config_t *config)</argsstring>
+        <name>adc16_init</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structadc16__config__t" kindref="compound">adc16_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Initialize an ADC16 instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the configuration struct of <ref refid="structadc16__config__t" kindref="compound">adc16_config_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A result of initializing an ADC16 instance. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialize an ADC16 instance successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialize an ADC16 instance unsuccessfully due to passing one or more invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="267" column="12" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="154" bodyend="201" declfile="drivers/inc/hpm_adc16_drv.h" declline="267" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1gad71c54ee3dff867577fa50905466ab30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t adc16_init_channel</definition>
+        <argsstring>(ADC16_Type *ptr, adc16_channel_config_t *config)</argsstring>
+        <name>adc16_init_channel</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structadc16__channel__config__t" kindref="compound">adc16_channel_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Initialize an ADC16 channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the configuration struct of <ref refid="structadc16__channel__config__t" kindref="compound">adc16_channel_config_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A result of initializing an ADC16 channel. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialize an ADC16 channel successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialize an ADC16 channel unsuccessfully due to passing one or more invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="278" column="12" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="203" bodyend="230" declfile="drivers/inc/hpm_adc16_drv.h" declline="278" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1gaac1af29523e4a8cdcd8b5d4d06905230" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t adc16_get_channel_threshold</definition>
+        <argsstring>(ADC16_Type *ptr, uint8_t ch, adc16_channel_threshold_t *config)</argsstring>
+        <name>adc16_get_channel_threshold</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch</declname>
+        </param>
+        <param>
+          <type><ref refid="structadc16__channel__threshold__t" kindref="compound">adc16_channel_threshold_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Get thresholds of an ADC16 channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 channel number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the structure of channel threshold </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A result of getting thresholds of an ADC16 channel . </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialize an ADC16 channel successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialize an ADC16 channel unsuccessfully due to passing one or more invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="290" column="12" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="232" bodyend="244" declfile="drivers/inc/hpm_adc16_drv.h" declline="290" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1gad9104b000a0efa16b6b65e31d2b017ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t adc16_set_prd_config</definition>
+        <argsstring>(ADC16_Type *ptr, adc16_prd_config_t *config)</argsstring>
+        <name>adc16_set_prd_config</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structadc16__prd__config__t" kindref="compound">adc16_prd_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Configure the the period mode for an ADC16 instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the configuration struct of <ref refid="structadc16__prd__config__t" kindref="compound">adc16_prd_config_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A result of configuring the the period mode for an ADC16 instance. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configure the the period mode successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configure the the period mode unsuccessfully due to passing one or more invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="317" column="12" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="302" bodyend="323" declfile="drivers/inc/hpm_adc16_drv.h" declline="317" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1ga74997d3d122564904c4894470e23c220" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t adc16_set_seq_config</definition>
+        <argsstring>(ADC16_Type *ptr, adc16_seq_config_t *config)</argsstring>
+        <name>adc16_set_seq_config</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structadc16__seq__config__t" kindref="compound">adc16_seq_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Configure the sequence mode for an ADC16 instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to configuration struct of <ref refid="structadc16__seq__config__t" kindref="compound">adc16_seq_config_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A result of configuring the sequence mode for an ADC16 instance. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configure the sequence mode successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configure the sequence mode unsuccessfully due to passing one or more invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="328" column="12" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="336" bodyend="361" declfile="drivers/inc/hpm_adc16_drv.h" declline="328" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1gae8373223c527f7bb85a71321c020b038" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t adc16_set_pmt_config</definition>
+        <argsstring>(ADC16_Type *ptr, adc16_pmt_config_t *config)</argsstring>
+        <name>adc16_set_pmt_config</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structadc16__pmt__config__t" kindref="compound">adc16_pmt_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Configure the preemption mode for an ADC16 instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to configuration struct of <ref refid="structadc16__pmt__config__t" kindref="compound">adc16_pmt_config_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A result of configuring the preemption mode for an ADC16 instance. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configure the preemption mode successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configure the preemption mode unsuccessfully due to passing one or more invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="339" column="12" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="370" bodyend="398" declfile="drivers/inc/hpm_adc16_drv.h" declline="339" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1ga46bf5e0678374a216b2ddd3f259f2aef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t adc16_set_pmt_queue_enable</definition>
+        <argsstring>(ADC16_Type *ptr, uint8_t trig_ch, bool enable)</argsstring>
+        <name>adc16_set_pmt_queue_enable</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>trig_ch</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Set the queue enable control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">trig_ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral trigger channel. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set true to enable and false to disable. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A result of setting queue enable in preemption. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Get the result of an ADC16 conversion in oneshot mode successfully. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Get the result of an ADC16 conversion in oneshot mode unsuccessfully due to passing invalid arguments. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="351" column="12" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="400" bodyend="417" declfile="drivers/inc/hpm_adc16_drv.h" declline="351" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Enablement Control</header>
+      <memberdef kind="function" id="group__adc16__interface_1ga497d99708be375f9283c13a9689bc986" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void adc16_seq_enable_hw_trigger</definition>
+        <argsstring>(ADC16_Type *ptr)</argsstring>
+        <name>adc16_seq_enable_hw_trigger</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Enable the hw trigger control for the sequence mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="365" column="20" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="365" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1gab4be0c9386629b1070d07ac9d2ed735c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void adc16_seq_disable_hw_trigger</definition>
+        <argsstring>(ADC16_Type *ptr)</argsstring>
+        <name>adc16_seq_disable_hw_trigger</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Disable the hw trigger control for the sequence mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="375" column="20" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="375" bodyend="378"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>DMA Control</header>
+      <memberdef kind="function" id="group__adc16__interface_1gaa499b8c9719aa2561b5d1a5880b233e3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void adc16_set_seq_stop_pos</definition>
+        <argsstring>(ADC16_Type *ptr, uint16_t stop_pos)</argsstring>
+        <name>adc16_set_seq_stop_pos</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>stop_pos</declname>
+        </param>
+        <briefdescription>
+<para>Configure the stop position offset in the specified memory of DMA write operation for the sequence mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">stop_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A stop position offset. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="392" column="20" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="392" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1ga7d2a0bb0b5d434f5f4fc4d915e2f6b06" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void adc16_init_pmt_dma</definition>
+        <argsstring>(ADC16_Type *ptr, uint32_t addr)</argsstring>
+        <name>adc16_init_pmt_dma</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+<para>Configure the start address of DMA write operation for the preemption mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A start address of DMA write operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="404" column="20" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="404" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1gafbf9182408fe2273020418d57bfce958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t adc16_init_seq_dma</definition>
+        <argsstring>(ADC16_Type *ptr, adc16_dma_config_t *config)</argsstring>
+        <name>adc16_init_seq_dma</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structadc16__dma__config__t" kindref="compound">adc16_dma_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Configure the start address of DMA write operation for the sequence mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to configuration struct of <ref refid="structadc16__dma__config__t" kindref="compound">adc16_dma_config_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An implementation result of DMA initializing for the sequence mode </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC16 initialize in sequence mode successfully. Please refert to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC16 initialize in sequence mode unsuccessfully due to passing invalid arguments. Please refert to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="418" column="12" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="258" bodyend="300" declfile="drivers/inc/hpm_adc16_drv.h" declline="418" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Status</header>
+      <memberdef kind="function" id="group__adc16__interface_1ga31730cfce13c2229b018fd2899c8f9dd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t adc16_get_status_flags</definition>
+        <argsstring>(ADC16_Type *ptr)</argsstring>
+        <name>adc16_get_status_flags</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get all ADC16 status flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A mask indicating all corresponding interrupt statuses. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>A</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mask. Please refer to <ref refid="group__adc16__interface_1gab49c1866b4d36c96b3794bdf0a4d3d6f" kindref="member">adc16_irq_event_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="434" column="24" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="434" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1gafbd981847633030661865c4fc9584917" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void adc16_disable_busywait</definition>
+        <argsstring>(ADC16_Type *ptr)</argsstring>
+        <name>adc16_disable_busywait</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Set value of the WAIT_DIS bit. The ADC does not block access to the associated peripheral bus until the ADC has completed its conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000003"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This API will be removed from V2.0.x </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="446" column="20" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="446" bodyend="449"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1ga18d4ee267592949450cbbd126df93164" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void adc16_enable_busywait</definition>
+        <argsstring>(ADC16_Type *ptr)</argsstring>
+        <name>adc16_enable_busywait</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Set value of the WAIT_DIS bit. ADC blocks access to the associated peripheral bus until the ADC completes the conversion. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000004"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This API will be removed from V2.0.x </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="458" column="20" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="458" bodyend="461"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1gad93c314e82245223bccc1392d83aff45" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void adc16_set_nonblocking_read</definition>
+        <argsstring>(ADC16_Type *ptr)</argsstring>
+        <name>adc16_set_nonblocking_read</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Set nonblocking read in oneshot mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>An ADC does not block access to the associated peripheral whether it completes a conversion or not.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="469" column="20" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="469" bodyend="472"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1ga383b51e9570ab22c85a04f45b75960d8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void adc16_set_blocking_read</definition>
+        <argsstring>(ADC16_Type *ptr)</argsstring>
+        <name>adc16_set_blocking_read</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Set blocking read in oneshot mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>An ADC blocks access to the associated peripheral bus until it completes a conversion.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="480" column="20" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="480" bodyend="483"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1ga2805fa5d8122edc1cf529d2ec2f60dcb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool adc16_is_nonblocking_mode</definition>
+        <argsstring>(ADC16_Type *ptr)</argsstring>
+        <name>adc16_is_nonblocking_mode</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Judge whether the current setting is none-blocking mode or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A result indicating the status of bus waiting. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>True</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>means that nonblocking reading. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>False</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>means that blocking reading. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="494" column="20" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="494" bodyend="497"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1ga40ec2d8e61c96342b5c249134dbb9c0a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool adc16_get_conv_valid_status</definition>
+        <argsstring>(ADC16_Type *ptr, uint8_t ch)</argsstring>
+        <name>adc16_get_conv_valid_status</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para>Get the status of a conversion validity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral channel. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Status indicating the validity of the current conversion result.</para>
+</simplesect>
+<simplesect kind="note"><para>This function is only used when the WAIT_DIS bit in the BUF_RESULT register is 1. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="508" column="20" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="508" bodyend="511"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1gae51a3a9480885246f0879a2e4b4343fe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void adc16_clear_status_flags</definition>
+        <argsstring>(ADC16_Type *ptr, uint32_t mask)</argsstring>
+        <name>adc16_clear_status_flags</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Clear the status flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A mask that means the specified flags to be cleared. Please refer to <ref refid="group__adc16__interface_1gab49c1866b4d36c96b3794bdf0a4d3d6f" kindref="member">adc16_irq_event_t</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Only the specified flags can be cleared by writing the INT_STS register. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="522" column="20" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="522" bodyend="525"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Interrupts</header>
+      <memberdef kind="function" id="group__adc16__interface_1ga4e3921519adb696b6204f468935cfa02" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void adc16_enable_interrupts</definition>
+        <argsstring>(ADC16_Type *ptr, uint32_t mask)</argsstring>
+        <name>adc16_enable_interrupts</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Enable interrupts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A mask indicating the specified ADC interrupt events. Please refer to <ref refid="group__adc16__interface_1gab49c1866b4d36c96b3794bdf0a4d3d6f" kindref="member">adc16_irq_event_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="540" column="20" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="540" bodyend="543"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1gaaa08e54b2599803a03f9f762599e4aa1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void adc16_disable_interrupts</definition>
+        <argsstring>(ADC16_Type *ptr, uint32_t mask)</argsstring>
+        <name>adc16_disable_interrupts</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Disable interrupts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A mask indicating the specified interrupt events. Please refer to <ref refid="group__adc16__interface_1gab49c1866b4d36c96b3794bdf0a4d3d6f" kindref="member">adc16_irq_event_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="551" column="20" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="551" bodyend="554"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Trigger and Conversion</header>
+      <memberdef kind="function" id="group__adc16__interface_1ga1ba1954e47c0f7dd4f2ad63586f1e0f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t adc16_trigger_seq_by_sw</definition>
+        <argsstring>(ADC16_Type *ptr)</argsstring>
+        <name>adc16_trigger_seq_by_sw</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Trigger ADC conversions by software in sequence mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An implementation result of getting an ADC16 software trigger. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC16 software triggers successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_fail</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC16 software triggers unsuccessfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="571" column="12" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="325" bodyend="333" declfile="drivers/inc/hpm_adc16_drv.h" declline="571" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1gac39e00710c81bb574e913473f1e5001a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t adc16_trigger_pmt_by_sw</definition>
+        <argsstring>(ADC16_Type *ptr, uint8_t trig_ch)</argsstring>
+        <name>adc16_trigger_pmt_by_sw</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>trig_ch</declname>
+        </param>
+        <briefdescription>
+<para>Trigger ADC conversions by software in preemption mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">trig_ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A trigger channel number(e.g. TRIG0A,TRIG0B,TRIG0C...). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An implementation result of getting an ADC16 software trigger. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC16 software triggers successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_fail</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC16 software triggers unsuccessfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="582" column="12" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="363" bodyend="368" declfile="drivers/inc/hpm_adc16_drv.h" declline="582" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1ga162458b8a08cb0775f388c97158c0433" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t adc16_get_oneshot_result</definition>
+        <argsstring>(ADC16_Type *ptr, uint8_t ch, uint16_t *result)</argsstring>
+        <name>adc16_get_oneshot_result</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Get the result in oneshot mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral channel. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to an ADC16 conversion result. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An implementation result of getting an ADC16 conversion result in oneshot mode. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Get the result of an ADC16 conversion in oneshot mode successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Get the result of an ADC16 conversion in oneshot mode unsuccessfully due to passing invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="594" column="12" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="420" bodyend="439" declfile="drivers/inc/hpm_adc16_drv.h" declline="594" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__adc16__interface_1ga6d266efb82fae629b6c31dde656495ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t adc16_get_prd_result</definition>
+        <argsstring>(ADC16_Type *ptr, uint8_t ch, uint16_t *result)</argsstring>
+        <name>adc16_get_prd_result</name>
+        <param>
+          <type><ref refid="structADC16__Type" kindref="compound">ADC16_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Get the result in the period mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral base address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ADC16 peripheral channel. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a specified ADC16 conversion result </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An implementation of getting an ADC16 conversion result in the period mode. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status_success</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Get the result of an ADC16 conversion in the period mode successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status_invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Get the result of an ADC16 conversion in the period mode unsuccessfully due to passing invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="606" column="12" bodyfile="drivers/src/hpm_adc16_drv.c" bodystart="442" bodyend="452" declfile="drivers/inc/hpm_adc16_drv.h" declline="606" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__adc16__interface_1ga3c486d74a85124e7f8a82c39d1be9b7b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>adc16_resolution_t</name>
+        <enumvalue id="group__adc16__interface_1gga3c486d74a85124e7f8a82c39d1be9b7ba0903c58e53963d7542311155d646850f" prot="public">
+          <name>adc16_res_8_bits</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga3c486d74a85124e7f8a82c39d1be9b7bab6132ab35e4666834b0463c61462d2c1" prot="public">
+          <name>adc16_res_10_bits</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga3c486d74a85124e7f8a82c39d1be9b7ba2ceb6b89f74125c6c63cfd27adf32cf3" prot="public">
+          <name>adc16_res_12_bits</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga3c486d74a85124e7f8a82c39d1be9b7ba4d88666ffcaa4b0eaab5b6f5f30c400f" prot="public">
+          <name>adc16_res_16_bits</name>
+          <initializer>= 21</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Define ADC16 resolutions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="48" column="1" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="48" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__adc16__interface_1ga0fbba2f1f9b2fcc88c403d296cd9dd0d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>adc16_conversion_mode_t</name>
+        <enumvalue id="group__adc16__interface_1gga0fbba2f1f9b2fcc88c403d296cd9dd0dafefa67dcac64c5365c8a609abfd90d5b" prot="public">
+          <name>adc16_conv_mode_oneshot</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0fbba2f1f9b2fcc88c403d296cd9dd0da7d8a964145f72ac23840584edb148c41" prot="public">
+          <name>adc16_conv_mode_period</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0fbba2f1f9b2fcc88c403d296cd9dd0da865a066b082d496b0e6ec6039342710e" prot="public">
+          <name>adc16_conv_mode_sequence</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0fbba2f1f9b2fcc88c403d296cd9dd0da2155dabe849d0f70eee7c934d9437f20" prot="public">
+          <name>adc16_conv_mode_preemption</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Define ADC16 conversion modes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="56" column="1" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="56" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__adc16__interface_1ga0bc044fdde676f1d58dfb706a951d493" prot="public" static="no" strong="no">
+        <type></type>
+        <name>adc16_clock_divider_t</name>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493a57eba0c2980019cec949c86010a5154c" prot="public">
+          <name>adc16_clock_divider_1</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493af914d25ace7e8b3b827971f0f5d03805" prot="public">
+          <name>adc16_clock_divider_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493a4ea3f01ee768225e4516ff70ee041e16" prot="public">
+          <name>adc16_clock_divider_3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493a2e95b8747a7bec3c51f2642f02ac9f15" prot="public">
+          <name>adc16_clock_divider_4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493aafeeee706622060e5dd4044e50e03f0b" prot="public">
+          <name>adc16_clock_divider_5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493a97c515b5f3e7ad6e614bbb362027c722" prot="public">
+          <name>adc16_clock_divider_6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493a547644f0cb6517623804d5ebcf648331" prot="public">
+          <name>adc16_clock_divider_7</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493a92e730aab01a8d57f4e4fd3a74706a73" prot="public">
+          <name>adc16_clock_divider_8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493a16ebaef7fb1a7c3a48eca1b417519624" prot="public">
+          <name>adc16_clock_divider_9</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493a681aae325410dc97bc46cc6b3aac1027" prot="public">
+          <name>adc16_clock_divider_10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493abffa19dc37f80566a2d03f9615ae0051" prot="public">
+          <name>adc16_clock_divider_11</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493a775e2b4f2d9bdd2244603f68e84af94b" prot="public">
+          <name>adc16_clock_divider_12</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493a6d2a1b20c8247ac9f6d4739dfc062438" prot="public">
+          <name>adc16_clock_divider_13</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493af79b5f426879c15392e9202113e84435" prot="public">
+          <name>adc16_clock_divider_14</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493a74a7f749d1caf91dcc4073b6be320e27" prot="public">
+          <name>adc16_clock_divider_15</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1gga0bc044fdde676f1d58dfb706a951d493af9e2d9bce107b770de8b015e4ec78497" prot="public">
+          <name>adc16_clock_divider_16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Define ADC16 Clock Divider. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="64" column="1" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="64" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__adc16__interface_1gab49c1866b4d36c96b3794bdf0a4d3d6f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>adc16_irq_event_t</name>
+        <enumvalue id="group__adc16__interface_1ggab49c1866b4d36c96b3794bdf0a4d3d6faecf8cf3481896e63ec9d43558fd5bb17" prot="public">
+          <name>adc16_event_trig_complete</name>
+          <initializer>= ADC16_INT_STS_TRIG_CMPT_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>This mask indicates that a trigger conversion is complete. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1ggab49c1866b4d36c96b3794bdf0a4d3d6fab36bca6806477caeb189557721408bcc" prot="public">
+          <name>adc16_event_trig_sw_conflict</name>
+          <initializer>= ADC16_INT_STS_TRIG_SW_CFLCT_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>This mask indicates that a conflict caused by software-triggered conversions. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1ggab49c1866b4d36c96b3794bdf0a4d3d6fa4f1b6651ec6c96f13e2c767f658ddb3a" prot="public">
+          <name>adc16_event_trig_hw_conflict</name>
+          <initializer>= ADC16_INT_STS_TRIG_HW_CFLCT_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>This mask indicates that a conflict caused by hardware-triggered conversions. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1ggab49c1866b4d36c96b3794bdf0a4d3d6fa99ee994e26c8927f2f44eda3ce33c9da" prot="public">
+          <name>adc16_event_read_conflict</name>
+          <initializer>= ADC16_INT_STS_READ_CFLCT_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>This mask indicates that a conflict caused when bus reading from different channels. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1ggab49c1866b4d36c96b3794bdf0a4d3d6fa09b3d0054f288548638118f56ba3e0a3" prot="public">
+          <name>adc16_event_seq_sw_conflict</name>
+          <initializer>= ADC16_INT_STS_SEQ_SW_CFLCT_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>This mask indicates that a conflict caused by sequence-triggered conversions. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1ggab49c1866b4d36c96b3794bdf0a4d3d6fa9698f7f558fe0b5706a61461fb7eeb50" prot="public">
+          <name>adc16_event_seq_hw_conflict</name>
+          <initializer>= ADC16_INT_STS_SEQ_HW_CFLCT_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>This mask indicates that a conflict caused by hardware-triggered conversions. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1ggab49c1866b4d36c96b3794bdf0a4d3d6fa568d5f925af312282283cd3f35d40059" prot="public">
+          <name>adc16_event_seq_dma_abort</name>
+          <initializer>= ADC16_INT_STS_SEQ_DMAABT_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>This mask indicates that DMA is stopped currently. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1ggab49c1866b4d36c96b3794bdf0a4d3d6fa95d30ab316b8c809d12fa915318f8734" prot="public">
+          <name>adc16_event_seq_full_complete</name>
+          <initializer>= ADC16_INT_STS_SEQ_CMPT_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>This mask indicates that all of the configured conversion(s) in a queue is(are) complete. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1ggab49c1866b4d36c96b3794bdf0a4d3d6fa62283fd0d170cfaeeec4008649611506" prot="public">
+          <name>adc16_event_seq_single_complete</name>
+          <initializer>= ADC16_INT_STS_SEQ_CVC_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>This mask indicates that one of the configured conversion(s) in a queue is complete. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__adc16__interface_1ggab49c1866b4d36c96b3794bdf0a4d3d6fa4cc825308b2d2033a10ee20cd68c2315" prot="public">
+          <name>adc16_event_dma_fifo_full</name>
+          <initializer>= ADC16_INT_STS_DMA_FIFO_FULL_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>This mask indicates that DMA FIFO is full currently. </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Define ADC16 irq events. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="84" column="1" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="84" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__adc16__interface_1ga42e1f0a59984f701d99592e95ef75a42" prot="public" static="no">
+        <name>ADC16_IS_CHANNEL_INVALID</name>
+        <param><defname>CH</defname></param>
+        <initializer>(CH &gt; <ref refid="HPM__IP__VALIDATION_2HPM__VAL__D25_2hpm__soc__feature_8h_1a698e8e1f965faad7da251d9938332248" kindref="member">ADC16_SOC_MAX_CH_NUM</ref>)</initializer>
+        <briefdescription>
+<para>Define ADC16 validity check for the channel number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="26" column="10" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__adc16__interface_1gaa2ccbdf9a9a07822aa9176bb304f6ba1" prot="public" static="no">
+        <name>ADC16_IS_CHANNEL_SAMPLE_CYCLE_INVALID</name>
+        <param><defname>CYC</defname></param>
+        <initializer>(CYC == 0)</initializer>
+        <briefdescription>
+<para>Define ADC16 validity check for the channel sample cycle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="30" column="9" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__adc16__interface_1ga0fa002d04be7ff092ea5388ac82c355c" prot="public" static="no">
+        <name>ADC16_IS_TRIG_CH_INVLAID</name>
+        <param><defname>CH</defname></param>
+        <initializer>(CH &gt; <ref refid="HPM__IP__VALIDATION_2HPM__VAL__D25_2hpm__soc__feature_8h_1afe99060ae1eb492673214fd3af8e4fe6" kindref="member">ADC_SOC_MAX_TRIG_CH_NUM</ref>)</initializer>
+        <briefdescription>
+<para>Define ADC16 validity check for the trigger number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="33" column="9" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__adc16__interface_1gac5992f6c168f2ecb2ca774528f8a292b" prot="public" static="no">
+        <name>ADC16_IS_TRIG_LEN_INVLAID</name>
+        <param><defname>TRIG_LEN</defname></param>
+        <initializer>(TRIG_LEN &gt; <ref refid="HPM__IP__VALIDATION_2HPM__VAL__D25_2hpm__soc__feature_8h_1ab8bb2b014dd2780fa7f17cd6c21eed3d" kindref="member">ADC_SOC_MAX_TRIG_CH_LEN</ref>)</initializer>
+        <briefdescription>
+<para>Define ADC16 validity check for the trigger length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="36" column="9" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__adc16__interface_1gaf6edb41607caf349c6bc86e2ba1395f9" prot="public" static="no">
+        <name>ADC16_IS_SEQ_LEN_INVLAID</name>
+        <param><defname>LEN</defname></param>
+        <initializer>((LEN == 0) || (LEN &gt; <ref refid="HPM__IP__VALIDATION_2HPM__VAL__D25_2hpm__soc__feature_8h_1a48f987e19c946a0b5c45536743d0b656" kindref="member">ADC_SOC_SEQ_MAX_LEN</ref>))</initializer>
+        <briefdescription>
+<para>Define ADC16 validity check for the sequence length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="39" column="9" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__adc16__interface_1ga719a08b7baa4edc5b806fc1d7bcd56f1" prot="public" static="no">
+        <name>ADC16_IS_SEQ_DMA_BUFF_LEN_INVLAID</name>
+        <param><defname>LEN</defname></param>
+        <initializer>((LEN == 0) || (LEN &gt; <ref refid="HPM__IP__VALIDATION_2HPM__VAL__D25_2hpm__soc__feature_8h_1ad077905ebb9a5f49342a508df47f1f61" kindref="member">ADC_SOC_SEQ_MAX_DMA_BUFF_LEN_IN_4BYTES</ref>))</initializer>
+        <briefdescription>
+<para>Define ADC16 validity check for the DMA buffer length in the sequence mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="42" column="9" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__adc16__interface_1gaeaf7153336312ddba69a2cf6e3d6a36e" prot="public" static="no">
+        <name>ADC16_IS_PMT_DMA_BUFF_LEN_INVLAID</name>
+        <param><defname>LEN</defname></param>
+        <initializer>((LEN == 0) || (LEN &gt; <ref refid="HPM__IP__VALIDATION_2HPM__VAL__D25_2hpm__soc__feature_8h_1ac7a2197dac0b7c2a588e41e17f752e90" kindref="member">ADC_SOC_PMT_MAX_DMA_BUFF_LEN_IN_4BYTES</ref>))</initializer>
+        <briefdescription>
+<para>Define ADC16 validity check for the DMA buffer length in the preemption mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_adc16_drv.h" line="45" column="9" bodyfile="drivers/inc/hpm_adc16_drv.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ADC16 driver APIs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

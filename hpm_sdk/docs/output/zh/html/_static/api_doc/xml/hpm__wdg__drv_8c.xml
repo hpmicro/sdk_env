@@ -1,0 +1,689 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hpm__wdg__drv_8c" kind="file" language="C++">
+    <compoundname>hpm_wdg_drv.c</compoundname>
+    <includes refid="hpm__wdg__drv_8h" local="yes">hpm_wdg_drv.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_wdg_regs.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>drivers/src/hpm_wdg_drv.c</label>
+        <link refid="hpm__wdg__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hpm_wdg_drv.h</label>
+        <link refid="hpm__wdg__drv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structreset__interval__map__t" prot="public">reset_interval_map_t</innerclass>
+    <innerclass refid="structinterrupt__interval__map__t" prot="public">interrupt_interval_map_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" prot="public" static="no">
+        <name>TICKS_1K</name>
+        <initializer>(1024UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_wdg_drv.c" line="9" column="9" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__wdg__drv_8c_1ad56fc52ffb6bb2debe1990b8d2198684" prot="public" static="no">
+        <name>TICKS_1M</name>
+        <initializer>(1024UL * <ref refid="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" kindref="member">TICKS_1K</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_wdg_drv.c" line="10" column="9" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__wdg__drv_8c_1a3592c20185a4d3aca9f5938901882585" prot="public" static="no">
+        <name>TICKS_1G</name>
+        <initializer>(1024UL * <ref refid="hpm__wdg__drv_8c_1ad56fc52ffb6bb2debe1990b8d2198684" kindref="member">TICKS_1M</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_wdg_drv.c" line="11" column="9" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__wdg__drv_8c_1a55a870b7777a1f0c62f0402c028a9881" prot="public" static="no">
+        <name>ONE_SECOND_TICKS_IN_NS</name>
+        <initializer>(1000UL * 1000UL * 1000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_wdg_drv.c" line="12" column="9" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="hpm__wdg__drv_8c_1ad1cc1c7bed42620ac9ab3243f1e2f777" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structreset__interval__map__t" kindref="compound">reset_interval_map_t</ref></type>
+        <definition>const reset_interval_map_t k_reset_interval_map[reset_interval_out_of_range+1U]</definition>
+        <argsstring>[reset_interval_out_of_range+1U]</argsstring>
+        <name>k_reset_interval_map</name>
+        <initializer>= {
+    {128UL, <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7ab36578f2650847d0aa782c51bfdf6be4" kindref="member">reset_interval_clock_period_mult_128</ref>},
+    {256UL, <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a1583b97e54d9cb50c98f0a0046bea047" kindref="member">reset_interval_clock_period_mult_256</ref>},
+    {512UL, <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a99c7dab01fc8f8dbda4a567142dbf78d" kindref="member">reset_interval_clock_period_mult_512</ref>},
+    {1UL *  (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a879f8a8a7f96ce3c6988148b3ec17d25" kindref="member">reset_interval_clock_period_mult_1k</ref>},
+    {2UL *  (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7abb4211dae13d5a800d238657e4158150" kindref="member">reset_interval_clock_period_mult_2k</ref>},
+    {4UL *  (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7ae9a4a9a89c0b63d8d76c01d95ea2de3f" kindref="member">reset_interval_clock_period_mult_4k</ref>},
+    {8UL *  (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a53e2906f045ad2aa7957137044a7fa1a" kindref="member">reset_interval_clock_period_mult_8k</ref>},
+    {16UL *  (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a95c5a5d5e1ff6d5e2ff8011e7afa729b" kindref="member">reset_interval_clock_period_mult_16k</ref>},
+    {0xFFFFFFFFUL, <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7aaec6c890ee500575e71b6da392f8d1db" kindref="member">reset_interval_out_of_range</ref>},
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_wdg_drv.c" line="24" column="35" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="hpm__wdg__drv_8c_1ac721134b814adbd969e1f3e7b29cd242" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structinterrupt__interval__map__t" kindref="compound">interrupt_interval_map_t</ref></type>
+        <definition>const interrupt_interval_map_t k_interrupt_interval_map[interrupt_interval_out_of_range+1U]</definition>
+        <argsstring>[interrupt_interval_out_of_range+1U]</argsstring>
+        <name>k_interrupt_interval_map</name>
+        <initializer>= {
+    {64UL, <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180af5beea2377f1681c46e8fc9aa64be165" kindref="member">interrupt_interval_clock_period_multi_64</ref>},
+    {256UL, <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a410a7c85e6c08ecba930528775d94890" kindref="member">interrupt_interval_clock_period_multi_256</ref>},
+    {1UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a581e47d503ff1d327d3ce6a08cee1a57" kindref="member">interrupt_interval_clock_period_multi_1k</ref>},
+    {2UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a47862ac28fc8e8c022b2e29192161f7b" kindref="member">interrupt_interval_clock_period_multi_2k</ref>},
+    {4UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180aa3b824b5e0cde42ca23e97862b56fef8" kindref="member">interrupt_interval_clock_period_multi_4k</ref>},
+    {8UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a636552feec7dfe851ea06e31b62ddb61" kindref="member">interrupt_interval_clock_period_multi_8k</ref>},
+    {16UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a6064c94aaeb7ef0150705720a4f7cbb4" kindref="member">interrupt_interval_clock_period_multi_16k</ref>},
+    {32UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a8247824f77c2a3e37e5aca089f9b1c82" kindref="member">interrupt_interval_clock_period_multi_32k</ref>},
+    {128UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a77a3a312e5ecde3ce181416ea1afedbc" kindref="member">interrupt_interval_clock_period_multi_128k</ref>},
+    {512UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a4b5691b7d1f084d5ccf9d38988a35be0" kindref="member">interrupt_interval_clock_period_multi_512k</ref>},
+    {2UL *  (1024UL *  (1024UL) ) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a2b5e7d8f88fd66de95f86c3187cc5709" kindref="member">interrupt_interval_clock_period_multi_2m</ref>},
+    {8UL *  (1024UL *  (1024UL) ) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180ae82ab6708da5e41060ea64b565d2cd4a" kindref="member">interrupt_interval_clock_period_multi_8m</ref>},
+    {32UL *  (1024UL *  (1024UL) ) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180afb81f71eb39f236241379b4e914aeae8" kindref="member">interrupt_interval_clock_period_multi_32m</ref>},
+    {128UL *  (1024UL *  (1024UL) ) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a7f71921ffac89052929de75eb291a210" kindref="member">interrupt_interval_clock_period_multi_128m</ref>},
+    {512UL *  (1024UL *  (1024UL) ) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a1c47c56e0c0fd1b8d3815d4e68d1e565" kindref="member">interrupt_interval_clock_period_multi_512m</ref>},
+    {2UL *  (1024UL *  (1024UL *  (1024UL) ) ) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a6504b6b497f4ba9525603021fe767b3e" kindref="member">interrupt_interval_clock_period_multi_2g</ref>},
+    {0xFFFFFFFFUL, <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a1b19c677aac9b02827c821352781c263" kindref="member">interrupt_interval_out_of_range</ref>}
+
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_wdg_drv.c" line="36" column="39" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__wdg__interface_1ga6a75a9dcb0a7f065e352a6b12fba1b52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t wdg_init</definition>
+        <argsstring>(WDG_Type *base, wdg_control_t *wdg_ctrl)</argsstring>
+        <name>wdg_init</name>
+        <param>
+          <type><ref refid="structWDG__Type" kindref="compound">WDG_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="group__wdg__interface_1gacebd23c93dfcc995c568af7cf44029c0" kindref="member">wdg_control_t</ref> *</type>
+          <declname>wdg_ctrl</declname>
+        </param>
+        <briefdescription>
+<para>WDG initialization function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WDG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wdg_ctrl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WDG control structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>API</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>execution status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_wdg_drv.c" line="58" column="12" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="58" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="group__wdg__interface_1ga5ee58edbf8fc2d629ddee8093883fc63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__wdg__interface_1gae790f3fb338c0b5e39757bb09819f3d3" kindref="member">reset_interval_t</ref></type>
+        <definition>reset_interval_t wdg_convert_reset_interval_from_us</definition>
+        <argsstring>(const uint32_t src_freq, const uint32_t reset_us)</argsstring>
+        <name>wdg_convert_reset_interval_from_us</name>
+        <param>
+          <type>const uint32_t</type>
+          <declname>src_freq</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>reset_us</declname>
+        </param>
+        <briefdescription>
+<para>Convert the Reset interval value based on the WDG source clock frequency and the expected reset interval in terms of microseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src_freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WDG source clock frequency </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">reset_us</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Expected Reset interval in terms of microseconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>Converted</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WDG reset interval </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_wdg_drv.c" line="94" column="18" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="94" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="group__wdg__interface_1gac28dce29ab25bd11702c0bff5da9485e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__wdg__interface_1ga6ffa3e5927b602832b1d2f94960dc7cd" kindref="member">interrupt_interval_t</ref></type>
+        <definition>interrupt_interval_t wdg_convert_interrupt_interval_from_us</definition>
+        <argsstring>(const uint32_t src_freq, uint32_t interval_us)</argsstring>
+        <name>wdg_convert_interrupt_interval_from_us</name>
+        <param>
+          <type>const uint32_t</type>
+          <declname>src_freq</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>interval_us</declname>
+        </param>
+        <briefdescription>
+<para>Convert the interrupt interval value based on the WDG source clock frequency and the expected interrupt interval in terms of microseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src_freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WDG source clock frequency </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">interval_us</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Expected Interrupt interval in terms of microseconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>Converted</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WDG interrupt interval </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_wdg_drv.c" line="116" column="22" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="116" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="group__wdg__interface_1gaefe84da07d9d68e34a3bb99ae9b01fe4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t wdg_convert_interrupt_interval_to_us</definition>
+        <argsstring>(const uint32_t src_freq, interrupt_interval_t interval)</argsstring>
+        <name>wdg_convert_interrupt_interval_to_us</name>
+        <param>
+          <type>const uint32_t</type>
+          <declname>src_freq</declname>
+        </param>
+        <param>
+          <type><ref refid="group__wdg__interface_1ga6ffa3e5927b602832b1d2f94960dc7cd" kindref="member">interrupt_interval_t</ref></type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+<para>Convert the interrupt interval value based on the WDG source clock frequency and the expected interrupt interval in terms of microseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src_freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WDG source clock frequency </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Expected Interrupt interval </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>Converted</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WDG interrupt interval in us </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_wdg_drv.c" line="136" column="10" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="136" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="group__wdg__interface_1gac90ff6512ed3b5dbe18d18d8f5bbbd4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t wdg_convert_reset_interval_to_us</definition>
+        <argsstring>(const uint32_t src_freq, reset_interval_t interval)</argsstring>
+        <name>wdg_convert_reset_interval_to_us</name>
+        <param>
+          <type>const uint32_t</type>
+          <declname>src_freq</declname>
+        </param>
+        <param>
+          <type><ref refid="group__wdg__interface_1gae790f3fb338c0b5e39757bb09819f3d3" kindref="member">reset_interval_t</ref></type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+<para>Convert the Reset interval value based on the WDG source clock frequency and the expected reset interval in terms of microseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src_freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WDG source clock frequency </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Expected Reset interval </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>Converted</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WDG reset interval in us </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_wdg_drv.c" line="152" column="10" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="152" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="group__wdg__interface_1ga3e0428bd9aade4ed05d89a6e027b5bea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t wdg_get_interrupt_interval_in_us</definition>
+        <argsstring>(WDG_Type *base, const uint32_t src_freq)</argsstring>
+        <name>wdg_get_interrupt_interval_in_us</name>
+        <param>
+          <type><ref refid="structWDG__Type" kindref="compound">WDG_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>src_freq</declname>
+        </param>
+        <briefdescription>
+<para>Get Actual WDG Interrupt Interval in terms of microseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WDG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src_freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WDG source clock frequency </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Converted WDG interrupt interval in terms of microseconds </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_wdg_drv.c" line="166" column="10" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="166" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="group__wdg__interface_1ga6dd2681b76ee866019272291d7658bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t wdg_get_total_reset_interval_in_us</definition>
+        <argsstring>(WDG_Type *base, const uint32_t src_freq)</argsstring>
+        <name>wdg_get_total_reset_interval_in_us</name>
+        <param>
+          <type><ref refid="structWDG__Type" kindref="compound">WDG_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>src_freq</declname>
+        </param>
+        <briefdescription>
+<para>Get Actual WDG Reset Interval in terms of microseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WDG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src_freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WDG source clock frequency </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Converted WDG total reset interval in terms of microseconds </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_wdg_drv.c" line="178" column="10" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="178" bodyend="189"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2023<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__wdg__drv_8h" kindref="compound">hpm_wdg_drv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TICKS_1K<sp/>(1024UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TICKS_1M<sp/>(1024UL<sp/>*<sp/>TICKS_1K)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TICKS_1G<sp/>(1024UL<sp/>*<sp/>TICKS_1M)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ONE_SECOND_TICKS_IN_NS<sp/>(1000UL<sp/>*<sp/>1000UL<sp/>*<sp/>1000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="structreset__interval__map__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>top;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__wdg__interface_1gae790f3fb338c0b5e39757bb09819f3d3" kindref="member">reset_interval_t</ref><sp/>interval;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}<sp/><ref refid="structreset__interval__map__t" kindref="compound">reset_interval_map_t</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="structinterrupt__interval__map__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>top;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__wdg__interface_1ga6ffa3e5927b602832b1d2f94960dc7cd" kindref="member">interrupt_interval_t</ref><sp/>interval;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}<sp/><ref refid="structinterrupt__interval__map__t" kindref="compound">interrupt_interval_map_t</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structreset__interval__map__t" kindref="compound">reset_interval_map_t</ref><sp/><ref refid="hpm__wdg__drv_8c_1ad1cc1c7bed42620ac9ab3243f1e2f777" kindref="member">k_reset_interval_map</ref>[<ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7aaec6c890ee500575e71b6da392f8d1db" kindref="member">reset_interval_out_of_range</ref><sp/>+<sp/>1U]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{128UL,<sp/><ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7ab36578f2650847d0aa782c51bfdf6be4" kindref="member">reset_interval_clock_period_mult_128</ref>},</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{256UL,<sp/><ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a1583b97e54d9cb50c98f0a0046bea047" kindref="member">reset_interval_clock_period_mult_256</ref>},</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{512UL,<sp/><ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a99c7dab01fc8f8dbda4a567142dbf78d" kindref="member">reset_interval_clock_period_mult_512</ref>},</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{1UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" kindref="member">TICKS_1K</ref>,<sp/><ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a879f8a8a7f96ce3c6988148b3ec17d25" kindref="member">reset_interval_clock_period_mult_1k</ref>},</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{2UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" kindref="member">TICKS_1K</ref>,<sp/><ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7abb4211dae13d5a800d238657e4158150" kindref="member">reset_interval_clock_period_mult_2k</ref>},</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{4UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" kindref="member">TICKS_1K</ref>,<sp/><ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7ae9a4a9a89c0b63d8d76c01d95ea2de3f" kindref="member">reset_interval_clock_period_mult_4k</ref>},</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{8UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" kindref="member">TICKS_1K</ref>,<sp/><ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a53e2906f045ad2aa7957137044a7fa1a" kindref="member">reset_interval_clock_period_mult_8k</ref>},</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{16UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" kindref="member">TICKS_1K</ref>,<sp/><ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a95c5a5d5e1ff6d5e2ff8011e7afa729b" kindref="member">reset_interval_clock_period_mult_16k</ref>},</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{0xFFFFFFFFUL,<sp/><ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7aaec6c890ee500575e71b6da392f8d1db" kindref="member">reset_interval_out_of_range</ref>},</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structinterrupt__interval__map__t" kindref="compound">interrupt_interval_map_t</ref><sp/><ref refid="hpm__wdg__drv_8c_1ac721134b814adbd969e1f3e7b29cd242" kindref="member">k_interrupt_interval_map</ref>[<ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a1b19c677aac9b02827c821352781c263" kindref="member">interrupt_interval_out_of_range</ref><sp/>+<sp/>1U]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{64UL,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180af5beea2377f1681c46e8fc9aa64be165" kindref="member">interrupt_interval_clock_period_multi_64</ref>},</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{256UL,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a410a7c85e6c08ecba930528775d94890" kindref="member">interrupt_interval_clock_period_multi_256</ref>},</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{1UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" kindref="member">TICKS_1K</ref>,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a581e47d503ff1d327d3ce6a08cee1a57" kindref="member">interrupt_interval_clock_period_multi_1k</ref>},</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{2UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" kindref="member">TICKS_1K</ref>,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a47862ac28fc8e8c022b2e29192161f7b" kindref="member">interrupt_interval_clock_period_multi_2k</ref>},</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{4UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" kindref="member">TICKS_1K</ref>,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180aa3b824b5e0cde42ca23e97862b56fef8" kindref="member">interrupt_interval_clock_period_multi_4k</ref>},</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{8UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" kindref="member">TICKS_1K</ref>,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a636552feec7dfe851ea06e31b62ddb61" kindref="member">interrupt_interval_clock_period_multi_8k</ref>},</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{16UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" kindref="member">TICKS_1K</ref>,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a6064c94aaeb7ef0150705720a4f7cbb4" kindref="member">interrupt_interval_clock_period_multi_16k</ref>},</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{32UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" kindref="member">TICKS_1K</ref>,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a8247824f77c2a3e37e5aca089f9b1c82" kindref="member">interrupt_interval_clock_period_multi_32k</ref>},</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{128UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" kindref="member">TICKS_1K</ref>,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a77a3a312e5ecde3ce181416ea1afedbc" kindref="member">interrupt_interval_clock_period_multi_128k</ref>},</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{512UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" kindref="member">TICKS_1K</ref>,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a4b5691b7d1f084d5ccf9d38988a35be0" kindref="member">interrupt_interval_clock_period_multi_512k</ref>},</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{2UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1ad56fc52ffb6bb2debe1990b8d2198684" kindref="member">TICKS_1M</ref>,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a2b5e7d8f88fd66de95f86c3187cc5709" kindref="member">interrupt_interval_clock_period_multi_2m</ref>},</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{8UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1ad56fc52ffb6bb2debe1990b8d2198684" kindref="member">TICKS_1M</ref>,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180ae82ab6708da5e41060ea64b565d2cd4a" kindref="member">interrupt_interval_clock_period_multi_8m</ref>},</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>{32UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1ad56fc52ffb6bb2debe1990b8d2198684" kindref="member">TICKS_1M</ref>,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180afb81f71eb39f236241379b4e914aeae8" kindref="member">interrupt_interval_clock_period_multi_32m</ref>},</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{128UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1ad56fc52ffb6bb2debe1990b8d2198684" kindref="member">TICKS_1M</ref>,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a7f71921ffac89052929de75eb291a210" kindref="member">interrupt_interval_clock_period_multi_128m</ref>},</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{512UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1ad56fc52ffb6bb2debe1990b8d2198684" kindref="member">TICKS_1M</ref>,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a1c47c56e0c0fd1b8d3815d4e68d1e565" kindref="member">interrupt_interval_clock_period_multi_512m</ref>},</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{2UL<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a3592c20185a4d3aca9f5938901882585" kindref="member">TICKS_1G</ref>,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a6504b6b497f4ba9525603021fe767b3e" kindref="member">interrupt_interval_clock_period_multi_2g</ref>},</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{0xFFFFFFFFUL,<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a1b19c677aac9b02827c821352781c263" kindref="member">interrupt_interval_out_of_range</ref>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>See<sp/>hpm_wdg_drv.h<sp/>for<sp/>more<sp/>details<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__wdg__interface_1ga6a75a9dcb0a7f065e352a6b12fba1b52" kindref="member">wdg_init</ref>(<ref refid="structWDG__Type" kindref="compound">WDG_Type</ref><sp/>*base,<sp/><ref refid="structwdg__control__struct" kindref="compound">wdg_control_t</ref><sp/>*wdg_ctrl)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>status<sp/>=<sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga6552192bf6d102d80777fc98a59811d9" kindref="member">HPM_BREAK_IF</ref>((base<sp/>==<sp/>NULL)<sp/>||<sp/>(wdg_ctrl<sp/>==<sp/>NULL));</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga6552192bf6d102d80777fc98a59811d9" kindref="member">HPM_BREAK_IF</ref>((wdg_ctrl-&gt;<ref refid="structwdg__control__struct_1a18e63cf2e10dc2d7d5c8a19c8241e195" kindref="member">reset_interval</ref><sp/>&gt;<sp/><ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a107d882d7ab0be4dea9b44b7e22fa53b" kindref="member">reset_interval_max</ref>)<sp/>||</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(wdg_ctrl-&gt;<ref refid="structwdg__control__struct_1a5144418d5809b18ceb6ef7b41430b207" kindref="member">interrupt_interval</ref><sp/>&gt;<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180aad04e6233dc1d367f6efe5b525436746" kindref="member">interrupt_interval_max</ref>)<sp/>||</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(wdg_ctrl-&gt;<ref refid="structwdg__control__struct_1ac8413ca8299466ae89f85e693571929a" kindref="member">clksrc</ref><sp/>&gt;<sp/><ref refid="group__wdg__interface_1gga2819a948570dfc16bf4a294a98c815f6a03a95f2da91aa7e12dd68b4a59ce7512" kindref="member">wdg_clksrc_pclk</ref>));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>rst_time<sp/>=<sp/>(uint32_t)<sp/>wdg_ctrl-&gt;<ref refid="structwdg__control__struct_1a18e63cf2e10dc2d7d5c8a19c8241e195" kindref="member">reset_interval</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>int_time<sp/>=<sp/>(uint32_t)<sp/>wdg_ctrl-&gt;<ref refid="structwdg__control__struct_1a5144418d5809b18ceb6ef7b41430b207" kindref="member">interrupt_interval</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>reset_en<sp/>=<sp/>wdg_ctrl-&gt;<ref refid="structwdg__control__struct_1a54024537611974daea52ebf16ddb09da" kindref="member">reset_enable</ref><sp/>?<sp/>1UL<sp/>:<sp/>0UL;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>int_en<sp/>=<sp/>wdg_ctrl-&gt;<ref refid="structwdg__control__struct_1a6771b68bf885b38d53b268c088c02a49" kindref="member">interrupt_enable</ref><sp/>?<sp/>1UL<sp/>:<sp/>0UL;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>clk_src<sp/>=<sp/>(wdg_ctrl-&gt;<ref refid="structwdg__control__struct_1ac8413ca8299466ae89f85e693571929a" kindref="member">clksrc</ref><sp/>==<sp/><ref refid="group__wdg__interface_1gga2819a948570dfc16bf4a294a98c815f6a03a95f2da91aa7e12dd68b4a59ce7512" kindref="member">wdg_clksrc_pclk</ref>)<sp/>?<sp/>1UL<sp/>:<sp/>0UL;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>wdg_en<sp/>=<sp/>wdg_ctrl-&gt;<ref refid="structwdg__control__struct_1ac018433145f294aa6a4ce0a06fa63c59" kindref="member">wdg_enable</ref><sp/>?<sp/>1UL<sp/>:<sp/>0UL;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>wdg_ctrl<sp/>=<sp/><ref refid="HPM6200_2ip_2hpm__wdg__regs_8h_1a82c0bfcbda04d2d8e63072b05580235f" kindref="member">WDG_CTRL_RSTTIME_SET</ref>(rst_time)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__wdg__regs_8h_1a7134c14da23b6b64fd5085d95141ba73" kindref="member">WDG_CTRL_INTTIME_SET</ref>(int_time)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__wdg__regs_8h_1aab8e2937b79611f5e66d05424968c6b8" kindref="member">WDG_CTRL_CLKSEL_SET</ref>(clk_src)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__wdg__regs_8h_1a7b85e87ae072a4b4c1b85ad25b559b0a" kindref="member">WDG_CTRL_RSTEN_SET</ref>(reset_en)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__wdg__regs_8h_1abfa07602782b701a25530baf0a5c68db" kindref="member">WDG_CTRL_INTEN_SET</ref>(int_en)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__wdg__regs_8h_1a3f5e3ce986cfe1f9dbf6babbc232c44b" kindref="member">WDG_CTRL_EN_SET</ref>(wdg_en);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wdg__interface_1ga3a038cbe9347d082dc0979e96d2b2ace" kindref="member">wdg_write_enable</ref>(base);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base-&gt;<ref refid="structWDG__Type_1a19591a70736af6eb1f276f1cd52a2303" kindref="member">CTRL</ref><sp/>=<sp/>wdg_ctrl;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>See<sp/>hpm_wdg_drv.h<sp/>for<sp/>more<sp/>details<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="group__wdg__interface_1gae790f3fb338c0b5e39757bb09819f3d3" kindref="member">reset_interval_t</ref><sp/><ref refid="group__wdg__interface_1ga5ee58edbf8fc2d629ddee8093883fc63" kindref="member">wdg_convert_reset_interval_from_us</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>src_freq,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>reset_us)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__wdg__interface_1gae790f3fb338c0b5e39757bb09819f3d3" kindref="member">reset_interval_t</ref><sp/>reset_interval<sp/>=<sp/><ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7aaec6c890ee500575e71b6da392f8d1db" kindref="member">reset_interval_out_of_range</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>src_clk_one_tick_in_ns<sp/>=<sp/><ref refid="hpm__wdg__drv_8c_1a55a870b7777a1f0c62f0402c028a9881" kindref="member">ONE_SECOND_TICKS_IN_NS</ref><sp/>/<sp/>src_freq;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(src_clk_one_tick_in_ns<sp/>&lt;<sp/>1U)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>src_clk_one_tick_in_ns<sp/>=<sp/>1U;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reset_interval_ticks<sp/>=<sp/>(reset_us<sp/>*<sp/>1000UL)<sp/>/<sp/>src_clk_one_tick_in_ns;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="group__common__interface_1ga25f003de16c08a4888b69f619d70f427" kindref="member">ARRAY_SIZE</ref>(<ref refid="hpm__wdg__drv_8c_1ad1cc1c7bed42620ac9ab3243f1e2f777" kindref="member">k_reset_interval_map</ref>);<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(reset_interval_ticks<sp/>&lt;=<sp/><ref refid="hpm__wdg__drv_8c_1ad1cc1c7bed42620ac9ab3243f1e2f777" kindref="member">k_reset_interval_map</ref>[i].top)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reset_interval<sp/>=<sp/><ref refid="hpm__wdg__drv_8c_1ad1cc1c7bed42620ac9ab3243f1e2f777" kindref="member">k_reset_interval_map</ref>[i].<ref refid="structreset__interval__map__t_1a90374f57106c643e9ffa1aed230ef2ab" kindref="member">interval</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>reset_interval;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>See<sp/>hpm_wdg_drv.h<sp/>for<sp/>more<sp/>details<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><ref refid="group__wdg__interface_1ga6ffa3e5927b602832b1d2f94960dc7cd" kindref="member">interrupt_interval_t</ref><sp/><ref refid="group__wdg__interface_1gac28dce29ab25bd11702c0bff5da9485e" kindref="member">wdg_convert_interrupt_interval_from_us</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>src_freq,<sp/>uint32_t<sp/>interval_us)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__wdg__interface_1ga6ffa3e5927b602832b1d2f94960dc7cd" kindref="member">interrupt_interval_t</ref><sp/>interrupt_interval<sp/>=<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a1b19c677aac9b02827c821352781c263" kindref="member">interrupt_interval_out_of_range</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>src_clk_one_tick_in_ns<sp/>=<sp/><ref refid="hpm__wdg__drv_8c_1a55a870b7777a1f0c62f0402c028a9881" kindref="member">ONE_SECOND_TICKS_IN_NS</ref><sp/>/<sp/>src_freq;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(src_clk_one_tick_in_ns<sp/>&lt;<sp/>1U)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>src_clk_one_tick_in_ns<sp/>=<sp/>1U;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>interrupt_interval_ticks<sp/>=<sp/>((uint64_t)<sp/>interval_us<sp/>*<sp/>1000L)<sp/>/<sp/>src_clk_one_tick_in_ns;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="group__common__interface_1ga25f003de16c08a4888b69f619d70f427" kindref="member">ARRAY_SIZE</ref>(<ref refid="hpm__wdg__drv_8c_1ac721134b814adbd969e1f3e7b29cd242" kindref="member">k_interrupt_interval_map</ref>);<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(interrupt_interval_ticks<sp/>&lt;=<sp/><ref refid="hpm__wdg__drv_8c_1ac721134b814adbd969e1f3e7b29cd242" kindref="member">k_interrupt_interval_map</ref>[i].top)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interrupt_interval<sp/>=<sp/><ref refid="hpm__wdg__drv_8c_1ac721134b814adbd969e1f3e7b29cd242" kindref="member">k_interrupt_interval_map</ref>[i].<ref refid="structinterrupt__interval__map__t_1a916a07582e01c50070ac99ceecd09077" kindref="member">interval</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>interrupt_interval;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">uint64_t<sp/><ref refid="group__wdg__interface_1gaefe84da07d9d68e34a3bb99ae9b01fe4" kindref="member">wdg_convert_interrupt_interval_to_us</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>src_freq,<sp/><ref refid="group__wdg__interface_1ga6ffa3e5927b602832b1d2f94960dc7cd" kindref="member">interrupt_interval_t</ref><sp/>interval)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>time_in_us<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((src_freq<sp/>!=<sp/>0)<sp/>&amp;&amp;<sp/>(interval<sp/>&lt;<sp/><ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a1b19c677aac9b02827c821352781c263" kindref="member">interrupt_interval_out_of_range</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>interrupt_interval_in_reg<sp/>=<sp/>(uint32_t)<sp/>interval;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tick_in_ns<sp/>=<sp/>1.0<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a55a870b7777a1f0c62f0402c028a9881" kindref="member">ONE_SECOND_TICKS_IN_NS</ref><sp/>/<sp/>src_freq;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>total_interval_in_ns<sp/>=<sp/>(uint64_t)(tick_in_ns<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1ac721134b814adbd969e1f3e7b29cd242" kindref="member">k_interrupt_interval_map</ref>[interrupt_interval_in_reg].top);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_in_us<sp/>=<sp/>total_interval_in_ns<sp/>/<sp/>1000UL;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>time_in_us;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">uint32_t<sp/><ref refid="group__wdg__interface_1gac90ff6512ed3b5dbe18d18d8f5bbbd4d" kindref="member">wdg_convert_reset_interval_to_us</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>src_freq,<sp/><ref refid="group__wdg__interface_1gae790f3fb338c0b5e39757bb09819f3d3" kindref="member">reset_interval_t</ref><sp/>interval)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>time_in_us<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((src_freq<sp/>!=<sp/>0)<sp/>&amp;&amp;<sp/>(interval<sp/>&lt;<sp/><ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7aaec6c890ee500575e71b6da392f8d1db" kindref="member">reset_interval_out_of_range</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>reset_interval_in_reg<sp/>=<sp/>(uint32_t)<sp/>interval;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tick_in_ns<sp/>=<sp/>1.0<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1a55a870b7777a1f0c62f0402c028a9881" kindref="member">ONE_SECOND_TICKS_IN_NS</ref><sp/>/<sp/>src_freq;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>total_interval_in_ns<sp/>=<sp/>(uint64_t)(tick_in_ns<sp/>*<sp/><ref refid="hpm__wdg__drv_8c_1ad1cc1c7bed42620ac9ab3243f1e2f777" kindref="member">k_reset_interval_map</ref>[reset_interval_in_reg].top);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_in_us<sp/>=<sp/>(uint32_t)(total_interval_in_ns<sp/>/<sp/>1000UL);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>time_in_us;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">uint64_t<sp/><ref refid="group__wdg__interface_1ga3e0428bd9aade4ed05d89a6e027b5bea" kindref="member">wdg_get_interrupt_interval_in_us</ref>(<ref refid="structWDG__Type" kindref="compound">WDG_Type</ref><sp/>*base,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>src_freq)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>time_in_us<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((base<sp/>!=<sp/>NULL)<sp/>&amp;&amp;<sp/>(src_freq<sp/>!=<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wdg__interface_1ga6ffa3e5927b602832b1d2f94960dc7cd" kindref="member">interrupt_interval_t</ref><sp/>interval<sp/>=<sp/>(<ref refid="group__wdg__interface_1ga6ffa3e5927b602832b1d2f94960dc7cd" kindref="member">interrupt_interval_t</ref>)<sp/><ref refid="HPM6200_2ip_2hpm__wdg__regs_8h_1a9f0734655c8a0c4fecd033b80aeb3d34" kindref="member">WDG_CTRL_INTTIME_GET</ref>(base-&gt;<ref refid="structWDG__Type_1a19591a70736af6eb1f276f1cd52a2303" kindref="member">CTRL</ref>);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_in_us<sp/>=<sp/><ref refid="group__wdg__interface_1gaefe84da07d9d68e34a3bb99ae9b01fe4" kindref="member">wdg_convert_interrupt_interval_to_us</ref>(src_freq,<sp/>interval);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>time_in_us;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">uint64_t<sp/><ref refid="group__wdg__interface_1ga6dd2681b76ee866019272291d7658bc3" kindref="member">wdg_get_total_reset_interval_in_us</ref>(<ref refid="structWDG__Type" kindref="compound">WDG_Type</ref><sp/>*base,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>src_freq)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>time_in_us<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((base<sp/>!=<sp/>NULL)<sp/>&amp;&amp;<sp/>(src_freq<sp/>!=<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wdg__interface_1gae790f3fb338c0b5e39757bb09819f3d3" kindref="member">reset_interval_t</ref><sp/>reset_interval<sp/>=<sp/>(<ref refid="group__wdg__interface_1gae790f3fb338c0b5e39757bb09819f3d3" kindref="member">reset_interval_t</ref>)<sp/><ref refid="HPM6200_2ip_2hpm__wdg__regs_8h_1ada3c31b7babe62d12b8ade0369171026" kindref="member">WDG_CTRL_RSTTIME_GET</ref>(base-&gt;<ref refid="structWDG__Type_1a19591a70736af6eb1f276f1cd52a2303" kindref="member">CTRL</ref>);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wdg__interface_1ga6ffa3e5927b602832b1d2f94960dc7cd" kindref="member">interrupt_interval_t</ref><sp/>interrupt_interval<sp/>=<sp/>(<ref refid="group__wdg__interface_1ga6ffa3e5927b602832b1d2f94960dc7cd" kindref="member">interrupt_interval_t</ref>)<sp/><ref refid="HPM6200_2ip_2hpm__wdg__regs_8h_1a9f0734655c8a0c4fecd033b80aeb3d34" kindref="member">WDG_CTRL_INTTIME_GET</ref>(base-&gt;<ref refid="structWDG__Type_1a19591a70736af6eb1f276f1cd52a2303" kindref="member">CTRL</ref>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_in_us<sp/>=<sp/><ref refid="group__wdg__interface_1gac90ff6512ed3b5dbe18d18d8f5bbbd4d" kindref="member">wdg_convert_reset_interval_to_us</ref>(src_freq,<sp/>reset_interval)<sp/>+</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wdg__interface_1gaefe84da07d9d68e34a3bb99ae9b01fe4" kindref="member">wdg_convert_interrupt_interval_to_us</ref>(src_freq,<sp/>interrupt_interval);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>time_in_us;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="drivers/src/hpm_wdg_drv.c"/>
+  </compounddef>
+</doxygen>

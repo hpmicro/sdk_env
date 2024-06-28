@@ -1,0 +1,18 @@
+# Copyright (c) 2023,2024 HPMicro
+# SPDX-License-Identifier: BSD-3-Clause
+
+board:
+    name: hpm5300evk
+    soc: HPM5361
+    device: HPM5361xCBx
+    openocd-soc: hpm5300
+    openocd-probe: ft2232
+    on-board-flash:
+      type: qspi-nor-flash
+      size: 1M
+    feature:
+      - board_gpt_pin
+      - board_motor_control
+      - board_power_button
+    excluded_samples:
+      - samples/motor_ctrl/bldc_block

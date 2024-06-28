@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. HPM6300EVK &mdash; HPMicro Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="5. HPM6200EVK" href="../hpm6200evk/README_en.html" />
+    <link rel="prev" title="3. HPM6750EVKMINI" href="../hpm6750evkmini/README_en.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../get_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_en.html">Evaluation Boards</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../hpm6750evk/README_en.html">1. HPM6750EVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpm6750evk2/README_en.html">2. HPM6750EVK2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpm6750evkmini/README_en.html">3. HPM6750EVKMINI</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4. HPM6300EVK</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">4.1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hardware">4.2. Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dip-switch-s1">4.3. DIP Switch S1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#button">4.4. Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pin-description">4.5. Pin Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hpm6200evk/README_en.html">5. HPM6200EVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpm5300evk/README_en.html">6. HPM5300EVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpm5301evklite/README_en.html">7. HPM5301EVKLITE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpm6800evk/README_en.html">8. HPM6800EVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpm6e00evk/README_en.html">9. HPM6E00EVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extension/README_en.html">10. Expansion Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../samples/index_en.html">Samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../samples/drivers/index_en.html">Drivers Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_doc.html">SDK API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">HPMicro Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index_en.html">Evaluation Boards</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4. </span>HPM6300EVK</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/boards/hpm6300evk/README_en.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="hpm6300evk">
+<h1><span class="section-number">4. </span>HPM6300EVK<a class="headerlink" href="#hpm6300evk" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<h2><span class="section-number">4.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>HPM6300EVK provides interfaces for most of the peripherals of the HPM6300 microcontroller, including 1 SD card slot, 1 USB Type-C interface, a 100M Ethernet port, CAN FD interface, etc., and expands NOR Flash, SDRAM and other external memories , and integrates an on-board debugger.</p>
+<p><img alt="hpm6300evk" src="../../_images/hpm6300evk.png" /></p>
+</section>
+<section id="hardware">
+<h2><span class="section-number">4.2. </span>Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>HPM6360IPA MCU</p></li>
+<li><p>Onboard Memory</p>
+<ul>
+<li><p>16bit 256Mb SDRAM</p></li>
+<li><p>128Mb Quad SPI NOR Flash</p></li>
+</ul>
+</li>
+<li><p>USB</p>
+<ul>
+<li><p>USB type C (USB 2.0 OTG) connector x2</p></li>
+</ul>
+</li>
+<li><p>Ethernet</p>
+<ul>
+<li><p>100Mb PHY</p></li>
+</ul>
+</li>
+<li><p>Others</p>
+<ul>
+<li><p>TF Slot</p></li>
+<li><p>CAN FD</p></li>
+<li><p>FT2232</p></li>
+</ul>
+</li>
+<li><p>Expansion port</p>
+<ul>
+<li><p>Motor control port</p></li>
+<li><p>Raspberry PI extension port</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The sdram pins are multiplexed with the 15-20pin of the motor interface J26, so the motor interface and sdram can’t be used at the same time.</p>
+</div>
+</section>
+<section id="dip-switch-s1">
+<h2><span class="section-number">4.3. </span>DIP Switch S1<a class="headerlink" href="#dip-switch-s1" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Bit 1 and 2 controls boot mode</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>bit[2:1]</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>OFF, OFF</p></td>
+<td><p>Boot from Quad SPI NOR flash</p></td>
+</tr>
+<tr class="row-odd"><td><p>OFF, ON</p></td>
+<td><p>Serial boot</p></td>
+</tr>
+<tr class="row-even"><td><p>ON, OFF</p></td>
+<td><p>ISP</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="button">
+<span id="lab-hpm6300-evk-board"></span><h2><span class="section-number">4.4. </span>Button<a class="headerlink" href="#button" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default" id="lab-hpm6300-evk-board-buttons">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Position</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PBUTN (SW1)</p></td>
+<td><p>Power Button, TinyUF2 Boot Button, GPIO Button</p></td>
+</tr>
+<tr class="row-odd"><td><p>WBUTN (SW2)</p></td>
+<td><p>WAKE UP Button</p></td>
+</tr>
+<tr class="row-even"><td><p>RESETN (SW3)</p></td>
+<td><p>Reset Button</p></td>
+</tr>
+</tbody>
+</table>
+<p>Plug-in</p>
+<ul>
+<li><p>The ADC/DAC reference voltage is selected as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Connection</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>J108[2, 3]</p></td>
+<td><p>Reference voltage</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</section>
+<section id="pin-description">
+<h2><span class="section-number">4.5. </span>Pin Description<a class="headerlink" href="#pin-description" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>SPI Pin：</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Position</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SPI3.CSN</p></td>
+<td><p>J28[24]</p></td>
+</tr>
+<tr class="row-odd"><td><p>SPI3.SCLK</p></td>
+<td><p>J28[23]</p></td>
+</tr>
+<tr class="row-even"><td><p>SPI3.MISO</p></td>
+<td><p>J28[21]</p></td>
+</tr>
+<tr class="row-odd"><td><p>SPI3.MOSI</p></td>
+<td><p>J28[19]</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>I2C Pin：</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Position</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>I2C0.SCL</p></td>
+<td><p>J28[13]</p></td>
+</tr>
+<tr class="row-odd"><td><p>I2C0.SDA</p></td>
+<td><p>J28[15]</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>ACMP Pin</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Position</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CMP.INN5</p></td>
+<td><p>J26[7]</p></td>
+</tr>
+<tr class="row-odd"><td><p>CMP.COMP_1</p></td>
+<td><p>J26[8]</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>GPTMR Pin</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Position</p></th>
+<th class="head"><p>Remark</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GPTMR2.CAPT_0</p></td>
+<td><p>J28[40]</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>GPTMR2.COMP_0</p></td>
+<td><p>J28[35]</p></td>
+<td><p>MCLK of i2s emulation</p></td>
+</tr>
+<tr class="row-even"><td><p>GPTMR2.COMP_1</p></td>
+<td><p>J28[12]</p></td>
+<td><p>LRCK of i2s emulation</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPTMR2.COMP_2</p></td>
+<td><p>J28[16]</p></td>
+<td><p>BLCK of i2s emulation</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>ADC16 Pin</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Position</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ADC16 Reference Voltage</p></td>
+<td><p>J108[2]</p></td>
+</tr>
+<tr class="row-odd"><td><p>ADC0.INA6</p></td>
+<td><p>J28[38]</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>DAC Pin</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Position</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>DAC Reference Voltage</p></td>
+<td><p>J108[2]</p></td>
+</tr>
+<tr class="row-odd"><td><p>DAC0.OUT</p></td>
+<td><p>J26[11]</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>PWM Pin</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Position</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PWM2.P0</p></td>
+<td><p>J26[14]</p></td>
+</tr>
+<tr class="row-odd"><td><p>PWM2.P1</p></td>
+<td><p>J26[13]</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Ethernet PPS Pin</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Position</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ENET0.EVTO0</p></td>
+<td><p>J28[19]</p></td>
+</tr>
+<tr class="row-odd"><td><p>ENET0.EVTO1</p></td>
+<td><p>J28[23]</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>UART pin</p></li>
+</ul>
+<p>The UART2 is used for some functional testing using UART, such as uart_software_rx_idle, uart_rx_timeout, uart_software_lin, MICROROS_UART, USB_CDC_ACM_UART, MODBUS_RTU etc.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Position</p></th>
+<th class="head"><p>Remark</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UART2.TXD</p></td>
+<td><p>J28[18]</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>UART2.RXD</p></td>
+<td><p>J28[22]</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>UART2.break</p></td>
+<td><p>J28[24]</p></td>
+<td><p>generate uart break signal</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>TRGMUX pin for uart_software_rx_idle sample</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Position</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TRGM1_P4(PA24)</p></td>
+<td><p>J28[16]</p></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Motor Pin:</p>
+<p>Refer to section <a class="reference internal" href="../extension/README_en.html#lab-drv-lv50a-mp1907"><span class="std std-ref">DRV-LV50A-MP1907 Motor Driver Board </span></a> for configuration</p>
+</li>
+<li><p>Tamper Pin</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Pin</p></th>
+<th class="head"><p>Position</p></th>
+<th class="head"><p>Mode</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TAMP.06</p></td>
+<td><p>PZ06</p></td>
+<td><p>J28[8]</p></td>
+<td><p>Active Mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>TAMP.07</p></td>
+<td><p>PZ07</p></td>
+<td><p>J28[10]</p></td>
+<td><p>Active Mode</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>CS Pin of i2s emulation</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Position</p></th>
+<th class="head"><p>Remark</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PA07</p></td>
+<td><p>J28[11]</p></td>
+<td><p>the pin that controls the SPI slave CS</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, HPMicro.
+      <span class="lastupdated">Last updated on Jun 28, 2024.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

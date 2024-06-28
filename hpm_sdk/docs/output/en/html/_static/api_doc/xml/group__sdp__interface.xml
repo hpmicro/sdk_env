@@ -1,0 +1,2163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__sdp__interface" kind="group">
+    <compoundname>sdp_interface</compoundname>
+    <title>SDP driver APIs</title>
+    <innerclass refid="structsdp__crypto__ctx__t" prot="public">sdp_crypto_ctx_t</innerclass>
+    <innerclass refid="structsdp__dma__ctx__t" prot="public">sdp_dma_ctx_t</innerclass>
+    <innerclass refid="structsdp__hash__ctx__t" prot="public">sdp_hash_ctx_t</innerclass>
+    <innerclass refid="structsdp__action__t" prot="public">sdp_action_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__sdp__interface_1ga8df04ef8ae870747d0cf6e72cb9d08a8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>sdp_crypto_key_bits_t</name>
+        <enumvalue id="group__sdp__interface_1gga8df04ef8ae870747d0cf6e72cb9d08a8aebe4bfb1cda63ea891f5f7579de1af18" prot="public">
+          <name>sdp_aes_keybits_128</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>128 bit AES key </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga8df04ef8ae870747d0cf6e72cb9d08a8acc0a0a6b57ff24014bb631875c31258c" prot="public">
+          <name>sdp_aes_keybits_256</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>256 bit AES key </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>SDP AES key bit options. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="29" column="1" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="29" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__sdp__interface_1ga7703a60c41664731c2419a25a110ac41" prot="public" static="no" strong="no">
+        <type></type>
+        <name>sdp_crypto_op_t</name>
+        <enumvalue id="group__sdp__interface_1gga7703a60c41664731c2419a25a110ac41a3117fa24931bd0cd1d52ea73182749ec" prot="public">
+          <name>sdp_aes_op_encrypt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>AES Encrypt operation </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga7703a60c41664731c2419a25a110ac41acc4dd81a9bfb05c0533ca744dcb3de37" prot="public">
+          <name>sdp_aes_op_decrypt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>AES Decrypt operation </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Crypto operation option. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="44" column="1" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="44" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__sdp__interface_1ga8dd717546e9adf10bd382a09d655d05c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>sdp_crypto_alg_t</name>
+        <enumvalue id="group__sdp__interface_1gga8dd717546e9adf10bd382a09d655d05caceeb7f2ed79b74655f2bd875bedf6212" prot="public">
+          <name>sdp_crypto_alg_aes</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>AES </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>SDP Crypto algorithms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="65" column="1" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="65" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__sdp__interface_1ga655532c13e5f26ec7c668266a4152462" prot="public" static="no" strong="no">
+        <type></type>
+        <name>sdp_crypto_mode_t</name>
+        <enumvalue id="group__sdp__interface_1gga655532c13e5f26ec7c668266a4152462a8be6bc3cccf0e650523c141a1ddd2cd3" prot="public">
+          <name>sdp_crypto_mode_ecb</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ECB mode </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga655532c13e5f26ec7c668266a4152462a00eb0a285a5ce8ff386ec028cddbd646" prot="public">
+          <name>sdp_crypto_mode_cbc</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>CBC mode </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>SDP Crypto modes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="75" column="1" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__sdp__interface_1ga9c4ff8c44ed7b9bbb94611adbc9bb83f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>sdp_data_swap_mode_t</name>
+        <enumvalue id="group__sdp__interface_1gga9c4ff8c44ed7b9bbb94611adbc9bb83faaf554776a21a1a2dbf5e8955eaae2df9" prot="public">
+          <name>sdp_swap_mode_none</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>No data swap </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga9c4ff8c44ed7b9bbb94611adbc9bb83fa3cb0cdca0e6cb402519017faee698bb9" prot="public">
+          <name>sdp_swap_mode_bytes_in_word</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Swap bytes within one word </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga9c4ff8c44ed7b9bbb94611adbc9bb83fa22fdba7e78bb4721a97d56a376a5c24b" prot="public">
+          <name>sdp_swap_mode_word_swap</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Swap words in one crypto block (16-bytes) </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga9c4ff8c44ed7b9bbb94611adbc9bb83fa5048835b6308d38d5a5e9493edf5ca7a" prot="public">
+          <name>sdp_swap_mode_switch_endian</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Swap the data-endian in one crypto block (16-bytes) </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>SDP Data Swap modes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="83" column="1" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="83" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__sdp__interface_1ga6a3f07ab3b268e00275f3989817ff106" prot="public" static="no" strong="no">
+        <type></type>
+        <name>sdp_calc_hash_mode_t</name>
+        <enumvalue id="group__sdp__interface_1gga6a3f07ab3b268e00275f3989817ff106ae970e0ca3af9c3dbf0fa76d657fffb8a" prot="public">
+          <name>sdp_calc_hash_for_input</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Calculate HASH before doing crypto operation </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga6a3f07ab3b268e00275f3989817ff106ac678b42051478cd0d9ea57906f6e6b57" prot="public">
+          <name>sdp_calc_hash_for_output</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Calculate HASH after doing crypto operation </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>SDP HASH calculation mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="93" column="1" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__sdp__interface_1gaab2a0c515a472eef8c7e5cb4f1d7eee4" prot="public" static="no" strong="no">
+        <type></type>
+        <name>sdp_hash_alg_t</name>
+        <enumvalue id="group__sdp__interface_1ggaab2a0c515a472eef8c7e5cb4f1d7eee4a1725eff06fca130610b9b10f13ee7d87" prot="public">
+          <name>sdp_hash_alg_sha1</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SDP SHA1 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1ggaab2a0c515a472eef8c7e5cb4f1d7eee4a6152490ad2bc6db8a17330037f06c5ba" prot="public">
+          <name>sdp_hash_alg_crc32</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SDP CRC32 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1ggaab2a0c515a472eef8c7e5cb4f1d7eee4afdf9e228ace7d6319e77350eae0ef609" prot="public">
+          <name>sdp_hash_alg_sha256</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SDP SHA256 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1ggaab2a0c515a472eef8c7e5cb4f1d7eee4aa80c1ddacfea8b290f8dd20f79868a6e" prot="public">
+          <name>sdp_hash_alg_max</name>
+          <initializer>= sdp_hash_alg_sha256</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>SDP HASH algorithm definitions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="102" column="1" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="102" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__sdp__interface_1ga85c1893697b201be6423e3534d866636" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@222</name>
+        <enumvalue id="group__sdp__interface_1gga85c1893697b201be6423e3534d866636a88a6c197706c3bd6021fa821538fd795" prot="public">
+          <name>status_sdp_no_crypto_support</name>
+          <initializer>= ((uint32_t)( status_group_sdp )*1000U + (uint32_t)( 0 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The crypto algorithm is not supported </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga85c1893697b201be6423e3534d866636aca714ff069ddf2fb6495c0334b2080e8" prot="public">
+          <name>status_sdp_no_hash_support</name>
+          <initializer>= ((uint32_t)( status_group_sdp )*1000U + (uint32_t)( 1 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The hash algorithm is not supported </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga85c1893697b201be6423e3534d866636a9a3e2eab48bba0f26a028b1eeff21272" prot="public">
+          <name>status_sdp_invalid_key_src</name>
+          <initializer>= ((uint32_t)( status_group_sdp )*1000U + (uint32_t)( 2 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid AES key source </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga85c1893697b201be6423e3534d866636a07ed2d58378d6363a843612f01fec33b" prot="public">
+          <name>status_sdp_error_packet</name>
+          <initializer>= ((uint32_t)( status_group_sdp )*1000U + (uint32_t)( 3 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Error packet </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga85c1893697b201be6423e3534d866636a44d444202b267effd64aae992cd0fc6b" prot="public">
+          <name>status_sdp_aes_busy</name>
+          <initializer>= ((uint32_t)( status_group_sdp )*1000U + (uint32_t)( 4 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>AES engine is busy </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga85c1893697b201be6423e3534d866636ab55a7aad193627315f91f4d84671fbe5" prot="public">
+          <name>status_sdp_hash_busy</name>
+          <initializer>= ((uint32_t)( status_group_sdp )*1000U + (uint32_t)( 5 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>HASH engine is busy </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga85c1893697b201be6423e3534d866636a2f85949d00d24bd85b8955883dfd234a" prot="public">
+          <name>status_sdp_error_setup</name>
+          <initializer>= ((uint32_t)( status_group_sdp )*1000U + (uint32_t)( 6 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Error setup in SDP IP </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga85c1893697b201be6423e3534d866636a1637f39c05440ad308d9000293625226" prot="public">
+          <name>status_sdp_error_src</name>
+          <initializer>= ((uint32_t)( status_group_sdp )*1000U + (uint32_t)( 7 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Error source address </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga85c1893697b201be6423e3534d866636af9f87e1f188c4edbe80bc7d89a2e8ee1" prot="public">
+          <name>status_sdp_error_dst</name>
+          <initializer>= ((uint32_t)( status_group_sdp )*1000U + (uint32_t)( 8 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Error destination address </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga85c1893697b201be6423e3534d866636a4c460f80cfebd73ebc25604caecafe72" prot="public">
+          <name>status_sdp_error_hash</name>
+          <initializer>= ((uint32_t)( status_group_sdp )*1000U + (uint32_t)( 9 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Error Hash digest </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga85c1893697b201be6423e3534d866636a915d1424baaac4045c3af2079f9d9cfc" prot="public">
+          <name>status_sdp_error_chain</name>
+          <initializer>= ((uint32_t)( status_group_sdp )*1000U + (uint32_t)( 10 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Error packet chain </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga85c1893697b201be6423e3534d866636ac7fcabcafec2fd9b8f01557b0b17156e" prot="public">
+          <name>status_sdp_error_invalid_mac</name>
+          <initializer>= ((uint32_t)( status_group_sdp )*1000U + (uint32_t)( 11 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid Message Authentication Code (MAC) </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga85c1893697b201be6423e3534d866636a460a1184ebaf7cd2aa9af27f8d1cbbb8" prot="public">
+          <name>status_sdp_invalid_alg</name>
+          <initializer>= ((uint32_t)( status_group_sdp )*1000U + (uint32_t)( 12 ))</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid algorithm </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>SDP error status definitions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="194" column="1" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="194" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__sdp__interface_1ga3756a197b58580042efaea0d4c927897" prot="public" static="no" strong="no">
+        <type></type>
+        <name>sdp_operation_t</name>
+        <enumvalue id="group__sdp__interface_1gga3756a197b58580042efaea0d4c927897ab2326974ee17fdfc480e7f120b7282e9" prot="public">
+          <name>sdp_op_invalid</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga3756a197b58580042efaea0d4c927897ac909e029661cee37bd4bffb41184844e" prot="public">
+          <name>sdp_op_cipher_only</name>
+          <initializer>= SDP_SDPCR_CIPHEN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga3756a197b58580042efaea0d4c927897afc91056f4a1f900ec02860034ba46c32" prot="public">
+          <name>sdp_op_hash_only</name>
+          <initializer>= SDP_SDPCR_HASHEN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga3756a197b58580042efaea0d4c927897ad7dbc4c5dec56ba982c2a52ee0681d86" prot="public">
+          <name>sdp_op_memcpy_only</name>
+          <initializer>= SDP_SDPCR_MCPEN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga3756a197b58580042efaea0d4c927897a8ffa08fa3021f0fa29d08453cf68b453" prot="public">
+          <name>sdp_op_memfill_only</name>
+          <initializer>= SDP_SDPCR_CONFEN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga3756a197b58580042efaea0d4c927897a139cf9c9aa4f54247fe7f8493e6c55ee" prot="public">
+          <name>sdp_op_cipher_hash</name>
+          <initializer>= SDP_SDPCR_CIPHEN_MASK | SDP_SDPCR_HASHEN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__sdp__interface_1gga3756a197b58580042efaea0d4c927897abe5aa5a7ebf2ed91286278f09c917357" prot="public">
+          <name>sdp_op_copy_hash</name>
+          <initializer>= SDP_SDPCR_MCPEN_MASK | SDP_SDPCR_HASHEN_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>SDP Operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="214" column="1" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="214" bodyend="222"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__sdp__interface_1gab26373f1b0a85e72718dc600370dc5d3" prot="public" static="no">
+        <type><ref refid="group__sdp__interface_1ga8df04ef8ae870747d0cf6e72cb9d08a8" kindref="member">sdp_crypto_key_bits_t</ref></type>
+        <definition>typedef sdp_crypto_key_bits_t sdp_aes_key_bits_t</definition>
+        <argsstring></argsstring>
+        <name>sdp_aes_key_bits_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="37" column="31" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__sdp__interface_1ga591b507fd9311948ba3c68fbc175dcb2" prot="public" static="no">
+        <type><ref refid="group__sdp__interface_1ga8df04ef8ae870747d0cf6e72cb9d08a8" kindref="member">sdp_crypto_key_bits_t</ref></type>
+        <definition>typedef sdp_crypto_key_bits_t sdp_sm4_key_bits_t</definition>
+        <argsstring></argsstring>
+        <name>sdp_sm4_key_bits_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="39" column="31" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__sdp__interface_1ga8fa52f2ebc84e79a5f1e43c1d89ccdab" prot="public" static="no">
+        <type><ref refid="group__sdp__interface_1ga7703a60c41664731c2419a25a110ac41" kindref="member">sdp_crypto_op_t</ref></type>
+        <definition>typedef sdp_crypto_op_t sdp_aes_op_t</definition>
+        <argsstring></argsstring>
+        <name>sdp_aes_op_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="53" column="25" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__sdp__interface_1ga6e5749a1f05b23675ef9e38b5cb5b32b" prot="public" static="no">
+        <type>struct _sdp_packet_struct</type>
+        <definition>typedef struct _sdp_packet_struct sdp_pkt_struct_t</definition>
+        <argsstring></argsstring>
+        <name>sdp_pkt_struct_t</name>
+        <briefdescription>
+<para>SDP Command Packet structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="154" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__sdp__interface_1ga848c82867ca6e64f519699b37713b15a" prot="public" static="no">
+        <type><ref refid="structsdp__crypto__ctx__t" kindref="compound">sdp_crypto_ctx_t</ref></type>
+        <definition>typedef sdp_crypto_ctx_t sdp_aes_ctx_t</definition>
+        <argsstring></argsstring>
+        <name>sdp_aes_ctx_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="170" column="26" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__sdp__interface_1gadfe1b09c767d64a7c057197fe7309eb6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sdp_enable_interrupt</definition>
+        <argsstring>(SDP_Type *base)</argsstring>
+        <name>sdp_enable_interrupt</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>Enable SDP interrupt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="260" column="20" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="260" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga8694c92870a0ff997e427ea703c2c573" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sdp_disable_interrupt</definition>
+        <argsstring>(SDP_Type *base)</argsstring>
+        <name>sdp_disable_interrupt</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>Disable SDP interrupt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="269" column="20" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="269" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga923359a9d25d9ce04e038801373bb1f3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sdp_set_key_index</definition>
+        <argsstring>(SDP_Type *base, uint32_t key_index)</argsstring>
+        <name>sdp_set_key_index</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>key_index</declname>
+        </param>
+        <briefdescription>
+<para>Set the Crypto Key Index in SDP. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP key index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="279" column="20" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="279" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga61735d8c8e28ea237b752f0e91202eb0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sdp_write_key</definition>
+        <argsstring>(SDP_Type *base, uint32_t key_index, uint32_t key_bits, const uint32_t *crypto_key)</argsstring>
+        <name>sdp_write_key</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>key_index</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>key_bits</declname>
+        </param>
+        <param>
+          <type>const uint32_t *</type>
+          <declname>crypto_key</declname>
+        </param>
+        <briefdescription>
+<para>Write SDP key to specified SDP Key RAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key Index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key bits, valid value: 128, 256 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">crypto_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Crypto Key buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="291" column="20" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="291" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1gad0590d3e4a1d0091659c7ac8ae0c2202" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sdp_write_hash_digest</definition>
+        <argsstring>(SDP_Type *base, const uint32_t *digest, uint32_t num_words)</argsstring>
+        <name>sdp_write_hash_digest</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const uint32_t *</type>
+          <declname>digest</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>num_words</declname>
+        </param>
+        <briefdescription>
+<para>Write the HASH digest result to SDP. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">digest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HASH digest </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">num_words</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Digest size in words </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="315" column="20" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="315" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga5c152bc4bb2c91f80818b5ba2883aa69" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sdp_get_hash_digest</definition>
+        <argsstring>(SDP_Type *base, uint32_t *digest, uint32_t num_words)</argsstring>
+        <name>sdp_get_hash_digest</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>digest</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>num_words</declname>
+        </param>
+        <briefdescription>
+<para>Read the HASH digest result from SDP. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">digest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HASH digest </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">num_words</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Digest size in words </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="328" column="20" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="328" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga470de9e5b50a2aab78ae6777024dea90" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sdp_write_cipher_iv</definition>
+        <argsstring>(SDP_Type *base, const uint32_t *iv)</argsstring>
+        <name>sdp_write_cipher_iv</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const uint32_t *</type>
+          <declname>iv</declname>
+        </param>
+        <briefdescription>
+<para>Write the cipher IV to SDP. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="340" column="20" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="340" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1gaf79d47fa8be736b1b9a70b475d6f8b00" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sdp_clear_status</definition>
+        <argsstring>(SDP_Type *base, uint32_t mask)</argsstring>
+        <name>sdp_clear_status</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Clear SDP status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Status Mask </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="352" column="20" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="352" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1gaac071428ac42d171db72091d9ad0f68e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t sdp_get_status</definition>
+        <argsstring>(SDP_Type *base)</argsstring>
+        <name>sdp_get_status</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>Get SDP status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SDP status </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="363" column="24" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="363" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga4315481c2f0a798f3f55a3547c6f280b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_init</definition>
+        <argsstring>(SDP_Type *base)</argsstring>
+        <name>sdp_init</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the SDP controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="373" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="133" bodyend="143" declfile="drivers/inc/hpm_sdp_drv.h" declline="373" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga4d5276bc1c826ea3dc3ab130836c6afd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_deinit</definition>
+        <argsstring>(SDP_Type *base)</argsstring>
+        <name>sdp_deinit</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>De-initialize the SDP controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="380" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="145" bodyend="153" declfile="drivers/inc/hpm_sdp_drv.h" declline="380" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga46df53ae0c3e88655999f5e5e398d52a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_aes_set_key</definition>
+        <argsstring>(SDP_Type *base, sdp_aes_ctx_t *aes_ctx, const uint8_t *key, sdp_aes_key_bits_t key_bits, uint32_t key_idx)</argsstring>
+        <name>sdp_aes_set_key</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="group__sdp__interface_1ga848c82867ca6e64f519699b37713b15a" kindref="member">sdp_aes_ctx_t</ref> *</type>
+          <declname>aes_ctx</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="group__sdp__interface_1ga8df04ef8ae870747d0cf6e72cb9d08a8" kindref="member">sdp_aes_key_bits_t</ref></type>
+          <declname>key_bits</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>key_idx</declname>
+        </param>
+        <briefdescription>
+<para>Set the AES key for the SDP AES operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aes_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AES operation context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AES key </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AES key-bit option </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AES key index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="391" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="155" bodyend="213" declfile="drivers/inc/hpm_sdp_drv.h" declline="391" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1gabb01a7313079b4d535fe1fdeb0de76cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_aes_crypt_ecb</definition>
+        <argsstring>(SDP_Type *base, sdp_aes_ctx_t *aes_ctx, sdp_aes_op_t op, uint32_t len, const uint8_t *in, uint8_t *out)</argsstring>
+        <name>sdp_aes_crypt_ecb</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="group__sdp__interface_1ga848c82867ca6e64f519699b37713b15a" kindref="member">sdp_aes_ctx_t</ref> *</type>
+          <declname>aes_ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="group__sdp__interface_1ga7703a60c41664731c2419a25a110ac41" kindref="member">sdp_aes_op_t</ref></type>
+          <declname>op</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>Perform the basic AES ECB operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aes_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AES operation context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AES operation option </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AES data length in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="426" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="238" bodyend="298" declfile="drivers/inc/hpm_sdp_drv.h" declline="426" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1gaf0cc771c288306509b24a650917283a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_aes_crypt_cbc</definition>
+        <argsstring>(SDP_Type *base, sdp_aes_ctx_t *aes_ctx, sdp_aes_op_t op, uint32_t length, const uint8_t iv[16], const uint8_t *input, uint8_t *output)</argsstring>
+        <name>sdp_aes_crypt_cbc</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="group__sdp__interface_1ga848c82867ca6e64f519699b37713b15a" kindref="member">sdp_aes_ctx_t</ref> *</type>
+          <declname>aes_ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="group__sdp__interface_1ga7703a60c41664731c2419a25a110ac41" kindref="member">sdp_aes_op_t</ref></type>
+          <declname>op</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <declname>iv</declname>
+          <array>[16]</array>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Perform the AES CBC operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aes_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AES operation context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AES operation option </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AES data length in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial vector/nonce </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="458" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="300" bodyend="369" declfile="drivers/inc/hpm_sdp_drv.h" declline="458" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1gade0b1187a0b53baafc71efd07b3995c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_aes_crypt_ctr</definition>
+        <argsstring>(SDP_Type *base, sdp_aes_ctx_t *aes_ctx, uint8_t *nonce_counter, uint8_t *input, uint8_t *output, uint32_t length)</argsstring>
+        <name>sdp_aes_crypt_ctr</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="group__sdp__interface_1ga848c82867ca6e64f519699b37713b15a" kindref="member">sdp_aes_ctx_t</ref> *</type>
+          <declname>aes_ctx</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>nonce_counter</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Perform the AES-CTR operation See NIST Special Publication800-38A for more details. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aes_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AES operation context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">nonce_counter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AES-CTR nonce/counter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of data for AES-CTR operation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="492" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="384" bodyend="417" declfile="drivers/inc/hpm_sdp_drv.h" declline="492" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga4dfba82c7a94c09311819bc8f1e009df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_aes_ccm_generate_encrypt</definition>
+        <argsstring>(SDP_Type *base, sdp_aes_ctx_t *aes_ctx, uint32_t input_len, const uint8_t *iv, uint32_t iv_len, const uint8_t *aad, uint32_t aad_len, const uint8_t *input, uint8_t *output, uint8_t *tag, uint32_t tag_len)</argsstring>
+        <name>sdp_aes_ccm_generate_encrypt</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="group__sdp__interface_1ga848c82867ca6e64f519699b37713b15a" kindref="member">sdp_aes_ctx_t</ref> *</type>
+          <declname>aes_ctx</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>input_len</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>iv</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>iv_len</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>aad</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>aad_len</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>tag_len</declname>
+        </param>
+        <briefdescription>
+<para>Perform the AES-CCM generate and encrypt See NIST Special Publication 800-38C for more details. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aes_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AES operation context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input data length in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">iv_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial vector length in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional Authentication data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aad_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional authentication data size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input data buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MAC buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tag_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tag/MAC size in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="529" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="612" bodyend="636" declfile="drivers/inc/hpm_sdp_drv.h" declline="529" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga489ecaa21d6ef7959d1c54035f1ab9ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_aes_ccm_decrypt_verify</definition>
+        <argsstring>(SDP_Type *base, sdp_aes_ctx_t *aes_ctx, uint32_t input_len, const uint8_t *iv, uint32_t iv_len, const uint8_t *aad, uint32_t aad_len, const uint8_t *input, uint8_t *output, const uint8_t *tag, uint32_t tag_len)</argsstring>
+        <name>sdp_aes_ccm_decrypt_verify</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="group__sdp__interface_1ga848c82867ca6e64f519699b37713b15a" kindref="member">sdp_aes_ctx_t</ref> *</type>
+          <declname>aes_ctx</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>input_len</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>iv</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>iv_len</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>aad</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>aad_len</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>tag_len</declname>
+        </param>
+        <briefdescription>
+<para>Perform the AES-CCM decrypt and verify See NIST Special Publication 800-38C for more details. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aes_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AES operation context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input data length in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">iv_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial vector length in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional Authentication data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">aad_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional authentication data size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input data buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MAC buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tag_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tag/MAC size in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="577" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="654" bodyend="694" declfile="drivers/inc/hpm_sdp_drv.h" declline="577" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga54cb70aa4500002c9f0d2f98b97ef121" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_memcpy</definition>
+        <argsstring>(SDP_Type *base, sdp_dma_ctx_t *sdp_ctx, void *dst, const void *src, uint32_t length)</argsstring>
+        <name>sdp_memcpy</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="structsdp__dma__ctx__t" kindref="compound">sdp_dma_ctx_t</ref> *</type>
+          <declname>sdp_ctx</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Perform the DMA accelerated memcpy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">sdp_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP DMA context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination address for memcpy operation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source address for memcpy operation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data to be copied </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="617" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="904" bodyend="944" declfile="drivers/inc/hpm_sdp_drv.h" declline="617" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga6afd14bee029f2a1857529f314cf80b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_memset</definition>
+        <argsstring>(SDP_Type *base, sdp_dma_ctx_t *sdp_ctx, void *dst, uint8_t pattern, uint32_t length)</argsstring>
+        <name>sdp_memset</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="structsdp__dma__ctx__t" kindref="compound">sdp_dma_ctx_t</ref> *</type>
+          <declname>sdp_ctx</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>pattern</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Perform the DMA accelerated memset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">sdp_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP DMA context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP destination address for memset operation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pattern</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pattern for memset operation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the memory for memset operation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="628" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="946" bodyend="982" declfile="drivers/inc/hpm_sdp_drv.h" declline="628" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1gaddc624a4f1b3e898166eb8840ddba5de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_hash_init</definition>
+        <argsstring>(SDP_Type *base, sdp_hash_ctx_t *hash_ctx, sdp_hash_alg_t alg)</argsstring>
+        <name>sdp_hash_init</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="structsdp__hash__ctx__t" kindref="compound">sdp_hash_ctx_t</ref> *</type>
+          <declname>hash_ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="group__sdp__interface_1gaab2a0c515a472eef8c7e5cb4f1d7eee4" kindref="member">sdp_hash_alg_t</ref></type>
+          <declname>alg</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the HASH engine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hash_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HASH operation context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash algorithm </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. status_success or status_invalid_argument </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="637" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="696" bodyend="718" declfile="drivers/inc/hpm_sdp_drv.h" declline="637" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga3eca6af1fced0bab36655bd42d237a4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_hash_update</definition>
+        <argsstring>(SDP_Type *base, sdp_hash_ctx_t *hash_ctx, const uint8_t *data, uint32_t length)</argsstring>
+        <name>sdp_hash_update</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="structsdp__hash__ctx__t" kindref="compound">sdp_hash_ctx_t</ref> *</type>
+          <declname>hash_ctx</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Compute the HASH digest. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hash_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HASH operation context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data for HASH computing </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data size for HASH computing</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="648" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="813" bodyend="844" declfile="drivers/inc/hpm_sdp_drv.h" declline="648" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga112d4ab7ac0cfba065169b2ef44c49a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_hash_finish</definition>
+        <argsstring>(SDP_Type *base, sdp_hash_ctx_t *hash_ctx, uint8_t *digest)</argsstring>
+        <name>sdp_hash_finish</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="structsdp__hash__ctx__t" kindref="compound">sdp_hash_ctx_t</ref> *</type>
+          <declname>hash_ctx</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>digest</declname>
+        </param>
+        <briefdescription>
+<para>Finish the HASH calculation and output the digest. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hash_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HASH operation context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">digest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Digest buffer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="658" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="857" bodyend="902" declfile="drivers/inc/hpm_sdp_drv.h" declline="658" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga8ef05d86de822df8b6e64e5ca100b2dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_wait_done</definition>
+        <argsstring>(SDP_Type *base)</argsstring>
+        <name>sdp_wait_done</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>Wait until the SDP operation gets done. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="666" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="107" bodyend="131" declfile="drivers/inc/hpm_sdp_drv.h" declline="666" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__sdp__interface_1ga7371a483c2570e98902b168207c10848" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sdp_trigger_action</definition>
+        <argsstring>(SDP_Type *base, const sdp_action_t *action, const sdp_pkt_struct_t *cmd_pkt)</argsstring>
+        <name>sdp_trigger_action</name>
+        <param>
+          <type><ref refid="structSDP__Type" kindref="compound">SDP_Type</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structsdp__action__t" kindref="compound">sdp_action_t</ref> *</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__sdp__interface_1ga6e5749a1f05b23675ef9e38b5cb5b32b" kindref="member">sdp_pkt_struct_t</ref> *</type>
+          <declname>cmd_pkt</declname>
+        </param>
+        <briefdescription>
+<para>Trigger SDP operation via the specified SDP packet description. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>1. The Command Packet List should be in non-cacheable memory<orderedlist>
+<listitem><para>This is a non-blocking API, users should confirm whether action completed or not by checking STA register in SDP </para>
+</listitem></orderedlist>
+</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP action </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmd_pkt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SDP Command packet description</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>API execution status. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="680" column="12" bodyfile="drivers/src/hpm_sdp_drv.c" bodystart="984" bodyend="1081" declfile="drivers/inc/hpm_sdp_drv.h" declline="680" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__sdp__interface_1ga7b65d39b4e3e3b991ad75149530595a9" prot="public" static="no">
+        <name>HASH_BLOCK_SIZE</name>
+        <initializer>(64U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hash block size in bytes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="114" column="9" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__sdp__interface_1gaf19ab913a847ad1e91c5291215116de1" prot="public" static="no">
+        <name>AES_BLOCK_SIZE</name>
+        <initializer>(16U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>AES block size in bytes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="115" column="9" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__sdp__interface_1gaf0c555c508d898596911c3b7ec01fe74" prot="public" static="no">
+        <name>AES_128_KEY_SIZE</name>
+        <initializer>(0x10U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>AES 128-bit key size in bytes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="116" column="9" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__sdp__interface_1gaf503c3f340dbc2edc8134997943456d0" prot="public" static="no">
+        <name>AES_256_KEY_SIZE</name>
+        <initializer>(0x20U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>AES 256-bit key size in bytes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="117" column="9" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__sdp__interface_1gae6af6c781da311d81ddbd242f068c697" prot="public" static="no">
+        <name>SM4_BLOCK_SIZE</name>
+        <initializer>(<ref refid="hpm__sdp__drv_8c_1af19ab913a847ad1e91c5291215116de1" kindref="member">AES_BLOCK_SIZE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM4 block size in bytes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="119" column="9" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__sdp__interface_1gab2c7defe2c4ca8e3991bb7e2efaf31f9" prot="public" static="no">
+        <name>SM4_KEY_SIZE</name>
+        <initializer>(<ref refid="group__sdp__interface_1gaf0c555c508d898596911c3b7ec01fe74" kindref="member">AES_128_KEY_SIZE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM4 Key size in bytes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="120" column="9" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__sdp__interface_1gac27e0b37d01ea11ec337a0ae6e0e63ef" prot="public" static="no">
+        <name>SDP_PKT_CTRL_DERSEMA_MASK</name>
+        <initializer>(1U &lt;&lt; 2)</initializer>
+        <briefdescription>
+<para>Bitfield definitions for the PKT_CTRL. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="125" column="9" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__sdp__interface_1ga71a87425d71b51399de6995e9ba4872d" prot="public" static="no">
+        <name>SDP_PKT_CTRL_CHAIN_MASK</name>
+        <initializer>(1U &lt;&lt; 3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="126" column="9" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__sdp__interface_1gad6ef9125058efa497a90f0528dff9c0b" prot="public" static="no">
+        <name>SDP_PKT_CTRL_HASHINIT_MASK</name>
+        <initializer>(1U &lt;&lt; 4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="127" column="9" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__sdp__interface_1ga484e51b4454437c30a7cd5f7b1814479" prot="public" static="no">
+        <name>SDP_PKT_CTRL_HASHFINISH_MASK</name>
+        <initializer>(1U &lt;&lt; 5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="128" column="9" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__sdp__interface_1ga5606cd14ab32a74f06fe204b3dba5094" prot="public" static="no">
+        <name>SDP_PKT_CTRL_CIPHIV_MASK</name>
+        <initializer>(1U &lt;&lt; 6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_sdp_drv.h" line="129" column="9" bodyfile="drivers/inc/hpm_sdp_drv.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SDP driver APIs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

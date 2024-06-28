@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8. HPM6800EVK开发板 &mdash; HPMico Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="9. HPM6E00EVK开发板" href="../hpm6e00evk/README_zh.html" />
+    <link rel="prev" title="7. HPM5301EVKLITE开发板" href="../hpm5301evklite/README_zh.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../get_started.html">使用说明</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_zh.html">开发板介绍</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../hpm6750evk/README_zh.html">1. HPM6750EVK开发板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpm6750evk2/README_zh.html">2. HPM6750EVK2开发板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpm6750evkmini/README_zh.html">3. HPM6750EVKMINI开发板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpm6300evk/README_zh.html">4. HPM6300EVK开发板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpm6200evk/README_zh.html">5. HPM6200EVK开发板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpm5300evk/README_zh.html">6. HPM5300EVK开发板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpm5301evklite/README_zh.html">7. HPM5301EVKLITE开发板</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8. HPM6800EVK开发板</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">8.1. 概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">8.2. 板上硬件资源</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sw2">8.3. 拨码开关 SW2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lab-hpm6800-evk-board">8.4. 按键</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">8.5. 插件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">8.6. 引脚描述</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hpm6e00evk/README_zh.html">9. HPM6E00EVK开发板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extension/README_zh.html">10. 扩展电路板</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../samples/index_zh.html">例程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../samples/drivers/index_zh.html">驱动示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_doc.html">SDK API 参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">HPMico Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index_zh.html">开发板介绍</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">8. </span>HPM6800EVK开发板</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/boards/hpm6800evk/README_zh.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="hpm6800evk">
+<h1><span class="section-number">8. </span>HPM6800EVK开发板<a class="headerlink" href="#hpm6800evk" title="Permalink to this heading"></a></h1>
+<section id="id1">
+<h2><span class="section-number">8.1. </span>概述<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>HPM6800是一款主频达600MHz的单核微控制器。该芯片拥有最大1M字节的连续片上RAM，并集成了丰富的存储接口，如SDRAM，Quad SPI NOR flash， SD/eMMC卡。同时它也提供多种音视频接口包括LCD显示，像素DMA，摄像头以及I2S音频接口。</p>
+<p><img alt="hpm6800evk" src="../../_images/hpm6800evk.png" /></p>
+</section>
+<section id="id2">
+<h2><span class="section-number">8.2. </span>板上硬件资源<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>HPM6800 微控制器 (主频600Mhz, 1M片上SRAM)</p></li>
+<li><p>板载存储</p>
+<ul>
+<li><p>512MB SDRAM (DDR3L 16bits)</p></li>
+<li><p>16MB Quad SPI NOR Flash</p></li>
+<li><p>16GB eMMC</p></li>
+</ul>
+</li>
+<li><p>显示/摄像头</p>
+<ul>
+<li><p>LCD接口</p></li>
+<li><p>MIPI-DSI</p></li>
+<li><p>MIPI-CSI</p></li>
+<li><p>摄像头(DVP)接口</p></li>
+</ul>
+</li>
+<li><p>以太网</p>
+<ul>
+<li><p>1000 Mbits PHY</p></li>
+</ul>
+</li>
+<li><p>USB</p>
+<ul>
+<li><p>USB type C (USB 2.0 OTG) connector x1</p></li>
+</ul>
+</li>
+<li><p>音频</p>
+<ul>
+<li><p>Line in</p></li>
+<li><p>Mic</p></li>
+<li><p>Speaker</p></li>
+<li><p>DAO</p></li>
+</ul>
+</li>
+<li><p>其他</p>
+<ul>
+<li><p>TF卡槽</p></li>
+<li><p>RGB LED</p></li>
+<li><p>CAN</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="sw2">
+<h2><span class="section-number">8.3. </span>拨码开关 SW2<a class="headerlink" href="#sw2" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Bit 1，2控制启动模式</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Bit[2:1]</p></th>
+<th class="head"><p>功能描述</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>OFF, OFF</p></td>
+<td><p>Quad SPI NOR flash 启动</p></td>
+</tr>
+<tr class="row-odd"><td><p>OFF, ON</p></td>
+<td><p>eMMC启动</p></td>
+</tr>
+<tr class="row-even"><td><p>ON, OFF</p></td>
+<td><p>在系统编程</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lab-hpm6800-evk-board">
+<span id="id3"></span><h2><span class="section-number">8.4. </span>按键<a class="headerlink" href="#lab-hpm6800-evk-board" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default" id="lab-hpm6800-evk-board-buttons">
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>USER BUTTON (KEY1)</p></td>
+<td><p>GPIO 按键</p></td>
+</tr>
+<tr class="row-odd"><td><p>WBUTN (KEY2)</p></td>
+<td><p>WAKE UP 按键</p></td>
+</tr>
+<tr class="row-even"><td><p>RESETN (SW1)</p></td>
+<td><p>Reset 按键</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id4">
+<h2><span class="section-number">8.5. </span>插件<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p>ADC/DAC参考电压连接</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>连接</p></th>
+<th class="head"><p>描述</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>J18</p></td>
+<td><p>参考电压</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>eMMC电压选择</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>连接</p></th>
+<th class="head"><p>描述</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>J6</p></td>
+<td><p>eMMC电压3.3V和1.8V选择</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p>注：在测eMMC示例时需要将跳帽短接VCCQ 和1.8V</p>
+</section>
+<section id="id5">
+<h2><span class="section-number">8.6. </span>引脚描述<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>UART0串口引脚：</p></li>
+</ul>
+<p>UART0用于调试控制台串口。</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>功能</p></th>
+<th class="head"><p>引脚</p></th>
+<th class="head"><p>位置</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UART0.TX</p></td>
+<td><p>PA00</p></td>
+<td><p>DEBUGUART0</p></td>
+</tr>
+<tr class="row-odd"><td><p>UART0.RX</p></td>
+<td><p>PA01</p></td>
+<td><p>DEBUGUART0</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>UART3串口引脚：</p></li>
+</ul>
+<p>UART3用于一些使用UART的功能测试，例如MICROROS_UART，USB_CDC_ACM_UART, MODBUS_RTU等。</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>功能</p></th>
+<th class="head"><p>引脚</p></th>
+<th class="head"><p>位置</p></th>
+<th class="head"><p>备注</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UART3.TX</p></td>
+<td><p>PE15</p></td>
+<td><p>P2[8]</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>UART3.RX</p></td>
+<td><p>PE14</p></td>
+<td><p>P2[10]</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>UART3.break</p></td>
+<td><p>PE04</p></td>
+<td><p>P2[24]</p></td>
+<td><p>产生uart break信号</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>PUART串口引脚：</p></li>
+</ul>
+<p>PUART用于低功耗测试，例如唤醒等。</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>功能</p></th>
+<th class="head"><p>引脚</p></th>
+<th class="head"><p>位置</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PUART.TX</p></td>
+<td><p>PY00</p></td>
+<td><p>P2[32]</p></td>
+</tr>
+<tr class="row-odd"><td><p>PUART.RX</p></td>
+<td><p>PY01</p></td>
+<td><p>P2[29]</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>SPI引脚：</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>功能</p></th>
+<th class="head"><p>引脚</p></th>
+<th class="head"><p>位置</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SPI3.CSN</p></td>
+<td><p>PE04</p></td>
+<td><p>P2[24]</p></td>
+</tr>
+<tr class="row-odd"><td><p>SPI3.SCLK</p></td>
+<td><p>PE05</p></td>
+<td><p>P2[23]</p></td>
+</tr>
+<tr class="row-even"><td><p>SPI3.MISO</p></td>
+<td><p>PE06</p></td>
+<td><p>P2[21]</p></td>
+</tr>
+<tr class="row-odd"><td><p>SPI3.MOSI</p></td>
+<td><p>PE07</p></td>
+<td><p>P2[19]</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>I2C引脚：</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>功能</p></th>
+<th class="head"><p>引脚</p></th>
+<th class="head"><p>位置</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>I2C1.SCL</p></td>
+<td><p>PE13</p></td>
+<td><p>P2[5]</p></td>
+</tr>
+<tr class="row-odd"><td><p>I2C1.SDA</p></td>
+<td><p>PE12</p></td>
+<td><p>P2[3]</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>ADC16引脚</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>功能</p></th>
+<th class="head"><p>引脚</p></th>
+<th class="head"><p>位置</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ADC0.INA8</p></td>
+<td><p>PE16</p></td>
+<td><p>J19[15]</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>GPTMR 引脚</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>功能</p></th>
+<th class="head"><p>引脚</p></th>
+<th class="head"><p>位置</p></th>
+<th class="head"><p>备注</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GPTMR2.CAPT_0</p></td>
+<td><p>PE22</p></td>
+<td><p>J19[9]</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>GPTMR2.COMP_0</p></td>
+<td><p>PE23</p></td>
+<td><p>J19[12]</p></td>
+<td><p>SPI模拟I2S的MCLK</p></td>
+</tr>
+<tr class="row-even"><td><p>GPTMR2.COMP_1</p></td>
+<td><p>PE24</p></td>
+<td><p>J19[10]</p></td>
+<td><p>SPI模拟I2S的LRCK</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPTMR2.COMP_2</p></td>
+<td><p>PE26</p></td>
+<td><p>J19[6]</p></td>
+<td><p>SPI模拟I2S的BLCK</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>耳机接口</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>功能</p></th>
+<th class="head"><p>位置</p></th>
+<th class="head"><p>标准</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>3.5mm耳机接口</p></td>
+<td><p>J4</p></td>
+<td><p>OMTP</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>音频输入接口</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>功能</p></th>
+<th class="head"><p>位置</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>麦克风</p></td>
+<td><p>P1</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>DAO接口</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>功能</p></th>
+<th class="head"><p>位置</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>喇叭接口(左)</p></td>
+<td><p>J9</p></td>
+</tr>
+<tr class="row-odd"><td><p>喇叭接口(右)</p></td>
+<td><p>J10</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>以太网PPS信号引脚</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>功能</p></th>
+<th class="head"><p>位置</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ENET0.EVTO0</p></td>
+<td><p>J20[7]</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>CAN 通信接口</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>功能</p></th>
+<th class="head"><p>引脚</p></th>
+<th class="head"><p>位置</p></th>
+<th class="head"><p>输出</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MCAN3.TXD</p></td>
+<td><p>PD15</p></td>
+<td><p>U25[1]</p></td>
+<td><p>CAN.H J13[3]</p></td>
+</tr>
+<tr class="row-odd"><td><p>MCAN3.RXD</p></td>
+<td><p>PD14</p></td>
+<td><p>U25[4]</p></td>
+<td><p>CAN.L J13[2]</p></td>
+</tr>
+<tr class="row-even"><td><p>MCAN3.STBY</p></td>
+<td><p>PD13</p></td>
+<td><p>U25[8]</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Tamper 接口</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>功能</p></th>
+<th class="head"><p>引脚</p></th>
+<th class="head"><p>位置</p></th>
+<th class="head"><p>模式</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TAMP.04</p></td>
+<td><p>PZ04</p></td>
+<td><p>P2[35]</p></td>
+<td><p>主动模式</p></td>
+</tr>
+<tr class="row-odd"><td><p>TAMP.05</p></td>
+<td><p>PZ05</p></td>
+<td><p>P2[38]</p></td>
+<td><p>主动模式</p></td>
+</tr>
+<tr class="row-even"><td><p>TAMP.06</p></td>
+<td><p>PZ06</p></td>
+<td><p>P2[37]</p></td>
+<td><p>被动模式</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>SPI模拟I2S CS引脚</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>功能</p></th>
+<th class="head"><p>位置</p></th>
+<th class="head"><p>备注</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PE27</p></td>
+<td><p>J19[5]</p></td>
+<td><p>控制SPI从机CS的引脚</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, HPMicro.
+      <span class="lastupdated">Last updated on Jun 28, 2024.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

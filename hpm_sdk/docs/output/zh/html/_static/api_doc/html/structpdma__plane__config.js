@@ -1,0 +1,25 @@
+var structpdma__plane__config =
+[
+    [ "background", "structpdma__plane__config.html#ab2d1a033adeb75bd0c38431ed2108e01", null ],
+    [ "buffer", "structpdma__plane__config.html#a99bae6b46aabc718a77b8f67f0fdb318", null ],
+    [ "bypass_colorspace_conversion", "structpdma__plane__config.html#a407b963a15b8cf72d254afa95da92286", null ],
+    [ "byte_swap", "structpdma__plane__config.html#ab45909c794ee9951f503bd366880c333", null ],
+    [ "byteorder", "structpdma__plane__config.html#a07666fef4dd7a27be12d5260bcc41563", null ],
+    [ "colorkey_high", "structpdma__plane__config.html#a47f46ec786851914a1ef5b807afe8248", null ],
+    [ "colorkey_low", "structpdma__plane__config.html#a3cd9cfeb98ea19b7ca94c56f72e04f30", null ],
+    [ "flip", "structpdma__plane__config.html#a05971ca365a716734cebf1d1779f5bb8", null ],
+    [ "height", "structpdma__plane__config.html#a89f70843c9ea39e67cb3ca35010e0e2e", null ],
+    [ "pitch", "structpdma__plane__config.html#aaa069c8cbc34ab84a104e22291cff785", null ],
+    [ "pixel_format", "structpdma__plane__config.html#a7b2bb7ce627119707dab0b3aea6157e3", null ],
+    [ "rotate", "structpdma__plane__config.html#a9e0f26695b7f43a4ae1c633f4f6a3033", null ],
+    [ "swap_byte3_byte1", "structpdma__plane__config.html#a8dd02d4adfc751cc8b919080268fdf03", null ],
+    [ "use_background_as_clear", "structpdma__plane__config.html#a7be3d8e12a8c6fc629b433c8ad14f152", null ],
+    [ "width", "structpdma__plane__config.html#a2c50e8ef9eff06b687dbc3f5a46618c5", null ],
+    [ "x_dec", "structpdma__plane__config.html#a22ea1e1d165167b52720d4e9acb70575", null ],
+    [ "x_offset", "structpdma__plane__config.html#adfe6a087a20824c1998350af3e8ab538", null ],
+    [ "x_scale", "structpdma__plane__config.html#a1083d5f2f2ef18f6a9033f33356f7983", null ],
+    [ "y_dec", "structpdma__plane__config.html#a2f92ca1a8661c1a3723654cb365bd073", null ],
+    [ "y_offset", "structpdma__plane__config.html#ae93541c1c594e3c92e9b84fe706483a4", null ],
+    [ "y_scale", "structpdma__plane__config.html#a07f97e39aa5a79aa485d7087c72298a9", null ],
+    [ "ycbcr_mode", "structpdma__plane__config.html#af6740844f712c8667c600f5c92d354c6", null ]
+];

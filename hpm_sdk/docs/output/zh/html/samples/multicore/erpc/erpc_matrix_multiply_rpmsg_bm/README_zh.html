@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>20.3. eRPC bare metal示例 &mdash; HPMico Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/tabs.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="20.4. eRPC rtos 示例" href="../erpc_matrix_multiply_rpmsg_rtos/README_zh.html" />
+    <link rel="prev" title="20.2. Console Coremark 示例" href="../../console_coremark/README_zh.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html">
+            
+              <img src="../../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../get_started.html">使用说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../boards/index_zh.html">开发板介绍</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index_zh.html">例程</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../audio_codec/index_zh.html">1. Audio Codec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cherryrb/README_zh.html">2. CherryRB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cherryusb/index_zh.html">3. CherryUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coremark/README_zh.html">4. CoreMark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dhrystone/README_zh.html">5. Dhrystone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dma_manager/README_zh.html">6. DMA Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dsp/README_zh.html">7. DSP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../eeprom_emulation/index_zh.html">8. EEPROM Emulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../freemaster/README_zh.html">9. Freemaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../hello_world/README_zh.html">10. Hello World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../hpm_math/index_zh.html">11. HPM Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../image/index_zh.html">12. IMAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lvgl/index_zh.html">13. LVGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lwip/index_zh.html">14. lwIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../mbedtls/README_zh.html">15. Mbedtls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../memstress/index_zh.html">16. Memory Stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../microros/index_zh.html">17. Microros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modbus/index_zh.html">18. Modbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motor_ctrl/index_zh.html">19. HPM Motor Ctrl</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index_zh.html">20. Multicore</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../README_zh.html">20.1. Multicore 通用说明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../console_coremark/README_zh.html">20.2. Console Coremark 示例</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">20.3. eRPC bare metal示例</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">20.3.1. 概述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#idl">20.3.2. IDL 文件生成工程文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#client-server">20.3.3. 导入至 client/server 工程中</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">20.3.4. 生成、编译和调试多核工程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">20.3.5. 执行结果</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../erpc_matrix_multiply_rpmsg_rtos/README_zh.html">20.4. eRPC rtos 示例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../erpc_two_way_rpc_rpmsg_rtos/README_zh.html">20.5. eRPC 双向调用示例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hello/README_zh.html">20.6. Hello 示例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lvgl_coremark/README_zh.html">20.7. LVGL Coremark 示例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mbx/README_zh.html">20.8. MBX dualcore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../power_mode_switch/README_zh.html">21. Power Mode Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rgb_led/README_zh.html">22. RGB LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rom_api/index_zh.html">23. ROM API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rtos/index_zh.html">24. RTOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../segger_rtt/README_zh.html">25. Segger RTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tflm/index_zh.html">26. TensorFlowLiteMicro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tinycrypt/index_zh.html">27. Tinycrypt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tinyengine/person_obj/README_zh.html">28. Person Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tinyuf2/README_zh.html">29. TinyUF2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tinyusb/index_zh.html">30. TinyUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../touch_panel/README_zh.html">31. Touch Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../vglite/index_zh.html">32. VGLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../spi_components/index_zh.html">33. SPI_COMPONENTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../i2s_emulation/README_zh.html">34. SPI模拟I2S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../spi_sdcard/index_zh.html">35. SPI驱动SD卡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cherrysh/index_zh.html">36. CherrySH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ethercat/index_zh.html">37. EtherCAT</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../drivers/index_zh.html">驱动示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api_doc.html">SDK API 参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">HPMico Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index_zh.html">例程</a></li>
+          <li class="breadcrumb-item"><a href="../../index_zh.html"><span class="section-number">20. </span>Multicore</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">20.3. </span>eRPC bare metal示例</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/samples/multicore/erpc/erpc_matrix_multiply_rpmsg_bm/README_zh.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="erpc-bare-metal">
+<h1><span class="section-number">20.3. </span>eRPC bare metal示例<a class="headerlink" href="#erpc-bare-metal" title="Permalink to this heading"></a></h1>
+<section id="id1">
+<h2><span class="section-number">20.3.1. </span>概述<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>本工程执行eRPC示例，采用rpmsg作为传输层协议，采用mbx作为消息通知。</p>
+<p>core0作为Client端，core1作为Server端。Client端通过简单的本地函数调用使用Server端提供的函数服务。</p>
+<p>更多详细信息请参考 <a class="reference external" href="https://github.com/EmbeddedRPC/erpc">官方 eRPC github</a>和<a class="reference external" href="https://github.com/NXPmicro/rpmsg-lite">官方 rpmsg_lite github</a></p>
+<p>目前基于erpc v1.10.0和rpmsg-lite v5.0.0开发。</p>
+</section>
+<section id="idl">
+<h2><span class="section-number">20.3.2. </span>IDL 文件生成工程文件<a class="headerlink" href="#idl" title="Permalink to this heading"></a></h2>
+<p>IDL文件包含erpc调用的函数申明，本示例中的IDL文件内容如下：</p>
+<p>erpc_matrix_multiply.erpc:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/*!
+ * You can write copyrights rules here. These rules will be copied into the outputs.
+ */
+@outputDir(&quot;erpc_outputs&quot;) // output directory
+program erpc_matrix_multiply; // specify name of output files
+
+/*! This const defines the matrix size. The value has to be the same as the
+    Matrix array dimension. Do not forget to re-generate the eRPC code once the
+    matrix size is changed in the eRPC file */
+const int32 matrix_size = 5;
+
+/*! This is the matrix array type. The dimension has to be the same as the
+    matrix size const. Do not forget to re-generate the eRPC code once the
+    matrix size is changed in the eRPC file */
+type Matrix = int32[matrix_size][matrix_size];
+
+interface MatrixMultiplyService // cover functions for same topic
+{
+    erpcMatrixMultiply(in Matrix matrix1, in Matrix matrix2, out Matrix result_matrix) -&gt; void
+    oneway erpcSwitchLightLed()
+}
+</pre></div>
+</div>
+<p>更多详细语法请参考 <code class="docutils literal notranslate"><span class="pre">middleware/erpc/erpc/docs/IDL-Reference.md</span></code></p>
+<p>在该目录下（generated），执行如下命令：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">../../../../../</span><span class="n">middleware</span><span class="o">/</span><span class="n">erpc</span><span class="o">/</span><span class="n">erpc</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">erpcgen</span><span class="o">/</span><span class="n">Windows</span><span class="o">/</span><span class="n">erpcgen</span><span class="o">.</span><span class="n">exe</span> <span class="n">erpc_matrix_multiply</span><span class="o">.</span><span class="n">erpc</span>
+</pre></div>
+</div>
+<p>将会生成如下4个文件：</p>
+<ul class="simple">
+<li><p>erpc_matrix_multiply.h</p></li>
+<li><p>erpc_matrix_multiply_client.cpp</p></li>
+<li><p>erpc_matrix_multiply_server.h</p></li>
+<li><p>erpc_matrix_multiply_server.cpp</p></li>
+</ul>
+</section>
+<section id="client-server">
+<h2><span class="section-number">20.3.3. </span>导入至 client/server 工程中<a class="headerlink" href="#client-server" title="Permalink to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">project</span></code> 需要导入 <strong>erpc_matrix_multiply.h</strong> 和 <strong>erpc_matrix_multiply_client.cpp</strong> 文件。调用eRPC函数时，需要 <strong>include</strong> <strong>“erpc_matrix_multiply.h”</strong> 头文件。</p>
+<p><code class="docutils literal notranslate"><span class="pre">Server</span> <span class="pre">project</span></code> 需要导入 <strong>erpc_matrix_multiply.h</strong>, <strong>erpc_matrix_multiply_server.h</strong> 和 <strong>erpc_matrix_multiply_server.cpp</strong> 文件。 eRPC函数在 <strong>erpc_matrix_multiply_server.cpp</strong> 文件中实现。</p>
+</section>
+<section id="id2">
+<h2><span class="section-number">20.3.4. </span>生成、编译和调试多核工程<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>请参见<a class="reference internal" href="../../README_zh.html"><span class="doc std std-doc">Multicore通用说明.md</span></a></p>
+</section>
+<section id="id3">
+<h2><span class="section-number">20.3.5. </span>执行结果<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p>以HPM6750EVKMINI为例，当示例正常运行的时候，串口终端会打印如下信息:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">    Primary core started</span>
+
+<span class="go">    Copying secondary core image to destination memory: 0x1180000</span>
+<span class="go">    Starting secondary core...</span>
+
+<span class="go">    Secondary core started...</span>
+
+<span class="go">    Matrix #1</span>
+<span class="go">    =========</span>
+<span class="go">      38   13    1   10   12</span>
+<span class="go">      49   34   25   39   37</span>
+<span class="go">      16   45   17   31   32</span>
+<span class="go">      24   44    1    4   11</span>
+<span class="go">      28   35   17   15   12</span>
+
+<span class="go">    Matrix #2</span>
+<span class="go">    =========</span>
+<span class="go">      8   15   27   19   36</span>
+<span class="go">      17   10   43   33   16</span>
+<span class="go">      28   11    4   45   36</span>
+<span class="go">       5    2   17    3   46</span>
+<span class="go">      38   43    6    3   34</span>
+
+<span class="go">    eRPC request is sent to the server</span>
+
+<span class="go">    Result matrix</span>
+<span class="go">    =============</span>
+<span class="go">    1059 1247 1831 1262 2480</span>
+<span class="go">    3271 3019 3770 3406 6260</span>
+<span class="go">    2740 2315 3154 2743 4422</span>
+<span class="go">    1406 1292 2678 1998 2162</span>
+<span class="go">    1826 1503 2656 2533 3278</span>
+
+<span class="go">    Switch Light LED</span>
+<span class="go">    Press the PBUTN button to initiate the next matrix multiplication</span>
+</pre></div>
+</div>
+</li>
+<li><p>按下 PBUTN 按钮，则会输出新的计算结果，并且红绿LED会翻转。</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, HPMicro.
+      <span class="lastupdated">Last updated on Jun 28, 2024.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

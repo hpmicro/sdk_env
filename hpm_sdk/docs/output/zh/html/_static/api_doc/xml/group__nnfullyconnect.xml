@@ -1,0 +1,4021 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__nnfullyconnect" kind="group">
+    <compoundname>nnfullyconnect</compoundname>
+    <title>NN Fully Connected Functions</title>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__nnfullyconnect_1gae152194946e9497e8f4317b4d91aa0ec" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wt_mat</definition>
+        <argsstring></argsstring>
+        <name>wt_mat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14014" column="7" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14014" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__nnfullyconnect_1gac16d1989d1be934bdcc79bc2609d7b5d" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wt_row_num</definition>
+        <argsstring></argsstring>
+        <name>wt_row_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14014" column="19" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14014" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__nnfullyconnect_1gad09cca4af5af99ea8c169222a235b87f" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t bias_lshift</definition>
+        <argsstring></argsstring>
+        <name>bias_lshift</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14015" column="40" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14015" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__nnfullyconnect_1ga8dd64794329e763d76515d7434831c97" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t out_rshift</definition>
+        <argsstring></argsstring>
+        <name>out_rshift</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14015" column="52" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14015" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__nnfullyconnect_1ga602e28fc157c370e73e4df5712f9df84" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t bias</definition>
+        <argsstring></argsstring>
+        <name>bias</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14015" column="63" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14015" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__nnfullyconnect_1ga358b9ae9b3f85e1072d0938e8463e607" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t out_vec</definition>
+        <argsstring></argsstring>
+        <name>out_vec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14015" column="68" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14015" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__nnfullyconnect_1ga4972f5e62722e743bc2e14d86e130148" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t in_tmp_buf</definition>
+        <argsstring></argsstring>
+        <name>in_tmp_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14016" column="40" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14016" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__nnfullyconnect_1gab45ed3f14c58cab4076e6967ad30a332" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_s8_s8_s8_sft_bias</definition>
+        <argsstring>(const q7_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t bias_lshift, const uint16_t out_rshift, const q7_t *bias, q7_t *out_vec, q15_t *in_tmp_buf) return riscv_nn_fc_s8_s8_s8_sft_bias(in_vec</argsstring>
+        <name>hpm_nn_fc_s8_s8_s8_sft_bias</name>
+        <param>
+          <type>const q7_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>bias_lshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_rshift</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for signed 8-bit integer inputs with shift-based quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias_lshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left shift amount for the bias </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dummy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<bold>Example:</bold> <programlisting><codeline><highlight class="normal">#define<sp/>IN_SIZE<sp/>2048</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>OUT_SIZE<sp/>256</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>BIAS_LSHIFT<sp/>9</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>OUT_RSHIFT<sp/>9</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">q7_t<sp/>in_vec[IN_SIZE]<sp/>=<sp/>{...};;</highlight></codeline>
+<codeline><highlight class="normal">q7_t<sp/>wt_mat[IN_SIZE<sp/>*<sp/>OUT_SIZE]<sp/>{...};</highlight></codeline>
+<codeline><highlight class="normal">q7_t<sp/>bias[OUT_SIZE]<sp/>=<sp/>{...};</highlight></codeline>
+<codeline><highlight class="normal">q7_t<sp/>out_vec[OUT_SIZE];</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">hpm_nn_fc_s8_s8_s8_sft_bias(in_vec,<sp/>wt_mat,<sp/>IN_SIZE,<sp/>OUT_SIZE,<sp/>BIAS_LSHIFT,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>OUT_RSHIFT,<sp/>bias,<sp/>out_vec,<sp/>NULL);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14000" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1gaa1f855aee9b668ef4769eda1f60554d0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_s8_s8_s8_sft_bias_fast</definition>
+        <argsstring>(const q7_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t bias_lshift, const uint16_t out_rshift, const q7_t *bias, q7_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_s8_s8_s8_sft_bias_fast</name>
+        <param>
+          <type>const q7_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>bias_lshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_rshift</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for signed 8-bit integer inputs with interleaved multiplication and shift-based quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias_lshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left shift amount for the bias </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-vector is enabled and its size must be &quot;2 * size&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para>In this function, the input vector is multiplied by the weight matrix in interleaved formats which could be obtained by riscv_nn_fc_s8_wt_converter. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14041" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14041" bodyend="14060"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga20798f89906e5c61d8a6be867a1b72c3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_s16_s16_s16_sft_bias</definition>
+        <argsstring>(const q15_t *in_vec, const q15_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t bias_lshift, const uint16_t out_rshift, const q15_t *bias, q15_t *out_vec, q15_t *tmp_buf)</argsstring>
+        <name>hpm_nn_fc_s16_s16_s16_sft_bias</name>
+        <param>
+          <type>const q15_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q15_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>bias_lshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_rshift</declname>
+        </param>
+        <param>
+          <type>const q15_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for signed 16-bit integer inputs with shift-based quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias_lshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left shift amount for the bias </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dummy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14076" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14076" bodyend="14095"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1gaf1c0f1e99248d06ca8fed702e44aabb0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_s16_s16_s16_sft_bias_fast</definition>
+        <argsstring>(const q15_t *in_vec, const q15_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t bias_lshift, const uint16_t out_rshift, const q15_t *bias, q15_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_s16_s16_s16_sft_bias_fast</name>
+        <param>
+          <type>const q15_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q15_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>bias_lshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_rshift</declname>
+        </param>
+        <param>
+          <type>const q15_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for signed 16-bit integer inputs with interleaved multiplication and shift-based quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias_lshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left shift amount for the bias </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-vector is enabled and its size must be 4 * size. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para>In this function, the input vector is multiplied by a weight matrix in interleaved formats which could be obtained by riscv_nn_fc_s16_wt_converter. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14119" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14119" bodyend="14138"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga69f5f40bb7c91659a061155d8ae0c910" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_mat_vec_s16_s16_s8_sft_bias</definition>
+        <argsstring>(const q15_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t bias_lshift, const uint16_t out_rshift, const q7_t *bias, q15_t *out_vec, q15_t *tmp_buf)</argsstring>
+        <name>hpm_nn_fc_mat_vec_s16_s16_s8_sft_bias</name>
+        <param>
+          <type>const q15_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>bias_lshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_rshift</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This function multiplies a signed 16-bit integer input vector by a signed 8-bit integer weight matrix with shift-based quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias_lshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left shift amount for the bias </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dummy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14155" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14155" bodyend="14174"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga69a40656d6f2b497351607cd83054310" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_mat_vec_s16_s16_s8_sft_bias_fast</definition>
+        <argsstring>(const q15_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t bias_lshift, const uint16_t out_rshift, const q7_t *bias, q15_t *out_vec, q15_t *tmp_buf)</argsstring>
+        <name>hpm_nn_fc_mat_vec_s16_s16_s8_sft_bias_fast</name>
+        <param>
+          <type>const q15_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>bias_lshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_rshift</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This function multiplies a signed 16-bit integer input vector by a signed 8-bit integer weight matrix with interleaved multiplication and shift-based quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias_lshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left shift amount for the bias </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dummy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para>In this function, the input vector is multiplied by a weight matrix in interleaved formats which could be obtained by hpm_nn_fc_mat_vec_s8_wt_converter. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14197" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14197" bodyend="14216"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1gac6598c54f33cd2156828ba76e3116839" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_s8_s8_s8_sym_bias</definition>
+        <argsstring>(const q7_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, const q31_t *bias, q7_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_s8_s8_s8_sym_bias</name>
+        <param>
+          <type>const q7_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>const q31_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for signed 8-bit integer inputs/outputs with bias inputs and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output before the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scaling value for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output after the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-dsp is enabled and its size must be &quot;size&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14242" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14242" bodyend="14262"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga56b2443d32bacffe5f4e733336180656" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_s8_s16_s8_sym_bias</definition>
+        <argsstring>(const q7_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, const q31_t *bias, q15_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_s8_s16_s8_sym_bias</name>
+        <param>
+          <type>const q7_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>const q31_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for signed 8-bit integer inputs and signed 16-bit integer outputs with bias inputs and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output before the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scaling value for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output after the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-dsp is enabled and its size must be &quot;size&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14288" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14288" bodyend="14308"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1gac8fab5daa0ee54009b57c00ab40dda29" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_u8_u8_s8_sym_bias</definition>
+        <argsstring>(const u8_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, const q31_t *bias, u8_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_u8_u8_s8_sym_bias</name>
+        <param>
+          <type>const u8_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>const q31_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>u8_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for unsigned 8-bit integer inputs/outputs with bias inputs and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output before the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scaling value for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output after the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-dsp is enabled and its size must be &quot;size&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14334" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14334" bodyend="14354"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1gaab54ef128ef0662f974717b3c0ea4b08" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_u8_s8_s8_sym_bias</definition>
+        <argsstring>(const u8_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, const q31_t *bias, q7_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_u8_s8_s8_sym_bias</name>
+        <param>
+          <type>const u8_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>const q31_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for unsigned 8-bit integer inputs and signed 8-bit integer outputs with bias inputs and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output before the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scaling value for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output after the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-dsp is enabled and its size must be &quot;size&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14380" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14380" bodyend="14400"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga233a097c1621243f515aa429b86d135a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_u8_s16_s8_sym_bias</definition>
+        <argsstring>(const u8_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, const q31_t *bias, q15_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_u8_s16_s8_sym_bias</name>
+        <param>
+          <type>const u8_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>const q31_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for unsigned 8-bit integer inputs and signed 16-bit integer outputs with bias inputs and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output before the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scaling value for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output after the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-dsp is enabled and its size must be &quot;size&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14426" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14426" bodyend="14446"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga78586a92a1f2e8095cefd3496f0d723d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_s8_s8_s8_sym</definition>
+        <argsstring>(const q7_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, q7_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_s8_s8_s8_sym</name>
+        <param>
+          <type>const q7_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for signed 8-bit integer inputs/outputs with symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output before the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scaling value for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output after the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-dsp is enabled and its size must be &quot;size&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14471" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14471" bodyend="14488"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga4dc06edf735a14d76827e261d78f1481" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_s8_s16_s8_sym</definition>
+        <argsstring>(const q7_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, q15_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_s8_s16_s8_sym</name>
+        <param>
+          <type>const q7_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for signed 8-bit integer inputs and signed 16-bit integer outputs with symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output before the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scaling value for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output after the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-dsp is enabled and its size must be &quot;size&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14513" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14513" bodyend="14530"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1gaeb6989af38515f0d357b865e63b5796a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_u8_u8_s8_sym</definition>
+        <argsstring>(const u8_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, u8_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_u8_u8_s8_sym</name>
+        <param>
+          <type>const u8_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>u8_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for unsigned 8-bit integer inputs/outputs with symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output before the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scaling value for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output after the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-dsp is enabled and its size must be &quot;size&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14555" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14555" bodyend="14572"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1gaf53c113ab8461fa61dfff43d3a85ab36" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_u8_s8_s8_sym</definition>
+        <argsstring>(const u8_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, q7_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_u8_s8_s8_sym</name>
+        <param>
+          <type>const u8_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for unsigned 8-bit integer inputs and signed 8-bit integer outputs with symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output before the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scaling value for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output after the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-dsp is enabled and its size must be &quot;size&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14597" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14597" bodyend="14614"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1gae1938542936cfccfecf9e0141106cc90" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_u8_s16_s8_sym</definition>
+        <argsstring>(const u8_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, q15_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_u8_s16_s8_sym</name>
+        <param>
+          <type>const u8_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for unsigned 8-bit integer inputs and signed 16-bit integer outputs with symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output before the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scaling value for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output after the scaling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-dsp is enabled and its size must be &quot;size&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14639" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14639" bodyend="14656"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1gabd5c90ebea7d508aa4454fc001ca9df4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_s8_s8_s8_sym_bias_fast</definition>
+        <argsstring>(const q7_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, const q31_t *bias, q7_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_s8_s8_s8_sym_bias_fast</name>
+        <param>
+          <type>const q7_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>const q31_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for signed 8-bit integer inputs/outputs with bias inputs, interleaved multiplication and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of scaling for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-vector is enabled and its size must be 2 * size. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>In this function, the input vector is multiplied by the weight matrix in interleaved format which could be obtained by riscv_nn_fc_s8_wt_converter.</para>
+</listitem><listitem><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14682" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14682" bodyend="14702"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1gaf0d42131487c8ec9d25a473af238f911" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_s8_s16_s8_sym_bias_fast</definition>
+        <argsstring>(const q7_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, const q31_t *bias, q15_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_s8_s16_s8_sym_bias_fast</name>
+        <param>
+          <type>const q7_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>const q31_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for signed 8-bit integer inputs and signed 16-bit integer outputs with bias inputs, interleaved multiplication and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of scaling for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-vector is enabled and its size must be 2 * size. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>In this function, the input vector is multiplied by the weight matrix in interleaved format which could be obtained by riscv_nn_fc_s8_wt_converter.</para>
+</listitem><listitem><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14729" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14729" bodyend="14749"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga8efcbba79326680456a3a8a23aa5319b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_u8_u8_s8_sym_bias_fast</definition>
+        <argsstring>(const u8_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, const q31_t *bias, u8_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_u8_u8_s8_sym_bias_fast</name>
+        <param>
+          <type>const u8_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>const q31_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>u8_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for unsigned 8-bit integer inputs/outputs with bias inputs, interleaved multiplication and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of scaling for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-vector is enabled and its size must be 2 * size. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>In this function, the input vector is multiplied by the weight matrix in interleaved format which could be obtained by riscv_nn_fc_s8_wt_converter.</para>
+</listitem><listitem><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14775" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14775" bodyend="14795"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga2c82d87df2361eff0f7c540c6576bbc3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_u8_s8_s8_sym_bias_fast</definition>
+        <argsstring>(const u8_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, const q31_t *bias, q7_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_u8_s8_s8_sym_bias_fast</name>
+        <param>
+          <type>const u8_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>const q31_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for unsigned 8-bit integer inputs and signed 8-bit integer outputs with bias inputs, interleaved multiplication and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of scaling for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-vector is enabled and its size must be 2 * size. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>In this function, the input vector is multiplied by the weight matrix in interleaved format which could be obtained by riscv_nn_fc_s8_wt_converter.</para>
+</listitem><listitem><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14822" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14822" bodyend="14842"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga821032d36266a3897b68b10c84f3efa2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_u8_s16_s8_sym_bias_fast</definition>
+        <argsstring>(const u8_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, const q31_t *bias, q15_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_u8_s16_s8_sym_bias_fast</name>
+        <param>
+          <type>const u8_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>const q31_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for unsigned 8-bit integer inputs and signed 16-bit integer outputs with bias inputs, interleaved multiplication and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of scaling for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-vector is enabled and its size must be 2 * size. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>In this function, the input vector is multiplied by the weight matrix in interleaved format which could be obtained by riscv_nn_fc_s8_wt_converter.</para>
+</listitem><listitem><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14869" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14869" bodyend="14889"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga9a4cf02a4752fa6386ef8d81dd311672" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_s8_s8_s8_sym_fast</definition>
+        <argsstring>(const q7_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, q7_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_s8_s8_s8_sym_fast</name>
+        <param>
+          <type>const q7_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for signed 8-bit integer inputs/outputs with interleaved multiplication and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of scaling for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-vector is enabled and its size must be 2 * size. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>In this function, the input vector is multiplied by the weight matrix in interleaved format which could be obtained by riscv_nn_fc_s8_wt_converter.</para>
+</listitem><listitem><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14914" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14914" bodyend="14933"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga6ff14c83b69467ce756baa5d3f41ad2b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_s8_s16_s8_sym_fast</definition>
+        <argsstring>(const q7_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, q15_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_s8_s16_s8_sym_fast</name>
+        <param>
+          <type>const q7_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for signed 8-bit integer inputs and signed 16-bit integer outputs with interleaved multiplication and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of scaling for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-vector is enabled and its size must be 2 * size. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>In this function, the input vector is multiplied by the weight matrix in interleaved format which could be obtained by riscv_nn_fc_s8_wt_converter.</para>
+</listitem><listitem><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="14959" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="14959" bodyend="14978"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1gaee46f4d3087336e2a8234ee58f49d49c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_u8_u8_s8_sym_fast</definition>
+        <argsstring>(const u8_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, u8_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_u8_u8_s8_sym_fast</name>
+        <param>
+          <type>const u8_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>u8_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for unsigned 8-bit integer inputs/outputs with interleaved multiplication and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of scaling for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-vector is enabled and its size must be 2 * size. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>In this function, the input vector is multiplied by the weight matrix in interleaved format which could be obtained by riscv_nn_fc_s8_wt_converter.</para>
+</listitem><listitem><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="15003" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="15003" bodyend="15022"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1gaedb16fe5dc6f61eb7efd55f6b5965c0d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_u8_s8_s8_sym_fast</definition>
+        <argsstring>(const u8_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, q7_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_u8_s8_s8_sym_fast</name>
+        <param>
+          <type>const u8_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for unsigned 8-bit integer inputs and signed 8-bit integer outputs with interleaved multiplication and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of scaling for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-vector is enabled and its size must be 2 * size. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>In this function, the input vector is multiplied by the weight matrix in interleaved format which could be obtained by riscv_nn_fc_s8_wt_converter.</para>
+</listitem><listitem><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="15048" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="15048" bodyend="15067"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga5bb8c127b68f039232af600b33346c08" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_u8_s16_s8_sym_fast</definition>
+        <argsstring>(const u8_t *in_vec, const q7_t *wt_mat, const uint16_t size, const uint16_t wt_row_num, const uint16_t pre_rshift, const uint16_t out_scale, const uint16_t post_rshift, q15_t *out_vec, q15_t *in_tmp_buf)</argsstring>
+        <name>hpm_nn_fc_u8_s16_s8_sym_fast</name>
+        <param>
+          <type>const u8_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pre_rshift</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>post_rshift</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>in_tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for unsigned 8-bit integer inputs and signed 16-bit integer outputs with interleaved multiplication and symmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pre_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of scaling for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">post_rshift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right shift amount for the output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temporary buffer for input vector. It is required when -mext-vector is enabled and its size must be 2 * size. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0.</para>
+</simplesect>
+<simplesect kind="note"><para><itemizedlist>
+<listitem><para>In this function, the input vector is multiplied by the weight matrix in interleaved format which could be obtained by riscv_nn_fc_s8_wt_converter.</para>
+</listitem><listitem><para>The outputs will be two-stage shifted before being stored, i.e., out = ((out &gt;&gt; pre_rshift) *out_scale) &gt;&gt; post_rshift. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="15093" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="15093" bodyend="15112"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga78982f976203af0b163475fae6dee696" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_nn_fc_s8_wt_converter</definition>
+        <argsstring>(const q7_t *wt_mat, const uint32_t size, const uint32_t wt_row_num, q7_t *wt_mat_out)</argsstring>
+        <name>hpm_nn_fc_s8_wt_converter</name>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>wt_mat_out</declname>
+        </param>
+        <briefdescription>
+<para>This is a weight converter for those fully-connected functions with signed 8-bit weight data and named with &quot;fast&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">wt_mat_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix stored in specific ordering </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="15124" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="15124" bodyend="15134"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1gad293a3d04091a9e12e517ab0f6199633" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_nn_fc_s16_wt_converter</definition>
+        <argsstring>(const q15_t *wt_mat, const uint32_t size, const uint32_t wt_row_num, q15_t *wt_mat_out)</argsstring>
+        <name>hpm_nn_fc_s16_wt_converter</name>
+        <param>
+          <type>const q15_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>wt_mat_out</declname>
+        </param>
+        <briefdescription>
+<para>This is a weight converter for those fully-connected functions with signed 16-bit weight data and named with &quot;fast&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">wt_mat_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix stored in specific ordering </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="15146" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="15146" bodyend="15156"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga6e99539191303a876f6679af20140717" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpm_nn_fc_mat_vec_s8_wt_converter</definition>
+        <argsstring>(const q7_t *wt_mat, const uint32_t size, const uint32_t wt_row_num, q7_t *wt_mat_out)</argsstring>
+        <name>hpm_nn_fc_mat_vec_s8_wt_converter</name>
+        <param>
+          <type>const q7_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>wt_row_num</declname>
+        </param>
+        <param>
+          <type>q7_t *</type>
+          <declname>wt_mat_out</declname>
+        </param>
+        <briefdescription>
+<para>This is a weight converter for riscv_nn_fc_mat_vec_s16_s16_s8_sft_bias_fast. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_row_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">wt_mat_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the weight matrix stored in specific ordering </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="15167" column="20" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="15167" bodyend="15177"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga71ae5d2dc28459f2b8cad2c6f762bc03" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_s8_s8_s8_asym_bias</definition>
+        <argsstring>(const int8_t *in_vec, const int8_t *wt_mat, const uint16_t in_vec_col, const uint16_t wt_mat_row, const uint16_t in_vec_group, const int32_t in_offset, const int32_t wt_offset, const int32_t out_scale, const int32_t out_shift, const int32_t out_offset, const int32_t *bias, int8_t *out_vec, const int32_t act_min, const int32_t act_max, q15_t *tmp_buf)</argsstring>
+        <name>hpm_nn_fc_s8_s8_s8_asym_bias</name>
+        <param>
+          <type>const int8_t *</type>
+          <declname>in_vec</declname>
+        </param>
+        <param>
+          <type>const int8_t *</type>
+          <declname>wt_mat</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>in_vec_col</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>wt_mat_row</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>in_vec_group</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>in_offset</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>wt_offset</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>out_scale</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>out_shift</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>out_offset</declname>
+        </param>
+        <param>
+          <type>const int32_t *</type>
+          <declname>bias</declname>
+        </param>
+        <param>
+          <type>int8_t *</type>
+          <declname>out_vec</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>act_min</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>act_max</declname>
+        </param>
+        <param>
+          <type>q15_t *</type>
+          <declname>tmp_buf</declname>
+        </param>
+        <briefdescription>
+<para>This is a fully connected layer function for signed 8-bit integer inputs with bias inputs and asymmetric quantization on the outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the transposed weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec_col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of columns in the input vector (or transposed weight matrix) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_mat_row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of rows in the transposed weight matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec_group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input vector groups </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of offset to be added to the input tensor. It should be in the range of -127 to 128. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wt_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of offset to be added to the weight. It should be in the range of -127 to 128. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of sacling for the output tensor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_shift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shift amount for the output tensor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of offset to be added to the output tensor. It should be in the range of -128 to 127. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the bias vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">act_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum value to clip out the ouput tensor. It should be in the range of -128 to 127. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">act_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum value to clip out the ouput tensor. It should be in the range of -128 to 127. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tmp_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dummy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function only returns 0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="15209" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="15209" bodyend="15236"/>
+      </memberdef>
+      <memberdef kind="function" id="group__nnfullyconnect_1ga8c0bf58b24a77830b306be989754ff69" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t hpm_nn_fc_s8_s8_s8_asym_bias_get_buffer_size</definition>
+        <argsstring>(const uint16_t in_vec_col)</argsstring>
+        <name>hpm_nn_fc_s8_s8_s8_asym_bias_get_buffer_size</name>
+        <param>
+          <type>const uint16_t</type>
+          <declname>in_vec_col</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to get the needed size, in bytes, by the temporary buffer of riscv_nn_fc_s8_s8_s8_asym_bias. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_vec_col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of columns in the input vector (or transposed weight matrix) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns the needed size by the temporary buffer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="middleware/hpm_math/hpm_math.h" line="15245" column="23" bodyfile="middleware/hpm_math/hpm_math.h" bodystart="15245" bodyend="15252"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The fully connected functions multiply the input vector by a weight matrix and add a bias, if any, to the result. The supported combinations of input vector and weight matrix are (signed 8-bit integer, signed 8-bit integer), (unsigned 8-bit integer, signed 8-bit integer), (signed 16-bit integer, signed 8-bit integer), (signed 16-bit integer, signed 16-bit integer) and (16-bit half-precision floating point, 16-bit half-precision floating point). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

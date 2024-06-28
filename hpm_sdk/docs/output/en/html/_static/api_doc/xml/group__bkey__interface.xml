@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__bkey__interface" kind="group">
+    <compoundname>bkey_interface</compoundname>
+    <title>BKEY driver APIs</title>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__bkey__interface_1gaf20336dff4ed0ec08ce452cbc9ac0687" prot="public" static="no" strong="no">
+        <type></type>
+        <name>bkey_lock_type</name>
+        <enumvalue id="group__bkey__interface_1ggaf20336dff4ed0ec08ce452cbc9ac0687a00f2126f5744c7bec119a4e7042683ac" prot="public">
+          <name>bkey_lock_write</name>
+          <initializer>= BKEY_ECC_WLOCK_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__bkey__interface_1ggaf20336dff4ed0ec08ce452cbc9ac0687af0d8b5447cc4643267c6287124576f7c" prot="public">
+          <name>bkey_lock_read</name>
+          <initializer>= BKEY_ECC_RLOCK_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__bkey__interface_1ggaf20336dff4ed0ec08ce452cbc9ac0687a8785927eb0b4d8fbf42ae1fab4699f61" prot="public">
+          <name>bkey_lock_both</name>
+          <initializer>= BKEY_ECC_RLOCK_MASK | BKEY_ECC_WLOCK_MASK</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Lock type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_bkey_drv.h" line="25" column="1" bodyfile="drivers/inc/hpm_bkey_drv.h" bodystart="25" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__bkey__interface_1ga0d5fae0a2b75a51dce550a906d57a170" prot="public" static="no">
+        <type>enum <ref refid="group__bkey__interface_1gaf20336dff4ed0ec08ce452cbc9ac0687" kindref="member">bkey_lock_type</ref></type>
+        <definition>typedef enum bkey_lock_type bkey_lock_type_t</definition>
+        <argsstring></argsstring>
+        <name>bkey_lock_type_t</name>
+        <briefdescription>
+<para>Lock type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_bkey_drv.h" line="29" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__bkey__interface_1ga8b9d010a2f5641d8c4834fd4186e2fad" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void bkey_set_key_data</definition>
+        <argsstring>(BKEY_Type *ptr, uint8_t key, uint8_t start, uint32_t *data, uint8_t size)</argsstring>
+        <name>bkey_set_key_data</name>
+        <param>
+          <type><ref refid="structBKEY__Type" kindref="compound">BKEY_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>bkey set key content </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Program key content</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BKEY base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key content data start index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of actual data to be programmed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data total size in 32-bit </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_bkey_drv.h" line="46" column="20" bodyfile="drivers/inc/hpm_bkey_drv.h" bodystart="46" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="group__bkey__interface_1ga6b8d7bd775f71ed63abab3035af50f3e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void bkey_get_key_data</definition>
+        <argsstring>(BKEY_Type *ptr, uint8_t key, uint8_t start, uint32_t *data, uint8_t size)</argsstring>
+        <name>bkey_get_key_data</name>
+        <param>
+          <type><ref refid="structBKEY__Type" kindref="compound">BKEY_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>bkey fetch key content </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Fetch key content</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BKEY base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>key index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>key content data start index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of buffer to received key content </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data total size in 32-bit </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_bkey_drv.h" line="64" column="20" bodyfile="drivers/inc/hpm_bkey_drv.h" bodystart="64" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="group__bkey__interface_1ga4d4a5ab88c9abaa2f0fae087c45af545" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void bkey_lock</definition>
+        <argsstring>(BKEY_Type *ptr, uint8_t key, bkey_lock_type_t lock, uint16_t ecc)</argsstring>
+        <name>bkey_lock</name>
+        <param>
+          <type><ref refid="structBKEY__Type" kindref="compound">BKEY_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="group__bkey__interface_1ga0d5fae0a2b75a51dce550a906d57a170" kindref="member">bkey_lock_type_t</ref></type>
+          <declname>lock</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>ecc</declname>
+        </param>
+        <briefdescription>
+<para>bkey lock key </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Feed correct ecc data of current key content and lock it</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BKEY base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>key index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lock type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ecc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ecc value of current key content </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_bkey_drv.h" line="81" column="20" bodyfile="drivers/inc/hpm_bkey_drv.h" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="group__bkey__interface_1gacd3e1f01e2bc46f7f7505a6de6258df6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void bkey_select_key</definition>
+        <argsstring>(BKEY_Type *ptr, uint8_t key)</argsstring>
+        <name>bkey_select_key</name>
+        <param>
+          <type><ref refid="structBKEY__Type" kindref="compound">BKEY_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>bkey select key </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Select which key to use</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BKEY base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>key index <itemizedlist>
+<listitem><para>0 select key0 in secure mode, key1 in non-secure mode </para>
+</listitem>
+<listitem><para>1 select key1 in secure or non-secure mode </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_bkey_drv.h" line="96" column="20" bodyfile="drivers/inc/hpm_bkey_drv.h" bodystart="96" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>BKEY driver APIs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

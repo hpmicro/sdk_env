@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>37.1. ECAT_IO &mdash; HPMico Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="驱动示例" href="../../drivers/index_zh.html" />
+    <link rel="prev" title="37. EtherCAT" href="../index_zh.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">使用说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../boards/index_zh.html">开发板介绍</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index_zh.html">例程</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../audio_codec/index_zh.html">1. Audio Codec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryrb/README_zh.html">2. CherryRB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryusb/index_zh.html">3. CherryUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coremark/README_zh.html">4. CoreMark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dhrystone/README_zh.html">5. Dhrystone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dma_manager/README_zh.html">6. DMA Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dsp/README_zh.html">7. DSP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../eeprom_emulation/index_zh.html">8. EEPROM Emulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freemaster/README_zh.html">9. Freemaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hello_world/README_zh.html">10. Hello World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hpm_math/index_zh.html">11. HPM Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image/index_zh.html">12. IMAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lvgl/index_zh.html">13. LVGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lwip/index_zh.html">14. lwIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mbedtls/README_zh.html">15. Mbedtls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../memstress/index_zh.html">16. Memory Stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../microros/index_zh.html">17. Microros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modbus/index_zh.html">18. Modbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motor_ctrl/index_zh.html">19. HPM Motor Ctrl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multicore/index_zh.html">20. Multicore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../power_mode_switch/README_zh.html">21. Power Mode Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rgb_led/README_zh.html">22. RGB LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rom_api/index_zh.html">23. ROM API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rtos/index_zh.html">24. RTOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../segger_rtt/README_zh.html">25. Segger RTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tflm/index_zh.html">26. TensorFlowLiteMicro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinycrypt/index_zh.html">27. Tinycrypt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyengine/person_obj/README_zh.html">28. Person Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyuf2/README_zh.html">29. TinyUF2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyusb/index_zh.html">30. TinyUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../touch_panel/README_zh.html">31. Touch Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vglite/index_zh.html">32. VGLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_components/index_zh.html">33. SPI_COMPONENTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2s_emulation/README_zh.html">34. SPI模拟I2S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_sdcard/index_zh.html">35. SPI驱动SD卡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherrysh/index_zh.html">36. CherrySH</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_zh.html">37. EtherCAT</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">37.1. ECAT_IO</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">37.1.1. 1. 概述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">37.1.2. 2. 准备</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">37.1.3. 3. 工程设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">37.1.4. 4. 生成从站协议栈代码</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#twincat">37.1.5. 5. TwinCAT工程设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">37.1.6. 6. 运行现象</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../drivers/index_zh.html">驱动示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_doc.html">SDK API 参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HPMico Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index_zh.html">例程</a></li>
+          <li class="breadcrumb-item"><a href="../index_zh.html"><span class="section-number">37. </span>EtherCAT</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">37.1. </span>ECAT_IO</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/samples/ethercat/ecat_io/README_zh.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="ecat-io">
+<h1><span class="section-number">37.1. </span>ECAT_IO<a class="headerlink" href="#ecat-io" title="Permalink to this heading"></a></h1>
+<section id="id1">
+<h2><span class="section-number">37.1.1. </span>1. 概述<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>ECAT_IO示例用于演示基于HPM6E80的ECAT外设和从站协议栈代码(SSC)实现ECAT数字IO从站的步骤。</p>
+<ul class="simple">
+<li><p>输入IO(2bit): SW6</p></li>
+<li><p>输出IO(2bit): LED8/LED3</p></li>
+<li><p>RUN LED: LED7</p></li>
+<li><p>ERR LED: LED6</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2><span class="section-number">37.1.2. </span>2. 准备<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3><span class="section-number">37.1.2.1. </span>2.1 硬件<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>HPM6E00EVK(RevA)</p></li>
+<li><p>带网口的PC</p>
+<ul>
+<li><p>TwinCAT3软件对PC网卡有适配问题, <a class="reference external" href="https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_overview/9309844363.html&amp;id=1489698440745036069">部分支持的Intel网卡</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id4">
+<h3><span class="section-number">37.1.2.2. </span>2.2 软件<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>TwinCAT3.1(Build 4024.56)</p></li>
+<li><p>SSC Tool(SSC Version: 5.13; Config File Vers: 1.5.3.0)
+<img alt="" src="../../../_images/ssc_version.png" /></p></li>
+</ul>
+</section>
+</section>
+<section id="id5">
+<h2><span class="section-number">37.1.3. </span>3. 工程设置<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<section id="flasheeprom">
+<h3><span class="section-number">37.1.3.1. </span>3.1 使用Flash模拟EEPROM<a class="headerlink" href="#flasheeprom" title="Permalink to this heading"></a></h3>
+<p>默认设置为使用flash模拟eeprom, 无需修改工程设置。</p>
+</section>
+<section id="eeprom">
+<h3><span class="section-number">37.1.3.2. </span>3.2 使用实际EEPROM<a class="headerlink" href="#eeprom" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>如需使用实际的eeprom器件, 请在使用SSC Tool时将”Hardware”属性下的”ESC_EEPROM_EMULATION”和”CREATE_EEPROM_CONTENT”设置为0, 再生成从站协议栈代码。</p></li>
+<li><p>使用实际eeprom时, 在文件<code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>中, 设置”set(CONFIG_EEPROM_EMULATION 0)”。</p></li>
+</ul>
+</section>
+</section>
+<section id="id6">
+<h2><span class="section-number">37.1.4. </span>4. 生成从站协议栈代码<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<p>由于许可问题, HPM_SDK不提供EtherCAT从站协议栈代码(SSC), 用户须从倍福官网下载SSC Tool并生成从站协议栈代码。</p>
+<section id="ssc-tool">
+<h3><span class="section-number">37.1.4.1. </span>4.1. 下载SSC Tool<a class="headerlink" href="#ssc-tool" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p>进入<a class="reference external" href="https://www.ethercat.org/en/downloads.html">ETG下载网页</a>, 输入”SSC”过滤下载内容
+<img alt="" src="../../../_images/SSC_download_1.png" />
+<img alt="" src="../../../_images/SSC_download_2.png" /></p>
+<p><u><strong>下载需要提供ETG会员账号和有效的Vendor ID</strong></u></p>
+</li>
+<li><p>下载并安装SSC Tool</p></li>
+</ol>
+</section>
+<section id="id7">
+<h3><span class="section-number">37.1.4.2. </span>4.2 SSC Tool中导入配置文件<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>打开SSC Tool, 选择<strong>Tool-&gt;Options</strong>
+<img alt="" src="../../../_images/SSC_Tool_Options.png" /></p></li>
+<li><p>选择Configurations, 选择添加配置文件&lt;hpm_sdk&gt;/samples/ethercat/ecat_io/SSC/Config/HPM_ECAT_IO_Config.xml
+<img alt="" src="../../../_images/SSC_Import_Configuration.png" /></p></li>
+</ol>
+</section>
+<section id="id8">
+<h3><span class="section-number">37.1.4.3. </span>4.3 SSC Tool中创建新的工程<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>点击<strong>File-&gt;New</strong>
+<img alt="" src="../../../_images/SSC_File_New.png" /></p></li>
+<li><p>点击<strong>Custom</strong>选项, 并在下拉列表中选择<strong>HPMicro ECAT Digital IO <HPMicro></strong>
+<img alt="" src="../../../_images/SSC_New_Project_Custom.png" /></p></li>
+<li><p>保存工程文件, 指定保存路径
+<img alt="" src="../../../_images/SSC_Project_Save.png" /></p></li>
+<li><p>导入应用
+- 选择<strong>Tool-&gt;Application-&gt;Import</strong>, 导入文件&lt;hpm_sdk&gt;/samples/ethercat/ecat_io/SSC/digital_io.xlsx
+<img alt="" src="../../../_images/SSC_Application_Import_1.png" />
+<img alt="" src="../../../_images/SSC_Application_Import_2.png" />
+- 点击<strong>OK</strong>
+<img alt="" src="../../../_images/SSC_Application_Import_3.png" /></p></li>
+</ol>
+</section>
+<section id="id9">
+<h3><span class="section-number">37.1.4.4. </span>4.4 生成协议栈代码<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>点击<strong>Project-&gt;Create new Slave Files</strong>
+<img alt="" src="../../../_images/SSC_Create_Slave_1.png" /></p></li>
+<li><p>选择输出路径, 须设置Src输出路径为ecat_io/SSC/Src路径, 或者设置其他路径将生成的生成的Src复制到ecat_io/SSC/Src目录下</p></li>
+<li><p>点击Start生成从站代码和ESI文件
+<img alt="" src="../../../_images/SSC_Create_Slave_2.png" /></p></li>
+</ol>
+</section>
+</section>
+<section id="twincat">
+<h2><span class="section-number">37.1.5. </span>5. TwinCAT工程设置<a class="headerlink" href="#twincat" title="Permalink to this heading"></a></h2>
+<section id="esi">
+<h3><span class="section-number">37.1.5.1. </span>5.1. 添加ESI文件<a class="headerlink" href="#esi" title="Permalink to this heading"></a></h3>
+<p>将SSC工具生成的ESI文件(<strong>ECAT-IO.xml</strong>)复制到TwinCAT的安装目录下(如: <strong>C:\TwinCAT\3.1\Config\Io\EtherCAT</strong>)。</p>
+</section>
+<section id="id10">
+<h3><span class="section-number">37.1.5.2. </span>5.2 创建工程<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>打开TwinCAT软件，选择<strong>File-&gt;New-&gt;Project</strong>
+<img alt="" src="../../../_images/Twincat_new_project_1.png" /></p></li>
+<li><p>选择<strong>TwinCAT Project</strong>, 命名后点击<strong>OK</strong>
+<img alt="" src="../../../_images/Twincat_new_project_2.png" /></p></li>
+</ol>
+</section>
+<section id="id11">
+<h3><span class="section-number">37.1.5.3. </span>5.3 软件配置<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p>更新网卡驱动(第一次使用时需要)
+<img alt="" src="../../../_images/Twincat_ethernet_driver.png" />
+<img alt="" src="../../../_images/Twincat_ethernet_driver_2.png" /></p></li>
+<li><p>时钟设置
+软件运行时可能遇到如下报错： 需要以管理员权限运行C：\TwinCAT\3.1\System\win8settick.bat</p>
+<hr class="docutils" />
+<p><em>Init4\RTime：Start Interrupt：Ticker started &gt;&gt; AdsWarning4115 （0x1013,RTIME：system clock setup failed）</em></p>
+<hr class="docutils" />
+<p><img alt="" src="../../../_images/Twincat_set_tick.png" /></p>
+</li>
+</ol>
+</section>
+<section id="id12">
+<h3><span class="section-number">37.1.5.4. </span>5.4 扫描设备<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>点击Device, 右键Scan
+<img alt="" src="../../../_images/Twincat_scan.png" /></p></li>
+<li><p>选择对应的网络设备
+<img alt="" src="../../../_images/Twincat_scan_2.png" /></p></li>
+</ol>
+</section>
+<section id="id13">
+<h3><span class="section-number">37.1.5.5. </span>5.5 更新EEPROM<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p>双击扫描出的设备, 选择<strong>Online</strong>, 选择<strong>Box</strong>, 右键选择<strong>EEPROM Update</strong>。</p>
+<p><em><strong>对于EEPROM内容为空的情况, 扫描设备时无法查询到匹配的Box, 此时需要更新EEPROM内容。</strong></em></p>
+<p><em><strong>在EEPROM内容为空的情况下, ESC上电加载EEPROM数据时会出现checksum错误, 该错误会造成PDI不工作, 此时EtherCAT通信是可能的, 可以通过主站更新EEPROM内容。</strong></em></p>
+<p><img alt="" src="../../../_images/Twincat_eeprom_update.png" /></p>
+</li>
+<li><p>选择对应的ESI文件, 点击<strong>OK</strong>, 等待更新完成
+<img alt="" src="../../../_images/Twincat_eeprom_update_3.png" /></p></li>
+<li><p>重新上电评估板, 删除已扫描出的设备重新扫描后, 运行设备
+<img alt="" src="../../../_images/Twincat_device_remove.png" />
+<img alt="" src="../../../_images/Twincat_scan_device_2.png" /></p></li>
+</ol>
+</section>
+<section id="io">
+<h3><span class="section-number">37.1.5.6. </span>5.6 IO操作<a class="headerlink" href="#io" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>输入IO, 拨动评估板上的拨码SW6, InputCounter数值发生变化
+<img alt="" src="../../../_images/Twincat_input.png" /></p></li>
+<li><p>输出IO, 双击OutputCounter, 选择Online, 点击Write写入数值。 评估板LED9和LED3发生变化
+<img alt="" src="../../../_images/Twincat_output.png" /></p></li>
+<li><p>LED7为ECAT的RUN_LED, LED6为ECAT的ERROR_LED</p></li>
+</ol>
+</section>
+<section id="dc">
+<h3><span class="section-number">37.1.5.7. </span>5.7 DC设置<a class="headerlink" href="#dc" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>双击Box, 选择DC, 点击Advanced Settings
+<img alt="" src="../../../_images/Twincat_DC_1.png" /></p></li>
+<li><p>设置模式为DC-Synchron并设置Shift Time(通常为Sync Unit Cycle时间的20%~30%)
+<img alt="" src="../../../_images/Twincat_DC_2.png" /></p></li>
+<li><p>双击Device, 选择EtherCAT, 点击Advanced Settings进行配置
+<img alt="" src="../../../_images/Twincat_DC_3.png" /></p></li>
+<li><p>选择Distributed Clock, 勾选DC in use, 之后点击确定
+<img alt="" src="../../../_images/Twincat_DC_4.png" /></p></li>
+<li><p>点击Restart TwinCAT
+<img alt="" src="../../../_images/Twincat_DC_5.png" /></p></li>
+</ol>
+</section>
+</section>
+<section id="id14">
+<h2><span class="section-number">37.1.6. </span>6. 运行现象<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h2>
+<p>当工程正确运行后, 串口终端会输出如下信息, 输入输出IO状态与TwinCAT工程配置相对应：</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">EtherCAT IO sample</span>
+<span class="go">EEPROM loading with checksum error.</span>
+<span class="go">EtherCAT communication is possible even if the EEPROM is blank(checksum error),</span>
+<span class="go">but PDI not operational, please update eeprom  context.</span>
+</pre></div>
+</div>
+<p>或是</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">EtherCAT IO sample</span>
+<span class="go">EEPROM loading successful, no checksum error.</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2024, HPMicro.
+      <span class="lastupdated">Last updated on Jun 28, 2024.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

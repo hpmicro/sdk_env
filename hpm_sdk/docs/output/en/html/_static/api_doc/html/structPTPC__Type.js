@@ -1,0 +1,27 @@
+var structPTPC__Type =
+[
+    [ "ADDEND", "structPTPC__Type.html#af3dc27b06f8f3c2737242cc244e90089", null ],
+    [ "CAPT_SNAPH", "structPTPC__Type.html#a1ff430bd9247729dcb29275167bd3a00", null ],
+    [ "CAPT_SNAPL", "structPTPC__Type.html#a3fbc3b69cc220dba2d37d0042dda177d", null ],
+    [ "CTRL0", "structPTPC__Type.html#a46f496d83afe9fc8a0444151b4d616a1", null ],
+    [ "CTRL1", "structPTPC__Type.html#a7f57bcafd62ba39e411a16cf6297c8c2", null ],
+    [ "INT_EN", "structPTPC__Type.html#a917333ee5167fcfb4a306ecd6c11d16e", null ],
+    [ "INT_STS", "structPTPC__Type.html#abdfa9a6c49a8107bfe5eeba4b6b8b0a8", null ],
+    [ "PPS_CTRL", "structPTPC__Type.html#af21ffb407b888b561cf5012057399d20", null ],
+    [ "PTPC", "structPTPC__Type.html#af37c1585493d5eeefe0f8b1a0f4533a3", null ],
+    [ "PTPC", "structPTPC__Type.html#abd67ed0761b80524df2b7fede82b3174", null ],
+    [ "PTPC", "structPTPC__Type.html#a114d1e5b0c5c52f40c64796c63a2c8ca", null ],
+    [ "PTPC", "structPTPC__Type.html#a6d6e63719b90ff2862f34bd1905410ca", null ],
+    [ "PTPC", "structPTPC__Type.html#abd26fd23df4701ebee0b2ff2dfd786ff", null ],
+    [ "PTPC", "structPTPC__Type.html#aea448e7049f9c8d00dc68832f4afbb39", null ],
+    [ "PTPC_CAN_TS_SEL", "structPTPC__Type.html#a388fb40d413ea7dd48a3e25bf1e7a713", null ],
+    [ "RESERVED0", "structPTPC__Type.html#af1f1d5a1250d1b156910632c21fda2cb", null ],
+    [ "RESERVED1", "structPTPC__Type.html#afd1e7b2cf934173f71a14d8597049798", null ],
+    [ "TARH", "structPTPC__Type.html#a6942df1fdc5bbc472c71271189313252", null ],
+    [ "TARL", "structPTPC__Type.html#a6f91130ee4c89343a6726843110145af", null ],
+    [ "TIME_SEL", "structPTPC__Type.html#a02cf1b952547d6d59ecb6594e290d270", null ],
+    [ "TIMEH", "structPTPC__Type.html#a7997bb86ccbcf81ea0ebad62fefa709b", null ],
+    [ "TIMEL", "structPTPC__Type.html#a26887db29cdb360dd6cbac7cff7f2401", null ],
+    [ "TS_UPDTH", "structPTPC__Type.html#ae457c7c673faad5ebdf35248995ba80f", null ],
+    [ "TS_UPDTL", "structPTPC__Type.html#aa230a858a95f2bac6b85baee1fe582ba", null ]
+];

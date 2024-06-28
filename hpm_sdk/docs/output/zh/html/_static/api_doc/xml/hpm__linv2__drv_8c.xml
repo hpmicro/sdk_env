@@ -1,0 +1,892 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hpm__linv2__drv_8c" kind="file" language="C++">
+    <compoundname>hpm_linv2_drv.c</compoundname>
+    <includes refid="hpm__linv2__drv_8h" local="yes">hpm_linv2_drv.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+      <node id="4">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>assert.h</label>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="9">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>drivers/src/hpm_linv2_drv.c</label>
+        <link refid="hpm__linv2__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>hpm_linv2_regs.h</label>
+        <link refid="hpm__linv2__regs_8h"/>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="11">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="2">
+        <label>hpm_linv2_drv.h</label>
+        <link refid="hpm__linv2__drv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" prot="public" static="no">
+        <name>HPM_LIN_DRV_RETRY_COUNT</name>
+        <initializer>(50000U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_linv2_drv.c" line="10" column="9" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__linv2__interface_1ga9e26e8d5dfd175eeb74ffdbc85ebc626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t lin_master_configure_timing</definition>
+        <argsstring>(LINV2_Type *ptr, lin_timing_t *timing)</argsstring>
+        <name>lin_master_configure_timing</name>
+        <param>
+          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structlin__timing__t" kindref="compound">lin_timing_t</ref> *</type>
+          <declname>timing</declname>
+        </param>
+        <briefdescription>
+<para>lin configure timing on master mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lin base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structlin__timing__t" kindref="compound">lin_timing_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hpm_stat_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>set master mode</para>
+<para>src =20MHz baudrate = 19.2KHz</para>
+<para>bt_div = 260, scaler = 1, bt_mul = 0</para>
+        </inbodydescription>
+        <location file="drivers/src/hpm_linv2_drv.c" line="12" column="12" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="12" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linv2__interface_1gaf5ff09ff09f7c81df5da4d28def52780" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t lin_slave_configure_timing</definition>
+        <argsstring>(LINV2_Type *ptr, uint32_t src_freq_in_hz)</argsstring>
+        <name>lin_slave_configure_timing</name>
+        <param>
+          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>src_freq_in_hz</declname>
+        </param>
+        <briefdescription>
+<para>lin config timing on slave mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lin base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src_freq_in_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source frequency </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hpm_stat_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>set slave mode, clean bt_div, bit_mul, prescl</para>
+<para>src = 20MHz, prescaler = 1, bt_div = 250</para>
+        </inbodydescription>
+        <location file="drivers/src/hpm_linv2_drv.c" line="42" column="12" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="42" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__linv2__drv_8c_1a77e62603cb9332ee1453641a5a0583f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t lin_get_data_length_from_id</definition>
+        <argsstring>(uint8_t id)</argsstring>
+        <name>lin_get_data_length_from_id</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_linv2_drv.c" line="72" column="9" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="72" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linv2__interface_1ga74af34c200cc2d8db66d6bced36e0c83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t lin_get_data_length</definition>
+        <argsstring>(LINV2_Type *ptr)</argsstring>
+        <name>lin_get_data_length</name>
+        <param>
+          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>get data length </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>data length is determined by DATA_LEN register and ID</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lin base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uint8_t data length </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_linv2_drv.c" line="88" column="9" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="88" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linv2__interface_1ga04b6f1b991beb3113c80e505ef80efbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lin_master_transfer</definition>
+        <argsstring>(LINV2_Type *ptr, lin_trans_config_t *config)</argsstring>
+        <name>lin_master_transfer</name>
+        <param>
+          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>lin transfer on master mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lin base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>config id</para>
+<para>sent or receive</para>
+<para>start</para>
+        </inbodydescription>
+        <location file="drivers/src/hpm_linv2_drv.c" line="99" column="6" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="99" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linv2__interface_1ga92c9a1e01ad3ec8655f84aacfa68ea24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t lin_master_sent</definition>
+        <argsstring>(LINV2_Type *ptr, lin_trans_config_t *config)</argsstring>
+        <name>lin_master_sent</name>
+        <param>
+          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>lin send data on master mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lin base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status_timeout </para>
+</simplesect>
+<simplesect kind="return"><para>status_success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>wait for lin inactive</para>
+<para>config id</para>
+<para>load data into registers</para>
+<para>start</para>
+<para>waiting for lin complete</para>
+        </inbodydescription>
+        <location file="drivers/src/hpm_linv2_drv.c" line="128" column="12" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="128" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linv2__interface_1gaa7cd44d6d3fafbd33aef2727af98b477" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t lin_master_receive</definition>
+        <argsstring>(LINV2_Type *ptr, lin_trans_config_t *config)</argsstring>
+        <name>lin_master_receive</name>
+        <param>
+          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>lin receive data on master mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lin base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status_timeout </para>
+</simplesect>
+<simplesect kind="return"><para>status_success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>waiting for lin inactive</para>
+<para>config id</para>
+<para>receive</para>
+<para>start</para>
+<para>waiting for receive complete</para>
+<para>load register data into buffer</para>
+        </inbodydescription>
+        <location file="drivers/src/hpm_linv2_drv.c" line="179" column="12" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="179" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linv2__interface_1ga7e7b1c960282961feeb9001461d2c70e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lin_slave_transfer</definition>
+        <argsstring>(LINV2_Type *ptr, lin_trans_config_t *config)</argsstring>
+        <name>lin_slave_transfer</name>
+        <param>
+          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>lin transfer on slave mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>call this function after lin generate data request interrupt</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lin base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>transmit or receive</para>
+<para>data ack</para>
+        </inbodydescription>
+        <location file="drivers/src/hpm_linv2_drv.c" line="231" column="6" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="231" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linv2__interface_1gad61f4b08011f8d78ffc39afeff44f755" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t lin_slave_sent</definition>
+        <argsstring>(LINV2_Type *ptr, lin_trans_config_t *config)</argsstring>
+        <name>lin_slave_sent</name>
+        <param>
+          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>lin send data on slave mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lin base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status_timeout </para>
+</simplesect>
+<simplesect kind="return"><para>status_success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>waiting for lin data_req</para>
+<para>transmit</para>
+<para>data ack</para>
+<para>waiting for lin complete</para>
+        </inbodydescription>
+        <location file="drivers/src/hpm_linv2_drv.c" line="261" column="12" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="261" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linv2__interface_1ga3d867566f5bf797d7707d8c1fc66f9ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t lin_slave_receive</definition>
+        <argsstring>(LINV2_Type *ptr, lin_trans_config_t *config)</argsstring>
+        <name>lin_slave_receive</name>
+        <param>
+          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>lin receive data on slave mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lin base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status_timeout </para>
+</simplesect>
+<simplesect kind="return"><para>status_success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>waiting for lin data_req</para>
+<para>receive</para>
+<para>data ack</para>
+<para>waiting for lin complete</para>
+        </inbodydescription>
+        <location file="drivers/src/hpm_linv2_drv.c" line="313" column="12" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="313" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linv2__interface_1ga4de3f507787e3c2d5205bc81b340bbb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lin_slave_dma_transfer</definition>
+        <argsstring>(LINV2_Type *ptr, lin_trans_config_t *config)</argsstring>
+        <name>lin_slave_dma_transfer</name>
+        <param>
+          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>lin slave dma transfer </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lin base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/src/hpm_linv2_drv.c" line="366" column="6" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="366" bodyend="373"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2022<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__linv2__drv_8h" kindref="compound">hpm_linv2_drv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_LIN_DRV_RETRY_COUNT<sp/>(50000U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__linv2__interface_1ga9e26e8d5dfd175eeb74ffdbc85ebc626" kindref="member">lin_master_configure_timing</ref>(<ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref><sp/>*ptr,<sp/><ref refid="structlin__timing__t" kindref="compound">lin_timing_t</ref><sp/>*timing)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(timing-&gt;<ref refid="structlin__timing__t_1ab30ce06c5df03213ac0c7225f4624f7a" kindref="member">src_freq_in_hz</ref><sp/>&gt;=<sp/>8000000U);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((timing-&gt;<ref refid="structlin__timing__t_1ab84d7999aebe0d359913012348b0ef86" kindref="member">baudrate</ref><sp/>&gt;=<sp/>1000U)<sp/>&amp;&amp;<sp/>(timing-&gt;<ref refid="structlin__timing__t_1ab84d7999aebe0d359913012348b0ef86" kindref="member">baudrate</ref><sp/>&lt;=<sp/>20000U));</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>prescaler,<sp/>bt_mul;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>bt_div;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>=<sp/><ref refid="hpm__linv2__regs_8h_1a46c9d0e28df9c4564e4c0fa24a89c32f" kindref="member">LINV2_TIMING_CONTROL_MASTER_MODE_MASK</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1a4da131ae682bfdb47dd7e82f83be8d4c" kindref="member">LINV2_TIMING_CONTROL_LIN_INITIAL_MASK</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>&amp;=<sp/>~<ref refid="hpm__linv2__regs_8h_1a4da131ae682bfdb47dd7e82f83be8d4c" kindref="member">LINV2_TIMING_CONTROL_LIN_INITIAL_MASK</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>bt_mul<sp/>=<sp/>20000U<sp/>/<sp/>timing-&gt;<ref refid="structlin__timing__t_1ab84d7999aebe0d359913012348b0ef86" kindref="member">baudrate</ref><sp/>-<sp/>1U;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>prescaler<sp/>=<sp/>(uint8_t)(log((timing-&gt;<ref refid="structlin__timing__t_1ab30ce06c5df03213ac0c7225f4624f7a" kindref="member">src_freq_in_hz</ref><sp/>/<sp/>((bt_mul<sp/>+<sp/>1U)<sp/>*<sp/>timing-&gt;<ref refid="structlin__timing__t_1ab84d7999aebe0d359913012348b0ef86" kindref="member">baudrate</ref><sp/>*<sp/>200U)))<sp/>/<sp/>log(2U)<sp/>-<sp/>1U);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>bt_div<sp/>=<sp/>timing-&gt;<ref refid="structlin__timing__t_1ab30ce06c5df03213ac0c7225f4624f7a" kindref="member">src_freq_in_hz</ref><sp/>/<sp/>((1U<sp/>&lt;&lt;<sp/>(prescaler<sp/>+<sp/>1U))<sp/>*<sp/>(bt_mul<sp/>+<sp/>1U)<sp/>*<sp/>timing-&gt;<ref refid="structlin__timing__t_1ab84d7999aebe0d359913012348b0ef86" kindref="member">baudrate</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((bt_div<sp/>&lt;<sp/>200)<sp/>||<sp/>(bt_div<sp/>&gt;<sp/>512))<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1a95a942382107016c743cd41b060452b9" kindref="member">LINV2_TIMING_CONTROL_BT_DIV_SET</ref>(bt_div)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a75787152421a728d12aaa671128aeac2" kindref="member">LINV2_TIMING_CONTROL_BT_MUL_SET</ref>(bt_mul)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1aca7fbfef31ac61740c3692dc28b1e85d" kindref="member">LINV2_TIMING_CONTROL_PRESCL_SET</ref>(prescaler);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__linv2__interface_1gaf5ff09ff09f7c81df5da4d28def52780" kindref="member">lin_slave_configure_timing</ref>(<ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>src_freq_in_hz)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(src_freq_in_hz<sp/>&gt;=<sp/>8000000U);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>prescaler;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>bt_div;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1a4da131ae682bfdb47dd7e82f83be8d4c" kindref="member">LINV2_TIMING_CONTROL_LIN_INITIAL_MASK</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>&amp;=<sp/>~<ref refid="hpm__linv2__regs_8h_1a4da131ae682bfdb47dd7e82f83be8d4c" kindref="member">LINV2_TIMING_CONTROL_LIN_INITIAL_MASK</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>prescaler<sp/>=<sp/>(uint8_t)(log((src_freq_in_hz<sp/>/<sp/>(20000U<sp/>*<sp/>200U)))<sp/>/<sp/>log(2U)<sp/>-<sp/>1U);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>bt_div<sp/>=<sp/>src_freq_in_hz<sp/>/<sp/>((1U<sp/>&lt;&lt;<sp/>(prescaler<sp/>+<sp/>1U))<sp/>*<sp/>20000U);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((bt_div<sp/>&lt;<sp/>200)<sp/>||<sp/>(bt_div<sp/>&gt;=<sp/>512))<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>TODO:<sp/>set<sp/>wakeup_len<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>=<sp/><ref refid="hpm__linv2__regs_8h_1a95a942382107016c743cd41b060452b9" kindref="member">LINV2_TIMING_CONTROL_BT_DIV_SET</ref>(bt_div)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1aca7fbfef31ac61740c3692dc28b1e85d" kindref="member">LINV2_TIMING_CONTROL_PRESCL_SET</ref>(prescaler);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>disable<sp/>break_err<sp/>detect<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>=<sp/><ref refid="hpm__linv2__regs_8h_1a86253e966cb5f52f3a82a98895098b8b" kindref="member">LINV2_CONTROL_STATUS_BREAK_ERR_DIS_MASK</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">uint8_t<sp/><ref refid="hpm__linv2__drv_8c_1a77e62603cb9332ee1453641a5a0583f9" kindref="member">lin_get_data_length_from_id</ref>(uint8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="hpm__lin__drv_8h_1a3cb969fcf81ed46d50c6940489b883e0" kindref="member">LIN_ID_DATA_LEN_GET</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1gga102a6541fa3e7b9cd9ce29c211186319a0cc8305eb1108e4fa09975c8d25f8f76" kindref="member">id_data_length_2bytes</ref>:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1gga102a6541fa3e7b9cd9ce29c211186319ada394e93bdf4e5095888c66d78b31458" kindref="member">id_data_length_2bytes_2</ref>:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1gga102a6541fa3e7b9cd9ce29c211186319a58ab463b755281d09e75243d8da4408c" kindref="member">id_data_length_4bytes</ref>:</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>4;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1gga102a6541fa3e7b9cd9ce29c211186319aaf1f845c1b353becbaffca2986aa3e5f" kindref="member">id_data_length_8bytes</ref>:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>8;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>8;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">uint8_t<sp/><ref refid="group__linv2__interface_1ga74af34c200cc2d8db66d6bced36e0c83" kindref="member">lin_get_data_length</ref>(<ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>data_length<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(((ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref>)<sp/>&amp;<sp/><ref refid="hpm__linv2__regs_8h_1ac1646cdd9fbe72b4e31bef967a146ec8" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_MASK</ref>)<sp/>==<sp/><ref refid="hpm__linv2__regs_8h_1ac1646cdd9fbe72b4e31bef967a146ec8" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_MASK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_length<sp/>=<sp/><ref refid="hpm__linv2__drv_8c_1a77e62603cb9332ee1453641a5a0583f9" kindref="member">lin_get_data_length_from_id</ref>(<ref refid="group__lin__interface_1gaba7b4a786a39cc7c315d13aaf02c6841" kindref="member">lin_get_id</ref>(ptr));</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_length<sp/>=<sp/><ref refid="hpm__linv2__regs_8h_1a0731ffe30f77555ae6bd4fd4616e86b4" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_GET</ref>(ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data_length;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1ga04b6f1b991beb3113c80e505ef80efbf" kindref="member">lin_master_transfer</ref>(<ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref><sp/>*ptr,<sp/><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>data_length;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structlin__trans__config__t_1a300871cc44f357c1ef1d4a90e0cdfaf5" kindref="member">data_length_from_id</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_length<sp/>=<sp/><ref refid="hpm__linv2__drv_8c_1a77e62603cb9332ee1453641a5a0583f9" kindref="member">lin_get_data_length_from_id</ref>(<ref refid="group__lin__interface_1gaba7b4a786a39cc7c315d13aaf02c6841" kindref="member">lin_get_id</ref>(ptr));</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>=<sp/><ref refid="hpm__linv2__regs_8h_1aa86b68f4580d55a8942937a9c86155fe" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a18d4a624aefdf1837bc24f8884c5fcef" kindref="member">enhanced_checksum</ref>)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1ac1646cdd9fbe72b4e31bef967a146ec8" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_MASK</ref><sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a184b5a58fd01e80da3144b2364599826" kindref="member">LINV2_DATA_LEN_ID_ID_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a0e4aa1065597c43d034c52c74ee59781" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_length<sp/>=<sp/>config-&gt;<ref refid="structlin__trans__config__t_1adebb7ec22c88e19fd8ceb731becf6d71" kindref="member">data_length</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>=<sp/><ref refid="hpm__linv2__regs_8h_1aa86b68f4580d55a8942937a9c86155fe" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a18d4a624aefdf1837bc24f8884c5fcef" kindref="member">enhanced_checksum</ref>)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a71de3fac3e6c74c57b28c8d5b65dca1a" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_SET</ref>(data_length)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a184b5a58fd01e80da3144b2364599826" kindref="member">LINV2_DATA_LEN_ID_ID_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a0e4aa1065597c43d034c52c74ee59781" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>=<sp/>0U;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structlin__trans__config__t_1adb0a2b23f87a50380e8182a18f03717c" kindref="member">transmit</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1a79994b47e1b5bce3560d9789c12df964" kindref="member">LINV2_CONTROL_STATUS_TRANSMIT_MASK</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structlin__trans__config__t_1adb0a2b23f87a50380e8182a18f03717c" kindref="member">transmit</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>data_length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a7e323e9a3f05e3144e94046272eb5cc6" kindref="member">DATA_BYTE</ref>[i]<sp/>=<sp/>*((config-&gt;<ref refid="structlin__trans__config__t_1ab166cc5e567bd96cd744bd1812c2252c" kindref="member">data_buff</ref>)++);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1aaa526343615c534a446b578b0ee3d274" kindref="member">LINV2_CONTROL_STATUS_START_REQ_MASK</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__linv2__interface_1ga92c9a1e01ad3ec8655f84aacfa68ea24" kindref="member">lin_master_sent</ref>(<ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref><sp/>*ptr,<sp/><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>retry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>data_length<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="group__lin__interface_1gaabcb6a0a0890c2ebef2a4aba6138f664" kindref="member">lin_is_active</ref>(ptr))<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry++;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structlin__trans__config__t_1a300871cc44f357c1ef1d4a90e0cdfaf5" kindref="member">data_length_from_id</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_length<sp/>=<sp/><ref refid="hpm__linv2__drv_8c_1a77e62603cb9332ee1453641a5a0583f9" kindref="member">lin_get_data_length_from_id</ref>(<ref refid="group__lin__interface_1gaba7b4a786a39cc7c315d13aaf02c6841" kindref="member">lin_get_id</ref>(ptr));</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>=<sp/><ref refid="hpm__linv2__regs_8h_1aa86b68f4580d55a8942937a9c86155fe" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a18d4a624aefdf1837bc24f8884c5fcef" kindref="member">enhanced_checksum</ref>)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1ac1646cdd9fbe72b4e31bef967a146ec8" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_MASK</ref><sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a184b5a58fd01e80da3144b2364599826" kindref="member">LINV2_DATA_LEN_ID_ID_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a0e4aa1065597c43d034c52c74ee59781" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_length<sp/>=<sp/>config-&gt;<ref refid="structlin__trans__config__t_1adebb7ec22c88e19fd8ceb731becf6d71" kindref="member">data_length</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>=<sp/><ref refid="hpm__linv2__regs_8h_1aa86b68f4580d55a8942937a9c86155fe" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a18d4a624aefdf1837bc24f8884c5fcef" kindref="member">enhanced_checksum</ref>)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a71de3fac3e6c74c57b28c8d5b65dca1a" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_SET</ref>(data_length)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a184b5a58fd01e80da3144b2364599826" kindref="member">LINV2_DATA_LEN_ID_ID_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a0e4aa1065597c43d034c52c74ee59781" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>=<sp/><ref refid="hpm__linv2__regs_8h_1a79994b47e1b5bce3560d9789c12df964" kindref="member">LINV2_CONTROL_STATUS_TRANSMIT_MASK</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>data_length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a7e323e9a3f05e3144e94046272eb5cc6" kindref="member">DATA_BYTE</ref>[i]<sp/>=<sp/>*((config-&gt;<ref refid="structlin__trans__config__t_1ab166cc5e567bd96cd744bd1812c2252c" kindref="member">data_buff</ref>)++);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>|=<sp/><sp/><ref refid="hpm__linv2__regs_8h_1aaa526343615c534a446b578b0ee3d274" kindref="member">LINV2_CONTROL_STATUS_START_REQ_MASK</ref>;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>retry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="group__lin__interface_1ga6a42e390fecac118340ee65a78981992" kindref="member">lin_is_complete</ref>(ptr))<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref><sp/>*<sp/>8)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry++;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref><sp/>*<sp/>8)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__linv2__interface_1gaa7cd44d6d3fafbd33aef2727af98b477" kindref="member">lin_master_receive</ref>(<ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref><sp/>*ptr,<sp/><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>retry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>data_length;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="group__lin__interface_1gaabcb6a0a0890c2ebef2a4aba6138f664" kindref="member">lin_is_active</ref>(ptr))<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry++;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structlin__trans__config__t_1a300871cc44f357c1ef1d4a90e0cdfaf5" kindref="member">data_length_from_id</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_length<sp/>=<sp/><ref refid="hpm__linv2__drv_8c_1a77e62603cb9332ee1453641a5a0583f9" kindref="member">lin_get_data_length_from_id</ref>(<ref refid="group__lin__interface_1gaba7b4a786a39cc7c315d13aaf02c6841" kindref="member">lin_get_id</ref>(ptr));</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>=<sp/><ref refid="hpm__linv2__regs_8h_1aa86b68f4580d55a8942937a9c86155fe" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a18d4a624aefdf1837bc24f8884c5fcef" kindref="member">enhanced_checksum</ref>)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1ac1646cdd9fbe72b4e31bef967a146ec8" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_MASK</ref><sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a184b5a58fd01e80da3144b2364599826" kindref="member">LINV2_DATA_LEN_ID_ID_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a0e4aa1065597c43d034c52c74ee59781" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_length<sp/>=<sp/>config-&gt;<ref refid="structlin__trans__config__t_1adebb7ec22c88e19fd8ceb731becf6d71" kindref="member">data_length</ref>;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>=<sp/><ref refid="hpm__linv2__regs_8h_1aa86b68f4580d55a8942937a9c86155fe" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a18d4a624aefdf1837bc24f8884c5fcef" kindref="member">enhanced_checksum</ref>)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a71de3fac3e6c74c57b28c8d5b65dca1a" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_SET</ref>(data_length)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a184b5a58fd01e80da3144b2364599826" kindref="member">LINV2_DATA_LEN_ID_ID_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a0e4aa1065597c43d034c52c74ee59781" kindref="member">id</ref>);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>=<sp/>0U;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1aaa526343615c534a446b578b0ee3d274" kindref="member">LINV2_CONTROL_STATUS_START_REQ_MASK</ref>;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>retry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="group__lin__interface_1ga6a42e390fecac118340ee65a78981992" kindref="member">lin_is_complete</ref>(ptr))<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref><sp/>*<sp/>8)<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry++;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref><sp/>*<sp/>8)<sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9ab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>data_length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*((config-&gt;<ref refid="structlin__trans__config__t_1ab166cc5e567bd96cd744bd1812c2252c" kindref="member">data_buff</ref>)++)<sp/>=<sp/>ptr-&gt;<ref refid="structLINV2__Type_1a7e323e9a3f05e3144e94046272eb5cc6" kindref="member">DATA_BYTE</ref>[i];</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1ga7e7b1c960282961feeb9001461d2c70e" kindref="member">lin_slave_transfer</ref>(<ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref><sp/>*ptr,<sp/><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>data_length;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>&amp;=<sp/>~<ref refid="hpm__linv2__regs_8h_1a79994b47e1b5bce3560d9789c12df964" kindref="member">LINV2_CONTROL_STATUS_TRANSMIT_MASK</ref>;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structlin__trans__config__t_1adb0a2b23f87a50380e8182a18f03717c" kindref="member">transmit</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1a79994b47e1b5bce3560d9789c12df964" kindref="member">LINV2_CONTROL_STATUS_TRANSMIT_MASK</ref>;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>clean<sp/>enh_check<sp/>and<sp/>data_len<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>&amp;=<sp/>~(<ref refid="hpm__linv2__regs_8h_1a5b92b3fa79c802227cad12b871abe21a" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_MASK</ref><sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1ac1646cdd9fbe72b4e31bef967a146ec8" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_MASK</ref>);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structlin__trans__config__t_1a300871cc44f357c1ef1d4a90e0cdfaf5" kindref="member">data_length_from_id</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_length<sp/>=<sp/><ref refid="hpm__linv2__drv_8c_1a77e62603cb9332ee1453641a5a0583f9" kindref="member">lin_get_data_length_from_id</ref>(<ref refid="group__lin__interface_1gaba7b4a786a39cc7c315d13aaf02c6841" kindref="member">lin_get_id</ref>(ptr));</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1aa86b68f4580d55a8942937a9c86155fe" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a18d4a624aefdf1837bc24f8884c5fcef" kindref="member">enhanced_checksum</ref>)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1ac1646cdd9fbe72b4e31bef967a146ec8" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_MASK</ref>;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_length<sp/>=<sp/>config-&gt;<ref refid="structlin__trans__config__t_1adebb7ec22c88e19fd8ceb731becf6d71" kindref="member">data_length</ref>;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1aa86b68f4580d55a8942937a9c86155fe" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a18d4a624aefdf1837bc24f8884c5fcef" kindref="member">enhanced_checksum</ref>)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a71de3fac3e6c74c57b28c8d5b65dca1a" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_SET</ref>(data_length);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structlin__trans__config__t_1adb0a2b23f87a50380e8182a18f03717c" kindref="member">transmit</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>data_length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a7e323e9a3f05e3144e94046272eb5cc6" kindref="member">DATA_BYTE</ref>[i]<sp/>=<sp/>*((config-&gt;<ref refid="structlin__trans__config__t_1ab166cc5e567bd96cd744bd1812c2252c" kindref="member">data_buff</ref>)++);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1a286989efb70587cb25599e340383a290" kindref="member">LINV2_CONTROL_STATUS_DATA_ACK_MASK</ref>;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__linv2__interface_1gad61f4b08011f8d78ffc39afeff44f755" kindref="member">lin_slave_sent</ref>(<ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref><sp/>*ptr,<sp/><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="262"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>retry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>data_length;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!((ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>&amp;<sp/><ref refid="hpm__linv2__regs_8h_1a2a65764b6b5db591b0cf43140111a245" kindref="member">LINV2_CONTROL_STATUS_DATA_REQ_MASK</ref>)<sp/>==<sp/><ref refid="hpm__linv2__regs_8h_1a2a65764b6b5db591b0cf43140111a245" kindref="member">LINV2_CONTROL_STATUS_DATA_REQ_MASK</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry++;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>=<sp/><ref refid="hpm__linv2__regs_8h_1a79994b47e1b5bce3560d9789c12df964" kindref="member">LINV2_CONTROL_STATUS_TRANSMIT_MASK</ref>;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>clean<sp/>enh_check<sp/>and<sp/>data_len<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>&amp;=<sp/>~(<ref refid="hpm__linv2__regs_8h_1a5b92b3fa79c802227cad12b871abe21a" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_MASK</ref><sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1ac1646cdd9fbe72b4e31bef967a146ec8" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_MASK</ref>);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structlin__trans__config__t_1a300871cc44f357c1ef1d4a90e0cdfaf5" kindref="member">data_length_from_id</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_length<sp/>=<sp/><ref refid="hpm__linv2__drv_8c_1a77e62603cb9332ee1453641a5a0583f9" kindref="member">lin_get_data_length_from_id</ref>(<ref refid="group__lin__interface_1gaba7b4a786a39cc7c315d13aaf02c6841" kindref="member">lin_get_id</ref>(ptr));</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1aa86b68f4580d55a8942937a9c86155fe" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a18d4a624aefdf1837bc24f8884c5fcef" kindref="member">enhanced_checksum</ref>)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1ac1646cdd9fbe72b4e31bef967a146ec8" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_MASK</ref>;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_length<sp/>=<sp/>config-&gt;<ref refid="structlin__trans__config__t_1adebb7ec22c88e19fd8ceb731becf6d71" kindref="member">data_length</ref>;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1aa86b68f4580d55a8942937a9c86155fe" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a18d4a624aefdf1837bc24f8884c5fcef" kindref="member">enhanced_checksum</ref>)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a71de3fac3e6c74c57b28c8d5b65dca1a" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_SET</ref>(data_length);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>data_length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a7e323e9a3f05e3144e94046272eb5cc6" kindref="member">DATA_BYTE</ref>[i]<sp/>=<sp/>*((config-&gt;<ref refid="structlin__trans__config__t_1ab166cc5e567bd96cd744bd1812c2252c" kindref="member">data_buff</ref>)++);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1a286989efb70587cb25599e340383a290" kindref="member">LINV2_CONTROL_STATUS_DATA_ACK_MASK</ref>;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>retry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="group__lin__interface_1ga6a42e390fecac118340ee65a78981992" kindref="member">lin_is_complete</ref>(ptr))<sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref><sp/>*<sp/>8)<sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry++;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref><sp/>*<sp/>8)<sp/>{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__linv2__interface_1ga3d867566f5bf797d7707d8c1fc66f9ce" kindref="member">lin_slave_receive</ref>(<ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref><sp/>*ptr,<sp/><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>retry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>data_length;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!((ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>&amp;<sp/><ref refid="hpm__linv2__regs_8h_1a2a65764b6b5db591b0cf43140111a245" kindref="member">LINV2_CONTROL_STATUS_DATA_REQ_MASK</ref>)<sp/>==<sp/><ref refid="hpm__linv2__regs_8h_1a2a65764b6b5db591b0cf43140111a245" kindref="member">LINV2_CONTROL_STATUS_DATA_REQ_MASK</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry++;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>=<sp/>0U;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>clean<sp/>enh_check<sp/>and<sp/>data_len<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>&amp;=<sp/>~(<ref refid="hpm__linv2__regs_8h_1a5b92b3fa79c802227cad12b871abe21a" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_MASK</ref><sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1ac1646cdd9fbe72b4e31bef967a146ec8" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_MASK</ref>);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structlin__trans__config__t_1a300871cc44f357c1ef1d4a90e0cdfaf5" kindref="member">data_length_from_id</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_length<sp/>=<sp/><ref refid="hpm__linv2__drv_8c_1a77e62603cb9332ee1453641a5a0583f9" kindref="member">lin_get_data_length_from_id</ref>(<ref refid="group__lin__interface_1gaba7b4a786a39cc7c315d13aaf02c6841" kindref="member">lin_get_id</ref>(ptr));</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1aa86b68f4580d55a8942937a9c86155fe" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a18d4a624aefdf1837bc24f8884c5fcef" kindref="member">enhanced_checksum</ref>)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1ac1646cdd9fbe72b4e31bef967a146ec8" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_MASK</ref>;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_length<sp/>=<sp/>config-&gt;<ref refid="structlin__trans__config__t_1adebb7ec22c88e19fd8ceb731becf6d71" kindref="member">data_length</ref>;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a11e401888da4f6ad21f7d95f09c9e0cd" kindref="member">DATA_LEN_ID</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1aa86b68f4580d55a8942937a9c86155fe" kindref="member">LINV2_DATA_LEN_ID_ENH_CHECK_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a18d4a624aefdf1837bc24f8884c5fcef" kindref="member">enhanced_checksum</ref>)<sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a71de3fac3e6c74c57b28c8d5b65dca1a" kindref="member">LINV2_DATA_LEN_ID_DATA_LEN_SET</ref>(data_length);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1a286989efb70587cb25599e340383a290" kindref="member">LINV2_CONTROL_STATUS_DATA_ACK_MASK</ref>;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>retry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="group__lin__interface_1ga6a42e390fecac118340ee65a78981992" kindref="member">lin_is_complete</ref>(ptr))<sp/>{</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref><sp/>*<sp/>8)<sp/>{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry++;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref><sp/>*<sp/>8)<sp/>{</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>data_length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*((config-&gt;<ref refid="structlin__trans__config__t_1ab166cc5e567bd96cd744bd1812c2252c" kindref="member">data_buff</ref>)++)<sp/>=<sp/>ptr-&gt;<ref refid="structLINV2__Type_1a7e323e9a3f05e3144e94046272eb5cc6" kindref="member">DATA_BYTE</ref>[i];</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="364"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1ga4de3f507787e3c2d5205bc81b340bbb1" kindref="member">lin_slave_dma_transfer</ref>(<ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref><sp/>*ptr,<sp/><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="367"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1a096f3e2486e6b067f150648250fe3563" kindref="member">DMA_CONTROL</ref><sp/>=<sp/><ref refid="hpm__linv2__regs_8h_1aa78d8bd92e60afdda29946cea5c1877f" kindref="member">LINV2_DMA_CONTROL_DMA_REQ_ENABLE_MASK</ref></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a0d418681b41883d13d476a812e5b7974" kindref="member">LINV2_DMA_CONTROL_DMA_REQ_ID_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a0e4aa1065597c43d034c52c74ee59781" kindref="member">id</ref>)</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a3132b69bcc6eefc10ef297f287419cf1" kindref="member">LINV2_DMA_CONTROL_DMA_REQ_ID_TYPE_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1adb0a2b23f87a50380e8182a18f03717c" kindref="member">transmit</ref>)</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a3cc87989083214fc2a04a759da27825a" kindref="member">LINV2_DMA_CONTROL_DMA_REQ_LEN_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1adebb7ec22c88e19fd8ceb731becf6d71" kindref="member">data_length</ref>)</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__linv2__regs_8h_1a5ee345f8fb7e7d1229fc370fd5260c93" kindref="member">LINV2_DMA_CONTROL_DMA_REQ_ENH_CHK_SET</ref>(config-&gt;<ref refid="structlin__trans__config__t_1a18d4a624aefdf1837bc24f8884c5fcef" kindref="member">enhanced_checksum</ref>);</highlight></codeline>
+<codeline lineno="373"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="drivers/src/hpm_linv2_drv.c"/>
+  </compounddef>
+</doxygen>
