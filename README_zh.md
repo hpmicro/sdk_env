@@ -7,13 +7,13 @@
 1. 双击`generate_all_ses_projects.cmd`，该脚本会在同级目录下生成文件夹samples_ses_project，该文件夹包含各种类型板子所有用例的segger工程
 
 ## start_gui 快速上手
-`start_gui.exe` 是一款适配 `hpm_sdk` 的项目构建可视化工具。通过该工具，您可以方便地对 `hpm_sdk` 中的 samples 进行构建，也可以自定义 sample 目录来构建自己的应用程序。软件整体界面如下图所示:
+`start_gui.exe` 是一款适配 `hpm_sdk` 的项目构建可视化工具。通过该工具，您可以方便地对 `hpm_sdk` 中的 samples 进行构建，也可以自定义 BOARD 和 APP 目录来构建自己的应用程序。软件整体界面如下图所示:
 
 ![start_gui](doc/img/start_gui.png)
 
 上方菜单栏支持设置中英双语以及打开当前使用指南。同时为方便用户查看使用 `hpm_sdk`，工具内置了三个快速打开 `hpm_sdk` 文档入口，即上图中三个浅紫色圆形按钮。 `SDK ENV` 右侧的帮助按钮会打开当前 `hpm_sdk` 的帮助文档首页。`SDK Boards` 下拉框右侧的帮助按钮会直接打开当前选择的开发板文档。`SDK Samples` 下拉框右侧的帮助按钮会直接打开当前选择的 sample 文档。您可以根据需要选择打开对应的文档。
 
-工具通过不同的背景色分为了以下几个功能区：
+- 工具通过不同的背景色分为了以下几个功能区：
 
 1. SDK ENV 设置：此处可手动配置 SDK ENV 路径，点击 `Advanced` 按钮后，可以对 `hpm_sdk` 以及 `CMake、Ninja` 等工具路径进行更详细的配置；
 
@@ -29,6 +29,7 @@
 
 6. 日志窗口：日志窗口会显示当前的日志信息，日志信息支持清空和导出。
 
+- 自定义 Borad 和 APP 的操作说明，请参考user_template目录下的 [README.md](user_template/README_zh.md).
 
 ## 目录结构:
 - hpm_sdk: hpm_sdk存放目录，当更新SDK时，需要将SDK解压至该文件夹，并确保可以存在hpm_sdk\cmake路径
@@ -54,4 +55,6 @@
   - 在Windows任务管理器中将残留的openocd进程终止
   - 将开发板上启动模式拨成“在系统编程“或者“串行启动”，再按RESET按钮，再尝试调试
 ### Windows 10路径长度限制
-  若要解除路径长度限制可以通过导入tools/scripts/win10_enable_long_path.reg。 有关该限制的详细信息, 请参考https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd
+  若要解除路径长度限制可以通过导入tools/scripts/win10_enable_long_path.reg。有关该限制的详细信息, 请参考https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd
+### Windows 7 Python 3.9版本无法使用问题
+  - hpm_sdk依赖python 3.9, 而在Windows 7上无法直接运行python 3.9，需要安装python_win7_patch，下载链接为：https://pan.baidu.com/s/1RaYHOD7xk7fnotmgLpoAlA?pwd=xk2n ，路径为`先楫技术资料/SDK`。

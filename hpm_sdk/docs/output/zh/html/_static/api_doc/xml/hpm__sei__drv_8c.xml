@@ -1,18 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__sei__drv_8c" kind="file" language="C++">
     <compoundname>hpm_sei_drv.c</compoundname>
     <includes refid="hpm__sei__drv_8h" local="yes">hpm_sei_drv.h</includes>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
-      <node id="1">
-        <label>drivers/src/hpm_sei_drv.c</label>
-        <link refid="hpm__sei__drv_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="3">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -27,18 +18,6 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>assert.h</label>
-      </node>
-      <node id="6">
-        <label>stdint.h</label>
-      </node>
-      <node id="8">
-        <label>stdlib.h</label>
-      </node>
-      <node id="9">
-        <label>hpm_sei_regs.h</label>
-      </node>
       <node id="2">
         <label>hpm_sei_drv.h</label>
         <link refid="hpm__sei__drv_8h"/>
@@ -51,17 +30,38 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="11">
-        <label>hpm_soc_ip_feature.h</label>
+      <node id="1">
+        <label>drivers/src/hpm_sei_drv.c</label>
+        <link refid="hpm__sei__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
       </node>
-      <node id="7">
-        <label>string.h</label>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_sei_regs.h</label>
       </node>
       <node id="10">
         <label>hpm_soc_feature.h</label>
       </node>
+      <node id="11">
+        <label>hpm_soc_ip_feature.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
     </incdepgraph>
-      <sectiondef kind="func">
+    <sectiondef kind="func">
       <memberdef kind="function" id="hpm__sei__drv_8c_1ada38e9edad291af0f0bcb8a579a2404f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
         <definition>hpm_stat_t sei_tranceiver_config_init</definition>
@@ -939,10 +939,12 @@
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>&lt; op halt</para>
+<para>&lt; op jump</para>
         </inbodydescription>
         <location file="drivers/src/hpm_sei_drv.c" line="395" column="6" bodyfile="drivers/src/hpm_sei_drv.c" bodystart="395" bodyend="415"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -1097,7 +1099,7 @@
 <codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cmd_data_select)<sp/>{</highlight></codeline>
 <codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1a260fb0e355394c496a05dde36ecaae81" kindref="member">CTRL</ref>[idx].CMD.MODE<sp/>=<sp/>tmp;</highlight></codeline>
 <codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1acb1ed96780d83e9b214c9205284cc27b" kindref="member">DAT</ref>[idx].<ref refid="structSEI__Type_1ae4ec5c89acfc8753bf6213656237fc9c" kindref="member">MODE</ref><sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1a085c97be2d981006a75d986fbf1143a0" kindref="member">DAT</ref>[idx].<ref refid="structSEI__Type_1ae4ec5c89acfc8753bf6213656237fc9c" kindref="member">MODE</ref><sp/>=<sp/>tmp;</highlight></codeline>
 <codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="152"><highlight class="normal"></highlight></codeline>
 <codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>tmp<sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__sei__regs_8h_1a2af7852cfe870982fecfaa1cf8626353" kindref="member">SEI_DAT_IDX_LAST_BIT_SET</ref>(config-&gt;<ref refid="structsei__data__format__config__t_1a6c273f8fd87cc0add56b349dcdc88764" kindref="member">last_bit</ref>)</highlight></codeline>
@@ -1107,28 +1109,28 @@
 <codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cmd_data_select)<sp/>{</highlight></codeline>
 <codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1a260fb0e355394c496a05dde36ecaae81" kindref="member">CTRL</ref>[idx].CMD.IDX<sp/>=<sp/>tmp;</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1acb1ed96780d83e9b214c9205284cc27b" kindref="member">DAT</ref>[idx].<ref refid="structSEI__Type_1a5aa0ff0185b1d00cb2a245ef011103ce" kindref="member">IDX</ref><sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1a085c97be2d981006a75d986fbf1143a0" kindref="member">DAT</ref>[idx].<ref refid="structSEI__Type_1a5aa0ff0185b1d00cb2a245ef011103ce" kindref="member">IDX</ref><sp/>=<sp/>tmp;</highlight></codeline>
 <codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="162"><highlight class="normal"></highlight></codeline>
 <codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>tmp<sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__sei__regs_8h_1a03b25d21d0dd01381a95032cfe1d8058" kindref="member">SEI_DAT_GOLD_GOLD_VALUE_SET</ref>(config-&gt;<ref refid="structsei__data__format__config__t_1a99243f243c920a6380146ef122326755" kindref="member">gold_value</ref>);</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!cmd_data_select)<sp/>{</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1acb1ed96780d83e9b214c9205284cc27b" kindref="member">DAT</ref>[idx].<ref refid="structSEI__Type_1a7bb1beda6623182cfce9e7f868017f62" kindref="member">GOLD</ref><sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1a085c97be2d981006a75d986fbf1143a0" kindref="member">DAT</ref>[idx].<ref refid="structSEI__Type_1a7bb1beda6623182cfce9e7f868017f62" kindref="member">GOLD</ref><sp/>=<sp/>tmp;</highlight></codeline>
 <codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="167"><highlight class="normal"></highlight></codeline>
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>tmp<sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__sei__regs_8h_1a2dd20a32cd39ff23a86a47805cd7e351" kindref="member">SEI_DAT_CRCINIT_CRC_INIT_SET</ref>(config-&gt;<ref refid="structsei__data__format__config__t_1a96acffabb22f13a81cb4e27e0408857b" kindref="member">crc_init_value</ref>);</highlight></codeline>
 <codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!cmd_data_select)<sp/>{</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1acb1ed96780d83e9b214c9205284cc27b" kindref="member">DAT</ref>[idx].<ref refid="structSEI__Type_1a43fb0950d8c62a4fcf79614457f68d5a" kindref="member">CRCINIT</ref><sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1a085c97be2d981006a75d986fbf1143a0" kindref="member">DAT</ref>[idx].<ref refid="structSEI__Type_1a43fb0950d8c62a4fcf79614457f68d5a" kindref="member">CRCINIT</ref><sp/>=<sp/>tmp;</highlight></codeline>
 <codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="172"><highlight class="normal"></highlight></codeline>
 <codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>tmp<sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__sei__regs_8h_1a6151bf21e85f1236f82f338c65c7cc4a" kindref="member">SEI_DAT_CRCPOLY_CRC_POLY_SET</ref>(config-&gt;<ref refid="structsei__data__format__config__t_1aad5c4755b751f183cb79a63c6a18c3bd" kindref="member">crc_poly</ref>);</highlight></codeline>
 <codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!cmd_data_select)<sp/>{</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1acb1ed96780d83e9b214c9205284cc27b" kindref="member">DAT</ref>[idx].<ref refid="structSEI__Type_1a47e984cd25c0ffbb6ccf333da4c7881f" kindref="member">CRCPOLY</ref><sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1a085c97be2d981006a75d986fbf1143a0" kindref="member">DAT</ref>[idx].<ref refid="structSEI__Type_1a47e984cd25c0ffbb6ccf333da4c7881f" kindref="member">CRCPOLY</ref><sp/>=<sp/>tmp;</highlight></codeline>
 <codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="177"><highlight class="normal"></highlight></codeline>
 <codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cmd_data_select)<sp/>{</highlight></codeline>
 <codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1a260fb0e355394c496a05dde36ecaae81" kindref="member">CTRL</ref>[idx].CMD.MODE<sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__sei__regs_8h_1a06a1a6c6b8883d204f9411d0df77eb30" kindref="member">SEI_CTRL_CMD_MODE_REWIND_MASK</ref>;</highlight></codeline>
 <codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1acb1ed96780d83e9b214c9205284cc27b" kindref="member">DAT</ref>[idx].<ref refid="structSEI__Type_1ae4ec5c89acfc8753bf6213656237fc9c" kindref="member">MODE</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__sei__regs_8h_1a64a5815489d06dc3c6fbd48de2d9c9af" kindref="member">SEI_DAT_MODE_REWIND_MASK</ref>;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structSEI__Type_1a085c97be2d981006a75d986fbf1143a0" kindref="member">DAT</ref>[idx].<ref refid="structSEI__Type_1ae4ec5c89acfc8753bf6213656237fc9c" kindref="member">MODE</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__sei__regs_8h_1a64a5815489d06dc3c6fbd48de2d9c9af" kindref="member">SEI_DAT_MODE_REWIND_MASK</ref>;</highlight></codeline>
 <codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="183"><highlight class="normal"></highlight></codeline>
 <codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>

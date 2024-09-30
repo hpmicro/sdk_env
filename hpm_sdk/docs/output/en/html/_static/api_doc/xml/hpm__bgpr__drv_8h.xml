@@ -1,14 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__bgpr__drv_8h" kind="file" language="C++">
     <compoundname>hpm_bgpr_drv.h</compoundname>
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
     <includes local="yes">hpm_soc_feature.h</includes>
     <includes local="yes">hpm_bgpr_regs.h</includes>
     <incdepgraph>
-      <node id="4">
-        <label>stdbool.h</label>
-      </node>
       <node id="1">
         <label>drivers/inc/hpm_bgpr_drv.h</label>
         <link refid="hpm__bgpr__drv_8h"/>
@@ -36,6 +33,15 @@
       <node id="3">
         <label>assert.h</label>
       </node>
+      <node id="9">
+        <label>hpm_bgpr_regs.h</label>
+      </node>
+      <node id="8">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
       <node id="5">
         <label>stdint.h</label>
       </node>
@@ -45,127 +51,11 @@
       <node id="6">
         <label>string.h</label>
       </node>
-      <node id="9">
-        <label>hpm_bgpr_regs.h</label>
-      </node>
-      <node id="8">
-        <label>hpm_soc_feature.h</label>
-      </node>
     </incdepgraph>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__bgpr__interfaces_1ga45981edceaec0141cab465305f871c56" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>static hpm_stat_t bgpr_read32</definition>
-        <argsstring>(BGPR_Type *ptr, uint8_t bgpr_index, uint32_t *bgpr_val)</argsstring>
-        <name>bgpr_read32</name>
-        <param>
-          <type><ref refid="structBGPR__Type" kindref="compound">BGPR_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>bgpr_index</declname>
-        </param>
-        <param>
-          <type>uint32_t *</type>
-          <declname>bgpr_val</declname>
-        </param>
-        <briefdescription>
-<para>read BGPR value </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>the bgpr_index range is 0 ~ (GPR count of BGPR - 1)</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>BGPR base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>bgpr_index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>BGPR GPR index </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>bgpr_val</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>the BGPR GPR value pointer</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>hpm_stat_t status_success if read bgpr without any error </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_bgpr_drv.h" line="38" column="26" bodyfile="drivers/inc/hpm_bgpr_drv.h" bodystart="38" bodyend="47"/>
-      </memberdef>
-      <memberdef kind="function" id="group__bgpr__interfaces_1ga816082d041ec1dcd9a614852dba7faac" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>static hpm_stat_t bgpr_write32</definition>
-        <argsstring>(BGPR_Type *ptr, uint8_t bgpr_index, uint32_t bgpr_val)</argsstring>
-        <name>bgpr_write32</name>
-        <param>
-          <type><ref refid="structBGPR__Type" kindref="compound">BGPR_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>bgpr_index</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>bgpr_val</declname>
-        </param>
-        <briefdescription>
-<para>write BGPR value </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>the bgpr_index range is 0 ~ (GPR count of BGPR - 1)</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>BGPR base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>bgpr_index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>BGPR GPR index </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>bgpr_val</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>the BGPR GPR value</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>hpm_stat_t status_success if write bgpr without any error </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_bgpr_drv.h" line="60" column="26" bodyfile="drivers/inc/hpm_bgpr_drv.h" bodystart="60" bodyend="69"/>
-      </memberdef>
-      </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__bgpr__interfaces_1ga45981edceaec0141cab465305f871c56" kind="function"><name>bgpr_read32</name></member>
+      <member refid="group__bgpr__interfaces_1ga816082d041ec1dcd9a614852dba7faac" kind="function"><name>bgpr_write32</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

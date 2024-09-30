@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="group__qeiv2__interface" kind="group">
     <compoundname>qeiv2_interface</compoundname>
     <title>QEIV2 driver APIs</title>
@@ -7,7 +7,7 @@
     <innerclass refid="structqeiv2__pos__cmp__match__config__t" prot="public">qeiv2_pos_cmp_match_config_t</innerclass>
     <innerclass refid="structqeiv2__uvw__config__t" prot="public">qeiv2_uvw_config_t</innerclass>
     <innerclass refid="structqeiv2__adc__config__t" prot="public">qeiv2_adc_config_t</innerclass>
-      <sectiondef kind="enum">
+    <sectiondef kind="enum">
       <memberdef kind="enum" id="group__qeiv2__interface_1ga9729fe19b1b254594236b102b3fad31c" prot="public" static="no" strong="no">
         <type></type>
         <name>qeiv2_work_mode</name>
@@ -478,8 +478,8 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_qeiv2_drv.h" line="146" column="1" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="146" bodyend="153"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
+    </sectiondef>
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="group__qeiv2__interface_1gab2d71cf24db9a03737a60ebed195403d" prot="public" static="no">
         <type>enum <ref refid="group__qeiv2__interface_1ga9729fe19b1b254594236b102b3fad31c" kindref="member">qeiv2_work_mode</ref></type>
         <definition>typedef enum qeiv2_work_mode qeiv2_work_mode_t</definition>
@@ -637,8 +637,8 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_qeiv2_drv.h" line="153" column="33"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="group__qeiv2__interface_1ga911212d6d999f9f89ebccfa4f7b0dd14" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>static void qeiv2_load_counter_to_read_registers</definition>
@@ -665,7 +665,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="208" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="208" bodyend="211"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="215" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="215" bodyend="218"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga9bb8450f009f659a4186d4e1d120fabb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -698,7 +698,7 @@
 </parameternamelist>
 <parameterdescription>
 <para><itemizedlist>
-<listitem><para>1 zcnt will increment when phcnt upcount to phmax, decrement when phcnt downcount to 0 </para>
+<listitem><para>1 zcnt will increment when phcnt upcount to PHCFG.phmax, decrement when phcnt downcount to 0 </para>
 </listitem>
 <listitem><para>0 zcnt will increment or decrement when Z input assert </para>
 </listitem>
@@ -711,7 +711,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="221" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="221" bodyend="224"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="228" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="228" bodyend="231"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga36614fc5a00f24992b1f27e9fa264567" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -743,7 +743,7 @@
 <parametername direction="in">phmax</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>maximum phcnt number, phcnt will rollover to 0 when it upcount to phmax </para>
+<para>maximum phcnt number, phcnt will rollover to 0 when it upcount to (phmax-1) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -751,7 +751,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="232" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="232" bodyend="247"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="239" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="239" bodyend="254"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga573d147f93f53e12dd01a2fa05ab03f6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -815,7 +815,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="257" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="257" bodyend="272"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="264" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="264" bodyend="279"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gade3ed52ddcdfe8acc85c3bb1a99f6274" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -877,7 +877,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="285" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="285" bodyend="292"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="292" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="292" bodyend="299"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gab2f47f0a7dc1acba7fe44497a6bfeae5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -917,7 +917,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="300" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="300" bodyend="307"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="307" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="307" bodyend="314"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga1ba173355d46369999bf514e41e8b893" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -945,7 +945,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="314" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="314" bodyend="317"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="321" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="321" bodyend="324"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gafb29a0bdae0579f2ec79c9ff613f2d5a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -973,7 +973,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="324" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="324" bodyend="327"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="331" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="331" bodyend="334"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga64a71bab10e498653181cda94e5ea8d1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1001,7 +1001,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="334" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="334" bodyend="337"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="341" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="341" bodyend="344"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gaa4e33cfaefd801b00cde6ece136f8dc9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1029,7 +1029,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="344" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="344" bodyend="347"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="351" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="351" bodyend="354"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga8ed34fc95eef9df18a1d33b933c12095" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1069,7 +1069,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="355" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="355" bodyend="358"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="362" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="362" bodyend="365"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gae9f3e14d4277e4df996be2e403cfa3f3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -1099,7 +1099,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="366" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="366" bodyend="369"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="373" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="373" bodyend="376"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga8b4b89a6ce70662b6d9322623729cbf3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1139,7 +1139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="377" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="377" bodyend="380"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="384" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="384" bodyend="387"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gaa868f0e754cf075713f2df7f9022e696" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1209,7 +1209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="392" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="392" bodyend="402"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="399" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="399" bodyend="409"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gabada0ab9e11fa4c11beb34a815f78066" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1279,7 +1279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="424" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="424" bodyend="427"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="431" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="431" bodyend="434"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gaeff9dd464747d301dd39e516dacd82d5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1349,7 +1349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="449" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="449" bodyend="452"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="456" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="456" bodyend="459"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga68fd7964f6841e497a8a951ee27b6e10" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1419,7 +1419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="474" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="474" bodyend="477"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="481" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="481" bodyend="484"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga7d61b95cc4d42fc668b57f70af9a2a1c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1489,7 +1489,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="499" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="499" bodyend="502"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="506" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="506" bodyend="509"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gad00c5888bc851931761368c1b7a09021" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1559,7 +1559,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="524" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="524" bodyend="527"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="531" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="531" bodyend="534"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gaa1a088dc2bacdfe6c8a5d5f1927723c6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1629,7 +1629,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="549" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="549" bodyend="552"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="556" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="556" bodyend="559"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga1b4f8d89c13382486153755b9d2e82c2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1699,7 +1699,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="574" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="574" bodyend="577"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="581" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="581" bodyend="584"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga51f63a1955c303cb3e641b851d83695e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -1766,7 +1766,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="599" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="599" bodyend="602"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="606" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="606" bodyend="609"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga71f8679a3c6d47833545ffba39fe0cf7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -1845,7 +1845,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="625" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="625" bodyend="628"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="632" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="632" bodyend="635"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga0012e37cac70445708b2f4f446059b25" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1915,7 +1915,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="650" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="650" bodyend="653"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="657" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="657" bodyend="660"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gabdff62322a9c047aa9def5f5845a45aa" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1985,7 +1985,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="675" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="675" bodyend="678"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="682" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="682" bodyend="685"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gaf749e192b35ff5f8f90ab1e20a309bbe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -2034,7 +2034,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="687" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="687" bodyend="690"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="694" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="694" bodyend="697"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga71b4b2feaa76f31b60c77203348b6ed4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -2064,7 +2064,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="698" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="698" bodyend="701"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="705" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="705" bodyend="708"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga9acd834c74b3bafa822dc71a307261c5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -2094,7 +2094,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="709" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="709" bodyend="712"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="716" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="716" bodyend="719"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gabed662d05d775fac2e1d01ae6ad61d79" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -2124,7 +2124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="720" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="720" bodyend="723"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="727" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="727" bodyend="730"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga96d881d7585ef25ad83170946e01bdb2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -2154,7 +2154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="731" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="731" bodyend="734"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="738" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="738" bodyend="741"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gacb31400c3c0d8736da2b558a9a8fe99c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -2203,7 +2203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="744" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="744" bodyend="747"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="751" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="751" bodyend="754"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gae2ee812218ee49c55cc47c2b88a0b176" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -2252,7 +2252,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="756" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="756" bodyend="759"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="763" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="763" bodyend="766"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga60f64a78ee7ad79310b31e350c8615ef" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -2301,7 +2301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="768" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="768" bodyend="771"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="775" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="775" bodyend="778"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga6fc9b3331707d960acd6cc16f219b044" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2341,7 +2341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="779" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="779" bodyend="782"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="786" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="786" bodyend="789"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gac87d64e0bf17495cd025b60d099ec304" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2381,7 +2381,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="790" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="790" bodyend="793"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="797" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="797" bodyend="800"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gac4a8954f9aac3d638d722b1c0199bff3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2421,7 +2421,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="803" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="803" bodyend="806"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="810" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="810" bodyend="813"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga5c7c847cf5ddcce6c0d1617da2cb00be" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2533,7 +2533,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="822" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="822" bodyend="832"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="829" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="829" bodyend="839"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gabeaac1c3b021893ba89502064d9bb313" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2573,7 +2573,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="840" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="840" bodyend="843"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="847" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="847" bodyend="850"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gace3804799f1ecd4b6316031929043045" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2613,7 +2613,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="851" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="851" bodyend="854"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="858" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="858" bodyend="861"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gab33c26f990587572fe55872a595b1799" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2653,7 +2653,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="862" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="862" bodyend="865"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="869" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="869" bodyend="872"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gacc29c83c38057ac5e541ed04c05b27e5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2765,7 +2765,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="881" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="881" bodyend="891"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="888" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="888" bodyend="898"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gadebd201cf5987ac14574fcdf6ca1af0e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2853,7 +2853,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="903" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="903" bodyend="909"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="910" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="910" bodyend="916"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga2e24b29967b139be9009bd7329ae13da" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2893,7 +2893,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="917" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="917" bodyend="920"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="924" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="924" bodyend="927"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gae32023c95cac33b628808cf1dfb5a039" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -2930,7 +2930,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="928" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="928" bodyend="931"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="935" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="935" bodyend="938"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga217925f45dbf955f97e7066d3e994420" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -2967,7 +2967,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="939" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="939" bodyend="942"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="946" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="946" bodyend="949"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gaf1eceb5c05560bedb945782b8d9f93f1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3007,7 +3007,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="950" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="950" bodyend="953"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="957" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="957" bodyend="960"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga37ba84f969ba9174eb05d8aeaf662392" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -3044,7 +3044,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="961" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="961" bodyend="964"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="968" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="968" bodyend="971"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gae048274ce734a179aca3c472af394aef" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -3081,7 +3081,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="972" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="972" bodyend="975"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="979" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="979" bodyend="982"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gab087a4578ab6b5ec23a10830369d3c35" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3121,7 +3121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="983" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="983" bodyend="986"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="990" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="990" bodyend="993"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gac45b3cf3b5eea3ec0d13e755b9e89501" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -3158,7 +3158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="994" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="994" bodyend="997"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1001" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1001" bodyend="1004"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gac56883a901d1b85889e68d057c34e3d1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -3195,7 +3195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1005" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1005" bodyend="1008"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1012" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1012" bodyend="1015"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga8cea9f9ccddff657b72b540eac955da7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -3232,7 +3232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1016" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1016" bodyend="1019"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1023" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1023" bodyend="1026"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga383e3d8e9d89ce25c853d6f06fbfaa6f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -3269,7 +3269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1027" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1027" bodyend="1030"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1034" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1034" bodyend="1037"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gae3dfb139cc87a6ac84c4eb80407d275f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3309,7 +3309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1038" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1038" bodyend="1041"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1045" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1045" bodyend="1048"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gae53d29d90979c8b5e4e43c5b00908c38" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -3346,7 +3346,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1233" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1233" bodyend="1236"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1240" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1240" bodyend="1243"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga8ae2e76bc748dc8e6c0ac6fe5a3efcd3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -3383,7 +3383,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1244" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1244" bodyend="1247"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1251" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1251" bodyend="1254"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gac85f220de3f0a7de90865beeac7a1b91" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -3420,7 +3420,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1255" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1255" bodyend="1258"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1262" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1262" bodyend="1265"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gad3741f9db9bf52dfb8dd7a5bdda44e7e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -3457,7 +3457,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1266" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1266" bodyend="1269"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1273" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1273" bodyend="1276"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gaf3365dfc9b4d6071046717df80fc6c4e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3497,7 +3497,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1277" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1277" bodyend="1284"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1284" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1284" bodyend="1291"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gaf1c0079246abd5ff178613fdbf1b90d0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3549,7 +3549,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1293" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1293" bodyend="1305"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1300" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1300" bodyend="1312"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gafbf8a3cd8b2d548b70565e1cb85bd96c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3601,7 +3601,84 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1314" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1314" bodyend="1326"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1321" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1321" bodyend="1333"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qeiv2__interface_1ga89ea40e1027e975a2b0220991b280aaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qeiv2_config_adcx_adcy_param</definition>
+        <argsstring>(QEIV2_Type *qeiv2_x, float tan_delta, float cos_delta, float x_magnification, float y_magnification)</argsstring>
+        <name>qeiv2_config_adcx_adcy_param</name>
+        <param>
+          <type><ref refid="structQEIV2__Type" kindref="compound">QEIV2_Type</ref> *</type>
+          <declname>qeiv2_x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>tan_delta</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>cos_delta</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x_magnification</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y_magnification</declname>
+        </param>
+        <briefdescription>
+<para>Configures the orthogonal delta and magnification for ADCX and ADCY. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Configures the orthogonal delta and magnification parameters for ADCX and ADCY of the QEIV2 device.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qeiv2_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the QEIV2 device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tan_delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TAN value of orthogonal delta angle in radians </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cos_delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>COS value of orthogonal delta angle in radians </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">x_magnification</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADCX magnification factor. If no magnify, please set it to 1.0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y_magnification</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADCY magnification factor. If no magnify, please set it to 1.0. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1346" column="6" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="157" bodyend="171" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1346" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga7c508cfc18240d410fff13bec186d5ef" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3641,7 +3718,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1334" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1334" bodyend="1337"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1354" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1354" bodyend="1357"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga99ce4e5dcf2947a22bb58a0b1b1716fc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3681,7 +3758,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1346" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1346" bodyend="1349"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1366" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1366" bodyend="1369"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gae8eba39dda7bffbbdc82ea2a9c4698e9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3721,7 +3798,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1357" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1357" bodyend="1360"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1377" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1377" bodyend="1380"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga1bfa0ef14aaa04fb5ee88bbe7ec6dc11" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3849,7 +3926,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1388" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1388" bodyend="1401"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1408" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1408" bodyend="1421"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gae8d11cac1c16e7b60cd2d3c4544a8d3d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3905,7 +3982,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1411" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1411" bodyend="1414"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1431" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1431" bodyend="1434"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga2be40ab52e385074a2762b14b65eeae5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3945,7 +4022,44 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1422" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1422" bodyend="1425"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1442" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1442" bodyend="1445"/>
+      </memberdef>
+      <memberdef kind="function" id="group__qeiv2__interface_1ga8c564f3775f1b0f15bd1941d4bfaec06" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t qeiv2_get_z_phase</definition>
+        <argsstring>(QEIV2_Type *qeiv2_x)</argsstring>
+        <name>qeiv2_get_z_phase</name>
+        <param>
+          <type><ref refid="structQEIV2__Type" kindref="compound">QEIV2_Type</ref> *</type>
+          <declname>qeiv2_x</declname>
+        </param>
+        <briefdescription>
+<para>get z phase counter value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qeiv2_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QEIV2 base address, HPM_QEIV2x(x=0...n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phase counter value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1453" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1453" bodyend="1456"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga46209f7e9115fff20eb4e11dc766479a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3985,7 +4099,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1433" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1433" bodyend="1436"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1464" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1464" bodyend="1467"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gac85a697f272538454c7ae2abbfcf1754" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -4022,7 +4136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1444" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1444" bodyend="1447"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1475" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1475" bodyend="1478"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga11343a5b9fbdb45cda588571057d42c4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -4086,7 +4200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1457" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1457" bodyend="1460"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1488" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1488" bodyend="1491"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga552839ad1b6b7db8727cd51bcdd435ec" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -4126,7 +4240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1468" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1468" bodyend="1471"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1499" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1499" bodyend="1502"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gab04274c2cbdddec581e604b8575bc0ea" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -4163,7 +4277,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1479" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1479" bodyend="1482"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1510" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1510" bodyend="1513"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga604ce767ab6c2f0bffec90f2eeb8a057" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -4227,7 +4341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1492" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1492" bodyend="1495"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1523" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1523" bodyend="1526"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gaa80a5b6055fff5e2d2bc8d7f6642e318" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -4264,7 +4378,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1503" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1503" bodyend="1506"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1534" column="24" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1534" bodyend="1537"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gafec09cc5a3c72c4b2303076cca41cfff" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -4316,7 +4430,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1515" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1515" bodyend="1525"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1546" column="20" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="1546" bodyend="1556"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga32a03c4707c36e6e3ba1d09f13d2e88a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -4358,7 +4472,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1534" column="12" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="11" bodyend="21" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1534" declcolumn="12"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1654" column="12" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="12" bodyend="22" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1654" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga1bf520d5a7d6bf9c62bf16d7316bcace" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -4400,7 +4514,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1543" column="12" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="23" bodyend="31" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1543" declcolumn="12"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1663" column="12" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="24" bodyend="32" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1663" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga711af50c52e76162888dbd5ec5a0ea99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -4442,7 +4556,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1552" column="12" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="33" bodyend="43" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1552" declcolumn="12"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1672" column="12" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="34" bodyend="44" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1672" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1ga9df7efcc31a913cc4ae3d30606f40597" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -4484,7 +4598,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1561" column="12" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="45" bodyend="53" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1561" declcolumn="12"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1681" column="12" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="46" bodyend="54" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1681" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gafd461639b99f02fae55d9630e5ce4fb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4512,7 +4626,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1568" column="6" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="55" bodyend="89" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1568" declcolumn="6"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1688" column="6" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="56" bodyend="90" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1688" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gac99c24b72f560bbac6b742169119e2ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -4554,7 +4668,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1577" column="12" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="91" bodyend="118" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1577" declcolumn="12"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1697" column="12" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="92" bodyend="119" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1697" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__qeiv2__interface_1gafa9ec204e8fc2679ce778f19b4cc5ee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4646,10 +4760,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1590" column="6" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="120" bodyend="139" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1590" declcolumn="6"/>
+        <location file="drivers/inc/hpm_qeiv2_drv.h" line="1710" column="6" bodyfile="drivers/src/hpm_qeiv2_drv.c" bodystart="121" bodyend="140" declfile="drivers/inc/hpm_qeiv2_drv.h" declline="1710" declcolumn="6"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="define">
+    </sectiondef>
+    <sectiondef kind="define">
       <memberdef kind="define" id="group__qeiv2__interface_1ga4f6027c5538f51f5899bfc1aac979cc3" prot="public" static="no">
         <name>QEIV2_EVENT_WDOG_FLAG_MASK</name>
         <initializer>(1U &lt;&lt; 31U)</initializer>
@@ -4874,9 +4988,9 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_qeiv2_drv.h" line="144" column="9" bodyfile="drivers/inc/hpm_qeiv2_drv.h" bodystart="144" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
-<para>QEIV2 driver APIs. </para>
+<para>QEIV2 driver APIs  . </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

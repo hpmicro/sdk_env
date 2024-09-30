@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="group__plb__interface" kind="group">
     <compoundname>plb_interface</compoundname>
     <title>PLB driver APIs</title>
     <innerclass refid="unionplb__type__a__truth__t" prot="public">plb_type_a_truth_t</innerclass>
-      <sectiondef kind="enum">
+    <sectiondef kind="enum">
       <memberdef kind="enum" id="group__plb__interface_1ga08288afb2a4aa8b2113e900b56d67284" prot="public" static="no" strong="no">
         <type></type>
         <name>plb_chn</name>
@@ -471,8 +471,8 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_plb_drv.h" line="172" column="1" bodyfile="drivers/inc/hpm_plb_drv.h" bodystart="172" bodyend="187"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
+    </sectiondef>
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="group__plb__interface_1gae72a171c29a0c545b6e87e264484b0a1" prot="public" static="no">
         <type>enum <ref refid="group__plb__interface_1ga08288afb2a4aa8b2113e900b56d67284" kindref="member">plb_chn</ref></type>
         <definition>typedef enum plb_chn plb_chn_t</definition>
@@ -557,8 +557,8 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_plb_drv.h" line="187" column="23"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="group__plb__interface_1ga3e797b9f47b01ca234d8efaf86390d6b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>static void plb_type_a_set_lut</definition>
@@ -855,6 +855,49 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_plb_drv.h" line="253" column="20" bodyfile="drivers/inc/hpm_plb_drv.h" bodystart="253" bodyend="256"/>
       </memberdef>
+      <memberdef kind="function" id="group__plb__interface_1ga0b6bafba828c422898bb2d9c7264cf83" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t plb_type_b_get_counter</definition>
+        <argsstring>(PLB_Type *plb, plb_chn_t chn)</argsstring>
+        <name>plb_type_b_get_counter</name>
+        <param>
+          <type><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> *</type>
+          <declname>plb</declname>
+        </param>
+        <param>
+          <type><ref refid="group__plb__interface_1gae72a171c29a0c545b6e87e264484b0a1" kindref="member">plb_chn_t</ref></type>
+          <declname>chn</declname>
+        </param>
+        <briefdescription>
+<para>Get the counter value for PLB Type B. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the value of the SW_INJECT field for the specified channel from the given PLB Type B structure.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the PLB Type B structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value of the SW_INJECT field for the corresponding channel </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_plb_drv.h" line="283" column="24" bodyfile="drivers/inc/hpm_plb_drv.h" bodystart="283" bodyend="286"/>
+      </memberdef>
       <memberdef kind="function" id="group__plb__interface_1gacc22a0097fc83cec521c16f7c94aacaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void plb_type_b_set_lut</definition>
@@ -917,10 +960,126 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_plb_drv.h" line="266" column="6" bodyfile="drivers/src/hpm_plb_drv.c" bodystart="11" bodyend="24" declfile="drivers/inc/hpm_plb_drv.h" declline="266" declcolumn="6"/>
+        <location file="drivers/inc/hpm_plb_drv.h" line="296" column="6" bodyfile="drivers/src/hpm_plb_drv.c" bodystart="11" bodyend="24" declfile="drivers/inc/hpm_plb_drv.h" declline="296" declcolumn="6"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="define">
+      <memberdef kind="function" id="group__plb__interface_1ga355ec546402821e0f7a7131539ea2352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void plb_type_b_set_lut_range_mask</definition>
+        <argsstring>(PLB_Type *plb, plb_chn_t chn, uint16_t mask, plb_type_b_slice_opt_t opt)</argsstring>
+        <name>plb_type_b_set_lut_range_mask</name>
+        <param>
+          <type><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> *</type>
+          <declname>plb</declname>
+        </param>
+        <param>
+          <type><ref refid="group__plb__interface_1gae72a171c29a0c545b6e87e264484b0a1" kindref="member">plb_chn_t</ref></type>
+          <declname>chn</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type><ref refid="group__plb__interface_1ga71a948cb021025632aba6ca8a9aa4800" kindref="member">plb_type_b_slice_opt_t</ref></type>
+          <declname>opt</declname>
+        </param>
+        <briefdescription>
+<para>Batch set plb lut b type data, the unit corresponding to the bit marked with a mask of 1 is configured. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> plb base </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__plb__interface_1gae72a171c29a0c545b6e87e264484b0a1" kindref="member">plb_chn_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bit16 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__plb__interface_1ga71a948cb021025632aba6ca8a9aa4800" kindref="member">plb_type_b_slice_opt_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_plb_drv.h" line="306" column="6" bodyfile="drivers/src/hpm_plb_drv.c" bodystart="26" bodyend="36" declfile="drivers/inc/hpm_plb_drv.h" declline="306" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__plb__interface_1gaef0c0bcdd9e1ab9c6df3e813294131d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void plb_type_b_set_all_slice</definition>
+        <argsstring>(PLB_Type *plb, plb_chn_t chn, plb_type_b_slice_opt_t opt)</argsstring>
+        <name>plb_type_b_set_all_slice</name>
+        <param>
+          <type><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> *</type>
+          <declname>plb</declname>
+        </param>
+        <param>
+          <type><ref refid="group__plb__interface_1gae72a171c29a0c545b6e87e264484b0a1" kindref="member">plb_chn_t</ref></type>
+          <declname>chn</declname>
+        </param>
+        <param>
+          <type><ref refid="group__plb__interface_1ga71a948cb021025632aba6ca8a9aa4800" kindref="member">plb_type_b_slice_opt_t</ref></type>
+          <declname>opt</declname>
+        </param>
+        <briefdescription>
+<para>Configure all lut to the same configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> plb base </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__plb__interface_1gae72a171c29a0c545b6e87e264484b0a1" kindref="member">plb_chn_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__plb__interface_1ga71a948cb021025632aba6ca8a9aa4800" kindref="member">plb_type_b_slice_opt_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_plb_drv.h" line="315" column="6" bodyfile="drivers/src/hpm_plb_drv.c" bodystart="38" bodyend="45" declfile="drivers/inc/hpm_plb_drv.h" declline="315" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="define">
       <memberdef kind="define" id="group__plb__interface_1ga81f36f5b32bd9f3fcb390cdaaa26204a" prot="public" static="no">
         <name>PLB_SLICE_MASK</name>
         <initializer>(0xf)</initializer>
@@ -980,9 +1139,9 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_plb_drv.h" line="25" column="9" bodyfile="drivers/inc/hpm_plb_drv.h" bodystart="25" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
-<para>PLB driver APIs. </para>
+<para>PLB driver APIs  . </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

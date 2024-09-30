@@ -147,9 +147,10 @@ The HPM6750 is a dual-core flashless MCU running 816Mhz. It has a 2MB continuous
 
 - Ethernet PPS Pin
 
-| Function    | Position |
-| ----------- | -------- |
-| ENET0.EVTO0 | U29[2]   |
+| Function    | Pin  | Position |
+| ----------- | ---- | -------- |
+| ENET0.EVTO0 | PF05 | U29[2]   |
+| ENET0.EVTI1 | PE25 | J12[6]   |
 
 - UART13 pin
  The UART13 is used for core1 debug console or some functional testing using UART, such as uart_software_rx_idle, uart_rx_timeout, uart_software_lin, MICROROS_UART, USB_CDC_ACM_UART, MODBUS_RTU etc.

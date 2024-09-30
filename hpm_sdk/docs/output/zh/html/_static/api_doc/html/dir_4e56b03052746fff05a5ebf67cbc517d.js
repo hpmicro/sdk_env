@@ -19,6 +19,7 @@ var dir_4e56b03052746fff05a5ebf67cbc517d =
     [ "hpm_misc.h", "HPM6E00_2HPM6E80_2hpm__misc_8h.html", "HPM6E00_2HPM6E80_2hpm__misc_8h" ],
     [ "hpm_otp_drv.c", "HPM6E00_2HPM6E80_2hpm__otp__drv_8c.html", "HPM6E00_2HPM6E80_2hpm__otp__drv_8c" ],
     [ "hpm_otp_drv.h", "HPM6E00_2HPM6E80_2hpm__otp__drv_8h.html", "HPM6E00_2HPM6E80_2hpm__otp__drv_8h" ],
+    [ "hpm_otp_table.h", "HPM6E00_2HPM6E80_2hpm__otp__table_8h.html", "HPM6E00_2HPM6E80_2hpm__otp__table_8h" ],
     [ "hpm_pcfg_drv.h", "HPM6E00_2HPM6E80_2hpm__pcfg__drv_8h.html", "HPM6E00_2HPM6E80_2hpm__pcfg__drv_8h" ],
     [ "hpm_plic_drv.h", "HPM6E00_2HPM6E80_2hpm__plic__drv_8h.html", "HPM6E00_2HPM6E80_2hpm__plic__drv_8h" ],
     [ "hpm_pmic_iomux.h", "HPM6E00_2HPM6E80_2hpm__pmic__iomux_8h.html", "HPM6E00_2HPM6E80_2hpm__pmic__iomux_8h" ],
@@ -30,7 +31,7 @@ var dir_4e56b03052746fff05a5ebf67cbc517d =
     [ "hpm_soc_ip_feature.h", "HPM6E00_2HPM6E80_2hpm__soc__ip__feature_8h.html", "HPM6E00_2HPM6E80_2hpm__soc__ip__feature_8h" ],
     [ "hpm_sysctl_drv.c", "HPM6E00_2HPM6E80_2hpm__sysctl__drv_8c.html", "HPM6E00_2HPM6E80_2hpm__sysctl__drv_8c" ],
     [ "hpm_sysctl_drv.h", "HPM6E00_2HPM6E80_2hpm__sysctl__drv_8h.html", "HPM6E00_2HPM6E80_2hpm__sysctl__drv_8h" ],
-    [ "hpm_trgm_soc_drv.c", "HPM6E00_2HPM6E80_2hpm__trgm__soc__drv_8c.html", "HPM6E00_2HPM6E80_2hpm__trgm__soc__drv_8c" ],
+    [ "hpm_trgm_soc_drv.c", "hpm__trgm__soc__drv_8c.html", "hpm__trgm__soc__drv_8c" ],
     [ "hpm_trgm_soc_drv.h", "HPM6E00_2HPM6E80_2hpm__trgm__soc__drv_8h.html", "HPM6E00_2HPM6E80_2hpm__trgm__soc__drv_8h" ],
     [ "hpm_trgmmux_src.h", "HPM6E00_2HPM6E80_2hpm__trgmmux__src_8h.html", "HPM6E00_2HPM6E80_2hpm__trgmmux__src_8h" ],
     [ "system.c", "HPM6E00_2HPM6E80_2system_8c.html", "HPM6E00_2HPM6E80_2system_8c" ]

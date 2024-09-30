@@ -1,14 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__block_8c" kind="file" language="C++">
     <compoundname>hpm_block.c</compoundname>
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
     <includes refid="hpm__bldc__define_8h" local="yes">hpm_bldc_define.h</includes>
     <includes refid="hpm__block_8h" local="yes">hpm_block.h</includes>
     <incdepgraph>
-      <node id="4">
-        <label>stdbool.h</label>
-      </node>
       <node id="2">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -23,14 +20,23 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>assert.h</label>
+      <node id="8">
+        <label>hpm_bldc_define.h</label>
+        <link refid="hpm__bldc__define_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
-      <node id="5">
-        <label>stdint.h</label>
+      <node id="11">
+        <label>hpm_block.h</label>
+        <link refid="hpm__block_8h"/>
       </node>
-      <node id="7">
-        <label>stdlib.h</label>
+      <node id="9">
+        <label>hpm_motor_math.h</label>
+        <link refid="hpm__motor__math_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>middleware/hpm_mcl/sensor_control/hpm_block.c</label>
@@ -42,241 +48,30 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>hpm_bldc_define.h</label>
-        <link refid="hpm__bldc__define_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>hpm_motor_math.h</label>
-        <link refid="hpm__motor__math_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>string.h</label>
-      </node>
-      <node id="11">
-        <label>hpm_block.h</label>
-        <link refid="hpm__block_8h"/>
+      <node id="3">
+        <label>assert.h</label>
       </node>
       <node id="10">
         <label>math.h</label>
       </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
     </incdepgraph>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__mcl__block__interface_1ga7687d6c673155c934f34682eca1e57e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void hpm_mcl_bldc_block_ctrl</definition>
-        <argsstring>(uint8_t motorindex, uint8_t dir, uint8_t step)</argsstring>
-        <name>hpm_mcl_bldc_block_ctrl</name>
-        <param>
-          <type>uint8_t</type>
-          <declname>motorindex</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>dir</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>step</declname>
-        </param>
-        <briefdescription>
-<para>Output pwm according to the number of motor steps. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">motorindex</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>number of motor <ref refid="group__mcl__common_1gaf7ce02b0ef85b438d594aaa5f43677bf" kindref="member">BLDC_MOTOR0_INDEX</ref> ... BLDC_MOTOR3_INDEX </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">dir</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Motor operation direction <ref refid="group__mcl__common_1ga74e3356cce8ecb2affbbbb698aa0e706" kindref="member">BLDC_MOTOR_DIR_FORWARD</ref> or <ref refid="group__mcl__common_1ga36276255366ef4fc59e3b59ed7c42bce" kindref="member">BLDC_MOTOR_DIR_REVERSE</ref> </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">step</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Motor steps, 60 degrees per step </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/sensor_control/hpm_block.c" line="11" column="6" bodyfile="middleware/hpm_mcl/sensor_control/hpm_block.c" bodystart="11" bodyend="122"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcl__block__interface_1gacfb224d03107ba9a3a2a298f8bd163cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint8_t</type>
-        <definition>uint8_t hpm_mcl_bldc_block_step_get</definition>
-        <argsstring>(bldc_hall_phase_t phase, uint8_t hall_u, uint8_t hall_v, uint8_t hall_w)</argsstring>
-        <name>hpm_mcl_bldc_block_step_get</name>
-        <param>
-          <type><ref refid="group__mcl__common_1ga60276dc50b07d092a17dc8304a58da68" kindref="member">bldc_hall_phase_t</ref></type>
-          <declname>phase</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>hall_u</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>hall_v</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>hall_w</declname>
-        </param>
-        <briefdescription>
-<para>Get step count based on Hall sensor status. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">phase</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Hall Displacement <ref refid="group__mcl__common_1ga60276dc50b07d092a17dc8304a58da68" kindref="member">bldc_hall_phase_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">hall_u</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>u-phase Hall level state, 0-low 1-high </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">hall_v</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>v-phase Hall level state, 0-low 1-high </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">hall_w</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>w-phase Hall level state, 0-low 1-high </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>uint8_t step </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/sensor_control/hpm_block.c" line="124" column="9" bodyfile="middleware/hpm_mcl/sensor_control/hpm_block.c" bodystart="124" bodyend="138"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcl__block__interface_1gad8532a74f44546dfd58fa312554f8354" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>float</type>
-        <definition>float hpm_mcl_al_pi_ctrl_func</definition>
-        <argsstring>(float *memory, float targetspeed, float speed, float kp, float ki, float max)</argsstring>
-        <name>hpm_mcl_al_pi_ctrl_func</name>
-        <param>
-          <type>float *</type>
-          <declname>memory</declname>
-        </param>
-        <param>
-          <type>float</type>
-          <declname>targetspeed</declname>
-        </param>
-        <param>
-          <type>float</type>
-          <declname>speed</declname>
-        </param>
-        <param>
-          <type>float</type>
-          <declname>kp</declname>
-        </param>
-        <param>
-          <type>float</type>
-          <declname>ki</declname>
-        </param>
-        <param>
-          <type>float</type>
-          <declname>max</declname>
-        </param>
-        <briefdescription>
-<para>pi loop function </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">memory</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Store points data </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">targetspeed</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Target speed </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">speed</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Real speed </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">kp</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Scale factor </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">ki</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Integral factor </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">max</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Output maximum and integration maximum </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>float Data after pi adjustment </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/sensor_control/hpm_block.c" line="141" column="7" bodyfile="middleware/hpm_mcl/sensor_control/hpm_block.c" bodystart="141" bodyend="171"/>
-      </memberdef>
-      </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__mcl__block__interface_1ga7687d6c673155c934f34682eca1e57e2" kind="function"><name>hpm_mcl_bldc_block_ctrl</name></member>
+      <member refid="group__mcl__block__interface_1gacfb224d03107ba9a3a2a298f8bd163cf" kind="function"><name>hpm_mcl_bldc_block_step_get</name></member>
+      <member refid="group__mcl__block__interface_1gad8532a74f44546dfd58fa312554f8354" kind="function"><name>hpm_mcl_al_pi_ctrl_func</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

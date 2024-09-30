@@ -52,6 +52,7 @@ var hpm__ppi__drv_8h =
     [ "ppi_config_timeout", "group__ppi__interface.html#gabd56ce9b55f58777941d51312ef757e2", null ],
     [ "ppi_get_irq_enable_status", "group__ppi__interface.html#ga42779ec0dadc2fdeeca265b2d3bd9cd3", null ],
     [ "ppi_get_irq_status", "group__ppi__interface.html#gad1cb0f7071a6d74c9002bddaeaa916cc", null ],
+    [ "ppi_ns2cycle", "group__ppi__interface.html#ga2c3533b852a13b257f1218ef40b81797", null ],
     [ "ppi_set_clk_pin_disable", "group__ppi__interface.html#ga7ae45c162b82e17b7506529b6461b55b", null ],
     [ "ppi_set_clk_pin_enable", "group__ppi__interface.html#ga385801d4e22b0aa6c645b216c954c721", null ],
     [ "ppi_set_ctrl_pin_dir", "group__ppi__interface.html#gaffd42006a7edfa661f9b509e779fc11d", null ],

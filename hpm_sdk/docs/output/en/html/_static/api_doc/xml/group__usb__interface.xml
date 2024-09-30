@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="group__usb__interface" kind="group">
     <compoundname>usb_interface</compoundname>
     <title>USB driver APIs</title>
     <innerclass refid="structusb__endpoint__config__t" prot="public">usb_endpoint_config_t</innerclass>
-      <sectiondef kind="enum">
+    <sectiondef kind="enum">
       <memberdef kind="enum" id="group__usb__interface_1gac8a76acd5a4f562121857c3b5fa12f62" prot="public" static="no" strong="no">
         <type></type>
         <name>usb_dir_t</name>
@@ -278,8 +278,8 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_usb_drv.h" line="98" column="1" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="98" bodyend="101"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
+    </sectiondef>
+    <sectiondef kind="var">
       <memberdef kind="variable" id="group__usb__interface_1gae147b28fcfb6c35c2bfa5b8805c3343e" prot="public" static="no" mutable="no">
         <type></type>
         <definition>usb_control_request_t</definition>
@@ -293,8 +293,8 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_usb_drv.h" line="125" column="2" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="125" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="group__usb__interface_1gaaaf873d0073c24e1322cb78040785bd9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
         <definition>static uint32_t usb_get_interrupts</definition>
@@ -372,6 +372,46 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_usb_drv.h" line="162" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="162" bodyend="165"/>
       </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gace8fa730c09b59c08ab2d78c2007964d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_disable_interrupts</definition>
+        <argsstring>(USB_Type *ptr, uint32_t mask)</argsstring>
+        <name>usb_disable_interrupts</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Disable interrupts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mask value for interrupt events </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="173" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="173" bodyend="176"/>
+      </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga4f6763a3c0dba2fce55d681a0cc46bb9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
         <definition>static uint32_t usb_get_status_flags</definition>
@@ -407,7 +447,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="173" column="24" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="173" bodyend="176"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="184" column="24" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="184" bodyend="187"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gab758df15c9c7b620f14c721bc35eff9b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -448,7 +488,119 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="187" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="187" bodyend="190"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="198" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="198" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga6658140a4591b9d48d473d282549e3c4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_otg_enable_dpdm_wakeup</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_otg_enable_dpdm_wakeup</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Enable otg dp/dm change wakeup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="208" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="208" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga246ffd3fc488e1215bbfa86c735f89f9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_otg_disable_dpdm_wakeup</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_otg_disable_dpdm_wakeup</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Disbable otg dp/dm change wakeup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="218" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga720b2b6ce6ca0195a3a5286549ff66cc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_otg_enable_id_wakeup</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_otg_enable_id_wakeup</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Enable otg id change wakeup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="228" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="228" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1gaacf02d0c4037ae418db9a488f073bc27" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_otg_disable_id_wakeup</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_otg_disable_id_wakeup</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Disbable otg id change wakeup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="238" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="238" bodyend="241"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga142ce90e906c714e1fafd99fb579575f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -460,7 +612,7 @@
           <declname>ptr</declname>
         </param>
         <briefdescription>
-<para>Enable otg vbus wakeup. </para>
+<para>Enable otg vbus change wakeup. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -476,7 +628,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="197" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="197" bodyend="200"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="248" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="248" bodyend="251"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gac4a51f077a28d1265c4c734d62baa777" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -488,7 +640,7 @@
           <declname>ptr</declname>
         </param>
         <briefdescription>
-<para>Disbable otg vbus wakeup. </para>
+<para>Disbable otg vbus change wakeup. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -504,7 +656,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="207" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="207" bodyend="210"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="258" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="258" bodyend="261"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga12b9c3bdace88e7a1b117ddb44eb6041" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -544,7 +696,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="218" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="218" bodyend="221"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="269" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="269" bodyend="272"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga00a45a7d2c03b94ae676d7e93cdfcf97" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -572,7 +724,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="228" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="228" bodyend="231"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="279" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="279" bodyend="282"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga3009816fbb58761911be3d66f145f305" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -600,7 +752,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="238" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="238" bodyend="241"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="289" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="289" bodyend="292"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga19c4aa4f5165188795a44c600fdf6356" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -637,7 +789,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="249" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="249" bodyend="252"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="300" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="300" bodyend="303"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga21870c361bfd4242f6bab55ce1572dd7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint8_t</type>
@@ -674,7 +826,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="260" column="23" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="260" bodyend="263"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="311" column="23" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="311" bodyend="314"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga0ea35987674289f35787ab42935c4ef4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -711,7 +863,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="271" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="271" bodyend="274"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="322" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="322" bodyend="325"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gab042236cf3fd048b9fd38a45db340244" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -748,7 +900,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="282" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="282" bodyend="285"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="333" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="333" bodyend="336"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga14d1d0f4ba442713328d0e9a6f3d89ee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint8_t</type>
@@ -785,7 +937,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="293" column="23" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="293" bodyend="296"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="344" column="23" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="344" bodyend="347"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga67dbd8e3c2aa1ed942c22b8e36dad5ca" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -825,20 +977,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="304" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="304" bodyend="307"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="355" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="355" bodyend="358"/>
       </memberdef>
-      <memberdef kind="function" id="group__usb__interface_1ga7105d897b2041e8a60c8021763a9507b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="group__usb__interface_1gaf002a4d2ed7c935dd2ad3a2565a7214d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>static void usb_set_port_suspend</definition>
-        <argsstring>(USB_Type *ptr, bool suspend)</argsstring>
+        <argsstring>(USB_Type *ptr)</argsstring>
         <name>usb_set_port_suspend</name>
         <param>
           <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
           <declname>ptr</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>suspend</declname>
         </param>
         <briefdescription>
 <para>USB set port suspend. </para>
@@ -852,20 +1000,12 @@
 <para>A USB peripheral base address </para>
 </parameterdescription>
 </parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">suspend</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>true - suspend, false - not suspend </para>
-</parameterdescription>
-</parameteritem>
 </parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="315" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="315" bodyend="318"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="365" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="365" bodyend="368"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gaa8d7b1f4160c160fac1a1d048bc927b7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -893,7 +1033,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="325" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="325" bodyend="328"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="375" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="375" bodyend="380"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga599237cef768dca6cf6aa62d3718f37b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -921,7 +1061,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="335" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="335" bodyend="338"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="387" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="387" bodyend="390"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga473d391beec25c0f14adfa16d7455b44" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -949,7 +1089,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="345" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="345" bodyend="353"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="397" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="397" bodyend="405"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga3b906bc33a8c2889e9b0dd8e06aaf226" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -986,7 +1126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="361" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="361" bodyend="364"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="413" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="413" bodyend="416"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga41c17f40229de80fa7717facaf93b875" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1014,7 +1154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="371" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="371" bodyend="374"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="423" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="423" bodyend="426"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga48580cdbe46b621f6a0f476c02d159bf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1042,7 +1182,44 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="381" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="381" bodyend="384"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="433" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="433" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga143d85b396f4c02b0a493613096218e8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool usb_otgsc_session_valid_chg_int_is_enable</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_otgsc_session_valid_chg_int_is_enable</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>check otgsc session valid change interrupt is enable </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>interrupt is enable, false interrupt is disable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="444" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="444" bodyend="447"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gab301a0a1796d377338dd4fa63e95ab10" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -1079,7 +1256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="392" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="392" bodyend="395"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="455" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="455" bodyend="458"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gaddc48af892c48e38a9d22c8f4da78c1a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1107,7 +1284,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="402" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="402" bodyend="405"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="465" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="465" bodyend="468"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gae0720072561815f9a9b94b42b0becd6f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -1144,16 +1321,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="413" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="413" bodyend="416"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="476" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="476" bodyend="479"/>
       </memberdef>
-      <memberdef kind="function" id="group__usb__interface_1gadd0eb9457097bc5b9bb5538b59043f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__usb__interface_1ga75732c78ee94365d0a6fa71227b17764" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void usb_phy_init</definition>
-        <argsstring>(USB_Type *ptr)</argsstring>
+        <argsstring>(USB_Type *ptr, bool host)</argsstring>
         <name>usb_phy_init</name>
         <param>
           <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
           <declname>ptr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>host</declname>
         </param>
         <briefdescription>
 <para>Initialize USB phy. </para>
@@ -1171,8 +1352,9 @@
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>&lt; a delay count for USB phy initialization</para>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="423" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="52" bodyend="84" declfile="drivers/inc/hpm_usb_drv.h" declline="423" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="486" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="62" bodyend="92" declfile="drivers/inc/hpm_usb_drv.h" declline="486" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gaf4db15f9ad88140c5cb1a91996fd9d19" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint8_t</type>
@@ -1200,7 +1382,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="430" column="23" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="430" bodyend="433"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="493" column="23" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="493" bodyend="496"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga7d0c8f1b7fad5111bb5c077e5b4760d9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1228,7 +1410,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="440" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="440" bodyend="444"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="503" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="503" bodyend="507"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga5a05b0fa6a2f03d790ea1050aaf1969c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1256,7 +1438,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="451" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="451" bodyend="455"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="514" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="514" bodyend="518"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gac2f61d1cb7b9fa4a1659e285dcde415c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1284,7 +1466,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="462" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="462" bodyend="465"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="525" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="525" bodyend="528"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gaeaab6bfcb5b96868f46e6cd2c6763910" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1312,7 +1494,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="472" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="472" bodyend="475"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="535" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="535" bodyend="538"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gaf003972896197cb2c108dabcdde737b0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1340,7 +1522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="482" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="482" bodyend="485"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="545" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="545" bodyend="548"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga5656966fc46a5c1c45b05ad42ca0f1b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1380,7 +1562,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="498" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="86" bodyend="112" declfile="drivers/inc/hpm_usb_drv.h" declline="498" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="561" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="94" bodyend="120" declfile="drivers/inc/hpm_usb_drv.h" declline="561" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gaff93d59e0f375b4edd7195e12f21fc0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1408,7 +1590,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="505" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="114" bodyend="153" declfile="drivers/inc/hpm_usb_drv.h" declline="505" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="568" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="122" bodyend="164" declfile="drivers/inc/hpm_usb_drv.h" declline="568" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga45bce816a6316b47c9a0a26b566988af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1436,7 +1618,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="512" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="155" bodyend="176" declfile="drivers/inc/hpm_usb_drv.h" declline="512" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="575" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="166" bodyend="187" declfile="drivers/inc/hpm_usb_drv.h" declline="575" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gaba25dc7f740483fca43efae2d35eab71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1464,7 +1646,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="519" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="290" bodyend="293" declfile="drivers/inc/hpm_usb_drv.h" declline="519" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="582" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="301" bodyend="304" declfile="drivers/inc/hpm_usb_drv.h" declline="582" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gab2450ed6584f4fc6056d785c4b340f19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1504,7 +1686,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="527" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="208" bodyend="218" declfile="drivers/inc/hpm_usb_drv.h" declline="527" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="590" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="219" bodyend="229" declfile="drivers/inc/hpm_usb_drv.h" declline="590" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga6615e90df81dfa952badf5cbe5a2853a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1544,7 +1726,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="535" column="9" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="220" bodyend="227" declfile="drivers/inc/hpm_usb_drv.h" declline="535" declcolumn="9"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="598" column="9" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="231" bodyend="238" declfile="drivers/inc/hpm_usb_drv.h" declline="598" declcolumn="9"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gaadf458a5102a42b971d1ff9c69cdc712" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1584,7 +1766,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="543" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="229" bodyend="235" declfile="drivers/inc/hpm_usb_drv.h" declline="543" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="606" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="240" bodyend="246" declfile="drivers/inc/hpm_usb_drv.h" declline="606" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga363402a353d7b62397b3e742f3013ef9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1624,7 +1806,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="551" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="237" bodyend="243" declfile="drivers/inc/hpm_usb_drv.h" declline="551" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="614" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="248" bodyend="254" declfile="drivers/inc/hpm_usb_drv.h" declline="614" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gae98b1372cf7dda04bf8669fbe56ba969" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1664,7 +1846,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="559" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="245" bodyend="253" declfile="drivers/inc/hpm_usb_drv.h" declline="559" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="622" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="256" bodyend="264" declfile="drivers/inc/hpm_usb_drv.h" declline="622" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga83beef7b50abe7cca5684662b13b25f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1713,7 +1895,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="568" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="255" bodyend="261" declfile="drivers/inc/hpm_usb_drv.h" declline="568" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="631" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="266" bodyend="272" declfile="drivers/inc/hpm_usb_drv.h" declline="631" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga206094a9ee1dab3d52df63a36185b9b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1753,7 +1935,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="576" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="263" bodyend="288" declfile="drivers/inc/hpm_usb_drv.h" declline="576" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="639" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="274" bodyend="299" declfile="drivers/inc/hpm_usb_drv.h" declline="639" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga3526d2d96452fe0f905cb41a44cbad03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1781,7 +1963,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="583" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="179" bodyend="182" declfile="drivers/inc/hpm_usb_drv.h" declline="583" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="646" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="190" bodyend="193" declfile="drivers/inc/hpm_usb_drv.h" declline="646" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gab7681ff335b3134cf4fe056a4d06be49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1809,7 +1991,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="590" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="185" bodyend="202" declfile="drivers/inc/hpm_usb_drv.h" declline="590" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="653" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="196" bodyend="213" declfile="drivers/inc/hpm_usb_drv.h" declline="653" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga458e6353080c3188117e60c451d85a96" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -1846,7 +2028,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="598" column="24" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="598" bodyend="601"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="661" column="24" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="661" bodyend="664"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gae5aea3d230463140c4ecb3b0b7f098b4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1886,7 +2068,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="609" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="609" bodyend="612"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="672" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="672" bodyend="675"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga56f4485460fb8e69291a267a755b6870" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1926,7 +2108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="620" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="620" bodyend="623"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="683" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="683" bodyend="686"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga4d330448bb7abef5ff1273927cebac81" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1966,7 +2148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="631" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="631" bodyend="634"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="694" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="694" bodyend="697"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gab785d17f2e833df64a42695d726f4157" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint8_t</type>
@@ -2003,7 +2185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="642" column="23" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="642" bodyend="645"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="705" column="23" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="705" bodyend="708"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga7eff2d319dc7c0a51fbd50cb68f4b713" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -2040,7 +2222,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="653" column="24" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="653" bodyend="656"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="716" column="24" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="716" bodyend="719"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga82811e6be34b432b2e744744d30da1e2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2080,7 +2262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="664" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="664" bodyend="667"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="727" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="727" bodyend="730"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga0570e2f862011ae43270784768f347b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2132,7 +2314,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="680" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="295" bodyend="342" declfile="drivers/inc/hpm_usb_drv.h" declline="680" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="743" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="306" bodyend="356" declfile="drivers/inc/hpm_usb_drv.h" declline="743" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga9bcce6385820752906a63201939d4170" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2160,7 +2342,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="687" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="344" bodyend="358" declfile="drivers/inc/hpm_usb_drv.h" declline="687" declcolumn="6"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="750" column="6" bodyfile="drivers/src/hpm_usb_drv.c" bodystart="358" bodyend="372" declfile="drivers/inc/hpm_usb_drv.h" declline="750" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga4ae736cf1c923257d9bb16a692536bf6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2200,7 +2382,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="695" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="695" bodyend="698"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="758" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="758" bodyend="761"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga38d5124bffeb5eb639b182346f0d96b0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -2237,7 +2419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="706" column="24" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="706" bodyend="709"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="769" column="24" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="769" bodyend="772"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga330e7a78985b4fa69d85d3a14e4410dd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -2274,7 +2456,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="717" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="717" bodyend="720"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="780" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="780" bodyend="783"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga3d2d648e5012d244d006b0255c5949da" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2314,7 +2496,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="728" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="728" bodyend="735"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="791" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="791" bodyend="798"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gaf2018b3df6e99d84ca0a5f3c30a67103" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2342,7 +2524,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="742" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="742" bodyend="745"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="805" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="805" bodyend="808"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1gac06958a62e1061688cdc0f60e8f783dd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2382,7 +2564,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="753" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="753" bodyend="756"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="816" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="816" bodyend="819"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga772642c91cf81c227d201d4a39e81d67" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2422,7 +2604,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="764" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="764" bodyend="767"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="827" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="827" bodyend="830"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga72c81c5dcd874b15192fa072aa50a129" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2450,7 +2632,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="774" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="774" bodyend="777"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="837" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="837" bodyend="840"/>
       </memberdef>
       <memberdef kind="function" id="group__usb__interface_1ga641f92202a1b5877b2d5d53334f80bc2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2478,13 +2660,69 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_usb_drv.h" line="784" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="784" bodyend="787"/>
+        <location file="drivers/inc/hpm_usb_drv.h" line="847" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="847" bodyend="850"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="define">
+      <memberdef kind="function" id="group__usb__interface_1gaf635c696a8b07021bbc320b97066ba64" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_hcd_disable_ase_pse</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_hcd_disable_ase_pse</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Disable hcd controller Asynchronous Schedule and Periodic Schedule. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="857" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="857" bodyend="863"/>
+      </memberdef>
+      <memberdef kind="function" id="group__usb__interface_1ga995aa23d86df88f8d022a8276cd441d9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usb_hcd_enable_ase_pse</definition>
+        <argsstring>(USB_Type *ptr)</argsstring>
+        <name>usb_hcd_enable_ase_pse</name>
+        <param>
+          <type><ref refid="structUSB__Type" kindref="compound">USB_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Enable hcd controller Asynchronous Schedule and Periodic Schedule. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A USB peripheral base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_usb_drv.h" line="870" column="20" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="870" bodyend="873"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="define">
       <memberdef kind="define" id="group__usb__interface_1ga3fd7b002744275ddfda479972a64d190" prot="public" static="no">
         <name>USB_PHY_INIT_DELAY_COUNT</name>
-        <initializer>(16U)</initializer>
+        <initializer>(100U)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -2506,9 +2744,9 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_usb_drv.h" line="30" column="9" bodyfile="drivers/inc/hpm_usb_drv.h" bodystart="30" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
-<para>USB driver APIs. </para>
+<para>USB driver APIs  . </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

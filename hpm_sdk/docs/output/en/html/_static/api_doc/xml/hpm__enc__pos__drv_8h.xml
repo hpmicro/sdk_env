@@ -1,14 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__enc__pos__drv_8h" kind="file" language="C++">
     <compoundname>hpm_enc_pos_drv.h</compoundname>
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
     <includedby refid="hpm__enc__pos__drv_8c" local="yes">drivers/src/hpm_enc_pos_drv.c</includedby>
     <includedby refid="hpm__qeiv2__drv_8c" local="yes">drivers/src/hpm_qeiv2_drv.c</includedby>
     <incdepgraph>
-      <node id="4">
-        <label>stdbool.h</label>
-      </node>
       <node id="2">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -23,8 +20,17 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
+      <node id="1">
+        <label>drivers/inc/hpm_enc_pos_drv.h</label>
+        <link refid="hpm__enc__pos__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="3">
         <label>assert.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
       </node>
       <node id="5">
         <label>stdint.h</label>
@@ -32,25 +38,11 @@
       <node id="7">
         <label>stdlib.h</label>
       </node>
-      <node id="1">
-        <label>drivers/inc/hpm_enc_pos_drv.h</label>
-        <link refid="hpm__enc__pos__drv_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="6">
         <label>string.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2">
-        <label>drivers/src/hpm_enc_pos_drv.c</label>
-        <link refid="hpm__enc__pos__drv_8c"/>
-      </node>
-      <node id="3">
-        <label>drivers/src/hpm_qeiv2_drv.c</label>
-        <link refid="hpm__qeiv2__drv_8c"/>
-      </node>
       <node id="1">
         <label>drivers/inc/hpm_enc_pos_drv.h</label>
         <link refid="hpm__enc__pos__drv_8h"/>
@@ -59,129 +51,21 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="2">
+        <label>drivers/src/hpm_enc_pos_drv.c</label>
+        <link refid="hpm__enc__pos__drv_8c"/>
+      </node>
+      <node id="3">
+        <label>drivers/src/hpm_qeiv2_drv.c</label>
+        <link refid="hpm__qeiv2__drv_8c"/>
+      </node>
     </invincdepgraph>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__enc__pos__interface_1ga873b6e64c43e9328334b18fddd3d8a91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>float</type>
-        <definition>float encoder_position_to_deg</definition>
-        <argsstring>(uint32_t pos)</argsstring>
-        <name>encoder_position_to_deg</name>
-        <param>
-          <type>uint32_t</type>
-          <declname>pos</declname>
-        </param>
-        <briefdescription>
-<para>caculate degree of angle from pos </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">pos</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>position value </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>degree of angle. </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_enc_pos_drv.h" line="31" column="7" bodyfile="drivers/src/hpm_enc_pos_drv.c" bodystart="11" bodyend="18" declfile="drivers/inc/hpm_enc_pos_drv.h" declline="31" declcolumn="7"/>
-      </memberdef>
-      <memberdef kind="function" id="group__enc__pos__interface_1gaecd0f6b1e26e28331775c0e8d3a287e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>uint32_t encoder_deg_to_position</definition>
-        <argsstring>(float deg)</argsstring>
-        <name>encoder_deg_to_position</name>
-        <param>
-          <type>float</type>
-          <declname>deg</declname>
-        </param>
-        <briefdescription>
-<para>caculate posistion from degree of angle </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">deg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>degree of angle </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>position value. </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_enc_pos_drv.h" line="39" column="10" bodyfile="drivers/src/hpm_enc_pos_drv.c" bodystart="20" bodyend="34" declfile="drivers/inc/hpm_enc_pos_drv.h" declline="39" declcolumn="10"/>
-      </memberdef>
-      <memberdef kind="function" id="group__enc__pos__interface_1ga393eac151f583d5e9932db1f7e1d6cdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>float</type>
-        <definition>float encoder_position_to_rad</definition>
-        <argsstring>(uint32_t pos)</argsstring>
-        <name>encoder_position_to_rad</name>
-        <param>
-          <type>uint32_t</type>
-          <declname>pos</declname>
-        </param>
-        <briefdescription>
-<para>caculate radian of angle from pos </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">pos</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>position value </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>radian of angle. </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_enc_pos_drv.h" line="47" column="7" bodyfile="drivers/src/hpm_enc_pos_drv.c" bodystart="36" bodyend="44" declfile="drivers/inc/hpm_enc_pos_drv.h" declline="47" declcolumn="7"/>
-      </memberdef>
-      <memberdef kind="function" id="group__enc__pos__interface_1ga7633ab25c9f341621c13f270d95f5f98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>uint32_t encoder_rad_to_position</definition>
-        <argsstring>(float rad)</argsstring>
-        <name>encoder_rad_to_position</name>
-        <param>
-          <type>float</type>
-          <declname>rad</declname>
-        </param>
-        <briefdescription>
-<para>caculate posistion from radian of angle </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">rad</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>radian of angle </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>position value. </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_enc_pos_drv.h" line="55" column="10" bodyfile="drivers/src/hpm_enc_pos_drv.c" bodystart="46" bodyend="61" declfile="drivers/inc/hpm_enc_pos_drv.h" declline="55" declcolumn="10"/>
-      </memberdef>
-      </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__enc__pos__interface_1ga873b6e64c43e9328334b18fddd3d8a91" kind="function"><name>encoder_position_to_deg</name></member>
+      <member refid="group__enc__pos__interface_1gaecd0f6b1e26e28331775c0e8d3a287e2" kind="function"><name>encoder_deg_to_position</name></member>
+      <member refid="group__enc__pos__interface_1ga393eac151f583d5e9932db1f7e1d6cdc" kind="function"><name>encoder_position_to_rad</name></member>
+      <member refid="group__enc__pos__interface_1ga7633ab25c9f341621c13f270d95f5f98" kind="function"><name>encoder_rad_to_position</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

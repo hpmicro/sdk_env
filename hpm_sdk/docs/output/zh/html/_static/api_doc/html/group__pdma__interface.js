@@ -30,7 +30,7 @@ var group__pdma__interface =
       [ "height", "structpdma__output__config.html#a328d37c961acf246fd7b875db17dd78c", null ],
       [ "pitch", "structpdma__output__config.html#a08dd703f84148edf02ec8ed273572cd8", null ],
       [ "pixel_format", "structpdma__output__config.html#aa9263775e0061f9668ef283f655621da", null ],
-      [ "plane", "structpdma__output__config.html#adc36bd9bd1a4895dbb40a994d34e4e22", null ],
+      [ "plane", "structpdma__output__config.html#aecc03dae4c5b5b9e86f2f44bb68167b3", null ],
       [ "rgb2yuv_config", "structpdma__output__config.html#afe3c532bd3af236d27936ea0adc70f47", null ],
       [ "width", "structpdma__output__config.html#a21d588effa1fa6fb0f080703ff690236", null ],
       [ "x", "structpdma__output__config.html#a46e7c2b28bc83c494659e381e49510a7", null ],
@@ -53,8 +53,8 @@ var group__pdma__interface =
       [ "blend", "structpdma__blit__option.html#accfc3fd54159e46acbeec6d5fa2ce290", null ],
       [ "flip", "structpdma__blit__option.html#ab4d94ac04fcb3c4fd6ad2384972a8cde", null ],
       [ "rotate", "structpdma__blit__option.html#a1f0999beabc21e760d11911adec5fc5c", null ],
-      [ "scale", "structpdma__blit__option.html#ac18f49f50a456c3cf0cd216504922e19", null ],
-      [ "translate", "structpdma__blit__option.html#a089aa7d422852dd42cb95ecc6242c20d", null ],
+      [ "scale", "structpdma__blit__option.html#ab895642715916d7ae37787950bbb1f2d", null ],
+      [ "translate", "structpdma__blit__option.html#a58b2f1ba70cdc0e6bf5d31dc687d18cf", null ],
       [ "x", "structpdma__blit__option.html#a879190589ffa7eb86e99976336b881d4", null ],
       [ "x", "structpdma__blit__option.html#acc7ba667dce74569b379f69d1292855b", null ],
       [ "y", "structpdma__blit__option.html#a9d94b6f77cdfce3ecc032f77a555b9a9", null ],
@@ -71,10 +71,10 @@ var group__pdma__interface =
     [ "pdma_plane_info_t", "group__pdma__interface.html#gaa64decdd7b188fb3872d3aa830efc560", null ],
     [ "pdma_plane_t", "group__pdma__interface.html#gaf3d17db9443b1ed4a72c74d034b7d0f1", null ],
     [ "pdma_rotate_t", "group__pdma__interface.html#gabb91da0b69fa93170ae3aa5cf7d7a520", [
-      [ "status_pdma_done", "group__pdma__interface.html#gga14061dd054afd472999a4f4f6cdf3923ad45bc4b9f6c08e31b1c042469b07749f", null ],
-      [ "status_pdma_error", "group__pdma__interface.html#gga14061dd054afd472999a4f4f6cdf3923af595cc18da03da4ae0c5a536865cc317", null ],
-      [ "status_pdma_busy", "group__pdma__interface.html#gga14061dd054afd472999a4f4f6cdf3923a5d22e58bc028d156c8d443482798b168", null ],
-      [ "status_pdma_idle", "group__pdma__interface.html#gga14061dd054afd472999a4f4f6cdf3923aa85bc650cbbdae434860684722e5da85", null ]
+      [ "status_pdma_done", "group__pdma__interface.html#ggac72f7803394f05658258f8a2b76f53aaad45bc4b9f6c08e31b1c042469b07749f", null ],
+      [ "status_pdma_error", "group__pdma__interface.html#ggac72f7803394f05658258f8a2b76f53aaaf595cc18da03da4ae0c5a536865cc317", null ],
+      [ "status_pdma_busy", "group__pdma__interface.html#ggac72f7803394f05658258f8a2b76f53aaa5d22e58bc028d156c8d443482798b168", null ],
+      [ "status_pdma_idle", "group__pdma__interface.html#ggac72f7803394f05658258f8a2b76f53aaaa85bc650cbbdae434860684722e5da85", null ]
     ] ],
     [ "pdma_blocksize", "group__pdma__interface.html#gab4380fbb3f3ba0493d53abbd97c8d7d7", [
       [ "pdma_blocksize_16x16", "group__pdma__interface.html#ggab4380fbb3f3ba0493d53abbd97c8d7d7abe4c0a9c231b07e0cd4e8156d3c8fdab", null ],

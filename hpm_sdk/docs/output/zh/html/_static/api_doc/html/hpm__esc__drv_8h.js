@@ -29,7 +29,9 @@ var hpm__esc__drv_8h =
     [ "esc_config_nmii_link_source", "group__esc__interface.html#gaee64fee0f23e1038c998662071c055ee", null ],
     [ "esc_config_reset_source", "group__esc__interface.html#gab51f3dee517ea59cfd2f941b88ab5f1b", null ],
     [ "esc_core_enable_clock", "group__esc__interface.html#ga040f71322926310041001b700d02c05c", null ],
+    [ "esc_disable_pdi_access_mii_management", "group__esc__interface.html#gab8a603d045b3c34c88c2c8d2950e6ce9", null ],
     [ "esc_eeprom_emulation_ack", "group__esc__interface.html#gadfcea55543bb1a71ec533d83b843077c", null ],
+    [ "esc_enable_pdi_access_mii_management", "group__esc__interface.html#ga08d784ae70f4a75bafb915ce64f79e13", null ],
     [ "esc_get_eeprom_byte_address", "group__esc__interface.html#ga661950c9191d31a49ef357ad1637e4f0", null ],
     [ "esc_get_eeprom_cmd", "group__esc__interface.html#ga80b2e17af6555921555fd46a7175c1d0", null ],
     [ "esc_get_eeprom_word_address", "group__esc__interface.html#ga456e385aad946c0ae7ba4d8d96c24482", null ],
@@ -38,5 +40,6 @@ var hpm__esc__drv_8h =
     [ "esc_pdi_reset", "group__esc__interface.html#ga724955559c1bab240e082878bbde7103", null ],
     [ "esc_phy_enable_clock", "group__esc__interface.html#ga9346b1daa6b1ef52492ea29fa82fd376", null ],
     [ "esc_read_eeprom_data", "group__esc__interface.html#ga0830c7e2a6fe953a2b9d9f87d04c5253", null ],
+    [ "esc_set_phy_offset", "group__esc__interface.html#gaf0bbb8605ded5271e8a662a05b9e6219", null ],
     [ "esc_write_eeprom_data", "group__esc__interface.html#ga9ee19c3ae2aef84992198eef81e77d28", null ]
 ];

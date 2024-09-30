@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="group__mmc__interface" kind="group">
     <compoundname>mmc_interface</compoundname>
     <title>MMC driver APIs</title>
@@ -14,7 +14,7 @@
     <innerclass refid="structmmc__pred__period__time__t" prot="public">mmc_pred_period_time_t</innerclass>
     <innerclass refid="structmmc__pos__trig__t" prot="public">mmc_pos_trig_t</innerclass>
     <innerclass refid="structmmc__speed__trig__t" prot="public">mmc_speed_trig_t</innerclass>
-      <sectiondef kind="enum">
+    <sectiondef kind="enum">
       <memberdef kind="enum" id="group__mmc__interface_1ga09696b17b82a9bf3e48b15382824b607" prot="public" static="no" strong="no">
         <type></type>
         <name>mmc_pos_update_trigger_t</name>
@@ -289,7 +289,7 @@
         <name>mmc_pred_event_t</name>
         <enumvalue id="group__mmc__interface_1gga456e2ef6f5ac2fbd91e1ddedb0c51585a9e4e8381ef948249ef6b21e5d6ec4864" prot="public">
           <name>mmc_pred_idle</name>
-          <initializer>= MMC_BR_BR_ST_IDLE_MASK</initializer>
+          <initializer>= (0x20U)</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -297,7 +297,7 @@
         </enumvalue>
         <enumvalue id="group__mmc__interface_1gga456e2ef6f5ac2fbd91e1ddedb0c51585a944c54eb90acc0872cc08b426e168744" prot="public">
           <name>mmc_pred_init_delta_pos_done</name>
-          <initializer>= MMC_BR_BR_ST_INI_DELTA_POS_DONE_MASK</initializer>
+          <initializer>= (0x40U)</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -305,7 +305,7 @@
         </enumvalue>
         <enumvalue id="group__mmc__interface_1gga456e2ef6f5ac2fbd91e1ddedb0c51585a00193cb724a5b8c7598626cc6ec1046c" prot="public">
           <name>mmc_pred_pos_trig_valid</name>
-          <initializer>= MMC_BR_BR_ST_POS_TRG_VLD_MASK</initializer>
+          <initializer>= (0x100U)</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -313,7 +313,7 @@
         </enumvalue>
         <enumvalue id="group__mmc__interface_1gga456e2ef6f5ac2fbd91e1ddedb0c51585a81140cb3aac0b0c6da4699c6afb3ac51" prot="public">
           <name>mmc_pred_speed_trig_valid</name>
-          <initializer>= MMC_BR_BR_ST_SPEED_TRG_VLD_MASK</initializer>
+          <initializer>= (0x200U)</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -321,7 +321,7 @@
         </enumvalue>
         <enumvalue id="group__mmc__interface_1gga456e2ef6f5ac2fbd91e1ddedb0c51585adf78ed5bf79c77654c97ca0ef3f466eb" prot="public">
           <name>mmc_pred_open_loop</name>
-          <initializer>= MMC_BR_BR_ST_OPEN_LOOP_ST_MASK</initializer>
+          <initializer>= (0x400U)</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -340,7 +340,7 @@
         <name>mmc_pred_int_t</name>
         <enumvalue id="group__mmc__interface_1gga0a77d803b22ec5fb72e8c7a077d6ba10a18b45af57a03f98156ec83a17555a5d2" prot="public">
           <name>mmc_pred_pos_trig_valid_int</name>
-          <initializer>= MMC_BR_BR_CTRL_POS_TRG_VALID_IE_MASK</initializer>
+          <initializer>= (0x20000000UL)</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -348,7 +348,7 @@
         </enumvalue>
         <enumvalue id="group__mmc__interface_1gga0a77d803b22ec5fb72e8c7a077d6ba10a468b06370ea9f48b80bfd960fa98371d" prot="public">
           <name>mmc_pred_speed_trig_valid_int</name>
-          <initializer>= MMC_BR_BR_CTRL_SPEED_TRG_VALID_IE_MASK</initializer>
+          <initializer>= (0x40000000UL)</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -356,7 +356,7 @@
         </enumvalue>
         <enumvalue id="group__mmc__interface_1gga0a77d803b22ec5fb72e8c7a077d6ba10a0e275d779c2fcd57aae9613c0310e4a8" prot="public">
           <name>mmc_pred_init_delta_pos_done_int</name>
-          <initializer>= MMC_BR_BR_CTRL_INI_DELTA_POS_DONE_IE_MASK</initializer>
+          <initializer>= (0x2000U)</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -448,8 +448,8 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_mmc_drv.h" line="152" column="1" bodyfile="drivers/inc/hpm_mmc_drv.h" bodystart="152" bodyend="156"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="group__mmc__interface_1ga85a00b599f8040cdeff03222b30b68e3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>static void mmc_set_sysclk_freq</definition>
@@ -2329,9 +2329,9 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_mmc_drv.h" line="602" column="6" bodyfile="drivers/src/hpm_mmc_drv.c" bodystart="59" bodyend="69" declfile="drivers/inc/hpm_mmc_drv.h" declline="602" declcolumn="6"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
-<para>MMC driver APIs. </para>
+<para>MMC driver APIs  . </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

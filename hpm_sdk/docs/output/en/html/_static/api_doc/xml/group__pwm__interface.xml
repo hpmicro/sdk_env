@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="group__pwm__interface" kind="group">
     <compoundname>pwm_interface</compoundname>
     <title>PWM driver APIs</title>
@@ -8,7 +8,7 @@
     <innerclass refid="structpwm__fault__source__config" prot="public">pwm_fault_source_config</innerclass>
     <innerclass refid="structpwm__config" prot="public">pwm_config</innerclass>
     <innerclass refid="structpwm__pair__config" prot="public">pwm_pair_config</innerclass>
-      <sectiondef kind="enum">
+    <sectiondef kind="enum">
       <memberdef kind="enum" id="group__pwm__interface_1gab722df1d1ac2cc77fffd900b7d85d77f" prot="public" static="no" strong="no">
         <type></type>
         <name>pwm_counter_type</name>
@@ -402,8 +402,8 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_pwm_drv.h" line="123" column="1" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="123" bodyend="128"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
+    </sectiondef>
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="group__pwm__interface_1ga45b2e594765c6628f867361592b6aed3" prot="public" static="no">
         <type>enum <ref refid="group__pwm__interface_1gab722df1d1ac2cc77fffd900b7d85d77f" kindref="member">pwm_counter_type</ref></type>
         <definition>typedef enum pwm_counter_type pwm_counter_type_t</definition>
@@ -600,8 +600,8 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_pwm_drv.h" line="194" column="19"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="group__pwm__interface_1ga0363410b3172937c6430741d7ba8dd58" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>static void pwm_deinit</definition>
@@ -1176,7 +1176,7 @@
 <para>set shadow register control register </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>if trigger is not set to hardware event, target_cmp_index can be passed with any value</para>
+<para><simplesect kind="note"><para>if trigger is not set to hardware event, target_cmp_index can be passed with any value </para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1463,6 +1463,58 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_pwm_drv.h" line="587" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="587" bodyend="592"/>
       </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1ga143f050a66b5f80bec930e649d3978e2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pwm_fault_recovery_update_cmp_value</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t index, uint32_t cmp)</argsstring>
+        <name>pwm_fault_recovery_update_cmp_value</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>cmp</declname>
+        </param>
+        <briefdescription>
+<para>update pwm cmp value in order to recovery pwm fault The configured values need to be staggered to coincide with the moment when the pwm output changes, otherwise the recovery will be abnormal </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cmp index (0..(PWM_SOC_CMP_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>clock counter compare value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="603" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="603" bodyend="607"/>
+      </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga8848a309237e0ff575539b4a56ff2aab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>static void pwm_cmp_force_value</definition>
@@ -1513,7 +1565,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="618" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="618" bodyend="621"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="633" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="633" bodyend="636"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1gae558b81939126252a9f4133e270a1db2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1565,7 +1617,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="630" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="630" bodyend="653"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="645" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="645" bodyend="668"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga7f7334138f8be2ba6185be01d25d7894" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1617,7 +1669,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="662" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="662" bodyend="667"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="677" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="677" bodyend="682"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1gaab40c6308dd36f75a8a7c874353525c0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1657,7 +1709,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="675" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="675" bodyend="686"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="690" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="690" bodyend="701"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga80b94a84805bed2a91c1dd40fd07d623" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1685,7 +1737,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="693" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="693" bodyend="697"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="708" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="708" bodyend="712"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1gaf264cad56f1f5b28b3119543be96ef39" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1713,7 +1765,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="704" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="704" bodyend="707"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="719" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="719" bodyend="722"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1gad309e48c2c0d25ad2737e5b79161b13b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1741,7 +1793,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="714" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="714" bodyend="717"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="729" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="729" bodyend="732"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga46434e8e77deacac85e24a544cb1aa7f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1769,7 +1821,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="724" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="724" bodyend="727"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="739" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="739" bodyend="742"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga7a9c0859f91079777d1d80daf96679cc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1797,7 +1849,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="734" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="734" bodyend="737"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="749" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="749" bodyend="752"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga610b6ab30f0aec10308434bf8dabe495" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1825,7 +1877,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="744" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="744" bodyend="747"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="759" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="759" bodyend="762"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga5aedb1cbe162042b4f0602140858d73b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1865,7 +1917,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="755" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="755" bodyend="758"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="770" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="770" bodyend="773"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga22c7f7c49707127683758a7889828efd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1905,7 +1957,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="766" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="766" bodyend="769"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="781" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="781" bodyend="784"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga4e43e56bdd123dde299979d8d3b6bc13" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1949,7 +2001,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="777" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="777" bodyend="780"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="792" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="792" bodyend="795"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1gaa682109c815dc832442634d3fb97a840" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1995,7 +2047,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="790" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="790" bodyend="793"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="805" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="805" bodyend="808"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga80af2ff06c4e2e0f7888d7790513ad04" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2035,7 +2087,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="801" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="801" bodyend="804"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="816" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="816" bodyend="819"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1gab705dcf315bddfd0275004d8b0751b56" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2075,7 +2127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="812" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="812" bodyend="816"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="827" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="827" bodyend="831"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga9145d3222f7df98f658045774820da4f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2115,7 +2167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="824" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="824" bodyend="827"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="839" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="839" bodyend="842"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga099adc8553c2dfd7bf910e979f875a51" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -2185,7 +2237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="839" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="839" bodyend="852"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="854" column="20" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="854" bodyend="867"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga3f2bb59665b2484b11b2200ea26f072d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -2222,7 +2274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="860" column="24" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="860" bodyend="863"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="875" column="24" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="875" bodyend="878"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga4e9f9360d278d4b918e69558521957bd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -2259,7 +2311,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="871" column="24" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="871" bodyend="874"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="886" column="24" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="886" bodyend="889"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1gac53acc32bb2a1aa56b3f64ca2ef05711" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -2296,7 +2348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="882" column="24" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="882" bodyend="885"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="897" column="24" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="897" bodyend="900"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga463a517aeb30835d44dac8a774e3f5eb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -2333,7 +2385,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="893" column="24" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="893" bodyend="896"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="908" column="24" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="908" bodyend="911"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga875c3b524878f89b2cfc4c8c65ac031b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -2394,7 +2446,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="906" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="11" bodyend="22" declfile="drivers/inc/hpm_pwm_drv.h" declline="906" declcolumn="12"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="921" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="11" bodyend="22" declfile="drivers/inc/hpm_pwm_drv.h" declline="921" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga4abbe229029451c21d4a3b9a885fec17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2470,7 +2522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="919" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="24" bodyend="36" declfile="drivers/inc/hpm_pwm_drv.h" declline="919" declcolumn="6"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="934" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="24" bodyend="36" declfile="drivers/inc/hpm_pwm_drv.h" declline="934" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga16fbbe430ce2777f41b952d1296babcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2510,7 +2562,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="927" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="38" bodyend="52" declfile="drivers/inc/hpm_pwm_drv.h" declline="927" declcolumn="6"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="942" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="38" bodyend="52" declfile="drivers/inc/hpm_pwm_drv.h" declline="942" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1gaf29fd181099584eb7ee2f9e676369b8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2550,7 +2602,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="935" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="54" bodyend="60" declfile="drivers/inc/hpm_pwm_drv.h" declline="935" declcolumn="6"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="950" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="54" bodyend="60" declfile="drivers/inc/hpm_pwm_drv.h" declline="950" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1gaa3fffce1616954cd9c582421cb4c5eb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2590,7 +2642,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="943" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="62" bodyend="71" declfile="drivers/inc/hpm_pwm_drv.h" declline="943" declcolumn="6"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="958" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="62" bodyend="71" declfile="drivers/inc/hpm_pwm_drv.h" declline="958" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga6c3f63e3c2bd9fd7f785763994173d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2630,7 +2682,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="951" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="73" bodyend="77" declfile="drivers/inc/hpm_pwm_drv.h" declline="951" declcolumn="6"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="966" column="6" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="73" bodyend="77" declfile="drivers/inc/hpm_pwm_drv.h" declline="966" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga97f5c1519173b5c73d24d55f7cf5a725" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -2727,7 +2779,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="964" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="115" bodyend="138" declfile="drivers/inc/hpm_pwm_drv.h" declline="964" declcolumn="12"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="979" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="115" bodyend="138" declfile="drivers/inc/hpm_pwm_drv.h" declline="979" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga5c174ee4e7326813fc3a5c3719d39bbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -2824,7 +2876,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="978" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="79" bodyend="113" declfile="drivers/inc/hpm_pwm_drv.h" declline="978" declcolumn="12"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="993" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="79" bodyend="113" declfile="drivers/inc/hpm_pwm_drv.h" declline="993" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1ga6392dab670e8f4ae9e6476af3c58bacd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -2885,7 +2937,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="990" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="140" bodyend="145" declfile="drivers/inc/hpm_pwm_drv.h" declline="990" declcolumn="12"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="1005" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="140" bodyend="145" declfile="drivers/inc/hpm_pwm_drv.h" declline="1005" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1gaaa52e327abf31dd95477c8a9daf432d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -2970,10 +3022,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="1003" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="147" bodyend="161" declfile="drivers/inc/hpm_pwm_drv.h" declline="1003" declcolumn="12"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="1018" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="147" bodyend="161" declfile="drivers/inc/hpm_pwm_drv.h" declline="1018" declcolumn="12"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="define">
+    </sectiondef>
+    <sectiondef kind="define">
       <memberdef kind="define" id="group__pwm__interface_1gaf5f46e40ddde95d913d0a4ba9809d007" prot="public" static="no">
         <name>PWM_UNLOCK_KEY</name>
         <initializer>(0xB0382607UL)</initializer>
@@ -2987,7 +3039,7 @@
       </memberdef>
       <memberdef kind="define" id="group__pwm__interface_1ga41e3e49216607a2255830976ae54765e" prot="public" static="no">
         <name>PWM_IRQ_FAULT</name>
-        <initializer><ref refid="HPM6700_2ip_2hpm__pwm__regs_8h_1a9dc9c7834be67d5544affe2d79664ae5" kindref="member">PWM_IRQEN_FAULTIRQE_MASK</ref></initializer>
+        <initializer><ref refid="HPM5300_2ip_2hpm__pwm__regs_8h_1a9dc9c7834be67d5544affe2d79664ae5" kindref="member">PWM_IRQEN_FAULTIRQE_MASK</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -2998,7 +3050,7 @@
       </memberdef>
       <memberdef kind="define" id="group__pwm__interface_1ga6027230b009bab73a4c6faed03336234" prot="public" static="no">
         <name>PWM_IRQ_EX_RELOAD</name>
-        <initializer><ref refid="HPM6700_2ip_2hpm__pwm__regs_8h_1a58f02f0824228dfe801806eec5eaa4f9" kindref="member">PWM_IRQEN_XRLDIRQE_MASK</ref></initializer>
+        <initializer><ref refid="HPM5300_2ip_2hpm__pwm__regs_8h_1a58f02f0824228dfe801806eec5eaa4f9" kindref="member">PWM_IRQEN_XRLDIRQE_MASK</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -3009,7 +3061,7 @@
       </memberdef>
       <memberdef kind="define" id="group__pwm__interface_1gaff362eb90ec8c478297709219aef1a9d" prot="public" static="no">
         <name>PWM_IRQ_HALF_RELOAD</name>
-        <initializer><ref refid="HPM6700_2ip_2hpm__pwm__regs_8h_1a58b35db11e328af2d21b47f56ba44879" kindref="member">PWM_IRQEN_HALFRLDIRQE_MASK</ref></initializer>
+        <initializer><ref refid="HPM5300_2ip_2hpm__pwm__regs_8h_1a58b35db11e328af2d21b47f56ba44879" kindref="member">PWM_IRQEN_HALFRLDIRQE_MASK</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -3020,7 +3072,7 @@
       </memberdef>
       <memberdef kind="define" id="group__pwm__interface_1gadb62c3b73963f70dc050a540d01d3abf" prot="public" static="no">
         <name>PWM_IRQ_RELOAD</name>
-        <initializer><ref refid="HPM6700_2ip_2hpm__pwm__regs_8h_1a178822356605020880bed1aaa5595e2a" kindref="member">PWM_IRQEN_RLDIRQE_MASK</ref></initializer>
+        <initializer><ref refid="HPM5300_2ip_2hpm__pwm__regs_8h_1a178822356605020880bed1aaa5595e2a" kindref="member">PWM_IRQEN_RLDIRQE_MASK</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -3032,7 +3084,7 @@
       <memberdef kind="define" id="group__pwm__interface_1ga06b52a73bf14f35074f12d8ebcdb01fa" prot="public" static="no">
         <name>PWM_IRQ_CMP</name>
         <param><defname>x</defname></param>
-        <initializer><ref refid="HPM6700_2ip_2hpm__pwm__regs_8h_1a65d7650089d76d1083131baa15491f09" kindref="member">PWM_IRQEN_CMPIRQEX_SET</ref>((1 &lt;&lt; x))</initializer>
+        <initializer><ref refid="HPM5300_2ip_2hpm__pwm__regs_8h_1a65d7650089d76d1083131baa15491f09" kindref="member">PWM_IRQEN_CMPIRQEX_SET</ref>((1 &lt;&lt; x))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -3052,7 +3104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="31" column="9" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="31" bodyend="-1"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="31" column="9" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="31" bodyend="32"/>
       </memberdef>
       <memberdef kind="define" id="group__pwm__interface_1gaa956730210c5ce163a30e78269cd1eb0" prot="public" static="no">
         <name>PWM_DUTY_CYCLE_FP_MAX</name>
@@ -3065,9 +3117,9 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_pwm_drv.h" line="34" column="9" bodyfile="drivers/inc/hpm_pwm_drv.h" bodystart="34" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
-<para>PWM driver APIs. </para>
+<para>PWM driver APIs  . </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

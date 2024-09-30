@@ -1,14 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__mcan__drv_8c" kind="file" language="C++">
     <compoundname>hpm_mcan_drv.c</compoundname>
     <includes refid="hpm__mcan__drv_8h" local="yes">hpm_mcan_drv.h</includes>
     <includes local="no">string.h</includes>
     <includes local="no">assert.h</includes>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
       <node id="3">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -23,15 +20,6 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>assert.h</label>
-      </node>
-      <node id="6">
-        <label>stdint.h</label>
-      </node>
-      <node id="8">
-        <label>stdlib.h</label>
-      </node>
       <node id="2">
         <label>hpm_mcan_drv.h</label>
         <link refid="hpm__mcan__drv_8h"/>
@@ -41,12 +29,6 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-      </node>
-      <node id="7">
-        <label>string.h</label>
-      </node>
-      <node id="10">
-        <label>hpm_mcan_soc.h</label>
       </node>
       <node id="1">
         <label>drivers/src/hpm_mcan_drv.c</label>
@@ -58,12 +40,30 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
       <node id="9">
         <label>hpm_mcan_regs.h</label>
       </node>
+      <node id="10">
+        <label>hpm_mcan_soc.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
     </incdepgraph>
     <innerclass refid="structmcan__bit__timing__table__struct" prot="public">mcan_bit_timing_table_struct</innerclass>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="hpm__mcan__drv_8c_1acedb10d1704d3f47ec3c81f85e8293fd" prot="public" static="no">
         <name>MCAN_CAN_BAUDRATE_DEFAULT</name>
         <initializer>(500UL * 1000UL)</initializer>
@@ -267,7 +267,7 @@
       </memberdef>
       <memberdef kind="define" id="hpm__mcan__drv_8c_1a7f82c52fb990df48dc02e3b7e5f6633f" prot="public" static="no">
         <name>NUM_TQ_MAX_FOR_CAN2_0</name>
-        <initializer>(<ref refid="hpm__mcan__drv_8c_1aca275f5ec436573fcfb4aadf3b0f3207" kindref="member">TSEG1_MAX_FOR_CAN2_0</ref> + <ref refid="hpm__mcan__drv_8c_1a713ef061cf67fee964f7a38f95cf08fe" kindref="member">TSEG2_MAX_FOR_CAN2_0</ref>)</initializer>
+        <initializer>(<ref refid="hpm__can__drv_8c_1aca275f5ec436573fcfb4aadf3b0f3207" kindref="member">TSEG1_MAX_FOR_CAN2_0</ref> + <ref refid="hpm__can__drv_8c_1a713ef061cf67fee964f7a38f95cf08fe" kindref="member">TSEG2_MAX_FOR_CAN2_0</ref>)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -356,7 +356,7 @@
       </memberdef>
       <memberdef kind="define" id="hpm__mcan__drv_8c_1ac514cc2897243c1556d03906779cdb58" prot="public" static="no">
         <name>NUM_TQ_MAX_FOR_CANFD_NOMINAL</name>
-        <initializer>(<ref refid="hpm__mcan__drv_8c_1a6e3555cec142ed5507f077f8e430ed5d" kindref="member">TSEG1_MAX_FOR_CANFD_NOMINAL</ref> + <ref refid="hpm__mcan__drv_8c_1a12760041a59c3ae354925d02b03a0798" kindref="member">TSEG2_MAX_FOR_CANFD_NOMINAL</ref>)</initializer>
+        <initializer>(<ref refid="hpm__can__drv_8c_1a6e3555cec142ed5507f077f8e430ed5d" kindref="member">TSEG1_MAX_FOR_CANFD_NOMINAL</ref> + <ref refid="hpm__can__drv_8c_1a12760041a59c3ae354925d02b03a0798" kindref="member">TSEG2_MAX_FOR_CANFD_NOMINAL</ref>)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -489,7 +489,7 @@
       </memberdef>
       <memberdef kind="define" id="hpm__mcan__drv_8c_1ae577dcab491583f8d47eda13c4945718" prot="public" static="no">
         <name>NUM_TQ_MAX_FOR_CANFD_DATA</name>
-        <initializer>(<ref refid="hpm__mcan__drv_8c_1ad963a76008f23791fd360172f11bfbf6" kindref="member">TSEG1_MAX_FOR_CANFD_DATA</ref> + <ref refid="hpm__mcan__drv_8c_1aae6e636e2e7e5a7c3e6fd8b79d073b17" kindref="member">TSEG2_MAX_FOR_CANFD_DATA</ref>)</initializer>
+        <initializer>(<ref refid="hpm__can__drv_8c_1ad963a76008f23791fd360172f11bfbf6" kindref="member">TSEG1_MAX_FOR_CANFD_DATA</ref> + <ref refid="hpm__can__drv_8c_1aae6e636e2e7e5a7c3e6fd8b79d073b17" kindref="member">TSEG2_MAX_FOR_CANFD_DATA</ref>)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -555,7 +555,7 @@
       </memberdef>
       <memberdef kind="define" id="hpm__mcan__drv_8c_1a3465375baf4ae4ccbe651acc90f37eff" prot="public" static="no">
         <name>MCAN_MAX_TDC_OFFSET</name>
-        <initializer>((uint32_t)(<ref refid="HPM6E00_2ip_2hpm__mcan__regs_8h_1ab8b813725472ddc1b3e3b1bc16f918e1" kindref="member">MCAN_TDCR_TDCO_MASK</ref> &gt;&gt; <ref refid="HPM6E00_2ip_2hpm__mcan__regs_8h_1af3ad40d6798d086655502e375e388bc3" kindref="member">MCAN_TDCR_TDCO_SHIFT</ref>))</initializer>
+        <initializer>((uint32_t)(<ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1ab8b813725472ddc1b3e3b1bc16f918e1" kindref="member">MCAN_TDCR_TDCO_MASK</ref> &gt;&gt; <ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1af3ad40d6798d086655502e375e388bc3" kindref="member">MCAN_TDCR_TDCO_SHIFT</ref>))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -566,7 +566,7 @@
       </memberdef>
       <memberdef kind="define" id="hpm__mcan__drv_8c_1a8f6d4b53f36aaea10cd8353531d8277b" prot="public" static="no">
         <name>MCAN_MAX_TDC_FILTER_WIN</name>
-        <initializer>((uint32_t)(<ref refid="HPM6E00_2ip_2hpm__mcan__regs_8h_1a1ea01e406447a65aa45cfde0e3495012" kindref="member">MCAN_TDCR_TDCF_MASK</ref> &gt;&gt; <ref refid="HPM6E00_2ip_2hpm__mcan__regs_8h_1a890b3128da29f61bc403ac72b7172367" kindref="member">MCAN_TDCR_TDCF_SHIFT</ref>))</initializer>
+        <initializer>((uint32_t)(<ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a1ea01e406447a65aa45cfde0e3495012" kindref="member">MCAN_TDCR_TDCF_MASK</ref> &gt;&gt; <ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a890b3128da29f61bc403ac72b7172367" kindref="member">MCAN_TDCR_TDCF_SHIFT</ref>))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -575,8 +575,8 @@
         </inbodydescription>
         <location file="drivers/src/hpm_mcan_drv.c" line="86" column="9" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="86" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
+    </sectiondef>
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="hpm__mcan__drv_8c_1af50a055f830cb262922ac6ff1184c0cc" prot="public" static="no">
         <type>struct <ref refid="structmcan__bit__timing__table__struct" kindref="compound">mcan_bit_timing_table_struct</ref></type>
         <definition>typedef struct mcan_bit_timing_table_struct mcan_bit_timing_table_t</definition>
@@ -591,8 +591,8 @@
         </inbodydescription>
         <location file="drivers/src/hpm_mcan_drv.c" line="103" column="25"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
+    </sectiondef>
+    <sectiondef kind="var">
       <memberdef kind="variable" id="hpm__mcan__drv_8c_1ad934d59dd9dff6a3fe8c71a5461ee27d" prot="public" static="yes" mutable="no">
         <type>const <ref refid="hpm__mcan__drv_8c_1af50a055f830cb262922ac6ff1184c0cc" kindref="member">mcan_bit_timing_table_t</ref></type>
         <definition>const mcan_bit_timing_table_t k_mcan_bit_timing_tbl[3]</definition>
@@ -602,41 +602,41 @@
     
     {
         
-        .tq_min =  (8U) , .tq_max =  ( (256U)  +  (128U) ) ,
+        .tq_min = (8U) , .tq_max = ( (256U) + (128U) ),
         
-        .seg1_min =  (2U) , .seg1_max =  (256U) ,
+        .seg1_min = (2U) , .seg1_max = (256U) ,
         
-        .seg2_min =  (2U) , .seg2_max =  (128U) ,
+        .seg2_min = (2U) , .seg2_max = (128U) ,
         
-        .sjw_min =  (1U) , .sjw_max =  (128U) , .min_diff_seg1_minus_seg2 = 2,
+        .sjw_min = (1U) , .sjw_max = (128U) , .min_diff_seg1_minus_seg2 = 2,
         
-        .prescaler_min =  (1U) , .prescaler_max =  (512U) ,
+        .prescaler_min = (1U) , .prescaler_max = (512U) ,
     },
     
     {
         
-        .tq_min =  (8U) , .tq_max =  ( (256U)  +  (32U) ) ,
+        .tq_min = (8U) , .tq_max = ( (256U) + (32U) ),
         
-        .seg1_min =  (2U) , .seg1_max =  (256U) ,
+        .seg1_min = (2U) , .seg1_max = (256U) ,
         
-        .seg2_min =  (1U) , .seg2_max =  (32U) ,
+        .seg2_min = (1U) , .seg2_max = (32U) ,
         
-        .sjw_min =  (1U) , .sjw_max =  (128U) , .min_diff_seg1_minus_seg2 = 2,
+        .sjw_min = (1U) , .sjw_max = (128U) , .min_diff_seg1_minus_seg2 = 2,
         
-        .prescaler_min =  (1U) , .prescaler_max =  (512U) 
+        .prescaler_min = (1U) , .prescaler_max = (512U) 
     },
     
     {
         
-        .tq_min =  (8U) , .tq_max =  ( (31U)  +  (15U) ) ,
+        .tq_min = (8U) , .tq_max = ( (31U) + (15U) ),
         
-        .seg1_min =  (2U) , .seg1_max =  (31U) ,
+        .seg1_min = (2U) , .seg1_max = (31U) ,
         
-        .seg2_min =  (0U) , .seg2_max =  (15U) ,
+        .seg2_min = (0U) , .seg2_max = (15U) ,
         
-        .sjw_min =  (0U) , .sjw_max =  (15U) , .min_diff_seg1_minus_seg2 = 1,
+        .sjw_min = (0U) , .sjw_max = (15U) , .min_diff_seg1_minus_seg2 = 1,
         
-        .prescaler_min =  (1U) , .prescaler_max =  (32U) 
+        .prescaler_min = (1U) , .prescaler_max = (32U) 
     }
 }</initializer>
         <briefdescription>
@@ -645,7 +645,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="115" column="38" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="115" bodyend="-1"/>
+        <location file="drivers/src/hpm_mcan_drv.c" line="115" column="38" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="115" bodyend="155"/>
       </memberdef>
       <memberdef kind="variable" id="hpm__mcan__drv_8c_1add07f1873fe37a46b7ec457f267160d0" prot="public" static="yes" mutable="no">
         <type>const <ref refid="group__mcan__interface_1ga980dcb116ce6583e40dc0b407b72cd54" kindref="member">mcan_filter_elem_t</ref></type>
@@ -654,11 +654,11 @@
         <name>k_default_std_id_filter</name>
         <initializer>= {
     
-    .filter_type = <ref refid="group__mcan__interface_1gaa27b937448fe2ed18091fac7b4ff4ed7" kindref="member">MCAN_FILTER_TYPE_CLASSIC_FILTER</ref>,
+    .filter_type = (2U)  ,
     
-    .filter_config = <ref refid="group__mcan__interface_1ga37557c65749255e5998681a274326c1c" kindref="member">MCAN_FILTER_ELEM_CFG_STORE_IN_RX_FIFO0_IF_MATCH</ref>,
+    .filter_config = (1U)  ,
     
-    .can_id_type = <ref refid="group__mcan__interface_1ga8c15fb63ba3d2d3064d20fd33843719e" kindref="member">MCAN_CAN_ID_TYPE_STANDARD</ref>,
+    .can_id_type = (0U)  ,
     
     .sync_message = 0U,
     
@@ -672,7 +672,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="157" column="33" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="157" bodyend="-1"/>
+        <location file="drivers/src/hpm_mcan_drv.c" line="157" column="33" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="157" bodyend="170"/>
       </memberdef>
       <memberdef kind="variable" id="hpm__mcan__drv_8c_1a3bd3efd47fc479448e0c53688f6bb93a" prot="public" static="yes" mutable="no">
         <type>const <ref refid="group__mcan__interface_1ga980dcb116ce6583e40dc0b407b72cd54" kindref="member">mcan_filter_elem_t</ref></type>
@@ -681,11 +681,11 @@
         <name>k_default_ext_id_filter</name>
         <initializer>= {
     
-    .filter_type = <ref refid="group__mcan__interface_1gaa27b937448fe2ed18091fac7b4ff4ed7" kindref="member">MCAN_FILTER_TYPE_CLASSIC_FILTER</ref>,
+    .filter_type = (2U)  ,
     
-    .filter_config = <ref refid="group__mcan__interface_1ga37557c65749255e5998681a274326c1c" kindref="member">MCAN_FILTER_ELEM_CFG_STORE_IN_RX_FIFO0_IF_MATCH</ref>,
+    .filter_config = (1U)  ,
     
-    .can_id_type = <ref refid="group__mcan__interface_1gae51f96d3420870c9446758cabf9e8bee" kindref="member">MCAN_CAN_ID_TYPE_EXTENDED</ref>,
+    .can_id_type = (1U)  ,
     
     .sync_message = 0,
     
@@ -699,10 +699,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="172" column="33" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="172" bodyend="-1"/>
+        <location file="drivers/src/hpm_mcan_drv.c" line="172" column="33" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="172" bodyend="185"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="hpm__mcan__drv_8c_1aa2ef91e110d15ffc1124f9cb36f74da9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>static void mcan_set_can_nominal_bit_timing</definition>
@@ -1170,6 +1170,7 @@
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>&lt; External Timestamp value used</para>
         </inbodydescription>
         <location file="drivers/src/hpm_mcan_drv.c" line="1022" column="19" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1022" bodyend="1038" declfile="drivers/src/hpm_mcan_drv.c" declline="284" declcolumn="19"/>
       </memberdef>
@@ -1230,312 +1231,9 @@
         </inbodydescription>
         <location file="drivers/src/hpm_mcan_drv.c" line="456" column="13" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="456" bodyend="478" declfile="drivers/src/hpm_mcan_drv.c" declline="294" declcolumn="13"/>
       </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga74db618200ed3aff26f33ec8a5a866fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void mcan_get_default_ram_config</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_ram_config_t *simple_config, bool enable_canfd)</argsstring>
-        <name>mcan_get_default_ram_config</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1ga9d893c9314ae4143f9135a0fc8faec40" kindref="member">mcan_ram_config_t</ref> *</type>
-          <declname>simple_config</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>enable_canfd</declname>
-        </param>
-        <briefdescription>
-<para>Get Default MCAN RAM configuration If the device is configured as classic CAN node, the default CAN RAM settings are as below: </para>
-        </briefdescription>
-        <detaileddescription>
-<para><itemizedlist>
-<listitem><para>Standard Identifier Filter Elements: 32</para>
-</listitem><listitem><para>Extended Identifier Filter Elements: 32</para>
-</listitem><listitem><para>TXBUF Elements Info:<itemizedlist>
-<listitem><para>Element Count:32</para>
-</listitem><listitem><para>Dedicated TXBUF element count: 16</para>
-</listitem><listitem><para>TXFIFO/QQueue element count: 16</para>
-</listitem><listitem><para>Data Field Size: 8</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>RXFIFO0 Elements Info:<itemizedlist>
-<listitem><para>Element Count :32</para>
-</listitem><listitem><para>Data Field Size: 8</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>RXFIFO1 Elements Info:<itemizedlist>
-<listitem><para>Element Count : 32</para>
-</listitem><listitem><para>Data Field Size: 8</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>RXBUF Element Info:<itemizedlist>
-<listitem><para>Element Count: 16</para>
-</listitem><listitem><para>Data Field Size : 8</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>TX Event FIFO Element Count: 32</para>
-</listitem></itemizedlist>
-</para>
-<para>If the device is configured as CANFD node, the default CAN RAM settings are as below:<itemizedlist>
-<listitem><para>Standard Identifier Filter Elements: 16</para>
-</listitem><listitem><para>Extended Identifier Filter Elements: 16</para>
-</listitem><listitem><para>TXBUF Elements Info:<itemizedlist>
-<listitem><para>Element Count:8</para>
-</listitem><listitem><para>Dedicated TXBUF element count: 4</para>
-</listitem><listitem><para>TXFIFO/QQueue element count: 4</para>
-</listitem><listitem><para>Data Field Size: 64</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>RXFIFO0 Elements Info:<itemizedlist>
-<listitem><para>Element Count : 8</para>
-</listitem><listitem><para>Data Field Size: 64</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>RXFIFO1 Elements Info:<itemizedlist>
-<listitem><para>Element Count : 8</para>
-</listitem><listitem><para>Data Field Size: 64</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>RXBUF Element Info:<itemizedlist>
-<listitem><para>Element Count: 4</para>
-</listitem><listitem><para>Data Field Size : 64</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>TX Event FIFO Element Count: 8</para>
-</listitem></itemizedlist>
-</para>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">simple_config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Simple CAN RAM Configuration </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">enable_canfd</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CANFD enable flag </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="480" column="6" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="480" bodyend="551"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga7b20defc9668892b847e4ce6d34b5378" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void mcan_get_default_ram_flexible_config</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_ram_flexible_config_t *ram_config, bool enable_canfd)</argsstring>
-        <name>mcan_get_default_ram_flexible_config</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1ga34c9afc91a3c7bbb3811b6ae433ee011" kindref="member">mcan_ram_flexible_config_t</ref> *</type>
-          <declname>ram_config</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>enable_canfd</declname>
-        </param>
-        <briefdescription>
-<para>Get Default Full MCAN RAM configuration If the device is configured as classic CAN node, the default CAN RAM settings are as below: </para>
-        </briefdescription>
-        <detaileddescription>
-<para><itemizedlist>
-<listitem><para>Standard Identifier Filter Elements: 32</para>
-</listitem><listitem><para>Extended Identifier Filter Elements: 32</para>
-</listitem><listitem><para>TXBUF Elements Info:<itemizedlist>
-<listitem><para>Element Count:32</para>
-</listitem><listitem><para>Dedicated TXBUF element count: 16</para>
-</listitem><listitem><para>TXFIFO/QQueue element count: 16</para>
-</listitem><listitem><para>Data Field Size: 8</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>RXFIFO0 Elements Info:<itemizedlist>
-<listitem><para>Element Count :32</para>
-</listitem><listitem><para>Data Field Size: 8</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>RXFIFO1 Elements Info:<itemizedlist>
-<listitem><para>Element Count : 32</para>
-</listitem><listitem><para>Data Field Size: 8</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>RXBUF Element Info:<itemizedlist>
-<listitem><para>Element Count: 16</para>
-</listitem><listitem><para>Data Field Size : 8</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>TX Event FIFO Element Count: 32</para>
-</listitem></itemizedlist>
-</para>
-<para>If the device is configured as CANFD node, the default CAN RAM settings are as below:<itemizedlist>
-<listitem><para>Standard Identifier Filter Elements: 16</para>
-</listitem><listitem><para>Extended Identifier Filter Elements: 16</para>
-</listitem><listitem><para>TXBUF Elements Info:<itemizedlist>
-<listitem><para>Element Count:8</para>
-</listitem><listitem><para>Dedicated TXBUF element count: 4</para>
-</listitem><listitem><para>TXFIFO/QQueue element count: 4</para>
-</listitem><listitem><para>Data Field Size: 64</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>RXFIFO0 Elements Info:<itemizedlist>
-<listitem><para>Element Count : 8</para>
-</listitem><listitem><para>Data Field Size: 64</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>RXFIFO1 Elements Info:<itemizedlist>
-<listitem><para>Element Count : 8</para>
-</listitem><listitem><para>Data Field Size: 64</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>RXBUF Element Info:<itemizedlist>
-<listitem><para>Element Count: 4</para>
-</listitem><listitem><para>Data Field Size : 64</para>
-</listitem></itemizedlist>
-</para>
-</listitem></itemizedlist>
-</para>
-<para><itemizedlist>
-<listitem><para>TX Event FIFO Element Count: 8</para>
-</listitem></itemizedlist>
-</para>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">ram_config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN RAM Configuration </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">enable_canfd</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CANFD enable flag </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="553" column="6" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="553" bodyend="641"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1gadc564b2fcb5eccf11bdaf320f00329e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void mcan_get_default_config</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_config_t *config)</argsstring>
-        <name>mcan_get_default_config</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1ga0aaab5e5f6d04c7014fe75b0e5781064" kindref="member">mcan_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Get Default CAN configuration. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN configuration </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>&lt; Default CAN2.0 baudrate:500 kbps</para>
-<para>&lt; Default CANFD baudrate: 2 Mbps</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="643" column="6" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="643" bodyend="695"/>
-      </memberdef>
+      <member refid="group__mcan__interface_1ga74db618200ed3aff26f33ec8a5a866fd" kind="function"><name>mcan_get_default_ram_config</name></member>
+      <member refid="group__mcan__interface_1ga7b20defc9668892b847e4ce6d34b5378" kind="function"><name>mcan_get_default_ram_flexible_config</name></member>
+      <member refid="group__mcan__interface_1gadc564b2fcb5eccf11bdaf320f00329e1" kind="function"><name>mcan_get_default_config</name></member>
       <memberdef kind="function" id="hpm__mcan__drv_8c_1aee23ff7caf6334fc69b9a76e142bf27b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>static void mcan_config_rxfifo</definition>
@@ -1561,283 +1259,12 @@
         </inbodydescription>
         <location file="drivers/src/hpm_mcan_drv.c" line="697" column="13" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="697" bodyend="704"/>
       </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1gab8ad6b212bae07e5d39f91ea951afe1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_config_ram</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_ram_config_t *config)</argsstring>
-        <name>mcan_config_ram</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1ga9d893c9314ae4143f9135a0fc8faec40" kindref="member">mcan_ram_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Configure MCAN RAM will Simplified RAM configuration. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN RAM configuration </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="706" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="706" bodyend="841"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1gaa34c1ee772743eac0a49d4f06a35ac7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_config_ram_with_flexible_config</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_ram_flexible_config_t *config)</argsstring>
-        <name>mcan_config_ram_with_flexible_config</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1ga34c9afc91a3c7bbb3811b6ae433ee011" kindref="member">mcan_ram_flexible_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Configure MCAN RAM will Full RAM configuration. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN RAM Full Configuration </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="843" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="843" bodyend="919"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1gafe271d717a5c5dd76933b5a978b64501" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_config_all_filters</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_all_filters_config_t *config)</argsstring>
-        <name>mcan_config_all_filters</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1gad0a9be13b9b95e591182881365267eeb" kindref="member">mcan_all_filters_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Configure All CAN filters. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>All CAN Filter configuration </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="921" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="921" bodyend="981"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1gabfdfeceaa07dd86c05aaf08ecd4f5d53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_init</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_config_t *config, uint32_t src_clk_freq)</argsstring>
-        <name>mcan_init</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1ga0aaab5e5f6d04c7014fe75b0e5781064" kindref="member">mcan_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>src_clk_freq</declname>
-        </param>
-        <briefdescription>
-<para>Initialize CAN controller. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN configuration </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">src_clk_freq</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN clock frequency </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if operation is successful </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if any parameters are invalid </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1040" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1040" bodyend="1263"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1gaec2dd32a680959baaa299a6e2b192aa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void mcan_deinit</definition>
-        <argsstring>(MCAN_Type *ptr)</argsstring>
-        <name>mcan_deinit</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>De-Initialize CAN controller. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1265" column="6" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1265" bodyend="1299"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga1de58381c613c978338219f3a2418dd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_set_filter_element</definition>
-        <argsstring>(MCAN_Type *ptr, const mcan_filter_elem_t *filter_elem, uint32_t index)</argsstring>
-        <name>mcan_set_filter_element</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>const <ref refid="group__mcan__interface_1ga980dcb116ce6583e40dc0b407b72cd54" kindref="member">mcan_filter_elem_t</ref> *</type>
-          <declname>filter_elem</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>index</declname>
-        </param>
-        <briefdescription>
-<para>Set CAN filter element. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">filter_elem</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN filter element </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN Filter element index </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1301" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1301" bodyend="1358"/>
-      </memberdef>
+      <member refid="group__mcan__interface_1gab8ad6b212bae07e5d39f91ea951afe1d" kind="function"><name>mcan_config_ram</name></member>
+      <member refid="group__mcan__interface_1gaa34c1ee772743eac0a49d4f06a35ac7c" kind="function"><name>mcan_config_ram_with_flexible_config</name></member>
+      <member refid="group__mcan__interface_1gafe271d717a5c5dd76933b5a978b64501" kind="function"><name>mcan_config_all_filters</name></member>
+      <member refid="group__mcan__interface_1gabfdfeceaa07dd86c05aaf08ecd4f5d53" kind="function"><name>mcan_init</name></member>
+      <member refid="group__mcan__interface_1gaec2dd32a680959baaa299a6e2b192aa6" kind="function"><name>mcan_deinit</name></member>
+      <member refid="group__mcan__interface_1ga1de58381c613c978338219f3a2418dd9" kind="function"><name>mcan_set_filter_element</name></member>
       <memberdef kind="function" id="hpm__mcan__drv_8c_1a18dd2d9fbf92ab79b965834e79503965" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
         <definition>static uint32_t mcan_get_rxfifo0_base</definition>
@@ -1914,1126 +1341,29 @@
         </inbodydescription>
         <location file="drivers/src/hpm_mcan_drv.c" line="1394" column="17" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1394" bodyend="1412"/>
       </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga0d17d2c373f727ac4dd4f8318a9ef1ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint8_t</type>
-        <definition>uint8_t mcan_get_message_size_from_dlc</definition>
-        <argsstring>(uint8_t dlc)</argsstring>
-        <name>mcan_get_message_size_from_dlc</name>
-        <param>
-          <type>uint8_t</type>
-          <declname>dlc</declname>
-        </param>
-        <briefdescription>
-<para>Get message Size from Data Length Code. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">dlc</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Data Length Code </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Message Size in Bytes </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1414" column="9" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1414" bodyend="1425"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga9b6267f7692c9e6fb6d3ff46def5e505" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint8_t</type>
-        <definition>uint8_t mcan_get_data_field_size</definition>
-        <argsstring>(uint8_t data_field_size_option)</argsstring>
-        <name>mcan_get_data_field_size</name>
-        <param>
-          <type>uint8_t</type>
-          <declname>data_field_size_option</declname>
-        </param>
-        <briefdescription>
-<para>Get the Data field size from data field size option. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">data_field_size_option</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Data size option </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>data field size in bytes </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1427" column="9" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1427" bodyend="1461"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1gaa00d784c51619ed23c18c481cd02d832" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_write_txbuf</definition>
-        <argsstring>(MCAN_Type *ptr, uint32_t index, mcan_tx_frame_t *tx_frame)</argsstring>
-        <name>mcan_write_txbuf</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>index</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1gac68c4001d232b5c8968857b401bb3656" kindref="member">mcan_tx_frame_t</ref> *</type>
-          <declname>tx_frame</declname>
-        </param>
-        <briefdescription>
-<para>Write Frame to CAN TX Buffer. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>TX Buffer Index </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">tx_frame</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>TX frame </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1463" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1463" bodyend="1497"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga34ad967d2654ed7e8ae292f0ede0f366" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_write_txfifo</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_tx_frame_t *tx_frame)</argsstring>
-        <name>mcan_write_txfifo</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1gac68c4001d232b5c8968857b401bb3656" kindref="member">mcan_tx_frame_t</ref> *</type>
-          <declname>tx_frame</declname>
-        </param>
-        <briefdescription>
-<para>Write Frame CAN to TXFIFO. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">tx_frame</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>TX frame </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1499" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1499" bodyend="1526"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga733d69672dc906bb842443e000cd4d0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_read_rxbuf</definition>
-        <argsstring>(MCAN_Type *ptr, uint32_t index, mcan_rx_message_t *rx_frame)</argsstring>
-        <name>mcan_read_rxbuf</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>index</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1ga161301a2b741b723085381037ce9abfb" kindref="member">mcan_rx_message_t</ref> *</type>
-          <declname>rx_frame</declname>
-        </param>
-        <briefdescription>
-<para>Read message from CAN RXBUF. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Index of RXBUF </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">rx_frame</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Buffer to hold RX frame </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1528" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1528" bodyend="1556"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga6b399ea25c0f023763d9e68b96c321ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_read_rxfifo</definition>
-        <argsstring>(MCAN_Type *ptr, uint32_t fifo_index, mcan_rx_message_t *rx_frame)</argsstring>
-        <name>mcan_read_rxfifo</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>fifo_index</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1ga161301a2b741b723085381037ce9abfb" kindref="member">mcan_rx_message_t</ref> *</type>
-          <declname>rx_frame</declname>
-        </param>
-        <briefdescription>
-<para>Read message from CAN RXBUF. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">fifo_index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>RXFIFO index, 0 - RXFO0, 1 - RXFIFO1 </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">rx_frame</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Buffer to hold RX frame </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1558" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1558" bodyend="1621"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1gaabf29bb4d2f272dfdf47b5b17db55260" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_read_tx_evt_fifo</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_tx_event_fifo_elem_t *tx_evt)</argsstring>
-        <name>mcan_read_tx_evt_fifo</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1gac727e3406aaf84fc73738cca1176fd24" kindref="member">mcan_tx_event_fifo_elem_t</ref> *</type>
-          <declname>tx_evt</declname>
-        </param>
-        <briefdescription>
-<para>Read TX Event from CAN TX EVENT FIFO. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">tx_evt</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>TX Event Buffer </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if no errors happened </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_mcan_tx_evt_fifo_empty</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if there are no TX events available </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if any parameters are invalid </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1623" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1623" bodyend="1656"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga62b0b399e3dbe5bf1d4f267a4b812c71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_transmit_via_txbuf_nonblocking</definition>
-        <argsstring>(MCAN_Type *ptr, uint32_t index, mcan_tx_frame_t *tx_frame)</argsstring>
-        <name>mcan_transmit_via_txbuf_nonblocking</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>index</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1gac68c4001d232b5c8968857b401bb3656" kindref="member">mcan_tx_frame_t</ref> *</type>
-          <declname>tx_frame</declname>
-        </param>
-        <briefdescription>
-<para>Transmit CAN message via TX in non-blocking way. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Index of TX Buffer </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">tx_frame</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN Transmit Message buffer </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1658" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1658" bodyend="1684"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga42c8096c180aaabb0297ea064cc8c759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_transmit_blocking</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_tx_frame_t *tx_frame)</argsstring>
-        <name>mcan_transmit_blocking</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1gac68c4001d232b5c8968857b401bb3656" kindref="member">mcan_tx_frame_t</ref> *</type>
-          <declname>tx_frame</declname>
-        </param>
-        <briefdescription>
-<para>Transmit CAN message in blocking way. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">tx_frame</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN Transmit Message buffer </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1686" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1686" bodyend="1710"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga7a6b624afafa50747d7379ab61a3709f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_request_and_fill_txfifo</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_tx_frame_t *tx_frame, uint32_t *fifo_index)</argsstring>
-        <name>mcan_request_and_fill_txfifo</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1gac68c4001d232b5c8968857b401bb3656" kindref="member">mcan_tx_frame_t</ref> *</type>
-          <declname>tx_frame</declname>
-        </param>
-        <param>
-          <type>uint32_t *</type>
-          <declname>fifo_index</declname>
-        </param>
-        <briefdescription>
-<para>Request TXFIFO and fill data into TXFIFO. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>This API can be used to prepare the data for several CAN frames prior to transmission. After this operation, software can call <computeroutput>mcan_send_add_request(ptr, *fifo_index)</computeroutput> API to trigger a transmission or call <computeroutput>mcan_send_add_requests(ptr, fifo_index_masks)</computeroutput> to trigger several transmissions </para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">tx_frame</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN Transmit Message buffer </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">fifo_index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The index of the element in FIFO assigned to the tx_frame </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1712" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1712" bodyend="1734"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1gae2e8f0a4ae18e98f0179c8549734723a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_transmit_via_txfifo_nonblocking</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_tx_frame_t *tx_frame, uint32_t *fifo_index)</argsstring>
-        <name>mcan_transmit_via_txfifo_nonblocking</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1gac68c4001d232b5c8968857b401bb3656" kindref="member">mcan_tx_frame_t</ref> *</type>
-          <declname>tx_frame</declname>
-        </param>
-        <param>
-          <type>uint32_t *</type>
-          <declname>fifo_index</declname>
-        </param>
-        <briefdescription>
-<para>Transmit CAN message via TX FIFO in non-blocking way. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">tx_frame</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN Transmit Message buffer </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">fifo_index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The index of the element in FIFO assigned to the tx_frame</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1736" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1736" bodyend="1764"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga565cf484bf1e734d74bb080a6ab0bff3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_receive_from_buf_blocking</definition>
-        <argsstring>(MCAN_Type *ptr, uint32_t index, mcan_rx_message_t *rx_frame)</argsstring>
-        <name>mcan_receive_from_buf_blocking</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>index</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1ga161301a2b741b723085381037ce9abfb" kindref="member">mcan_rx_message_t</ref> *</type>
-          <declname>rx_frame</declname>
-        </param>
-        <briefdescription>
-<para>Receive CAN Frame from RXBUF in blocking way. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>RXBUF index </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">rx_frame</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Buffer to hold Received Frame </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1766" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1766" bodyend="1789"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga32469e034fd973f008c57da0157b2775" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_receive_from_fifo_blocking</definition>
-        <argsstring>(MCAN_Type *ptr, uint32_t fifo_index, mcan_rx_message_t *rx_frame)</argsstring>
-        <name>mcan_receive_from_fifo_blocking</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>fifo_index</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1ga161301a2b741b723085381037ce9abfb" kindref="member">mcan_rx_message_t</ref> *</type>
-          <declname>rx_frame</declname>
-        </param>
-        <briefdescription>
-<para>Receive CAN Frame from RXFIFO in blocking way. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">fifo_index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>RXFIFO index, 0 - RXFIFO0, 1 - RXFIFO1 </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">rx_frame</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Buffer to hold Received Frame </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1791" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1791" bodyend="1815"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1gada13053691ef2263116896520fde6518" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void mcan_get_high_priority_message_status</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_high_priority_message_status_t *status)</argsstring>
-        <name>mcan_get_high_priority_message_status</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1ga9902f3917e2f822fe2ee082817be7853" kindref="member">mcan_high_priority_message_status_t</ref> *</type>
-          <declname>status</declname>
-        </param>
-        <briefdescription>
-<para>Get High Priority Message Status. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">status</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Pointer to High Priority Message Status Buffer </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1817" column="6" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1817" bodyend="1824"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga42b95618ae33789d7ba7259ce687cede" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_set_global_filter_config</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_global_filter_config_t *filter_config)</argsstring>
-        <name>mcan_set_global_filter_config</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1ga9b7426fec77d6adf21dd2458fa43ff3f" kindref="member">mcan_global_filter_config_t</ref> *</type>
-          <declname>filter_config</declname>
-        </param>
-        <briefdescription>
-<para>Configure Global Filter. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">filter_config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Global Filter Configuration </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1826" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1826" bodyend="1845"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1gad9322d36f5000f99ccfd471bb782732d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_config_transmitter_delay_compensation</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_tdc_config_t *config)</argsstring>
-        <name>mcan_config_transmitter_delay_compensation</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structmcan__tdc__config__t" kindref="compound">mcan_tdc_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Configure Transmitter Delay Compensation. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Transmitter Delay compensation configure </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_success if no errors reported </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1847" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1847" bodyend="1861"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1gaa7912db5a239c1df59490045feba3319" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>uint32_t mcan_read_32bit_tsu_timestamp</definition>
-        <argsstring>(MCAN_Type *ptr, uint32_t index)</argsstring>
-        <name>mcan_read_32bit_tsu_timestamp</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>index</declname>
-        </param>
-        <briefdescription>
-<para>Read 32bit Timestamp value from TSU. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN Base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Timestamp pointer </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Timestamp value </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1863" column="10" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1863" bodyend="1870"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1gaeb9af0d86351870f149ac665af7d3e97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint64_t</type>
-        <definition>uint64_t mcan_read_64bit_tsu_timestamp</definition>
-        <argsstring>(MCAN_Type *ptr, uint32_t index)</argsstring>
-        <name>mcan_read_64bit_tsu_timestamp</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>index</declname>
-        </param>
-        <briefdescription>
-<para>Read 64bit Timestamp value from TSU. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN Base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Timestamp pointer </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Timestamp value </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1872" column="10" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1872" bodyend="1886"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga205f6812136a27ccd7b770e4a8f10238" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_get_timestamp_from_tx_event</definition>
-        <argsstring>(MCAN_Type *ptr, const mcan_tx_event_fifo_elem_t *tx_evt, mcan_timestamp_value_t *timestamp)</argsstring>
-        <name>mcan_get_timestamp_from_tx_event</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>const <ref refid="group__mcan__interface_1gac727e3406aaf84fc73738cca1176fd24" kindref="member">mcan_tx_event_fifo_elem_t</ref> *</type>
-          <declname>tx_evt</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1ga4d945094f3ea8b3fe8df39115ac971b9" kindref="member">mcan_timestamp_value_t</ref> *</type>
-          <declname>timestamp</declname>
-        </param>
-        <briefdescription>
-<para>Get Timestamp from MCAN TX Event. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">tx_evt</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>TX Event Element </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">timestamp</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Timestamp value </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if no errors happened </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if any parameters are invalid </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_mcan_timestamp_not_exist</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if no timestamp information is available </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1888" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1888" bodyend="1921"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1gaae71f784ff4cc139ad5822f3ccc4d8d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_get_timestamp_from_received_message</definition>
-        <argsstring>(MCAN_Type *ptr, const mcan_rx_message_t *rx_msg, mcan_timestamp_value_t *timestamp)</argsstring>
-        <name>mcan_get_timestamp_from_received_message</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>const <ref refid="group__mcan__interface_1ga161301a2b741b723085381037ce9abfb" kindref="member">mcan_rx_message_t</ref> *</type>
-          <declname>rx_msg</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1ga4d945094f3ea8b3fe8df39115ac971b9" kindref="member">mcan_timestamp_value_t</ref> *</type>
-          <declname>timestamp</declname>
-        </param>
-        <briefdescription>
-<para>Get Timestamp from MCAN RX frame. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">rx_msg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Received message </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">timestamp</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Timestamp value </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if no errors happened </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if any parameters are invalid </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_mcan_timestamp_not_exist</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if no timestamp information is available </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1923" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1923" bodyend="1955"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga22454dabbe3fec1d195954afa5e48b7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_parse_protocol_status</definition>
-        <argsstring>(uint32_t psr, mcan_protocol_status_t *protocol_status)</argsstring>
-        <name>mcan_parse_protocol_status</name>
-        <param>
-          <type>uint32_t</type>
-          <declname>psr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1gaaeb0e4456cb6de8d884b053f765d595e" kindref="member">mcan_protocol_status_t</ref> *</type>
-          <declname>protocol_status</declname>
-        </param>
-        <briefdescription>
-<para>Parse the Protocol Status register value. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">psr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Protocol Status Register Value </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">protocol_status</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Translated Protocol Status</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if any parameters are invalid </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if no errors happened </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1957" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1957" bodyend="1994"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcan__interface_1ga66b35d60c257a5170fa3e50aa5105165" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t mcan_get_protocol_status</definition>
-        <argsstring>(MCAN_Type *ptr, mcan_protocol_status_t *protocol_status)</argsstring>
-        <name>mcan_get_protocol_status</name>
-        <param>
-          <type><ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcan__interface_1gaaeb0e4456cb6de8d884b053f765d595e" kindref="member">mcan_protocol_status_t</ref> *</type>
-          <declname>protocol_status</declname>
-        </param>
-        <briefdescription>
-<para>Get MCAN Protocol Status. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCAN base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">protocol_status</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Translated Protocol status</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if any parameters are invalid </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if no errors happened </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mcan_drv.c" line="1996" column="12" bodyfile="drivers/src/hpm_mcan_drv.c" bodystart="1996" bodyend="2007"/>
-      </memberdef>
-      </sectiondef>
+      <member refid="group__mcan__interface_1ga0d17d2c373f727ac4dd4f8318a9ef1ac" kind="function"><name>mcan_get_message_size_from_dlc</name></member>
+      <member refid="group__mcan__interface_1ga9b6267f7692c9e6fb6d3ff46def5e505" kind="function"><name>mcan_get_data_field_size</name></member>
+      <member refid="group__mcan__interface_1gaa00d784c51619ed23c18c481cd02d832" kind="function"><name>mcan_write_txbuf</name></member>
+      <member refid="group__mcan__interface_1ga34ad967d2654ed7e8ae292f0ede0f366" kind="function"><name>mcan_write_txfifo</name></member>
+      <member refid="group__mcan__interface_1ga733d69672dc906bb842443e000cd4d0c" kind="function"><name>mcan_read_rxbuf</name></member>
+      <member refid="group__mcan__interface_1ga6b399ea25c0f023763d9e68b96c321ec" kind="function"><name>mcan_read_rxfifo</name></member>
+      <member refid="group__mcan__interface_1gaabf29bb4d2f272dfdf47b5b17db55260" kind="function"><name>mcan_read_tx_evt_fifo</name></member>
+      <member refid="group__mcan__interface_1ga62b0b399e3dbe5bf1d4f267a4b812c71" kind="function"><name>mcan_transmit_via_txbuf_nonblocking</name></member>
+      <member refid="group__mcan__interface_1ga42c8096c180aaabb0297ea064cc8c759" kind="function"><name>mcan_transmit_blocking</name></member>
+      <member refid="group__mcan__interface_1ga7a6b624afafa50747d7379ab61a3709f" kind="function"><name>mcan_request_and_fill_txfifo</name></member>
+      <member refid="group__mcan__interface_1gae2e8f0a4ae18e98f0179c8549734723a" kind="function"><name>mcan_transmit_via_txfifo_nonblocking</name></member>
+      <member refid="group__mcan__interface_1ga565cf484bf1e734d74bb080a6ab0bff3" kind="function"><name>mcan_receive_from_buf_blocking</name></member>
+      <member refid="group__mcan__interface_1ga32469e034fd973f008c57da0157b2775" kind="function"><name>mcan_receive_from_fifo_blocking</name></member>
+      <member refid="group__mcan__interface_1gada13053691ef2263116896520fde6518" kind="function"><name>mcan_get_high_priority_message_status</name></member>
+      <member refid="group__mcan__interface_1ga42b95618ae33789d7ba7259ce687cede" kind="function"><name>mcan_set_global_filter_config</name></member>
+      <member refid="group__mcan__interface_1gad9322d36f5000f99ccfd471bb782732d" kind="function"><name>mcan_config_transmitter_delay_compensation</name></member>
+      <member refid="group__mcan__interface_1gaa7912db5a239c1df59490045feba3319" kind="function"><name>mcan_read_32bit_tsu_timestamp</name></member>
+      <member refid="group__mcan__interface_1gaeb9af0d86351870f149ac665af7d3e97" kind="function"><name>mcan_read_64bit_tsu_timestamp</name></member>
+      <member refid="group__mcan__interface_1ga205f6812136a27ccd7b770e4a8f10238" kind="function"><name>mcan_get_timestamp_from_tx_event</name></member>
+      <member refid="group__mcan__interface_1gaae71f784ff4cc139ad5822f3ccc4d8d2" kind="function"><name>mcan_get_timestamp_from_received_message</name></member>
+      <member refid="group__mcan__interface_1ga22454dabbe3fec1d195954afa5e48b7e" kind="function"><name>mcan_parse_protocol_status</name></member>
+      <member refid="group__mcan__interface_1ga66b35d60c257a5170fa3e50aa5105165" kind="function"><name>mcan_get_protocol_status</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -3144,7 +1474,7 @@
 <codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>CAN2.0<sp/>bit<sp/>timing<sp/>requirement<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>TQ<sp/>range<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="structmcan__bit__timing__table__struct_1ad2a0c531b5b7e95a78f4d703916aacf5" kindref="member">tq_min</ref><sp/>=<sp/><ref refid="hpm__mcan__drv_8c_1aa7c447e3ed657f71771b4c985ace827e" kindref="member">NUM_TQ_MIN_FOR_CAN2_0</ref>,<sp/>.tq_max<sp/>=<sp/><ref refid="hpm__mcan__drv_8c_1a7f82c52fb990df48dc02e3b7e5f6633f" kindref="member">NUM_TQ_MAX_FOR_CAN2_0</ref>,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.tq_min<sp/>=<sp/><ref refid="hpm__mcan__drv_8c_1aa7c447e3ed657f71771b4c985ace827e" kindref="member">NUM_TQ_MIN_FOR_CAN2_0</ref>,<sp/>.tq_max<sp/>=<sp/><ref refid="hpm__mcan__drv_8c_1a7f82c52fb990df48dc02e3b7e5f6633f" kindref="member">NUM_TQ_MAX_FOR_CAN2_0</ref>,</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>SEG1<sp/>range(Including<sp/>Sync_Seg<sp/>+<sp/><sp/>Prop_Seg<sp/>+<sp/>Phase_Seg1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.seg1_min<sp/>=<sp/><ref refid="hpm__mcan__drv_8c_1a3c8ced3500393e7789ad282fb24b71c8" kindref="member">TSEG1_MIN_FOR_CAN2_0</ref>,<sp/>.seg1_max<sp/>=<sp/><ref refid="hpm__mcan__drv_8c_1aca275f5ec436573fcfb4aadf3b0f3207" kindref="member">TSEG1_MAX_FOR_CAN2_0</ref>,</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>SEG2<sp/>Range<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
@@ -3184,7 +1514,7 @@
 <codeline lineno="156"><highlight class="normal"></highlight></codeline>
 <codeline lineno="157"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmcan__std__id__filter__elem__struct" kindref="compound">mcan_filter_elem_t</ref><sp/><ref refid="hpm__mcan__drv_8c_1add07f1873fe37a46b7ec457f267160d0" kindref="member">k_default_std_id_filter</ref><sp/>=<sp/>{</highlight></codeline>
 <codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Use<sp/>classic<sp/>filter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>.<ref refid="structmcan__std__id__filter__elem__struct_1a1c6d26b947f305258cde72d473935468" kindref="member">filter_type</ref><sp/>=<sp/><ref refid="group__mcan__interface_1gaa27b937448fe2ed18091fac7b4ff4ed7" kindref="member">MCAN_FILTER_TYPE_CLASSIC_FILTER</ref>,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>.filter_type<sp/>=<sp/><ref refid="group__mcan__interface_1gaa27b937448fe2ed18091fac7b4ff4ed7" kindref="member">MCAN_FILTER_TYPE_CLASSIC_FILTER</ref>,</highlight></codeline>
 <codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Store<sp/>message<sp/>into<sp/>RXFIFO0<sp/>if<sp/>matching<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>.filter_config<sp/>=<sp/><ref refid="group__mcan__interface_1ga37557c65749255e5998681a274326c1c" kindref="member">MCAN_FILTER_ELEM_CFG_STORE_IN_RX_FIFO0_IF_MATCH</ref>,</highlight></codeline>
 <codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>For<sp/>Standard<sp/>Identify<sp/>only<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
@@ -3199,7 +1529,7 @@
 <codeline lineno="171"><highlight class="normal"></highlight></codeline>
 <codeline lineno="172"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmcan__std__id__filter__elem__struct" kindref="compound">mcan_filter_elem_t</ref><sp/><ref refid="hpm__mcan__drv_8c_1a3bd3efd47fc479448e0c53688f6bb93a" kindref="member">k_default_ext_id_filter</ref><sp/>=<sp/>{</highlight></codeline>
 <codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Use<sp/>classic<sp/>filter<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>.<ref refid="structmcan__std__id__filter__elem__struct_1a1c6d26b947f305258cde72d473935468" kindref="member">filter_type</ref><sp/>=<sp/><ref refid="group__mcan__interface_1gaa27b937448fe2ed18091fac7b4ff4ed7" kindref="member">MCAN_FILTER_TYPE_CLASSIC_FILTER</ref>,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>.filter_type<sp/>=<sp/><ref refid="group__mcan__interface_1gaa27b937448fe2ed18091fac7b4ff4ed7" kindref="member">MCAN_FILTER_TYPE_CLASSIC_FILTER</ref>,</highlight></codeline>
 <codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Store<sp/>message<sp/>into<sp/>RXFIFO0<sp/>if<sp/>matching<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>.filter_config<sp/>=<sp/><ref refid="group__mcan__interface_1ga37557c65749255e5998681a274326c1c" kindref="member">MCAN_FILTER_ELEM_CFG_STORE_IN_RX_FIFO0_IF_MATCH</ref>,</highlight></codeline>
 <codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>For<sp/>Standard<sp/>Identify<sp/>only<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
@@ -3216,7 +1546,7 @@
 <codeline lineno="188"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="189"><highlight class="comment"><sp/>*<sp/><sp/>Prototypes</highlight></codeline>
 <codeline lineno="190"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="191"><highlight class="comment"><sp/>**********************************************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="comment"><sp/>**********************************************************************************************************************/</highlight></codeline>
 <codeline lineno="198"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__mcan__drv_8c_1aa2ef91e110d15ffc1124f9cb36f74da9" kindref="member">mcan_set_can_nominal_bit_timing</ref>(<ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmcan__bit__timing__param__struct" kindref="compound">mcan_bit_timing_param_t</ref><sp/>*bit_timing);</highlight></codeline>
 <codeline lineno="199"><highlight class="normal"></highlight></codeline>
 <codeline lineno="207"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__mcan__drv_8c_1a24be5c629a6e27a6f423d2f06548fb79" kindref="member">mcan_set_can_data_bit_timing</ref>(<ref refid="structMCAN__Type" kindref="compound">MCAN_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmcan__bit__timing__param__struct" kindref="compound">mcan_bit_timing_param_t</ref><sp/>*bit_timing);</highlight></codeline>
@@ -3350,7 +1680,7 @@
 <codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="399"><highlight class="normal"></highlight></codeline>
-<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((num_seg2<sp/>&gt;=<sp/>tbl-&gt;<ref refid="structmcan__bit__timing__table__struct_1a1316482dc81fdba5dd78ed843452422f" kindref="member">seg2_min</ref>)<sp/>&amp;&amp;<sp/>(num_seg1<sp/>&lt;=<sp/>tbl-&gt;<ref refid="structmcan__bit__timing__table__struct_1a600b2bb5631285c005742211edca20d7" kindref="member">seg1_max</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((num_seg2<sp/>&gt;=<sp/>tbl-&gt;<ref refid="structmcan__bit__timing__table__struct_1a1316482dc81fdba5dd78ed843452422f" kindref="member">seg2_min</ref>)<sp/>&amp;&amp;<sp/>(num_seg1<sp/>&lt;=<sp/>tbl-&gt;seg1_max))<sp/>{</highlight></codeline>
 <codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>has_found<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>start_prescaler<sp/>=<sp/>current_prescaler<sp/>+<sp/>1U;</highlight></codeline>
@@ -3667,7 +1997,7 @@
 <codeline lineno="714"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structmcan__ram__config__struct_1a1a8754285aaa5704c355b70f6cc55ebc" kindref="member">std_filter_elem_count</ref><sp/>&gt;<sp/><ref refid="hpm__mcan__drv_8c_1a3a6e02bcd316fc8d7e49da995196c587" kindref="member">MCAN_STD_FILTER_ELEM_CNT_MAX</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="715"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="716"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="717"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unionmcan__filter__config__struct" kindref="compound">mcan_filter_config_t</ref><sp/>filter_config<sp/>=<sp/>{<sp/>.<ref refid="unionmcan__filter__config__struct_1a98b6364a0bcfb2f7c65457ac4c3bebe1" kindref="member">reg_val</ref><sp/>=<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="717"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unionmcan__filter__config__struct" kindref="compound">mcan_filter_config_t</ref><sp/>filter_config<sp/>=<sp/>{<sp/>.reg_val<sp/>=<sp/>0<sp/>};</highlight></codeline>
 <codeline lineno="718"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>filter_config.<ref refid="unionmcan__filter__config__struct_1a4d63506ed96311b74740c3dae28cc6a1" kindref="member">list_size</ref><sp/>=<sp/>config-&gt;<ref refid="structmcan__ram__config__struct_1a1a8754285aaa5704c355b70f6cc55ebc" kindref="member">std_filter_elem_count</ref>;</highlight></codeline>
 <codeline lineno="719"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>filter_config.<ref refid="unionmcan__filter__config__struct_1af800b30c296bf84feec000d183b4f5c0" kindref="member">list_start_addr</ref><sp/>=<sp/>start_addr;</highlight></codeline>
 <codeline lineno="720"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a014e0a00a3315cea91208e776421f256" kindref="member">SIDFC</ref><sp/>=<sp/>filter_config.<ref refid="unionmcan__filter__config__struct_1a98b6364a0bcfb2f7c65457ac4c3bebe1" kindref="member">reg_val</ref>;</highlight></codeline>
@@ -3680,7 +2010,7 @@
 <codeline lineno="727"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structmcan__ram__config__struct_1a4dfb5ba95abe3a463e2b489c963826f3" kindref="member">ext_filter_elem_count</ref><sp/>&gt;<sp/><ref refid="hpm__mcan__drv_8c_1a388fed252b81bbf592a6e3370a26a123" kindref="member">MCAN_EXT_FILTER_ELEM_CNT_MAX</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="728"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="729"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="730"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unionmcan__filter__config__struct" kindref="compound">mcan_filter_config_t</ref><sp/>filter_config<sp/>=<sp/>{<sp/>.<ref refid="unionmcan__filter__config__struct_1a98b6364a0bcfb2f7c65457ac4c3bebe1" kindref="member">reg_val</ref><sp/>=<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="730"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unionmcan__filter__config__struct" kindref="compound">mcan_filter_config_t</ref><sp/>filter_config<sp/>=<sp/>{<sp/>.reg_val<sp/>=<sp/>0<sp/>};</highlight></codeline>
 <codeline lineno="731"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>filter_config.<ref refid="unionmcan__filter__config__struct_1a4d63506ed96311b74740c3dae28cc6a1" kindref="member">list_size</ref><sp/>=<sp/>config-&gt;<ref refid="structmcan__ram__config__struct_1a4dfb5ba95abe3a463e2b489c963826f3" kindref="member">ext_filter_elem_count</ref>;</highlight></codeline>
 <codeline lineno="732"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>filter_config.<ref refid="unionmcan__filter__config__struct_1af800b30c296bf84feec000d183b4f5c0" kindref="member">list_start_addr</ref><sp/>=<sp/>start_addr;</highlight></codeline>
 <codeline lineno="733"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1ad0da9772817edd7f8f2d32f689097dd8" kindref="member">XIDFC</ref><sp/>=<sp/>filter_config.<ref refid="unionmcan__filter__config__struct_1a98b6364a0bcfb2f7c65457ac4c3bebe1" kindref="member">reg_val</ref>;</highlight></codeline>
@@ -3689,7 +2019,7 @@
 <codeline lineno="736"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1ad0da9772817edd7f8f2d32f689097dd8" kindref="member">XIDFC</ref><sp/>=<sp/><ref refid="hpm__mcan__drv_8c_1a73c23510392cfe5d59bfb3b8816f79b8" kindref="member">MCAN_RAM_ADDR_INVALID</ref>;</highlight></codeline>
 <codeline lineno="737"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="738"><highlight class="normal"></highlight></codeline>
-<codeline lineno="739"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unionmcan__rx__fifo__or__buf__elem__config__struct" kindref="compound">mcan_rx_fifo_or_buf_elem_config_t</ref><sp/>rx_fifo_buf_elem_config<sp/>=<sp/>{<sp/>.<ref refid="unionmcan__rx__fifo__or__buf__elem__config__struct_1a2c71d7e2e782003ff1041298d9e2eb73" kindref="member">reg_val</ref><sp/>=<sp/>0U<sp/>};</highlight></codeline>
+<codeline lineno="739"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unionmcan__rx__fifo__or__buf__elem__config__struct" kindref="compound">mcan_rx_fifo_or_buf_elem_config_t</ref><sp/>rx_fifo_buf_elem_config<sp/>=<sp/>{<sp/>.reg_val<sp/>=<sp/>0U<sp/>};</highlight></codeline>
 <codeline lineno="740"><highlight class="normal"></highlight></codeline>
 <codeline lineno="741"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="group__common__interface_1ga25f003de16c08a4888b69f619d70f427" kindref="member">ARRAY_SIZE</ref>(config-&gt;<ref refid="structmcan__ram__config__struct_1a69d362b6a7e61dc3e45c095fb392c2b8" kindref="member">rxfifos</ref>);<sp/>i++)<sp/>{</highlight></codeline>
 <codeline lineno="742"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structmcan__ram__config__struct_1a69d362b6a7e61dc3e45c095fb392c2b8" kindref="member">rxfifos</ref>[i].<ref refid="structmcan__ram__config__struct_1ae860950b53ebc77727916ff44fa73df6" kindref="member">enable</ref>)<sp/>{</highlight></codeline>
@@ -3699,7 +2029,7 @@
 <codeline lineno="746"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(elem_count<sp/>&gt;<sp/><ref refid="hpm__mcan__drv_8c_1a37a26a600c9f63eafd5096020f85c727" kindref="member">MCAN_RXFIFO_ELEM_CNT_MAX</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="747"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
 <codeline lineno="748"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="749"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unionmcan__rxfifo__config__struct" kindref="compound">mcan_rxfifo_config_t</ref><sp/>rxfifo_config<sp/>=<sp/>{<sp/>.<ref refid="unionmcan__rxfifo__config__struct_1ac0bb77c07cc3e624911c5787b1c49d01" kindref="member">reg_val</ref><sp/>=<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="749"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unionmcan__rxfifo__config__struct" kindref="compound">mcan_rxfifo_config_t</ref><sp/>rxfifo_config<sp/>=<sp/>{<sp/>.reg_val<sp/>=<sp/>0<sp/>};</highlight></codeline>
 <codeline lineno="750"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rxfifo_config.<ref refid="unionmcan__rxfifo__config__struct_1a0d0ee795e21d63b0a36aa3117e49f59c" kindref="member">start_addr</ref><sp/>=<sp/>start_addr;</highlight></codeline>
 <codeline lineno="751"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rxfifo_config.<ref refid="unionmcan__rxfifo__config__struct_1a02dfd75487f77fa06df87f9391858696" kindref="member">watermark</ref><sp/>=<sp/>1U;</highlight></codeline>
 <codeline lineno="752"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rxfifo_config.<ref refid="unionmcan__rxfifo__config__struct_1a17fca9e02ec26169bc9697bdcad1e89e" kindref="member">operation_mode</ref><sp/>=<sp/>config-&gt;<ref refid="structmcan__ram__config__struct_1a69d362b6a7e61dc3e45c095fb392c2b8" kindref="member">rxfifos</ref>[i].<ref refid="structmcan__ram__config__struct_1a87de9a2700e740f80c542f8f187315d9" kindref="member">operation_mode</ref>;</highlight></codeline>
@@ -3739,7 +2069,7 @@
 <codeline lineno="786"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="787"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a3f131c88e4ecf2202eb537a07a5aa5f1" kindref="member">RXESC</ref><sp/>=<sp/>rx_fifo_buf_elem_config.<ref refid="unionmcan__rx__fifo__or__buf__elem__config__struct_1a2c71d7e2e782003ff1041298d9e2eb73" kindref="member">reg_val</ref>;</highlight></codeline>
 <codeline lineno="788"><highlight class="normal"></highlight></codeline>
-<codeline lineno="789"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unionmcan__txbuf__config__struct" kindref="compound">mcan_txbuf_config_t</ref><sp/>txbuf_config<sp/>=<sp/>{<sp/>.<ref refid="unionmcan__txbuf__config__struct_1a462a73fd8373ee39d9480bc286e8f917" kindref="member">reg_val</ref><sp/>=<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="789"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unionmcan__txbuf__config__struct" kindref="compound">mcan_txbuf_config_t</ref><sp/>txbuf_config<sp/>=<sp/>{<sp/>.reg_val<sp/>=<sp/>0<sp/>};</highlight></codeline>
 <codeline lineno="790"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structmcan__ram__config__struct_1a2b8a44e572f2720f547f1d074ee82df9" kindref="member">enable_txbuf</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="791"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>txbuf_config.<ref refid="unionmcan__txbuf__config__struct_1aaeb15cb3c24dcd8f226bba5056e7136a" kindref="member">start_addr</ref><sp/>=<sp/>start_addr;</highlight></codeline>
 <codeline lineno="792"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>txbuf_config.<ref refid="unionmcan__txbuf__config__struct_1a0069780afd802f5051892d6ee51bafb8" kindref="member">fifo_queue_size</ref><sp/>=<sp/>config-&gt;<ref refid="structmcan__ram__config__struct_1af2c838de931810046cb20c5b9ae131c2" kindref="member">txbuf_fifo_or_queue_elem_count</ref>;</highlight></codeline>
@@ -3761,7 +2091,7 @@
 <codeline lineno="808"><highlight class="normal"></highlight></codeline>
 <codeline lineno="809"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a881585802b55392a6d7b749833179121" kindref="member">TXBC</ref><sp/>=<sp/>txbuf_config.<ref refid="unionmcan__txbuf__config__struct_1a462a73fd8373ee39d9480bc286e8f917" kindref="member">reg_val</ref>;</highlight></codeline>
 <codeline lineno="810"><highlight class="normal"></highlight></codeline>
-<codeline lineno="811"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unionmcan__tx__evt__fifo__config__t" kindref="compound">mcan_tx_evt_fifo_config_t</ref><sp/>txevt_fifo_config<sp/>=<sp/>{<sp/>.<ref refid="unionmcan__tx__evt__fifo__config__t_1aaf8c2c7c151be68e5940a00ab15eeece" kindref="member">reg_val</ref><sp/>=<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="811"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="unionmcan__tx__evt__fifo__config__t" kindref="compound">mcan_tx_evt_fifo_config_t</ref><sp/>txevt_fifo_config<sp/>=<sp/>{<sp/>.reg_val<sp/>=<sp/>0<sp/>};</highlight></codeline>
 <codeline lineno="812"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structmcan__ram__config__struct_1a5cd46c9bb1dee840f76e6d207cf4124b" kindref="member">enable_tx_evt_fifo</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="813"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elem_bytes<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="group__mcan__interface_1gac727e3406aaf84fc73738cca1176fd24" kindref="member">mcan_tx_event_fifo_elem_t</ref>);</highlight></codeline>
 <codeline lineno="814"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elem_count<sp/>=<sp/>config-&gt;<ref refid="structmcan__ram__config__struct_1ac62af07197df64eeb3af99063b6b898d" kindref="member">tx_evt_fifo_elem_count</ref>;</highlight></codeline>
@@ -4101,43 +2431,43 @@
 <codeline lineno="1148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structmcan__config__struct_1a2d45408c6eee4a952c31d154797c9b1e" kindref="member">enable_non_iso_mode</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="1149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a68fecf6b9cbf2eb45affadd0ddd2dd33" kindref="member">MCAN_CCCR_NISO_MASK</ref>;</highlight></codeline>
 <codeline lineno="1150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="1151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a68fecf6b9cbf2eb45affadd0ddd2dd33" kindref="member">MCAN_CCCR_NISO_MASK</ref>;</highlight></codeline>
+<codeline lineno="1151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~MCAN_CCCR_NISO_MASK;</highlight></codeline>
 <codeline lineno="1152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1153"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structmcan__config__struct_1af3b754b114bc151eb8141e5403ad62fa" kindref="member">enable_transmit_pause</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="1155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a8edd064bba5e6da11f466c255a36641c" kindref="member">MCAN_CCCR_TXP_MASK</ref>;</highlight></codeline>
 <codeline lineno="1156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="1157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a8edd064bba5e6da11f466c255a36641c" kindref="member">MCAN_CCCR_TXP_MASK</ref>;</highlight></codeline>
+<codeline lineno="1157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~MCAN_CCCR_TXP_MASK;</highlight></codeline>
 <codeline lineno="1158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1159"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structmcan__config__struct_1ad46cfc929a18252b6997ca96a4720df7" kindref="member">disable_protocol_exception_handling</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="1161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1ace113a0e6c40d71818334c5903ddfbf4" kindref="member">MCAN_CCCR_PXHD_MASK</ref>;</highlight></codeline>
 <codeline lineno="1162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="1163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1ace113a0e6c40d71818334c5903ddfbf4" kindref="member">MCAN_CCCR_PXHD_MASK</ref>;</highlight></codeline>
+<codeline lineno="1163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~MCAN_CCCR_PXHD_MASK;</highlight></codeline>
 <codeline lineno="1164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1165"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structmcan__config__struct_1a053c3a92fc5b024774a8c3d2e5f5f525" kindref="member">enable_wide_message_marker</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="1167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a473bd737e56ae40d0f36655e7e1e0455" kindref="member">MCAN_CCCR_WMM_MASK</ref>;</highlight></codeline>
 <codeline lineno="1168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="1169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a473bd737e56ae40d0f36655e7e1e0455" kindref="member">MCAN_CCCR_WMM_MASK</ref>;</highlight></codeline>
+<codeline lineno="1169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~MCAN_CCCR_WMM_MASK;</highlight></codeline>
 <codeline lineno="1170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1171"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structmcan__config__struct_1ac65911843274788dad0af70288b22430" kindref="member">enable_edge_filtering</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="1173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1ad71963c566871490c2439a9f0d1a4d69" kindref="member">MCAN_CCCR_EFBI_MASK</ref>;</highlight></codeline>
 <codeline lineno="1174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="1175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1ad71963c566871490c2439a9f0d1a4d69" kindref="member">MCAN_CCCR_EFBI_MASK</ref>;</highlight></codeline>
+<codeline lineno="1175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~MCAN_CCCR_EFBI_MASK;</highlight></codeline>
 <codeline lineno="1176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1177"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structmcan__config__struct_1a72fb70555e55a6a470371d09dee8826f" kindref="member">disable_auto_retransmission</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="1179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a3b2753c8a97b0b3db222d93ba54d9878" kindref="member">MCAN_CCCR_DAR_MASK</ref>;</highlight></codeline>
 <codeline lineno="1180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="1181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a3b2753c8a97b0b3db222d93ba54d9878" kindref="member">MCAN_CCCR_DAR_MASK</ref>;</highlight></codeline>
+<codeline lineno="1181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~MCAN_CCCR_DAR_MASK;</highlight></codeline>
 <codeline lineno="1182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1183"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structmcan__config__struct_1aaad7bcd6d2ba4e41b23bcd92904cc83e" kindref="member">enable_restricted_operation_mode</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="1185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1aa254bf638b25cd87ddcd831bd2df7338" kindref="member">MCAN_CCCR_ASM_MASK</ref>;</highlight></codeline>
 <codeline lineno="1186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="1187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1aa254bf638b25cd87ddcd831bd2df7338" kindref="member">MCAN_CCCR_ASM_MASK</ref>;</highlight></codeline>
+<codeline lineno="1187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~MCAN_CCCR_ASM_MASK;</highlight></codeline>
 <codeline lineno="1188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1189"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configure<sp/>Transmitter<sp/>Delay<sp/>Compensation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
@@ -4157,7 +2487,7 @@
 <codeline lineno="1204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1ae37457307d899cfc45738b1fca11cb18" kindref="member">TDCR</ref><sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a8146121b629f36502b57f19670eb18cb" kindref="member">MCAN_TDCR_TDCF_SET</ref>(tdc_filter)<sp/>|<sp/><ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a2c299c023f0d6b6268dce206127270ea" kindref="member">MCAN_TDCR_TDCO_SET</ref>(tdc_offset);</highlight></codeline>
 <codeline lineno="1205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a0cbaf7a5bb3b670b88650838bb19a433" kindref="member">DBTP</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a53475ab7fa788d54c7819b90872cd583" kindref="member">MCAN_DBTP_TDC_MASK</ref>;</highlight></codeline>
 <codeline lineno="1206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="1207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a0cbaf7a5bb3b670b88650838bb19a433" kindref="member">DBTP</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a53475ab7fa788d54c7819b90872cd583" kindref="member">MCAN_DBTP_TDC_MASK</ref>;</highlight></codeline>
+<codeline lineno="1207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a0cbaf7a5bb3b670b88650838bb19a433" kindref="member">DBTP</ref><sp/>&amp;=<sp/>~MCAN_DBTP_TDC_MASK;</highlight></codeline>
 <codeline lineno="1208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1209"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configure<sp/>TSU<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
@@ -4166,7 +2496,7 @@
 <codeline lineno="1213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="hpm__mcan__drv_8c_1aeff3fdded097c644d85dad856b5668fe" kindref="member">mcan_set_tsu</ref>(ptr,<sp/>&amp;config-&gt;<ref refid="structmcan__config__struct_1a03b30735f04507262407d2efe9e542d6" kindref="member">tsu_config</ref>);</highlight></codeline>
 <codeline lineno="1214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga6552192bf6d102d80777fc98a59811d9" kindref="member">HPM_BREAK_IF</ref>(status<sp/>!=<sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>);</highlight></codeline>
 <codeline lineno="1215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="1216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a0a757018495b07b06af77a0736315f2c" kindref="member">MCAN_CCCR_UTSU_MASK</ref>;</highlight></codeline>
+<codeline lineno="1216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~MCAN_CCCR_UTSU_MASK;</highlight></codeline>
 <codeline lineno="1217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1218"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configure<sp/>Internal<sp/>Timestamp<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
@@ -4204,7 +2534,7 @@
 <codeline lineno="1251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1ad1c3446b3a2e2bd32399a2de6d63c73e" kindref="member">MCAN_TOCC_TOP_SET</ref>(timeout_cfg-&gt;<ref refid="structmcan__timeout__config__struct_1a534237042df3b9eab3f649777b74d799" kindref="member">timeout_period</ref>)<sp/>|</highlight></codeline>
 <codeline lineno="1252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1ab8a773e96f1e6d64e1559ddcea5bf4fb" kindref="member">MCAN_TOCC_TOS_SET</ref>(timeout_cfg-&gt;<ref refid="structmcan__timeout__config__struct_1afc419244b9d064a010f13ccfe8b6715e" kindref="member">timeout_sel</ref>);</highlight></codeline>
 <codeline lineno="1253"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a1d0d1569f8dd443546ec8c6954ac38ff" kindref="member">MCAN_CCCR_INIT_MASK</ref>;</highlight></codeline>
+<codeline lineno="1254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;=<sp/>~MCAN_CCCR_INIT_MASK;</highlight></codeline>
 <codeline lineno="1255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structMCAN__Type_1a24dbd9d7101d28c6b18f65a8d937840d" kindref="member">CCCR</ref><sp/>&amp;<sp/><ref refid="HPM5300_2ip_2hpm__mcan__regs_8h_1a1d0d1569f8dd443546ec8c6954ac38ff" kindref="member">MCAN_CCCR_INIT_MASK</ref>)<sp/>!=<sp/>0U)<sp/>{</highlight></codeline>
 <codeline lineno="1256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1257"><highlight class="normal"></highlight></codeline>

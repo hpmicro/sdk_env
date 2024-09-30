@@ -181,6 +181,15 @@ var group__enet__interface =
       [ "target_nsec", "structenet__pps__cmd__config__t.html#a46146e32f33571d7ac6102a1775e2d1b", null ],
       [ "target_sec", "structenet__pps__cmd__config__t.html#a9b19d5b941a226f0ad85af5185d98d98", null ]
     ] ],
+    [ "enet_ptp_ts_auxi_snapshot_t", "structenet__ptp__ts__auxi__snapshot__t.html", [
+      [ "nsec", "structenet__ptp__ts__auxi__snapshot__t.html#a0b2302bbe8f4c44adce683c6bdd1c755", null ],
+      [ "sec", "structenet__ptp__ts__auxi__snapshot__t.html#a56d9310fd1588f4b3b7082a383b29172", null ]
+    ] ],
+    [ "enet_ptp_auxi_snapshot_status_t", "structenet__ptp__auxi__snapshot__status__t.html", [
+      [ "auxi_snapshot_count", "structenet__ptp__auxi__snapshot__status__t.html#a3d55bf4779600aca3105ff70dabdaba0", null ],
+      [ "auxi_snapshot_id", "structenet__ptp__auxi__snapshot__status__t.html#a82572ea0fd58d97299751482854b93a4", null ],
+      [ "auxi_snapshot_miss", "structenet__ptp__auxi__snapshot__status__t.html#a5a239b92bb4c0f6e6ea203462ad7cd06", null ]
+    ] ],
     [ "enet_int_config_t", "structenet__int__config__t.html", [
       [ "int_enable", "structenet__int__config__t.html#af28a7b8be6913a8d65747c76316b176d", null ],
       [ "int_mask", "structenet__int__config__t.html#aad3ce49034135f4a160441fd415888ce", null ],
@@ -194,10 +203,10 @@ var group__enet__interface =
     [ "ENET_DMATxDesc_TBS1", "group__enet__interface.html#gaf433c0cc7e9c29e937badfe70e7b1d8b", null ],
     [ "ENET_DMATxDesc_TBS2", "group__enet__interface.html#ga2d07633a3d96bf3a1101e77d6e50d0fc", null ],
     [ "ENET_ERROR", "group__enet__interface.html#gab24aa510b4c1d823fdfb791a5bb0a436", null ],
-    [ "ENET_EXTRA", "group__enet__interface.html#ga0e37095c8afd617ae21fde1efe9413b1", null ],
     [ "ENET_HEADER", "group__enet__interface.html#ga949b4c9512ba76bbaa14308f10ea2428", null ],
     [ "ENET_JUMBO_FRAME_PAYLOAD", "group__enet__interface.html#ga94ade8ff63a3b5e119fb88661b1ce5c1", null ],
     [ "ENET_MAC", "group__enet__interface.html#ga150445154d5d6fb9e4ecc1e37ee6c0b6", null ],
+    [ "ENET_MAX_BUFF_SIZE", "group__enet__interface.html#gad235749932290fadebfb1c8e41c9cef5", null ],
     [ "ENET_MAX_FRAME_SIZE", "group__enet__interface.html#ga0f368cafab163ddde40eb425a2389529", null ],
     [ "ENET_MAX_PAYLOAD", "group__enet__interface.html#ga01b4c7adc30a3a66f3beed06758c87b7", null ],
     [ "ENET_MIN_PAYLOAD", "group__enet__interface.html#ga1f6f3c7c5de32a4386960407ddd8a4cd", null ],
@@ -205,6 +214,7 @@ var group__enet__interface =
     [ "ENET_PPS_CMD_MASK", "group__enet__interface.html#gab172e18682686585fafb30ee3db05a7a", null ],
     [ "ENET_PPS_CMD_OFS_FAC", "group__enet__interface.html#ga34fac8b815e90c7d05e5e54d031db81e", null ],
     [ "ENET_RETRY_CNT", "group__enet__interface.html#ga73b3599afb7fd3b480b9461848fd97cb", null ],
+    [ "ENET_RETRY_DMA_INIT_CNT", "group__enet__interface.html#gade7feeb5967634a6457ee8ebb2cfd4f3", null ],
     [ "ENET_SUCCESS", "group__enet__interface.html#ga389fe809df02d5681629af8cb2b7f614", null ],
     [ "ENET_VLAN_TAG", "group__enet__interface.html#gae07cecb2757c783f09733205cb8ebe40", null ],
     [ "enet_cic_insertion_control_t", "group__enet__interface.html#gaf5c77014a4297c3f2aacb16e41bc65dc", [
@@ -302,6 +312,12 @@ var group__enet__interface =
       [ "enet_pps_2", "group__enet__interface.html#ggaa11d206431aeea57d1debf50f3e4d73ca5c188da7036e2d48499245215a8bed50", null ],
       [ "enet_pps_3", "group__enet__interface.html#ggaa11d206431aeea57d1debf50f3e4d73ca7ab4b4e34abd1fe598f6d01a88c960ab", null ]
     ] ],
+    [ "enet_ptp_auxi_snapshot_trigger_idx_t", "group__enet__interface.html#ga98b3dc4b59a60e864730f44aa24294e5", [
+      [ "enet_ptp_auxi_snapshot_trigger_0", "group__enet__interface.html#gga98b3dc4b59a60e864730f44aa24294e5af7907098f29e9f9dd2c7a856970c0bab", null ],
+      [ "enet_ptp_auxi_snapshot_trigger_1", "group__enet__interface.html#gga98b3dc4b59a60e864730f44aa24294e5a893b3c300614e0500aff2ed4b215c149", null ],
+      [ "enet_ptp_auxi_snapshot_trigger_2", "group__enet__interface.html#gga98b3dc4b59a60e864730f44aa24294e5a25213c90e06f1747eb0f2a5bb87ee08a", null ],
+      [ "enet_ptp_auxi_snapshot_trigger_3", "group__enet__interface.html#gga98b3dc4b59a60e864730f44aa24294e5af02a0ab80adeb6b62727f567fa103e86", null ]
+    ] ],
     [ "enet_ptp_frame_type_t", "group__enet__interface.html#ga843ef5dbf1bb8f99db24c64a7ff12369", [
       [ "enet_ptp_frame_ipv4", "group__enet__interface.html#gga843ef5dbf1bb8f99db24c64a7ff12369aa23c5e7b063abf9aa0cd468c52b6a091", null ],
       [ "enet_ptp_frame_ipv6", "group__enet__interface.html#gga843ef5dbf1bb8f99db24c64a7ff12369a50b47baa40f6560197d670526cf54dc2", null ],
@@ -352,19 +368,24 @@ var group__enet__interface =
     [ "enet_adjust_ptp_time_freq", "group__enet__interface.html#ga39728672c004f92451662ee9315fd383", null ],
     [ "enet_check_received_frame", "group__enet__interface.html#gad076ed1579664645114b831208cf055e", null ],
     [ "enet_controller_init", "group__enet__interface.html#ga7dd314a6ddc82cb7f12ff61e99dbe0d6", null ],
+    [ "enet_disable_ptp_auxiliary_snapshot", "group__enet__interface.html#ga723744f5582660a18e4a24be43dc5bd8", null ],
     [ "enet_dma_flush", "group__enet__interface.html#ga9302aeb46f3ee471c98cb889b0181b40", null ],
     [ "enet_dma_rx_desc_chain_init", "group__enet__interface.html#ga0ff4f0756c4a6e52792c01bd712b39ac", null ],
     [ "enet_dma_tx_desc_chain_init", "group__enet__interface.html#gaf6848b5fc209bac8932936a235535631", null ],
+    [ "enet_enable_ptp_auxiliary_snapshot", "group__enet__interface.html#gab8e4a16a5c04db8dc9eafb72485f0175", null ],
     [ "enet_enable_ptp_frame_type", "group__enet__interface.html#ga4f4be702511cdfc964bfb825dd5a1561", null ],
     [ "enet_get_default_interrupt_config", "group__enet__interface.html#ga14bd23e2894cf2c45fb1d1be12c8eb7e", null ],
     [ "enet_get_default_tx_control_config", "group__enet__interface.html#ga8fde2cee93cf5a9f3fd51a2e6e1dc5a2", null ],
     [ "enet_get_interrupt_status", "group__enet__interface.html#ga63e9d2fac5225607f5000b70a1be5c59", null ],
     [ "enet_get_mmc_rx_interrupt_status", "group__enet__interface.html#gae15420f2e2fe3f7bba65b65a4ce6b00e", null ],
     [ "enet_get_mmc_tx_interrupt_status", "group__enet__interface.html#ga2779a780236dc2fcd7e1e83dbe6ada25", null ],
+    [ "enet_get_ptp_auxi_snapshot_status", "group__enet__interface.html#ga58290fcf16a6853de1814a58196c1501", null ],
+    [ "enet_get_ptp_auxi_timestamp", "group__enet__interface.html#ga500580aa51567493a69226a8afb1d476", null ],
     [ "enet_get_ptp_timestamp", "group__enet__interface.html#gae0b9019bd267f387f30d4f9456d783c3", null ],
     [ "enet_get_received_frame", "group__enet__interface.html#ga968d4b7debaf3121348013b533595be4", null ],
     [ "enet_get_received_frame_interrupt", "group__enet__interface.html#ga2937fe2458aeeca62bf699ed866d141a", null ],
     [ "enet_init_ptp", "group__enet__interface.html#gaf7a6f41ed9e4cb0b165c87306d0bc4c6", null ],
+    [ "enet_mask_interrupt_event", "group__enet__interface.html#gab797330bf93a6e76ccd88c9d5dff9134", null ],
     [ "enet_mask_mmc_rx_interrupt_event", "group__enet__interface.html#gab19ce4126de02d8c304f5f89722269e7", null ],
     [ "enet_mask_mmc_tx_interrupt_event", "group__enet__interface.html#gac6a13e089e7b75bd1df7aadca8d0e90f", null ],
     [ "enet_prepare_transmission_descriptors", "group__enet__interface.html#gafc454b556e55088916ec1f2fe7b3805a", null ],
@@ -380,6 +401,7 @@ var group__enet__interface =
     [ "enet_set_ptp_timestamp", "group__enet__interface.html#ga2b7878b691a724ae2471fe6fd73b0e58", null ],
     [ "enet_set_ptp_version", "group__enet__interface.html#gacbe7b2b681b77e2515700e791049fa1c", null ],
     [ "enet_set_snapshot_ptp_message_type", "group__enet__interface.html#ga6e46b48560cf6d29aeaf36cf5e4b00ca", null ],
+    [ "enet_unmask_interrupt_event", "group__enet__interface.html#ga42fc3ea7de91d44fb16dbcf71e626738", null ],
     [ "enet_update_ptp_timeoffset", "group__enet__interface.html#gafa276e3b1c1e0467bd48d93eb8926ae8", null ],
     [ "enet_write_phy", "group__enet__interface.html#gac54a2012a702fccb28805d5f04e8106e", null ]
 ];

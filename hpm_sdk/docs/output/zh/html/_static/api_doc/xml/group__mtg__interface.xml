@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="group__mtg__interface" kind="group">
     <compoundname>mtg_interface</compoundname>
     <title>MTG driver APIs</title>
@@ -12,7 +12,7 @@
     <innerclass refid="structmtg__timeout__param" prot="public">mtg_timeout_param</innerclass>
     <innerclass refid="structmtg__tra__shift" prot="public">mtg_tra_shift</innerclass>
     <innerclass refid="structmtg__tra__cmd__cfg" prot="public">mtg_tra_cmd_cfg</innerclass>
-      <sectiondef kind="enum">
+    <sectiondef kind="enum">
       <memberdef kind="enum" id="group__mtg__interface_1gad9a4dba3455ea5d866adba64a36f58ac" prot="public" static="no" strong="no">
         <type></type>
         <name>mtg_evnet_object_postion</name>
@@ -581,8 +581,811 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_mtg_drv.h" line="281" column="1" bodyfile="drivers/inc/hpm_mtg_drv.h" bodystart="281" bodyend="284"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
+      <memberdef kind="enum" id="group__mtg__interface_1ga1cda3c14d770986e5ad561c4d785ab24" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_irq_enable</name>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a689ca1160aedeaaf7f4de8ab745a28b3" prot="public">
+          <name>irq_filter_mul1_overflow</name>
+          <initializer>= 1 &lt;&lt; 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a4e5d286da17306b1c0a9fcc4d9a5fe25" prot="public">
+          <name>irq_filter_mul0_overflow</name>
+          <initializer>= 1 &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a41564b239b953479db5a61bff54bc1a9" prot="public">
+          <name>irq_event3_object_sudden_change</name>
+          <initializer>= 1 &lt;&lt; 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24ad7248561ea4321191f2bc6ac0256c9a3" prot="public">
+          <name>irq_event3</name>
+          <initializer>= 1 &lt;&lt; 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24aefcb811e3c478ef0578897f156c98165" prot="public">
+          <name>irq_event2_object_sudden_change</name>
+          <initializer>= 1 &lt;&lt; 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a8bf3f5539f1c893534567276cbaf30a9" prot="public">
+          <name>irq_event2</name>
+          <initializer>= 1 &lt;&lt; 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24affb88cac2e3650668ebab90817b5a5e8" prot="public">
+          <name>irq_event1_object_sudden_change</name>
+          <initializer>= 1 &lt;&lt; 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a30362b7881c8cb344cfe5fe24bcab6b0" prot="public">
+          <name>irq_event1</name>
+          <initializer>= 1 &lt;&lt; 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a077b593eafc3daa074f51da426cac5ef" prot="public">
+          <name>irq_event0_object_sudden_change</name>
+          <initializer>= 1 &lt;&lt; 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a06a7130924bd9276f4b7f0c50b2b801a" prot="public">
+          <name>irq_event0</name>
+          <initializer>= 1 &lt;&lt; 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24ae1120d6d98da977c143b5662f2966115" prot="public">
+          <name>irq_tra1_lock</name>
+          <initializer>= 1 &lt;&lt; 10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a1a7e2fe7f079c828f1a55eec1ca01fa7" prot="public">
+          <name>irq_tra1_vel_shift_issue</name>
+          <initializer>= 1 &lt;&lt; 11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a2f4a69f3724816dcc7e9f6c4bdd2f372" prot="public">
+          <name>irq_tra1_acc_shift_issue</name>
+          <initializer>= 1 &lt;&lt; 12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a6a2109292d02472086496b5894b732e2" prot="public">
+          <name>irq_tra1_cmd_conflict</name>
+          <initializer>= 1 &lt;&lt; 13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a9b7038a0130bff3253aca7b120050d19" prot="public">
+          <name>irq_tra1_cmd3</name>
+          <initializer>= 1 &lt;&lt; 14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a5b90ec4cc257934e7b0309ac2d81b57d" prot="public">
+          <name>irq_tra1_cmd2</name>
+          <initializer>= 1 &lt;&lt; 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24adc4d6e40266b379817d44ca48a3dff9e" prot="public">
+          <name>irq_tra1_cmd1</name>
+          <initializer>= 1 &lt;&lt; 16</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a8c21194ac6225bf969c065596da066cd" prot="public">
+          <name>irq_tra1_cmd0</name>
+          <initializer>= 1 &lt;&lt; 17</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24aba3067feaeb2e89895fb284c6db03c25" prot="public">
+          <name>irq_tra0_lock</name>
+          <initializer>= 1 &lt;&lt; 18</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a06116dac7454c7482eeeb8b61e3c8e4a" prot="public">
+          <name>irq_tra0_vel_shift_issue</name>
+          <initializer>= 1 &lt;&lt; 19</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24aab6be876cc4a043d19f4706956a9bfed" prot="public">
+          <name>irq_tra0_acc_shift_issue</name>
+          <initializer>= 1 &lt;&lt; 20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a6c347761a98a0323123d9378a7069046" prot="public">
+          <name>irq_tra0_cmd_conflict</name>
+          <initializer>= 1 &lt;&lt; 21</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24aae6151009cf7f1e6675048ce0fbbc71c" prot="public">
+          <name>irq_tra0_cmd3</name>
+          <initializer>= 1 &lt;&lt; 22</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a7013397fcf4aa8b2079737b6f1ba1498" prot="public">
+          <name>irq_tra0_cmd2</name>
+          <initializer>= 1 &lt;&lt; 23</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24ad48f50f22604a93e4418aae97c748aa0" prot="public">
+          <name>irq_tra0_cmd1</name>
+          <initializer>= 1 &lt;&lt; 24</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a26bd88b266aadddaa2029bf8a522da62" prot="public">
+          <name>irq_tra0_cmd0</name>
+          <initializer>= 1 &lt;&lt; 25</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24a79d0c218a76702169f41ec86363a72b3" prot="public">
+          <name>irq_f_i_irq</name>
+          <initializer>= 1 &lt;&lt; 26</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga1cda3c14d770986e5ad561c4d785ab24abd6a35f2c4b6a3ef96f53d11c5a59aba" prot="public">
+          <name>irq_i_f_irq0</name>
+          <initializer>= 1 &lt;&lt; 27</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="20" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="20" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1gad9a4dba3455ea5d866adba64a36f58ac" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_evnet_object_postion</name>
+        <enumvalue id="group__mtg__interface_1ggad9a4dba3455ea5d866adba64a36f58aca363ec197f719311a30a6a7ddf9f2f84e" prot="public">
+          <name>event_source_before_filter</name>
+          <initializer>= 1 &lt;&lt; 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggad9a4dba3455ea5d866adba64a36f58aca52c0fe4dd949650ac5dfbf61499a5d6a" prot="public">
+          <name>event_source_filter_output</name>
+          <initializer>= 1 &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggad9a4dba3455ea5d866adba64a36f58aca333770fbea8d8868754ec91332404631" prot="public">
+          <name>event_source_tra0_output</name>
+          <initializer>= 1 &lt;&lt; 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggad9a4dba3455ea5d866adba64a36f58aca1400166deb65fee287764953a28b33f4" prot="public">
+          <name>event_source_tra1_output</name>
+          <initializer>= 1 &lt;&lt; 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the postion of the observed object </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="67" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="67" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1ga046774d5b73d863a5ad9bfa72fa40210" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_event_object</name>
+        <enumvalue id="group__mtg__interface_1gga046774d5b73d863a5ad9bfa72fa40210ae58cba3b8e4994079b2875d3b49686de" prot="public">
+          <name>event_object_rev_pos</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga046774d5b73d863a5ad9bfa72fa40210a46cb8e45ff9752efad4dc26954b8f0eb" prot="public">
+          <name>event_object_vel</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga046774d5b73d863a5ad9bfa72fa40210a78b4045036499a26f10915ab20ec6fc7" prot="public">
+          <name>event_object_acc</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga046774d5b73d863a5ad9bfa72fa40210a4bab9c02ae8566194e92bed3bbf0007d" prot="public">
+          <name>event_object_pos</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the observed object </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="77" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="77" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1gac2e582b84a5ce462956afd5966badab8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_event_mode</name>
+        <enumvalue id="group__mtg__interface_1ggac2e582b84a5ce462956afd5966badab8af6242dca49231a5b0efbb586d33e82cd" prot="public">
+          <name>event_mode_across</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggac2e582b84a5ce462956afd5966badab8aabed416ab1b094a2063426bcd439d1a5" prot="public">
+          <name>event_mode_hold</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggac2e582b84a5ce462956afd5966badab8a8cfcf871d8c6d62d4c5dd2c84afed0cb" prot="public">
+          <name>event_mode_over_protect</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggac2e582b84a5ce462956afd5966badab8a82aea8796f0fe11697dc57c3c35c88ca" prot="public">
+          <name>event_mode_time_match</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the event detection mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="87" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="87" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1ga770eff8566b2ec51f835e91f7935f494" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_event_dir</name>
+        <enumvalue id="group__mtg__interface_1gga770eff8566b2ec51f835e91f7935f494a585105842e4cbe6f5c9752ea620ebc9c" prot="public">
+          <name>event_dir_negative</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga770eff8566b2ec51f835e91f7935f494a11475b4771c0ddaceed912b866009339" prot="public">
+          <name>event_dir_positive</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga770eff8566b2ec51f835e91f7935f494a1e56d56d3ea7b1ceef96c9a7b9526882" prot="public">
+          <name>event_dir_both</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the event detection direction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="97" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="97" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1ga73b999478c625b0bab10997f685bd90d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_event_dir_mode</name>
+        <enumvalue id="group__mtg__interface_1gga73b999478c625b0bab10997f685bd90daa2e8a92b923e898575269d81e073f353" prot="public">
+          <name>event_dir_mode_dy</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga73b999478c625b0bab10997f685bd90da725fff66c521bfe7aa919f808e081e80" prot="public">
+          <name>event_dir_mode_y1_y0</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the event detection direction calculation mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="106" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1gab1c10487f800b3553a92d47c7611234b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_event_over_mode_cmp</name>
+        <enumvalue id="group__mtg__interface_1ggab1c10487f800b3553a92d47c7611234ba7484606d89b691debdfb07194df8418d" prot="public">
+          <name>event_over_cmp_mode_smaller</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggab1c10487f800b3553a92d47c7611234baff33cd9dac4fc2d0378692beae6cfef9" prot="public">
+          <name>event_over_cmp_mode_bigger</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the event detection over protect mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="114" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1gac571d871baca4755febc73ee617f0711" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_event_trig_num</name>
+        <enumvalue id="group__mtg__interface_1ggac571d871baca4755febc73ee617f0711adb3728c2da1de1c2ccbf65af36f3a687" prot="public">
+          <name>event_trig_once</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggac571d871baca4755febc73ee617f0711a59c175004b414695525692ebe4c52e74" prot="public">
+          <name>event_trig_repeat</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the event trigger number </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="122" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1gaf43804d6ed38187744a939649436204d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_software_force_one_way_mode</name>
+        <enumvalue id="group__mtg__interface_1ggaf43804d6ed38187744a939649436204dae15070863c669f82abab22b23ff86f47" prot="public">
+          <name>sw_force_negative</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggaf43804d6ed38187744a939649436204da1ca52ac98aabd568d36302cd5602955a" prot="public">
+          <name>sw_force_positive</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the software force one way mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="178" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1gac4cd261755802394de64ff78975be155" prot="public" static="no" strong="no">
+        <type></type>
+        <name>vel_one_way_mode</name>
+        <enumvalue id="group__mtg__interface_1ggac4cd261755802394de64ff78975be155a37bcc7497a45b6d67fb25014416a9e42" prot="public">
+          <name>bigger_or_eq_zero</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggac4cd261755802394de64ff78975be155a5ed0f6ce61295ba5f7192a20a53570d7" prot="public">
+          <name>smaller_or_eq_zero</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the hardware force one way mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="186" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="186" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1gae6a950ab443310bb144f73f268d20eff" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_filter_ff_mode</name>
+        <enumvalue id="group__mtg__interface_1ggae6a950ab443310bb144f73f268d20effaa7140850f570b4d53633ccb11e6aaf22" prot="public">
+          <name>mtg_filter_ff_mode_from_register</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggae6a950ab443310bb144f73f268d20effad978efbb9d5fb60ae3045ac299cd26bc" prot="public">
+          <name>mtg_filter_ff_mode_from_input</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the filter ff mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="202" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="202" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1ga9b9b3361a7725d96b167acbbe1b959a1" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_filter_first_load_mode</name>
+        <enumvalue id="group__mtg__interface_1gga9b9b3361a7725d96b167acbbe1b959a1a1982656172905a53a6058facec747ecb" prot="public">
+          <name>mtg_filter_first_load_mode_without_acc</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga9b9b3361a7725d96b167acbbe1b959a1ab1d7f3ca78d86e3b5f4ebf8b560351f3" prot="public">
+          <name>mtg_filter_first_load_mode_include_acc</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the filter first load mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="210" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="210" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1ga765d19533ac9647907d38be4eea17f74" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_filter_err_bypass_mode</name>
+        <enumvalue id="group__mtg__interface_1gga765d19533ac9647907d38be4eea17f74a49199782d36920b9f3f0f932bebd87ea" prot="public">
+          <name>mtg_filter_err_bypass_mode_hw</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga765d19533ac9647907d38be4eea17f74aea5784513f3d17120b81829d534973c8" prot="public">
+          <name>mtg_filter_err_bypass_mode_sw</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the filter first load mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="218" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1ga4f15fef22ae88d855999774e3054bcee" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_time_input_source</name>
+        <enumvalue id="group__mtg__interface_1gga4f15fef22ae88d855999774e3054bceea9f221ecfa83a7fff797e8aabac51e380" prot="public">
+          <name>mtg_time_input_from_filter</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga4f15fef22ae88d855999774e3054bceeafe7905135544b6f09860322b373216c2" prot="public">
+          <name>mtg_time_input_from_input</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the trajectory predictor time input source </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="253" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="253" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1gabe2a8a067c426e9c33a854f658b88d6d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_link_cfg</name>
+        <enumvalue id="group__mtg__interface_1ggabe2a8a067c426e9c33a854f658b88d6dadb0cbec0c4940ec95a69585ab396c771" prot="public">
+          <name>link_event0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggabe2a8a067c426e9c33a854f658b88d6dafa1f6c8e4ee50cb91e436f073d788493" prot="public">
+          <name>link_event1</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggabe2a8a067c426e9c33a854f658b88d6daca46a0948bd2cfeffcfcafcb8a6e2eee" prot="public">
+          <name>link_event2</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggabe2a8a067c426e9c33a854f658b88d6da6363721777e8f5ad407bef87caae74b9" prot="public">
+          <name>link_event3</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggabe2a8a067c426e9c33a854f658b88d6da7f2ba8d0e79d64e622766d82cbe67559" prot="public">
+          <name>link_hw_trigger</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggabe2a8a067c426e9c33a854f658b88d6daebffde4707701cccfb772c3dbac5b00b" prot="public">
+          <name>link_sw_trigger</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggabe2a8a067c426e9c33a854f658b88d6da6f9917dd5ec6bb0300815eb8fde56f65" prot="public">
+          <name>link_event_timeout</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the trajectory predictor link event link the trigger source and the cmd object, it describes the trigger source </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="281" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="281" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1ga2d8c4f4519ef726a0fb7eb5a8b1459d2" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_tra_cmd_object_t</name>
+        <enumvalue id="group__mtg__interface_1gga2d8c4f4519ef726a0fb7eb5a8b1459d2a76e07e5562bb7655642533977411a97e" prot="public">
+          <name>cmd_object_rev</name>
+          <initializer>= 1 &lt;&lt; 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga2d8c4f4519ef726a0fb7eb5a8b1459d2abbb41ff9886c7053cdeead8cc870b6ae" prot="public">
+          <name>cmd_object_pos</name>
+          <initializer>= 1 &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga2d8c4f4519ef726a0fb7eb5a8b1459d2acec97b3ebfaeb325a2912c6a3733c732" prot="public">
+          <name>cmd_object_vel</name>
+          <initializer>= 1 &lt;&lt; 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga2d8c4f4519ef726a0fb7eb5a8b1459d2a1a5d12b6a6c66b5853fed7d653102421" prot="public">
+          <name>cmd_object_acc</name>
+          <initializer>= 1 &lt;&lt; 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1gga2d8c4f4519ef726a0fb7eb5a8b1459d2a6fd5b5d0e6901f16a64692db11ddac21" prot="public">
+          <name>cmd_object_jer</name>
+          <initializer>= 1 &lt;&lt; 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the trajectory predictor command object </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="294" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="294" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__mtg__interface_1gaa4e40d87f5ef4194454299e13418bd06" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mtg_link_cmd_mode_t</name>
+        <enumvalue id="group__mtg__interface_1ggaa4e40d87f5ef4194454299e13418bd06ac3a8e96e712ede83fe22c3df2a8fa2ff" prot="public">
+          <name>cmd_mode_new_value</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__mtg__interface_1ggaa4e40d87f5ef4194454299e13418bd06a514acb98063e6a3d41ab3808f000654c" prot="public">
+          <name>cmd_mode_old_delta</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>define the enum of the trajectory predictor command mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="305" column="1" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="305" bodyend="308"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="group__mtg__interface_1ga073dcc519689ee1b3080c00da15162c6" prot="public" static="no">
         <type>struct <ref refid="structmtg__result" kindref="compound">mtg_result</ref></type>
         <definition>typedef struct mtg_result mtg_lock_value_t</definition>
@@ -903,8 +1706,341 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_mtg_drv.h" line="307" column="19"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+      <memberdef kind="typedef" id="group__mtg__interface_1gae98ea60593e05a0e2b129bd6c6fb987c" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1ga1cda3c14d770986e5ad561c4d785ab24" kindref="member">mtg_irq_enable</ref></type>
+        <definition>typedef enum mtg_irq_enable mtg_irq_enable_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_irq_enable_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="50" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga073dcc519689ee1b3080c00da15162c6" prot="public" static="no">
+        <type>struct <ref refid="structmtg__result" kindref="compound">mtg_result</ref></type>
+        <definition>typedef struct mtg_result mtg_lock_value_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_lock_value_t</name>
+        <briefdescription>
+<para>define the struct of mtg lock values </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="62" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1gafe6a0b1aca7a4c8241d3da308622b1c1" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1gad9a4dba3455ea5d866adba64a36f58ac" kindref="member">mtg_evnet_object_postion</ref></type>
+        <definition>typedef enum mtg_evnet_object_postion mtg_evnet_object_postion_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_evnet_object_postion_t</name>
+        <briefdescription>
+<para>define the enum of the postion of the observed object </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="72" column="28"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga671d2ee28b2ba417ea17f7b8fd3e3991" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1ga046774d5b73d863a5ad9bfa72fa40210" kindref="member">mtg_event_object</ref></type>
+        <definition>typedef enum mtg_event_object mtg_event_object_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_event_object_t</name>
+        <briefdescription>
+<para>define the enum of the observed object </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="82" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1gaf7426e5f96ac5b40fd2385ab55cfb18a" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1gac2e582b84a5ce462956afd5966badab8" kindref="member">mtg_event_mode</ref></type>
+        <definition>typedef enum mtg_event_mode mtg_event_mode_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_event_mode_t</name>
+        <briefdescription>
+<para>define the enum of the event detection mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="92" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1gae7188533412beaad3e73129025a085f0" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1ga770eff8566b2ec51f835e91f7935f494" kindref="member">mtg_event_dir</ref></type>
+        <definition>typedef enum mtg_event_dir mtg_event_dir_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_event_dir_t</name>
+        <briefdescription>
+<para>define the enum of the event detection direction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="101" column="17"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga62f9c6f1c9849a5da899072b90609517" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1ga73b999478c625b0bab10997f685bd90d" kindref="member">mtg_event_dir_mode</ref></type>
+        <definition>typedef enum mtg_event_dir_mode mtg_event_dir_mode_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_event_dir_mode_t</name>
+        <briefdescription>
+<para>define the enum of the event detection direction calculation mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="109" column="22"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga64be4d2d2d23f7f4b5efc5a7d3c04135" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1gab1c10487f800b3553a92d47c7611234b" kindref="member">mtg_event_over_mode_cmp</ref></type>
+        <definition>typedef enum mtg_event_over_mode_cmp mtg_event_over_mode_cmp_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_event_over_mode_cmp_t</name>
+        <briefdescription>
+<para>define the enum of the event detection over protect mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="117" column="27"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga18a04489355b5a1a8e989399585f172e" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1gac571d871baca4755febc73ee617f0711" kindref="member">mtg_event_trig_num</ref></type>
+        <definition>typedef enum mtg_event_trig_num mtg_event_trig_num_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_event_trig_num_t</name>
+        <briefdescription>
+<para>define the enum of the event trigger number </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="125" column="22"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga8cb887e5b847770c33a7026cd6af40eb" prot="public" static="no">
+        <type>struct <ref refid="structmtg__event__param" kindref="compound">mtg_event_param</ref></type>
+        <definition>typedef struct mtg_event_param mtg_event_param_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_event_param_t</name>
+        <briefdescription>
+<para>define the struct of the event setup parameter </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="161" column="19"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga065b3ca3ee8d751c7a8c68cee97dd44f" prot="public" static="no">
+        <type>struct <ref refid="structmtg__tra__limit__param" kindref="compound">mtg_tra_limit_param</ref></type>
+        <definition>typedef struct mtg_tra_limit_param mtg_tra_limit_param_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_tra_limit_param_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="173" column="23"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga62a56fb89818a93a3bb7a52c8d41717d" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1gaf43804d6ed38187744a939649436204d" kindref="member">mtg_software_force_one_way_mode</ref></type>
+        <definition>typedef enum mtg_software_force_one_way_mode mtg_software_force_one_way_mode_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_software_force_one_way_mode_t</name>
+        <briefdescription>
+<para>define the enum of the software force one way mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="181" column="35"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga1dbb02181b504c0f8fefab47def03716" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1gac4cd261755802394de64ff78975be155" kindref="member">vel_one_way_mode</ref></type>
+        <definition>typedef enum vel_one_way_mode vel_one_way_mode_t</definition>
+        <argsstring></argsstring>
+        <name>vel_one_way_mode_t</name>
+        <briefdescription>
+<para>define the enum of the hardware force one way mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="189" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1gacede51d7757fb9b448e4f8c05688cf71" prot="public" static="no">
+        <type>struct <ref refid="structmtg__hardware__force__one__way__mode" kindref="compound">mtg_hardware_force_one_way_mode</ref></type>
+        <definition>typedef struct mtg_hardware_force_one_way_mode mtg_hardware_force_one_way_mode_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_hardware_force_one_way_mode_t</name>
+        <briefdescription>
+<para>define the struct of the hardware force one way mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="197" column="35"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga033fbb7f7ab94b934b80c35f6d9ed71a" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1gae6a950ab443310bb144f73f268d20eff" kindref="member">mtg_filter_ff_mode</ref></type>
+        <definition>typedef enum mtg_filter_ff_mode mtg_filter_ff_mode_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_filter_ff_mode_t</name>
+        <briefdescription>
+<para>define the enum of the filter ff mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="205" column="22"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1gade090d76f4b920e187848d2ad42b6f0a" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1ga9b9b3361a7725d96b167acbbe1b959a1" kindref="member">mtg_filter_first_load_mode</ref></type>
+        <definition>typedef enum mtg_filter_first_load_mode mtg_filter_first_load_mode_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_filter_first_load_mode_t</name>
+        <briefdescription>
+<para>define the enum of the filter first load mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="213" column="30"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1gad9e4fade2e48fe11ded519dd7f0cadd1" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1ga765d19533ac9647907d38be4eea17f74" kindref="member">mtg_filter_err_bypass_mode</ref></type>
+        <definition>typedef enum mtg_filter_err_bypass_mode mtg_filter_err_bypass_mode_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_filter_err_bypass_mode_t</name>
+        <briefdescription>
+<para>define the enum of the filter first load mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="221" column="30"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga508b7a6d8072a97c93093ceb79ba537b" prot="public" static="no">
+        <type>struct <ref refid="structmtg__filter__param" kindref="compound">mtg_filter_param</ref></type>
+        <definition>typedef struct mtg_filter_param mtg_filter_param_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_filter_param_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="248" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1gade4be1490bc35f7d8953a6b26036f841" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1ga4f15fef22ae88d855999774e3054bcee" kindref="member">mtg_time_input_source</ref></type>
+        <definition>typedef enum mtg_time_input_source mtg_time_input_source_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_time_input_source_t</name>
+        <briefdescription>
+<para>define the enum of the trajectory predictor time input source </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="256" column="25"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1gaf644f1c7e70226f08deb70b5a5262241" prot="public" static="no">
+        <type>struct <ref refid="structmtg__time__init__param" kindref="compound">mtg_time_init_param</ref></type>
+        <definition>typedef struct mtg_time_init_param mtg_time_init_param_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_time_init_param_t</name>
+        <briefdescription>
+<para>define the struct of the trajectory predictor time initialization </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="266" column="23"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga958c967ec5a5f1b7435f0bb288957dcf" prot="public" static="no">
+        <type>struct <ref refid="structmtg__timeout__param" kindref="compound">mtg_timeout_param</ref></type>
+        <definition>typedef struct mtg_timeout_param mtg_timeout_param_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_timeout_param_t</name>
+        <briefdescription>
+<para>define the struct of the trajectory predictor timeout </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="274" column="21"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga616d2b3d8663c1d6bbac7ed6a8f37fb1" prot="public" static="no">
+        <type>enum <ref refid="group__mtg__interface_1gabe2a8a067c426e9c33a854f658b88d6d" kindref="member">mtg_link_cfg</ref></type>
+        <definition>typedef enum mtg_link_cfg mtg_link_cfg_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_link_cfg_t</name>
+        <briefdescription>
+<para>define the enum of the trajectory predictor link event link the trigger source and the cmd object, it describes the trigger source </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="289" column="16"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga829e73d7027afc5f4edfcc0fe9789699" prot="public" static="no">
+        <type>struct <ref refid="structmtg__tra__shift" kindref="compound">mtg_tra_shift</ref></type>
+        <definition>typedef struct mtg_tra_shift mtg_tra_shift_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_tra_shift_t</name>
+        <briefdescription>
+<para>define the struct of the trajectory shift struct </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="317" column="17"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__mtg__interface_1ga25c32bd8756490eea1edb7e0f1c96992" prot="public" static="no">
+        <type>struct <ref refid="structmtg__tra__cmd__cfg" kindref="compound">mtg_tra_cmd_cfg</ref></type>
+        <definition>typedef struct mtg_tra_cmd_cfg mtg_tra_cmd_cfg_t</definition>
+        <argsstring></argsstring>
+        <name>mtg_tra_cmd_cfg_t</name>
+        <briefdescription>
+<para>define the struct of the trajectory predictor command </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="331" column="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="group__mtg__interface_1gacd3baeb9da67dc777941a76054e0b8b6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
         <definition>static uint32_t mtg_get_tra_control_status</definition>
@@ -2746,11 +3882,1689 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_mtg_drv.h" line="718" column="9" bodyfile="drivers/src/hpm_mtg_drv.c" bodystart="31" bodyend="41" declfile="drivers/inc/hpm_mtg_drv.h" declline="718" declcolumn="9"/>
       </memberdef>
-      </sectiondef>
+      <memberdef kind="function" id="group__mtg__interface_1gad83b21d107feaa7ae3dad9dc0809295b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t mtg_get_tra_control_status</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index)</argsstring>
+        <name>mtg_get_tra_control_status</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <briefdescription>
+<para>MTG get trajectory predictor control register value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory predictor index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>control</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>register value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="343" column="24" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="343" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1gafa67c12be0c5e353a839644e0c94ee95" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t mtg_get_tra_cmd_control_status</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index, uint8_t cmd_index)</argsstring>
+        <name>mtg_get_tra_cmd_control_status</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmd_index</declname>
+        </param>
+        <briefdescription>
+<para>MTG get trajectory predictor commond control register value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory predictor index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmd_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory predicotr command index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>control</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>register value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="356" column="24" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="356" bodyend="360"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga162738f469957a6aa7598dbf3a64e83d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtg_trig_tra_lock</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index)</argsstring>
+        <name>mtg_trig_tra_lock</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <briefdescription>
+<para>MTG trigger trajectory predictor lock current values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory predictor index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="367" column="20" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="367" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1gae2a678a89576a95aa13809ea4665173d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtg_clear_tra_lock</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index)</argsstring>
+        <name>mtg_clear_tra_lock</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <briefdescription>
+<para>MTG clear trajectory predictor lock status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory predictor index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="378" column="20" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="378" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga44f6f22cf05340a65970bb5684757cd2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t mtg_get_tra_rev_lock_value</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index)</argsstring>
+        <name>mtg_get_tra_rev_lock_value</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <briefdescription>
+<para>MTG get trajectory predictor revolution lock value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory predictor index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>trajectory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>predictor revolution value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="390" column="23" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="390" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1gae5eb6706609c2d39ad4c61429795b91c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t mtg_get_tra_pos_lock_value</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index)</argsstring>
+        <name>mtg_get_tra_pos_lock_value</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <briefdescription>
+<para>MTG get trajectory predictor postion lock value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory predictor index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>trajectory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>predictor postion value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="402" column="24" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="402" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga4bbf34b9493606259fbc16e34479d7ec" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t mtg_get_tra_vel_lock_value</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index)</argsstring>
+        <name>mtg_get_tra_vel_lock_value</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <briefdescription>
+<para>MTG get trajectory predictor velocity lock value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory predictor index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>trajectory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>predictor velocity value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="414" column="23" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="414" bodyend="418"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1gabf22b73a57eab77ca1f42aea6b18a594" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t mtg_get_tra_acc_lock_value</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index)</argsstring>
+        <name>mtg_get_tra_acc_lock_value</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <briefdescription>
+<para>MTG get trajectory predictor acceleration lock value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory predictor index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>trajectory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>predictor acceleration value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="426" column="23" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="426" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga6cb193a46c10939cdb4efe0588ad19c5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtg_filter_enable_bypass</definition>
+        <argsstring>(MTGV2_Type *base)</argsstring>
+        <name>mtg_filter_enable_bypass</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>MTG enable filter error bypass When difference between input and filter&apos;s pos result is bigger than the limit, the filter output will be bypass and input will be output to the filter&apos;s port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- bypass limit </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="440" column="20" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="440" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1gaeaccfe3f8c59e845f706a2af3a2c75fe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtg_filter_disable_bypass</definition>
+        <argsstring>(MTGV2_Type *base)</argsstring>
+        <name>mtg_filter_disable_bypass</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>MTG disable filter error bypass When difference between input and filter&apos;s pos result is bigger than the limit, the filter output will be bypass and input will be output to the filter&apos;s port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- bypass limit </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="453" column="20" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="453" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga0172c28c68b52bc0ac3613a826f85dea" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtg_filter_switch_filter_result</definition>
+        <argsstring>(MTGV2_Type *base)</argsstring>
+        <name>mtg_filter_switch_filter_result</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>MTG enable hardware switch from bypass status to filter status&apos;s limit When the difference between input and filter&apos;s pos result is smaller than the limit, the filter will use the filter&apos;s result inside of the input. The switch result can be defined by reading the switch status register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- filter params </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="467" column="20" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="467" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga3f707b333b996c46a80c603b86350948" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtg_filter_stop_auto_switch_filter_result</definition>
+        <argsstring>(MTGV2_Type *base)</argsstring>
+        <name>mtg_filter_stop_auto_switch_filter_result</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>MTG disable hardware switch from bypass status to filter status&apos;s limit When the difference between input and filter&apos;s pos result is smaller than the limit, the filter will use the filter&apos;s result inside of the input. The switch result can be defined by reading the switch status register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- filter params </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="480" column="20" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="480" bodyend="483"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga1d6c68da9d9a202ed204471ab768364f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool mtg_get_err_bypass_status</definition>
+        <argsstring>(MTGV2_Type *base)</argsstring>
+        <name>mtg_get_err_bypass_status</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>MTG setup hardware switch from bypass status to filter status&apos;s limit When the difference between input and filter&apos;s pos result is smaller than the limit, the filter will use the filter&apos;s result inside of the input. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- MTG base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>bypass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="492" column="20" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="492" bodyend="495"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga019b47a27dab80750385695ed0313268" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtg_set_time0_adjust_value</definition>
+        <argsstring>(MTGV2_Type *base, uint32_t value)</argsstring>
+        <name>mtg_set_time0_adjust_value</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>MTG set time0 adjust value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- adjust value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="502" column="20" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="502" bodyend="505"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1gacd5e1a1b32340a9cf382519eaa43fa5b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtg_set_time1_adjust_value</definition>
+        <argsstring>(MTGV2_Type *base, uint32_t value)</argsstring>
+        <name>mtg_set_time1_adjust_value</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>MTG set time1 adjust value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- adjust value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="512" column="20" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="512" bodyend="515"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga8d5c8c2f969d341212ccdbd57debb48a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtg_tra_set_shift</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t index, uint8_t jer_shift, uint8_t acc_shift, uint8_t vel_shift)</argsstring>
+        <name>mtg_tra_set_shift</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>jer_shift</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>acc_shift</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>vel_shift</declname>
+        </param>
+        <briefdescription>
+<para>MTG set time shift value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- tra index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">jer_shift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- jerk shift </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">acc_shift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- acceleration shift </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">vel_shift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- velocity shift </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="525" column="20" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="525" bodyend="531"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga7e686e30a37255e7340d31077e446a3a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtg_set_global_reset</definition>
+        <argsstring>(MTGV2_Type *base)</argsstring>
+        <name>mtg_set_global_reset</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>MTG global reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- MTG base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="537" column="20" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="537" bodyend="540"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1gaeecc7e848b08164cc5f9063748d6d6a1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtg_stop_global_reset</definition>
+        <argsstring>(MTGV2_Type *base)</argsstring>
+        <name>mtg_stop_global_reset</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>MTG stop global reset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="545" column="20" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="545" bodyend="548"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga453fca4c589a37adca0add0b30c10b64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtg_get_tra_lock_result</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index, mtg_lock_value_t *para)</argsstring>
+        <name>mtg_get_tra_lock_result</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mtg__interface_1ga073dcc519689ee1b3080c00da15162c6" kindref="member">mtg_lock_value_t</ref> *</type>
+          <declname>para</declname>
+        </param>
+        <briefdescription>
+<para>MTG predictor get lock result. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory predictor index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">para</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mtg_lock_value_t </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="556" column="6" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="43" bodyend="52" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="556" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga426affc1931c9fef8df98b5bd8bf77da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t mtg_setup_event</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t event_index, mtg_event_param_t *param)</argsstring>
+        <name>mtg_setup_event</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>event_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mtg__interface_1ga8cb887e5b847770c33a7026cd6af40eb" kindref="member">mtg_event_param_t</ref> *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+<para>MTG setup event params. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">event_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- event index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- event params </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">setup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="565" column="12" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="54" bodyend="107" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="565" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1gad43815f5ca1a4abcd9b92689f2a6ea76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t mtg_setup_tra_limit</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index, mtg_tra_limit_param_t *param)</argsstring>
+        <name>mtg_setup_tra_limit</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mtg__interface_1ga065b3ca3ee8d751c7a8c68cee97dd44f" kindref="member">mtg_tra_limit_param_t</ref> *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+<para>MTG setup trajectory limit params. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory limit params </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">setup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="574" column="12" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="109" bodyend="127" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="574" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga7bb1f3e50d02b2d7a7aa189070cd3aa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtg_setup_tra_software_pos_one_way_mode</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index, mtg_software_force_one_way_mode_t param)</argsstring>
+        <name>mtg_setup_tra_software_pos_one_way_mode</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mtg__interface_1ga62a56fb89818a93a3bb7a52c8d41717d" kindref="member">mtg_software_force_one_way_mode_t</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+<para>MTG setup trajectory software one_way mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- 0:force + , 1:force - </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">setup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="583" column="6" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="129" bodyend="136" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="583" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1gaf7d8dc01fab12716f1a5977aa87a01b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtg_setup_tra_hardware_pos_one_way_mode</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index, mtg_hardware_force_one_way_mode_t *param)</argsstring>
+        <name>mtg_setup_tra_hardware_pos_one_way_mode</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mtg__interface_1gacede51d7757fb9b448e4f8c05688cf71" kindref="member">mtg_hardware_force_one_way_mode_t</ref> *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+<para>MTG setup trajectory hardware one_way mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- 0:force + , 1:force - </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">setup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="592" column="6" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="138" bodyend="145" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="592" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1gafc5c312967d11e184cadad66015b2d7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtg_disable_tra_pos_one_way_mode</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index)</argsstring>
+        <name>mtg_disable_tra_pos_one_way_mode</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <briefdescription>
+<para>MTG disable trajectory postion one_way mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="599" column="6" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="147" bodyend="150" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="599" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1gaba8d720ea360fd9431062e6561bc6964" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtg_setup_tra_vel_one_way</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index, vel_one_way_mode_t mode, bool enable)</argsstring>
+        <name>mtg_setup_tra_vel_one_way</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mtg__interface_1ga1dbb02181b504c0f8fefab47def03716" kindref="member">vel_one_way_mode_t</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>MTG setup trajectory velocity one_way mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- 0:bigger_or_eq_zero , 1:smaller_or_eq_zero </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="607" column="6" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="152" bodyend="169" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="607" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga0b27429c5645c8b423257eee9659b985" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtg_setup_time</definition>
+        <argsstring>(MTGV2_Type *base, mtg_time_init_param_t *param)</argsstring>
+        <name>mtg_setup_time</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mtg__interface_1gaf644f1c7e70226f08deb70b5a5262241" kindref="member">mtg_time_init_param_t</ref> *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+<para>MTG setup time compensation module. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- time compensation params </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="621" column="6" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="244" bodyend="265" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="621" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga23e51f8877dac645299e3b279110d4c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtg_setup_filter</definition>
+        <argsstring>(MTGV2_Type *base, mtg_filter_param_t *param)</argsstring>
+        <name>mtg_setup_filter</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mtg__interface_1ga508b7a6d8072a97c93093ceb79ba537b" kindref="member">mtg_filter_param_t</ref> *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+<para>MTG setup filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- filter params </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="628" column="6" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="210" bodyend="242" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="628" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga139b02c70c9a3cc55eabfe2b23d7df11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtg_setup_timeout</definition>
+        <argsstring>(MTGV2_Type *base, mtg_timeout_param_t *param)</argsstring>
+        <name>mtg_setup_timeout</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mtg__interface_1ga958c967ec5a5f1b7435f0bb288957dcf" kindref="member">mtg_timeout_param_t</ref> *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+<para>MTG setup timeout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- timeout params </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="635" column="6" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="267" bodyend="275" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="635" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga2b63efd18bbc01bab02e8b1b1db996b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtg_setup_link_cfg</definition>
+        <argsstring>(MTGV2_Type *base, uint8_t tra_index, mtg_link_cfg_t link_cfg, mtg_tra_cmd_cfg_t *cmd_cfg)</argsstring>
+        <name>mtg_setup_link_cfg</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mtg__interface_1ga616d2b3d8663c1d6bbac7ed6a8f37fb1" kindref="member">mtg_link_cfg_t</ref></type>
+          <declname>link_cfg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mtg__interface_1ga25c32bd8756490eea1edb7e0f1c96992" kindref="member">mtg_tra_cmd_cfg_t</ref> *</type>
+          <declname>cmd_cfg</declname>
+        </param>
+        <briefdescription>
+<para>MTG link trigger source and trajectory command. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">link_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- link config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmd_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- command config </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="644" column="6" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="277" bodyend="308" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="644" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga06dd36f534f2ade791addd7be4427a7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mtg_soft_event_trigger</definition>
+        <argsstring>(MTGV2_Type *base)</argsstring>
+        <name>mtg_soft_event_trigger</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+<para>MTG software trigger trajectory command. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="650" column="6" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="310" bodyend="314" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="650" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1gae9d3a3563584fd81b1a6d718c7f9e6f1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t mtg_get_irq_status</definition>
+        <argsstring>(MTGV2_Type *ptr)</argsstring>
+        <name>mtg_get_irq_status</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Get the event irq status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the mtg base </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the event index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="663" column="24" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="663" bodyend="666"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga3d516bc3e371a0ef7bbe2837aaac03dc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtg_enable_irq</definition>
+        <argsstring>(MTGV2_Type *ptr, mtg_irq_enable_t irq)</argsstring>
+        <name>mtg_enable_irq</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__mtg__interface_1gae98ea60593e05a0e2b129bd6c6fb987c" kindref="member">mtg_irq_enable_t</ref></type>
+          <declname>irq</declname>
+        </param>
+        <briefdescription>
+<para>Enable irq. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the mtg base </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">irq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the irq mask </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="673" column="20" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="673" bodyend="676"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga38a40dff02a07df66181723f7242634b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mtg_clear_irq_status</definition>
+        <argsstring>(MTGV2_Type *ptr, uint32_t irq)</argsstring>
+        <name>mtg_clear_irq_status</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>irq</declname>
+        </param>
+        <briefdescription>
+<para>Clear the event irq status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the mtg base </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">irq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the irq index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="683" column="20" bodyfile="drivers/inc/hpm_mtgv2_drv.h" bodystart="683" bodyend="686"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1gaa3f5d415c2b66d6316358759ec90ce86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t mtg_calc_vel_preset</definition>
+        <argsstring>(MTGV2_Type *base, clock_name_t clock, uint8_t tra_index, float speed)</argsstring>
+        <name>mtg_calc_vel_preset</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="HPM5300_2HPM5301_2hpm__clock__drv_8h_1a24298d5cfc4913a8c6970632ef6bc19f" kindref="member">clock_name_t</ref></type>
+          <declname>clock</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+<para>calculate the vel preset </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">clock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG clock name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- speed in r/s </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="695" column="9" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="10" bodyend="18" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="695" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1ga4ec0e8169d4897cb10c3c8ec1163716b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t mtg_calc_acc_preset</definition>
+        <argsstring>(MTGV2_Type *base, clock_name_t clock, uint8_t tra_index, float acc)</argsstring>
+        <name>mtg_calc_acc_preset</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="HPM5300_2HPM5301_2hpm__clock__drv_8h_1a24298d5cfc4913a8c6970632ef6bc19f" kindref="member">clock_name_t</ref></type>
+          <declname>clock</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>acc</declname>
+        </param>
+        <briefdescription>
+<para>calculate the acc preset </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">clock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG clock name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">acc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- acc in r/s2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="704" column="9" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="20" bodyend="29" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="704" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="group__mtg__interface_1gafd36abc97bfa957ff113a65eccf30d93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t mtg_calc_jer_preset</definition>
+        <argsstring>(MTGV2_Type *base, clock_name_t clock, uint8_t tra_index, float jer)</argsstring>
+        <name>mtg_calc_jer_preset</name>
+        <param>
+          <type>MTGV2_Type *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type><ref refid="HPM5300_2HPM5301_2hpm__clock__drv_8h_1a24298d5cfc4913a8c6970632ef6bc19f" kindref="member">clock_name_t</ref></type>
+          <declname>clock</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>tra_index</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>jer</declname>
+        </param>
+        <briefdescription>
+<para>MTG link trigger source and trajectory command. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">clock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MTG clock name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tra_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- trajectory index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">jer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- jer in r/s3 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_mtgv2_drv.h" line="713" column="9" bodyfile="drivers/src/hpm_mtgv2_drv.c" bodystart="31" bodyend="41" declfile="drivers/inc/hpm_mtgv2_drv.h" declline="713" declcolumn="9"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
-<para>MTG driver APIs. </para>
+<para>MTG driver APIs  . </para>
     </briefdescription>
     <detaileddescription>
+<para>MTG driver APIs  .</para>
     </detaileddescription>
   </compounddef>
 </doxygen>

@@ -1,14 +1,25 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__i2s__common_8h" kind="file" language="C++">
     <compoundname>hpm_i2s_common.h</compoundname>
+    <includedby refid="hpm__i2s__over__spi_8h" local="yes">components/i2s_over_spi/hpm_i2s_over_spi.h</includedby>
     <includedby refid="hpm__dao__drv_8h" local="yes">drivers/inc/hpm_dao_drv.h</includedby>
     <includedby refid="hpm__i2s__drv_8h" local="yes">drivers/inc/hpm_i2s_drv.h</includedby>
     <includedby refid="hpm__dao__drv_8c" local="yes">drivers/src/hpm_dao_drv.c</includedby>
     <invincdepgraph>
+      <node id="3">
+        <label>components/i2s_over_spi/hpm_i2s_over_spi.c</label>
+        <link refid="hpm__i2s__over__spi_8c"/>
+      </node>
+      <node id="2">
+        <label>components/i2s_over_spi/hpm_i2s_over_spi.h</label>
+        <link refid="hpm__i2s__over__spi_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
       <node id="4">
-        <label>drivers/inc/hpm_i2s_drv.h</label>
-        <link refid="hpm__i2s__drv_8h"/>
+        <label>drivers/inc/hpm_dao_drv.h</label>
+        <link refid="hpm__dao__drv_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
@@ -19,230 +30,42 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>drivers/src/hpm_dao_drv.c</label>
-        <link refid="hpm__dao__drv_8c"/>
-      </node>
-      <node id="2">
-        <label>drivers/inc/hpm_dao_drv.h</label>
-        <link refid="hpm__dao__drv_8h"/>
-        <childnode refid="3" relation="include">
+      <node id="6">
+        <label>drivers/inc/hpm_i2s_drv.h</label>
+        <link refid="hpm__i2s__drv_8h"/>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="5">
+        <label>drivers/src/hpm_dao_drv.c</label>
+        <link refid="hpm__dao__drv_8c"/>
+      </node>
+      <node id="7">
         <label>drivers/src/hpm_i2s_drv.c</label>
         <link refid="hpm__i2s__drv_8c"/>
       </node>
     </invincdepgraph>
-      <sectiondef kind="define">
-      <memberdef kind="define" id="group__i2s__common__interface_1gabece0f02b44d51a07def8da708429ae9" prot="public" static="no">
-        <name>I2S_PROTOCOL_I2S_PHILIPS</name>
-        <initializer>(0U)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_common.h" line="18" column="9" bodyfile="drivers/inc/hpm_i2s_common.h" bodystart="18" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__i2s__common__interface_1ga591acf7217def0c129dd61b8582ecd56" prot="public" static="no">
-        <name>I2S_PROTOCOL_MSB_JUSTIFIED</name>
-        <initializer>(1U)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_common.h" line="19" column="9" bodyfile="drivers/inc/hpm_i2s_common.h" bodystart="19" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__i2s__common__interface_1ga871cd2325970e017fc676787caaabc04" prot="public" static="no">
-        <name>I2S_PROTOCOL_LEFT_JUSTIFIED</name>
-        <initializer>(1U)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_common.h" line="20" column="9" bodyfile="drivers/inc/hpm_i2s_common.h" bodystart="20" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__i2s__common__interface_1ga49431c09fef3e9e853671c33720b89cf" prot="public" static="no">
-        <name>I2S_PROTOCOL_LSB_JUSTIFIED</name>
-        <initializer>(2U)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_common.h" line="21" column="9" bodyfile="drivers/inc/hpm_i2s_common.h" bodystart="21" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__i2s__common__interface_1ga1ff2874bec118b14d8f5956f0a0ac91c" prot="public" static="no">
-        <name>I2S_PROTOCOL_RIGHT_JUSTIFIED</name>
-        <initializer>(2U)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_common.h" line="22" column="9" bodyfile="drivers/inc/hpm_i2s_common.h" bodystart="22" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__i2s__common__interface_1ga86d7996f9c01e74c88f6b37ce16029f7" prot="public" static="no">
-        <name>I2S_PROTOCOL_PCM</name>
-        <initializer>(3U)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_common.h" line="23" column="9" bodyfile="drivers/inc/hpm_i2s_common.h" bodystart="23" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__i2s__common__interface_1ga806d0a8a814a9ae14ea061e2adeb03a3" prot="public" static="no">
-        <name>I2S_CHANNEL_SLOT_MASK</name>
-        <param><defname>x</defname></param>
-        <initializer>(1U &lt;&lt; (x))</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_common.h" line="26" column="9" bodyfile="drivers/inc/hpm_i2s_common.h" bodystart="26" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__i2s__common__interface_1ga55b592670a7d3ff884c94cad81dc8509" prot="public" static="no">
-        <name>I2S_CFGR_DATASIZ</name>
-        <param><defname>x</defname></param>
-        <initializer>((x - 16) &gt;&gt; 3)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_common.h" line="28" column="9" bodyfile="drivers/inc/hpm_i2s_common.h" bodystart="28" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__i2s__common__interface_1gac9cc0d5e3fb00717e2bd24a7f53f21d1" prot="public" static="no">
-        <name>I2S_CFGR_CHSIZ</name>
-        <param><defname>x</defname></param>
-        <initializer>((x - 16) &gt;&gt; 4)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_common.h" line="30" column="9" bodyfile="drivers/inc/hpm_i2s_common.h" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="enum">
-      <memberdef kind="enum" id="group__i2s__common__interface_1gaa618c4d8c29ef4efe6f10c741fb1f47a" prot="public" static="no" strong="no">
-        <type></type>
-        <name>@73</name>
-        <enumvalue id="group__i2s__common__interface_1ggaa618c4d8c29ef4efe6f10c741fb1f47aa91f0ad2a34d60c2c5b16b8e66fae4269" prot="public">
-          <name>i2s_audio_depth_16_bits</name>
-          <initializer>= 16</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__i2s__common__interface_1ggaa618c4d8c29ef4efe6f10c741fb1f47aa678143f0b7800ea32f048253aaba7f15" prot="public">
-          <name>i2s_audio_depth_24_bits</name>
-          <initializer>= 24</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__i2s__common__interface_1ggaa618c4d8c29ef4efe6f10c741fb1f47aa6761aacf611e251321e8df4458454602" prot="public">
-          <name>i2s_audio_depth_32_bits</name>
-          <initializer>= 32</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>I2S audio depth. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_common.h" line="35" column="1" bodyfile="drivers/inc/hpm_i2s_common.h" bodystart="35" bodyend="39"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__i2s__common__interface_1gad63240694c6dc2a28c24bfc2db90ad7a" prot="public" static="no" strong="no">
-        <type></type>
-        <name>@74</name>
-        <enumvalue id="group__i2s__common__interface_1ggad63240694c6dc2a28c24bfc2db90ad7aae44fd5aeb910b7d5e9eea083a1560d43" prot="public">
-          <name>i2s_channel_length_16_bits</name>
-          <initializer>= 16</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__i2s__common__interface_1ggad63240694c6dc2a28c24bfc2db90ad7aa6efba209e07977686fcf25e1c5457e6c" prot="public">
-          <name>i2s_channel_length_32_bits</name>
-          <initializer>= 32</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>I2S channel length. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_common.h" line="44" column="1" bodyfile="drivers/inc/hpm_i2s_common.h" bodystart="44" bodyend="47"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__i2s__common__interface_1ga7859c0a3efa8b1c360f5c2376baf051e" prot="public" static="no" strong="no">
-        <type></type>
-        <name>@75</name>
-        <enumvalue id="group__i2s__common__interface_1gga7859c0a3efa8b1c360f5c2376baf051ea8cf666ec23f3a140febd49c1597b37dc" prot="public">
-          <name>i2s_mono_left</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__i2s__common__interface_1gga7859c0a3efa8b1c360f5c2376baf051ea756a9255c61782829eb14a646c56b3af" prot="public">
-          <name>i2s_mono_right</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__i2s__common__interface_1gga7859c0a3efa8b1c360f5c2376baf051ea187a344007b04c3c449fe0575786b4d1" prot="public">
-          <name>i2s_stereo</name>
-          <initializer>= 2</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>I2S stereo/mono channel. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_common.h" line="52" column="1" bodyfile="drivers/inc/hpm_i2s_common.h" bodystart="52" bodyend="56"/>
-      </memberdef>
-      </sectiondef>
+    <sectiondef kind="define">
+      <member refid="group__i2s__common__interface_1gabece0f02b44d51a07def8da708429ae9" kind="define"><name>I2S_PROTOCOL_I2S_PHILIPS</name></member>
+      <member refid="group__i2s__common__interface_1ga591acf7217def0c129dd61b8582ecd56" kind="define"><name>I2S_PROTOCOL_MSB_JUSTIFIED</name></member>
+      <member refid="group__i2s__common__interface_1ga871cd2325970e017fc676787caaabc04" kind="define"><name>I2S_PROTOCOL_LEFT_JUSTIFIED</name></member>
+      <member refid="group__i2s__common__interface_1ga49431c09fef3e9e853671c33720b89cf" kind="define"><name>I2S_PROTOCOL_LSB_JUSTIFIED</name></member>
+      <member refid="group__i2s__common__interface_1ga1ff2874bec118b14d8f5956f0a0ac91c" kind="define"><name>I2S_PROTOCOL_RIGHT_JUSTIFIED</name></member>
+      <member refid="group__i2s__common__interface_1ga86d7996f9c01e74c88f6b37ce16029f7" kind="define"><name>I2S_PROTOCOL_PCM</name></member>
+      <member refid="group__i2s__common__interface_1ga806d0a8a814a9ae14ea061e2adeb03a3" kind="define"><name>I2S_CHANNEL_SLOT_MASK</name></member>
+      <member refid="group__i2s__common__interface_1ga55b592670a7d3ff884c94cad81dc8509" kind="define"><name>I2S_CFGR_DATASIZ</name></member>
+      <member refid="group__i2s__common__interface_1gac9cc0d5e3fb00717e2bd24a7f53f21d1" kind="define"><name>I2S_CFGR_CHSIZ</name></member>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <member refid="group__i2s__common__interface_1gaa618c4d8c29ef4efe6f10c741fb1f47a" kind="enum"><name></name></member>
+      <member refid="group__i2s__common__interface_1gad63240694c6dc2a28c24bfc2db90ad7a" kind="enum"><name></name></member>
+      <member refid="group__i2s__common__interface_1ga7859c0a3efa8b1c360f5c2376baf051e" kind="enum"><name></name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -1,7 +1,9 @@
 var hpm__adc16__drv_8c =
 [
     [ "adc16_deinit", "group__adc16__interface.html#gabfcf94c8763a15417942cafe4bcdc9d4", null ],
+    [ "adc16_disable_pmt_queue", "group__adc16__interface.html#gaf9782587e6e1b973c27997351f106ea1", null ],
     [ "adc16_do_calibration", "hpm__adc16__drv_8c.html#aa6d12a87217a2106f4916d6a10d5e2aa", null ],
+    [ "adc16_enable_pmt_queue", "group__adc16__interface.html#gabc4c4caccdaa82fb7d314f12c0acbe2a", null ],
     [ "adc16_get_channel_default_config", "group__adc16__interface.html#ga7092dae99754cdaf414a1927bc660764", null ],
     [ "adc16_get_channel_threshold", "group__adc16__interface.html#gaac1af29523e4a8cdcd8b5d4d06905230", null ],
     [ "adc16_get_default_config", "group__adc16__interface.html#ga528d2bc629d60cf2a651302d7b0b89de", null ],

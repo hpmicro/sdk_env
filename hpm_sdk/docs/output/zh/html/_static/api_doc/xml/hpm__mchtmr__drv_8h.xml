@@ -1,14 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__mchtmr__drv_8h" kind="file" language="C++">
     <compoundname>hpm_mchtmr_drv.h</compoundname>
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
     <includes local="yes">hpm_mchtmr_regs.h</includes>
     <includedby refid="hpm__mchtmr__drv_8c" local="yes">drivers/src/hpm_mchtmr_drv.c</includedby>
     <incdepgraph>
-      <node id="4">
-        <label>stdbool.h</label>
-      </node>
       <node id="2">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -23,8 +20,22 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
+      <node id="1">
+        <label>drivers/inc/hpm_mchtmr_drv.h</label>
+        <link refid="hpm__mchtmr__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
       <node id="3">
         <label>assert.h</label>
+      </node>
+      <node id="8">
+        <label>hpm_mchtmr_regs.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
       </node>
       <node id="5">
         <label>stdint.h</label>
@@ -34,17 +45,6 @@
       </node>
       <node id="6">
         <label>string.h</label>
-      </node>
-      <node id="1">
-        <label>drivers/inc/hpm_mchtmr_drv.h</label>
-        <link refid="hpm__mchtmr__drv_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>hpm_mchtmr_regs.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -59,156 +59,12 @@
         <link refid="hpm__mchtmr__drv_8c"/>
       </node>
     </invincdepgraph>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__mchtmr__interface_1ga00da1957a46464845e3b577862f91ad3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>uint64_t</type>
-        <definition>static uint64_t mchtmr_get_count</definition>
-        <argsstring>(MCHTMR_Type *ptr)</argsstring>
-        <name>mchtmr_get_count</name>
-        <param>
-          <type><ref refid="structMCHTMR__Type" kindref="compound">MCHTMR_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>mchtmr get counter value </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCHTMR base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_mchtmr_drv.h" line="29" column="24" bodyfile="drivers/inc/hpm_mchtmr_drv.h" bodystart="29" bodyend="32"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mchtmr__interface_1gae82b25b2a53716f124294d866778e7e2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void mchtmr_set_compare_value</definition>
-        <argsstring>(MCHTMR_Type *ptr, uint64_t target)</argsstring>
-        <name>mchtmr_set_compare_value</name>
-        <param>
-          <type><ref refid="structMCHTMR__Type" kindref="compound">MCHTMR_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint64_t</type>
-          <declname>target</declname>
-        </param>
-        <briefdescription>
-<para>mchtmr set comparator value </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCHTMR base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">target</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>comparator target value </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_mchtmr_drv.h" line="40" column="20" bodyfile="drivers/inc/hpm_mchtmr_drv.h" bodystart="40" bodyend="43"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mchtmr__interface_1gaf83c5dfd7a6d72cd6330c38eaa4971a0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void mchtmr_delay</definition>
-        <argsstring>(MCHTMR_Type *ptr, uint64_t delay)</argsstring>
-        <name>mchtmr_delay</name>
-        <param>
-          <type><ref refid="structMCHTMR__Type" kindref="compound">MCHTMR_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint64_t</type>
-          <declname>delay</declname>
-        </param>
-        <briefdescription>
-<para>mchtmr set delay value </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCHTMR base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">delay</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>delay cycles </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_mchtmr_drv.h" line="51" column="20" bodyfile="drivers/inc/hpm_mchtmr_drv.h" bodystart="51" bodyend="54"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mchtmr__interface_1ga05a141cc507bde3e1177eb74913764f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void mchtmr_init_counter</definition>
-        <argsstring>(MCHTMR_Type *ptr, uint64_t v)</argsstring>
-        <name>mchtmr_init_counter</name>
-        <param>
-          <type><ref refid="structMCHTMR__Type" kindref="compound">MCHTMR_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint64_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-<para>initialize mchtmr counter </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCHTMR base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">v</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>value to be set </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_mchtmr_drv.h" line="62" column="6" bodyfile="drivers/src/hpm_mchtmr_drv.c" bodystart="10" bodyend="26" declfile="drivers/inc/hpm_mchtmr_drv.h" declline="62" declcolumn="6"/>
-      </memberdef>
-      </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__mchtmr__interface_1ga00da1957a46464845e3b577862f91ad3" kind="function"><name>mchtmr_get_count</name></member>
+      <member refid="group__mchtmr__interface_1gae82b25b2a53716f124294d866778e7e2" kind="function"><name>mchtmr_set_compare_value</name></member>
+      <member refid="group__mchtmr__interface_1gaf83c5dfd7a6d72cd6330c38eaa4971a0" kind="function"><name>mchtmr_delay</name></member>
+      <member refid="group__mchtmr__interface_1ga05a141cc507bde3e1177eb74913764f0" kind="function"><name>mchtmr_init_counter</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

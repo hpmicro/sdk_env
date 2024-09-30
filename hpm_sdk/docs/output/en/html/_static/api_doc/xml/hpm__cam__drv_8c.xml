@@ -1,16 +1,19 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__cam__drv_8c" kind="file" language="C++">
     <compoundname>hpm_cam_drv.c</compoundname>
     <includes refid="hpm__cam__drv_8h" local="yes">hpm_cam_drv.h</includes>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
-      <node id="1">
-        <label>drivers/src/hpm_cam_drv.c</label>
-        <link refid="hpm__cam__drv_8c"/>
-        <childnode refid="2" relation="include">
+      <node id="2">
+        <label>hpm_cam_drv.h</label>
+        <link refid="hpm__cam__drv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -27,14 +30,29 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>assert.h</label>
-      </node>
       <node id="9">
         <label>hpm_display_common.h</label>
         <link refid="hpm__display__common_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
+      </node>
+      <node id="1">
+        <label>drivers/src/hpm_cam_drv.c</label>
+        <link refid="hpm__cam__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="10">
+        <label>hpm_cam_regs.h</label>
+      </node>
+      <node id="11">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
       </node>
       <node id="6">
         <label>stdint.h</label>
@@ -42,29 +60,11 @@
       <node id="8">
         <label>stdlib.h</label>
       </node>
-      <node id="2">
-        <label>hpm_cam_drv.h</label>
-        <link refid="hpm__cam__drv_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
       <node id="7">
         <label>string.h</label>
       </node>
-      <node id="11">
-        <label>hpm_soc_feature.h</label>
-      </node>
-      <node id="10">
-        <label>hpm_cam_regs.h</label>
-      </node>
     </incdepgraph>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="hpm__cam__drv_8c_1aa8e23bf94e59c9b35f3a734507f3faf3" prot="public" static="no">
         <name>CAM_RX_FIFO_THRESHOLD</name>
         <initializer>(6U)</initializer>
@@ -76,60 +76,9 @@
         </inbodydescription>
         <location file="drivers/src/hpm_cam_drv.c" line="10" column="9" bodyfile="drivers/src/hpm_cam_drv.c" bodystart="10" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__cam__interface_1ga142b63f5aa4e908207a5ac82c30f9b28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void cam_get_default_config</definition>
-        <argsstring>(CAM_Type *ptr, cam_config_t *config, display_pixel_format_t pixel_format)</argsstring>
-        <name>cam_get_default_config</name>
-        <param>
-          <type><ref refid="structCAM__Type" kindref="compound">CAM_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structcam__config__t" kindref="compound">cam_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <param>
-          <type><ref refid="group__Display__common__interface_1ga3609d1a38c447089436d67c313916bf8" kindref="member">display_pixel_format_t</ref></type>
-          <declname>pixel_format</declname>
-        </param>
-        <briefdescription>
-<para>CAM get default config. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAM base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structcam__config__t" kindref="compound">cam_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">pixel_format</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>display_pixel_format_t </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_cam_drv.c" line="12" column="6" bodyfile="drivers/src/hpm_cam_drv.c" bodystart="12" bodyend="66"/>
-      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__cam__interface_1ga142b63f5aa4e908207a5ac82c30f9b28" kind="function"><name>cam_get_default_config</name></member>
       <memberdef kind="function" id="hpm__cam__drv_8c_1a8cc23a08e9e51968b7a2c0f1e44d166c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void cam_reset</definition>
@@ -147,144 +96,11 @@
         </inbodydescription>
         <location file="drivers/src/hpm_cam_drv.c" line="68" column="6" bodyfile="drivers/src/hpm_cam_drv.c" bodystart="68" bodyend="76"/>
       </memberdef>
-      <memberdef kind="function" id="group__cam__interface_1ga23391c2b4731928c80280408e0d05195" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t cam_init</definition>
-        <argsstring>(CAM_Type *ptr, cam_config_t *config)</argsstring>
-        <name>cam_init</name>
-        <param>
-          <type><ref refid="structCAM__Type" kindref="compound">CAM_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structcam__config__t" kindref="compound">cam_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>CAM init. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAM base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structcam__config__t" kindref="compound">cam_config_t</ref></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>hpm_stat_t</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>status_invalid_argument or status_success </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_cam_drv.c" line="78" column="12" bodyfile="drivers/src/hpm_cam_drv.c" bodystart="78" bodyend="146"/>
-      </memberdef>
-      <memberdef kind="function" id="group__cam__interface_1gadbf25b323989cb0b5e6051dfb0d90156" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void cam_stop</definition>
-        <argsstring>(CAM_Type *ptr)</argsstring>
-        <name>cam_stop</name>
-        <param>
-          <type><ref refid="structCAM__Type" kindref="compound">CAM_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>CAM stop. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>this API will stop CAM immediately no matter there&apos;s any frame is being processed or not</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAM base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_cam_drv.c" line="148" column="6" bodyfile="drivers/src/hpm_cam_drv.c" bodystart="148" bodyend="151"/>
-      </memberdef>
-      <memberdef kind="function" id="group__cam__interface_1ga3c2529c07f6eff54b8d1ecfa525ca2eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void cam_start</definition>
-        <argsstring>(CAM_Type *ptr)</argsstring>
-        <name>cam_start</name>
-        <param>
-          <type><ref refid="structCAM__Type" kindref="compound">CAM_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>CAM start. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAM base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_cam_drv.c" line="153" column="6" bodyfile="drivers/src/hpm_cam_drv.c" bodystart="153" bodyend="156"/>
-      </memberdef>
-      <memberdef kind="function" id="group__cam__interface_1ga9c20351a733e7d705e4a1636c3e78293" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void cam_stop_safely</definition>
-        <argsstring>(CAM_Type *ptr)</argsstring>
-        <name>cam_stop_safely</name>
-        <param>
-          <type><ref refid="structCAM__Type" kindref="compound">CAM_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>CAM safety stop. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>this API will wait for end-of-frame event before stopping CAM</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAM base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_cam_drv.c" line="158" column="6" bodyfile="drivers/src/hpm_cam_drv.c" bodystart="158" bodyend="167"/>
-      </memberdef>
-      </sectiondef>
+      <member refid="group__cam__interface_1ga23391c2b4731928c80280408e0d05195" kind="function"><name>cam_init</name></member>
+      <member refid="group__cam__interface_1gadbf25b323989cb0b5e6051dfb0d90156" kind="function"><name>cam_stop</name></member>
+      <member refid="group__cam__interface_1ga3c2529c07f6eff54b8d1ecfa525ca2eb" kind="function"><name>cam_start</name></member>
+      <member refid="group__cam__interface_1ga9c20351a733e7d705e4a1636c3e78293" kind="function"><name>cam_stop_safely</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -439,7 +255,7 @@
 <codeline lineno="147"><highlight class="normal"></highlight></codeline>
 <codeline lineno="148"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__cam__interface_1gadbf25b323989cb0b5e6051dfb0d90156" kindref="member">cam_stop</ref>(<ref refid="structCAM__Type" kindref="compound">CAM_Type</ref><sp/>*ptr)</highlight></codeline>
 <codeline lineno="149"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structCAM__Type_1aadfe3dcd968d60f5d101ae7d5641bde8" kindref="member">CR18</ref><sp/>&amp;=<sp/>~<ref refid="HPM6700_2ip_2hpm__cam__regs_8h_1ae4588d54d6a093e4b16164ea6e3fb092" kindref="member">CAM_CR18_CAM_ENABLE_MASK</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structCAM__Type_1aadfe3dcd968d60f5d101ae7d5641bde8" kindref="member">CR18</ref><sp/>&amp;=<sp/>~CAM_CR18_CAM_ENABLE_MASK;</highlight></codeline>
 <codeline lineno="151"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="152"><highlight class="normal"></highlight></codeline>
 <codeline lineno="153"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__cam__interface_1ga3c2529c07f6eff54b8d1ecfa525ca2eb" kindref="member">cam_start</ref>(<ref refid="structCAM__Type" kindref="compound">CAM_Type</ref><sp/>*ptr)</highlight></codeline>

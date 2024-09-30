@@ -1,9 +1,20 @@
 var searchData=
 [
-  ['uart_5ffifo_5fctrl_5ft_62385',['uart_fifo_ctrl_t',['../structuart__fifo__ctrl__t.html',1,'']]],
-  ['uart_5fmodem_5fconfig_62386',['uart_modem_config',['../structuart__modem__config.html',1,'']]],
-  ['uart_5ftrig_5fconfig_5ft_62387',['uart_trig_config_t',['../structuart__trig__config__t.html',1,'']]],
-  ['uart_5ftype_62388',['UART_Type',['../structUART__Type.html',1,'']]],
-  ['usb_5fendpoint_5fconfig_5ft_62389',['usb_endpoint_config_t',['../structusb__endpoint__config__t.html',1,'']]],
-  ['usb_5ftype_62390',['USB_Type',['../structUSB__Type.html',1,'']]]
+  ['tamp_5ftype_0',['TAMP_Type',['../structTAMP__Type.html',1,'']]],
+  ['tamper_5fch_5fconfig_5ft_1',['tamper_ch_config_t',['../structtamper__ch__config__t.html',1,'']]],
+  ['touch_5fpoint_5ft_2',['touch_point_t',['../structtouch__point__t.html',1,'']]],
+  ['trgm_5finput_5ffilter_3',['trgm_input_filter',['../structtrgm__input__filter.html',1,'']]],
+  ['trgm_5foutput_4',['trgm_output',['../structtrgm__output.html',1,'']]],
+  ['trgm_5ftype_5',['TRGM_Type',['../structTRGM__Type.html',1,'']]],
+  ['tsns_5ftype_6',['TSNS_Type',['../structTSNS__Type.html',1,'']]],
+  ['tsw_5fcbs_5fconfig_5ft_7',['tsw_cbs_config_t',['../structtsw__cbs__config__t.html',1,'']]],
+  ['tsw_5fdma_5fconfig_5ft_8',['tsw_dma_config_t',['../structtsw__dma__config__t.html',1,'']]],
+  ['tsw_5fframe_5ft_9',['tsw_frame_t',['../structtsw__frame__t.html',1,'']]],
+  ['tsw_5fphy_5fstatus_5ft_10',['tsw_phy_status_t',['../structtsw__phy__status__t.html',1,'']]],
+  ['tsw_5fshap_5ftas_5flistlen_5ft_11',['tsw_shap_tas_listlen_t',['../structtsw__shap__tas__listlen__t.html',1,'']]],
+  ['tsw_5ftas_5fconfig_5ft_12',['tsw_tas_config_t',['../structtsw__tas__config__t.html',1,'']]],
+  ['tsw_5ftas_5fcontrollist_5fentry_5ft_13',['tsw_tas_controllist_entry_t',['../structtsw__tas__controllist__entry__t.html',1,'']]],
+  ['tsw_5ftsf_5ft_14',['tsw_tsf_t',['../structtsw__tsf__t.html',1,'']]],
+  ['tsw_5ftype_15',['TSW_Type',['../structTSW__Type.html',1,'']]],
+  ['tx_5fhdr_5fdesc_5ft_16',['tx_hdr_desc_t',['../structtx__hdr__desc__t.html',1,'']]]
 ];

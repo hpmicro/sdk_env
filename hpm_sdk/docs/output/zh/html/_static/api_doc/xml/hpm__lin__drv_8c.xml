@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__lin__drv_8c" kind="file" language="C++">
     <compoundname>hpm_lin_drv.c</compoundname>
     <includes refid="hpm__lin__drv_8h" local="yes">hpm_lin_drv.h</includes>
     <incdepgraph>
-      <node id="6">
-        <label>stdbool.h</label>
-      </node>
       <node id="4">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -21,28 +18,6 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>assert.h</label>
-      </node>
-      <node id="7">
-        <label>stdint.h</label>
-      </node>
-      <node id="9">
-        <label>stdlib.h</label>
-      </node>
-      <node id="10">
-        <label>hpm_lin_regs.h</label>
-        <link refid="hpm__lin__regs_8h"/>
-      </node>
-      <node id="1">
-        <label>drivers/src/hpm_lin_drv.c</label>
-        <link refid="hpm__lin__drv_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>string.h</label>
-      </node>
       <node id="2">
         <label>hpm_lin_drv.h</label>
         <link refid="hpm__lin__drv_8h"/>
@@ -55,14 +30,39 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>math.h</label>
+      <node id="1">
+        <label>drivers/src/hpm_lin_drv.c</label>
+        <link refid="hpm__lin__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>hpm_lin_regs.h</label>
+        <link refid="hpm__lin__regs_8h"/>
+      </node>
+      <node id="5">
+        <label>assert.h</label>
       </node>
       <node id="11">
         <label>hpm_soc_feature.h</label>
       </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="9">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
     </incdepgraph>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="hpm__lin__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" prot="public" static="no">
         <name>HPM_LIN_DRV_RETRY_COUNT</name>
         <initializer>(50000U)</initializer>
@@ -74,97 +74,10 @@
         </inbodydescription>
         <location file="drivers/src/hpm_lin_drv.c" line="10" column="9" bodyfile="drivers/src/hpm_lin_drv.c" bodystart="10" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__lin__interface_1gafc4525894d3becd2658ba800acc2e370" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t lin_master_configure_timing</definition>
-        <argsstring>(LIN_Type *ptr, lin_timing_t *timing)</argsstring>
-        <name>lin_master_configure_timing</name>
-        <param>
-          <type><ref refid="structLIN__Type" kindref="compound">LIN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__timing__t" kindref="compound">lin_timing_t</ref> *</type>
-          <declname>timing</declname>
-        </param>
-        <briefdescription>
-<para>lin configure timing on master mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>timing</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__timing__t" kindref="compound">lin_timing_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>hpm_stat_t </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>set master mode</para>
-<para>src =20MHz baudrate = 19.2KHz</para>
-<para>bt_div = 260, scaler = 1, bt_mul = 0</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lin_drv.c" line="12" column="12" bodyfile="drivers/src/hpm_lin_drv.c" bodystart="12" bodyend="41"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lin__interface_1ga89ac476a45e2ffb5ef8aa80169e31e16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t lin_slave_configure_timing</definition>
-        <argsstring>(LIN_Type *ptr, uint32_t src_freq_in_hz)</argsstring>
-        <name>lin_slave_configure_timing</name>
-        <param>
-          <type><ref refid="structLIN__Type" kindref="compound">LIN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>src_freq_in_hz</declname>
-        </param>
-        <briefdescription>
-<para>lin config timing on slave mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>src_freq_in_hz</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>source frequency </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>hpm_stat_t </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>set slave mode</para>
-<para>src = 20MHz, prescaler = 1, bt_div = 250</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lin_drv.c" line="43" column="12" bodyfile="drivers/src/hpm_lin_drv.c" bodystart="43" bodyend="68"/>
-      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__lin__interface_1gafc4525894d3becd2658ba800acc2e370" kind="function"><name>lin_master_configure_timing</name></member>
+      <member refid="group__lin__interface_1ga89ac476a45e2ffb5ef8aa80169e31e16" kind="function"><name>lin_slave_configure_timing</name></member>
       <memberdef kind="function" id="hpm__lin__drv_8c_1a77e62603cb9332ee1453641a5a0583f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
         <definition>uint8_t lin_get_data_length_from_id</definition>
@@ -182,319 +95,14 @@
         </inbodydescription>
         <location file="drivers/src/hpm_lin_drv.c" line="70" column="9" bodyfile="drivers/src/hpm_lin_drv.c" bodystart="70" bodyend="84"/>
       </memberdef>
-      <memberdef kind="function" id="group__lin__interface_1ga5ef61b16bc868f1165d5df065266ed50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint8_t</type>
-        <definition>uint8_t lin_get_data_length</definition>
-        <argsstring>(LIN_Type *ptr)</argsstring>
-        <name>lin_get_data_length</name>
-        <param>
-          <type><ref refid="structLIN__Type" kindref="compound">LIN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>get data length </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>data length is determined by DATA_LEN register and ID</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>uint8_t data length </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lin_drv.c" line="86" column="9" bodyfile="drivers/src/hpm_lin_drv.c" bodystart="86" bodyend="95"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lin__interface_1gaee76f634441142dc1933e2a20314798e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lin_master_transfer</definition>
-        <argsstring>(LIN_Type *ptr, lin_trans_config_t *config)</argsstring>
-        <name>lin_master_transfer</name>
-        <param>
-          <type><ref refid="structLIN__Type" kindref="compound">LIN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>lin transfer on master mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>sent or receive</para>
-<para>start</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lin_drv.c" line="97" column="6" bodyfile="drivers/src/hpm_lin_drv.c" bodystart="97" bodyend="125"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lin__interface_1ga667ba2ef1ffb7178f73869a4ce83e490" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t lin_master_sent</definition>
-        <argsstring>(LIN_Type *ptr, lin_trans_config_t *config)</argsstring>
-        <name>lin_master_sent</name>
-        <param>
-          <type><ref refid="structLIN__Type" kindref="compound">LIN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>lin send data on master mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_timeout </para>
-</simplesect>
-<simplesect kind="return"><para>status_success </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>lin active</para>
-<para>load data into registers</para>
-<para>start</para>
-<para>lin complete</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lin_drv.c" line="127" column="12" bodyfile="drivers/src/hpm_lin_drv.c" bodystart="127" bodyend="177"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lin__interface_1gad90e9b5cb8385e6b0971e1e122215465" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t lin_master_receive</definition>
-        <argsstring>(LIN_Type *ptr, lin_trans_config_t *config)</argsstring>
-        <name>lin_master_receive</name>
-        <param>
-          <type><ref refid="structLIN__Type" kindref="compound">LIN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>lin receive data on master mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_timeout </para>
-</simplesect>
-<simplesect kind="return"><para>status_success </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>lin active</para>
-<para>receive</para>
-<para>start</para>
-<para>waiting for receive complete</para>
-<para>load register data into buffer</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lin_drv.c" line="179" column="12" bodyfile="drivers/src/hpm_lin_drv.c" bodystart="179" bodyend="230"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lin__interface_1ga4b6d7ed6df0c3ef6f0f37144cb786b50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lin_slave_transfer</definition>
-        <argsstring>(LIN_Type *ptr, lin_trans_config_t *config)</argsstring>
-        <name>lin_slave_transfer</name>
-        <param>
-          <type><ref refid="structLIN__Type" kindref="compound">LIN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>lin transfer on slave mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>call this function after lin generate data request interrupt</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>transmit or receive</para>
-<para>data ack</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lin_drv.c" line="232" column="6" bodyfile="drivers/src/hpm_lin_drv.c" bodystart="232" bodyend="255"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lin__interface_1gaf344ab4f3d2cfc04f3b1c0a4885ceb37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t lin_slave_sent</definition>
-        <argsstring>(LIN_Type *ptr, lin_trans_config_t *config)</argsstring>
-        <name>lin_slave_sent</name>
-        <param>
-          <type><ref refid="structLIN__Type" kindref="compound">LIN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>lin send data on slave mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_timeout </para>
-</simplesect>
-<simplesect kind="return"><para>status_success </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>lin data_req</para>
-<para>lin active?</para>
-<para>transmit</para>
-<para>data ack</para>
-<para>lin complete</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lin_drv.c" line="257" column="12" bodyfile="drivers/src/hpm_lin_drv.c" bodystart="257" bodyend="306"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lin__interface_1gace26a93afd541d3de7c7491b65cc0585" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t lin_slave_receive</definition>
-        <argsstring>(LIN_Type *ptr, lin_trans_config_t *config)</argsstring>
-        <name>lin_slave_receive</name>
-        <param>
-          <type><ref refid="structLIN__Type" kindref="compound">LIN_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>lin receive data on slave mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_timeout </para>
-</simplesect>
-<simplesect kind="return"><para>status_success </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>lin data_req</para>
-<para>receive</para>
-<para>data ack</para>
-<para>lin complete</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lin_drv.c" line="308" column="12" bodyfile="drivers/src/hpm_lin_drv.c" bodystart="308" bodyend="357"/>
-      </memberdef>
-      </sectiondef>
+      <member refid="group__lin__interface_1ga5ef61b16bc868f1165d5df065266ed50" kind="function"><name>lin_get_data_length</name></member>
+      <member refid="group__lin__interface_1gaee76f634441142dc1933e2a20314798e" kind="function"><name>lin_master_transfer</name></member>
+      <member refid="group__lin__interface_1ga667ba2ef1ffb7178f73869a4ce83e490" kind="function"><name>lin_master_sent</name></member>
+      <member refid="group__lin__interface_1gad90e9b5cb8385e6b0971e1e122215465" kind="function"><name>lin_master_receive</name></member>
+      <member refid="group__lin__interface_1ga4b6d7ed6df0c3ef6f0f37144cb786b50" kind="function"><name>lin_slave_transfer</name></member>
+      <member refid="group__lin__interface_1gaf344ab4f3d2cfc04f3b1c0a4885ceb37" kind="function"><name>lin_slave_sent</name></member>
+      <member refid="group__lin__interface_1gace26a93afd541d3de7c7491b65cc0585" kind="function"><name>lin_slave_receive</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -521,7 +129,7 @@
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>|=<sp/><ref refid="hpm__lin__regs_8h_1a9dbaba0aa2790c8e4021585d501ff065" kindref="member">LIN_TV_MASTER_MODE_MASK</ref>;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>|=<sp/><ref refid="hpm__lin__regs_8h_1a763ec0f3bc72d809369a30fbe2b10331" kindref="member">LIN_TV_INITIAL_MODE_MASK</ref>;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>&amp;=<sp/>~<ref refid="hpm__lin__regs_8h_1a763ec0f3bc72d809369a30fbe2b10331" kindref="member">LIN_TV_INITIAL_MODE_MASK</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>&amp;=<sp/>~LIN_TV_INITIAL_MODE_MASK;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>bt_mul<sp/>=<sp/>20000U<sp/>/<sp/>timing-&gt;<ref refid="structlin__timing__t_1ab84d7999aebe0d359913012348b0ef86" kindref="member">baudrate</ref><sp/>-<sp/>1U;</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>prescaler<sp/>=<sp/>log((timing-&gt;<ref refid="structlin__timing__t_1ab30ce06c5df03213ac0c7225f4624f7a" kindref="member">src_freq_in_hz</ref><sp/>/<sp/>((bt_mul<sp/>+<sp/>1U)<sp/>*<sp/>timing-&gt;<ref refid="structlin__timing__t_1ab84d7999aebe0d359913012348b0ef86" kindref="member">baudrate</ref><sp/>*<sp/>200U)))<sp/>/<sp/>log(2U)<sp/>-<sp/>1U;</highlight></codeline>
@@ -546,9 +154,9 @@
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>prescaler;</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>bt_div;</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>&amp;=<sp/>~<ref refid="hpm__lin__regs_8h_1a9dbaba0aa2790c8e4021585d501ff065" kindref="member">LIN_TV_MASTER_MODE_MASK</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>&amp;=<sp/>~LIN_TV_MASTER_MODE_MASK;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>|=<sp/><ref refid="hpm__lin__regs_8h_1a763ec0f3bc72d809369a30fbe2b10331" kindref="member">LIN_TV_INITIAL_MODE_MASK</ref>;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>&amp;=<sp/>~<ref refid="hpm__lin__regs_8h_1a763ec0f3bc72d809369a30fbe2b10331" kindref="member">LIN_TV_INITIAL_MODE_MASK</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>&amp;=<sp/>~LIN_TV_INITIAL_MODE_MASK;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>prescaler<sp/>=<sp/>log((src_freq_in_hz<sp/>/<sp/>(20000U<sp/>*<sp/>200U)))<sp/>/<sp/>log(2U)<sp/>-<sp/>1U;</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>bt_div<sp/>=<sp/>src_freq_in_hz<sp/>/<sp/>((1U<sp/>&lt;&lt;<sp/>(prescaler<sp/>+<sp/>1U))<sp/>*<sp/>20000U);</highlight></codeline>
@@ -567,13 +175,13 @@
 <codeline lineno="70"><highlight class="normal">uint8_t<sp/><ref refid="hpm__lin__drv_8c_1a77e62603cb9332ee1453641a5a0583f9" kindref="member">lin_get_data_length_from_id</ref>(uint8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="71"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="hpm__lin__drv_8h_1a3cb969fcf81ed46d50c6940489b883e0" kindref="member">LIN_ID_DATA_LEN_GET</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1gga102a6541fa3e7b9cd9ce29c211186319a0cc8305eb1108e4fa09975c8d25f8f76" kindref="member">id_data_length_2bytes</ref>:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__lin__interface_1gga102a6541fa3e7b9cd9ce29c211186319a0cc8305eb1108e4fa09975c8d25f8f76" kindref="member">id_data_length_2bytes</ref>:</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1gga102a6541fa3e7b9cd9ce29c211186319ada394e93bdf4e5095888c66d78b31458" kindref="member">id_data_length_2bytes_2</ref>:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__lin__interface_1gga102a6541fa3e7b9cd9ce29c211186319ada394e93bdf4e5095888c66d78b31458" kindref="member">id_data_length_2bytes_2</ref>:</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1gga102a6541fa3e7b9cd9ce29c211186319a58ab463b755281d09e75243d8da4408c" kindref="member">id_data_length_4bytes</ref>:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__lin__interface_1gga102a6541fa3e7b9cd9ce29c211186319a58ab463b755281d09e75243d8da4408c" kindref="member">id_data_length_4bytes</ref>:</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>4;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1gga102a6541fa3e7b9cd9ce29c211186319aaf1f845c1b353becbaffca2986aa3e5f" kindref="member">id_data_length_8bytes</ref>:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__lin__interface_1gga102a6541fa3e7b9cd9ce29c211186319aaf1f845c1b353becbaffca2986aa3e5f" kindref="member">id_data_length_8bytes</ref>:</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>8;</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>8;</highlight></codeline>

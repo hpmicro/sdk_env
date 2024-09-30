@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__mipi__dsi__phy__drv_8c" kind="file" language="C++">
     <compoundname>hpm_mipi_dsi_phy_drv.c</compoundname>
     <includes refid="hpm__mipi__dsi__phy__drv_8h" local="yes">hpm_mipi_dsi_phy_drv.h</includes>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
       <node id="3">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -21,20 +18,15 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>assert.h</label>
-      </node>
-      <node id="6">
-        <label>stdint.h</label>
-      </node>
-      <node id="8">
-        <label>stdlib.h</label>
-      </node>
-      <node id="7">
-        <label>string.h</label>
-      </node>
-      <node id="9">
-        <label>hpm_soc.h</label>
+      <node id="2">
+        <label>hpm_mipi_dsi_phy_drv.h</label>
+        <link refid="hpm__mipi__dsi__phy__drv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>drivers/src/hpm_mipi_dsi_phy_drv.c</label>
@@ -46,19 +38,27 @@
         <label>hpm_mipi_dsi_phy_regs.h</label>
         <link refid="hpm__mipi__dsi__phy__regs_8h"/>
       </node>
-      <node id="2">
-        <label>hpm_mipi_dsi_phy_drv.h</label>
-        <link refid="hpm__mipi__dsi__phy__drv_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_soc.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
       </node>
     </incdepgraph>
     <innerclass refid="structmipi__phy__clk__reg" prot="public">mipi_phy_clk_reg</innerclass>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="hpm__mipi__dsi__phy__drv_8c_1ad86fdbd1a13c53cf4b05019e908d38f7" prot="public" static="no">
         <name>MIPI_DSI_PHY_RATE_MAX</name>
         <initializer>4</initializer>
@@ -103,8 +103,8 @@
         </inbodydescription>
         <location file="drivers/src/hpm_mipi_dsi_phy_drv.c" line="18" column="9" bodyfile="drivers/src/hpm_mipi_dsi_phy_drv.c" bodystart="18" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
+    </sectiondef>
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="hpm__mipi__dsi__phy__drv_8c_1acb66fc21b7644e2fa1ac2ac016072ded" prot="public" static="no">
         <type>struct <ref refid="structmipi__phy__clk__reg" kindref="compound">mipi_phy_clk_reg</ref></type>
         <definition>typedef struct mipi_phy_clk_reg mipi_phy_clk_reg_t</definition>
@@ -118,8 +118,8 @@
         </inbodydescription>
         <location file="drivers/src/hpm_mipi_dsi_phy_drv.c" line="13" column="20"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="hpm__mipi__dsi__phy__drv_8c_1a3af7ab3c2e22c5f40c9608c03a490b48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
         <definition>hpm_stat_t mipi_pll_get_cfg</definition>
@@ -162,47 +162,8 @@
         </inbodydescription>
         <location file="drivers/src/hpm_mipi_dsi_phy_drv.c" line="48" column="13" bodyfile="drivers/src/hpm_mipi_dsi_phy_drv.c" bodystart="48" bodyend="65"/>
       </memberdef>
-      <memberdef kind="function" id="group__mipi__dsi__phy__interface_1gac867383f32e79105984fd96e9dd6449a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void mipi_dsi_phy_init</definition>
-        <argsstring>(MIPI_DSI_PHY_Type *ptr, mipi_dsi_phy_config_t *cfg)</argsstring>
-        <name>mipi_dsi_phy_init</name>
-        <param>
-          <type><ref refid="structMIPI__DSI__PHY__Type" kindref="compound">MIPI_DSI_PHY_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mipi__dsi__phy__interface_1ga080be44afb68d99b40da7b0317ce8e45" kindref="member">mipi_dsi_phy_config_t</ref> *</type>
-          <declname>cfg</declname>
-        </param>
-        <briefdescription>
-<para>MIPI_DSI_PHY init. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MIPI_DSI_PHY base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>cfg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>config of MIPI_DSI_PHY </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mipi_dsi_phy_drv.c" line="67" column="6" bodyfile="drivers/src/hpm_mipi_dsi_phy_drv.c" bodystart="67" bodyend="120"/>
-      </memberdef>
-      </sectiondef>
+      <member refid="group__mipi__dsi__phy__interface_1gac867383f32e79105984fd96e9dd6449a" kind="function"><name>mipi_dsi_phy_init</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -303,16 +264,16 @@
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
 <codeline lineno="94"><highlight class="normal"></highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>dlane0_para2;</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ths_prepare_ps<sp/>=<sp/>(40<sp/>+<sp/>85)<sp/>/<sp/>2<sp/>*<sp/>1000<sp/>+<sp/>(4<sp/>+<sp/>6)<sp/>/<sp/>2<sp/>*<sp/>ui_ps;<sp/></highlight><highlight class="comment">/*<sp/>min:<sp/>40ns<sp/>+<sp/>4<sp/>*<sp/>UI,<sp/>max:<sp/>85ns<sp/>+<sp/>6<sp/>*<sp/>UI<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ths_prepare_ps<sp/>=<sp/>40<sp/>*<sp/>1000<sp/>+<sp/>4<sp/>*<sp/>ui_ps;<sp/></highlight><highlight class="comment">/*<sp/>min:<sp/>40ns<sp/>+<sp/>4<sp/>*<sp/>UI,<sp/>max:<sp/>85ns<sp/>+<sp/>6<sp/>*<sp/>UI<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ths_zero_ps<sp/>=<sp/>145<sp/>*<sp/>1000<sp/>+<sp/>10<sp/>*<sp/>ui_ps<sp/>-<sp/>ths_prepare_ps;<sp/></highlight><highlight class="comment">/*<sp/>min:<sp/>145ns<sp/>+<sp/>10<sp/>*<sp/>UI<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ths_trail_ps0<sp/>=<sp/>8<sp/>*<sp/>ui_ps;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ths_trail_ps1<sp/>=<sp/>60<sp/>*<sp/>1000<sp/>*<sp/>4<sp/>*<sp/>ui_ps;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ths_trail_ps1<sp/>=<sp/>60<sp/>*<sp/>1000<sp/>+<sp/>4<sp/>*<sp/>ui_ps;</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ths_trail_ps<sp/>=<sp/>ths_trail_ps0<sp/>&gt;<sp/>ths_trail_ps1<sp/>?<sp/>ths_trail_ps0<sp/>:<sp/>ths_trail_ps1;</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"></highlight></codeline>
 <codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>dlane0_para2<sp/>=<sp/><ref refid="hpm__mipi__dsi__phy__regs_8h_1aa879195abbafa7ca687c7be23b59db1a" kindref="member">MIPI_DSI_PHY_DLANE0_PARA2_T_HSPREPARE_D0_SET</ref>(<ref refid="group__common__interface_1gadb783055135de11cb78f05d7ad02e8b7" kindref="member">HPM_DIV_ROUND_UP</ref>(ths_prepare_ps,<sp/>byteclk_period_ps)<sp/>-<sp/>1)<sp/>|</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__mipi__dsi__phy__regs_8h_1abd36083b54617cee5f40fb04c2904b03" kindref="member">MIPI_DSI_PHY_DLANE0_PARA2_T_HSZERO_D0_SET</ref>(<ref refid="group__common__interface_1gadb783055135de11cb78f05d7ad02e8b7" kindref="member">HPM_DIV_ROUND_UP</ref>(ths_zero_ps,<sp/>byteclk_period_ps)<sp/>-<sp/>1)<sp/>|</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__mipi__dsi__phy__regs_8h_1a517a4009073c96e6915c3ae0bb4b7e80" kindref="member">MIPI_DSI_PHY_DLANE0_PARA2_T_HSTRAIL_D0_SET</ref>(<ref refid="group__common__interface_1gadb783055135de11cb78f05d7ad02e8b7" kindref="member">HPM_DIV_ROUND_UP</ref>(ths_trail_ps,<sp/>byteclk_period_ps)<sp/>-<sp/>1)<sp/>|</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__mipi__dsi__phy__regs_8h_1a6b50110e5d2ad3be66e911af933b3018" kindref="member">MIPI_DSI_PHY_DLANE0_PARA2_T_HSEXIT_D0_SET</ref>(<ref refid="group__common__interface_1gadb783055135de11cb78f05d7ad02e8b7" kindref="member">HPM_DIV_ROUND_UP</ref>(t_hs_exit_ps,<sp/>byteclk_period_ps)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__mipi__dsi__phy__regs_8h_1abd36083b54617cee5f40fb04c2904b03" kindref="member">MIPI_DSI_PHY_DLANE0_PARA2_T_HSZERO_D0_SET</ref>(<ref refid="group__common__interface_1gadb783055135de11cb78f05d7ad02e8b7" kindref="member">HPM_DIV_ROUND_UP</ref>(ths_zero_ps,<sp/>byteclk_period_ps))<sp/>|</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__mipi__dsi__phy__regs_8h_1a517a4009073c96e6915c3ae0bb4b7e80" kindref="member">MIPI_DSI_PHY_DLANE0_PARA2_T_HSTRAIL_D0_SET</ref>(<ref refid="group__common__interface_1gadb783055135de11cb78f05d7ad02e8b7" kindref="member">HPM_DIV_ROUND_UP</ref>(ths_trail_ps,<sp/>byteclk_period_ps))<sp/>|</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__mipi__dsi__phy__regs_8h_1a6b50110e5d2ad3be66e911af933b3018" kindref="member">MIPI_DSI_PHY_DLANE0_PARA2_T_HSEXIT_D0_SET</ref>(<ref refid="group__common__interface_1gadb783055135de11cb78f05d7ad02e8b7" kindref="member">HPM_DIV_ROUND_UP</ref>(t_hs_exit_ps,<sp/>byteclk_period_ps));</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"></highlight></codeline>
 <codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMIPI__DSI__PHY__Type_1aa174748a782a0067b9511654a0abbe17" kindref="member">DLANE0_PARA2</ref><sp/>=<sp/>dlane0_para2;</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structMIPI__DSI__PHY__Type_1aa2babfee9e034ff476d8544fb9e42e19" kindref="member">DLANE1_PARA2</ref><sp/>=<sp/>dlane0_para2;</highlight></codeline>

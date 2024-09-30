@@ -1,13 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__rdc__drv_8c" kind="file" language="C++">
     <compoundname>hpm_rdc_drv.c</compoundname>
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
     <includes refid="hpm__rdc__drv_8h" local="yes">hpm_rdc_drv.h</includes>
     <incdepgraph>
-      <node id="4">
-        <label>stdbool.h</label>
-      </node>
       <node id="2">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -22,32 +19,6 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>assert.h</label>
-      </node>
-      <node id="5">
-        <label>stdint.h</label>
-      </node>
-      <node id="7">
-        <label>stdlib.h</label>
-      </node>
-      <node id="9">
-        <label>hpm_rdc_regs.h</label>
-      </node>
-      <node id="6">
-        <label>string.h</label>
-      </node>
-      <node id="1">
-        <label>drivers/src/hpm_rdc_drv.c</label>
-        <link refid="hpm__rdc__drv_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>hpm_soc_feature.h</label>
-      </node>
       <node id="8">
         <label>hpm_rdc_drv.h</label>
         <link refid="hpm__rdc__drv_8h"/>
@@ -58,567 +29,51 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
+      <node id="1">
+        <label>drivers/src/hpm_rdc_drv.c</label>
+        <link refid="hpm__rdc__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_rdc_regs.h</label>
+      </node>
+      <node id="10">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
     </incdepgraph>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__rdc__interface_1gabe1a17e2eadf8fda17b83cbbff52ae8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void rdc_output_config</definition>
-        <argsstring>(RDC_Type *ptr, rdc_output_cfg_t *cfg)</argsstring>
-        <name>rdc_output_config</name>
-        <param>
-          <type><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__rdc__interface_1ga6990077c3eb663fbd14e2d4cf33d8912" kindref="member">rdc_output_cfg_t</ref> *</type>
-          <declname>cfg</declname>
-        </param>
-        <briefdescription>
-<para>Rdc output configuration, can be configured pwm output or dac output. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>cfg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__rdc__interface_1ga6990077c3eb663fbd14e2d4cf33d8912" kindref="member">rdc_output_cfg_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rdc_drv.c" line="11" column="6" bodyfile="drivers/src/hpm_rdc_drv.c" bodystart="11" bodyend="41"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rdc__interface_1ga3f172642f176b3a0b7dacf4f4f93ef62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void rdc_input_config</definition>
-        <argsstring>(RDC_Type *ptr, rdc_input_cfg_t *cfg)</argsstring>
-        <name>rdc_input_config</name>
-        <param>
-          <type><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__rdc__interface_1gaf9771b8b9123ef528eba4a990125da28" kindref="member">rdc_input_cfg_t</ref> *</type>
-          <declname>cfg</declname>
-        </param>
-        <briefdescription>
-<para>Rdc input configuration, configuration of adc signal source and calculation parameters. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>cfg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__rdc__interface_1gaf9771b8b9123ef528eba4a990125da28" kindref="member">rdc_input_cfg_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rdc_drv.c" line="44" column="6" bodyfile="drivers/src/hpm_rdc_drv.c" bodystart="44" bodyend="61"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rdc__interface_1gabe488754ece75c03cfe26f0fd844fecd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>uint32_t rdc_get_acc_avl</definition>
-        <argsstring>(RDC_Type *ptr, rdc_input_acc_chn_t chn)</argsstring>
-        <name>rdc_get_acc_avl</name>
-        <param>
-          <type><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__rdc__interface_1ga37b0836ec20425206ea9cf163f00dda2" kindref="member">rdc_input_acc_chn_t</ref></type>
-          <declname>chn</declname>
-        </param>
-        <briefdescription>
-<para>Get the accumulate value. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>chn</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__rdc__interface_1ga37b0836ec20425206ea9cf163f00dda2" kindref="member">rdc_input_acc_chn_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>uint32_t accumulate value </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rdc_drv.c" line="63" column="10" bodyfile="drivers/src/hpm_rdc_drv.c" bodystart="63" bodyend="70"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rdc__interface_1gaa72acd27ed29fb04a7d3d4a94715db77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void rdc_output_trig_offset_config</definition>
-        <argsstring>(RDC_Type *ptr, rdc_output_trig_chn_t chn, int32_t offset)</argsstring>
-        <name>rdc_output_trig_offset_config</name>
-        <param>
-          <type><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__rdc__interface_1gaf9e9c7b07d9b245fc2484c561260aa3b" kindref="member">rdc_output_trig_chn_t</ref></type>
-          <declname>chn</declname>
-        </param>
-        <param>
-          <type>int32_t</type>
-          <declname>offset</declname>
-        </param>
-        <briefdescription>
-<para>Output trigger configuration Lead time for trigger out0 or out1 from center of low level , this is a signed value. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>chn</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__rdc__interface_1gaf9e9c7b07d9b245fc2484c561260aa3b" kindref="member">rdc_output_trig_chn_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>offset</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lead_time </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rdc_drv.c" line="72" column="6" bodyfile="drivers/src/hpm_rdc_drv.c" bodystart="72" bodyend="81"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rdc__interface_1gabdbafee78384029b730674fa4178b790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void rdc_output_trig_enable</definition>
-        <argsstring>(RDC_Type *ptr, rdc_output_trig_chn_t chn)</argsstring>
-        <name>rdc_output_trig_enable</name>
-        <param>
-          <type><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__rdc__interface_1gaf9e9c7b07d9b245fc2484c561260aa3b" kindref="member">rdc_output_trig_chn_t</ref></type>
-          <declname>chn</declname>
-        </param>
-        <briefdescription>
-<para>Enable output trigger configuration. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>chn</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__rdc__interface_1gaf9e9c7b07d9b245fc2484c561260aa3b" kindref="member">rdc_output_trig_chn_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rdc_drv.c" line="83" column="6" bodyfile="drivers/src/hpm_rdc_drv.c" bodystart="83" bodyend="90"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rdc__interface_1ga530380bd74ad16ca9ff48ddbefc65491" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void rdc_output_trig_disable</definition>
-        <argsstring>(RDC_Type *ptr, rdc_output_trig_chn_t chn)</argsstring>
-        <name>rdc_output_trig_disable</name>
-        <param>
-          <type><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__rdc__interface_1gaf9e9c7b07d9b245fc2484c561260aa3b" kindref="member">rdc_output_trig_chn_t</ref></type>
-          <declname>chn</declname>
-        </param>
-        <briefdescription>
-<para>Disable rdc output trigger configuration. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>chn</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__rdc__interface_1gaf9e9c7b07d9b245fc2484c561260aa3b" kindref="member">rdc_output_trig_chn_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rdc_drv.c" line="92" column="6" bodyfile="drivers/src/hpm_rdc_drv.c" bodystart="92" bodyend="99"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rdc__interface_1gac8189fcd55b4bfe39ead11142ebdd404" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int32_t</type>
-        <definition>int32_t rdc_get_i_maxval</definition>
-        <argsstring>(RDC_Type *ptr)</argsstring>
-        <name>rdc_get_i_maxval</name>
-        <param>
-          <type><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Get I-phase maximum. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> base </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>-</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>other max value<itemizedlist>
-<listitem><para>-1 illegal data </para>
-</listitem></itemizedlist>
-</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rdc_drv.c" line="101" column="9" bodyfile="drivers/src/hpm_rdc_drv.c" bodystart="101" bodyend="112"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rdc__interface_1gab7a71ffc61b56ef0ff6c9f236a34353c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int32_t</type>
-        <definition>int32_t rdc_get_i_minval</definition>
-        <argsstring>(RDC_Type *ptr)</argsstring>
-        <name>rdc_get_i_minval</name>
-        <param>
-          <type><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Get I-phase minimum. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> base </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>-</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>other max value<itemizedlist>
-<listitem><para>-1 illegal data </para>
-</listitem></itemizedlist>
-</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rdc_drv.c" line="114" column="9" bodyfile="drivers/src/hpm_rdc_drv.c" bodystart="114" bodyend="124"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rdc__interface_1ga695b3836f9f72d975f216982f422b185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int32_t</type>
-        <definition>int32_t rdc_get_q_maxval</definition>
-        <argsstring>(RDC_Type *ptr)</argsstring>
-        <name>rdc_get_q_maxval</name>
-        <param>
-          <type><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Get Q-phase maximum. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> base </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>-</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>other max value<itemizedlist>
-<listitem><para>-1 illegal data </para>
-</listitem></itemizedlist>
-</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rdc_drv.c" line="126" column="9" bodyfile="drivers/src/hpm_rdc_drv.c" bodystart="126" bodyend="136"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rdc__interface_1gaeef34a4eee28ae4a7bb64d8f08204788" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int32_t</type>
-        <definition>int32_t rdc_get_q_minval</definition>
-        <argsstring>(RDC_Type *ptr)</argsstring>
-        <name>rdc_get_q_minval</name>
-        <param>
-          <type><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Get Q-phase Minval. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> base </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>-</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>other max value<itemizedlist>
-<listitem><para>-1 illegal data </para>
-</listitem></itemizedlist>
-</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rdc_drv.c" line="138" column="9" bodyfile="drivers/src/hpm_rdc_drv.c" bodystart="138" bodyend="148"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rdc__interface_1ga9fc51a78a29785558b3a94c4bcb0ef7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void rdc_set_edge_detection_offset</definition>
-        <argsstring>(RDC_Type *ptr, rdc_input_acc_chn_t chn, int32_t offset)</argsstring>
-        <name>rdc_set_edge_detection_offset</name>
-        <param>
-          <type><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__rdc__interface_1ga37b0836ec20425206ea9cf163f00dda2" kindref="member">rdc_input_acc_chn_t</ref></type>
-          <declname>chn</declname>
-        </param>
-        <param>
-          <type>int32_t</type>
-          <declname>offset</declname>
-        </param>
-        <briefdescription>
-<para>The offset setting for edge detection of the i_channel or q_channel. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>chn</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__rdc__interface_1ga37b0836ec20425206ea9cf163f00dda2" kindref="member">rdc_input_acc_chn_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>offset</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>offset value </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rdc_drv.c" line="150" column="6" bodyfile="drivers/src/hpm_rdc_drv.c" bodystart="150" bodyend="157"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rdc__interface_1ga210cd845b8c99d8e86a174d405d0d384" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void rdc_set_acc_config</definition>
-        <argsstring>(RDC_Type *ptr, rdc_acc_cfg_t *cfg)</argsstring>
-        <name>rdc_set_acc_config</name>
-        <param>
-          <type><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__rdc__interface_1ga65594086ad860ddaab2ff010cdd2cc84" kindref="member">rdc_acc_cfg_t</ref> *</type>
-          <declname>cfg</declname>
-        </param>
-        <briefdescription>
-<para>RDC set accumulate configuration. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>cfg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__rdc__interface_1ga65594086ad860ddaab2ff010cdd2cc84" kindref="member">rdc_acc_cfg_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rdc_drv.c" line="159" column="6" bodyfile="drivers/src/hpm_rdc_drv.c" bodystart="159" bodyend="182"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rdc__interface_1gae0d703205223eeae6c02856b6c7dc900" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void rdc_set_acc_sync_delay</definition>
-        <argsstring>(RDC_Type *ptr, rdc_input_acc_chn_t chn, uint32_t delay)</argsstring>
-        <name>rdc_set_acc_sync_delay</name>
-        <param>
-          <type><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__rdc__interface_1ga37b0836ec20425206ea9cf163f00dda2" kindref="member">rdc_input_acc_chn_t</ref></type>
-          <declname>chn</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>delay</declname>
-        </param>
-        <briefdescription>
-<para>Set Acc sync delay. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structRDC__Type" kindref="compound">RDC_Type</ref> base </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>chn</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__rdc__interface_1ga37b0836ec20425206ea9cf163f00dda2" kindref="member">rdc_input_acc_chn_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>delay</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>delay tick </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rdc_drv.c" line="184" column="6" bodyfile="drivers/src/hpm_rdc_drv.c" bodystart="184" bodyend="191"/>
-      </memberdef>
-      </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__rdc__interface_1gabe1a17e2eadf8fda17b83cbbff52ae8f" kind="function"><name>rdc_output_config</name></member>
+      <member refid="group__rdc__interface_1ga3f172642f176b3a0b7dacf4f4f93ef62" kind="function"><name>rdc_input_config</name></member>
+      <member refid="group__rdc__interface_1gabe488754ece75c03cfe26f0fd844fecd" kind="function"><name>rdc_get_acc_avl</name></member>
+      <member refid="group__rdc__interface_1gaa72acd27ed29fb04a7d3d4a94715db77" kind="function"><name>rdc_output_trig_offset_config</name></member>
+      <member refid="group__rdc__interface_1gabdbafee78384029b730674fa4178b790" kind="function"><name>rdc_output_trig_enable</name></member>
+      <member refid="group__rdc__interface_1ga530380bd74ad16ca9ff48ddbefc65491" kind="function"><name>rdc_output_trig_disable</name></member>
+      <member refid="group__rdc__interface_1gac8189fcd55b4bfe39ead11142ebdd404" kind="function"><name>rdc_get_i_maxval</name></member>
+      <member refid="group__rdc__interface_1gab7a71ffc61b56ef0ff6c9f236a34353c" kind="function"><name>rdc_get_i_minval</name></member>
+      <member refid="group__rdc__interface_1ga695b3836f9f72d975f216982f422b185" kind="function"><name>rdc_get_q_maxval</name></member>
+      <member refid="group__rdc__interface_1gaeef34a4eee28ae4a7bb64d8f08204788" kind="function"><name>rdc_get_q_minval</name></member>
+      <member refid="group__rdc__interface_1ga9fc51a78a29785558b3a94c4bcb0ef7d" kind="function"><name>rdc_set_edge_detection_offset</name></member>
+      <member refid="group__rdc__interface_1ga210cd845b8c99d8e86a174d405d0d384" kind="function"><name>rdc_set_acc_config</name></member>
+      <member refid="group__rdc__interface_1gae0d703205223eeae6c02856b6c7dc900" kind="function"><name>rdc_set_acc_sync_delay</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -698,10 +153,10 @@
 <codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__rdc__interface_1gaa72acd27ed29fb04a7d3d4a94715db77" kindref="member">rdc_output_trig_offset_config</ref>(<ref refid="structRDC__Type" kindref="compound">RDC_Type</ref><sp/>*ptr,<sp/><ref refid="group__rdc__interface_1gaf9e9c7b07d9b245fc2484c561260aa3b" kindref="member">rdc_output_trig_chn_t</ref><sp/>chn,<sp/>int32_t<sp/>offset)</highlight></codeline>
 <codeline lineno="73"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(chn<sp/>==<sp/><ref refid="group__rdc__interface_1ggaa7bd7e15a150076b2076359a6e29e4cdac4342b410fa080e48d9a91df7d135f4e" kindref="member">trigger_out_0</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1a9850ae87f7f6158240d2b3c9dbe9a583" kindref="member">TRIG_OUT0_CFG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structRDC__Type_1a9850ae87f7f6158240d2b3c9dbe9a583" kindref="member">TRIG_OUT0_CFG</ref><sp/>&amp;<sp/>(~<ref refid="HPM5300_2ip_2hpm__rdc__regs_8h_1a51d1be556c9b235613fe2eeaf326b466" kindref="member">RDC_TRIG_OUT0_CFG_LEAD_TIM_MASK</ref>))<sp/>|</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1a9850ae87f7f6158240d2b3c9dbe9a583" kindref="member">TRIG_OUT0_CFG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structRDC__Type_1a9850ae87f7f6158240d2b3c9dbe9a583" kindref="member">TRIG_OUT0_CFG</ref><sp/>&amp;<sp/>(~RDC_TRIG_OUT0_CFG_LEAD_TIM_MASK))<sp/>|</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HPM5300_2ip_2hpm__rdc__regs_8h_1af12d073e46029b8bdd80dd0231e63302" kindref="member">RDC_TRIG_OUT0_CFG_LEAD_TIM_SET</ref>(offset<sp/>+<sp/><ref refid="HPM5300_2ip_2hpm__rdc__regs_8h_1a51d1be556c9b235613fe2eeaf326b466" kindref="member">RDC_TRIG_OUT0_CFG_LEAD_TIM_MASK</ref><sp/>+<sp/>1);</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(chn<sp/>==<sp/><ref refid="group__rdc__interface_1ggaa7bd7e15a150076b2076359a6e29e4cda4d26f3203e88b297ac9e30fb42e424d3" kindref="member">trigger_out_1</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1ad1e512c9ebd9081dbdc0d05439b3a95b" kindref="member">TRIG_OUT1_CFG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structRDC__Type_1ad1e512c9ebd9081dbdc0d05439b3a95b" kindref="member">TRIG_OUT1_CFG</ref><sp/>&amp;<sp/>(~<ref refid="HPM5300_2ip_2hpm__rdc__regs_8h_1ac16eaad5a3aed2aa5bbaa398f2a646d2" kindref="member">RDC_TRIG_OUT1_CFG_LEAD_TIM_MASK</ref>))<sp/>|</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1ad1e512c9ebd9081dbdc0d05439b3a95b" kindref="member">TRIG_OUT1_CFG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structRDC__Type_1ad1e512c9ebd9081dbdc0d05439b3a95b" kindref="member">TRIG_OUT1_CFG</ref><sp/>&amp;<sp/>(~RDC_TRIG_OUT1_CFG_LEAD_TIM_MASK))<sp/>|</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HPM5300_2ip_2hpm__rdc__regs_8h_1a48cd6f4dcf4971f092ea9fe6b25864a5" kindref="member">RDC_TRIG_OUT1_CFG_LEAD_TIM_SET</ref>(offset<sp/>+<sp/><ref refid="HPM5300_2ip_2hpm__rdc__regs_8h_1ac16eaad5a3aed2aa5bbaa398f2a646d2" kindref="member">RDC_TRIG_OUT1_CFG_LEAD_TIM_MASK</ref><sp/>+<sp/>1);</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="81"><highlight class="normal">}</highlight></codeline>
@@ -718,9 +173,9 @@
 <codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__rdc__interface_1ga530380bd74ad16ca9ff48ddbefc65491" kindref="member">rdc_output_trig_disable</ref>(<ref refid="structRDC__Type" kindref="compound">RDC_Type</ref><sp/>*ptr,<sp/><ref refid="group__rdc__interface_1gaf9e9c7b07d9b245fc2484c561260aa3b" kindref="member">rdc_output_trig_chn_t</ref><sp/>chn)</highlight></codeline>
 <codeline lineno="93"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(chn<sp/>==<sp/><ref refid="group__rdc__interface_1ggaa7bd7e15a150076b2076359a6e29e4cdac4342b410fa080e48d9a91df7d135f4e" kindref="member">trigger_out_0</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1a9850ae87f7f6158240d2b3c9dbe9a583" kindref="member">TRIG_OUT0_CFG</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__rdc__regs_8h_1a10d3b276dbc695e90b7469d59ab8764a" kindref="member">RDC_TRIG_OUT0_CFG_ENABLE_MASK</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1a9850ae87f7f6158240d2b3c9dbe9a583" kindref="member">TRIG_OUT0_CFG</ref><sp/>&amp;=<sp/>~RDC_TRIG_OUT0_CFG_ENABLE_MASK;</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(chn<sp/>==<sp/><ref refid="group__rdc__interface_1ggaa7bd7e15a150076b2076359a6e29e4cda4d26f3203e88b297ac9e30fb42e424d3" kindref="member">trigger_out_1</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1ad1e512c9ebd9081dbdc0d05439b3a95b" kindref="member">TRIG_OUT1_CFG</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__rdc__regs_8h_1a4901fe868e110fa7a634a7a7b32b8cbb" kindref="member">RDC_TRIG_OUT1_CFG_ENABLE_MASK</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1ad1e512c9ebd9081dbdc0d05439b3a95b" kindref="member">TRIG_OUT1_CFG</ref><sp/>&amp;=<sp/>~RDC_TRIG_OUT1_CFG_ENABLE_MASK;</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="99"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"></highlight></codeline>
@@ -794,7 +249,7 @@
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cfg-&gt;<ref refid="structrdc__acc__cfg_1ab999e0bdaf97dc2ce901dc318a156b2e" kindref="member">error_data_remove</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1a670cfba4956a86fd277e34cfc26c6194" kindref="member">ACC_SCALING</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__rdc__regs_8h_1a53adf88c4e3795e5f0f5ea6f3afcb53b" kindref="member">RDC_ACC_SCALING_TOXIC_LK_MASK</ref>;</highlight></codeline>
 <codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1a670cfba4956a86fd277e34cfc26c6194" kindref="member">ACC_SCALING</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__rdc__regs_8h_1a53adf88c4e3795e5f0f5ea6f3afcb53b" kindref="member">RDC_ACC_SCALING_TOXIC_LK_MASK</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1a670cfba4956a86fd277e34cfc26c6194" kindref="member">ACC_SCALING</ref><sp/>&amp;=<sp/>~RDC_ACC_SCALING_TOXIC_LK_MASK;</highlight></codeline>
 <codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1a0c337dcac16ac9914588955e076dfc96" kindref="member">EXC_PERIOD</ref><sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__rdc__regs_8h_1a0f7b208424fda3f80c73f126b67186ae" kindref="member">RDC_EXC_PERIOD_EXC_PERIOD_SET</ref>(cfg-&gt;<ref refid="structrdc__acc__cfg_1a44968960137e908dbc42caf10d2c827a" kindref="member">exc_carrier_period</ref>);</highlight></codeline>
 <codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1abc3eb690efa70ef661c9aabd302ff2e4" kindref="member">SYNC_DELAY_I</ref><sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__rdc__regs_8h_1ab1ebd389163f493fd57cd8b279b55a53" kindref="member">RDC_SYNC_DELAY_I_DELAY_SET</ref>(cfg-&gt;<ref refid="structrdc__acc__cfg_1a727bd568f6e1a059b3ee7b68ee1ca386" kindref="member">sync_delay_i</ref>);</highlight></codeline>
@@ -802,8 +257,8 @@
 <codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1a285ec685507b97c6ce0b49e56436e1bb" kindref="member">AMP_MAX</ref><sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__rdc__regs_8h_1a91b9060ddaaf50625860ad3229776216" kindref="member">RDC_AMP_MAX_MAX_SET</ref>(cfg-&gt;<ref refid="structrdc__acc__cfg_1a96a8b65731828ed570782783430d405b" kindref="member">amp_max</ref>);</highlight></codeline>
 <codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1a14b6e3a800e231e15138c2c817a4fcd6" kindref="member">AMP_MIN</ref><sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__rdc__regs_8h_1a0b735f1f03f169507b8d25f19c3bab0c" kindref="member">RDC_AMP_MIN_MIN_SET</ref>(cfg-&gt;<ref refid="structrdc__acc__cfg_1aa58510b8a301c89ff304955874caa9c9" kindref="member">amp_min</ref>);</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPM_IP_FEATURE_RDC_IIR)<sp/>&amp;&amp;<sp/>(HPM_IP_FEATURE_RDC_IIR)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1aeaff740b173783759afb60941d50e667" kindref="member">THRS_I</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structRDC__Type_1aeaff740b173783759afb60941d50e667" kindref="member">THRS_I</ref><sp/>&amp;<sp/>~<ref refid="HPM6E00_2ip_2hpm__rdc__regs_8h_1a6644e26c933e651ac3465c780c980315" kindref="member">RDC_THRS_I_THRS4ACC_MASK</ref>)<sp/>|<sp/><ref refid="HPM6E00_2ip_2hpm__rdc__regs_8h_1a6c022e2f9b609b5f924c66223f733267" kindref="member">RDC_THRS_I_THRS4ACC_SET</ref>(cfg-&gt;enable_i_thrs_data_for_acc);</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1a97e0820d3cee173151f1f071619c979e" kindref="member">THRS_Q</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structRDC__Type_1a97e0820d3cee173151f1f071619c979e" kindref="member">THRS_Q</ref><sp/>&amp;<sp/>~<ref refid="HPM6E00_2ip_2hpm__rdc__regs_8h_1aba5098f2cb39a8aee4b215c263204d36" kindref="member">RDC_THRS_Q_THRS4ACC_MASK</ref>)<sp/>|<sp/><ref refid="HPM6E00_2ip_2hpm__rdc__regs_8h_1a3e2e9ded8a83a0cafc8cdcbebbc09c37" kindref="member">RDC_THRS_Q_THRS4ACC_SET</ref>(cfg-&gt;enable_q_thrs_data_for_acc);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1aeaff740b173783759afb60941d50e667" kindref="member">THRS_I</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structRDC__Type_1aeaff740b173783759afb60941d50e667" kindref="member">THRS_I</ref><sp/>&amp;<sp/>~RDC_THRS_I_THRS4ACC_MASK)<sp/>|<sp/><ref refid="HPM6E00_2ip_2hpm__rdc__regs_8h_1a6c022e2f9b609b5f924c66223f733267" kindref="member">RDC_THRS_I_THRS4ACC_SET</ref>(cfg-&gt;enable_i_thrs_data_for_acc);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structRDC__Type_1a97e0820d3cee173151f1f071619c979e" kindref="member">THRS_Q</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structRDC__Type_1a97e0820d3cee173151f1f071619c979e" kindref="member">THRS_Q</ref><sp/>&amp;<sp/>~RDC_THRS_Q_THRS4ACC_MASK)<sp/>|<sp/><ref refid="HPM6E00_2ip_2hpm__rdc__regs_8h_1a3e2e9ded8a83a0cafc8cdcbebbc09c37" kindref="member">RDC_THRS_Q_THRS4ACC_SET</ref>(cfg-&gt;enable_q_thrs_data_for_acc);</highlight></codeline>
 <codeline lineno="181"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="182"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="183"><highlight class="normal"></highlight></codeline>

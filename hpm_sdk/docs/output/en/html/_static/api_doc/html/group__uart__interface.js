@@ -55,7 +55,7 @@ var group__uart__interface =
     [ "uart_signal_t", "group__uart__interface.html#gaabeb807de70635ecab1bc70dd6db895f", null ],
     [ "uart_stat_t", "group__uart__interface.html#ga659e30f9f0a4734cae0990ff25eb455b", null ],
     [ "word_length_t", "group__uart__interface.html#ga50f85e080d19ed16e340907c20b18d39", [
-      [ "status_uart_no_suitable_baudrate_parameter_found", "group__uart__interface.html#gga905301dc85f7361d62f56f9dea55cf2cadffac1505396eaee4888bd9ae472a6c7", null ]
+      [ "status_uart_no_suitable_baudrate_parameter_found", "group__uart__interface.html#gga5347260c3611a5e649db7a4a8370d3c5adffac1505396eaee4888bd9ae472a6c7", null ]
     ] ],
     [ "hpm_uart_rxline_idle_cond", "group__uart__interface.html#ga731be137b0fc694d12e1938d047caa09", [
       [ "uart_rxline_idle_cond_rxline_logic_one", "group__uart__interface.html#gga731be137b0fc694d12e1938d047caa09aee7f16d64a1502d6de94ae173a004c64", null ],

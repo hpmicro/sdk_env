@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="group__esc__interface" kind="group">
     <compoundname>esc_interface</compoundname>
     <title>ESC driver APIs</title>
     <innerclass refid="structesc__eeprom__clock__config__t" prot="public">esc_eeprom_clock_config_t</innerclass>
-      <sectiondef kind="enum">
+    <sectiondef kind="enum">
       <memberdef kind="enum" id="group__esc__interface_1ga2f80701c36e79c0640d91c788feee0b3" prot="public" static="no" strong="no">
         <type></type>
-        <name>@62</name>
+        <name></name>
         <enumvalue id="group__esc__interface_1gga2f80701c36e79c0640d91c788feee0b3a615143de263ba9df39c1222356f097d2" prot="public">
           <name>status_esc_eeprom_ack_error</name>
-          <initializer>= ((uint32_t)( status_group_esc )*1000U + (uint32_t)( 0 ))</initializer>
+          <initializer>=  ((uint32_t)(status_group_esc)*1000U + (uint32_t)(0))</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -19,7 +19,7 @@
         </enumvalue>
         <enumvalue id="group__esc__interface_1gga2f80701c36e79c0640d91c788feee0b3abc27a7c058f4b013bdeb46229ba5b7cf" prot="public">
           <name>status_esc_eeprom_checksum_error</name>
-          <initializer>= ((uint32_t)( status_group_esc )*1000U + (uint32_t)( 1 ))</initializer>
+          <initializer>=  ((uint32_t)(status_group_esc)*1000U + (uint32_t)(1))</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -188,8 +188,8 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_esc_drv.h" line="44" column="1" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="44" bodyend="54"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="group__esc__interface_1ga040f71322926310041001b700d02c05c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>static void esc_core_enable_clock</definition>
@@ -510,6 +510,102 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_esc_drv.h" line="193" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="193" bodyend="198"/>
       </memberdef>
+      <memberdef kind="function" id="group__esc__interface_1gaf0bbb8605ded5271e8a662a05b9e6219" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void esc_set_phy_offset</definition>
+        <argsstring>(ESC_Type *ptr, uint8_t offset)</argsstring>
+        <name>esc_set_phy_offset</name>
+        <param>
+          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>ESC set phy offset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ESC base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PHY register offset </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_esc_drv.h" line="206" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="206" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="group__esc__interface_1ga08d784ae70f4a75bafb915ce64f79e13" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void esc_enable_pdi_access_mii_management</definition>
+        <argsstring>(ESC_Type *ptr)</argsstring>
+        <name>esc_enable_pdi_access_mii_management</name>
+        <param>
+          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>ESC enable PDI to access MII management. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ESC base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_esc_drv.h" line="216" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="216" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="group__esc__interface_1gab8a603d045b3c34c88c2c8d2950e6ce9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void esc_disable_pdi_access_mii_management</definition>
+        <argsstring>(ESC_Type *ptr)</argsstring>
+        <name>esc_disable_pdi_access_mii_management</name>
+        <param>
+          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>ESC disable PDI to access MII management. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ESC base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_esc_drv.h" line="226" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="226" bodyend="229"/>
+      </memberdef>
       <memberdef kind="function" id="group__esc__interface_1gaaeaf167df19c81d1f5fb0d0c361fd876" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
         <definition>hpm_stat_t esc_mdio_read</definition>
@@ -572,7 +668,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="209" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="14" bodyend="64" declfile="drivers/inc/hpm_esc_drv.h" declline="209" declcolumn="12"/>
+        <location file="drivers/inc/hpm_esc_drv.h" line="239" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="14" bodyend="64" declfile="drivers/inc/hpm_esc_drv.h" declline="239" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__esc__interface_1ga34e62d5c1a185ea2af70471ff27541d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -636,7 +732,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="219" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="66" bodyend="116" declfile="drivers/inc/hpm_esc_drv.h" declline="219" declcolumn="12"/>
+        <location file="drivers/inc/hpm_esc_drv.h" line="249" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="66" bodyend="116" declfile="drivers/inc/hpm_esc_drv.h" declline="249" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__esc__interface_1ga83d77fb518b47b541050b5803e137a3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -699,7 +795,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="231" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="119" bodyend="150" declfile="drivers/inc/hpm_esc_drv.h" declline="231" declcolumn="12"/>
+        <location file="drivers/inc/hpm_esc_drv.h" line="261" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="119" bodyend="150" declfile="drivers/inc/hpm_esc_drv.h" declline="261" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__esc__interface_1ga80b2e17af6555921555fd46a7175c1d0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint8_t</type>
@@ -729,7 +825,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="239" column="23" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="239" bodyend="242"/>
+        <location file="drivers/inc/hpm_esc_drv.h" line="269" column="23" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="269" bodyend="272"/>
       </memberdef>
       <memberdef kind="function" id="group__esc__interface_1gadfcea55543bb1a71ec533d83b843077c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -793,7 +889,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="252" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="252" bodyend="263"/>
+        <location file="drivers/inc/hpm_esc_drv.h" line="282" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="282" bodyend="293"/>
       </memberdef>
       <memberdef kind="function" id="group__esc__interface_1ga661950c9191d31a49ef357ad1637e4f0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -823,7 +919,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="271" column="24" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="271" bodyend="274"/>
+        <location file="drivers/inc/hpm_esc_drv.h" line="301" column="24" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="301" bodyend="304"/>
       </memberdef>
       <memberdef kind="function" id="group__esc__interface_1ga456e385aad946c0ae7ba4d8d96c24482" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -853,7 +949,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="282" column="24" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="282" bodyend="285"/>
+        <location file="drivers/inc/hpm_esc_drv.h" line="312" column="24" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="312" bodyend="315"/>
       </memberdef>
       <memberdef kind="function" id="group__esc__interface_1ga0830c7e2a6fe953a2b9d9f87d04c5253" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint64_t</type>
@@ -883,7 +979,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="293" column="24" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="293" bodyend="296"/>
+        <location file="drivers/inc/hpm_esc_drv.h" line="323" column="24" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="323" bodyend="326"/>
       </memberdef>
       <memberdef kind="function" id="group__esc__interface_1ga9ee19c3ae2aef84992198eef81e77d28" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -923,7 +1019,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="304" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="304" bodyend="307"/>
+        <location file="drivers/inc/hpm_esc_drv.h" line="334" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="334" bodyend="337"/>
       </memberdef>
       <memberdef kind="function" id="group__esc__interface_1ga619c7090712e0b1a8cc12ea037a3531c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -963,7 +1059,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="315" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="315" bodyend="322"/>
+        <location file="drivers/inc/hpm_esc_drv.h" line="345" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="345" bodyend="352"/>
       </memberdef>
       <memberdef kind="function" id="group__esc__interface_1ga665e5416c167f0643a13eae185619582" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1003,11 +1099,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="330" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="330" bodyend="337"/>
+        <location file="drivers/inc/hpm_esc_drv.h" line="360" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="360" bodyend="367"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
-<para>ESC driver APIs. </para>
+<para>ESC driver APIs  . </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

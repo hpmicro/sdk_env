@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>19.7. STEP MOTOR FOC &mdash; HPMicro Software Development Kit  documentation</title>
+  <title>19.8. STEP MOTOR FOC &mdash; HPMicro Software Development Kit  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="20. Multicore" href="../../multicore/index_en.html" />
-    <link rel="prev" title="19.6. BLDC SMC" href="../bldc_smc/README_en.html" /> 
+    <link rel="prev" title="19.7. BLDC SMC" href="../bldc_smc/README_en.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,6 +52,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../boards/index_en.html">Evaluation Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../components/index_en.html">Components</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index_en.html">Samples</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../audio_codec/index_en.html">1. Audio Codec</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../cherryrb/README_en.html">2. CherryRB</a></li>
@@ -76,12 +77,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../bldc_foc/README_en.html">19.2. BLDC FOC Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../bldc_hfi/README_en.html">19.3. BLDC Square wave inject(HFI)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../bldc_littlevgl_foc/README_en.html">19.4. Touch screen control of BLDC (BLDC LVGL)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../bldc_over_zero/README_en.html">19.5. BLDC sensorless over-zero control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../bldc_smc/README_en.html">19.6. BLDC SMC</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">19.7. STEP MOTOR FOC</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#overview">19.7.1. Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#configurations">19.7.2. Configurations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#running-the-demo">19.7.3. Running the demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bldc_offline_param_detection/README_en.html">19.5. BLDC Offline Parameter Detection Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bldc_over_zero/README_en.html">19.6. BLDC sensorless over-zero control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bldc_smc/README_en.html">19.7. BLDC SMC</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">19.8. STEP MOTOR FOC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">19.8.1. Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configurations">19.8.2. Configurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-demo">19.8.3. Running the demo</a></li>
 </ul>
 </li>
 </ul>
@@ -104,6 +106,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../spi_sdcard/index_en.html">35. SPI_SDCARD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../cherrysh/index_en.html">36. CherrySH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ethercat/index_en.html">37. EtherCAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smbus/index_en.html">38. SMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pmbus/index_en.html">39. PMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tsn/index_en.html">40. tsn</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../drivers/index_en.html">Drivers Examples</a></li>
@@ -128,7 +133,7 @@
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../index_en.html">Samples</a></li>
           <li class="breadcrumb-item"><a href="../index_en.html"><span class="section-number">19. </span>HPM Motor Ctrl</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">19.7. </span>STEP MOTOR FOC</li>
+      <li class="breadcrumb-item active"><span class="section-number">19.8. </span>STEP MOTOR FOC</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/samples/motor_ctrl/step_motor_foc/README_en.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -139,9 +144,9 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="step-motor-foc">
-<h1><span class="section-number">19.7. </span>STEP MOTOR FOC<a class="headerlink" href="#step-motor-foc" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">19.8. </span>STEP MOTOR FOC<a class="headerlink" href="#step-motor-foc" title="Permalink to this heading"></a></h1>
 <section id="overview">
-<h2><span class="section-number">19.7.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">19.8.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>The <strong>step motor foc</strong> project description Stepper motor control using vector modulation.</p>
 <ul class="simple">
 <li><p>Use the <strong>FOC</strong> control algorithm</p></li>
@@ -151,7 +156,7 @@
 </ul>
 </section>
 <section id="configurations">
-<h2><span class="section-number">19.7.2. </span>Configurations<a class="headerlink" href="#configurations" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">19.8.2. </span>Configurations<a class="headerlink" href="#configurations" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>42 Stepper Motor, 24v, 50 Pair of Poles.</p></li>
 <li><p>Stepper motor driver board <strong>24V_STEP_NONE_2A</strong>.</p>
@@ -164,7 +169,7 @@
 </ul>
 </section>
 <section id="running-the-demo">
-<h2><span class="section-number">19.7.3. </span>Running the demo<a class="headerlink" href="#running-the-demo" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">19.8.3. </span>Running the demo<a class="headerlink" href="#running-the-demo" title="Permalink to this heading"></a></h2>
 <p>The stepper motor switches forward and reverse speed without stopping, and the serial port prints speed information.</p>
 <p>The serial console message is as follows:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">step motor demo.</span>
@@ -204,7 +209,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2020-2024, HPMicro.
-      <span class="lastupdated">Last updated on Jun 28, 2024.
+      <span class="lastupdated">Last updated on Sep 30, 2024.
       </span></p>
   </div>
 

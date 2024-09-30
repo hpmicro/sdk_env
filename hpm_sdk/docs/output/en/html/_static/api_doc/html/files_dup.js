@@ -1,6 +1,7 @@
 var files_dup =
 [
     [ "arch", "dir_ea9599923402ca8ab47fc3e495999dea.html", "dir_ea9599923402ca8ab47fc3e495999dea" ],
+    [ "components", "dir_409f97388efe006bc3438b95e9edef48.html", "dir_409f97388efe006bc3438b95e9edef48" ],
     [ "docs", "dir_49e56c817e5e54854c35e136979f97ca.html", "dir_49e56c817e5e54854c35e136979f97ca" ],
     [ "drivers", "dir_14bc92f4b96c8519b376567118ac28b3.html", "dir_14bc92f4b96c8519b376567118ac28b3" ],
     [ "middleware", "dir_f382573a88a6eedb79e240e7ead9d11a.html", "dir_f382573a88a6eedb79e240e7ead9d11a" ],

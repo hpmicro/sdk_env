@@ -1,22 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__esc__drv_8h" kind="file" language="C++">
     <compoundname>hpm_esc_drv.h</compoundname>
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
     <includes refid="hpm__esc__regs_8h" local="yes">hpm_esc_regs.h</includes>
     <includedby refid="hpm__esc__drv_8c" local="yes">drivers/src/hpm_esc_drv.c</includedby>
     <incdepgraph>
-      <node id="4">
-        <label>stdbool.h</label>
-      </node>
-      <node id="1">
-        <label>drivers/inc/hpm_esc_drv.h</label>
-        <link refid="hpm__esc__drv_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -31,15 +20,26 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>assert.h</label>
-      </node>
-      <node id="5">
-        <label>stdint.h</label>
+      <node id="1">
+        <label>drivers/inc/hpm_esc_drv.h</label>
+        <link refid="hpm__esc__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
       </node>
       <node id="8">
         <label>hpm_esc_regs.h</label>
         <link refid="hpm__esc__regs_8h"/>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
       </node>
       <node id="7">
         <label>stdlib.h</label>
@@ -61,1008 +61,35 @@
       </node>
     </invincdepgraph>
     <innerclass refid="structesc__eeprom__clock__config__t" prot="public">esc_eeprom_clock_config_t</innerclass>
-      <sectiondef kind="enum">
-      <memberdef kind="enum" id="group__esc__interface_1ga2f80701c36e79c0640d91c788feee0b3" prot="public" static="no" strong="no">
-        <type></type>
-        <name>@62</name>
-        <enumvalue id="group__esc__interface_1gga2f80701c36e79c0640d91c788feee0b3a615143de263ba9df39c1222356f097d2" prot="public">
-          <name>status_esc_eeprom_ack_error</name>
-          <initializer>= ((uint32_t)( status_group_esc )*1000U + (uint32_t)( 0 ))</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-<para>ESC EEPROM ack error </para>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__esc__interface_1gga2f80701c36e79c0640d91c788feee0b3abc27a7c058f4b013bdeb46229ba5b7cf" prot="public">
-          <name>status_esc_eeprom_checksum_error</name>
-          <initializer>= ((uint32_t)( status_group_esc )*1000U + (uint32_t)( 1 ))</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-<para>ESC EEPROM checksum error </para>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>ESC error codes. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="26" column="1" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="26" bodyend="29"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__esc__interface_1gad1df92c6cfbc9e350e70f202fceb83eb" prot="public" static="no" strong="no">
-        <type></type>
-        <name>esc_latch_source_t</name>
-        <enumvalue id="group__esc__interface_1ggad1df92c6cfbc9e350e70f202fceb83ebaa6d28633b2d64cc0d70fa5cf5fe2da2b" prot="public">
-          <name>latch_source_from_ntm</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__esc__interface_1ggad1df92c6cfbc9e350e70f202fceb83ebab50413cb093bba7697efdb9077ea40d8" prot="public">
-          <name>latch_source_from_trigger_mux</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="32" column="1" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="32" bodyend="35"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__esc__interface_1ga3c7594a7a150bc5ba4aee21b6b54d1ee" prot="public" static="no" strong="no">
-        <type></type>
-        <name>esc_eeprom_cmd_t</name>
-        <enumvalue id="group__esc__interface_1gga3c7594a7a150bc5ba4aee21b6b54d1eead90d4d84197a3062986327bb375ecc3d" prot="public">
-          <name>esc_eeprom_idle_cmd</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__esc__interface_1gga3c7594a7a150bc5ba4aee21b6b54d1eea61f8b589e38ea32c7deb0bf8a9207529" prot="public">
-          <name>esc_eeprom_read_cmd</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__esc__interface_1gga3c7594a7a150bc5ba4aee21b6b54d1eea20990a84c2e5469601c98b39831522bc" prot="public">
-          <name>esc_eeprom_write_cmd</name>
-          <initializer>= 2</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__esc__interface_1gga3c7594a7a150bc5ba4aee21b6b54d1eeafa401c033f0c400333c9bef4028e3acc" prot="public">
-          <name>esc_eeprom_reload_cmd</name>
-          <initializer>= 4</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="37" column="1" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="37" bodyend="42"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__esc__interface_1ga40fbe82036b22639e2d4c5e267688ad2" prot="public" static="no" strong="no">
-        <type></type>
-        <name>esc_ctrl_signal_function_t</name>
-        <enumvalue id="group__esc__interface_1gga40fbe82036b22639e2d4c5e267688ad2abb09fabef7d116ce4ef97eef677f573b" prot="public">
-          <name>esc_ctrl_signal_func_alt_nmii_link0</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__esc__interface_1gga40fbe82036b22639e2d4c5e267688ad2afa1449468e3c19e0483ca9fddd89ddf3" prot="public">
-          <name>esc_ctrl_signal_func_alt_nmii_link1</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__esc__interface_1gga40fbe82036b22639e2d4c5e267688ad2a714ffb215b918ac5ff2e4ef1d084743f" prot="public">
-          <name>esc_ctrl_signal_func_alt_nmii_link2</name>
-          <initializer>= 2</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__esc__interface_1gga40fbe82036b22639e2d4c5e267688ad2a6b864462af9f3573301a91aad7802f96" prot="public">
-          <name>esc_ctrl_signal_func_alt_link_act0</name>
-          <initializer>= 3</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__esc__interface_1gga40fbe82036b22639e2d4c5e267688ad2a6209b674435657dee6555920eaea3000" prot="public">
-          <name>esc_ctrl_signal_func_alt_link_act1</name>
-          <initializer>= 4</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__esc__interface_1gga40fbe82036b22639e2d4c5e267688ad2aaa4548501ba52372f3bd3548fbbfd211" prot="public">
-          <name>esc_ctrl_signal_func_alt_link_act2</name>
-          <initializer>= 5</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__esc__interface_1gga40fbe82036b22639e2d4c5e267688ad2a7a81f9df03b8fc15aa8e69964f77f637" prot="public">
-          <name>esc_ctrl_signal_func_alt_led_run</name>
-          <initializer>= 6</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__esc__interface_1gga40fbe82036b22639e2d4c5e267688ad2a0837323cf99a5aad9ec5ea98cd1e178d" prot="public">
-          <name>esc_ctrl_signal_func_alt_led_err</name>
-          <initializer>= 7</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__esc__interface_1gga40fbe82036b22639e2d4c5e267688ad2a4e00fe6b65d4c047f24e8660f29c4a5a" prot="public">
-          <name>esc_ctrl_signal_func_alt_reset_out</name>
-          <initializer>= 8</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="44" column="1" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="44" bodyend="54"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__esc__interface_1ga040f71322926310041001b700d02c05c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void esc_core_enable_clock</definition>
-        <argsstring>(ESC_Type *ptr, bool enable)</argsstring>
-        <name>esc_core_enable_clock</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>enable</declname>
-        </param>
-        <briefdescription>
-<para>ESC peripheral clock. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">enable</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Set true to enable or false to disable </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="75" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="75" bodyend="82"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1ga9346b1daa6b1ef52492ea29fa82fd376" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void esc_phy_enable_clock</definition>
-        <argsstring>(ESC_Type *ptr, bool enable)</argsstring>
-        <name>esc_phy_enable_clock</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>enable</declname>
-        </param>
-        <briefdescription>
-<para>ESC PHY clock. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">enable</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Set true to enable or false to disable </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>&lt; enable PHY 25M refck</para>
-<para>&lt; disable PHY 25M refck</para>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="90" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="90" bodyend="97"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1gabacb335a2e3a1c320369f11b4b0229f2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void esc_config_eeprom_and_clock</definition>
-        <argsstring>(ESC_Type *ptr, esc_eeprom_clock_config_t *config)</argsstring>
-        <name>esc_config_eeprom_and_clock</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structesc__eeprom__clock__config__t" kindref="compound">esc_eeprom_clock_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>ESC config eeprom attributes(emulation and size) and peripheral clock. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structesc__eeprom__clock__config__t" kindref="compound">esc_eeprom_clock_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="105" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="105" bodyend="124"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1gad8868589476747c2dc6d591dc8bc725b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void esc_config_ctrl_signal_function</definition>
-        <argsstring>(ESC_Type *ptr, uint8_t index, esc_ctrl_signal_function_t func, bool invert)</argsstring>
-        <name>esc_config_ctrl_signal_function</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>index</declname>
-        </param>
-        <param>
-          <type><ref refid="group__esc__interface_1ga40fbe82036b22639e2d4c5e267688ad2" kindref="member">esc_ctrl_signal_function_t</ref></type>
-          <declname>func</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>invert</declname>
-        </param>
-        <briefdescription>
-<para>ESC assign specific function to CTRL signal. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CTRL signal index(0-8) </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">func</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>specific function </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">invert</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>invert signal </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="134" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="134" bodyend="137"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1gaee64fee0f23e1038c998662071c055ee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void esc_config_nmii_link_source</definition>
-        <argsstring>(ESC_Type *ptr, bool link0_from_io, bool link1_from_io, bool link2_from_io)</argsstring>
-        <name>esc_config_nmii_link_source</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>link0_from_io</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>link1_from_io</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>link2_from_io</declname>
-        </param>
-        <briefdescription>
-<para>ESC config nmii_link signal source. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">link0_from_io</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>true for signal from configured IO; false for signal from register(GPR_CFG2) value </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">link1_from_io</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>true for signal from configured IO; false for signal from register(GPR_CFG2) value </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">link2_from_io</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>true for signal from configured IO; false for signal from register(GPR_CFG2) value </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="147" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="147" bodyend="169"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1gab51f3dee517ea59cfd2f941b88ab5f1b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void esc_config_reset_source</definition>
-        <argsstring>(ESC_Type *ptr, bool reset_from_ecat_core)</argsstring>
-        <name>esc_config_reset_source</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>reset_from_ecat_core</declname>
-        </param>
-        <briefdescription>
-<para>ESC config reset signal source. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">reset_from_ecat_core</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>true for reset signal from ecat core; false for reset signal from register(GPR_CFG1) value </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="178" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="178" bodyend="185"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1ga724955559c1bab240e082878bbde7103" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void esc_pdi_reset</definition>
-        <argsstring>(ESC_Type *ptr)</argsstring>
-        <name>esc_pdi_reset</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>ESC generate reset signal to ESC_RESET interrupt and RESET_OUT pin. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>the reset signal source should be configured in esc_config_reset_source before</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="193" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="193" bodyend="198"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1gaaeaf167df19c81d1f5fb0d0c361fd876" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t esc_mdio_read</definition>
-        <argsstring>(ESC_Type *ptr, uint8_t phy_addr, uint8_t reg_addr, uint16_t *data)</argsstring>
-        <name>esc_mdio_read</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>phy_addr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>reg_addr</declname>
-        </param>
-        <param>
-          <type>uint16_t *</type>
-          <declname>data</declname>
-        </param>
-        <briefdescription>
-<para>ESC read PHY register via ESC MII Management Interface. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">phy_addr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>PHY address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">reg_addr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Register address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">data</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>PHY data returned. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="209" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="14" bodyend="64" declfile="drivers/inc/hpm_esc_drv.h" declline="209" declcolumn="12"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1ga34e62d5c1a185ea2af70471ff27541d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t esc_mdio_write</definition>
-        <argsstring>(ESC_Type *ptr, uint8_t phy_addr, uint8_t reg_addr, uint16_t data)</argsstring>
-        <name>esc_mdio_write</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>phy_addr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>reg_addr</declname>
-        </param>
-        <param>
-          <type>uint16_t</type>
-          <declname>data</declname>
-        </param>
-        <briefdescription>
-<para>ESc write PHY register via ESC MII Management Interface. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">phy_addr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>PHY address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">reg_addr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Register address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">data</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Write to PHY register. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="219" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="66" bodyend="116" declfile="drivers/inc/hpm_esc_drv.h" declline="219" declcolumn="12"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1ga83d77fb518b47b541050b5803e137a3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t esc_check_eeprom_loading</definition>
-        <argsstring>(ESC_Type *ptr)</argsstring>
-        <name>esc_check_eeprom_loading</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>ESC check eeprom loading data status. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>EtherCAT communication is possible even if the EEPROM is blank</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>loding data successfully and correctlly. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_esc_eeprom_ack_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>loding data checksum error(eeprom blank). </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_esc_eeprom_checksum_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>no ack error. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_timeout</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>loding data timeout. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="231" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="119" bodyend="150" declfile="drivers/inc/hpm_esc_drv.h" declline="231" declcolumn="12"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1ga80b2e17af6555921555fd46a7175c1d0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>uint8_t</type>
-        <definition>static uint8_t esc_get_eeprom_cmd</definition>
-        <argsstring>(ESC_Type *ptr)</argsstring>
-        <name>esc_get_eeprom_cmd</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>ESC get eeprom cmd, this using in eeprom emulation function. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>uint8_t esc_eeprom_cmd_t. </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="239" column="23" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="239" bodyend="242"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1gadfcea55543bb1a71ec533d83b843077c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void esc_eeprom_emulation_ack</definition>
-        <argsstring>(ESC_Type *ptr, esc_eeprom_cmd_t cmd, bool ack_err, bool crc_err)</argsstring>
-        <name>esc_eeprom_emulation_ack</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__esc__interface_1ga3c7594a7a150bc5ba4aee21b6b54d1ee" kindref="member">esc_eeprom_cmd_t</ref></type>
-          <declname>cmd</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>ack_err</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>crc_err</declname>
-        </param>
-        <briefdescription>
-<para>ESC ack eeprom cmd in eeprom emualtion function. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">cmd</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>esc_eeprom_cmd_t </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">ack_err</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>eeprom ack error occurrred </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">crc_err</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>eeprom checksum error occurrred </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="252" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="252" bodyend="263"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1ga661950c9191d31a49ef357ad1637e4f0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>static uint32_t esc_get_eeprom_byte_address</definition>
-        <argsstring>(ESC_Type *ptr)</argsstring>
-        <name>esc_get_eeprom_byte_address</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>ESC get eeprom byte address. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>byte address </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="271" column="24" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="271" bodyend="274"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1ga456e385aad946c0ae7ba4d8d96c24482" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>static uint32_t esc_get_eeprom_word_address</definition>
-        <argsstring>(ESC_Type *ptr)</argsstring>
-        <name>esc_get_eeprom_word_address</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>ESC get eeprom word(2 bytes) address. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>word address </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="282" column="24" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="282" bodyend="285"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1ga0830c7e2a6fe953a2b9d9f87d04c5253" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>uint64_t</type>
-        <definition>static uint64_t esc_read_eeprom_data</definition>
-        <argsstring>(ESC_Type *ptr)</argsstring>
-        <name>esc_read_eeprom_data</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>ESC read eeprom data from register, this function is using in eeprom emulation function. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>eeprom data </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="293" column="24" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="293" bodyend="296"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1ga9ee19c3ae2aef84992198eef81e77d28" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void esc_write_eeprom_data</definition>
-        <argsstring>(ESC_Type *ptr, uint64_t data)</argsstring>
-        <name>esc_write_eeprom_data</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint64_t</type>
-          <declname>data</declname>
-        </param>
-        <briefdescription>
-<para>ESC write eeprom data to register, this function is using in eeprom emulation function. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">data</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>eeprom data </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="304" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="304" bodyend="307"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1ga619c7090712e0b1a8cc12ea037a3531c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void esc_config_latch0_source</definition>
-        <argsstring>(ESC_Type *ptr, bool latch0_from_ntm)</argsstring>
-        <name>esc_config_latch0_source</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>latch0_from_ntm</declname>
-        </param>
-        <briefdescription>
-<para>ESC config latch0 signal source. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">latch0_from_ntm</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>true for signal from ntm system, false for signal from IO </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="315" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="315" bodyend="322"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1ga665e5416c167f0643a13eae185619582" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void esc_config_latch1_source</definition>
-        <argsstring>(ESC_Type *ptr, bool latch0_from_trigmux)</argsstring>
-        <name>esc_config_latch1_source</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>latch0_from_trigmux</declname>
-        </param>
-        <briefdescription>
-<para>ESC config latch1 signal source. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">latch0_from_trigmux</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>true for signal from trigmux system, false for signal from IO </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_esc_drv.h" line="330" column="20" bodyfile="drivers/inc/hpm_esc_drv.h" bodystart="330" bodyend="337"/>
-      </memberdef>
-      </sectiondef>
+    <sectiondef kind="enum">
+      <member refid="group__esc__interface_1ga2f80701c36e79c0640d91c788feee0b3" kind="enum"><name></name></member>
+      <member refid="group__esc__interface_1gad1df92c6cfbc9e350e70f202fceb83eb" kind="enum"><name>esc_latch_source_t</name></member>
+      <member refid="group__esc__interface_1ga3c7594a7a150bc5ba4aee21b6b54d1ee" kind="enum"><name>esc_eeprom_cmd_t</name></member>
+      <member refid="group__esc__interface_1ga40fbe82036b22639e2d4c5e267688ad2" kind="enum"><name>esc_ctrl_signal_function_t</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__esc__interface_1ga040f71322926310041001b700d02c05c" kind="function"><name>esc_core_enable_clock</name></member>
+      <member refid="group__esc__interface_1ga9346b1daa6b1ef52492ea29fa82fd376" kind="function"><name>esc_phy_enable_clock</name></member>
+      <member refid="group__esc__interface_1gabacb335a2e3a1c320369f11b4b0229f2" kind="function"><name>esc_config_eeprom_and_clock</name></member>
+      <member refid="group__esc__interface_1gad8868589476747c2dc6d591dc8bc725b" kind="function"><name>esc_config_ctrl_signal_function</name></member>
+      <member refid="group__esc__interface_1gaee64fee0f23e1038c998662071c055ee" kind="function"><name>esc_config_nmii_link_source</name></member>
+      <member refid="group__esc__interface_1gab51f3dee517ea59cfd2f941b88ab5f1b" kind="function"><name>esc_config_reset_source</name></member>
+      <member refid="group__esc__interface_1ga724955559c1bab240e082878bbde7103" kind="function"><name>esc_pdi_reset</name></member>
+      <member refid="group__esc__interface_1gaf0bbb8605ded5271e8a662a05b9e6219" kind="function"><name>esc_set_phy_offset</name></member>
+      <member refid="group__esc__interface_1ga08d784ae70f4a75bafb915ce64f79e13" kind="function"><name>esc_enable_pdi_access_mii_management</name></member>
+      <member refid="group__esc__interface_1gab8a603d045b3c34c88c2c8d2950e6ce9" kind="function"><name>esc_disable_pdi_access_mii_management</name></member>
+      <member refid="group__esc__interface_1gaaeaf167df19c81d1f5fb0d0c361fd876" kind="function"><name>esc_mdio_read</name></member>
+      <member refid="group__esc__interface_1ga34e62d5c1a185ea2af70471ff27541d2" kind="function"><name>esc_mdio_write</name></member>
+      <member refid="group__esc__interface_1ga83d77fb518b47b541050b5803e137a3d" kind="function"><name>esc_check_eeprom_loading</name></member>
+      <member refid="group__esc__interface_1ga80b2e17af6555921555fd46a7175c1d0" kind="function"><name>esc_get_eeprom_cmd</name></member>
+      <member refid="group__esc__interface_1gadfcea55543bb1a71ec533d83b843077c" kind="function"><name>esc_eeprom_emulation_ack</name></member>
+      <member refid="group__esc__interface_1ga661950c9191d31a49ef357ad1637e4f0" kind="function"><name>esc_get_eeprom_byte_address</name></member>
+      <member refid="group__esc__interface_1ga456e385aad946c0ae7ba4d8d96c24482" kind="function"><name>esc_get_eeprom_word_address</name></member>
+      <member refid="group__esc__interface_1ga0830c7e2a6fe953a2b9d9f87d04c5253" kind="function"><name>esc_read_eeprom_data</name></member>
+      <member refid="group__esc__interface_1ga9ee19c3ae2aef84992198eef81e77d28" kind="function"><name>esc_write_eeprom_data</name></member>
+      <member refid="group__esc__interface_1ga619c7090712e0b1a8cc12ea037a3531c" kind="function"><name>esc_config_latch0_source</name></member>
+      <member refid="group__esc__interface_1ga665e5416c167f0643a13eae185619582" kind="function"><name>esc_config_latch1_source</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -1130,7 +157,7 @@
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enable)<sp/>{</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a5392f66acc16aaf04113d3282fb7ce70" kindref="member">GPR_CFG0</ref><sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a1496f4fafcceecb8b6b1267efc56fc87" kindref="member">ESC_GPR_CFG0_CLK100_EN_MASK</ref>;</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a5392f66acc16aaf04113d3282fb7ce70" kindref="member">GPR_CFG0</ref><sp/>&amp;=<sp/>~<ref refid="hpm__esc__regs_8h_1a1496f4fafcceecb8b6b1267efc56fc87" kindref="member">ESC_GPR_CFG0_CLK100_EN_MASK</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a5392f66acc16aaf04113d3282fb7ce70" kindref="member">GPR_CFG0</ref><sp/>&amp;=<sp/>~ESC_GPR_CFG0_CLK100_EN_MASK;</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="82"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
@@ -1139,7 +166,7 @@
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enable)<sp/>{</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1ab91f42f232c1e8625e431777bfba8f42" kindref="member">PHY_CFG1</ref><sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a7722d1f62d84862c7f4765ee8e21e3c4" kindref="member">ESC_PHY_CFG1_REFCK_25M_OE_MASK</ref>;<sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1ab91f42f232c1e8625e431777bfba8f42" kindref="member">PHY_CFG1</ref><sp/>&amp;=<sp/>~<ref refid="hpm__esc__regs_8h_1a7722d1f62d84862c7f4765ee8e21e3c4" kindref="member">ESC_PHY_CFG1_REFCK_25M_OE_MASK</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1ab91f42f232c1e8625e431777bfba8f42" kindref="member">PHY_CFG1</ref><sp/>&amp;=<sp/>~ESC_PHY_CFG1_REFCK_25M_OE_MASK;<sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="97"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight></codeline>
@@ -1151,12 +178,12 @@
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpr_cfg0<sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a23674e6763cdcb05b82537bb94e3da6a" kindref="member">ESC_GPR_CFG0_EEPROM_EMU_MASK</ref>;</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpr_cfg0<sp/>&amp;=<sp/>~(<ref refid="hpm__esc__regs_8h_1ae86622f625cf61e23e046c28ebae9c63" kindref="member">ESC_GPR_CFG0_PROM_SIZE_MASK</ref><sp/>|<sp/><ref refid="hpm__esc__regs_8h_1a88fd455e86763f4562c82ad2343ae6ea" kindref="member">ESC_GPR_CFG0_I2C_SCLK_EN_MASK</ref>);</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpr_cfg0<sp/>&amp;=<sp/>~<ref refid="hpm__esc__regs_8h_1a23674e6763cdcb05b82537bb94e3da6a" kindref="member">ESC_GPR_CFG0_EEPROM_EMU_MASK</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpr_cfg0<sp/>&amp;=<sp/>~ESC_GPR_CFG0_EEPROM_EMU_MASK;</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpr_cfg0<sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a88fd455e86763f4562c82ad2343ae6ea" kindref="member">ESC_GPR_CFG0_I2C_SCLK_EN_MASK</ref>;</highlight></codeline>
 <codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structesc__eeprom__clock__config__t_1aaa3f55115c82684d66b374ff6f8fbb02" kindref="member">eeprom_size_over_16kbit</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpr_cfg0<sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1ae86622f625cf61e23e046c28ebae9c63" kindref="member">ESC_GPR_CFG0_PROM_SIZE_MASK</ref>;</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpr_cfg0<sp/>&amp;=<sp/>~<ref refid="hpm__esc__regs_8h_1ae86622f625cf61e23e046c28ebae9c63" kindref="member">ESC_GPR_CFG0_PROM_SIZE_MASK</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpr_cfg0<sp/>&amp;=<sp/>~ESC_GPR_CFG0_PROM_SIZE_MASK;</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a5392f66acc16aaf04113d3282fb7ce70" kindref="member">GPR_CFG0</ref><sp/>=<sp/>gpr_cfg0;</highlight></codeline>
@@ -1174,32 +201,32 @@
 <codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(link0_from_io)<sp/>{</highlight></codeline>
 <codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a0eb043535df1fa6451f0178498b63ccb" kindref="member">GPR_CFG2</ref><sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a6909c292d17c0fe97fbbf5cd3effc83f" kindref="member">ESC_GPR_CFG2_NMII_LINK0_FROM_IO_MASK</ref>;</highlight></codeline>
 <codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a0eb043535df1fa6451f0178498b63ccb" kindref="member">GPR_CFG2</ref><sp/>&amp;=<sp/>~<ref refid="hpm__esc__regs_8h_1a6909c292d17c0fe97fbbf5cd3effc83f" kindref="member">ESC_GPR_CFG2_NMII_LINK0_FROM_IO_MASK</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a0eb043535df1fa6451f0178498b63ccb" kindref="member">GPR_CFG2</ref><sp/>&amp;=<sp/>~ESC_GPR_CFG2_NMII_LINK0_FROM_IO_MASK;</highlight></codeline>
 <codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a0eb043535df1fa6451f0178498b63ccb" kindref="member">GPR_CFG2</ref><sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a655dd8f79df9eeaff979bb171ce15a2b" kindref="member">ESC_GPR_CFG2_NMII_LINK0_GPR_MASK</ref>;<sp/></highlight><highlight class="comment">/*<sp/>config<sp/>GRP<sp/>to<sp/>indicate<sp/>LINK0<sp/>is<sp/>invalid<sp/>by<sp/>default<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="155"><highlight class="normal"></highlight></codeline>
 <codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(link1_from_io)<sp/>{</highlight></codeline>
 <codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a0eb043535df1fa6451f0178498b63ccb" kindref="member">GPR_CFG2</ref><sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a03654c3b994af08d0965f79b44133761" kindref="member">ESC_GPR_CFG2_NMII_LINK1_FROM_IO_MASK</ref>;</highlight></codeline>
 <codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a0eb043535df1fa6451f0178498b63ccb" kindref="member">GPR_CFG2</ref><sp/>&amp;=<sp/>~<ref refid="hpm__esc__regs_8h_1a03654c3b994af08d0965f79b44133761" kindref="member">ESC_GPR_CFG2_NMII_LINK1_FROM_IO_MASK</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a0eb043535df1fa6451f0178498b63ccb" kindref="member">GPR_CFG2</ref><sp/>&amp;=<sp/>~ESC_GPR_CFG2_NMII_LINK1_FROM_IO_MASK;</highlight></codeline>
 <codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a0eb043535df1fa6451f0178498b63ccb" kindref="member">GPR_CFG2</ref><sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a245bb9868cfabf6973eb90ae70f325bb" kindref="member">ESC_GPR_CFG2_NMII_LINK1_GPR_MASK</ref>;<sp/></highlight><highlight class="comment">/*<sp/>config<sp/>GRP<sp/>to<sp/>indicate<sp/>LINK1<sp/>is<sp/>invalid<sp/>by<sp/>default<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="162"><highlight class="normal"></highlight></codeline>
 <codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(link2_from_io)<sp/>{</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a0eb043535df1fa6451f0178498b63ccb" kindref="member">GPR_CFG2</ref><sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a4727817986b3b09c1951683808dc4102" kindref="member">ESC_GPR_CFG2_NMII_LINK2_FROM_IO_MASK</ref>;</highlight></codeline>
 <codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a0eb043535df1fa6451f0178498b63ccb" kindref="member">GPR_CFG2</ref><sp/>&amp;=<sp/>~<ref refid="hpm__esc__regs_8h_1a4727817986b3b09c1951683808dc4102" kindref="member">ESC_GPR_CFG2_NMII_LINK2_FROM_IO_MASK</ref>;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a0eb043535df1fa6451f0178498b63ccb" kindref="member">GPR_CFG2</ref><sp/>&amp;=<sp/>~ESC_GPR_CFG2_NMII_LINK2_FROM_IO_MASK;</highlight></codeline>
 <codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a0eb043535df1fa6451f0178498b63ccb" kindref="member">GPR_CFG2</ref><sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a11b5e959c164f4136a78b11ba2191b95" kindref="member">ESC_GPR_CFG2_NMII_LINK2_GPR_MASK</ref>;<sp/></highlight><highlight class="comment">/*<sp/>config<sp/>GRP<sp/>to<sp/>indicate<sp/>LINK2<sp/>is<sp/>invalid<sp/>by<sp/>default<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="169"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="170"><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>config<sp/>ESC<sp/>reset<sp/>request<sp/>source:<sp/>ESC<sp/>core<sp/>or<sp/>GRP_REG<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>config<sp/>ESC<sp/>reset<sp/>request<sp/>source:<sp/>ESC<sp/>core<sp/>or<sp/>GRP_REG<sp/>value<sp/>*/</highlight></codeline>
 <codeline lineno="178" refid="group__esc__interface_1gab51f3dee517ea59cfd2f941b88ab5f1b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__esc__interface_1gab51f3dee517ea59cfd2f941b88ab5f1b" kindref="member">esc_config_reset_source</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reset_from_ecat_core)</highlight></codeline>
 <codeline lineno="179"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(reset_from_ecat_core)<sp/>{</highlight></codeline>
 <codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a73434fff13c7b922b810fdbb75171ae1" kindref="member">GPR_CFG1</ref><sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1afe2b9f7f08174750d7dcbbf0560fe3ce" kindref="member">ESC_GPR_CFG1_RSTO_OVRD_ENJ_MASK</ref>;</highlight></codeline>
 <codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a73434fff13c7b922b810fdbb75171ae1" kindref="member">GPR_CFG1</ref><sp/>&amp;=<sp/>~<ref refid="hpm__esc__regs_8h_1afe2b9f7f08174750d7dcbbf0560fe3ce" kindref="member">ESC_GPR_CFG1_RSTO_OVRD_ENJ_MASK</ref>;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a73434fff13c7b922b810fdbb75171ae1" kindref="member">GPR_CFG1</ref><sp/>&amp;=<sp/>~ESC_GPR_CFG1_RSTO_OVRD_ENJ_MASK;</highlight></codeline>
 <codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="185"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="186"><highlight class="normal"></highlight></codeline>
@@ -1210,74 +237,89 @@
 <codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a2060c0a6a80cac0d8dabb0897864d1dc" kindref="member">ESC_RST_PDI</ref><sp/>=<sp/>0x53;<sp/></highlight><highlight class="comment">/*<sp/>S<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="198"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="199"><highlight class="normal"></highlight></codeline>
-<codeline lineno="209"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__esc__interface_1gaaeaf167df19c81d1f5fb0d0c361fd876" kindref="member">esc_mdio_read</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>phy_addr,<sp/>uint8_t<sp/>reg_addr,<sp/>uint16_t<sp/>*data);</highlight></codeline>
+<codeline lineno="206" refid="group__esc__interface_1gaf0bbb8605ded5271e8a662a05b9e6219" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__esc__interface_1gaf0bbb8605ded5271e8a662a05b9e6219" kindref="member">esc_set_phy_offset</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>offset)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a20c6ccfc2c2e6b18d44f8576c7960364" kindref="member">PHY_CFG0</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structESC__Type_1a20c6ccfc2c2e6b18d44f8576c7960364" kindref="member">PHY_CFG0</ref><sp/>&amp;<sp/>~ESC_PHY_CFG0_PHY_OFFSET_VAL_MASK)<sp/>|<sp/>(offset<sp/>&lt;&lt;<sp/><ref refid="hpm__esc__regs_8h_1ac2c10ea7f53b0638edff98ee2dbff219" kindref="member">ESC_PHY_CFG0_PHY_OFFSET_VAL_SHIFT</ref>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="210"><highlight class="normal"></highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__esc__interface_1ga34e62d5c1a185ea2af70471ff27541d2" kindref="member">esc_mdio_write</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>phy_addr,<sp/>uint8_t<sp/>reg_addr,<sp/>uint16_t<sp/>data);</highlight></codeline>
+<codeline lineno="216" refid="group__esc__interface_1ga08d784ae70f4a75bafb915ce64f79e13" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__esc__interface_1ga08d784ae70f4a75bafb915ce64f79e13" kindref="member">esc_enable_pdi_access_mii_management</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1aab3e40f10b967a7d4a1c13f0f79c08b3" kindref="member">MIIM_PDI_ACC_STAT</ref><sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a8525efa701fd6c7da00bf9bf659740b1" kindref="member">ESC_MIIM_PDI_ACC_STAT_ACC_MASK</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="220"><highlight class="normal"></highlight></codeline>
-<codeline lineno="231"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__esc__interface_1ga83d77fb518b47b541050b5803e137a3d" kindref="member">esc_check_eeprom_loading</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr);</highlight></codeline>
-<codeline lineno="232"><highlight class="normal"></highlight></codeline>
-<codeline lineno="239" refid="group__esc__interface_1ga80b2e17af6555921555fd46a7175c1d0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="group__esc__interface_1ga80b2e17af6555921555fd46a7175c1d0" kindref="member">esc_get_eeprom_cmd</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr)</highlight></codeline>
-<codeline lineno="240"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="hpm__esc__regs_8h_1a7e78ef18f74c9114d8a12998ee6a7a62" kindref="member">ESC_EEPROM_CTRL_STAT_CMD_GET</ref>(ptr-&gt;<ref refid="structESC__Type_1a2b08aa2b8f7764365aa929aec457d51b" kindref="member">EEPROM_CTRL_STAT</ref>);</highlight></codeline>
-<codeline lineno="242"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="243"><highlight class="normal"></highlight></codeline>
-<codeline lineno="252" refid="group__esc__interface_1gadfcea55543bb1a71ec533d83b843077c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__esc__interface_1gadfcea55543bb1a71ec533d83b843077c" kindref="member">esc_eeprom_emulation_ack</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/><ref refid="group__esc__interface_1ga3c7594a7a150bc5ba4aee21b6b54d1ee" kindref="member">esc_eeprom_cmd_t</ref><sp/>cmd,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ack_err,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>crc_err)</highlight></codeline>
-<codeline lineno="253"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>temp<sp/>=<sp/><ref refid="hpm__esc__regs_8h_1a07a6c230c32c58fa128b1e566b5d6e1d" kindref="member">ESC_EEPROM_CTRL_STAT_CMD_SET</ref>(cmd);</highlight></codeline>
-<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ack_err)<sp/>{</highlight></codeline>
-<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1abb2d897760b553e056c3e4701198d412" kindref="member">ESC_EEPROM_CTRL_STAT_ERR_ACK_CMD_MASK</ref>;</highlight></codeline>
-<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(crc_err)<sp/>{</highlight></codeline>
-<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1ad2105257e9a530940ace7e4c87b0adf7" kindref="member">ESC_EEPROM_CTRL_STAT_CKSM_ERR_MASK</ref>;</highlight></codeline>
-<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="261"><highlight class="normal"></highlight></codeline>
-<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a2b08aa2b8f7764365aa929aec457d51b" kindref="member">EEPROM_CTRL_STAT</ref><sp/>=<sp/>temp;</highlight></codeline>
-<codeline lineno="263"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="264"><highlight class="normal"></highlight></codeline>
-<codeline lineno="271" refid="group__esc__interface_1ga661950c9191d31a49ef357ad1637e4f0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__esc__interface_1ga661950c9191d31a49ef357ad1637e4f0" kindref="member">esc_get_eeprom_byte_address</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr)</highlight></codeline>
-<codeline lineno="272"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(ptr-&gt;<ref refid="structESC__Type_1a18557b6a7d6ac63ca08863dbff239f2c" kindref="member">EEPROM_ADDR</ref>)<sp/>&lt;&lt;<sp/>1U;</highlight></codeline>
-<codeline lineno="274"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="275"><highlight class="normal"></highlight></codeline>
-<codeline lineno="282" refid="group__esc__interface_1ga456e385aad946c0ae7ba4d8d96c24482" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__esc__interface_1ga456e385aad946c0ae7ba4d8d96c24482" kindref="member">esc_get_eeprom_word_address</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="226" refid="group__esc__interface_1gab8a603d045b3c34c88c2c8d2950e6ce9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__esc__interface_1gab8a603d045b3c34c88c2c8d2950e6ce9" kindref="member">esc_disable_pdi_access_mii_management</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1aab3e40f10b967a7d4a1c13f0f79c08b3" kindref="member">MIIM_PDI_ACC_STAT</ref><sp/>&amp;=<sp/>~ESC_MIIM_PDI_ACC_STAT_ACC_MASK;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__esc__interface_1gaaeaf167df19c81d1f5fb0d0c361fd876" kindref="member">esc_mdio_read</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>phy_addr,<sp/>uint8_t<sp/>reg_addr,<sp/>uint16_t<sp/>*data);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__esc__interface_1ga34e62d5c1a185ea2af70471ff27541d2" kindref="member">esc_mdio_write</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>phy_addr,<sp/>uint8_t<sp/>reg_addr,<sp/>uint16_t<sp/>data);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__esc__interface_1ga83d77fb518b47b541050b5803e137a3d" kindref="member">esc_check_eeprom_loading</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269" refid="group__esc__interface_1ga80b2e17af6555921555fd46a7175c1d0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="group__esc__interface_1ga80b2e17af6555921555fd46a7175c1d0" kindref="member">esc_get_eeprom_cmd</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="hpm__esc__regs_8h_1a7e78ef18f74c9114d8a12998ee6a7a62" kindref="member">ESC_EEPROM_CTRL_STAT_CMD_GET</ref>(ptr-&gt;<ref refid="structESC__Type_1a2b08aa2b8f7764365aa929aec457d51b" kindref="member">EEPROM_CTRL_STAT</ref>);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282" refid="group__esc__interface_1gadfcea55543bb1a71ec533d83b843077c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__esc__interface_1gadfcea55543bb1a71ec533d83b843077c" kindref="member">esc_eeprom_emulation_ack</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/><ref refid="group__esc__interface_1ga3c7594a7a150bc5ba4aee21b6b54d1ee" kindref="member">esc_eeprom_cmd_t</ref><sp/>cmd,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ack_err,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>crc_err)</highlight></codeline>
 <codeline lineno="283"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structESC__Type_1a18557b6a7d6ac63ca08863dbff239f2c" kindref="member">EEPROM_ADDR</ref>;</highlight></codeline>
-<codeline lineno="285"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="286"><highlight class="normal"></highlight></codeline>
-<codeline lineno="293" refid="group__esc__interface_1ga0830c7e2a6fe953a2b9d9f87d04c5253" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="group__esc__interface_1ga0830c7e2a6fe953a2b9d9f87d04c5253" kindref="member">esc_read_eeprom_data</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr)</highlight></codeline>
-<codeline lineno="294"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structESC__Type_1a4cba9cdab3d68631032aaaff4380ff08" kindref="member">EEPROM_DATA</ref>;</highlight></codeline>
-<codeline lineno="296"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="297"><highlight class="normal"></highlight></codeline>
-<codeline lineno="304" refid="group__esc__interface_1ga9ee19c3ae2aef84992198eef81e77d28" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__esc__interface_1ga9ee19c3ae2aef84992198eef81e77d28" kindref="member">esc_write_eeprom_data</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/>uint64_t<sp/>data)</highlight></codeline>
-<codeline lineno="305"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a4cba9cdab3d68631032aaaff4380ff08" kindref="member">EEPROM_DATA</ref><sp/>=<sp/>data;</highlight></codeline>
-<codeline lineno="307"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="308"><highlight class="normal"></highlight></codeline>
-<codeline lineno="315" refid="group__esc__interface_1ga619c7090712e0b1a8cc12ea037a3531c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__esc__interface_1ga619c7090712e0b1a8cc12ea037a3531c" kindref="member">esc_config_latch0_source</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>latch0_from_ntm)</highlight></codeline>
-<codeline lineno="316"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(latch0_from_ntm)<sp/>{</highlight></codeline>
-<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a73434fff13c7b922b810fdbb75171ae1" kindref="member">GPR_CFG1</ref><sp/>&amp;=<sp/>~<ref refid="hpm__esc__regs_8h_1a36153d3e265b89d9b57520232987a0d8" kindref="member">ESC_GPR_CFG1_LATCH0_FROM_IO_MASK</ref>;</highlight></codeline>
-<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a73434fff13c7b922b810fdbb75171ae1" kindref="member">GPR_CFG1</ref><sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a36153d3e265b89d9b57520232987a0d8" kindref="member">ESC_GPR_CFG1_LATCH0_FROM_IO_MASK</ref>;</highlight></codeline>
-<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="322"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="323"><highlight class="normal"></highlight></codeline>
-<codeline lineno="330" refid="group__esc__interface_1ga665e5416c167f0643a13eae185619582" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__esc__interface_1ga665e5416c167f0643a13eae185619582" kindref="member">esc_config_latch1_source</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>latch0_from_trigmux)</highlight></codeline>
-<codeline lineno="331"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(latch0_from_trigmux)<sp/>{</highlight></codeline>
-<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a73434fff13c7b922b810fdbb75171ae1" kindref="member">GPR_CFG1</ref><sp/>&amp;=<sp/>~<ref refid="hpm__esc__regs_8h_1a2754ac9d9f16d15ea4237f5780d4fd84" kindref="member">ESC_GPR_CFG1_LATCH1_FROM_IO_MASK</ref>;</highlight></codeline>
-<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a73434fff13c7b922b810fdbb75171ae1" kindref="member">GPR_CFG1</ref><sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a2754ac9d9f16d15ea4237f5780d4fd84" kindref="member">ESC_GPR_CFG1_LATCH1_FROM_IO_MASK</ref>;</highlight></codeline>
-<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>temp<sp/>=<sp/><ref refid="hpm__esc__regs_8h_1a07a6c230c32c58fa128b1e566b5d6e1d" kindref="member">ESC_EEPROM_CTRL_STAT_CMD_SET</ref>(cmd);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ack_err)<sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1abb2d897760b553e056c3e4701198d412" kindref="member">ESC_EEPROM_CTRL_STAT_ERR_ACK_CMD_MASK</ref>;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(crc_err)<sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1ad2105257e9a530940ace7e4c87b0adf7" kindref="member">ESC_EEPROM_CTRL_STAT_CKSM_ERR_MASK</ref>;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a2b08aa2b8f7764365aa929aec457d51b" kindref="member">EEPROM_CTRL_STAT</ref><sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="group__esc__interface_1ga661950c9191d31a49ef357ad1637e4f0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__esc__interface_1ga661950c9191d31a49ef357ad1637e4f0" kindref="member">esc_get_eeprom_byte_address</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(ptr-&gt;<ref refid="structESC__Type_1a18557b6a7d6ac63ca08863dbff239f2c" kindref="member">EEPROM_ADDR</ref>)<sp/>&lt;&lt;<sp/>1U;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312" refid="group__esc__interface_1ga456e385aad946c0ae7ba4d8d96c24482" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__esc__interface_1ga456e385aad946c0ae7ba4d8d96c24482" kindref="member">esc_get_eeprom_word_address</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="313"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structESC__Type_1a18557b6a7d6ac63ca08863dbff239f2c" kindref="member">EEPROM_ADDR</ref>;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323" refid="group__esc__interface_1ga0830c7e2a6fe953a2b9d9f87d04c5253" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="group__esc__interface_1ga0830c7e2a6fe953a2b9d9f87d04c5253" kindref="member">esc_read_eeprom_data</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="324"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structESC__Type_1a4cba9cdab3d68631032aaaff4380ff08" kindref="member">EEPROM_DATA</ref>;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334" refid="group__esc__interface_1ga9ee19c3ae2aef84992198eef81e77d28" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__esc__interface_1ga9ee19c3ae2aef84992198eef81e77d28" kindref="member">esc_write_eeprom_data</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/>uint64_t<sp/>data)</highlight></codeline>
+<codeline lineno="335"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a4cba9cdab3d68631032aaaff4380ff08" kindref="member">EEPROM_DATA</ref><sp/>=<sp/>data;</highlight></codeline>
 <codeline lineno="337"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="338"><highlight class="normal"></highlight></codeline>
-<codeline lineno="339"><highlight class="normal"></highlight></codeline>
-<codeline lineno="340"><highlight class="normal"></highlight></codeline>
-<codeline lineno="341"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="342"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="343"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="347"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HPM_ESC_DRV_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="345" refid="group__esc__interface_1ga619c7090712e0b1a8cc12ea037a3531c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__esc__interface_1ga619c7090712e0b1a8cc12ea037a3531c" kindref="member">esc_config_latch0_source</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>latch0_from_ntm)</highlight></codeline>
+<codeline lineno="346"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(latch0_from_ntm)<sp/>{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a73434fff13c7b922b810fdbb75171ae1" kindref="member">GPR_CFG1</ref><sp/>&amp;=<sp/>~ESC_GPR_CFG1_LATCH0_FROM_IO_MASK;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a73434fff13c7b922b810fdbb75171ae1" kindref="member">GPR_CFG1</ref><sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a36153d3e265b89d9b57520232987a0d8" kindref="member">ESC_GPR_CFG1_LATCH0_FROM_IO_MASK</ref>;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="352"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360" refid="group__esc__interface_1ga665e5416c167f0643a13eae185619582" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__esc__interface_1ga665e5416c167f0643a13eae185619582" kindref="member">esc_config_latch1_source</ref>(<ref refid="structESC__Type" kindref="compound">ESC_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>latch0_from_trigmux)</highlight></codeline>
+<codeline lineno="361"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(latch0_from_trigmux)<sp/>{</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a73434fff13c7b922b810fdbb75171ae1" kindref="member">GPR_CFG1</ref><sp/>&amp;=<sp/>~ESC_GPR_CFG1_LATCH1_FROM_IO_MASK;</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a73434fff13c7b922b810fdbb75171ae1" kindref="member">GPR_CFG1</ref><sp/>|=<sp/><ref refid="hpm__esc__regs_8h_1a2754ac9d9f16d15ea4237f5780d4fd84" kindref="member">ESC_GPR_CFG1_LATCH1_FROM_IO_MASK</ref>;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="367"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HPM_ESC_DRV_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="drivers/inc/hpm_esc_drv.h"/>
   </compounddef>

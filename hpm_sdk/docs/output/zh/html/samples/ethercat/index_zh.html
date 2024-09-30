@@ -24,7 +24,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="37.1. ECAT_IO" href="ecat_io/README_zh.html" />
+    <link rel="next" title="37.1. ECAT_CiA402" href="ecat_cia402/README_zh.html" />
     <link rel="prev" title="36.4. Cherry Shell Barebone USB" href="../cherrysh/barebone_usb/README_zh.html" /> 
 </head>
 
@@ -52,6 +52,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../get_started.html">使用说明</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../boards/index_zh.html">开发板介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components/index_zh.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index_zh.html">例程</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../audio_codec/index_zh.html">1. Audio Codec</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cherryrb/README_zh.html">2. CherryRB</a></li>
@@ -90,9 +91,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../spi_sdcard/index_zh.html">35. SPI驱动SD卡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cherrysh/index_zh.html">36. CherrySH</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">37. EtherCAT</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html">37.1. ECAT_IO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_zh.html">37.1. ECAT_CiA402</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_zh.html">37.2. ECAT_FOE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html">37.3. ECAT_IO</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../smbus/index_zh.html">38. SMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pmbus/index_zh.html">39. PMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tsn/index_zh.html">40. tsn</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../drivers/index_zh.html">驱动示例</a></li>
@@ -130,36 +136,86 @@
 <h1><span class="section-number">37. </span>EtherCAT<a class="headerlink" href="#ethercat" title="Permalink to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ecat_io/README_zh.html">37.1. ECAT_IO</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_zh.html#id1">37.1.1. 1. 概述</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_zh.html#id2">37.1.2. 2. 准备</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id3">37.1.2.1. 2.1 硬件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id4">37.1.2.2. 2.2 软件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ecat_cia402/README_zh.html">37.1. ECAT_CiA402</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ecat_cia402/README_zh.html#id1">37.1.1. 1. 概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_cia402/README_zh.html#id2">37.1.2. 2. 准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_cia402/README_zh.html#id3">37.1.3. 3. 工程设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_zh.html#flasheeprom">37.1.3.1. 3.1 使用Flash模拟EEPROM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_zh.html#id4">37.1.3.2. 3.2 使用虚拟电机</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_zh.html#id5">37.1.3. 3. 工程设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#flasheeprom">37.1.3.1. 3.1 使用Flash模拟EEPROM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#eeprom">37.1.3.2. 3.2 使用实际EEPROM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_cia402/README_zh.html#id5">37.1.4. 4. 生成从站协议栈代码</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_zh.html#ssc-tool">37.1.4.1. 4.1. 下载SSC Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_zh.html#id6">37.1.4.2. 4.2 SSC Tool中导入配置文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_zh.html#id7">37.1.4.3. 4.3 SSC Tool生成协议栈代码</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_zh.html#ssc">37.1.4.4. 4.4 SSC协议栈代码修改</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_zh.html#id6">37.1.4. 4. 生成从站协议栈代码</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#ssc-tool">37.1.4.1. 4.1. 下载SSC Tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id7">37.1.4.2. 4.2 SSC Tool中导入配置文件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id8">37.1.4.3. 4.3 SSC Tool中创建新的工程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id9">37.1.4.4. 4.4 生成协议栈代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_cia402/README_zh.html#twincat">37.1.5. 5. TwinCAT工程设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_zh.html#esi">37.1.5.1. 5.1. 添加ESI文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_zh.html#id8">37.1.5.2. 5.2 创建工程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_zh.html#id9">37.1.5.3. 5.3 软件配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_zh.html#id10">37.1.5.4. 5.4 扫描设备</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_zh.html#eeprom">37.1.5.5. 5.5 更新EEPROM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_zh.html#nc">37.1.5.6. 5.6 NC轴控制操作</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_zh.html#twincat">37.1.5. 5. TwinCAT工程设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#esi">37.1.5.1. 5.1. 添加ESI文件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id10">37.1.5.2. 5.2 创建工程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id11">37.1.5.3. 5.3 软件配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id12">37.1.5.4. 5.4 扫描设备</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id13">37.1.5.5. 5.5 更新EEPROM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#io">37.1.5.6. 5.6 IO操作</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#dc">37.1.5.7. 5.7 DC设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_cia402/README_zh.html#id11">37.1.6. 6. 运行现象</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_zh.html#id14">37.1.6. 6. 运行现象</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ecat_foe/README_zh.html">37.2. ECAT_FOE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ecat_foe/README_zh.html#id1">37.2.1. 1. 概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_foe/README_zh.html#id2">37.2.2. 2. 准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_foe/README_zh.html#id3">37.2.3. 3. 工程设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_foe/README_zh.html#id4">37.2.4. 4. 生成从站协议栈代码</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_zh.html#ssc-tool">37.2.4.1. 4.1. 下载SSC Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_zh.html#id5">37.2.4.2. 4.2 SSC Tool中导入配置文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_zh.html#id6">37.2.4.3. 4.3 SSC Tool生成协议栈代码</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_foe/README_zh.html#twincat">37.2.5. 5. TwinCAT工程设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_zh.html#esi">37.2.5.1. 5.1. 添加ESI文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_zh.html#id7">37.2.5.2. 5.2 创建工程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_zh.html#id8">37.2.5.3. 5.3 软件配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_zh.html#id9">37.2.5.4. 5.4 扫描设备</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_zh.html#eeprom">37.2.5.5. 5.5 更新EEPROM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_zh.html#foe">37.2.5.6. 5.6 FOE操作</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_foe/README_zh.html#id10">37.2.6. 6. 运行现象</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ecat_io/README_zh.html">37.3. ECAT_IO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_zh.html#id1">37.3.1. 1. 概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_zh.html#id2">37.3.2. 2. 准备</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id3">37.3.2.1. 2.1 硬件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id4">37.3.2.2. 2.2 软件</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_zh.html#id5">37.3.3. 3. 工程设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#flasheeprom">37.3.3.1. 3.1 使用Flash模拟EEPROM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#eeprom">37.3.3.2. 3.2 使用实际EEPROM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_zh.html#id6">37.3.4. 4. 生成从站协议栈代码</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#ssc-tool">37.3.4.1. 4.1. 下载SSC Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id7">37.3.4.2. 4.2 SSC Tool中导入配置文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id8">37.3.4.3. 4.3 SSC Tool中创建新的工程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id9">37.3.4.4. 4.4 生成协议栈代码</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#ssc">37.3.4.5. 4.5 SSC协议栈代码修改</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_zh.html#twincat">37.3.5. 5. TwinCAT工程设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#esi">37.3.5.1. 5.1. 添加ESI文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id10">37.3.5.2. 5.2 创建工程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id11">37.3.5.3. 5.3 软件配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id12">37.3.5.4. 5.4 扫描设备</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#id13">37.3.5.5. 5.5 更新EEPROM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#io">37.3.5.6. 5.6 IO操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_zh.html#dc">37.3.5.7. 5.7 DC设置</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_zh.html#id14">37.3.6. 6. 运行现象</a></li>
 </ul>
 </li>
 </ul>
@@ -175,7 +231,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2020-2024, HPMicro.
-      <span class="lastupdated">Last updated on Jun 28, 2024.
+      <span class="lastupdated">Last updated on Sep 30, 2024.
       </span></p>
   </div>
 

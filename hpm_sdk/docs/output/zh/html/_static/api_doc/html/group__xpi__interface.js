@@ -67,17 +67,17 @@ var group__xpi__interface =
     [ "XPI_PHASE_WRITE_DDR", "group__xpi__interface.html#ga254f9f8c9d97bf25af258227ffa2dc02", null ],
     [ "XPI_PHASE_WRITE_SDR", "group__xpi__interface.html#ga075ab8935c4653e55d9a7fff985690d1", null ],
     [ "XPI_Type", "group__xpi__interface.html#ga87560204ea6254a4c1b7dbbbae1bf60b", [
-      [ "status_xpi_apb_jump_on_cs", "group__xpi__interface.html#gga70bd01545ca54514ee53e0eb670b9562a1383558c122092c54b8314d1b02817f0", null ],
-      [ "status_xpi_apb_unknown_inst", "group__xpi__interface.html#gga70bd01545ca54514ee53e0eb670b9562a71d3523b453b9fd03d19aeadb95f5922", null ],
-      [ "status_xpi_apb_dummy_sdr_in_ddr_seq", "group__xpi__interface.html#gga70bd01545ca54514ee53e0eb670b9562adf54c0e4d302a631603925f633dd0e9f", null ],
-      [ "status_xpi_apb_dummy_ddr_in_sdr_seq", "group__xpi__interface.html#gga70bd01545ca54514ee53e0eb670b9562a3cee604b4b549d4accb75efcde42a831", null ],
-      [ "status_xpi_apb_exceed_addr_range", "group__xpi__interface.html#gga70bd01545ca54514ee53e0eb670b9562afd5ae700f74e3c206bc0d7baedf3edfa", null ],
-      [ "status_xpi_apb_seq_timeout", "group__xpi__interface.html#gga70bd01545ca54514ee53e0eb670b9562a9874b2d975b8e01270a5b8649c005a09", null ],
-      [ "status_xpi_apb_cross_boundary", "group__xpi__interface.html#gga70bd01545ca54514ee53e0eb670b9562a155d12963d729dd044142577462329d5", null ],
-      [ "xpi_dll_half_cycle", "group__xpi__interface.html#ggaeb8d583a31cccbb8cf9b452a8e298063ad4a84cc114dce34010ddffc171232796", null ],
-      [ "xpi_dll_quarter_cycle", "group__xpi__interface.html#ggaeb8d583a31cccbb8cf9b452a8e298063abdee6c2c09dd2c5b5c6be6f9966b1119", null ],
-      [ "xpi_dll_sdr_default_cycle", "group__xpi__interface.html#ggaeb8d583a31cccbb8cf9b452a8e298063a145f4f5da56c0a272c3cda070c9e5607", null ],
-      [ "xpi_dll_ddr_default_cycle", "group__xpi__interface.html#ggaeb8d583a31cccbb8cf9b452a8e298063acb6636aa8f605d13e8d0458fd41afe31", null ]
+      [ "status_xpi_apb_jump_on_cs", "group__xpi__interface.html#ggaf9e099c537bf634041abbe01e4c83422a1383558c122092c54b8314d1b02817f0", null ],
+      [ "status_xpi_apb_unknown_inst", "group__xpi__interface.html#ggaf9e099c537bf634041abbe01e4c83422a71d3523b453b9fd03d19aeadb95f5922", null ],
+      [ "status_xpi_apb_dummy_sdr_in_ddr_seq", "group__xpi__interface.html#ggaf9e099c537bf634041abbe01e4c83422adf54c0e4d302a631603925f633dd0e9f", null ],
+      [ "status_xpi_apb_dummy_ddr_in_sdr_seq", "group__xpi__interface.html#ggaf9e099c537bf634041abbe01e4c83422a3cee604b4b549d4accb75efcde42a831", null ],
+      [ "status_xpi_apb_exceed_addr_range", "group__xpi__interface.html#ggaf9e099c537bf634041abbe01e4c83422afd5ae700f74e3c206bc0d7baedf3edfa", null ],
+      [ "status_xpi_apb_seq_timeout", "group__xpi__interface.html#ggaf9e099c537bf634041abbe01e4c83422a9874b2d975b8e01270a5b8649c005a09", null ],
+      [ "status_xpi_apb_cross_boundary", "group__xpi__interface.html#ggaf9e099c537bf634041abbe01e4c83422a155d12963d729dd044142577462329d5", null ],
+      [ "xpi_dll_half_cycle", "group__xpi__interface.html#gga871a83db4e53fc6c6872b5ac7cc94f39ad4a84cc114dce34010ddffc171232796", null ],
+      [ "xpi_dll_quarter_cycle", "group__xpi__interface.html#gga871a83db4e53fc6c6872b5ac7cc94f39abdee6c2c09dd2c5b5c6be6f9966b1119", null ],
+      [ "xpi_dll_sdr_default_cycle", "group__xpi__interface.html#gga871a83db4e53fc6c6872b5ac7cc94f39a145f4f5da56c0a272c3cda070c9e5607", null ],
+      [ "xpi_dll_ddr_default_cycle", "group__xpi__interface.html#gga871a83db4e53fc6c6872b5ac7cc94f39acb6636aa8f605d13e8d0458fd41afe31", null ]
     ] ],
     [ "xpi_apb_xfer_type_t", "group__xpi__interface.html#ga23bcf72f7d797a4992af3ccb0f560479", [
       [ "xpi_apb_xfer_type_cmd", "group__xpi__interface.html#gga23bcf72f7d797a4992af3ccb0f560479a77e6b01adbe8fe706b352d0602a080e4", null ],

@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__hfi_8c" kind="file" language="C++">
     <compoundname>hpm_hfi.c</compoundname>
     <includes refid="hpm__hfi_8h" local="yes">hpm_hfi.h</includes>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
       <node id="3">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -21,33 +18,16 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>assert.h</label>
-      </node>
-      <node id="6">
-        <label>stdint.h</label>
-      </node>
-      <node id="8">
-        <label>stdlib.h</label>
-      </node>
-      <node id="12">
-        <label>hpm_foc.h</label>
-        <link refid="hpm__foc_8h"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
       <node id="9">
         <label>hpm_bldc_define.h</label>
         <link refid="hpm__bldc__define_8h"/>
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="10">
-        <label>hpm_motor_math.h</label>
-        <link refid="hpm__motor__math_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
+      <node id="12">
+        <label>hpm_foc.h</label>
+        <link refid="hpm__foc_8h"/>
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -62,8 +42,17 @@
         <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="7">
-        <label>string.h</label>
+      <node id="10">
+        <label>hpm_motor_math.h</label>
+        <link refid="hpm__motor__math_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>hpm_smc.h</label>
+        <link refid="hpm__smc_8h"/>
       </node>
       <node id="1">
         <label>middleware/hpm_mcl/sensorless_control/hpm_hfi.c</label>
@@ -71,15 +60,26 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
       <node id="11">
         <label>math.h</label>
       </node>
-      <node id="13">
-        <label>hpm_smc.h</label>
-        <link refid="hpm__smc_8h"/>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
       </node>
     </incdepgraph>
-      <sectiondef kind="enum">
+    <sectiondef kind="enum">
       <memberdef kind="enum" id="hpm__hfi_8c_1a9695250c9a1e78a67bf5ecf0695b3de5" prot="public" static="no" strong="no">
         <type></type>
         <name>pole_detect_stat_t</name>
@@ -135,8 +135,8 @@
         </inbodydescription>
         <location file="middleware/hpm_mcl/sensorless_control/hpm_hfi.c" line="10" column="1" bodyfile="middleware/hpm_mcl/sensorless_control/hpm_hfi.c" bodystart="10" bodyend="17"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="hpm__hfi_8c_1a8b3d97f2962f7762867cdcf8a4e86c2d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>static void hpm_mcl_hfi_sin_cos</definition>
@@ -220,144 +220,9 @@
         </inbodydescription>
         <location file="middleware/hpm_mcl/sensorless_control/hpm_hfi.c" line="49" column="7" bodyfile="middleware/hpm_mcl/sensorless_control/hpm_hfi.c" bodystart="49" bodyend="78"/>
       </memberdef>
-      <memberdef kind="function" id="group__mcl__hfi__interface_1ga7ba14311cbf295b17d090828ae1b8816" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void hpm_mcl_hfi_loop</definition>
-        <argsstring>(BLDC_CONTROL_FOC_PARA *par, hpm_hfi_para_t *inject, hpm_hfi_pll_para_t *pll, hpm_hfi_pole_detect_para_t *pole)</argsstring>
-        <name>hpm_mcl_hfi_loop</name>
-        <param>
-          <type><ref refid="group__mcl__common_1ga3a102bd1f38d2949774b4acca548fd30" kindref="member">BLDC_CONTROL_FOC_PARA</ref> *</type>
-          <declname>par</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcl__hfi__interface_1ga4de14ca6e9db27227314a2f9d25a6c61" kindref="member">hpm_hfi_para_t</ref> *</type>
-          <declname>inject</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcl__hfi__interface_1gab0c07bf9068939980a7854357c124cb0" kindref="member">hpm_hfi_pll_para_t</ref> *</type>
-          <declname>pll</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcl__hfi__interface_1gaa45b275d57afd32325b7edc7f3b46e9d" kindref="member">hpm_hfi_pole_detect_para_t</ref> *</type>
-          <declname>pole</declname>
-        </param>
-        <briefdescription>
-<para>HFI current loop. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>par</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__mcl__common_1ga3a102bd1f38d2949774b4acca548fd30" kindref="member">BLDC_CONTROL_FOC_PARA</ref> </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>inject</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__mcl__hfi__interface_1ga4de14ca6e9db27227314a2f9d25a6c61" kindref="member">hpm_hfi_para_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>pll</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__mcl__hfi__interface_1gab0c07bf9068939980a7854357c124cb0" kindref="member">hpm_hfi_pll_para_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>pole</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__mcl__hfi__interface_1gaa45b275d57afd32325b7edc7f3b46e9d" kindref="member">hpm_hfi_pole_detect_para_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/sensorless_control/hpm_hfi.c" line="80" column="6" bodyfile="middleware/hpm_mcl/sensorless_control/hpm_hfi.c" bodystart="80" bodyend="110"/>
-      </memberdef>
-      <memberdef kind="function" id="group__mcl__hfi__interface_1ga37ef54eb18d2c36a9ceba92b0119acfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool hpm_mcl_hfi_pole_detect</definition>
-        <argsstring>(BLDC_CONTROL_FOC_PARA *foc, hpm_hfi_para_t *inject, hpm_hfi_pll_para_t *pll, hpm_hfi_pole_detect_para_t *pole)</argsstring>
-        <name>hpm_mcl_hfi_pole_detect</name>
-        <param>
-          <type><ref refid="group__mcl__common_1ga3a102bd1f38d2949774b4acca548fd30" kindref="member">BLDC_CONTROL_FOC_PARA</ref> *</type>
-          <declname>foc</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcl__hfi__interface_1ga4de14ca6e9db27227314a2f9d25a6c61" kindref="member">hpm_hfi_para_t</ref> *</type>
-          <declname>inject</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcl__hfi__interface_1gab0c07bf9068939980a7854357c124cb0" kindref="member">hpm_hfi_pll_para_t</ref> *</type>
-          <declname>pll</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mcl__hfi__interface_1gaa45b275d57afd32325b7edc7f3b46e9d" kindref="member">hpm_hfi_pole_detect_para_t</ref> *</type>
-          <declname>pole</declname>
-        </param>
-        <briefdescription>
-<para>HFI Magnetic Pole Detection. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>foc</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__mcl__common_1ga3a102bd1f38d2949774b4acca548fd30" kindref="member">BLDC_CONTROL_FOC_PARA</ref> </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>inject</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__mcl__hfi__interface_1ga4de14ca6e9db27227314a2f9d25a6c61" kindref="member">hpm_hfi_para_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>pll</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__mcl__hfi__interface_1gab0c07bf9068939980a7854357c124cb0" kindref="member">hpm_hfi_pll_para_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>pole</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="group__mcl__hfi__interface_1gaa45b275d57afd32325b7edc7f3b46e9d" kindref="member">hpm_hfi_pole_detect_para_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>true</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Complete pole identification false pole detection failure </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/sensorless_control/hpm_hfi.c" line="112" column="6" bodyfile="middleware/hpm_mcl/sensorless_control/hpm_hfi.c" bodystart="112" bodyend="182"/>
-      </memberdef>
-      </sectiondef>
+      <member refid="group__mcl__hfi__interface_1ga7ba14311cbf295b17d090828ae1b8816" kind="function"><name>hpm_mcl_hfi_loop</name></member>
+      <member refid="group__mcl__hfi__interface_1ga37ef54eb18d2c36a9ceba92b0119acfd" kind="function"><name>hpm_mcl_hfi_pole_detect</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

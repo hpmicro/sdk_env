@@ -4,6 +4,7 @@ var globals_type =
     [ "b", "globals_type_b.html", null ],
     [ "c", "globals_type_c.html", null ],
     [ "d", "globals_type_d.html", null ],
+    [ "e", "globals_type_e.html", null ],
     [ "f", "globals_type_f.html", null ],
     [ "g", "globals_type_g.html", null ],
     [ "h", "globals_type_h.html", null ],

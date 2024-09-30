@@ -24,7 +24,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="37.1. ECAT_IO" href="ecat_io/README_en.html" />
+    <link rel="next" title="37.1. ECAT_CiA402" href="ecat_cia402/README_en.html" />
     <link rel="prev" title="36.4. Cherry Shell Barebone USB" href="../cherrysh/barebone_usb/README_en.html" /> 
 </head>
 
@@ -52,6 +52,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../get_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../boards/index_en.html">Evaluation Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components/index_en.html">Components</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index_en.html">Samples</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../audio_codec/index_en.html">1. Audio Codec</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cherryrb/README_en.html">2. CherryRB</a></li>
@@ -90,9 +91,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../spi_sdcard/index_en.html">35. SPI_SDCARD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cherrysh/index_en.html">36. CherrySH</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">37. EtherCAT</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html">37.1. ECAT_IO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_en.html">37.1. ECAT_CiA402</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_en.html">37.2. ECAT_FOE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html">37.3. ECAT_IO</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../smbus/index_en.html">38. SMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pmbus/index_en.html">39. PMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tsn/index_en.html">40. tsn</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../drivers/index_en.html">Drivers Examples</a></li>
@@ -130,36 +136,86 @@
 <h1><span class="section-number">37. </span>EtherCAT<a class="headerlink" href="#ethercat" title="Permalink to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ecat_io/README_en.html">37.1. ECAT_IO</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_en.html#overview">37.1.1. 1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_en.html#prepare">37.1.2. 2. Prepare</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#hardware">37.1.2.1. 2.1 Hardware</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#software">37.1.2.2. 2.2 Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ecat_cia402/README_en.html">37.1. ECAT_CiA402</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ecat_cia402/README_en.html#overview">37.1.1. 1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_cia402/README_en.html#prepare">37.1.2. 2. Prepare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_cia402/README_en.html#project-setting">37.1.3. 3. Project Setting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_en.html#flash-emulate-eeprom">37.1.3.1. 3.1 Flash emulate EEPROM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_en.html#using-virtual-motor">37.1.3.2. 3.2 Using virtual motor</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_en.html#project-setting">37.1.3. 3. Project Setting</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#eeprom-emulation-setting">37.1.3.1. 3.1 EEPROM Emulation Setting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#using-actual-eeprom">37.1.3.2. 3.2 Using actual EEPROM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_cia402/README_en.html#generate-ethercat-slave-stack-code">37.1.4. 4. Generate EtherCAT slave stack code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_en.html#download-ssc-tool">37.1.4.1. 4.1. Download SSC Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_en.html#ssc-tool-import-configuration-files">37.1.4.2. 4.2 SSC Tool import configuration files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_en.html#create-slave-stack-files">37.1.4.3. 4.3 Create slave stack files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_en.html#ssc-code-change">37.1.4.4. 4.4 SSC code change</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_en.html#generate-ethercat-slave-stack-code">37.1.4. 4. Generate EtherCAT slave stack code</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#download-ssc-tool">37.1.4.1. 4.1. Download SSC Tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#ssc-tool-import-configuration-files">37.1.4.2. 4.2 SSC Tool import configuration files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#ssc-tool-create-new-project">37.1.4.3. 4.3 SSC Tool create new project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#create-slave-stack-files">37.1.4.4. 4.4 Create slave stack files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_cia402/README_en.html#twincat-project-setting">37.1.5. 5. TwinCAT Project setting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_en.html#add-esi-file">37.1.5.1. 5.1. Add ESI file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_en.html#create-project">37.1.5.2. 5.2 Create Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_en.html#software-configuration">37.1.5.3. 5.3 Software Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_en.html#scan-device">37.1.5.4. 5.4 Scan device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_en.html#update-eeprom-context">37.1.5.5. 5.5 Update EEPROM context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_cia402/README_en.html#nc-axis-control">37.1.5.6. 5.6 NC axis control</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_en.html#twincat-project-setting">37.1.5. 5. TwinCAT Project setting</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#add-esi-file">37.1.5.1. 5.1. Add ESI file</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#create-project">37.1.5.2. 5.2 Create Project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#software-configuration">37.1.5.3. 5.3 Software Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#scan-device">37.1.5.4. 5.4 Scan device</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#update-eeprom-context">37.1.5.5. 5.5 Update EEPROM context</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#io-control">37.1.5.6. 5.6 IO Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#dc-setting">37.1.5.7. 5.7 DC setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_cia402/README_en.html#running-the-example">37.1.6. 6. Running the example</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_en.html#running-the-example">37.1.6. 6. Running the example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ecat_foe/README_en.html">37.2. ECAT_FOE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ecat_foe/README_en.html#overview">37.2.1. 1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_foe/README_en.html#prepare">37.2.2. 2. Prepare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_foe/README_en.html#project-setting">37.2.3. 3. Project Setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_foe/README_en.html#generate-ethercat-slave-stack-code">37.2.4. 4. Generate EtherCAT slave stack code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_en.html#download-ssc-tool">37.2.4.1. 4.1. Download SSC Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_en.html#ssc-tool-import-configuration-files">37.2.4.2. 4.2 SSC Tool import configuration files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_en.html#ssc-tool-create-slave-stack">37.2.4.3. 4.3 SSC Tool create slave stack</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_foe/README_en.html#twincat-project-setting">37.2.5. 5. TwinCAT Project setting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_en.html#add-esi-file">37.2.5.1. 5.1. Add ESI file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_en.html#create-project">37.2.5.2. 5.2 Create Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_en.html#software-configuration">37.2.5.3. 5.3 Software Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_en.html#scan-device">37.2.5.4. 5.4 Scan device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_en.html#update-eeprom-context">37.2.5.5. 5.5 Update EEPROM context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_foe/README_en.html#foe-action">37.2.5.6. 5.6 FOE action</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_foe/README_en.html#running-the-example">37.2.6. 6. Running the example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ecat_io/README_en.html">37.3. ECAT_IO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_en.html#overview">37.3.1. 1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_en.html#prepare">37.3.2. 2. Prepare</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#hardware">37.3.2.1. 2.1 Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#software">37.3.2.2. 2.2 Software</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_en.html#project-setting">37.3.3. 3. Project Setting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#eeprom-emulation-setting">37.3.3.1. 3.1 EEPROM Emulation Setting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#using-actual-eeprom">37.3.3.2. 3.2 Using actual EEPROM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_en.html#generate-ethercat-slave-stack-code">37.3.4. 4. Generate EtherCAT slave stack code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#download-ssc-tool">37.3.4.1. 4.1. Download SSC Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#ssc-tool-import-configuration-files">37.3.4.2. 4.2 SSC Tool import configuration files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#ssc-tool-create-new-project">37.3.4.3. 4.3 SSC Tool create new project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#create-slave-stack-files">37.3.4.4. 4.4 Create slave stack files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#ssc-code-change">37.3.4.5. 4.5 SSC code change</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_en.html#twincat-project-setting">37.3.5. 5. TwinCAT Project setting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#add-esi-file">37.3.5.1. 5.1. Add ESI file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#create-project">37.3.5.2. 5.2 Create Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#software-configuration">37.3.5.3. 5.3 Software Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#scan-device">37.3.5.4. 5.4 Scan device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#update-eeprom-context">37.3.5.5. 5.5 Update EEPROM context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#io-control">37.3.5.6. 5.6 IO Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecat_io/README_en.html#dc-setting">37.3.5.7. 5.7 DC setting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecat_io/README_en.html#running-the-example">37.3.6. 6. Running the example</a></li>
 </ul>
 </li>
 </ul>
@@ -175,7 +231,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2020-2024, HPMicro.
-      <span class="lastupdated">Last updated on Jun 28, 2024.
+      <span class="lastupdated">Last updated on Sep 30, 2024.
       </span></p>
   </div>
 

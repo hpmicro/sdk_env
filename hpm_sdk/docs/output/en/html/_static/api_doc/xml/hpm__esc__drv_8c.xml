@@ -1,20 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__esc__drv_8c" kind="file" language="C++">
     <compoundname>hpm_esc_drv.c</compoundname>
     <includes refid="hpm__esc__drv_8h" local="yes">hpm_esc_drv.h</includes>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
-      <node id="2">
-        <label>hpm_esc_drv.h</label>
-        <link refid="hpm__esc__drv_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
       <node id="3">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -29,21 +18,13 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>assert.h</label>
-      </node>
-      <node id="6">
-        <label>stdint.h</label>
-      </node>
-      <node id="9">
-        <label>hpm_esc_regs.h</label>
-        <link refid="hpm__esc__regs_8h"/>
-      </node>
-      <node id="8">
-        <label>stdlib.h</label>
-      </node>
-      <node id="7">
-        <label>string.h</label>
+      <node id="2">
+        <label>hpm_esc_drv.h</label>
+        <link refid="hpm__esc__drv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>drivers/src/hpm_esc_drv.c</label>
@@ -51,8 +32,27 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="9">
+        <label>hpm_esc_regs.h</label>
+        <link refid="hpm__esc__regs_8h"/>
+      </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
     </incdepgraph>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="hpm__esc__drv_8c_1af5fc446f957bd4055580fe1148c02a60" prot="public" static="no">
         <name>HPM_ESC_DRV_DEFAULT_RETRY_COUNT</name>
         <initializer>(0xA0000000U)</initializer>
@@ -64,200 +64,12 @@
         </inbodydescription>
         <location file="drivers/src/hpm_esc_drv.c" line="11" column="9" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="11" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__esc__interface_1gaaeaf167df19c81d1f5fb0d0c361fd876" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t esc_mdio_read</definition>
-        <argsstring>(ESC_Type *ptr, uint8_t phy_addr, uint8_t reg_addr, uint16_t *data)</argsstring>
-        <name>esc_mdio_read</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>phy_addr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>reg_addr</declname>
-        </param>
-        <param>
-          <type>uint16_t *</type>
-          <declname>data</declname>
-        </param>
-        <briefdescription>
-<para>ESC read PHY register via ESC MII Management Interface. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">phy_addr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>PHY address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">reg_addr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Register address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">data</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>PHY data returned. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_esc_drv.c" line="14" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="14" bodyend="64"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1ga34e62d5c1a185ea2af70471ff27541d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t esc_mdio_write</definition>
-        <argsstring>(ESC_Type *ptr, uint8_t phy_addr, uint8_t reg_addr, uint16_t data)</argsstring>
-        <name>esc_mdio_write</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>phy_addr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>reg_addr</declname>
-        </param>
-        <param>
-          <type>uint16_t</type>
-          <declname>data</declname>
-        </param>
-        <briefdescription>
-<para>ESc write PHY register via ESC MII Management Interface. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">phy_addr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>PHY address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">reg_addr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Register address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">data</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Write to PHY register. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_esc_drv.c" line="66" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="66" bodyend="116"/>
-      </memberdef>
-      <memberdef kind="function" id="group__esc__interface_1ga83d77fb518b47b541050b5803e137a3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t esc_check_eeprom_loading</definition>
-        <argsstring>(ESC_Type *ptr)</argsstring>
-        <name>esc_check_eeprom_loading</name>
-        <param>
-          <type><ref refid="structESC__Type" kindref="compound">ESC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>ESC check eeprom loading data status. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>EtherCAT communication is possible even if the EEPROM is blank</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ESC base address. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>loding data successfully and correctlly. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_esc_eeprom_ack_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>loding data checksum error(eeprom blank). </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_esc_eeprom_checksum_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>no ack error. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_timeout</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>loding data timeout. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_esc_drv.c" line="119" column="12" bodyfile="drivers/src/hpm_esc_drv.c" bodystart="119" bodyend="150"/>
-      </memberdef>
-      </sectiondef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__esc__interface_1gaaeaf167df19c81d1f5fb0d0c361fd876" kind="function"><name>esc_mdio_read</name></member>
+      <member refid="group__esc__interface_1ga34e62d5c1a185ea2af70471ff27541d2" kind="function"><name>esc_mdio_write</name></member>
+      <member refid="group__esc__interface_1ga83d77fb518b47b541050b5803e137a3d" kind="function"><name>esc_check_eeprom_loading</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -299,7 +111,7 @@
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1a7e608f6b894ce0463d66d28f2e2bc548" kindref="member">PHY_REG_ADDR</ref><sp/>=<sp/>reg_addr;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>command<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>&amp;<sp/>~<ref refid="hpm__esc__regs_8h_1a3057125e396e551a3b7ae4979a65d29b" kindref="member">ESC_MII_MNG_CS_CMD_MASK</ref>)<sp/>|<sp/><ref refid="hpm__esc__regs_8h_1a65c6d7c85ae82f6c73d398494d59e748" kindref="member">ESC_MII_MNG_CS_CMD_SET</ref>(1);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>&amp;<sp/>~ESC_MII_MNG_CS_CMD_MASK)<sp/>|<sp/><ref refid="hpm__esc__regs_8h_1a65c6d7c85ae82f6c73d398494d59e748" kindref="member">ESC_MII_MNG_CS_CMD_SET</ref>(1);</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>wait<sp/>command<sp/>done<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>retry<sp/>=<sp/>0;</highlight></codeline>
@@ -353,7 +165,7 @@
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1ab5ec3d935a6a4f3403d4b820edfb4c0c" kindref="member">PHY_DATA</ref><sp/>=<sp/>data;</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>write<sp/>command<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>&amp;<sp/>~<ref refid="hpm__esc__regs_8h_1a3057125e396e551a3b7ae4979a65d29b" kindref="member">ESC_MII_MNG_CS_CMD_MASK</ref>)<sp/>|<sp/><ref refid="hpm__esc__regs_8h_1ac5e2f9db55a985eb01be13e6fd2f327e" kindref="member">ESC_MII_MNG_CS_WEN_MASK</ref><sp/>|<sp/><ref refid="hpm__esc__regs_8h_1a65c6d7c85ae82f6c73d398494d59e748" kindref="member">ESC_MII_MNG_CS_CMD_SET</ref>(2);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structESC__Type_1ab95eb051f6bba68884ee483a2ddaa8ac" kindref="member">MII_MNG_CS</ref><sp/>&amp;<sp/>~ESC_MII_MNG_CS_CMD_MASK)<sp/>|<sp/><ref refid="hpm__esc__regs_8h_1ac5e2f9db55a985eb01be13e6fd2f327e" kindref="member">ESC_MII_MNG_CS_WEN_MASK</ref><sp/>|<sp/><ref refid="hpm__esc__regs_8h_1a65c6d7c85ae82f6c73d398494d59e748" kindref="member">ESC_MII_MNG_CS_CMD_SET</ref>(2);</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>wait<sp/>command<sp/>done<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>retry<sp/>=<sp/>0;</highlight></codeline>

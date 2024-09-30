@@ -1,12 +1,19 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__can__drv_8c" kind="file" language="C++">
     <compoundname>hpm_can_drv.c</compoundname>
     <includes refid="hpm__can__drv_8h" local="yes">hpm_can_drv.h</includes>
     <includes local="no">assert.h</includes>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
+      <node id="2">
+        <label>hpm_can_drv.h</label>
+        <link refid="hpm__can__drv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
       <node id="3">
         <label>hpm_common.h</label>
@@ -22,8 +29,25 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
+      <node id="1">
+        <label>drivers/src/hpm_can_drv.c</label>
+        <link refid="hpm__can__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
       <node id="4">
         <label>assert.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_can_regs.h</label>
+      </node>
+      <node id="10">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
       </node>
       <node id="6">
         <label>stdint.h</label>
@@ -34,33 +58,9 @@
       <node id="7">
         <label>string.h</label>
       </node>
-      <node id="1">
-        <label>drivers/src/hpm_can_drv.c</label>
-        <link refid="hpm__can__drv_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>hpm_soc_feature.h</label>
-      </node>
-      <node id="2">
-        <label>hpm_can_drv.h</label>
-        <link refid="hpm__can__drv_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>hpm_can_regs.h</label>
-      </node>
     </incdepgraph>
     <innerclass refid="structcan__bit__timing__table__t" prot="public">can_bit_timing_table_t</innerclass>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="hpm__can__drv_8c_1a3c8ced3500393e7789ad282fb24b71c8" prot="public" static="no">
         <name>TSEG1_MIN_FOR_CAN2_0</name>
         <initializer>(2U)</initializer>
@@ -272,7 +272,7 @@
       </memberdef>
       <memberdef kind="define" id="hpm__can__drv_8c_1a7f82c52fb990df48dc02e3b7e5f6633f" prot="public" static="no">
         <name>NUM_TQ_MAX_FOR_CAN2_0</name>
-        <initializer>(<ref refid="hpm__mcan__drv_8c_1aca275f5ec436573fcfb4aadf3b0f3207" kindref="member">TSEG1_MAX_FOR_CAN2_0</ref> + <ref refid="hpm__mcan__drv_8c_1a713ef061cf67fee964f7a38f95cf08fe" kindref="member">TSEG2_MAX_FOR_CAN2_0</ref>)</initializer>
+        <initializer>(<ref refid="hpm__can__drv_8c_1aca275f5ec436573fcfb4aadf3b0f3207" kindref="member">TSEG1_MAX_FOR_CAN2_0</ref> + <ref refid="hpm__can__drv_8c_1a713ef061cf67fee964f7a38f95cf08fe" kindref="member">TSEG2_MAX_FOR_CAN2_0</ref>)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -294,7 +294,7 @@
       </memberdef>
       <memberdef kind="define" id="hpm__can__drv_8c_1ac514cc2897243c1556d03906779cdb58" prot="public" static="no">
         <name>NUM_TQ_MAX_FOR_CANFD_NOMINAL</name>
-        <initializer>(<ref refid="hpm__mcan__drv_8c_1a6e3555cec142ed5507f077f8e430ed5d" kindref="member">TSEG1_MAX_FOR_CANFD_NOMINAL</ref> + <ref refid="hpm__mcan__drv_8c_1a12760041a59c3ae354925d02b03a0798" kindref="member">TSEG2_MAX_FOR_CANFD_NOMINAL</ref>)</initializer>
+        <initializer>(<ref refid="hpm__can__drv_8c_1a6e3555cec142ed5507f077f8e430ed5d" kindref="member">TSEG1_MAX_FOR_CANFD_NOMINAL</ref> + <ref refid="hpm__can__drv_8c_1a12760041a59c3ae354925d02b03a0798" kindref="member">TSEG2_MAX_FOR_CANFD_NOMINAL</ref>)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -316,7 +316,7 @@
       </memberdef>
       <memberdef kind="define" id="hpm__can__drv_8c_1ae577dcab491583f8d47eda13c4945718" prot="public" static="no">
         <name>NUM_TQ_MAX_FOR_CANFD_DATA</name>
-        <initializer>(<ref refid="hpm__mcan__drv_8c_1ad963a76008f23791fd360172f11bfbf6" kindref="member">TSEG1_MAX_FOR_CANFD_DATA</ref> + <ref refid="hpm__mcan__drv_8c_1aae6e636e2e7e5a7c3e6fd8b79d073b17" kindref="member">TSEG2_MAX_FOR_CANFD_DATA</ref>)</initializer>
+        <initializer>(<ref refid="hpm__can__drv_8c_1ad963a76008f23791fd360172f11bfbf6" kindref="member">TSEG1_MAX_FOR_CANFD_DATA</ref> + <ref refid="hpm__can__drv_8c_1aae6e636e2e7e5a7c3e6fd8b79d073b17" kindref="member">TSEG2_MAX_FOR_CANFD_DATA</ref>)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -413,8 +413,8 @@
         </inbodydescription>
         <location file="drivers/src/hpm_can_drv.c" line="65" column="9" bodyfile="drivers/src/hpm_can_drv.c" bodystart="65" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
+    </sectiondef>
+    <sectiondef kind="var">
       <memberdef kind="variable" id="hpm__can__drv_8c_1a47f4940b8109f6efadebf5aa4fe52a27" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structcan__bit__timing__table__t" kindref="compound">can_bit_timing_table_t</ref></type>
         <definition>const can_bit_timing_table_t s_can_bit_timing_tbl[3]</definition>
@@ -422,36 +422,36 @@
         <name>s_can_bit_timing_tbl</name>
         <initializer>= {
         {
-                .tq_min =  (8U) ,
-                .tq_max =  ( (65U)  +  (8U) ) ,
-                .seg1_min =  (2U) ,
-                .seg1_max =  (65U) ,
-                .seg2_min =  (1U) ,
-                .seg2_max =  (8U) ,
-                .sjw_min =  (1U) ,
-                .sjw_max =  (16U) ,
+                .tq_min = (8U) ,
+                .tq_max = ( (65U) + (8U) ),
+                .seg1_min = (2U) ,
+                .seg1_max = (65U) ,
+                .seg2_min = (1U) ,
+                .seg2_max = (8U) ,
+                .sjw_min = (1U) ,
+                .sjw_max = (16U) ,
                 .min_diff_seg1_minus_seg2 = 2,
         },
         {
-                .tq_min =  (8U) ,
-                .tq_max =  ( (65U)  +  (32U) ) ,
-                .seg1_min =  (2U) ,
-                .seg1_max =  (65U) ,
-                .seg2_min =  (1U) ,
-                .seg2_max =  (32U) ,
-                .sjw_min =  (1U) ,
-                .sjw_max =  (16U) ,
+                .tq_min = (8U) ,
+                .tq_max = ( (65U) + (32U) ),
+                .seg1_min = (2U) ,
+                .seg1_max = (65U) ,
+                .seg2_min = (1U) ,
+                .seg2_max = (32U) ,
+                .sjw_min = (1U) ,
+                .sjw_max = (16U) ,
                 .min_diff_seg1_minus_seg2 = 2,
         },
         {
-                .tq_min =  (8U) ,
-                .tq_max =  ( (17U)  +  (8U) ) ,
-                .seg1_min =  (2U) ,
-                .seg1_max =  (17U) ,
-                .seg2_min =  (1U) ,
-                .seg2_max =  (8U) ,
-                .sjw_min =  (1U) ,
-                .sjw_max =  (8U) ,
+                .tq_min = (8U) ,
+                .tq_max = ( (17U) + (8U) ),
+                .seg1_min = (2U) ,
+                .seg1_max = (17U) ,
+                .seg2_min = (1U) ,
+                .seg2_max = (8U) ,
+                .sjw_min = (1U) ,
+                .sjw_max = (8U) ,
                 .min_diff_seg1_minus_seg2 = 1,
         }
 }</initializer>
@@ -462,10 +462,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/src/hpm_can_drv.c" line="85" column="37" bodyfile="drivers/src/hpm_can_drv.c" bodystart="85" bodyend="-1"/>
+        <location file="drivers/src/hpm_can_drv.c" line="85" column="37" bodyfile="drivers/src/hpm_can_drv.c" bodystart="85" bodyend="119"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="hpm__can__drv_8c_1a68049e8e56f009eccb33cb52df5d582c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
         <definition>static uint32_t find_optimal_prescaler</definition>
@@ -554,784 +554,19 @@
         </inbodydescription>
         <location file="drivers/src/hpm_can_drv.c" line="242" column="13" bodyfile="drivers/src/hpm_can_drv.c" bodystart="242" bodyend="263" declfile="drivers/src/hpm_can_drv.c" declline="132" declcolumn="13"/>
       </memberdef>
-      <memberdef kind="function" id="group__can__interface_1ga3a8c46558825c0463a50618161351de4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t can_calculate_bit_timing</definition>
-        <argsstring>(uint32_t src_clk_freq, can_bit_timing_option_t option, uint32_t baudrate, uint16_t samplepoint_min, uint16_t samplepoint_max, can_bit_timing_param_t *timing_param)</argsstring>
-        <name>can_calculate_bit_timing</name>
-        <param>
-          <type>uint32_t</type>
-          <declname>src_clk_freq</declname>
-        </param>
-        <param>
-          <type><ref refid="group__can__interface_1ga262601289513f1abac3f06d2f55bc624" kindref="member">can_bit_timing_option_t</ref></type>
-          <declname>option</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>baudrate</declname>
-        </param>
-        <param>
-          <type>uint16_t</type>
-          <declname>samplepoint_min</declname>
-        </param>
-        <param>
-          <type>uint16_t</type>
-          <declname>samplepoint_max</declname>
-        </param>
-        <param>
-          <type><ref refid="structcan__bit__timing__param__t" kindref="compound">can_bit_timing_param_t</ref> *</type>
-          <declname>timing_param</declname>
-        </param>
-        <briefdescription>
-<para>Calculate the CAN bit timing for CAN BUS. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">src_clk_freq</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN IP source clock frequency </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">option</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN bit timing option </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">baudrate</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN baudrate in MHz </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">samplepoint_min</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Minimum Sample point, range(0-1000), samplepoint_min / 1000 will be used in calculation </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">samplepoint_max</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Maximum Sample point, range(0-1000), samplepoint_max / 1000 will be used in calculation </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">timing_param</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Calculated CAN bit timing parameter </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>API</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>execution status, status_success or status_invalid_argument </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_can_drv.c" line="169" column="12" bodyfile="drivers/src/hpm_can_drv.c" bodystart="169" bodyend="240"/>
-      </memberdef>
-      <memberdef kind="function" id="group__can__interface_1gace01a30f4853415ffd8a46a69eef1921" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t can_set_bit_timing</definition>
-        <argsstring>(CAN_Type *base, can_bit_timing_option_t option, uint32_t src_clk_freq, uint32_t baudrate, uint16_t samplepoint_min, uint16_t samplepoint_max)</argsstring>
-        <name>can_set_bit_timing</name>
-        <param>
-          <type><ref refid="structCAN__Type" kindref="compound">CAN_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <param>
-          <type><ref refid="group__can__interface_1ga262601289513f1abac3f06d2f55bc624" kindref="member">can_bit_timing_option_t</ref></type>
-          <declname>option</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>src_clk_freq</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>baudrate</declname>
-        </param>
-        <param>
-          <type>uint16_t</type>
-          <declname>samplepoint_min</declname>
-        </param>
-        <param>
-          <type>uint16_t</type>
-          <declname>samplepoint_max</declname>
-        </param>
-        <briefdescription>
-<para>Configure the CAN bit timing for CAN BUS. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">option</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN bit timing option </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">src_clk_freq</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN IP source clock frequency </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">baudrate</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN baudrate in MHz </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">samplepoint_min</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Minimum Sample point, range(0-1000), samplepoint_min / 1000 will be used in calculation </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">samplepoint_max</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Maximum Sample point, range(0-1000), samplepoint_max / 1000 will be used in calculation </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>API</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>execution status, status_success or status_invalid_argument </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_can_drv.c" line="265" column="12" bodyfile="drivers/src/hpm_can_drv.c" bodystart="265" bodyend="294"/>
-      </memberdef>
-      <memberdef kind="function" id="group__can__interface_1gae03b8c0387b3a0867505f5781ae35214" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t can_set_filter</definition>
-        <argsstring>(CAN_Type *base, const can_filter_config_t *config)</argsstring>
-        <name>can_set_filter</name>
-        <param>
-          <type><ref refid="structCAN__Type" kindref="compound">CAN_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structcan__filter__config__t" kindref="compound">can_filter_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Configure the acceptable filter. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN filter configuration </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>API</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>execution status, status_success or status_invalid_argument </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_can_drv.c" line="296" column="12" bodyfile="drivers/src/hpm_can_drv.c" bodystart="296" bodyend="336"/>
-      </memberdef>
-      <memberdef kind="function" id="group__can__interface_1ga111b83df5cafa16889865acef42097a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t can_send_message_blocking</definition>
-        <argsstring>(CAN_Type *base, const can_transmit_buf_t *message)</argsstring>
-        <name>can_send_message_blocking</name>
-        <param>
-          <type><ref refid="structCAN__Type" kindref="compound">CAN_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <param>
-          <type>const <ref refid="group__can__interface_1gaf4926adb0f6c2361ea40b6a26a108a4d" kindref="member">can_transmit_buf_t</ref> *</type>
-          <declname>message</declname>
-        </param>
-        <briefdescription>
-<para>Send CAN message using blocking transfer. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">message</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN message to be sent out </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>API</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>execution status, status_success or status_invalid_argument </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_can_drv.c" line="388" column="12" bodyfile="drivers/src/hpm_can_drv.c" bodystart="388" bodyend="429"/>
-      </memberdef>
-      <memberdef kind="function" id="group__can__interface_1ga4cc3ed8404d5d0340d1d03dd9fca679c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t can_send_high_priority_message_blocking</definition>
-        <argsstring>(CAN_Type *base, const can_transmit_buf_t *message)</argsstring>
-        <name>can_send_high_priority_message_blocking</name>
-        <param>
-          <type><ref refid="structCAN__Type" kindref="compound">CAN_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <param>
-          <type>const <ref refid="group__can__interface_1gaf4926adb0f6c2361ea40b6a26a108a4d" kindref="member">can_transmit_buf_t</ref> *</type>
-          <declname>message</declname>
-        </param>
-        <briefdescription>
-<para>Send high-priority message using blocking transfer. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">message</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN message to be sent out </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>API</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>execution status, status_success or status_invalid_argument </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_can_drv.c" line="431" column="12" bodyfile="drivers/src/hpm_can_drv.c" bodystart="431" bodyend="458"/>
-      </memberdef>
-      <memberdef kind="function" id="group__can__interface_1ga3edf5cdf5a93d28aa629c2bcdac3d9f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t can_send_message_nonblocking</definition>
-        <argsstring>(CAN_Type *base, const can_transmit_buf_t *message)</argsstring>
-        <name>can_send_message_nonblocking</name>
-        <param>
-          <type><ref refid="structCAN__Type" kindref="compound">CAN_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <param>
-          <type>const <ref refid="group__can__interface_1gaf4926adb0f6c2361ea40b6a26a108a4d" kindref="member">can_transmit_buf_t</ref> *</type>
-          <declname>message</declname>
-        </param>
-        <briefdescription>
-<para>Send CAN message using non-blocking transfer. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">message</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN message to be sent out </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>API</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>execution status, status_success or status_invalid_argument </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_can_drv.c" line="460" column="12" bodyfile="drivers/src/hpm_can_drv.c" bodystart="460" bodyend="484"/>
-      </memberdef>
-      <memberdef kind="function" id="group__can__interface_1ga9a7676e94c3b7d500f85f44c93e44ae9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t can_send_high_priority_message_nonblocking</definition>
-        <argsstring>(CAN_Type *base, const can_transmit_buf_t *message)</argsstring>
-        <name>can_send_high_priority_message_nonblocking</name>
-        <param>
-          <type><ref refid="structCAN__Type" kindref="compound">CAN_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <param>
-          <type>const <ref refid="group__can__interface_1gaf4926adb0f6c2361ea40b6a26a108a4d" kindref="member">can_transmit_buf_t</ref> *</type>
-          <declname>message</declname>
-        </param>
-        <briefdescription>
-<para>Send high-priority message using non-blocking transfer. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">message</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN message to be sent out </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>API</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>execution status, status_success or status_invalid_argument </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_can_drv.c" line="486" column="12" bodyfile="drivers/src/hpm_can_drv.c" bodystart="486" bodyend="508"/>
-      </memberdef>
-      <memberdef kind="function" id="group__can__interface_1ga152ceffef9b26071634f3910426156f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t can_receive_message_blocking</definition>
-        <argsstring>(CAN_Type *base, can_receive_buf_t *message)</argsstring>
-        <name>can_receive_message_blocking</name>
-        <param>
-          <type><ref refid="structCAN__Type" kindref="compound">CAN_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <param>
-          <type><ref refid="group__can__interface_1gaead5fa76fd408804e2cd0828a2fe6ecc" kindref="member">can_receive_buf_t</ref> *</type>
-          <declname>message</declname>
-        </param>
-        <briefdescription>
-<para>Receive CAN message using blocking transfer. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">message</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN message buffer</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>API execution is successful </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Invalid parameters </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_can_bit_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN bit error happened during receiving message </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_can_form_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN form error happened during receiving message </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_can_stuff_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN stuff error happened during receiving message </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_can_ack_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN ack error happened during receiving message </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_can_crc_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN crc error happened during receiving message </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_can_other_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Other error happened during receiving message </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_can_drv.c" line="510" column="12" bodyfile="drivers/src/hpm_can_drv.c" bodystart="510" bodyend="564"/>
-      </memberdef>
-      <memberdef kind="function" id="group__can__interface_1ga064b9c32ea5252b72e35f7bc6b31a4bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t can_read_received_message</definition>
-        <argsstring>(CAN_Type *base, can_receive_buf_t *message)</argsstring>
-        <name>can_read_received_message</name>
-        <param>
-          <type><ref refid="structCAN__Type" kindref="compound">CAN_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <param>
-          <type><ref refid="group__can__interface_1gaead5fa76fd408804e2cd0828a2fe6ecc" kindref="member">can_receive_buf_t</ref> *</type>
-          <declname>message</declname>
-        </param>
-        <briefdescription>
-<para>Read Received CAN message. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>This API assumes that the received CAN message is available. It can be used in the interrupt handler </para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">message</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN message buffer</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>API execution is successful </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Invalid parameters </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_can_bit_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN bit error happened during receiving message </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_can_form_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN form error happened during receiving message </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_can_stuff_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN stuff error happened during receiving message </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_can_ack_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN ack error happened during receiving message </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_can_crc_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN crc error happened during receiving message </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_can_other_error</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Other error happened during receiving message </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_can_drv.c" line="566" column="12" bodyfile="drivers/src/hpm_can_drv.c" bodystart="566" bodyend="616"/>
-      </memberdef>
-      <memberdef kind="function" id="group__can__interface_1gabe2e41f5a36374c2864816ed68042de3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t can_get_default_config</definition>
-        <argsstring>(can_config_t *config)</argsstring>
-        <name>can_get_default_config</name>
-        <param>
-          <type><ref refid="structcan__config__t" kindref="compound">can_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Get default CAN configuration parameters. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="out">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN configuration structure </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>API</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>execution status, status_success or status_invalid_argument </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_can_drv.c" line="618" column="12" bodyfile="drivers/src/hpm_can_drv.c" bodystart="618" bodyend="653"/>
-      </memberdef>
-      <memberdef kind="function" id="group__can__interface_1ga4b98f7d670a9f51da7ad27fd36ec609d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t can_init</definition>
-        <argsstring>(CAN_Type *base, can_config_t *config, uint32_t src_clk_freq)</argsstring>
-        <name>can_init</name>
-        <param>
-          <type><ref refid="structCAN__Type" kindref="compound">CAN_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <param>
-          <type><ref refid="structcan__config__t" kindref="compound">can_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>src_clk_freq</declname>
-        </param>
-        <briefdescription>
-<para>Initialize the CAN controller. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN configuration </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">src_clk_freq</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN IP source clock frequency </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>API</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>execution status, status_success or status_invalid_argument </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_can_drv.c" line="655" column="12" bodyfile="drivers/src/hpm_can_drv.c" bodystart="655" bodyend="776"/>
-      </memberdef>
-      <memberdef kind="function" id="group__can__interface_1ga5f816882c2c1001ca8381608deab446c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void can_deinit</definition>
-        <argsstring>(CAN_Type *base)</argsstring>
-        <name>can_deinit</name>
-        <param>
-          <type><ref refid="structCAN__Type" kindref="compound">CAN_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <briefdescription>
-<para>De-initialize the CAN controller. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>CAN base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_can_drv.c" line="778" column="6" bodyfile="drivers/src/hpm_can_drv.c" bodystart="778" bodyend="785"/>
-      </memberdef>
-      </sectiondef>
+      <member refid="group__can__interface_1ga3a8c46558825c0463a50618161351de4" kind="function"><name>can_calculate_bit_timing</name></member>
+      <member refid="group__can__interface_1gace01a30f4853415ffd8a46a69eef1921" kind="function"><name>can_set_bit_timing</name></member>
+      <member refid="group__can__interface_1gae03b8c0387b3a0867505f5781ae35214" kind="function"><name>can_set_filter</name></member>
+      <member refid="group__can__interface_1ga111b83df5cafa16889865acef42097a6" kind="function"><name>can_send_message_blocking</name></member>
+      <member refid="group__can__interface_1ga4cc3ed8404d5d0340d1d03dd9fca679c" kind="function"><name>can_send_high_priority_message_blocking</name></member>
+      <member refid="group__can__interface_1ga3edf5cdf5a93d28aa629c2bcdac3d9f3" kind="function"><name>can_send_message_nonblocking</name></member>
+      <member refid="group__can__interface_1ga9a7676e94c3b7d500f85f44c93e44ae9" kind="function"><name>can_send_high_priority_message_nonblocking</name></member>
+      <member refid="group__can__interface_1ga152ceffef9b26071634f3910426156f4" kind="function"><name>can_receive_message_blocking</name></member>
+      <member refid="group__can__interface_1ga064b9c32ea5252b72e35f7bc6b31a4bd" kind="function"><name>can_read_received_message</name></member>
+      <member refid="group__can__interface_1gabe2e41f5a36374c2864816ed68042de3" kind="function"><name>can_get_default_config</name></member>
+      <member refid="group__can__interface_1ga4b98f7d670a9f51da7ad27fd36ec609d" kind="function"><name>can_init</name></member>
+      <member refid="group__can__interface_1ga5f816882c2c1001ca8381608deab446c" kind="function"><name>can_deinit</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -1420,7 +655,7 @@
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structcan__bit__timing__table__t" kindref="compound">can_bit_timing_table_t</ref><sp/><ref refid="hpm__can__drv_8c_1a47f4940b8109f6efadebf5aa4fe52a27" kindref="member">s_can_bit_timing_tbl</ref>[3]<sp/>=<sp/>{</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="structcan__bit__timing__table__t_1a6c1f0e70f96f81382ac48cdd3b0ab6d6" kindref="member">tq_min</ref><sp/>=<sp/><ref refid="hpm__can__drv_8c_1aa7c447e3ed657f71771b4c985ace827e" kindref="member">NUM_TQ_MIN_FOR_CAN2_0</ref>,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.tq_min<sp/>=<sp/><ref refid="hpm__can__drv_8c_1aa7c447e3ed657f71771b4c985ace827e" kindref="member">NUM_TQ_MIN_FOR_CAN2_0</ref>,</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.tq_max<sp/>=<sp/><ref refid="hpm__can__drv_8c_1a7f82c52fb990df48dc02e3b7e5f6633f" kindref="member">NUM_TQ_MAX_FOR_CAN2_0</ref>,</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.seg1_min<sp/>=<sp/><ref refid="hpm__can__drv_8c_1a3c8ced3500393e7789ad282fb24b71c8" kindref="member">TSEG1_MIN_FOR_CAN2_0</ref>,</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.seg1_max<sp/>=<sp/><ref refid="hpm__can__drv_8c_1aca275f5ec436573fcfb4aadf3b0f3207" kindref="member">TSEG1_MAX_FOR_CAN2_0</ref>,</highlight></codeline>
@@ -1555,7 +790,7 @@
 <codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="221"><highlight class="normal"></highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((num_seg2<sp/>&gt;=<sp/>tbl-&gt;<ref refid="structcan__bit__timing__table__t_1a1c5027d9d41afc53025a6757187d1549" kindref="member">seg2_min</ref>)<sp/>&amp;&amp;<sp/>(num_seg1<sp/>&lt;=<sp/>tbl-&gt;<ref refid="structcan__bit__timing__table__t_1a5966b06c5265b9ca78dafaec2f1aa558" kindref="member">seg1_max</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((num_seg2<sp/>&gt;=<sp/>tbl-&gt;<ref refid="structcan__bit__timing__table__t_1a1c5027d9d41afc53025a6757187d1549" kindref="member">seg2_min</ref>)<sp/>&amp;&amp;<sp/>(num_seg1<sp/>&lt;=<sp/>tbl-&gt;seg1_max))<sp/>{</highlight></codeline>
 <codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>has_found<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>start_prescaler<sp/>=<sp/>current_prescaler<sp/>+<sp/>1U;</highlight></codeline>
@@ -1773,7 +1008,7 @@
 <codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
 <codeline lineno="438"><highlight class="normal"></highlight></codeline>
 <codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Select<sp/>the<sp/>high-priority<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base-&gt;<ref refid="structCAN__Type_1a8a203a84a26491d0bb5de5a8aa5e64f4" kindref="member">CMD_STA_CMD_CTRL</ref><sp/>&amp;=<sp/>~<ref refid="HPM6300_2ip_2hpm__can__regs_8h_1afebedd9723664eafffd1b2eb8c30ad22" kindref="member">CAN_CMD_STA_CMD_CTRL_TBSEL_MASK</ref>;</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base-&gt;<ref refid="structCAN__Type_1a8a203a84a26491d0bb5de5a8aa5e64f4" kindref="member">CMD_STA_CMD_CTRL</ref><sp/>&amp;=<sp/>~CAN_CMD_STA_CMD_CTRL_TBSEL_MASK;</highlight></codeline>
 <codeline lineno="441"><highlight class="normal"></highlight></codeline>
 <codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__can__drv_8c_1aeb354702a61a51db06ac40ad6244c42b" kindref="member">can_fill_tx_buffer</ref>(base,<sp/>message);</highlight></codeline>
 <codeline lineno="443"><highlight class="normal"></highlight></codeline>
@@ -1832,7 +1067,7 @@
 <codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Select<sp/>the<sp/>high-priority<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base-&gt;<ref refid="structCAN__Type_1a8a203a84a26491d0bb5de5a8aa5e64f4" kindref="member">CMD_STA_CMD_CTRL</ref><sp/>&amp;=<sp/>~<ref refid="HPM6300_2ip_2hpm__can__regs_8h_1afebedd9723664eafffd1b2eb8c30ad22" kindref="member">CAN_CMD_STA_CMD_CTRL_TBSEL_MASK</ref>;</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base-&gt;<ref refid="structCAN__Type_1a8a203a84a26491d0bb5de5a8aa5e64f4" kindref="member">CMD_STA_CMD_CTRL</ref><sp/>&amp;=<sp/>~CAN_CMD_STA_CMD_CTRL_TBSEL_MASK;</highlight></codeline>
 <codeline lineno="500"><highlight class="normal"></highlight></codeline>
 <codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__can__drv_8c_1aeb354702a61a51db06ac40ad6244c42b" kindref="member">can_fill_tx_buffer</ref>(base,<sp/>message);</highlight></codeline>
 <codeline lineno="502"><highlight class="normal"></highlight></codeline>
@@ -1998,8 +1233,8 @@
 <codeline lineno="662"><highlight class="normal"></highlight></codeline>
 <codeline lineno="663"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__can__interface_1gab6e2a05f695556c4b536c204d124f7f9" kindref="member">can_reset</ref>(base,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="664"><highlight class="normal"></highlight></codeline>
-<codeline lineno="665"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base-&gt;<ref refid="structCAN__Type_1a8daacaa8e9c936750682aeb8e2132f23" kindref="member">TTCFG</ref><sp/>&amp;=<sp/>~<ref refid="HPM6300_2ip_2hpm__can__regs_8h_1ac4043a9c7de41f9ef98fa51a472d972c" kindref="member">CAN_TTCFG_TTEN_MASK</ref>;</highlight></codeline>
-<codeline lineno="666"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base-&gt;<ref refid="structCAN__Type_1a8a203a84a26491d0bb5de5a8aa5e64f4" kindref="member">CMD_STA_CMD_CTRL</ref><sp/>&amp;=<sp/>~<ref refid="HPM6300_2ip_2hpm__can__regs_8h_1af0d2392c294adae365e5f56d1ca7f3c0" kindref="member">CAN_CMD_STA_CMD_CTRL_TTTBM_MASK</ref>;</highlight></codeline>
+<codeline lineno="665"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base-&gt;<ref refid="structCAN__Type_1a8daacaa8e9c936750682aeb8e2132f23" kindref="member">TTCFG</ref><sp/>&amp;=<sp/>~CAN_TTCFG_TTEN_MASK;</highlight></codeline>
+<codeline lineno="666"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base-&gt;<ref refid="structCAN__Type_1a8a203a84a26491d0bb5de5a8aa5e64f4" kindref="member">CMD_STA_CMD_CTRL</ref><sp/>&amp;=<sp/>~CAN_CMD_STA_CMD_CTRL_TTTBM_MASK;</highlight></codeline>
 <codeline lineno="667"><highlight class="normal"></highlight></codeline>
 <codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!config-&gt;<ref refid="structcan__config__t_1a7206818b05e7ba6ea85cc907a73b5db1" kindref="member">use_lowlevel_timing_setting</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structcan__config__t_1a19af4b7bca348e7dab6a6fab042dd8ec" kindref="member">enable_canfd</ref>)<sp/>{</highlight></codeline>

@@ -23,7 +23,7 @@ var group__sort =
     [ "hpm_nn_read_s8x4_ia", "group__sort.html#ga1ac7adf059e961b703a237ecc917570c", null ],
     [ "hpm_nn_requantize", "group__sort.html#ga32e31fcb5f8c099f4d2ef3179c24d875", null ],
     [ "hpm_nn_sat_doubling_high_mult", "group__sort.html#gac2a74c274ace586d087007e626b31232", null ],
-    [ "read_and_pad", "group__sort.html#ga6a2c6bcfe2b10ede675aa740c24ea59d", null ],
-    [ "read_and_pad_reordered", "group__sort.html#ga9d1f0db58852a4dc34933e1210bc8aad", null ],
+    [ "read_and_pad", "group__sort.html#gaa5408e49a2d7b95b9c3d0a80593bb18c", null ],
+    [ "read_and_pad_reordered", "group__sort.html#ga30cc265bd7e14567407197d43179ca93", null ],
     [ "write_q15x2_ia", "group__sort.html#gab973a2a30b2016648bea995f4a737553", null ]
 ];

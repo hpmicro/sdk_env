@@ -97,6 +97,7 @@ var hpm__pwm__drv_8h =
     [ "pwm_enable_pwm_sw_force_output", "group__pwm__interface.html#gab705dcf315bddfd0275004d8b0751b56", null ],
     [ "pwm_enable_reload_at_synci", "group__pwm__interface.html#ga610b6ab30f0aec10308434bf8dabe495", null ],
     [ "pwm_enable_sw_force", "group__pwm__interface.html#ga46434e8e77deacac85e24a544cb1aa7f", null ],
+    [ "pwm_fault_recovery_update_cmp_value", "group__pwm__interface.html#ga143f050a66b5f80bec930e649d3978e2", null ],
     [ "pwm_get_captured_count", "group__pwm__interface.html#ga4abbe229029451c21d4a3b9a885fec17", null ],
     [ "pwm_get_counter_val", "group__pwm__interface.html#gac53acc32bb2a1aa56b3f64ca2ef05711", null ],
     [ "pwm_get_default_cmp_config", "group__pwm__interface.html#ga16fbbe430ce2777f41b952d1296babcf", null ],

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="group__ppi__interface" kind="group">
     <compoundname>ppi_interface</compoundname>
     <title>PPI driver APIs</title>
     <innerclass refid="structppi__clk__pin__config__t" prot="public">ppi_clk_pin_config_t</innerclass>
     <innerclass refid="structppi__cs__pin__config__t" prot="public">ppi_cs_pin_config_t</innerclass>
     <innerclass refid="structppi__cmd__config__t" prot="public">ppi_cmd_config_t</innerclass>
-      <sectiondef kind="enum">
+    <sectiondef kind="enum">
       <memberdef kind="enum" id="group__ppi__interface_1ga602bc85dfd50b5248a76631452782bae" prot="public" static="no" strong="no">
         <type></type>
         <name>ppi_cs_idle_polarity_t</name>
@@ -147,7 +147,7 @@
         <name>ppi_irq_mask_t</name>
         <enumvalue id="group__ppi__interface_1gga8122c6889df4785f5f717ad6d16967b0a6601a79014048468265739c2f52349df" prot="public">
           <name>ppi_irq_tm_out_mask</name>
-          <initializer>= PPI_IRQ_EN_IRQ_TMOUT_EN_MASK</initializer>
+          <initializer>= (0x1U)</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -291,8 +291,8 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_ppi_drv.h" line="109" column="1" bodyfile="drivers/inc/hpm_ppi_drv.h" bodystart="109" bodyend="112"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="group__ppi__interface_1gaba5af71b3401e5eddb8ecc91f087e35e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>static void ppi_set_reset</definition>
@@ -987,9 +987,51 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_ppi_drv.h" line="358" column="6" bodyfile="drivers/src/hpm_ppi_drv.c" bodystart="69" bodyend="103" declfile="drivers/inc/hpm_ppi_drv.h" declline="358" declcolumn="6"/>
       </memberdef>
-      </sectiondef>
+      <memberdef kind="function" id="group__ppi__interface_1ga2c3533b852a13b257f1218ef40b81797" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t ppi_ns2cycle</definition>
+        <argsstring>(uint32_t freq_in_hz, uint32_t ns)</argsstring>
+        <name>ppi_ns2cycle</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>freq_in_hz</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ns</declname>
+        </param>
+        <briefdescription>
+<para>convert ns to cycle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">freq_in_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PPI clock frequency in Hz </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time in ns </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>cycle count </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_ppi_drv.h" line="367" column="10" bodyfile="drivers/src/hpm_ppi_drv.c" bodystart="105" bodyend="118" declfile="drivers/inc/hpm_ppi_drv.h" declline="367" declcolumn="10"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
-<para>PPI driver APIs. </para>
+<para>PPI driver APIs  . </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

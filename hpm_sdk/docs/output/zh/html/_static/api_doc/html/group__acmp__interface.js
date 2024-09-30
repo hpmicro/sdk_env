@@ -14,6 +14,10 @@ var group__acmp__interface =
       [ "minus_input", "structacmp__channel__config.html#a4b7bb1fbd6dcbaaed28e5630ac9c462d", null ],
       [ "plus_input", "structacmp__channel__config.html#ac1dbe3d576e90614dc9bffa4cfd870c6", null ]
     ] ],
+    [ "ACMP_CAP_SEL_LEVEL_0", "group__acmp__interface.html#ga31dad8ae51ed5d4ec6078a37e2b2610b", null ],
+    [ "ACMP_CAP_SEL_LEVEL_1", "group__acmp__interface.html#ga36d6e56f4996556435722b5c3c0ac3b6", null ],
+    [ "ACMP_CAP_SEL_LEVEL_2", "group__acmp__interface.html#gaaf032823caaf005dc9af1702b91c1699", null ],
+    [ "ACMP_CAP_SEL_LEVEL_3", "group__acmp__interface.html#ga875a757704a694f218d36adc0acca86a", null ],
     [ "ACMP_EVENT_FALLING_EDGE", "group__acmp__interface.html#ga23b3d05124c81c3846475d60a76796aa", null ],
     [ "ACMP_EVENT_RISING_EDGE", "group__acmp__interface.html#gaa7cea2b07988d53c11a5ac3c297b552b", null ],
     [ "ACMP_FILTER_MODE_BYPASS", "group__acmp__interface.html#gabb0da0d578ca9b8b5380f70920e2a88f", null ],

@@ -6,5 +6,5 @@ var structLVB__Type =
     [ "PHY_POW_CTRL", "structLVB__Type.html#adb134e600444a8e2fa734ba7367f362d", null ],
     [ "PHY_STAT", "structLVB__Type.html#a68a537b3f72c77a007cb4a73b424a110", null ],
     [ "RESERVED0", "structLVB__Type.html#a6235ee228d049e15302fbf97d4d480e9", null ],
-    [ "TX_PHY", "structLVB__Type.html#aeda16dfbed4c4db196478d4030530918", null ]
+    [ "TX_PHY", "structLVB__Type.html#ae791e7e0187ce6d02bd34b465fa8f77a", null ]
 ];

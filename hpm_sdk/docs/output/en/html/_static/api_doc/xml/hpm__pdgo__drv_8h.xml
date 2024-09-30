@@ -1,13 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__pdgo__drv_8h" kind="file" language="C++">
     <compoundname>hpm_pdgo_drv.h</compoundname>
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
     <includes local="yes">hpm_pdgo_regs.h</includes>
     <incdepgraph>
-      <node id="4">
-        <label>stdbool.h</label>
-      </node>
       <node id="2">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -22,9 +19,6 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>assert.h</label>
-      </node>
       <node id="1">
         <label>drivers/inc/hpm_pdgo_drv.h</label>
         <link refid="hpm__pdgo__drv_8h"/>
@@ -33,20 +27,26 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="8">
+        <label>hpm_pdgo_regs.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
       <node id="5">
         <label>stdint.h</label>
       </node>
       <node id="7">
         <label>stdlib.h</label>
       </node>
-      <node id="8">
-        <label>hpm_pdgo_regs.h</label>
-      </node>
       <node id="6">
         <label>string.h</label>
       </node>
     </incdepgraph>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="hpm__pdgo__drv_8h_1a49bc6b97fa0a5e117026da36585bbc53" prot="public" static="no">
         <name>DGO_GPR_WORD_COUNT</name>
         <initializer>(4U)</initializer>
@@ -105,708 +105,31 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_pdgo_drv.h" line="22" column="9" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="22" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__pdgo__interface_1gaf18800e2159b8e35261467008f611620" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void pdgo_set_turnoff_counter</definition>
-        <argsstring>(PDGO_Type *ptr, uint32_t counter)</argsstring>
-        <name>pdgo_set_turnoff_counter</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>counter</declname>
-        </param>
-        <briefdescription>
-<para>Set DGO turn-off counter. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">counter</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Turn-off counter value. Clock source is 32K </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="38" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="38" bodyend="41"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1ga5f0860919e2a260c5b9dddc94f84935a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void pdgo_enable_software_wakeup</definition>
-        <argsstring>(PDGO_Type *ptr)</argsstring>
-        <name>pdgo_enable_software_wakeup</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Enable Software Wake-up feature on DGO. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="47" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="47" bodyend="50"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1ga37f81b72eb208c83d19152881d0052b2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void pdgo_disable_software_wakeup</definition>
-        <argsstring>(PDGO_Type *ptr)</argsstring>
-        <name>pdgo_disable_software_wakeup</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Disable Software Wake-up feature on DGO. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="56" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="56" bodyend="59"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1ga252ca852366a159615df40a021524fff" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void pdgo_enable_oneshot_wakeup</definition>
-        <argsstring>(PDGO_Type *ptr)</argsstring>
-        <name>pdgo_enable_oneshot_wakeup</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Set DGO to one-shot wakeup mode. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="65" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="65" bodyend="68"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1ga8649cebb68b1f4952de30f66a1e1a099" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void pdgo_enable_retention_mode</definition>
-        <argsstring>(PDGO_Type *ptr)</argsstring>
-        <name>pdgo_enable_retention_mode</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Enable DGO register retention mode. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="74" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="74" bodyend="77"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1ga755576ed64efad5ed4d891165c755097" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>static bool pdgo_is_retention_mode_enabled</definition>
-        <argsstring>(PDGO_Type *ptr)</argsstring>
-        <name>pdgo_is_retention_mode_enabled</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Check whether the DGO retention mode is enabled or not. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO base address</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>true</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Retention mode is enabled </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>false</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Retention mode is disabled </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="86" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="86" bodyend="89"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1gab063166056623024c2be55424bc26693" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void pdgo_disable_retention_mode</definition>
-        <argsstring>(PDGO_Type *ptr)</argsstring>
-        <name>pdgo_disable_retention_mode</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Disable DGO register retention mode. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="95" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="95" bodyend="98"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1gae70cf10067b17c7088d4f86abe1c07b5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void pdgo_enable_auto_wakeup</definition>
-        <argsstring>(PDGO_Type *ptr)</argsstring>
-        <name>pdgo_enable_auto_wakeup</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Set DGO to automatic wakeup mode. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="104" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="104" bodyend="107"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1ga45291227b8f96bcfb40c60f2c76eab0a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>static bool pdgo_is_pin_wakeup</definition>
-        <argsstring>(PDGO_Type *ptr)</argsstring>
-        <name>pdgo_is_pin_wakeup</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Check whether DGO is waked up by Wake-up/Reset Pin. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO base address</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>true</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>if DGO is waked up by Wakeup/Reset pin </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="128" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="128" bodyend="131"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1ga379de5f96c5ac4b69605eab01baa1331" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>static bool pdgo_is_auto_wakeup_enabled</definition>
-        <argsstring>(PDGO_Type *ptr)</argsstring>
-        <name>pdgo_is_auto_wakeup_enabled</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Check whether Auto wake-up is enabled. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO base address</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>true</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>- Auto wake-up is enabled </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>false</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>- Auto wake-up is disabled </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="141" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="141" bodyend="144"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1ga311c1b5b49bbcaac18c77d7558d85b07" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void pdgo_enable_pullup_resistor_for_reset_pin</definition>
-        <argsstring>(PDGO_Type *ptr)</argsstring>
-        <name>pdgo_enable_pullup_resistor_for_reset_pin</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Enable pull-up resistor for Reset Pin [in] ptr DGO base address. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="150" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="150" bodyend="153"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1ga922f4bd254321b5fd06990a607b82064" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void pdgo_disable_pullup_resistor_for_reset_pin</definition>
-        <argsstring>(PDGO_Type *ptr)</argsstring>
-        <name>pdgo_disable_pullup_resistor_for_reset_pin</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Disable pull-up resistor for Reset Pin [in] ptr DGO base address. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="159" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="159" bodyend="162"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1ga4d3d7fcf14a596e138b8d6e1859b8c8f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void pdgo_enable_pulldown_resistor_for_wakeup_pin</definition>
-        <argsstring>(PDGO_Type *ptr)</argsstring>
-        <name>pdgo_enable_pulldown_resistor_for_wakeup_pin</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>Enable pull-down resistor for Wakeup pin [in] ptr DGO base address </para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="168" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="168" bodyend="171"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1gab8813794d667bb1409d0defc7e3231bf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void pdgo_disable_pulldown_resistor_for_wakeup_pin</definition>
-        <argsstring>(PDGO_Type *ptr)</argsstring>
-        <name>pdgo_disable_pulldown_resistor_for_wakeup_pin</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>Disable pull-down resistor for Wakeup pin [in] ptr DGO base address </para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="177" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="177" bodyend="180"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1gaea3a29a5cb44665fc1c8d066303659b9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void pdgo_set_wakeup_counter</definition>
-        <argsstring>(PDGO_Type *ptr, uint32_t wakeup_ctr)</argsstring>
-        <name>pdgo_set_wakeup_counter</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>wakeup_ctr</declname>
-        </param>
-        <briefdescription>
-<para>Set DGO wakeup counter. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">wakeup_ctr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Wakeup counter value. clock source is 32K </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="187" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="187" bodyend="190"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1ga235193e1dc3908f826a739da4ff29b75" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>static uint32_t pdgo_get_wakeup_counter</definition>
-        <argsstring>(PDGO_Type *ptr)</argsstring>
-        <name>pdgo_get_wakeup_counter</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Get DGO wakeup counter value. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO base address</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>DGO wakeup counter value </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="198" column="24" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="198" bodyend="201"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1gadc0d5d530628fa11bc3d104b352948d8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void pdgo_write_gpr</definition>
-        <argsstring>(PDGO_Type *ptr, uint32_t index, uint32_t content)</argsstring>
-        <name>pdgo_write_gpr</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>index</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>content</declname>
-        </param>
-        <briefdescription>
-<para>Write data to DGO GPR register. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>GPR register index </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">content</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Data to be written to DGO GPR register </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>&lt; DGO GPR register count</para>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="209" column="20" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="209" bodyend="214"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1gabbc5e6ef9c3993feb82757f709d36a2e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>static uint32_t pdgo_read_gpr</definition>
-        <argsstring>(PDGO_Type *ptr, uint32_t index)</argsstring>
-        <name>pdgo_read_gpr</name>
-        <param>
-          <type><ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>index</declname>
-        </param>
-        <briefdescription>
-<para>Read data from DGO GPR register. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>GPR register index</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>DGO GPR register value </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>&lt; DGO GPR register count</para>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="223" column="24" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="223" bodyend="230"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1gab6dae00ec21456d1359a7fca9fcf904c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>static uint32_t pdgo_get_wakeup_counter_from_us</definition>
-        <argsstring>(uint32_t us)</argsstring>
-        <name>pdgo_get_wakeup_counter_from_us</name>
-        <param>
-          <type>uint32_t</type>
-          <declname>us</declname>
-        </param>
-        <briefdescription>
-<para>Convert the microsecond to DGO Wake-up counter value. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">us</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>microsecond to be converted</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Converted DGO Wake-up counter value </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>&lt; DGO Wakeup Counter frequency</para>
-<para>&lt; DGO Wakeup Counter frequency</para>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="238" column="24" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="238" bodyend="241"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1ga25199f06b880990f479f1c0ebd3e4125" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>static uint32_t pdgo_get_us_from_wakeup_counter</definition>
-        <argsstring>(uint32_t counter)</argsstring>
-        <name>pdgo_get_us_from_wakeup_counter</name>
-        <param>
-          <type>uint32_t</type>
-          <declname>counter</declname>
-        </param>
-        <briefdescription>
-<para>Convert the DGO Wake-up counter to microseconds. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">counter</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO counter</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Converted microseconds </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>&lt; DGO Wakeup Counter frequency</para>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="249" column="24" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="249" bodyend="252"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1gae5cd4ad79799769bbefd1f37d4000446" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>static uint32_t pdgo_get_turnoff_counter_from_us</definition>
-        <argsstring>(uint32_t us)</argsstring>
-        <name>pdgo_get_turnoff_counter_from_us</name>
-        <param>
-          <type>uint32_t</type>
-          <declname>us</declname>
-        </param>
-        <briefdescription>
-<para>Convert the microsecond to DGO Turn-off counter value. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">us</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>microsecond to be converted</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Converted DGO Turn-off counter value </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>&lt; DGO Turn-off counter frequency</para>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="260" column="24" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="260" bodyend="263"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdgo__interface_1ga1276ce14a720657c14d8901de5497ebc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>static uint32_t pdgo_get_us_from_turnoff_counter</definition>
-        <argsstring>(uint32_t counter)</argsstring>
-        <name>pdgo_get_us_from_turnoff_counter</name>
-        <param>
-          <type>uint32_t</type>
-          <declname>counter</declname>
-        </param>
-        <briefdescription>
-<para>Convert the DGO Turn-off counter to microseconds. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">counter</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>DGO Turn-off counter</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Converted microseconds </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>&lt; DGO Turn-off counter frequency</para>
-<para>&lt; DGO Turn-off counter frequency</para>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_pdgo_drv.h" line="271" column="24" bodyfile="drivers/inc/hpm_pdgo_drv.h" bodystart="271" bodyend="274"/>
-      </memberdef>
-      </sectiondef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__pdgo__interface_1gaf18800e2159b8e35261467008f611620" kind="function"><name>pdgo_set_turnoff_counter</name></member>
+      <member refid="group__pdgo__interface_1ga5f0860919e2a260c5b9dddc94f84935a" kind="function"><name>pdgo_enable_software_wakeup</name></member>
+      <member refid="group__pdgo__interface_1ga37f81b72eb208c83d19152881d0052b2" kind="function"><name>pdgo_disable_software_wakeup</name></member>
+      <member refid="group__pdgo__interface_1ga252ca852366a159615df40a021524fff" kind="function"><name>pdgo_enable_oneshot_wakeup</name></member>
+      <member refid="group__pdgo__interface_1ga8649cebb68b1f4952de30f66a1e1a099" kind="function"><name>pdgo_enable_retention_mode</name></member>
+      <member refid="group__pdgo__interface_1ga755576ed64efad5ed4d891165c755097" kind="function"><name>pdgo_is_retention_mode_enabled</name></member>
+      <member refid="group__pdgo__interface_1gab063166056623024c2be55424bc26693" kind="function"><name>pdgo_disable_retention_mode</name></member>
+      <member refid="group__pdgo__interface_1gae70cf10067b17c7088d4f86abe1c07b5" kind="function"><name>pdgo_enable_auto_wakeup</name></member>
+      <member refid="group__pdgo__interface_1ga45291227b8f96bcfb40c60f2c76eab0a" kind="function"><name>pdgo_is_pin_wakeup</name></member>
+      <member refid="group__pdgo__interface_1ga379de5f96c5ac4b69605eab01baa1331" kind="function"><name>pdgo_is_auto_wakeup_enabled</name></member>
+      <member refid="group__pdgo__interface_1ga311c1b5b49bbcaac18c77d7558d85b07" kind="function"><name>pdgo_enable_pullup_resistor_for_reset_pin</name></member>
+      <member refid="group__pdgo__interface_1ga922f4bd254321b5fd06990a607b82064" kind="function"><name>pdgo_disable_pullup_resistor_for_reset_pin</name></member>
+      <member refid="group__pdgo__interface_1ga4d3d7fcf14a596e138b8d6e1859b8c8f" kind="function"><name>pdgo_enable_pulldown_resistor_for_wakeup_pin</name></member>
+      <member refid="group__pdgo__interface_1gab8813794d667bb1409d0defc7e3231bf" kind="function"><name>pdgo_disable_pulldown_resistor_for_wakeup_pin</name></member>
+      <member refid="group__pdgo__interface_1gaea3a29a5cb44665fc1c8d066303659b9" kind="function"><name>pdgo_set_wakeup_counter</name></member>
+      <member refid="group__pdgo__interface_1ga235193e1dc3908f826a739da4ff29b75" kind="function"><name>pdgo_get_wakeup_counter</name></member>
+      <member refid="group__pdgo__interface_1gadc0d5d530628fa11bc3d104b352948d8" kind="function"><name>pdgo_write_gpr</name></member>
+      <member refid="group__pdgo__interface_1gabbc5e6ef9c3993feb82757f709d36a2e" kind="function"><name>pdgo_read_gpr</name></member>
+      <member refid="group__pdgo__interface_1gab6dae00ec21456d1359a7fca9fcf904c" kind="function"><name>pdgo_get_wakeup_counter_from_us</name></member>
+      <member refid="group__pdgo__interface_1ga25199f06b880990f479f1c0ebd3e4125" kind="function"><name>pdgo_get_us_from_wakeup_counter</name></member>
+      <member refid="group__pdgo__interface_1gae5cd4ad79799769bbefd1f37d4000446" kind="function"><name>pdgo_get_turnoff_counter_from_us</name></member>
+      <member refid="group__pdgo__interface_1ga1276ce14a720657c14d8901de5497ebc" kind="function"><name>pdgo_get_us_from_turnoff_counter</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -847,12 +170,12 @@
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
 <codeline lineno="56" refid="group__pdgo__interface_1ga37f81b72eb208c83d19152881d0052b2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__pdgo__interface_1ga37f81b72eb208c83d19152881d0052b2" kindref="member">pdgo_disable_software_wakeup</ref>(<ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref><sp/>*ptr)</highlight></codeline>
 <codeline lineno="57"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPDGO__Type_1aedc5b3ac8071bee107db9667773ee5c4" kindref="member">DGO_CTR1</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__pdgo__regs_8h_1a6c512cec74262035d047351de4ed75b5" kindref="member">PDGO_DGO_CTR1_WAKEUP_EN_MASK</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPDGO__Type_1aedc5b3ac8071bee107db9667773ee5c4" kindref="member">DGO_CTR1</ref><sp/>&amp;=<sp/>~PDGO_DGO_CTR1_WAKEUP_EN_MASK;</highlight></codeline>
 <codeline lineno="59"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
 <codeline lineno="65" refid="group__pdgo__interface_1ga252ca852366a159615df40a021524fff" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__pdgo__interface_1ga252ca852366a159615df40a021524fff" kindref="member">pdgo_enable_oneshot_wakeup</ref>(<ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref><sp/>*ptr)</highlight></codeline>
 <codeline lineno="66"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPDGO__Type_1aedc5b3ac8071bee107db9667773ee5c4" kindref="member">DGO_CTR1</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__pdgo__regs_8h_1ad96ca19baec3c74e04be2df7ca657dfb" kindref="member">PDGO_DGO_CTR1_AOTO_SYS_WAKEUP_MASK</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPDGO__Type_1aedc5b3ac8071bee107db9667773ee5c4" kindref="member">DGO_CTR1</ref><sp/>&amp;=<sp/>~PDGO_DGO_CTR1_AOTO_SYS_WAKEUP_MASK;</highlight></codeline>
 <codeline lineno="68"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
 <codeline lineno="74" refid="group__pdgo__interface_1ga8649cebb68b1f4952de30f66a1e1a099" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__pdgo__interface_1ga8649cebb68b1f4952de30f66a1e1a099" kindref="member">pdgo_enable_retention_mode</ref>(<ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref><sp/>*ptr)</highlight></codeline>
@@ -867,7 +190,7 @@
 <codeline lineno="90"><highlight class="normal"></highlight></codeline>
 <codeline lineno="95" refid="group__pdgo__interface_1gab063166056623024c2be55424bc26693" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__pdgo__interface_1gab063166056623024c2be55424bc26693" kindref="member">pdgo_disable_retention_mode</ref>(<ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref><sp/>*ptr)</highlight></codeline>
 <codeline lineno="96"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPDGO__Type_1aedc5b3ac8071bee107db9667773ee5c4" kindref="member">DGO_CTR1</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__pdgo__regs_8h_1ada76ff5fa57679f5a811133ba436cfb1" kindref="member">PDGO_DGO_CTR0_RETENTION_MASK</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPDGO__Type_1aedc5b3ac8071bee107db9667773ee5c4" kindref="member">DGO_CTR1</ref><sp/>&amp;=<sp/>~PDGO_DGO_CTR0_RETENTION_MASK;</highlight></codeline>
 <codeline lineno="98"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"></highlight></codeline>
 <codeline lineno="104" refid="group__pdgo__interface_1gae70cf10067b17c7088d4f86abe1c07b5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__pdgo__interface_1gae70cf10067b17c7088d4f86abe1c07b5" kindref="member">pdgo_enable_auto_wakeup</ref>(<ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref><sp/>*ptr)</highlight></codeline>
@@ -875,7 +198,7 @@
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPDGO__Type_1aedc5b3ac8071bee107db9667773ee5c4" kindref="member">DGO_CTR1</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__pdgo__regs_8h_1ad96ca19baec3c74e04be2df7ca657dfb" kindref="member">PDGO_DGO_CTR1_AOTO_SYS_WAKEUP_MASK</ref>;</highlight></codeline>
 <codeline lineno="107"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PDGO_SUPPORT_SYS_WAKEUP_STATUS)<sp/>&amp;&amp;<sp/>(PDGO_SUPPORT_SYS_WAKEUP_STATUS<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PDGO_SUPPORT_SYS_WAKEUP_STATUS)<sp/>&amp;&amp;<sp/>(PDGO_SUPPORT_SYS_WAKEUP_STATUS<sp/>==<sp/>1)</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>pdgo_is_system_wakeup(<ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref><sp/>*ptr)</highlight></codeline>
 <codeline lineno="117"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structPDGO__Type_1aedc5b3ac8071bee107db9667773ee5c4" kindref="member">DGO_CTR1</ref><sp/>&amp;<sp/>PDGO_DGO_CTR1_SYS_WAKEUP_STATUS_MASK)<sp/>!=<sp/>0U);</highlight></codeline>
@@ -895,7 +218,7 @@
 <codeline lineno="145"><highlight class="normal"></highlight></codeline>
 <codeline lineno="150" refid="group__pdgo__interface_1ga311c1b5b49bbcaac18c77d7558d85b07" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__pdgo__interface_1ga311c1b5b49bbcaac18c77d7558d85b07" kindref="member">pdgo_enable_pullup_resistor_for_reset_pin</ref>(<ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref><sp/>*ptr)</highlight></codeline>
 <codeline lineno="151"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPDGO__Type_1a32cb895587466bdf553ebd7861424f01" kindref="member">DGO_CTR2</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__pdgo__regs_8h_1a1bf12edb309ce3d5e918154715e25ed6" kindref="member">PDGO_DGO_CTR2_RESETN_PULLUP_DISABLE_MASK</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPDGO__Type_1a32cb895587466bdf553ebd7861424f01" kindref="member">DGO_CTR2</ref><sp/>&amp;=<sp/>~PDGO_DGO_CTR2_RESETN_PULLUP_DISABLE_MASK;</highlight></codeline>
 <codeline lineno="153"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"></highlight></codeline>
 <codeline lineno="159" refid="group__pdgo__interface_1ga922f4bd254321b5fd06990a607b82064" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__pdgo__interface_1ga922f4bd254321b5fd06990a607b82064" kindref="member">pdgo_disable_pullup_resistor_for_reset_pin</ref>(<ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref><sp/>*ptr)</highlight></codeline>
@@ -905,7 +228,7 @@
 <codeline lineno="163"><highlight class="normal"></highlight></codeline>
 <codeline lineno="168" refid="group__pdgo__interface_1ga4d3d7fcf14a596e138b8d6e1859b8c8f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__pdgo__interface_1ga4d3d7fcf14a596e138b8d6e1859b8c8f" kindref="member">pdgo_enable_pulldown_resistor_for_wakeup_pin</ref>(<ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref><sp/>*ptr)</highlight></codeline>
 <codeline lineno="169"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPDGO__Type_1a32cb895587466bdf553ebd7861424f01" kindref="member">DGO_CTR2</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__pdgo__regs_8h_1aa57c89111b6f96da2b1dcbb180199a40" kindref="member">PDGO_DGO_CTR2_WAKEUP_PULLDN_DISABLE_MASK</ref>;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPDGO__Type_1a32cb895587466bdf553ebd7861424f01" kindref="member">DGO_CTR2</ref><sp/>&amp;=<sp/>~PDGO_DGO_CTR2_WAKEUP_PULLDN_DISABLE_MASK;</highlight></codeline>
 <codeline lineno="171"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="172"><highlight class="normal"></highlight></codeline>
 <codeline lineno="177" refid="group__pdgo__interface_1gab8813794d667bb1409d0defc7e3231bf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__pdgo__interface_1gab8813794d667bb1409d0defc7e3231bf" kindref="member">pdgo_disable_pulldown_resistor_for_wakeup_pin</ref>(<ref refid="structPDGO__Type" kindref="compound">PDGO_Type</ref><sp/>*ptr)</highlight></codeline>

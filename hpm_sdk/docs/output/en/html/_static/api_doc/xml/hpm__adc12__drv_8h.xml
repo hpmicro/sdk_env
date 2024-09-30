@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__adc12__drv_8h" kind="file" language="C++">
     <compoundname>hpm_adc12_drv.h</compoundname>
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
@@ -7,12 +7,15 @@
     <includes local="yes">hpm_soc_feature.h</includes>
     <includedby refid="hpm__adc12__drv_8c" local="yes">drivers/src/hpm_adc12_drv.c</includedby>
     <incdepgraph>
-      <node id="4">
-        <label>stdbool.h</label>
-      </node>
-      <node id="8">
-        <label>hpm_adc12_regs.h</label>
-        <link refid="hpm__adc12__regs_8h"/>
+      <node id="1">
+        <label>drivers/inc/hpm_adc12_drv.h</label>
+        <link refid="hpm__adc12__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>hpm_common.h</label>
@@ -28,8 +31,18 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
+      <node id="8">
+        <label>hpm_adc12_regs.h</label>
+        <link refid="hpm__adc12__regs_8h"/>
+      </node>
       <node id="3">
         <label>assert.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
       </node>
       <node id="5">
         <label>stdint.h</label>
@@ -37,33 +50,20 @@
       <node id="7">
         <label>stdlib.h</label>
       </node>
-      <node id="1">
-        <label>drivers/inc/hpm_adc12_drv.h</label>
-        <link refid="hpm__adc12__drv_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
       <node id="6">
         <label>string.h</label>
       </node>
-      <node id="9">
-        <label>hpm_soc_feature.h</label>
-      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2">
-        <label>drivers/src/hpm_adc12_drv.c</label>
-        <link refid="hpm__adc12__drv_8c"/>
-      </node>
       <node id="1">
         <label>drivers/inc/hpm_adc12_drv.h</label>
         <link refid="hpm__adc12__drv_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="2">
+        <label>drivers/src/hpm_adc12_drv.c</label>
+        <link refid="hpm__adc12__drv_8c"/>
       </node>
     </invincdepgraph>
     <innerclass refid="structadc12__config__t" prot="public">adc12_config_t</innerclass>
@@ -76,1701 +76,64 @@
     <innerclass refid="structadc12__seq__queue__config__t" prot="public">adc12_seq_queue_config_t</innerclass>
     <innerclass refid="structadc12__seq__config__t" prot="public">adc12_seq_config_t</innerclass>
     <innerclass refid="structadc12__pmt__config__t" prot="public">adc12_pmt_config_t</innerclass>
-      <sectiondef kind="user-defined">
+    <sectiondef kind="user-defined">
       <header>Initialization and Deinitialization</header>
-      <memberdef kind="function" id="group__adc12__interface_1ga78f1545f1bdc6cfe61d08dd7280c6226" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void adc12_get_default_config</definition>
-        <argsstring>(adc12_config_t *config)</argsstring>
-        <name>adc12_get_default_config</name>
-        <param>
-          <type><ref refid="structadc12__config__t" kindref="compound">adc12_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Get a default configuration for an ADC12 instance. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="out">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A pointer to the configuration struct of <ref refid="structadc12__config__t" kindref="compound">adc12_config_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="225" column="6" bodyfile="drivers/src/hpm_adc12_drv.c" bodystart="11" bodyend="19" declfile="drivers/inc/hpm_adc12_drv.h" declline="225" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1gabe970318a8a6dc17fa839e736416aeaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void adc12_get_channel_default_config</definition>
-        <argsstring>(adc12_channel_config_t *config)</argsstring>
-        <name>adc12_get_channel_default_config</name>
-        <param>
-          <type><ref refid="structadc12__channel__config__t" kindref="compound">adc12_channel_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Get a default configuration for an ADC12 channel. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="out">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A pointer to the configuration struct of <ref refid="structadc12__channel__config__t" kindref="compound">adc12_channel_config_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="232" column="6" bodyfile="drivers/src/hpm_adc12_drv.c" bodystart="21" bodyend="30" declfile="drivers/inc/hpm_adc12_drv.h" declline="232" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1gafbb1ab70f031d20dda01bae1b0788add" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t adc12_deinit</definition>
-        <argsstring>(ADC12_Type *ptr)</argsstring>
-        <name>adc12_deinit</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>De-initialize an ADC12 instance. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>A result of de-initializing an ADC12 instance. </para>
-</simplesect>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>De-initialize an ADC12 instance successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>De-initialize an ADC12 instance unsuccessfully due to passing one or more invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="242" column="12" bodyfile="drivers/src/hpm_adc12_drv.c" bodystart="85" bodyend="91" declfile="drivers/inc/hpm_adc12_drv.h" declline="242" declcolumn="12"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1ga1638d81a6447e0deeebb40ebde932dac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t adc12_init</definition>
-        <argsstring>(ADC12_Type *ptr, adc12_config_t *config)</argsstring>
-        <name>adc12_init</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structadc12__config__t" kindref="compound">adc12_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Initialize an ADC12 instance. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A pointer to the configuration struct of <ref refid="structadc12__config__t" kindref="compound">adc12_config_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>A result of initializing an ADC12 instance. </para>
-</simplesect>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Initialize an ADC12 instance successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Initialize an ADC12 instance unsuccessfully due to passing one or more invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>disable adc When the adc is processing data, it will generate an error to initialize the adc again, so you need to shut down the adc before initializing it.</para>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="253" column="12" bodyfile="drivers/src/hpm_adc12_drv.c" bodystart="93" bodyend="167" declfile="drivers/inc/hpm_adc12_drv.h" declline="253" declcolumn="12"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1gaa5d18a9bcfd09ecf69c8a4ea52ba026c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t adc12_init_channel</definition>
-        <argsstring>(ADC12_Type *ptr, adc12_channel_config_t *config)</argsstring>
-        <name>adc12_init_channel</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structadc12__channel__config__t" kindref="compound">adc12_channel_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Initialize an ADC12 channel. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A pointer to the configuration struct of <ref refid="structadc12__channel__config__t" kindref="compound">adc12_channel_config_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>A result of initializing an ADC12 channel. </para>
-</simplesect>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Initialize an ADC12 channel successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Initialize an ADC12 channel unsuccessfully due to passing one or more invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="264" column="12" bodyfile="drivers/src/hpm_adc12_drv.c" bodystart="169" bodyend="198" declfile="drivers/inc/hpm_adc12_drv.h" declline="264" declcolumn="12"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1gab8c55248482d0736800e142faaa133eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t adc12_get_channel_threshold</definition>
-        <argsstring>(ADC12_Type *ptr, uint8_t ch, adc12_channel_threshold_t *config)</argsstring>
-        <name>adc12_get_channel_threshold</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>ch</declname>
-        </param>
-        <param>
-          <type><ref refid="structadc12__channel__threshold__t" kindref="compound">adc12_channel_threshold_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Get thresholds of an ADC12 channel. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">ch</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 channel number </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A pointer to the structure of channel threshold </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>A result of getting thresholds of an ADC12 channel . </para>
-</simplesect>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Initialize an ADC12 channel successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Initialize an ADC12 channel unsuccessfully due to passing one or more invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="276" column="12" bodyfile="drivers/src/hpm_adc12_drv.c" bodystart="200" bodyend="212" declfile="drivers/inc/hpm_adc12_drv.h" declline="276" declcolumn="12"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1ga60f2a7f772ee8cd3cd17a0d6b863ef29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t adc12_set_prd_config</definition>
-        <argsstring>(ADC12_Type *ptr, adc12_prd_config_t *config)</argsstring>
-        <name>adc12_set_prd_config</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structadc12__prd__config__t" kindref="compound">adc12_prd_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Configure the the period mode for an ADC12 instance. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A pointer to the configuration struct of <ref refid="structadc12__prd__config__t" kindref="compound">adc12_prd_config_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>A result of configuring the the period mode for an ADC12 instance. </para>
-</simplesect>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Configure the the period mode successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Configure the the period mode unsuccessfully due to passing one or more invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="287" column="12" bodyfile="drivers/src/hpm_adc12_drv.c" bodystart="247" bodyend="268" declfile="drivers/inc/hpm_adc12_drv.h" declline="287" declcolumn="12"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1ga7cb22a7bfe2132f595a4c03129f52db7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t adc12_set_seq_config</definition>
-        <argsstring>(ADC12_Type *ptr, adc12_seq_config_t *config)</argsstring>
-        <name>adc12_set_seq_config</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structadc12__seq__config__t" kindref="compound">adc12_seq_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Configure the the sequence mode for an ADC12 instance. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A pointer to configuration struct of <ref refid="structadc12__seq__config__t" kindref="compound">adc12_seq_config_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>A result of configuring the the sequence mode for an ADC12 instance. </para>
-</simplesect>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Configure the the sequence mode successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Configure the the sequence mode unsuccessfully due to passing one or more invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="298" column="12" bodyfile="drivers/src/hpm_adc12_drv.c" bodystart="281" bodyend="306" declfile="drivers/inc/hpm_adc12_drv.h" declline="298" declcolumn="12"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1ga537418bcdeb9157adba6be65546aeb49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t adc12_set_pmt_config</definition>
-        <argsstring>(ADC12_Type *ptr, adc12_pmt_config_t *config)</argsstring>
-        <name>adc12_set_pmt_config</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structadc12__pmt__config__t" kindref="compound">adc12_pmt_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Configure the preemption mode for an ADC12 instance. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A pointer to configuration struct of <ref refid="structadc12__pmt__config__t" kindref="compound">adc12_pmt_config_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>A result of configuring the preemption mode for an ADC12 instance. </para>
-</simplesect>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Configure the preemption mode successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Configure the preemption mode unsuccessfully due to passing one or more invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="309" column="12" bodyfile="drivers/src/hpm_adc12_drv.c" bodystart="315" bodyend="343" declfile="drivers/inc/hpm_adc12_drv.h" declline="309" declcolumn="12"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+      <member refid="group__adc12__interface_1ga78f1545f1bdc6cfe61d08dd7280c6226" kind="function"><name>adc12_get_default_config</name></member>
+      <member refid="group__adc12__interface_1gabe970318a8a6dc17fa839e736416aeaf" kind="function"><name>adc12_get_channel_default_config</name></member>
+      <member refid="group__adc12__interface_1gafbb1ab70f031d20dda01bae1b0788add" kind="function"><name>adc12_deinit</name></member>
+      <member refid="group__adc12__interface_1ga1638d81a6447e0deeebb40ebde932dac" kind="function"><name>adc12_init</name></member>
+      <member refid="group__adc12__interface_1gaa5d18a9bcfd09ecf69c8a4ea52ba026c" kind="function"><name>adc12_init_channel</name></member>
+      <member refid="group__adc12__interface_1gab8c55248482d0736800e142faaa133eb" kind="function"><name>adc12_get_channel_threshold</name></member>
+      <member refid="group__adc12__interface_1ga60f2a7f772ee8cd3cd17a0d6b863ef29" kind="function"><name>adc12_set_prd_config</name></member>
+      <member refid="group__adc12__interface_1ga7cb22a7bfe2132f595a4c03129f52db7" kind="function"><name>adc12_set_seq_config</name></member>
+      <member refid="group__adc12__interface_1ga537418bcdeb9157adba6be65546aeb49" kind="function"><name>adc12_set_pmt_config</name></member>
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>DMA Control</header>
-      <memberdef kind="function" id="group__adc12__interface_1gae88b2925d9c1c3b3b4f8998f010967e8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void adc12_set_seq_stop_pos</definition>
-        <argsstring>(ADC12_Type *ptr, uint16_t stop_pos)</argsstring>
-        <name>adc12_set_seq_stop_pos</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint16_t</type>
-          <declname>stop_pos</declname>
-        </param>
-        <briefdescription>
-<para>Configure the stop position offset in the specified memory of DMA write operation for the sequence mode. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">stop_pos</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A stop position offset. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="324" column="20" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="324" bodyend="328"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1ga2fab3d40d8b501b436719835e7d7aaf2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void adc12_init_pmt_dma</definition>
-        <argsstring>(ADC12_Type *ptr, uint32_t addr)</argsstring>
-        <name>adc12_init_pmt_dma</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>addr</declname>
-        </param>
-        <briefdescription>
-<para>Configure the start address of DMA write operation for the preemption mode. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">addr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A start address of DMA write operation. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="336" column="20" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="336" bodyend="339"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1ga423c716b99ab4717b25ed5efe51f5128" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t adc12_init_seq_dma</definition>
-        <argsstring>(ADC12_Type *ptr, adc12_dma_config_t *config)</argsstring>
-        <name>adc12_init_seq_dma</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structadc12__dma__config__t" kindref="compound">adc12_dma_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Configure the start address of DMA write operation for the sequence mode. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A pointer to configuration struct of <ref refid="structadc12__dma__config__t" kindref="compound">adc12_dma_config_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>An implementation result of DMA initializing for the sequence mode </para>
-</simplesect>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ADC12 initialize in sequence mode successfully. Please refert to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ADC12 initialize in sequence mode unsuccessfully due to passing invalid arguments. Please refert to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="350" column="12" bodyfile="drivers/src/hpm_adc12_drv.c" bodystart="214" bodyend="245" declfile="drivers/inc/hpm_adc12_drv.h" declline="350" declcolumn="12"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+      <member refid="group__adc12__interface_1gae88b2925d9c1c3b3b4f8998f010967e8" kind="function"><name>adc12_set_seq_stop_pos</name></member>
+      <member refid="group__adc12__interface_1ga2fab3d40d8b501b436719835e7d7aaf2" kind="function"><name>adc12_init_pmt_dma</name></member>
+      <member refid="group__adc12__interface_1ga423c716b99ab4717b25ed5efe51f5128" kind="function"><name>adc12_init_seq_dma</name></member>
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Status</header>
-      <memberdef kind="function" id="group__adc12__interface_1gaf6e5628b28d54a63b4aa0541b5fb9ccd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>static uint32_t adc12_get_status_flags</definition>
-        <argsstring>(ADC12_Type *ptr)</argsstring>
-        <name>adc12_get_status_flags</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Get all ADC12 status flags. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>A mask indicating all corresponding interrupt statuses. </para>
-</simplesect>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>A</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>mask. Please refer to <ref refid="group__adc12__interface_1ga1a1533725ab804c3a534252a7d4a2d8a" kindref="member">adc12_irq_event_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="366" column="24" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="366" bodyend="369"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1ga0e976a703720f19cc0907503d1c27ce1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void adc12_disable_busywait</definition>
-        <argsstring>(ADC12_Type *ptr)</argsstring>
-        <name>adc12_disable_busywait</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Set value of the WAIT_DIS bit. The ADC does not block access to the associated peripheral bus until the ADC has completed its conversion. *. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<xrefsect id="deprecated_1_deprecated000001"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This API will be removed from V2.0.x </para>
-</xrefdescription></xrefsect></para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="378" column="20" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="378" bodyend="381"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1gab87f81092eb40c0edf9402594699f0b3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void adc12_enable_busywait</definition>
-        <argsstring>(ADC12_Type *ptr)</argsstring>
-        <name>adc12_enable_busywait</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Set value of the WAIT_DIS bit. ADC blocks access to the associated peripheral bus until the ADC completes the conversion. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<xrefsect id="deprecated_1_deprecated000002"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This API will be removed from V2.0.x </para>
-</xrefdescription></xrefsect></para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="390" column="20" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="390" bodyend="393"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1gab9e71aab3b76a9847b6bbd4d9e5f9f88" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void adc12_set_nonblocking_read</definition>
-        <argsstring>(ADC12_Type *ptr)</argsstring>
-        <name>adc12_set_nonblocking_read</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Set nonblocking read in oneshot mode. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>An ADC does not block access to the associated peripheral whether it completes a conversion or not.</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="401" column="20" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="401" bodyend="404"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1ga6fc9b8c6ce36675690337d2893aa7356" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void adc12_set_blocking_read</definition>
-        <argsstring>(ADC12_Type *ptr)</argsstring>
-        <name>adc12_set_blocking_read</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Set blocking read in oneshot mode. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>An ADC blocks access to the associated peripheral bus until it completes a conversion.</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="412" column="20" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="412" bodyend="415"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1gafe3809e9074cba3bf40d4b61d31efcee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>static bool adc12_is_nonblocking_mode</definition>
-        <argsstring>(ADC12_Type *ptr)</argsstring>
-        <name>adc12_is_nonblocking_mode</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Judge whether the current setting is none-blocking mode or not. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>A result indicating the status of bus waiting. </para>
-</simplesect>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>True</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>means that nonblocking reading. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>False</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>means that blocking reading. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="426" column="20" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="426" bodyend="429"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1ga798b3be5b029174d4ccc0d35310cff1e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>static bool adc12_get_conv_valid_status</definition>
-        <argsstring>(ADC12_Type *ptr, uint8_t ch)</argsstring>
-        <name>adc12_get_conv_valid_status</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>ch</declname>
-        </param>
-        <briefdescription>
-<para>Get the status of a conversion validity. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">ch</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral channel. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Status indicating the validity of the current conversion result.</para>
-</simplesect>
-<simplesect kind="note"><para>This function is only used when the WAIT_DIS bit in the BUF_RESULT register is 1. </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="440" column="20" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="440" bodyend="443"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1ga976ccf163fdce57fdd2a5b47defe6a03" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void adc12_clear_status_flags</definition>
-        <argsstring>(ADC12_Type *ptr, uint32_t mask)</argsstring>
-        <name>adc12_clear_status_flags</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>mask</declname>
-        </param>
-        <briefdescription>
-<para>Clear the status flags. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">mask</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A mask that means the specified flags to be cleared. Please refer to <ref refid="group__adc12__interface_1ga1a1533725ab804c3a534252a7d4a2d8a" kindref="member">adc12_irq_event_t</ref>.</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="note"><para>Only the specified flags can be cleared by writing the INT_STS register. </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="454" column="20" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="454" bodyend="457"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+      <member refid="group__adc12__interface_1gaf6e5628b28d54a63b4aa0541b5fb9ccd" kind="function"><name>adc12_get_status_flags</name></member>
+      <member refid="group__adc12__interface_1ga0e976a703720f19cc0907503d1c27ce1" kind="function"><name>adc12_disable_busywait</name></member>
+      <member refid="group__adc12__interface_1gab87f81092eb40c0edf9402594699f0b3" kind="function"><name>adc12_enable_busywait</name></member>
+      <member refid="group__adc12__interface_1gab9e71aab3b76a9847b6bbd4d9e5f9f88" kind="function"><name>adc12_set_nonblocking_read</name></member>
+      <member refid="group__adc12__interface_1ga6fc9b8c6ce36675690337d2893aa7356" kind="function"><name>adc12_set_blocking_read</name></member>
+      <member refid="group__adc12__interface_1gafe3809e9074cba3bf40d4b61d31efcee" kind="function"><name>adc12_is_nonblocking_mode</name></member>
+      <member refid="group__adc12__interface_1ga798b3be5b029174d4ccc0d35310cff1e" kind="function"><name>adc12_get_conv_valid_status</name></member>
+      <member refid="group__adc12__interface_1ga976ccf163fdce57fdd2a5b47defe6a03" kind="function"><name>adc12_clear_status_flags</name></member>
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Interrupts</header>
-      <memberdef kind="function" id="group__adc12__interface_1ga508ed98f5d6588cab7fa413128b57199" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void adc12_enable_interrupts</definition>
-        <argsstring>(ADC12_Type *ptr, uint32_t mask)</argsstring>
-        <name>adc12_enable_interrupts</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>mask</declname>
-        </param>
-        <briefdescription>
-<para>Enable interrupts. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">mask</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A mask indicating the specified ADC interrupt events. Please refer to <ref refid="group__adc12__interface_1ga1a1533725ab804c3a534252a7d4a2d8a" kindref="member">adc12_irq_event_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="472" column="20" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="472" bodyend="475"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1ga4cc106c0c8134cb793fa93df9e7d4fb1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>static void adc12_disable_interrupts</definition>
-        <argsstring>(ADC12_Type *ptr, uint32_t mask)</argsstring>
-        <name>adc12_disable_interrupts</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>mask</declname>
-        </param>
-        <briefdescription>
-<para>Disable interrupts. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">mask</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A mask indicating the specified interrupt events. Please refer to <ref refid="group__adc12__interface_1ga1a1533725ab804c3a534252a7d4a2d8a" kindref="member">adc12_irq_event_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="483" column="20" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="483" bodyend="486"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="user-defined">
+      <member refid="group__adc12__interface_1ga508ed98f5d6588cab7fa413128b57199" kind="function"><name>adc12_enable_interrupts</name></member>
+      <member refid="group__adc12__interface_1ga4cc106c0c8134cb793fa93df9e7d4fb1" kind="function"><name>adc12_disable_interrupts</name></member>
+    </sectiondef>
+    <sectiondef kind="user-defined">
       <header>Trigger and Conversion</header>
-      <memberdef kind="function" id="group__adc12__interface_1ga5697c916a8214ca305d81bf8f33b9aaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t adc12_trigger_seq_by_sw</definition>
-        <argsstring>(ADC12_Type *ptr)</argsstring>
-        <name>adc12_trigger_seq_by_sw</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Trigger ADC conversions by software in sequence mode. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>An implementation result of getting an ADC12 software trigger. </para>
-</simplesect>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ADC12 software triggers successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_fail</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ADC12 software triggers unsuccessfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="503" column="12" bodyfile="drivers/src/hpm_adc12_drv.c" bodystart="270" bodyend="278" declfile="drivers/inc/hpm_adc12_drv.h" declline="503" declcolumn="12"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1gacab110b90caa2d9397a003b05f93cfe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t adc12_trigger_pmt_by_sw</definition>
-        <argsstring>(ADC12_Type *ptr, uint8_t trig_ch)</argsstring>
-        <name>adc12_trigger_pmt_by_sw</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>trig_ch</declname>
-        </param>
-        <briefdescription>
-<para>Trigger ADC conversions by software in preemption mode. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">trig_ch</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A trigger channel number(e.g. TRIG0A,TRIG0B,TRIG0C...). </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>An implementation result of getting an ADC12 software trigger. </para>
-</simplesect>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ADC12 software triggers successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_fail</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>ADC12 software triggers unsuccessfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="514" column="12" bodyfile="drivers/src/hpm_adc12_drv.c" bodystart="308" bodyend="313" declfile="drivers/inc/hpm_adc12_drv.h" declline="514" declcolumn="12"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1ga1785f7ec47fbaf77b637ed7640110a24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t adc12_get_oneshot_result</definition>
-        <argsstring>(ADC12_Type *ptr, uint8_t ch, uint16_t *result)</argsstring>
-        <name>adc12_get_oneshot_result</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>ch</declname>
-        </param>
-        <param>
-          <type>uint16_t *</type>
-          <declname>result</declname>
-        </param>
-        <briefdescription>
-<para>Get the result in oneshot mode. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">ch</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral channel. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">result</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A pointer to an ADC12 conversion result. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>An implementation result of getting an ADC12 conversion result in oneshot mode. </para>
-</simplesect>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Get the result of an ADC12 conversion in oneshot mode successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Get the result of an ADC12 conversion in oneshot mode unsuccessfully due to passing invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="526" column="12" bodyfile="drivers/src/hpm_adc12_drv.c" bodystart="345" bodyend="364" declfile="drivers/inc/hpm_adc12_drv.h" declline="526" declcolumn="12"/>
-      </memberdef>
-      <memberdef kind="function" id="group__adc12__interface_1gafe860902f8a045fbbf30e8f72e3d6c37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t adc12_get_prd_result</definition>
-        <argsstring>(ADC12_Type *ptr, uint8_t ch, uint16_t *result)</argsstring>
-        <name>adc12_get_prd_result</name>
-        <param>
-          <type><ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>ch</declname>
-        </param>
-        <param>
-          <type>uint16_t *</type>
-          <declname>result</declname>
-        </param>
-        <briefdescription>
-<para>Get the result in the period mode. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral base address. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">ch</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An ADC12 peripheral channel. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">result</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A pointer to a specified ADC12 conversion result </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>An implementation of getting an ADC12 conversion result in the period mode. </para>
-</simplesect>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>status_success</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Get the result of an ADC12 conversion in the period mode successfully. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>status_invalid_argument</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Get the result of an ADC12 conversion in the period mode unsuccessfully due to passing invalid arguments. Please refer to <ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref>. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="538" column="12" bodyfile="drivers/src/hpm_adc12_drv.c" bodystart="366" bodyend="376" declfile="drivers/inc/hpm_adc12_drv.h" declline="538" declcolumn="12"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="define">
-      <memberdef kind="define" id="group__adc12__interface_1ga3992d2b6165d0ac8161aa52ee05669d6" prot="public" static="no">
-        <name>ADC12_IS_SIGNAL_TYPE_INVALID</name>
-        <param><defname>TYPE</defname></param>
-        <initializer>(TYPE &gt; (uint32_t)<ref refid="group__adc12__interface_1ggac39e2f0d4c899dbc13f237e20418dea2a9cbfcdc1e79f30f31bd0f26380a9b595" kindref="member">adc12_sample_signal_count</ref>)</initializer>
-        <briefdescription>
-<para>Define ADC12 validity check for the signal type. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="23" column="9" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="23" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__adc12__interface_1ga170c01c7183e4b9a83af75e3ba3ceb83" prot="public" static="no">
-        <name>ADC12_IS_CHANNEL_INVALID</name>
-        <param><defname>CH</defname></param>
-        <initializer>(CH &gt; <ref refid="HPM6700_2HPM6750_2hpm__soc__feature_8h_1a177192710ddc50c0cbbaa75656b5f0c1" kindref="member">ADC12_SOC_MAX_CH_NUM</ref>)</initializer>
-        <briefdescription>
-<para>Define ADC12 validity check for the channel number. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="26" column="9" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="26" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__adc12__interface_1ga7b393726d50f9584f065e062e0131121" prot="public" static="no">
-        <name>ADC12_IS_CHANNEL_SAMPLE_CYCLE_INVALID</name>
-        <param><defname>CYC</defname></param>
-        <initializer>(CYC == 0)</initializer>
-        <briefdescription>
-<para>Define ADC12 validity check for the channel sample cycle. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="29" column="9" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="29" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__adc12__interface_1gaa8461bfb163931972692de73888e6043" prot="public" static="no">
-        <name>ADC12_IS_TRIG_CH_INVLAID</name>
-        <param><defname>CH</defname></param>
-        <initializer>(CH &gt; <ref refid="HPM__IP__VALIDATION_2HPM__VAL__D25_2hpm__soc__feature_8h_1afe99060ae1eb492673214fd3af8e4fe6" kindref="member">ADC_SOC_MAX_TRIG_CH_NUM</ref>)</initializer>
-        <briefdescription>
-<para>Define ADC12 validity check for the trigger number. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="32" column="9" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="32" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__adc12__interface_1ga3a47eb8fdffe8cfa7973facb569f187c" prot="public" static="no">
-        <name>ADC12_IS_TRIG_LEN_INVLAID</name>
-        <param><defname>TRIG_LEN</defname></param>
-        <initializer>(TRIG_LEN &gt; <ref refid="HPM__IP__VALIDATION_2HPM__VAL__D25_2hpm__soc__feature_8h_1ab8bb2b014dd2780fa7f17cd6c21eed3d" kindref="member">ADC_SOC_MAX_TRIG_CH_LEN</ref>)</initializer>
-        <briefdescription>
-<para>Define ADC12 validity check for the trigger length. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="35" column="9" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="35" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__adc12__interface_1ga794c667bb94a600b7ef493e52c5c1d4b" prot="public" static="no">
-        <name>ADC12_IS_SEQ_LEN_INVLAID</name>
-        <param><defname>LEN</defname></param>
-        <initializer>((LEN == 0) || (LEN &gt; <ref refid="HPM__IP__VALIDATION_2HPM__VAL__D25_2hpm__soc__feature_8h_1a48f987e19c946a0b5c45536743d0b656" kindref="member">ADC_SOC_SEQ_MAX_LEN</ref>))</initializer>
-        <briefdescription>
-<para>Define ADC12 validity check for the sequence length. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="38" column="9" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="38" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__adc12__interface_1gace2478509112dcd2dd13cd978bf78351" prot="public" static="no">
-        <name>ADC12_IS_SEQ_DMA_BUFF_LEN_INVLAID</name>
-        <param><defname>LEN</defname></param>
-        <initializer>((LEN == 0) || (LEN &gt; <ref refid="HPM__IP__VALIDATION_2HPM__VAL__D25_2hpm__soc__feature_8h_1ad077905ebb9a5f49342a508df47f1f61" kindref="member">ADC_SOC_SEQ_MAX_DMA_BUFF_LEN_IN_4BYTES</ref>))</initializer>
-        <briefdescription>
-<para>Define ADC12 validity check for the DMA buffer length in the sequence mode. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="41" column="9" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="41" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__adc12__interface_1ga445a4a18d3dc04454b07c4b6a794a5a4" prot="public" static="no">
-        <name>ADC12_IS_PMT_DMA_BUFF_LEN_INVLAID</name>
-        <param><defname>LEN</defname></param>
-        <initializer>((LEN == 0) || (LEN &gt; <ref refid="HPM__IP__VALIDATION_2HPM__VAL__D25_2hpm__soc__feature_8h_1ac7a2197dac0b7c2a588e41e17f752e90" kindref="member">ADC_SOC_PMT_MAX_DMA_BUFF_LEN_IN_4BYTES</ref>))</initializer>
-        <briefdescription>
-<para>Define ADC12 validity check for the DMA buffer length in the preemption mode. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="44" column="9" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="44" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="enum">
-      <memberdef kind="enum" id="group__adc12__interface_1gac39e2f0d4c899dbc13f237e20418dea2" prot="public" static="no" strong="no">
-        <type></type>
-        <name>adc12_sample_signal_t</name>
-        <enumvalue id="group__adc12__interface_1ggac39e2f0d4c899dbc13f237e20418dea2ad46535381a9438ff4c5b2d5fedc824f4" prot="public">
-          <name>adc12_sample_signal_single_ended</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1ggac39e2f0d4c899dbc13f237e20418dea2afdd131e009b2d41f340449f1e3f7348f" prot="public">
-          <name>adc12_sample_signal_differential</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1ggac39e2f0d4c899dbc13f237e20418dea2a9cbfcdc1e79f30f31bd0f26380a9b595" prot="public">
-          <name>adc12_sample_signal_count</name>
-          <initializer>= 2</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>Define ADC12 sample signal types. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="47" column="1" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="47" bodyend="51"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__adc12__interface_1ga1df11396c1edb6df05ac87f918a5f384" prot="public" static="no" strong="no">
-        <type></type>
-        <name>adc12_resolution_t</name>
-        <enumvalue id="group__adc12__interface_1gga1df11396c1edb6df05ac87f918a5f384ab3a681c64a87a730f6e46fc44776429d" prot="public">
-          <name>adc12_res_6_bits</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga1df11396c1edb6df05ac87f918a5f384a8834eb3b3fa2e2a4efdd14f11f54e38f" prot="public">
-          <name>adc12_res_8_bits</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga1df11396c1edb6df05ac87f918a5f384a47ecf47943e96b5ef686e2cc3e9868ca" prot="public">
-          <name>adc12_res_10_bits</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga1df11396c1edb6df05ac87f918a5f384a794ba1f1594935a43ac87b452a06ca28" prot="public">
-          <name>adc12_res_12_bits</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>Define ADC12 resolutions. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="54" column="1" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="54" bodyend="59"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__adc12__interface_1ga4adb189f64a24a885497c6a5e7855d47" prot="public" static="no" strong="no">
-        <type></type>
-        <name>adc12_conversion_mode_t</name>
-        <enumvalue id="group__adc12__interface_1gga4adb189f64a24a885497c6a5e7855d47acbbde1ee9d17f7236b9b1a9f5e1efccc" prot="public">
-          <name>adc12_conv_mode_oneshot</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga4adb189f64a24a885497c6a5e7855d47a0cde3eb48015f167be0a29906e0bebac" prot="public">
-          <name>adc12_conv_mode_period</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga4adb189f64a24a885497c6a5e7855d47a31021f8620d45a70174037edca17bfd2" prot="public">
-          <name>adc12_conv_mode_sequence</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga4adb189f64a24a885497c6a5e7855d47acd4c187de9b1e3e23125be0e9b64e94b" prot="public">
-          <name>adc12_conv_mode_preemption</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>Define ADC12 conversion modes. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="62" column="1" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="62" bodyend="67"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__adc12__interface_1ga9ab07374d6229ec9098ee1f36442656e" prot="public" static="no" strong="no">
-        <type></type>
-        <name>adc12_clock_divider_t</name>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656ea7a788621ecb3d5615c8ae8fa6200b600" prot="public">
-          <name>adc12_clock_divider_1</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656ea009500273f0a3fbfe200251d0a6e37f9" prot="public">
-          <name>adc12_clock_divider_2</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656eaa5de8e2c30a6410b9083bb3777ec5f6a" prot="public">
-          <name>adc12_clock_divider_3</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656ea33ce115e5c688c05651c0ecf03f24af9" prot="public">
-          <name>adc12_clock_divider_4</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656ea16cc0bb2ad91c0545331e2c68addef70" prot="public">
-          <name>adc12_clock_divider_5</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656ea5799a9a1df5fb4b9de53decfccf6832a" prot="public">
-          <name>adc12_clock_divider_6</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656ea7ebc73421bd9cb5e45657f4f3f8fe760" prot="public">
-          <name>adc12_clock_divider_7</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656ea2c66764eb03bcf9f33d2408cfe2cb721" prot="public">
-          <name>adc12_clock_divider_8</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656ea3523f98b87bcf375ba8699c8c64205d0" prot="public">
-          <name>adc12_clock_divider_9</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656ea2cb06548b76b03d836ebd2e1df91933f" prot="public">
-          <name>adc12_clock_divider_10</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656ea5d4978cd66f23768fee63b98728f85b9" prot="public">
-          <name>adc12_clock_divider_11</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656eaddffd3aaffe548ae73684696df43439b" prot="public">
-          <name>adc12_clock_divider_12</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656ea73630f1018b98f08eb44b9bbb253ead6" prot="public">
-          <name>adc12_clock_divider_13</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656eafde429cc7e7f06db74c3d3dadea284ac" prot="public">
-          <name>adc12_clock_divider_14</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656ea2157a053261e9a324f762d21063e3880" prot="public">
-          <name>adc12_clock_divider_15</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga9ab07374d6229ec9098ee1f36442656ea913b2d8ff1f11f5cc5d2ddabb42752b9" prot="public">
-          <name>adc12_clock_divider_16</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>Define ADC12 Clock Divider. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="70" column="1" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="70" bodyend="87"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__adc12__interface_1ga1a1533725ab804c3a534252a7d4a2d8a" prot="public" static="no" strong="no">
-        <type></type>
-        <name>adc12_irq_event_t</name>
-        <enumvalue id="group__adc12__interface_1gga1a1533725ab804c3a534252a7d4a2d8aab4b2003da3a9e14839a8eac9384e4af7" prot="public">
-          <name>adc12_event_trig_complete</name>
-          <initializer>= ADC12_INT_STS_TRIG_CMPT_MASK</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-<para>This mask indicates that a trigger conversion is complete. </para>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga1a1533725ab804c3a534252a7d4a2d8aaa6fa867a3cac47f3ba227a30c5409c65" prot="public">
-          <name>adc12_event_trig_sw_conflict</name>
-          <initializer>= ADC12_INT_STS_TRIG_SW_CFLCT_MASK</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-<para>This mask indicates that a conflict caused by software-triggered conversions. </para>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga1a1533725ab804c3a534252a7d4a2d8aad86eb35269b805314aa000c025536964" prot="public">
-          <name>adc12_event_trig_hw_conflict</name>
-          <initializer>= ADC12_INT_STS_TRIG_HW_CFLCT_MASK</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-<para>This mask indicates that a conflict caused by hardware-triggered conversions. </para>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga1a1533725ab804c3a534252a7d4a2d8aa4fd3601843ce2256e76f84e005e441dd" prot="public">
-          <name>adc12_event_read_conflict</name>
-          <initializer>= ADC12_INT_STS_READ_CFLCT_MASK</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-<para>This mask indicates that a conflict caused when bus reading from different channels. </para>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga1a1533725ab804c3a534252a7d4a2d8aab1608be36676f99b6b2feaf60da39944" prot="public">
-          <name>adc12_event_seq_sw_conflict</name>
-          <initializer>= ADC12_INT_STS_SEQ_SW_CFLCT_MASK</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-<para>This mask indicates that a conflict caused by sequence-triggered conversions. </para>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga1a1533725ab804c3a534252a7d4a2d8aa455902618647bc61927b6889eacde4a3" prot="public">
-          <name>adc12_event_seq_hw_conflict</name>
-          <initializer>= ADC12_INT_STS_SEQ_HW_CFLCT_MASK</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-<para>This mask indicates that a conflict caused by hardware-triggered conversions. </para>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga1a1533725ab804c3a534252a7d4a2d8aafadf7062362702e32437dbc7aca0e05e" prot="public">
-          <name>adc12_event_seq_dma_abort</name>
-          <initializer>= ADC12_INT_STS_SEQ_DMAABT_MASK</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-<para>This mask indicates that DMA is stopped currently. </para>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga1a1533725ab804c3a534252a7d4a2d8aaa7d10429d2ed4a8f27b84bdc6cd1d402" prot="public">
-          <name>adc12_event_seq_full_complete</name>
-          <initializer>= ADC12_INT_STS_SEQ_CMPT_MASK</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-<para>This mask indicates that all of the configured conversion(s) in a queue is(are) complete. </para>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga1a1533725ab804c3a534252a7d4a2d8aa61269a146ed8a18bf5993ffe399a09ba" prot="public">
-          <name>adc12_event_seq_single_complete</name>
-          <initializer>= ADC12_INT_STS_SEQ_CVC_MASK</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-<para>This mask indicates that one of the configured conversion(s) in a queue is complete. </para>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__adc12__interface_1gga1a1533725ab804c3a534252a7d4a2d8aa26b29cd8200099dc7312a45e4e261ab5" prot="public">
-          <name>adc12_event_dma_fifo_full</name>
-          <initializer>= ADC12_INT_STS_DMA_FIFO_FULL_MASK</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-<para>This mask indicates that DMA FIFO is full currently. </para>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>Define ADC12 irq events. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_adc12_drv.h" line="90" column="1" bodyfile="drivers/inc/hpm_adc12_drv.h" bodystart="90" bodyend="120"/>
-      </memberdef>
-      </sectiondef>
+      <member refid="group__adc12__interface_1ga5697c916a8214ca305d81bf8f33b9aaa" kind="function"><name>adc12_trigger_seq_by_sw</name></member>
+      <member refid="group__adc12__interface_1gacab110b90caa2d9397a003b05f93cfe7" kind="function"><name>adc12_trigger_pmt_by_sw</name></member>
+      <member refid="group__adc12__interface_1ga1785f7ec47fbaf77b637ed7640110a24" kind="function"><name>adc12_get_oneshot_result</name></member>
+      <member refid="group__adc12__interface_1gafe860902f8a045fbbf30e8f72e3d6c37" kind="function"><name>adc12_get_prd_result</name></member>
+    </sectiondef>
+    <sectiondef kind="define">
+      <member refid="group__adc12__interface_1ga3992d2b6165d0ac8161aa52ee05669d6" kind="define"><name>ADC12_IS_SIGNAL_TYPE_INVALID</name></member>
+      <member refid="group__adc12__interface_1ga170c01c7183e4b9a83af75e3ba3ceb83" kind="define"><name>ADC12_IS_CHANNEL_INVALID</name></member>
+      <member refid="group__adc12__interface_1ga7b393726d50f9584f065e062e0131121" kind="define"><name>ADC12_IS_CHANNEL_SAMPLE_CYCLE_INVALID</name></member>
+      <member refid="group__adc12__interface_1gaa8461bfb163931972692de73888e6043" kind="define"><name>ADC12_IS_TRIG_CH_INVLAID</name></member>
+      <member refid="group__adc12__interface_1ga3a47eb8fdffe8cfa7973facb569f187c" kind="define"><name>ADC12_IS_TRIG_LEN_INVLAID</name></member>
+      <member refid="group__adc12__interface_1ga794c667bb94a600b7ef493e52c5c1d4b" kind="define"><name>ADC12_IS_SEQ_LEN_INVLAID</name></member>
+      <member refid="group__adc12__interface_1gace2478509112dcd2dd13cd978bf78351" kind="define"><name>ADC12_IS_SEQ_DMA_BUFF_LEN_INVLAID</name></member>
+      <member refid="group__adc12__interface_1ga445a4a18d3dc04454b07c4b6a794a5a4" kind="define"><name>ADC12_IS_PMT_DMA_BUFF_LEN_INVLAID</name></member>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <member refid="group__adc12__interface_1gac39e2f0d4c899dbc13f237e20418dea2" kind="enum"><name>adc12_sample_signal_t</name></member>
+      <member refid="group__adc12__interface_1ga1df11396c1edb6df05ac87f918a5f384" kind="enum"><name>adc12_resolution_t</name></member>
+      <member refid="group__adc12__interface_1ga4adb189f64a24a885497c6a5e7855d47" kind="enum"><name>adc12_conversion_mode_t</name></member>
+      <member refid="group__adc12__interface_1ga9ab07374d6229ec9098ee1f36442656e" kind="enum"><name>adc12_clock_divider_t</name></member>
+      <member refid="group__adc12__interface_1ga1a1533725ab804c3a534252a7d4a2d8a" kind="enum"><name>adc12_irq_event_t</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -1870,180 +233,181 @@
 <codeline lineno="123" refid="structadc12__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="124" refid="structadc12__config__t_1ae26875a88b71650932ea3c117db16215" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__config__t_1ae26875a88b71650932ea3c117db16215" kindref="member">res</ref>;</highlight></codeline>
 <codeline lineno="125" refid="structadc12__config__t_1a1b4ee955f33dd1f7c1295bd07ff54dc4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__config__t_1a1b4ee955f33dd1f7c1295bd07ff54dc4" kindref="member">conv_mode</ref>;</highlight></codeline>
-<codeline lineno="126" refid="structadc12__config__t_1a33be2f596f9901544b7d978b7ce42a36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__config__t_1a33be2f596f9901544b7d978b7ce42a36" kindref="member">adc_clk_div</ref>;</highlight></codeline>
-<codeline lineno="127" refid="structadc12__config__t_1acc3d8f7dec485bbc9cda6113f851581e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__config__t_1acc3d8f7dec485bbc9cda6113f851581e" kindref="member">wait_dis</ref>;</highlight></codeline>
-<codeline lineno="128" refid="structadc12__config__t_1a288bca08993809e06c382091d58faf10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__config__t_1a288bca08993809e06c382091d58faf10" kindref="member">sel_sync_ahb</ref>;</highlight></codeline>
-<codeline lineno="129" refid="structadc12__config__t_1af7e9b055adeda44adfa92c855088af63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__config__t_1af7e9b055adeda44adfa92c855088af63" kindref="member">adc_ahb_en</ref>;</highlight></codeline>
-<codeline lineno="130"><highlight class="normal">}<sp/><ref refid="structadc12__config__t" kindref="compound">adc12_config_t</ref>;</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133" refid="structadc12__channel__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="134" refid="structadc12__channel__config__t_1ae8fc874ba5462d4688c83b0dd45b3c14" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__channel__config__t_1ae8fc874ba5462d4688c83b0dd45b3c14" kindref="member">ch</ref>;</highlight></codeline>
-<codeline lineno="135" refid="structadc12__channel__config__t_1a70b2bf980ceb07bf5c1a5476553e4439" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__channel__config__t_1a70b2bf980ceb07bf5c1a5476553e4439" kindref="member">diff_sel</ref>;</highlight></codeline>
-<codeline lineno="136" refid="structadc12__channel__config__t_1a9f3ec80e7ec7938e6a14674728142499" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint16_t<sp/><ref refid="structadc12__channel__config__t_1a9f3ec80e7ec7938e6a14674728142499" kindref="member">thshdh</ref>;</highlight></codeline>
-<codeline lineno="137" refid="structadc12__channel__config__t_1a990b1a338270a5af1ea36ef32e610a37" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint16_t<sp/><ref refid="structadc12__channel__config__t_1a990b1a338270a5af1ea36ef32e610a37" kindref="member">thshdl</ref>;</highlight></codeline>
-<codeline lineno="138" refid="structadc12__channel__config__t_1a22e8efbaf046d80fb0bf708f352afe08" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__channel__config__t_1a22e8efbaf046d80fb0bf708f352afe08" kindref="member">wdog_int_en</ref>;</highlight></codeline>
-<codeline lineno="139" refid="structadc12__channel__config__t_1a8837422aba6303339dd5fe66e932a8ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__channel__config__t_1a8837422aba6303339dd5fe66e932a8ca" kindref="member">sample_cycle_shift</ref>;</highlight></codeline>
-<codeline lineno="140" refid="structadc12__channel__config__t_1a93bdf010681c016033d3fa2279f0831a" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__channel__config__t_1a93bdf010681c016033d3fa2279f0831a" kindref="member">sample_cycle</ref>;</highlight></codeline>
-<codeline lineno="141"><highlight class="normal">}<sp/><ref refid="structadc12__channel__config__t" kindref="compound">adc12_channel_config_t</ref>;</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144" refid="structadc12__channel__threshold__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="145" refid="structadc12__channel__threshold__t_1aefaf2e54efcbfb763f4525951280240f" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__channel__threshold__t_1aefaf2e54efcbfb763f4525951280240f" kindref="member">ch</ref>;</highlight></codeline>
-<codeline lineno="146" refid="structadc12__channel__threshold__t_1a0c2b0557e1aeb54840a820e328dc3149" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint16_t<sp/><ref refid="structadc12__channel__threshold__t_1a0c2b0557e1aeb54840a820e328dc3149" kindref="member">thshdh</ref>;</highlight></codeline>
-<codeline lineno="147" refid="structadc12__channel__threshold__t_1a4fd8580b4ac1bcda41677b8c79b9def8" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint16_t<sp/><ref refid="structadc12__channel__threshold__t_1a4fd8580b4ac1bcda41677b8c79b9def8" kindref="member">thshdl</ref>;</highlight></codeline>
-<codeline lineno="148"><highlight class="normal">}<sp/><ref refid="structadc12__channel__threshold__t" kindref="compound">adc12_channel_threshold_t</ref>;</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"></highlight></codeline>
-<codeline lineno="151" refid="structadc12__dma__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="152" refid="structadc12__dma__config__t_1a5419472f1b8e5ed14d6bd989806f4669" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*<ref refid="structadc12__dma__config__t_1a5419472f1b8e5ed14d6bd989806f4669" kindref="member">start_addr</ref>;</highlight></codeline>
-<codeline lineno="153" refid="structadc12__dma__config__t_1a5b2d70de74699b72467c46642542084d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__dma__config__t_1a5b2d70de74699b72467c46642542084d" kindref="member">buff_len_in_4bytes</ref>;</highlight></codeline>
-<codeline lineno="154" refid="structadc12__dma__config__t_1ae1c5f94635f29bc9159e1c286531dad4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__dma__config__t_1ae1c5f94635f29bc9159e1c286531dad4" kindref="member">stop_pos</ref>;</highlight></codeline>
-<codeline lineno="155" refid="structadc12__dma__config__t_1a9011151118d2befcaf60e5e6f33f5239" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__dma__config__t_1a9011151118d2befcaf60e5e6f33f5239" kindref="member">stop_en</ref>;</highlight></codeline>
-<codeline lineno="156"><highlight class="normal">}<sp/><ref refid="structadc12__dma__config__t" kindref="compound">adc12_dma_config_t</ref>;</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight></codeline>
-<codeline lineno="159" refid="structadc12__seq__dma__data__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:4;</highlight></codeline>
-<codeline lineno="161" refid="structadc12__seq__dma__data__t_1acc964780fdccf6d6d32fd421df673a33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__seq__dma__data__t_1acc964780fdccf6d6d32fd421df673a33" kindref="member">result</ref><sp/><sp/><sp/><sp/>:12;</highlight></codeline>
-<codeline lineno="162" refid="structadc12__seq__dma__data__t_1a9536fe3383cc9b90898c817e7d78c1e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__seq__dma__data__t_1a9536fe3383cc9b90898c817e7d78c1e1" kindref="member">seq_num</ref><sp/><sp/><sp/>:4;</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:4;</highlight></codeline>
-<codeline lineno="164" refid="structadc12__seq__dma__data__t_1a870d68e0daa7a0d257c1a2ec9e47a308" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__seq__dma__data__t_1a870d68e0daa7a0d257c1a2ec9e47a308" kindref="member">adc_ch</ref><sp/><sp/><sp/><sp/>:5;</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:2;</highlight></codeline>
-<codeline lineno="166" refid="structadc12__seq__dma__data__t_1a40028630e92edd0a3212fd49df7acb59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__seq__dma__data__t_1a40028630e92edd0a3212fd49df7acb59" kindref="member">cycle_bit</ref><sp/>:1;</highlight></codeline>
-<codeline lineno="167"><highlight class="normal">}<sp/><ref refid="structadc12__seq__dma__data__t" kindref="compound">adc12_seq_dma_data_t</ref>;</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"></highlight></codeline>
-<codeline lineno="170" refid="structadc12__pmt__dma__data__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:4;</highlight></codeline>
-<codeline lineno="172" refid="structadc12__pmt__dma__data__t_1abf36c69b827c37499f480f484845ed11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__pmt__dma__data__t_1abf36c69b827c37499f480f484845ed11" kindref="member">result</ref><sp/><sp/><sp/><sp/>:12;</highlight></codeline>
-<codeline lineno="173" refid="structadc12__pmt__dma__data__t_1aa390fe7cc6816decdfae49ba73591c97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__pmt__dma__data__t_1aa390fe7cc6816decdfae49ba73591c97" kindref="member">seq_num</ref><sp/><sp/><sp/>:2;</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:2;</highlight></codeline>
-<codeline lineno="175" refid="structadc12__pmt__dma__data__t_1a1e0a3269e12d54c987b2009d8616e88d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__pmt__dma__data__t_1a1e0a3269e12d54c987b2009d8616e88d" kindref="member">trig_ch</ref><sp/><sp/><sp/>:4;</highlight></codeline>
-<codeline lineno="176" refid="structadc12__pmt__dma__data__t_1a37ecd8b4922666c5e878e54a94fa96dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__pmt__dma__data__t_1a37ecd8b4922666c5e878e54a94fa96dd" kindref="member">adc_ch</ref><sp/><sp/><sp/><sp/>:5;</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:2;</highlight></codeline>
-<codeline lineno="178" refid="structadc12__pmt__dma__data__t_1a36d30545e46520bc0be861467e5b1a2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__pmt__dma__data__t_1a36d30545e46520bc0be861467e5b1a2d" kindref="member">cycle_bit</ref><sp/>:1;</highlight></codeline>
-<codeline lineno="179"><highlight class="normal">}<sp/><ref refid="structadc12__pmt__dma__data__t" kindref="compound">adc12_pmt_dma_data_t</ref>;</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"></highlight></codeline>
-<codeline lineno="182" refid="structadc12__prd__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="183" refid="structadc12__prd__config__t_1af087d53b48a6f4936cd32dba94925645" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__prd__config__t_1af087d53b48a6f4936cd32dba94925645" kindref="member">ch</ref>;</highlight></codeline>
-<codeline lineno="184" refid="structadc12__prd__config__t_1a83495af5e0ea495a48ead8f9d4230b4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__prd__config__t_1a83495af5e0ea495a48ead8f9d4230b4e" kindref="member">prescale</ref>;</highlight></codeline>
-<codeline lineno="185" refid="structadc12__prd__config__t_1adb23bea3479233a1e983447b9425bc94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__prd__config__t_1adb23bea3479233a1e983447b9425bc94" kindref="member">period_count</ref>;</highlight></codeline>
-<codeline lineno="186"><highlight class="normal">}<sp/><ref refid="structadc12__prd__config__t" kindref="compound">adc12_prd_config_t</ref>;</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"></highlight></codeline>
-<codeline lineno="189" refid="structadc12__seq__queue__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="190" refid="structadc12__seq__queue__config__t_1a9cbce2f0ce44b5dc45a6341c68989b7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__seq__queue__config__t_1a9cbce2f0ce44b5dc45a6341c68989b7b" kindref="member">seq_int_en</ref>;</highlight></codeline>
-<codeline lineno="191" refid="structadc12__seq__queue__config__t_1ae13c7ca20c82dfe5a199172af5107f07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__seq__queue__config__t_1ae13c7ca20c82dfe5a199172af5107f07" kindref="member">ch</ref>;</highlight></codeline>
-<codeline lineno="192"><highlight class="normal">}<sp/><ref refid="structadc12__seq__queue__config__t" kindref="compound">adc12_seq_queue_config_t</ref>;</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"></highlight></codeline>
-<codeline lineno="195" refid="structadc12__seq__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="196" refid="structadc12__seq__config__t_1a7d23304eb7753e1733c2c64a3753bf4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structadc12__seq__queue__config__t" kindref="compound">adc12_seq_queue_config_t</ref><sp/>queue[<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a48f987e19c946a0b5c45536743d0b656" kindref="member">ADC_SOC_SEQ_MAX_LEN</ref>];</highlight></codeline>
-<codeline lineno="197" refid="structadc12__seq__config__t_1a9f9b362a1b23244e7ea04d9b52b82d8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__seq__config__t_1a9f9b362a1b23244e7ea04d9b52b82d8c" kindref="member">restart_en</ref>;</highlight></codeline>
-<codeline lineno="198" refid="structadc12__seq__config__t_1acff1ddef11863e450c26d8302f8d900b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__seq__config__t_1acff1ddef11863e450c26d8302f8d900b" kindref="member">cont_en</ref>;</highlight></codeline>
-<codeline lineno="199" refid="structadc12__seq__config__t_1ac30d3c684707edbf36074a58057b74b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__seq__config__t_1ac30d3c684707edbf36074a58057b74b9" kindref="member">sw_trig_en</ref>;</highlight></codeline>
-<codeline lineno="200" refid="structadc12__seq__config__t_1af337ceea12d25af9766840df12d6b631" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__seq__config__t_1af337ceea12d25af9766840df12d6b631" kindref="member">hw_trig_en</ref>;</highlight></codeline>
-<codeline lineno="201" refid="structadc12__seq__config__t_1ac1d272c65251cfa1c4fe7da828f78473" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__seq__config__t_1ac1d272c65251cfa1c4fe7da828f78473" kindref="member">seq_len</ref>;</highlight></codeline>
-<codeline lineno="202"><highlight class="normal">}<sp/><ref refid="structadc12__seq__config__t" kindref="compound">adc12_seq_config_t</ref>;</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"></highlight></codeline>
-<codeline lineno="205" refid="structadc12__pmt__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="206" refid="structadc12__pmt__config__t_1af242651875366d5217ff6c505486c4ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>inten[<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1ab8bb2b014dd2780fa7f17cd6c21eed3d" kindref="member">ADC_SOC_MAX_TRIG_CH_LEN</ref>];</highlight></codeline>
-<codeline lineno="207" refid="structadc12__pmt__config__t_1ad1cd760883bb99d9b9f3e528af914a35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>adc_ch[<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1ab8bb2b014dd2780fa7f17cd6c21eed3d" kindref="member">ADC_SOC_MAX_TRIG_CH_LEN</ref>];</highlight></codeline>
-<codeline lineno="208" refid="structadc12__pmt__config__t_1a0dc2169dea95867cd24132666f51e7dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__pmt__config__t_1a0dc2169dea95867cd24132666f51e7dc" kindref="member">trig_ch</ref>;</highlight></codeline>
-<codeline lineno="209" refid="structadc12__pmt__config__t_1a3142271032e21672d2ef6c0a1e3aa1ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__pmt__config__t_1a3142271032e21672d2ef6c0a1e3aa1ab" kindref="member">trig_len</ref>;</highlight></codeline>
-<codeline lineno="210"><highlight class="normal">}<sp/><ref refid="structadc12__pmt__config__t" kindref="compound">adc12_pmt_config_t</ref>;</highlight></codeline>
-<codeline lineno="211"><highlight class="normal"></highlight></codeline>
-<codeline lineno="212"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="225"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga78f1545f1bdc6cfe61d08dd7280c6226" kindref="member">adc12_get_default_config</ref>(<ref refid="structadc12__config__t" kindref="compound">adc12_config_t</ref><sp/>*config);</highlight></codeline>
-<codeline lineno="226"><highlight class="normal"></highlight></codeline>
-<codeline lineno="232"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1gabe970318a8a6dc17fa839e736416aeaf" kindref="member">adc12_get_channel_default_config</ref>(<ref refid="structadc12__channel__config__t" kindref="compound">adc12_channel_config_t</ref><sp/>*config);</highlight></codeline>
-<codeline lineno="233"><highlight class="normal"></highlight></codeline>
-<codeline lineno="242"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1gafbb1ab70f031d20dda01bae1b0788add" kindref="member">adc12_deinit</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr);</highlight></codeline>
-<codeline lineno="243"><highlight class="normal"></highlight></codeline>
-<codeline lineno="253"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1ga1638d81a6447e0deeebb40ebde932dac" kindref="member">adc12_init</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/><ref refid="structadc12__config__t" kindref="compound">adc12_config_t</ref><sp/>*config);</highlight></codeline>
-<codeline lineno="254"><highlight class="normal"></highlight></codeline>
-<codeline lineno="264"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1gaa5d18a9bcfd09ecf69c8a4ea52ba026c" kindref="member">adc12_init_channel</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/><ref refid="structadc12__channel__config__t" kindref="compound">adc12_channel_config_t</ref><sp/>*config);</highlight></codeline>
-<codeline lineno="265"><highlight class="normal"></highlight></codeline>
-<codeline lineno="276"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1gab8c55248482d0736800e142faaa133eb" kindref="member">adc12_get_channel_threshold</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch,<sp/><ref refid="structadc12__channel__threshold__t" kindref="compound">adc12_channel_threshold_t</ref><sp/>*config);</highlight></codeline>
-<codeline lineno="277"><highlight class="normal"></highlight></codeline>
-<codeline lineno="287"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1ga60f2a7f772ee8cd3cd17a0d6b863ef29" kindref="member">adc12_set_prd_config</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/><ref refid="structadc12__prd__config__t" kindref="compound">adc12_prd_config_t</ref><sp/>*config);</highlight></codeline>
-<codeline lineno="288"><highlight class="normal"></highlight></codeline>
-<codeline lineno="298"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1ga7cb22a7bfe2132f595a4c03129f52db7" kindref="member">adc12_set_seq_config</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/><ref refid="structadc12__seq__config__t" kindref="compound">adc12_seq_config_t</ref><sp/>*config);</highlight></codeline>
-<codeline lineno="299"><highlight class="normal"></highlight></codeline>
-<codeline lineno="309"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1ga537418bcdeb9157adba6be65546aeb49" kindref="member">adc12_set_pmt_config</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/><ref refid="structadc12__pmt__config__t" kindref="compound">adc12_pmt_config_t</ref><sp/>*config);</highlight></codeline>
-<codeline lineno="310"><highlight class="normal"></highlight></codeline>
-<codeline lineno="324" refid="group__adc12__interface_1gae88b2925d9c1c3b3b4f8998f010967e8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1gae88b2925d9c1c3b3b4f8998f010967e8" kindref="member">adc12_set_seq_stop_pos</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint16_t<sp/>stop_pos)</highlight></codeline>
-<codeline lineno="325"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1a2b8cd057444cfd1708fb029c634b65b2" kindref="member">SEQ_DMA_CFG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structADC12__Type_1a2b8cd057444cfd1708fb029c634b65b2" kindref="member">SEQ_DMA_CFG</ref><sp/>&amp;<sp/>~<ref refid="hpm__adc12__regs_8h_1a5238403fbefa86083495a779e9e4f9f3" kindref="member">ADC12_SEQ_DMA_CFG_STOP_POS_MASK</ref>)</highlight></codeline>
-<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__adc12__regs_8h_1adde563c0a1a68a24a4ba68823f84f7b6" kindref="member">ADC12_SEQ_DMA_CFG_STOP_POS_SET</ref>(stop_pos);</highlight></codeline>
-<codeline lineno="328"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="329"><highlight class="normal"></highlight></codeline>
-<codeline lineno="336" refid="group__adc12__interface_1ga2fab3d40d8b501b436719835e7d7aaf2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga2fab3d40d8b501b436719835e7d7aaf2" kindref="member">adc12_init_pmt_dma</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>addr)</highlight></codeline>
-<codeline lineno="337"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1a75aee798818913b80b7ad7ea71950a87" kindref="member">TRG_DMA_ADDR</ref><sp/>=<sp/>addr<sp/>&amp;<sp/><ref refid="hpm__adc12__regs_8h_1a2be08ae1aa2d7da2510028127c545e85" kindref="member">ADC12_TRG_DMA_ADDR_TRG_DMA_ADDR_MASK</ref>;</highlight></codeline>
-<codeline lineno="339"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="340"><highlight class="normal"></highlight></codeline>
-<codeline lineno="350"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1ga423c716b99ab4717b25ed5efe51f5128" kindref="member">adc12_init_seq_dma</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/><ref refid="structadc12__dma__config__t" kindref="compound">adc12_dma_config_t</ref><sp/>*config);</highlight></codeline>
-<codeline lineno="351"><highlight class="normal"></highlight></codeline>
-<codeline lineno="366" refid="group__adc12__interface_1gaf6e5628b28d54a63b4aa0541b5fb9ccd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__adc12__interface_1gaf6e5628b28d54a63b4aa0541b5fb9ccd" kindref="member">adc12_get_status_flags</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr)</highlight></codeline>
-<codeline lineno="367"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structADC12__Type_1a929a55c7136a50e553ff46bfcc9fc047" kindref="member">INT_STS</ref>;</highlight></codeline>
-<codeline lineno="369"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="370"><highlight class="normal"></highlight></codeline>
-<codeline lineno="378" refid="group__adc12__interface_1ga0e976a703720f19cc0907503d1c27ce1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga0e976a703720f19cc0907503d1c27ce1" kindref="member">adc12_disable_busywait</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr)</highlight></codeline>
-<codeline lineno="379"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1aafc384ff3fa97ba8856c4197bd926433" kindref="member">BUF_CFG0</ref><sp/>|=<sp/><ref refid="hpm__adc12__regs_8h_1a40e3dbdc1aab44068de002e0ba409f94" kindref="member">ADC12_BUF_CFG0_WAIT_DIS_SET</ref>(1);</highlight></codeline>
-<codeline lineno="381"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="382"><highlight class="normal"></highlight></codeline>
-<codeline lineno="390" refid="group__adc12__interface_1gab87f81092eb40c0edf9402594699f0b3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1gab87f81092eb40c0edf9402594699f0b3" kindref="member">adc12_enable_busywait</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr)</highlight></codeline>
-<codeline lineno="391"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1aafc384ff3fa97ba8856c4197bd926433" kindref="member">BUF_CFG0</ref><sp/>&amp;=<sp/>~<ref refid="hpm__adc12__regs_8h_1aba34da92f666994222d5ae4137bd5bb0" kindref="member">ADC12_BUF_CFG0_WAIT_DIS_MASK</ref>;</highlight></codeline>
-<codeline lineno="393"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="394"><highlight class="normal"></highlight></codeline>
-<codeline lineno="401" refid="group__adc12__interface_1gab9e71aab3b76a9847b6bbd4d9e5f9f88" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1gab9e71aab3b76a9847b6bbd4d9e5f9f88" kindref="member">adc12_set_nonblocking_read</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr)</highlight></codeline>
-<codeline lineno="402"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1aafc384ff3fa97ba8856c4197bd926433" kindref="member">BUF_CFG0</ref><sp/>|=<sp/><ref refid="hpm__adc12__regs_8h_1aba34da92f666994222d5ae4137bd5bb0" kindref="member">ADC12_BUF_CFG0_WAIT_DIS_MASK</ref>;</highlight></codeline>
-<codeline lineno="404"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="405"><highlight class="normal"></highlight></codeline>
-<codeline lineno="412" refid="group__adc12__interface_1ga6fc9b8c6ce36675690337d2893aa7356" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga6fc9b8c6ce36675690337d2893aa7356" kindref="member">adc12_set_blocking_read</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr)</highlight></codeline>
-<codeline lineno="413"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1aafc384ff3fa97ba8856c4197bd926433" kindref="member">BUF_CFG0</ref><sp/>&amp;=<sp/>~<ref refid="hpm__adc12__regs_8h_1aba34da92f666994222d5ae4137bd5bb0" kindref="member">ADC12_BUF_CFG0_WAIT_DIS_MASK</ref>;</highlight></codeline>
-<codeline lineno="415"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="416"><highlight class="normal"></highlight></codeline>
-<codeline lineno="426" refid="group__adc12__interface_1gafe3809e9074cba3bf40d4b61d31efcee" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1gafe3809e9074cba3bf40d4b61d31efcee" kindref="member">adc12_is_nonblocking_mode</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr)</highlight></codeline>
-<codeline lineno="427"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="hpm__adc12__regs_8h_1a4ac336d0bfef8b58c6ac89131ae9601a" kindref="member">ADC12_BUF_CFG0_WAIT_DIS_GET</ref>(ptr-&gt;<ref refid="structADC12__Type_1aafc384ff3fa97ba8856c4197bd926433" kindref="member">BUF_CFG0</ref>)<sp/><sp/>?<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="429"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="430"><highlight class="normal"></highlight></codeline>
-<codeline lineno="440" refid="group__adc12__interface_1ga798b3be5b029174d4ccc0d35310cff1e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga798b3be5b029174d4ccc0d35310cff1e" kindref="member">adc12_get_conv_valid_status</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch)</highlight></codeline>
-<codeline lineno="441"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="hpm__adc12__regs_8h_1a9ed8c9adb749809841e2dbe6dea9d1ba" kindref="member">ADC12_BUS_RESULT_VALID_GET</ref>(ptr-&gt;<ref refid="structADC12__Type_1a25fdd6207f7a1c593b521431114a1134" kindref="member">BUS_RESULT</ref>[ch]);</highlight></codeline>
-<codeline lineno="443"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="444"><highlight class="normal"></highlight></codeline>
-<codeline lineno="454" refid="group__adc12__interface_1ga976ccf163fdce57fdd2a5b47defe6a03" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga976ccf163fdce57fdd2a5b47defe6a03" kindref="member">adc12_clear_status_flags</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>mask)</highlight></codeline>
-<codeline lineno="455"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1a929a55c7136a50e553ff46bfcc9fc047" kindref="member">INT_STS</ref><sp/>=<sp/>mask;</highlight></codeline>
-<codeline lineno="457"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="458"><highlight class="normal"></highlight></codeline>
-<codeline lineno="472" refid="group__adc12__interface_1ga508ed98f5d6588cab7fa413128b57199" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga508ed98f5d6588cab7fa413128b57199" kindref="member">adc12_enable_interrupts</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>mask)</highlight></codeline>
-<codeline lineno="473"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1a215cf17a0f0975e4f2dc487f172fe7e9" kindref="member">INT_EN</ref><sp/>|=<sp/>mask;</highlight></codeline>
-<codeline lineno="475"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="476"><highlight class="normal"></highlight></codeline>
-<codeline lineno="483" refid="group__adc12__interface_1ga4cc106c0c8134cb793fa93df9e7d4fb1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga4cc106c0c8134cb793fa93df9e7d4fb1" kindref="member">adc12_disable_interrupts</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>mask)</highlight></codeline>
-<codeline lineno="484"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1a215cf17a0f0975e4f2dc487f172fe7e9" kindref="member">INT_EN</ref><sp/>&amp;=<sp/>~mask;</highlight></codeline>
-<codeline lineno="486"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="487"><highlight class="normal"></highlight></codeline>
-<codeline lineno="503"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1ga5697c916a8214ca305d81bf8f33b9aaa" kindref="member">adc12_trigger_seq_by_sw</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr);</highlight></codeline>
-<codeline lineno="504"><highlight class="normal"></highlight></codeline>
-<codeline lineno="514"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1gacab110b90caa2d9397a003b05f93cfe7" kindref="member">adc12_trigger_pmt_by_sw</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>trig_ch);</highlight></codeline>
-<codeline lineno="515"><highlight class="normal"></highlight></codeline>
-<codeline lineno="526"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1ga1785f7ec47fbaf77b637ed7640110a24" kindref="member">adc12_get_oneshot_result</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch,<sp/>uint16_t<sp/>*result);</highlight></codeline>
-<codeline lineno="527"><highlight class="normal"></highlight></codeline>
-<codeline lineno="538"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1gafe860902f8a045fbbf30e8f72e3d6c37" kindref="member">adc12_get_prd_result</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch,<sp/>uint16_t<sp/>*result);</highlight></codeline>
-<codeline lineno="539"><highlight class="normal"></highlight></codeline>
-<codeline lineno="542"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="543"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="544"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="545"><highlight class="normal"></highlight></codeline>
-<codeline lineno="547"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HPM_ADC12_DRV_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="126" refid="structadc12__config__t_1a937e40c97b4a0bc44f2aee94ff05ddcd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__config__t_1a937e40c97b4a0bc44f2aee94ff05ddcd" kindref="member">diff_sel</ref>;</highlight></codeline>
+<codeline lineno="127" refid="structadc12__config__t_1a33be2f596f9901544b7d978b7ce42a36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__config__t_1a33be2f596f9901544b7d978b7ce42a36" kindref="member">adc_clk_div</ref>;</highlight></codeline>
+<codeline lineno="128" refid="structadc12__config__t_1acc3d8f7dec485bbc9cda6113f851581e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__config__t_1acc3d8f7dec485bbc9cda6113f851581e" kindref="member">wait_dis</ref>;</highlight></codeline>
+<codeline lineno="129" refid="structadc12__config__t_1a288bca08993809e06c382091d58faf10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__config__t_1a288bca08993809e06c382091d58faf10" kindref="member">sel_sync_ahb</ref>;</highlight></codeline>
+<codeline lineno="130" refid="structadc12__config__t_1af7e9b055adeda44adfa92c855088af63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__config__t_1af7e9b055adeda44adfa92c855088af63" kindref="member">adc_ahb_en</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}<sp/><ref refid="structadc12__config__t" kindref="compound">adc12_config_t</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="structadc12__channel__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135" refid="structadc12__channel__config__t_1ae8fc874ba5462d4688c83b0dd45b3c14" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__channel__config__t_1ae8fc874ba5462d4688c83b0dd45b3c14" kindref="member">ch</ref>;</highlight></codeline>
+<codeline lineno="136" refid="structadc12__channel__config__t_1a70b2bf980ceb07bf5c1a5476553e4439" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__channel__config__t_1a70b2bf980ceb07bf5c1a5476553e4439" kindref="member">diff_sel</ref>;</highlight></codeline>
+<codeline lineno="137" refid="structadc12__channel__config__t_1a9f3ec80e7ec7938e6a14674728142499" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint16_t<sp/><ref refid="structadc12__channel__config__t_1a9f3ec80e7ec7938e6a14674728142499" kindref="member">thshdh</ref>;</highlight></codeline>
+<codeline lineno="138" refid="structadc12__channel__config__t_1a990b1a338270a5af1ea36ef32e610a37" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint16_t<sp/><ref refid="structadc12__channel__config__t_1a990b1a338270a5af1ea36ef32e610a37" kindref="member">thshdl</ref>;</highlight></codeline>
+<codeline lineno="139" refid="structadc12__channel__config__t_1a22e8efbaf046d80fb0bf708f352afe08" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__channel__config__t_1a22e8efbaf046d80fb0bf708f352afe08" kindref="member">wdog_int_en</ref>;</highlight></codeline>
+<codeline lineno="140" refid="structadc12__channel__config__t_1a8837422aba6303339dd5fe66e932a8ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__channel__config__t_1a8837422aba6303339dd5fe66e932a8ca" kindref="member">sample_cycle_shift</ref>;</highlight></codeline>
+<codeline lineno="141" refid="structadc12__channel__config__t_1a93bdf010681c016033d3fa2279f0831a" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__channel__config__t_1a93bdf010681c016033d3fa2279f0831a" kindref="member">sample_cycle</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}<sp/><ref refid="structadc12__channel__config__t" kindref="compound">adc12_channel_config_t</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="structadc12__channel__threshold__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146" refid="structadc12__channel__threshold__t_1aefaf2e54efcbfb763f4525951280240f" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__channel__threshold__t_1aefaf2e54efcbfb763f4525951280240f" kindref="member">ch</ref>;</highlight></codeline>
+<codeline lineno="147" refid="structadc12__channel__threshold__t_1a0c2b0557e1aeb54840a820e328dc3149" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint16_t<sp/><ref refid="structadc12__channel__threshold__t_1a0c2b0557e1aeb54840a820e328dc3149" kindref="member">thshdh</ref>;</highlight></codeline>
+<codeline lineno="148" refid="structadc12__channel__threshold__t_1a4fd8580b4ac1bcda41677b8c79b9def8" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint16_t<sp/><ref refid="structadc12__channel__threshold__t_1a4fd8580b4ac1bcda41677b8c79b9def8" kindref="member">thshdl</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}<sp/><ref refid="structadc12__channel__threshold__t" kindref="compound">adc12_channel_threshold_t</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="structadc12__dma__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153" refid="structadc12__dma__config__t_1a5419472f1b8e5ed14d6bd989806f4669" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*<ref refid="structadc12__dma__config__t_1a5419472f1b8e5ed14d6bd989806f4669" kindref="member">start_addr</ref>;</highlight></codeline>
+<codeline lineno="154" refid="structadc12__dma__config__t_1a5b2d70de74699b72467c46642542084d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__dma__config__t_1a5b2d70de74699b72467c46642542084d" kindref="member">buff_len_in_4bytes</ref>;</highlight></codeline>
+<codeline lineno="155" refid="structadc12__dma__config__t_1ae1c5f94635f29bc9159e1c286531dad4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__dma__config__t_1ae1c5f94635f29bc9159e1c286531dad4" kindref="member">stop_pos</ref>;</highlight></codeline>
+<codeline lineno="156" refid="structadc12__dma__config__t_1a9011151118d2befcaf60e5e6f33f5239" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__dma__config__t_1a9011151118d2befcaf60e5e6f33f5239" kindref="member">stop_en</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}<sp/><ref refid="structadc12__dma__config__t" kindref="compound">adc12_dma_config_t</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="structadc12__seq__dma__data__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:4;</highlight></codeline>
+<codeline lineno="162" refid="structadc12__seq__dma__data__t_1acc964780fdccf6d6d32fd421df673a33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__seq__dma__data__t_1acc964780fdccf6d6d32fd421df673a33" kindref="member">result</ref><sp/><sp/><sp/><sp/>:12;</highlight></codeline>
+<codeline lineno="163" refid="structadc12__seq__dma__data__t_1a9536fe3383cc9b90898c817e7d78c1e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__seq__dma__data__t_1a9536fe3383cc9b90898c817e7d78c1e1" kindref="member">seq_num</ref><sp/><sp/><sp/>:4;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:4;</highlight></codeline>
+<codeline lineno="165" refid="structadc12__seq__dma__data__t_1a870d68e0daa7a0d257c1a2ec9e47a308" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__seq__dma__data__t_1a870d68e0daa7a0d257c1a2ec9e47a308" kindref="member">adc_ch</ref><sp/><sp/><sp/><sp/>:5;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:2;</highlight></codeline>
+<codeline lineno="167" refid="structadc12__seq__dma__data__t_1a40028630e92edd0a3212fd49df7acb59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__seq__dma__data__t_1a40028630e92edd0a3212fd49df7acb59" kindref="member">cycle_bit</ref><sp/>:1;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}<sp/><ref refid="structadc12__seq__dma__data__t" kindref="compound">adc12_seq_dma_data_t</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="structadc12__pmt__dma__data__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:4;</highlight></codeline>
+<codeline lineno="173" refid="structadc12__pmt__dma__data__t_1abf36c69b827c37499f480f484845ed11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__pmt__dma__data__t_1abf36c69b827c37499f480f484845ed11" kindref="member">result</ref><sp/><sp/><sp/><sp/>:12;</highlight></codeline>
+<codeline lineno="174" refid="structadc12__pmt__dma__data__t_1aa390fe7cc6816decdfae49ba73591c97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__pmt__dma__data__t_1aa390fe7cc6816decdfae49ba73591c97" kindref="member">seq_num</ref><sp/><sp/><sp/>:2;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:2;</highlight></codeline>
+<codeline lineno="176" refid="structadc12__pmt__dma__data__t_1a1e0a3269e12d54c987b2009d8616e88d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__pmt__dma__data__t_1a1e0a3269e12d54c987b2009d8616e88d" kindref="member">trig_ch</ref><sp/><sp/><sp/>:4;</highlight></codeline>
+<codeline lineno="177" refid="structadc12__pmt__dma__data__t_1a37ecd8b4922666c5e878e54a94fa96dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__pmt__dma__data__t_1a37ecd8b4922666c5e878e54a94fa96dd" kindref="member">adc_ch</ref><sp/><sp/><sp/><sp/>:5;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:2;</highlight></codeline>
+<codeline lineno="179" refid="structadc12__pmt__dma__data__t_1a36d30545e46520bc0be861467e5b1a2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structadc12__pmt__dma__data__t_1a36d30545e46520bc0be861467e5b1a2d" kindref="member">cycle_bit</ref><sp/>:1;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">}<sp/><ref refid="structadc12__pmt__dma__data__t" kindref="compound">adc12_pmt_dma_data_t</ref>;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="structadc12__prd__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="184" refid="structadc12__prd__config__t_1af087d53b48a6f4936cd32dba94925645" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__prd__config__t_1af087d53b48a6f4936cd32dba94925645" kindref="member">ch</ref>;</highlight></codeline>
+<codeline lineno="185" refid="structadc12__prd__config__t_1a83495af5e0ea495a48ead8f9d4230b4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__prd__config__t_1a83495af5e0ea495a48ead8f9d4230b4e" kindref="member">prescale</ref>;</highlight></codeline>
+<codeline lineno="186" refid="structadc12__prd__config__t_1adb23bea3479233a1e983447b9425bc94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__prd__config__t_1adb23bea3479233a1e983447b9425bc94" kindref="member">period_count</ref>;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}<sp/><ref refid="structadc12__prd__config__t" kindref="compound">adc12_prd_config_t</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="structadc12__seq__queue__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="191" refid="structadc12__seq__queue__config__t_1a9cbce2f0ce44b5dc45a6341c68989b7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__seq__queue__config__t_1a9cbce2f0ce44b5dc45a6341c68989b7b" kindref="member">seq_int_en</ref>;</highlight></codeline>
+<codeline lineno="192" refid="structadc12__seq__queue__config__t_1ae13c7ca20c82dfe5a199172af5107f07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__seq__queue__config__t_1ae13c7ca20c82dfe5a199172af5107f07" kindref="member">ch</ref>;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}<sp/><ref refid="structadc12__seq__queue__config__t" kindref="compound">adc12_seq_queue_config_t</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="structadc12__seq__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197" refid="structadc12__seq__config__t_1a7d23304eb7753e1733c2c64a3753bf4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structadc12__seq__queue__config__t" kindref="compound">adc12_seq_queue_config_t</ref><sp/>queue[<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a48f987e19c946a0b5c45536743d0b656" kindref="member">ADC_SOC_SEQ_MAX_LEN</ref>];</highlight></codeline>
+<codeline lineno="198" refid="structadc12__seq__config__t_1a9f9b362a1b23244e7ea04d9b52b82d8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__seq__config__t_1a9f9b362a1b23244e7ea04d9b52b82d8c" kindref="member">restart_en</ref>;</highlight></codeline>
+<codeline lineno="199" refid="structadc12__seq__config__t_1acff1ddef11863e450c26d8302f8d900b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__seq__config__t_1acff1ddef11863e450c26d8302f8d900b" kindref="member">cont_en</ref>;</highlight></codeline>
+<codeline lineno="200" refid="structadc12__seq__config__t_1ac30d3c684707edbf36074a58057b74b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__seq__config__t_1ac30d3c684707edbf36074a58057b74b9" kindref="member">sw_trig_en</ref>;</highlight></codeline>
+<codeline lineno="201" refid="structadc12__seq__config__t_1af337ceea12d25af9766840df12d6b631" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structadc12__seq__config__t_1af337ceea12d25af9766840df12d6b631" kindref="member">hw_trig_en</ref>;</highlight></codeline>
+<codeline lineno="202" refid="structadc12__seq__config__t_1ac1d272c65251cfa1c4fe7da828f78473" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__seq__config__t_1ac1d272c65251cfa1c4fe7da828f78473" kindref="member">seq_len</ref>;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">}<sp/><ref refid="structadc12__seq__config__t" kindref="compound">adc12_seq_config_t</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206" refid="structadc12__pmt__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="207" refid="structadc12__pmt__config__t_1af242651875366d5217ff6c505486c4ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>inten[<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1ab8bb2b014dd2780fa7f17cd6c21eed3d" kindref="member">ADC_SOC_MAX_TRIG_CH_LEN</ref>];</highlight></codeline>
+<codeline lineno="208" refid="structadc12__pmt__config__t_1ad1cd760883bb99d9b9f3e528af914a35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>adc_ch[<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1ab8bb2b014dd2780fa7f17cd6c21eed3d" kindref="member">ADC_SOC_MAX_TRIG_CH_LEN</ref>];</highlight></codeline>
+<codeline lineno="209" refid="structadc12__pmt__config__t_1a0dc2169dea95867cd24132666f51e7dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__pmt__config__t_1a0dc2169dea95867cd24132666f51e7dc" kindref="member">trig_ch</ref>;</highlight></codeline>
+<codeline lineno="210" refid="structadc12__pmt__config__t_1a3142271032e21672d2ef6c0a1e3aa1ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadc12__pmt__config__t_1a3142271032e21672d2ef6c0a1e3aa1ab" kindref="member">trig_len</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}<sp/><ref refid="structadc12__pmt__config__t" kindref="compound">adc12_pmt_config_t</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga78f1545f1bdc6cfe61d08dd7280c6226" kindref="member">adc12_get_default_config</ref>(<ref refid="structadc12__config__t" kindref="compound">adc12_config_t</ref><sp/>*config);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1gabe970318a8a6dc17fa839e736416aeaf" kindref="member">adc12_get_channel_default_config</ref>(<ref refid="structadc12__channel__config__t" kindref="compound">adc12_channel_config_t</ref><sp/>*config);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1gafbb1ab70f031d20dda01bae1b0788add" kindref="member">adc12_deinit</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1ga1638d81a6447e0deeebb40ebde932dac" kindref="member">adc12_init</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/><ref refid="structadc12__config__t" kindref="compound">adc12_config_t</ref><sp/>*config);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1gaa5d18a9bcfd09ecf69c8a4ea52ba026c" kindref="member">adc12_init_channel</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/><ref refid="structadc12__channel__config__t" kindref="compound">adc12_channel_config_t</ref><sp/>*config);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1gab8c55248482d0736800e142faaa133eb" kindref="member">adc12_get_channel_threshold</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch,<sp/><ref refid="structadc12__channel__threshold__t" kindref="compound">adc12_channel_threshold_t</ref><sp/>*config);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1ga60f2a7f772ee8cd3cd17a0d6b863ef29" kindref="member">adc12_set_prd_config</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/><ref refid="structadc12__prd__config__t" kindref="compound">adc12_prd_config_t</ref><sp/>*config);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1ga7cb22a7bfe2132f595a4c03129f52db7" kindref="member">adc12_set_seq_config</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/><ref refid="structadc12__seq__config__t" kindref="compound">adc12_seq_config_t</ref><sp/>*config);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1ga537418bcdeb9157adba6be65546aeb49" kindref="member">adc12_set_pmt_config</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/><ref refid="structadc12__pmt__config__t" kindref="compound">adc12_pmt_config_t</ref><sp/>*config);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325" refid="group__adc12__interface_1gae88b2925d9c1c3b3b4f8998f010967e8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1gae88b2925d9c1c3b3b4f8998f010967e8" kindref="member">adc12_set_seq_stop_pos</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint16_t<sp/>stop_pos)</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1a2b8cd057444cfd1708fb029c634b65b2" kindref="member">SEQ_DMA_CFG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structADC12__Type_1a2b8cd057444cfd1708fb029c634b65b2" kindref="member">SEQ_DMA_CFG</ref><sp/>&amp;<sp/>~ADC12_SEQ_DMA_CFG_STOP_POS_MASK)</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__adc12__regs_8h_1adde563c0a1a68a24a4ba68823f84f7b6" kindref="member">ADC12_SEQ_DMA_CFG_STOP_POS_SET</ref>(stop_pos);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337" refid="group__adc12__interface_1ga2fab3d40d8b501b436719835e7d7aaf2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga2fab3d40d8b501b436719835e7d7aaf2" kindref="member">adc12_init_pmt_dma</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>addr)</highlight></codeline>
+<codeline lineno="338"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1a75aee798818913b80b7ad7ea71950a87" kindref="member">TRG_DMA_ADDR</ref><sp/>=<sp/>addr<sp/>&amp;<sp/><ref refid="hpm__adc12__regs_8h_1a2be08ae1aa2d7da2510028127c545e85" kindref="member">ADC12_TRG_DMA_ADDR_TRG_DMA_ADDR_MASK</ref>;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1ga423c716b99ab4717b25ed5efe51f5128" kindref="member">adc12_init_seq_dma</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/><ref refid="structadc12__dma__config__t" kindref="compound">adc12_dma_config_t</ref><sp/>*config);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367" refid="group__adc12__interface_1gaf6e5628b28d54a63b4aa0541b5fb9ccd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__adc12__interface_1gaf6e5628b28d54a63b4aa0541b5fb9ccd" kindref="member">adc12_get_status_flags</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="368"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structADC12__Type_1a929a55c7136a50e553ff46bfcc9fc047" kindref="member">INT_STS</ref>;</highlight></codeline>
+<codeline lineno="370"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379" refid="group__adc12__interface_1ga0e976a703720f19cc0907503d1c27ce1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga0e976a703720f19cc0907503d1c27ce1" kindref="member">adc12_disable_busywait</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="380"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1aafc384ff3fa97ba8856c4197bd926433" kindref="member">BUF_CFG0</ref><sp/>|=<sp/><ref refid="hpm__adc12__regs_8h_1a40e3dbdc1aab44068de002e0ba409f94" kindref="member">ADC12_BUF_CFG0_WAIT_DIS_SET</ref>(1);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391" refid="group__adc12__interface_1gab87f81092eb40c0edf9402594699f0b3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1gab87f81092eb40c0edf9402594699f0b3" kindref="member">adc12_enable_busywait</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="392"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1aafc384ff3fa97ba8856c4197bd926433" kindref="member">BUF_CFG0</ref><sp/>&amp;=<sp/>~ADC12_BUF_CFG0_WAIT_DIS_MASK;</highlight></codeline>
+<codeline lineno="394"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="402" refid="group__adc12__interface_1gab9e71aab3b76a9847b6bbd4d9e5f9f88" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1gab9e71aab3b76a9847b6bbd4d9e5f9f88" kindref="member">adc12_set_nonblocking_read</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="403"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1aafc384ff3fa97ba8856c4197bd926433" kindref="member">BUF_CFG0</ref><sp/>|=<sp/><ref refid="hpm__adc12__regs_8h_1aba34da92f666994222d5ae4137bd5bb0" kindref="member">ADC12_BUF_CFG0_WAIT_DIS_MASK</ref>;</highlight></codeline>
+<codeline lineno="405"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight></codeline>
+<codeline lineno="413" refid="group__adc12__interface_1ga6fc9b8c6ce36675690337d2893aa7356" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga6fc9b8c6ce36675690337d2893aa7356" kindref="member">adc12_set_blocking_read</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="414"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1aafc384ff3fa97ba8856c4197bd926433" kindref="member">BUF_CFG0</ref><sp/>&amp;=<sp/>~ADC12_BUF_CFG0_WAIT_DIS_MASK;</highlight></codeline>
+<codeline lineno="416"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="427" refid="group__adc12__interface_1gafe3809e9074cba3bf40d4b61d31efcee" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1gafe3809e9074cba3bf40d4b61d31efcee" kindref="member">adc12_is_nonblocking_mode</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr)</highlight></codeline>
+<codeline lineno="428"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="hpm__adc12__regs_8h_1a4ac336d0bfef8b58c6ac89131ae9601a" kindref="member">ADC12_BUF_CFG0_WAIT_DIS_GET</ref>(ptr-&gt;<ref refid="structADC12__Type_1aafc384ff3fa97ba8856c4197bd926433" kindref="member">BUF_CFG0</ref>)<sp/><sp/>?<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="441" refid="group__adc12__interface_1ga798b3be5b029174d4ccc0d35310cff1e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga798b3be5b029174d4ccc0d35310cff1e" kindref="member">adc12_get_conv_valid_status</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch)</highlight></codeline>
+<codeline lineno="442"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="hpm__adc12__regs_8h_1a9ed8c9adb749809841e2dbe6dea9d1ba" kindref="member">ADC12_BUS_RESULT_VALID_GET</ref>(ptr-&gt;<ref refid="structADC12__Type_1a25fdd6207f7a1c593b521431114a1134" kindref="member">BUS_RESULT</ref>[ch]);</highlight></codeline>
+<codeline lineno="444"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455" refid="group__adc12__interface_1ga976ccf163fdce57fdd2a5b47defe6a03" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga976ccf163fdce57fdd2a5b47defe6a03" kindref="member">adc12_clear_status_flags</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>mask)</highlight></codeline>
+<codeline lineno="456"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1a929a55c7136a50e553ff46bfcc9fc047" kindref="member">INT_STS</ref><sp/>=<sp/>mask;</highlight></codeline>
+<codeline lineno="458"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"></highlight></codeline>
+<codeline lineno="473" refid="group__adc12__interface_1ga508ed98f5d6588cab7fa413128b57199" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga508ed98f5d6588cab7fa413128b57199" kindref="member">adc12_enable_interrupts</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>mask)</highlight></codeline>
+<codeline lineno="474"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1a215cf17a0f0975e4f2dc487f172fe7e9" kindref="member">INT_EN</ref><sp/>|=<sp/>mask;</highlight></codeline>
+<codeline lineno="476"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"></highlight></codeline>
+<codeline lineno="484" refid="group__adc12__interface_1ga4cc106c0c8134cb793fa93df9e7d4fb1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__adc12__interface_1ga4cc106c0c8134cb793fa93df9e7d4fb1" kindref="member">adc12_disable_interrupts</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>mask)</highlight></codeline>
+<codeline lineno="485"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structADC12__Type_1a215cf17a0f0975e4f2dc487f172fe7e9" kindref="member">INT_EN</ref><sp/>&amp;=<sp/>~mask;</highlight></codeline>
+<codeline lineno="487"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"></highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1ga5697c916a8214ca305d81bf8f33b9aaa" kindref="member">adc12_trigger_seq_by_sw</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr);</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"></highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1gacab110b90caa2d9397a003b05f93cfe7" kindref="member">adc12_trigger_pmt_by_sw</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>trig_ch);</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"></highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1ga1785f7ec47fbaf77b637ed7640110a24" kindref="member">adc12_get_oneshot_result</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch,<sp/>uint16_t<sp/>*result);</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"></highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__adc12__interface_1gafe860902f8a045fbbf30e8f72e3d6c37" kindref="member">adc12_get_prd_result</ref>(<ref refid="structADC12__Type" kindref="compound">ADC12_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>ch,<sp/>uint16_t<sp/>*result);</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"></highlight></codeline>
+<codeline lineno="543"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="544"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="546"><highlight class="normal"></highlight></codeline>
+<codeline lineno="548"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HPM_ADC12_DRV_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="drivers/inc/hpm_adc12_drv.h"/>
   </compounddef>

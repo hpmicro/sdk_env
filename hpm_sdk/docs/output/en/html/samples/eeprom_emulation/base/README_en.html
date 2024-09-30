@@ -52,6 +52,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../boards/index_en.html">Evaluation Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../components/index_en.html">Components</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index_en.html">Samples</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../audio_codec/index_en.html">1. Audio Codec</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../cherryrb/README_en.html">2. CherryRB</a></li>
@@ -100,6 +101,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../spi_sdcard/index_en.html">35. SPI_SDCARD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../cherrysh/index_en.html">36. CherrySH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ethercat/index_en.html">37. EtherCAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smbus/index_en.html">38. SMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pmbus/index_en.html">39. PMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tsn/index_en.html">40. tsn</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../drivers/index_en.html">Drivers Examples</a></li>
@@ -171,21 +175,21 @@
 <ul class="simple">
 <li><p>Do not write more than one erase size data once</p></li>
 <li><p>EEPROM_MAX_VAR_CNT which default count 100 needs to be set in user_config.h to limit the maximum number of blocks</p></li>
+<li><p>The relevant writing situation can be viewed by modifying the debug level</p></li>
 </ul>
 </section>
 <section id="running-the-example">
 <h2><span class="section-number">8.1.4. </span>Running the example<a class="headerlink" href="#running-the-example" title="Permalink to this heading"></a></h2>
 <p>The serial port output is shown below:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">------------ flash-&gt;eeprom init ok -----------</span>
-
-<span class="go">start address: 0x80080000</span>
-<span class="go">sector count: 128</span>
+<span class="go">start address: 0x80fd0000</span>
+<span class="go">sector count: 16</span>
 <span class="go">flash earse granularity: 4096</span>
 <span class="go">version: 0x4553</span>
-<span class="go">end address: 0x80100000</span>
-<span class="go">data write addr = 0x80080000, info write addr = 0x800fffe0, remain flash size = 0x7ffe0</span>
-
+<span class="go">end address: 0x80fe0000</span>
+<span class="go">data write addr = 0x80fd0021, info write addr = 0x80fdffa4, remain flash size = 0xff83</span>
 <span class="go">valid count percent info count( 0 / 0 )</span>
+<span class="go">----------------------------------------------</span>
 
 <span class="go">----------------------------------------------</span>
 
@@ -199,13 +203,6 @@
 <span class="go"> Others - Show index menu</span>
 
 <span class="go">◆1</span>
-<span class="go">block_id[0x48504d43] success write, data addr=0x80080000, remain size=0x0007ffc9 crc=0xe2fc9e5d</span>
-
-<span class="go">block_id[0x41000000] success write, data addr=0x80080007, remain size=0x0007ffb4 crc=0x9d46fe3f</span>
-
-<span class="go">block_id[0x41420000] success write, data addr=0x8008000c, remain size=0x0007ff98 crc=0x887db847</span>
-
-<span class="go">block_id[0x41424300] success write, data addr=0x80080018, remain size=0x0007ff7c crc=0x1ee95571</span>
 
 <span class="go">◆2</span>
 <span class="go">var1 = abcdef</span>
@@ -214,31 +211,16 @@
 <span class="go">var4 = eeprom_demo</span>
 
 <span class="go">◆3</span>
-<span class="go">block_id[0x48504d43] success write, data addr=0x80080024, remain size=0x0007ff65 crc=0xe2fc9e5d</span>
-
-<span class="go">block_id[0x41000000] success write, data addr=0x8008002b, remain size=0x0007ff50 crc=0x9d46fe3f</span>
-
-<span class="go">block_id[0x41420000] success write, data addr=0x80080030, remain size=0x0007ff34 crc=0x887db847</span>
-
-<span class="go">block_id[0x41424300] success write, data addr=0x8008003c, remain size=0x0007ff18 crc=0x1ee95571</span>
-
-<span class="go">block_id[0x48504d43] success write, data addr=0x80080048, remain size=0x0007ff04 crc=0xbbf3f9d2</span>
-
-<span class="go">block_id[0x41000000] success write, data addr=0x8008004c, remain size=0x0007feef crc=0x4c182878</span>
 
 <span class="go">◆5</span>
 <span class="go">------------ flash-&gt;eeprom init ok -----------</span>
-
-<span class="go">start address: 0x80080000</span>
-<span class="go">sector count: 128</span>
+<span class="go">start address: 0x80fd0000</span>
+<span class="go">sector count: 16</span>
 <span class="go">flash earse granularity: 4096</span>
 <span class="go">version: 0x4553</span>
-<span class="go">end address: 0x80100000</span>
-<span class="go">data</span>
-<span class="go">[11:39:52.133]收←◆write addr = 0x8008004e, info write addr = 0x800fff40, remain flash size = 0x7fef2</span>
-
+<span class="go">end address: 0x80fe0000</span>
+<span class="go">data write addr = 0x80fd0072, info write addr = 0x80fdff04, remain flash size = 0xfe92</span>
 <span class="go">valid count percent info count( 4 / 10 )</span>
-
 <span class="go">----------------------------------------------</span>
 
 <span class="go">◆2</span>
@@ -248,26 +230,14 @@
 <span class="go">var4 = eeprom_demo</span>
 
 <span class="go">◆4</span>
-
-<span class="go">block_id[0x41420000] success write, data addr=0x80080000, remain size=0x0007ffc4 crc=0x887db847</span>
-
-<span class="go">block_id[0x41424300] success write, data addr=0x8008000c, remain size=0x0007ffa8 crc=0x1ee95571</span>
-
-<span class="go">block_id[0x48504d43] success write, data addr=0x80080018, remain size=0x0007ff94 crc=0xbbf3f9d2</span>
-
-<span class="go">block_id[0x41000000] success write, data addr=0x8008001c, remain size=0x0007ff7f crc=0x4c182878</span>
-
 <span class="go">------------ flash-&gt;eeprom init ok -----------</span>
-
-<span class="go">start address: 0x80080000</span>
-<span class="go">sector count: 128</span>
+<span class="go">start address: 0x80fc0000</span>
+<span class="go">sector count: 16</span>
 <span class="go">flash earse granularity: 4096</span>
 <span class="go">version: 0x4553</span>
-<span class="go">end address: 0x80100000</span>
-<span class="go">data write addr = 0x80080021, info write addr = 0x800fffa0, remain flash size = 0x7ff7f</span>
-
+<span class="go">end address: 0x80fd0000</span>
+<span class="go">data write addr = 0x80fc0021, info write addr = 0x80fcffa4, remain flash size = 0xff83</span>
 <span class="go">valid count percent info count( 4 / 4 )</span>
-
 <span class="go">----------------------------------------------</span>
 </pre></div>
 </div>
@@ -283,7 +253,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2020-2024, HPMicro.
-      <span class="lastupdated">Last updated on Jun 28, 2024.
+      <span class="lastupdated">Last updated on Sep 30, 2024.
       </span></p>
   </div>
 

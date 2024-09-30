@@ -33,6 +33,7 @@ var hpm__tsns__drv_8h =
     [ "tsns_enable_trigger_mode", "group__tsns__interface.html#ga95320404d8553dbf1fe4c37660e6475a", null ],
     [ "tsns_get_current_temp", "group__tsns__interface.html#ga5efe0f5c08235140fbfeb8e77bc1ae0c", null ],
     [ "tsns_get_current_temp_in_raw", "group__tsns__interface.html#gafb1eeee69e47e53f9d004bb8697257b1", null ],
+    [ "tsns_get_flag_value", "group__tsns__interface.html#ga32e788c5287fceb17dd7566ad0468369", null ],
     [ "tsns_get_max_temp_raw", "group__tsns__interface.html#gadf2cfa88df587c70cfc744ae2f7e2851", null ],
     [ "tsns_get_min_temp_raw", "group__tsns__interface.html#gacebf3fffe8939d169650d6206a88f967", null ],
     [ "tsns_get_temp_age", "group__tsns__interface.html#ga455239eca0fe7e00aa725261b7e85f5c", null ],

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['initfini_2ec_62740',['initfini.c',['../HPM5300_2HPM5301_2toolchains_2gcc_2initfini_8c.html',1,'(Global Namespace)'],['../HPM5300_2HPM5361_2toolchains_2gcc_2initfini_8c.html',1,'(Global Namespace)'],['../HPM6200_2HPM6280_2toolchains_2gcc_2initfini_8c.html',1,'(Global Namespace)'],['../HPM6300_2HPM6360_2toolchains_2gcc_2initfini_8c.html',1,'(Global Namespace)'],['../HPM6700_2HPM6750_2toolchains_2gcc_2initfini_8c.html',1,'(Global Namespace)'],['../HPM6800_2HPM6880_2toolchains_2gcc_2initfini_8c.html',1,'(Global Namespace)'],['../HPM6E00_2HPM6E80_2toolchains_2gcc_2initfini_8c.html',1,'(Global Namespace)'],['../HPM__IP__VALIDATION_2HPM__VAL__D25_2toolchains_2gcc_2initfini_8c.html',1,'(Global Namespace)']]]
+  ['eeprom_5femulation_2ec_0',['eeprom_emulation.c',['../eeprom__emulation_8c.html',1,'']]],
+  ['eeprom_5femulation_2eh_1',['eeprom_emulation.h',['../eeprom__emulation_8h.html',1,'']]]
 ];

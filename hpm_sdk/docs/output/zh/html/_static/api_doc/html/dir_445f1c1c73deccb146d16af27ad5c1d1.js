@@ -50,6 +50,7 @@ var dir_445f1c1c73deccb146d16af27ad5c1d1 =
     [ "hpm_mmc_drv.h", "hpm__mmc__drv_8h.html", "hpm__mmc__drv_8h" ],
     [ "hpm_mono_drv.h", "hpm__mono__drv_8h.html", "hpm__mono__drv_8h" ],
     [ "hpm_mtg_drv.h", "hpm__mtg__drv_8h.html", "hpm__mtg__drv_8h" ],
+    [ "hpm_mtgv2_drv.h", "hpm__mtgv2__drv_8h.html", "hpm__mtgv2__drv_8h" ],
     [ "hpm_opamp_drv.h", "hpm__opamp__drv_8h.html", "hpm__opamp__drv_8h" ],
     [ "hpm_pdgo_drv.h", "hpm__pdgo__drv_8h.html", "hpm__pdgo__drv_8h" ],
     [ "hpm_pdm_drv.h", "hpm__pdm__drv_8h.html", "hpm__pdm__drv_8h" ],

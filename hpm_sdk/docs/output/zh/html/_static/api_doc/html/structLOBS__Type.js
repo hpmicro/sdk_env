@@ -35,7 +35,7 @@ var structLOBS__Type =
     [ "SIGSELA1", "structLOBS__Type.html#a7c6c9ac6f7b1ebcd22d9797d1f95f6f8", null ],
     [ "SIGSELA2", "structLOBS__Type.html#a8a45021853e10958f49777d9e82d5db8", null ],
     [ "STARTADDR", "structLOBS__Type.html#a88d366bb3e202499e370ed0ab4deffa6", null ],
-    [ "STATE", "structLOBS__Type.html#ab257c69a0ba77a5794b5f1b187a7becf", null ],
+    [ "STATE", "structLOBS__Type.html#a438567863d65b1c60d3f09a1ea6ce70b", null ],
     [ "STREAMCTRL", "structLOBS__Type.html#ad369c302f03cb022025b2e1a1c50aae2", null ],
     [ "TRIGCTRL", "structLOBS__Type.html#afcca1303a30613ac4b130d160ba88016", null ]
 ];

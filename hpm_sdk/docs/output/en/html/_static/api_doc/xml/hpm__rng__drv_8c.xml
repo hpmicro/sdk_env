@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__rng__drv_8c" kind="file" language="C++">
     <compoundname>hpm_rng_drv.c</compoundname>
     <includes refid="hpm__rng__drv_8h" local="yes">hpm_rng_drv.h</includes>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
       <node id="3">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -21,8 +18,28 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
+      <node id="2">
+        <label>hpm_rng_drv.h</label>
+        <link refid="hpm__rng__drv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>drivers/src/hpm_rng_drv.c</label>
+        <link refid="hpm__rng__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="4">
         <label>assert.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_rng_regs.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
       </node>
       <node id="6">
         <label>stdint.h</label>
@@ -33,25 +50,8 @@
       <node id="7">
         <label>string.h</label>
       </node>
-      <node id="1">
-        <label>drivers/src/hpm_rng_drv.c</label>
-        <link refid="hpm__rng__drv_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>hpm_rng_regs.h</label>
-      </node>
-      <node id="2">
-        <label>hpm_rng_drv.h</label>
-        <link refid="hpm__rng__drv_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
-      <sectiondef kind="func">
+    <sectiondef kind="func">
       <memberdef kind="function" id="hpm__rng__drv_8c_1af1e34179c728edf5ab3470ebd4688270" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
         <definition>hpm_stat_t rng_run_selftest</definition>
@@ -182,7 +182,7 @@
         </inbodydescription>
         <location file="drivers/src/hpm_rng_drv.c" line="92" column="12" bodyfile="drivers/src/hpm_rng_drv.c" bodystart="92" bodyend="115"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -261,7 +261,7 @@
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fifo_level)<sp/>{</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(uint32_t<sp/>*)((uint32_t)buf<sp/>+<sp/>i<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint32_t))<sp/>=<sp/>ptr-&gt;<ref refid="structRNG__Type_1a256fa9e2b18c0fa1293d0378cb0c7756" kindref="member">FO2B</ref>;</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="hpm__rng__drv_8h_1a19ec6beb56ffd72599a9e41ec1024563a1ee64788da4401abe328ec7edbb0c9ee" kindref="member">status_rng_not_available</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="hpm__rng__drv_8h_1a282841548f1d79a386bbeb4172ebf942a1ee64788da4401abe328ec7edbb0c9ee" kindref="member">status_rng_not_available</ref>;</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>

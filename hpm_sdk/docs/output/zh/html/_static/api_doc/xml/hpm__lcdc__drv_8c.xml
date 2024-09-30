@@ -1,13 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__lcdc__drv_8c" kind="file" language="C++">
     <compoundname>hpm_lcdc_drv.c</compoundname>
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
     <includes refid="hpm__lcdc__drv_8h" local="yes">hpm_lcdc_drv.h</includes>
     <incdepgraph>
-      <node id="4">
-        <label>stdbool.h</label>
-      </node>
       <node id="2">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -22,37 +19,11 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>assert.h</label>
-      </node>
       <node id="9">
         <label>hpm_display_common.h</label>
         <link refid="hpm__display__common_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="5">
-        <label>stdint.h</label>
-      </node>
-      <node id="7">
-        <label>stdlib.h</label>
-      </node>
-      <node id="6">
-        <label>string.h</label>
-      </node>
-      <node id="1">
-        <label>drivers/src/hpm_lcdc_drv.c</label>
-        <link refid="hpm__lcdc__drv_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>hpm_lcdc_regs.h</label>
-      </node>
-      <node id="10">
-        <label>hpm_soc_feature.h</label>
       </node>
       <node id="8">
         <label>hpm_lcdc_drv.h</label>
@@ -64,8 +35,37 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
+      <node id="1">
+        <label>drivers/src/hpm_lcdc_drv.c</label>
+        <link refid="hpm__lcdc__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="11">
+        <label>hpm_lcdc_regs.h</label>
+      </node>
+      <node id="10">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
     </incdepgraph>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="hpm__lcdc__drv_8c_1ac440e57d644b20135b3ccfda57afee03" prot="public" static="no">
         <name>LCDC_FIFO_THRESHOLD</name>
         <initializer>(0x70)</initializer>
@@ -77,8 +77,8 @@
         </inbodydescription>
         <location file="drivers/src/hpm_lcdc_drv.c" line="11" column="9" bodyfile="drivers/src/hpm_lcdc_drv.c" bodystart="11" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="hpm__lcdc__drv_8c_1a91ef56087799c4049ee854f59845a8fd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
         <definition>static uint32_t lcdc_pixel_format</definition>
@@ -126,110 +126,8 @@
         </inbodydescription>
         <location file="drivers/src/hpm_lcdc_drv.c" line="39" column="16" bodyfile="drivers/src/hpm_lcdc_drv.c" bodystart="39" bodyend="49"/>
       </memberdef>
-      <memberdef kind="function" id="group__lcd__interface_1gab00cf80546531f73627e151d9cd60dd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcdc_get_default_layer_config</definition>
-        <argsstring>(LCDC_Type *ptr, lcdc_layer_config_t *layer, display_pixel_format_t pixel_format, uint8_t layer_index)</argsstring>
-        <name>lcdc_get_default_layer_config</name>
-        <param>
-          <type><ref refid="structLCDC__Type" kindref="compound">LCDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__lcd__interface_1ga66b7b8fa0bb34db0052ca10dd75cde43" kindref="member">lcdc_layer_config_t</ref> *</type>
-          <declname>layer</declname>
-        </param>
-        <param>
-          <type><ref refid="group__Display__common__interface_1ga3609d1a38c447089436d67c313916bf8" kindref="member">display_pixel_format_t</ref></type>
-          <declname>pixel_format</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>layer_index</declname>
-        </param>
-        <briefdescription>
-<para>Get default layer configuration value. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCD base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">layer</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Pointer of layer configuration struct buffer </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">pixel_format</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Pixel format to be used for this layer </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">layer_index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>target layer to be configured </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lcdc_drv.c" line="51" column="6" bodyfile="drivers/src/hpm_lcdc_drv.c" bodystart="51" bodyend="111"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcd__interface_1gab6c13f8160459eea736fa9f9712cb5c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcdc_get_default_config</definition>
-        <argsstring>(LCDC_Type *ptr, lcdc_config_t *config)</argsstring>
-        <name>lcdc_get_default_config</name>
-        <param>
-          <type><ref refid="structLCDC__Type" kindref="compound">LCDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__lcd__interface_1ga1618096149b89f53016e8ca7218ef0ef" kindref="member">lcdc_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Get default configuration value. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCD base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Pointer of configuration struct buffer </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lcdc_drv.c" line="113" column="6" bodyfile="drivers/src/hpm_lcdc_drv.c" bodystart="113" bodyend="133"/>
-      </memberdef>
+      <member refid="group__lcd__interface_1gab00cf80546531f73627e151d9cd60dd0" kind="function"><name>lcdc_get_default_layer_config</name></member>
+      <member refid="group__lcd__interface_1gab6c13f8160459eea736fa9f9712cb5c9" kind="function"><name>lcdc_get_default_config</name></member>
       <memberdef kind="function" id="hpm__lcdc__drv_8c_1a57fb2c1d570a525d2bc9713f64721374" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void lcdc_reset_register_values</definition>
@@ -247,167 +145,10 @@
         </inbodydescription>
         <location file="drivers/src/hpm_lcdc_drv.c" line="135" column="6" bodyfile="drivers/src/hpm_lcdc_drv.c" bodystart="135" bodyend="163"/>
       </memberdef>
-      <memberdef kind="function" id="group__lcd__interface_1gaf6614a25a45db9947bb8c64145913a5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcdc_init</definition>
-        <argsstring>(LCDC_Type *ptr, lcdc_config_t *config)</argsstring>
-        <name>lcdc_init</name>
-        <param>
-          <type><ref refid="structLCDC__Type" kindref="compound">LCDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__lcd__interface_1ga1618096149b89f53016e8ca7218ef0ef" kindref="member">lcdc_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Initialize LCD controller. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCD base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Pointer of configuration struct buffer </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lcdc_drv.c" line="165" column="6" bodyfile="drivers/src/hpm_lcdc_drv.c" bodystart="165" bodyend="190"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcd__interface_1gad1d4855261cdfef944230cbc874795c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t lcdc_config_layer</definition>
-        <argsstring>(LCDC_Type *ptr, uint8_t layer_index, lcdc_layer_config_t *layer, bool enable_layer)</argsstring>
-        <name>lcdc_config_layer</name>
-        <param>
-          <type><ref refid="structLCDC__Type" kindref="compound">LCDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint8_t</type>
-          <declname>layer_index</declname>
-        </param>
-        <param>
-          <type><ref refid="group__lcd__interface_1ga66b7b8fa0bb34db0052ca10dd75cde43" kindref="member">lcdc_layer_config_t</ref> *</type>
-          <declname>layer_config</declname>
-          <defname>layer</defname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>enable_layer</declname>
-        </param>
-        <briefdescription>
-<para>Configure specific layer. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCD base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">layer_index</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>target layer to be configured </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">layer_config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Pointer of layer configuration struct buffer </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">enable_layer</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Set true if the layer needs to be enabled right after being configured </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lcdc_drv.c" line="192" column="12" bodyfile="drivers/src/hpm_lcdc_drv.c" bodystart="192" bodyend="259"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcd__interface_1gae40d2ac8aaf7c927b561a8609f39c3d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcdc_turn_off_display</definition>
-        <argsstring>(LCDC_Type *ptr)</argsstring>
-        <name>lcdc_turn_off_display</name>
-        <param>
-          <type><ref refid="structLCDC__Type" kindref="compound">LCDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Turn off display. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCD base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lcdc_drv.c" line="261" column="6" bodyfile="drivers/src/hpm_lcdc_drv.c" bodystart="261" bodyend="279"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcd__interface_1gaa97b8a406e9092722a63e60b7df387ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcdc_turn_on_display</definition>
-        <argsstring>(LCDC_Type *ptr)</argsstring>
-        <name>lcdc_turn_on_display</name>
-        <param>
-          <type><ref refid="structLCDC__Type" kindref="compound">LCDC_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>Turn on display. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCD base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_lcdc_drv.c" line="281" column="6" bodyfile="drivers/src/hpm_lcdc_drv.c" bodystart="281" bodyend="286"/>
-      </memberdef>
+      <member refid="group__lcd__interface_1gaf6614a25a45db9947bb8c64145913a5e" kind="function"><name>lcdc_init</name></member>
+      <member refid="group__lcd__interface_1gad1d4855261cdfef944230cbc874795c6" kind="function"><name>lcdc_config_layer</name></member>
+      <member refid="group__lcd__interface_1gae40d2ac8aaf7c927b561a8609f39c3d0" kind="function"><name>lcdc_turn_off_display</name></member>
+      <member refid="group__lcd__interface_1gaa97b8a406e9092722a63e60b7df387ed" kind="function"><name>lcdc_turn_on_display</name></member>
       <memberdef kind="function" id="hpm__lcdc__drv_8c_1a9bf08998788ab1187fa1f0780d535909" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void lcdc_layer_update_pixel_format</definition>
@@ -433,7 +174,7 @@
         </inbodydescription>
         <location file="drivers/src/hpm_lcdc_drv.c" line="288" column="6" bodyfile="drivers/src/hpm_lcdc_drv.c" bodystart="288" bodyend="297"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -581,19 +322,19 @@
 <codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a23e3eb6baf8ee46e49bb1070efe806a9" kindref="member">HSYNC_PARA</ref><sp/>=<sp/>0x00C01803U;</highlight></codeline>
 <codeline lineno="147"><highlight class="normal"></highlight></codeline>
 <codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="HPM6200_2HPM6280_2hpm__soc__feature_8h_1a1335e3516678f48b7250e2b89573ae01" kindref="member">LCDC_SOC_MAX_LAYER_COUNT</ref>;<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a371f646d2dd56a1b41aa27e3bea4baa3" kindref="member">LAYCTRL</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a98efca5a29de6ae77367727099dd8ce7" kindref="member">ALPHAS</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1acae6f25478ebba82decf10cb791e0eb1" kindref="member">LAYSIZE</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a6fc376ba7eb53538b7de91445a5f0055" kindref="member">LAYPOS</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1ae1dffb4a027bf8428a39661381bfa907" kindref="member">START0</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a3b3fc234109c319bccc847e74f394514" kindref="member">LINECFG</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a3d14914f90fcfeecdd229847cf9d8d75" kindref="member">BG_CL</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a371f646d2dd56a1b41aa27e3bea4baa3" kindref="member">LAYCTRL</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a98efca5a29de6ae77367727099dd8ce7" kindref="member">ALPHAS</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1acae6f25478ebba82decf10cb791e0eb1" kindref="member">LAYSIZE</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a6fc376ba7eb53538b7de91445a5f0055" kindref="member">LAYPOS</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1ae1dffb4a027bf8428a39661381bfa907" kindref="member">START0</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a3b3fc234109c319bccc847e74f394514" kindref="member">LINECFG</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a3d14914f90fcfeecdd229847cf9d8d75" kindref="member">BG_CL</ref><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="157"><highlight class="normal"></highlight></codeline>
 <codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="HPM6200_2HPM6280_2hpm__soc__feature_8h_1a0d7da43ab3fce7e126f8b55cda2a2a83" kindref="member">LCDC_SOC_MAX_CSC_LAYER_COUNT</ref>;<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a7913388d56f87dbb69bc24e23117cfe2" kindref="member">CSC_COEF0</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a6cb88785e7cf1863bb6476b87e22081a" kindref="member">CSC_COEF1</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a8b24537bf6a1cdff82baa49977e32c26" kindref="member">CSC_COEF2</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a7913388d56f87dbb69bc24e23117cfe2" kindref="member">CSC_COEF0</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a6cb88785e7cf1863bb6476b87e22081a" kindref="member">CSC_COEF1</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[i].<ref refid="structLCDC__Type_1a8b24537bf6a1cdff82baa49977e32c26" kindref="member">CSC_COEF2</ref><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="163"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"></highlight></codeline>
@@ -632,7 +373,7 @@
 <codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>byteorder;</highlight></codeline>
 <codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>pitch;</highlight></codeline>
 <codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>format;</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ctrl<sp/>=<sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a371f646d2dd56a1b41aa27e3bea4baa3" kindref="member">LAYCTRL</ref>;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ctrl<sp/>=<sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a371f646d2dd56a1b41aa27e3bea4baa3" kindref="member">LAYCTRL</ref>;</highlight></codeline>
 <codeline lineno="201"><highlight class="normal"></highlight></codeline>
 <codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((!<ref refid="HPM6200_2HPM6280_2hpm__soc__feature_8h_1a0e579a3a2359f780391f36f886f40e55" kindref="member">LCDC_SOC_LAYER_SUPPORTS_CSC</ref>(layer_index)<sp/>&amp;&amp;<sp/>layer-&gt;<ref refid="structlcdc__layer__config_1a3661cfc8ed2f31de5f9744a3d20b1930" kindref="member">csc_config</ref>.<ref refid="structdisplay__yuv2rgb__config_1ab92eeddbc2ada424c5c53d1bf7dd5970" kindref="member">enable</ref>)</highlight></codeline>
 <codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>(!<ref refid="HPM6200_2HPM6280_2hpm__soc__feature_8h_1afb4d7e283e5552c1b418d426eff6bd3f" kindref="member">LCDC_SOC_LAYER_SUPPORTS_YUV</ref>(layer_index)</highlight></codeline>
@@ -640,32 +381,32 @@
 <codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__lcd__interface_1gga1b70d876770ccff427513794d6b0b2a7aa27260d3e7c97fae14ccbb988aa29b05" kindref="member">status_lcdc_layer_not_supported</ref>;</highlight></codeline>
 <codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="207"><highlight class="normal"></highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1acae6f25478ebba82decf10cb791e0eb1" kindref="member">LAYSIZE</ref><sp/>=</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1acae6f25478ebba82decf10cb791e0eb1" kindref="member">LAYSIZE</ref><sp/>=</highlight></codeline>
 <codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a483af6985d11781c5b64490694b11f66" kindref="member">LCDC_LAYER_LAYSIZE_HEIGHT_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a4874c1c99ba71a657d131bea17cfa7f6" kindref="member">height</ref>)</highlight></codeline>
 <codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1af8dd42839b5c86fc41f18e10edff5782" kindref="member">LCDC_LAYER_LAYSIZE_WIDTH_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1ab690ff7578e0c9df885f76b3e4a3dbf6" kindref="member">width</ref>);</highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a6fc376ba7eb53538b7de91445a5f0055" kindref="member">LAYPOS</ref><sp/>=</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a6fc376ba7eb53538b7de91445a5f0055" kindref="member">LAYPOS</ref><sp/>=</highlight></codeline>
 <codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a473ca26540d3af3fa1a8b9849776d20f" kindref="member">LCDC_LAYER_LAYPOS_X_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a9d8deafaa31087f7cd47480ba6c2c136" kindref="member">position_x</ref>)</highlight></codeline>
 <codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a338358ea0e45c2446312583ed9ac87b4" kindref="member">LCDC_LAYER_LAYPOS_Y_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1ad2bb8679cd69b8aa7b4eed9f0a662d31" kindref="member">position_y</ref>);</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1ae1dffb4a027bf8428a39661381bfa907" kindref="member">START0</ref><sp/>=<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a1d088eb6e1a95b41bb029a41ae48efa8" kindref="member">LCDC_LAYER_START0_ADDR0_SET</ref>((uint32_t)layer-&gt;<ref refid="structlcdc__layer__config_1ad4fb55d888e3baa675dc04cce7edecbc" kindref="member">buffer</ref>);</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a98efca5a29de6ae77367727099dd8ce7" kindref="member">ALPHAS</ref><sp/>=<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a525f244828d0b4cd674baa059b22ff5f" kindref="member">LCDC_LAYER_ALPHAS_LOCD_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a89f7ac6db32733069a5c40e212d632c5" kindref="member">alphablend</ref>.<ref refid="structdispaly__alphablend__option_1a79aa25688e11bc814f6e0b08e631f51d" kindref="member">src_alpha</ref>)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1ae1dffb4a027bf8428a39661381bfa907" kindref="member">START0</ref><sp/>=<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a1d088eb6e1a95b41bb029a41ae48efa8" kindref="member">LCDC_LAYER_START0_ADDR0_SET</ref>((uint32_t)layer-&gt;<ref refid="structlcdc__layer__config_1ad4fb55d888e3baa675dc04cce7edecbc" kindref="member">buffer</ref>);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a98efca5a29de6ae77367727099dd8ce7" kindref="member">ALPHAS</ref><sp/>=<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a525f244828d0b4cd674baa059b22ff5f" kindref="member">LCDC_LAYER_ALPHAS_LOCD_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a89f7ac6db32733069a5c40e212d632c5" kindref="member">alphablend</ref>.<ref refid="structdispaly__alphablend__option_1a79aa25688e11bc814f6e0b08e631f51d" kindref="member">src_alpha</ref>)</highlight></codeline>
 <codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a00fc7761916735c6d1e73a2cbbabaad2" kindref="member">LCDC_LAYER_ALPHAS_IND_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a89f7ac6db32733069a5c40e212d632c5" kindref="member">alphablend</ref>.<ref refid="structdispaly__alphablend__option_1ab3e49ddbc53a9e93f8cd6f2f39c662f6" kindref="member">dst_alpha</ref>);</highlight></codeline>
 <codeline lineno="217"><highlight class="normal"></highlight></codeline>
 <codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>pitch<sp/>=<sp/>layer-&gt;<ref refid="structlcdc__layer__config_1aa3a2cfbb9ba8b62fb6aa6092e3fd9bab" kindref="member">stride</ref><sp/>&gt;<sp/>0<sp/>?<sp/>layer-&gt;<ref refid="structlcdc__layer__config_1aa3a2cfbb9ba8b62fb6aa6092e3fd9bab" kindref="member">stride</ref><sp/>:<sp/><ref refid="group__Display__common__interface_1ga3b97741536d362031de24c1566ede759" kindref="member">display_get_pitch_length_in_byte</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a758b74475251941b762d348bfa5db72d" kindref="member">pixel_format</ref>,<sp/>layer-&gt;<ref refid="structlcdc__layer__config_1ab690ff7578e0c9df885f76b3e4a3dbf6" kindref="member">width</ref>);</highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a3b3fc234109c319bccc847e74f394514" kindref="member">LINECFG</ref><sp/>=<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a8bd09f429704c4b7b9fef023abba138b" kindref="member">LCDC_LAYER_LINECFG_MPT_SIZE_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1af50a570603bf9cb174f110acb0c03206" kindref="member">max_bytes</ref>)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a3b3fc234109c319bccc847e74f394514" kindref="member">LINECFG</ref><sp/>=<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a8bd09f429704c4b7b9fef023abba138b" kindref="member">LCDC_LAYER_LINECFG_MPT_SIZE_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1af50a570603bf9cb174f110acb0c03206" kindref="member">max_bytes</ref>)</highlight></codeline>
 <codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a1416b6b7b0808544c62a371efdf485c8" kindref="member">LCDC_LAYER_LINECFG_MAX_OT_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1ad6afc63d3fae5614671d2cc35a29a095" kindref="member">max_ot</ref>)</highlight></codeline>
 <codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a403122e551093e72fcc66953eb4f8a2f" kindref="member">LCDC_LAYER_LINECFG_PITCH_SET</ref>(pitch);</highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a3d14914f90fcfeecdd229847cf9d8d75" kindref="member">BG_CL</ref><sp/>=<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a9b6fa0ac2e301c9d22704b0b7604845b" kindref="member">LCDC_LAYER_BG_CL_ARGB_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a6ad1a85d97cd13495aa567faaf041ffd" kindref="member">background</ref>.<ref refid="uniondisplay__color__32b_1a69609d06971c149adf65e9b659522bf1" kindref="member">u</ref>);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a3d14914f90fcfeecdd229847cf9d8d75" kindref="member">BG_CL</ref><sp/>=<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a9b6fa0ac2e301c9d22704b0b7604845b" kindref="member">LCDC_LAYER_BG_CL_ARGB_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a6ad1a85d97cd13495aa567faaf041ffd" kindref="member">background</ref>.<ref refid="uniondisplay__color__32b_1a69609d06971c149adf65e9b659522bf1" kindref="member">u</ref>);</highlight></codeline>
 <codeline lineno="223"><highlight class="normal"></highlight></codeline>
-<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a7913388d56f87dbb69bc24e23117cfe2" kindref="member">CSC_COEF0</ref><sp/>=</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a7913388d56f87dbb69bc24e23117cfe2" kindref="member">CSC_COEF0</ref><sp/>=</highlight></codeline>
 <codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1aeb690833bf53d749980b82e4c8f16545" kindref="member">LCDC_LAYER_CSC_COEF0_ENABLE_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a3661cfc8ed2f31de5f9744a3d20b1930" kindref="member">csc_config</ref>.<ref refid="structdisplay__yuv2rgb__config_1ab92eeddbc2ada424c5c53d1bf7dd5970" kindref="member">enable</ref>)</highlight></codeline>
 <codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1ab0ec21694480bfdd29391cb79c67ceaf" kindref="member">LCDC_LAYER_CSC_COEF0_YCBCR_MODE_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a3661cfc8ed2f31de5f9744a3d20b1930" kindref="member">csc_config</ref>.<ref refid="structdisplay__yuv2rgb__config_1abd59b517d947ba3c4ee5db0fd58c31a2" kindref="member">ycbcr_mode</ref>)</highlight></codeline>
 <codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a208d758424a36fb0ebbdf70a34fc47db" kindref="member">LCDC_LAYER_CSC_COEF0_C0_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a3661cfc8ed2f31de5f9744a3d20b1930" kindref="member">csc_config</ref>.<ref refid="structdisplay__yuv2rgb__config_1a1713931f4f3ba310feaff38368394bd8" kindref="member">yuv2rgb_coef</ref>.<ref refid="structdispaly__yuv2rgb__coef_1a32f2f3dd88c253782302734f640d42aa" kindref="member">c0</ref>)</highlight></codeline>
 <codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1af7f2232e9bb264899cf8fb4e79d05ba8" kindref="member">LCDC_LAYER_CSC_COEF0_UV_OFFSET_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a3661cfc8ed2f31de5f9744a3d20b1930" kindref="member">csc_config</ref>.<ref refid="structdisplay__yuv2rgb__config_1a1713931f4f3ba310feaff38368394bd8" kindref="member">yuv2rgb_coef</ref>.<ref refid="structdispaly__yuv2rgb__coef_1a0cfeba1e266531069696d64970dce848" kindref="member">uv_offset</ref>)</highlight></codeline>
 <codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a180343980dc731b6f7bbbc4825dd0d04" kindref="member">LCDC_LAYER_CSC_COEF0_Y_OFFSET_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a3661cfc8ed2f31de5f9744a3d20b1930" kindref="member">csc_config</ref>.<ref refid="structdisplay__yuv2rgb__config_1a1713931f4f3ba310feaff38368394bd8" kindref="member">yuv2rgb_coef</ref>.<ref refid="structdispaly__yuv2rgb__coef_1a50a1a4c502bb052fa765ddbd13aa5281" kindref="member">y_offset</ref>);</highlight></codeline>
-<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a6cb88785e7cf1863bb6476b87e22081a" kindref="member">CSC_COEF1</ref><sp/>=</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a6cb88785e7cf1863bb6476b87e22081a" kindref="member">CSC_COEF1</ref><sp/>=</highlight></codeline>
 <codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a8eaa08375f14a039c4461e3219e9425d" kindref="member">LCDC_LAYER_CSC_COEF1_C1_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a3661cfc8ed2f31de5f9744a3d20b1930" kindref="member">csc_config</ref>.<ref refid="structdisplay__yuv2rgb__config_1a1713931f4f3ba310feaff38368394bd8" kindref="member">yuv2rgb_coef</ref>.<ref refid="structdispaly__yuv2rgb__coef_1af49c729c954e4a4429df7433f402f1d6" kindref="member">c1</ref>)</highlight></codeline>
 <codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a748f2f7f718d01af1bff3675c75552bf" kindref="member">LCDC_LAYER_CSC_COEF1_C4_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a3661cfc8ed2f31de5f9744a3d20b1930" kindref="member">csc_config</ref>.<ref refid="structdisplay__yuv2rgb__config_1a1713931f4f3ba310feaff38368394bd8" kindref="member">yuv2rgb_coef</ref>.<ref refid="structdispaly__yuv2rgb__coef_1af25264f758ef67bc25b343ea5194b3f7" kindref="member">c4</ref>);</highlight></codeline>
-<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a8b24537bf6a1cdff82baa49977e32c26" kindref="member">CSC_COEF2</ref><sp/>=</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a8b24537bf6a1cdff82baa49977e32c26" kindref="member">CSC_COEF2</ref><sp/>=</highlight></codeline>
 <codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a6b20d344a07be03ddc0362bf2497ee3c" kindref="member">LCDC_LAYER_CSC_COEF2_C2_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a3661cfc8ed2f31de5f9744a3d20b1930" kindref="member">csc_config</ref>.<ref refid="structdisplay__yuv2rgb__config_1a1713931f4f3ba310feaff38368394bd8" kindref="member">yuv2rgb_coef</ref>.<ref refid="structdispaly__yuv2rgb__coef_1a9d1ad42d94e8dab9c1ac716f57624877" kindref="member">c2</ref>)</highlight></codeline>
 <codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1aa6e511662dce6f09c0b7ca03b2c2cb3a" kindref="member">LCDC_LAYER_CSC_COEF2_C3_SET</ref>(layer-&gt;<ref refid="structlcdc__layer__config_1a3661cfc8ed2f31de5f9744a3d20b1930" kindref="member">csc_config</ref>.<ref refid="structdisplay__yuv2rgb__config_1a1713931f4f3ba310feaff38368394bd8" kindref="member">yuv2rgb_coef</ref>.<ref refid="structdispaly__yuv2rgb__coef_1a8d9cdca03473749eae314c4271a707d3" kindref="member">c3</ref>);</highlight></codeline>
 <codeline lineno="236"><highlight class="normal"></highlight></codeline>
@@ -689,7 +430,7 @@
 <codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enable_layer)<sp/>{</highlight></codeline>
 <codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctrl<sp/>|=<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1ab52c308fb5929fbc2efe6cbd9052748a" kindref="member">LCDC_LAYER_LAYCTRL_EN_MASK</ref>;</highlight></codeline>
 <codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a371f646d2dd56a1b41aa27e3bea4baa3" kindref="member">LAYCTRL</ref><sp/>=<sp/>ctrl<sp/>|<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1ac065a9c316e6afa74506bdf09b98e5ad" kindref="member">LCDC_LAYER_LAYCTRL_SHADOW_LOAD_EN_MASK</ref>;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a371f646d2dd56a1b41aa27e3bea4baa3" kindref="member">LAYCTRL</ref><sp/>=<sp/>ctrl<sp/>|<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1ac065a9c316e6afa74506bdf09b98e5ad" kindref="member">LCDC_LAYER_LAYCTRL_SHADOW_LOAD_EN_MASK</ref>;</highlight></codeline>
 <codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
 <codeline lineno="259"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="260"><highlight class="normal"></highlight></codeline>
@@ -706,7 +447,7 @@
 <codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>2.<sp/>issue<sp/>display<sp/>off<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a9e1b32b683bceabca10ec55b16d23916" kindref="member">ST</ref><sp/>=<sp/>0xFFFFFFFF;</highlight></codeline>
 <codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__lcd__interface_1gaca8744ccbaf1a274ca2a659048b6f67e" kindref="member">lcdc_software_reset</ref>(ptr);</highlight></codeline>
-<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1aba7432639047cca2897a83b3d55bab6c" kindref="member">CTRL</ref><sp/>&amp;=<sp/>~<ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1ad93249142edf1fd6f4536caf6412f922" kindref="member">LCDC_CTRL_DISP_ON_MASK</ref>;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1aba7432639047cca2897a83b3d55bab6c" kindref="member">CTRL</ref><sp/>&amp;=<sp/>~LCDC_CTRL_DISP_ON_MASK;</highlight></codeline>
 <codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((ptr-&gt;<ref refid="structLCDC__Type_1a9e1b32b683bceabca10ec55b16d23916" kindref="member">ST</ref><sp/>&amp;<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a50b7f2c0f2942cc065f5275c25cae014" kindref="member">LCDC_ST_VS_BLANK_MASK</ref>)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
 <codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -724,10 +465,10 @@
 <codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>pixel_format)</highlight></codeline>
 <codeline lineno="290"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>pitch;</highlight></codeline>
-<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>width<sp/>=<sp/>(ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1acae6f25478ebba82decf10cb791e0eb1" kindref="member">LAYSIZE</ref><sp/>&amp;<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1afe570d100bdd029997d53ab9b41f5710" kindref="member">LCDC_LAYER_LAYSIZE_WIDTH_MASK</ref>)</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>width<sp/>=<sp/>(ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1acae6f25478ebba82decf10cb791e0eb1" kindref="member">LAYSIZE</ref><sp/>&amp;<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1afe570d100bdd029997d53ab9b41f5710" kindref="member">LCDC_LAYER_LAYSIZE_WIDTH_MASK</ref>)</highlight></codeline>
 <codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;&gt;<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a9885b497729b1f32110b92d3774e1769" kindref="member">LCDC_LAYER_LAYSIZE_WIDTH_SHIFT</ref>;</highlight></codeline>
 <codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>pitch<sp/>=<sp/><ref refid="group__Display__common__interface_1ga3b97741536d362031de24c1566ede759" kindref="member">display_get_pitch_length_in_byte</ref>(pixel_format,<sp/>width);</highlight></codeline>
-<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a3b3fc234109c319bccc847e74f394514" kindref="member">LINECFG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structLCDC__Type_1af028484e7e05784a4ff4cc78c1d9b876" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a3b3fc234109c319bccc847e74f394514" kindref="member">LINECFG</ref><sp/>&amp;<sp/>~<ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a15c4ef284899d50d23f1a960d7525180" kindref="member">LCDC_LAYER_LINECFG_PITCH_MASK</ref>)</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a3b3fc234109c319bccc847e74f394514" kindref="member">LINECFG</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structLCDC__Type_1a4c7f2716c542d775f4222f9b68068ba9" kindref="member">LAYER</ref>[layer_index].<ref refid="structLCDC__Type_1a3b3fc234109c319bccc847e74f394514" kindref="member">LINECFG</ref><sp/>&amp;<sp/>~LCDC_LAYER_LINECFG_PITCH_MASK)</highlight></codeline>
 <codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6700_2ip_2hpm__lcdc__regs_8h_1a403122e551093e72fcc66953eb4f8a2f" kindref="member">LCDC_LAYER_LINECFG_PITCH_SET</ref>(pitch);</highlight></codeline>
 <codeline lineno="297"><highlight class="normal">}</highlight></codeline>
     </programlisting>

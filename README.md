@@ -7,13 +7,13 @@
 1. The script will generate all examples' segger project of all vailable boards under folder  samples_ses_project by clicking `generate_all_ses_projects.cmd`.
 
 ## start_gui quick start
-`start_gui.exe` is a visual tool which is used to generate project by `hpm_sdk`. User can not only generate sample in `hpm_sdk`, but also generate private application by custom sample directory. The whole GUI of `start_gui.exe` is shown as below:
+`start_gui.exe` is a visual tool which is used to generate project by `hpm_sdk`. User can not only generate sample in `hpm_sdk`, but also generate private application by custom board and app directory. The whole GUI of `start_gui.exe` is shown as below:
 
 ![start_gui](doc/img/start_gui.png)
 
 The menu bar supports setting both English and Chinese languages and provides access to the current user guide. For the convenience of users to view and use `hpm_sdk`, the tool is equipped with three built-in quick access points to the `hpm_sdk` documentation, represented by three light purple circular buttons as shown in the above image. The help button next to `SDK ENV` opens the homepage of the current `hpm_sdk` help documentation. The help button to the right of the `SDK Boards` dropdown directly opens the documentation for the development board that is currently selected. Similarly, the help button beside the `SDK Samples` dropdown instantly opens the documentation for the chosen sample. You may select and open the corresponding document as per your needs.
 
-The tool is split to different sections according by different background color:
+- The tool is split to different sections according by different background color:
 
 1. SDK ENV configuration: You can set SDK ENV path manually. After clicking `Advanced` button, you can set the details of `hpm_sdk` path and `CMake、Ninja` path and so on.
 
@@ -28,6 +28,8 @@ The tool is split to different sections according by different background color:
 5. Generate options: After configuration, you can use `Generate` to generate project. When the project is generated success, `Open with IDE` will be highlighted and can be clicked to open the IDE which it can be switched by right arrow button. `GCC Compile` button is supported to compile the project directly. Taking into account various user needs for `hpm_sdk`, the tool also supports extracting the `hpm_sdk` files used by the current project to a separate directory, which is the functionality provided by the `Localize SDK for App` button. `hpm_sdk` will be localized to the same directory as the current application's CMakeLists.txt, named `hpm_sdk_localized_sdk_for_${BOARDNAME}`. The dropdown menu under `SDK Samples` in `Region 3` will prompt for localized projects. Meanwhile, localized project supports the "UnLocalize SDK for App" operation to revert back to the previously unlocalized project. On the far left of `Region 5`, the tool provides a shortcut entry to launch GDB Server. The currently supported GDB Server is OpenOCD. Clicking it allows users to perform simple configurations and quickly start the GDB Server. The GDB Server will remember the user's configuration by default, so it can be directly launched next time. However, when users switch the board, they need to reconfigure OpenOCD before launching it again. Meanwhile, this tool also provides a quick FLASH image programming feature (RAM image programming is not supported). This feature executes the programming operation by calling OpenOCD process, and shares the same OpenOCD launched configuration as the GDB Server to simplify the operation.
 
 6. Log window: The log window shows all the log informations and supports clearing and exporting.
+
+- For user customizing Borad and APP files, please refer to [README.md](user_template/README_en.md) in the user_template directory.
 
 ## Folder structure:
 - hpm_sdk: sdk root directory in which sdk zip package should be unzip to, please make sure the folder of "cmake" can be found via path hpm_sdk\cmake
@@ -54,4 +56,6 @@ The tool is split to different sections according by different background color:
   - Set boot mode to "ISP" or "Serial Download Mode" on evaluation board, then press reset button the board, try to debug again.
 ### Issue caused by Windows 10 path limit
   To enable long path support, please import registry file located at tools/scripts/win10_enable_long_path.reg. For more details about this limitation, please refer to https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd
+### Windows 7 can't use Python 3.9 or above
+  - Hpm_sdk relies on Python 3.9 or above, but it can't run directly on Windows 7, requiring installation of pythonw_win7_patch. Download link: https://pan.baidu.com/s/1RaYHOD7xk7fnotmgLpoAlA?pwd=xk2n, path is `先楫技术资料/SDK`.
   

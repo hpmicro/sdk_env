@@ -4,24 +4,14 @@ var hpm__qeov2__drv_8h =
       [ "qeo_abz_output_abz", "group__qeov2__interface.html#gga313d646fa625a82ea73fd83915716f85a9e3147bc36d3e75134d3fd7240f88a92", null ],
       [ "qeo_abz_output_pulse_revise", "group__qeov2__interface.html#gga313d646fa625a82ea73fd83915716f85a5e15f6bd5d23677ac5deb036a99d3973", null ],
       [ "qeo_abz_output_up_down", "group__qeov2__interface.html#gga313d646fa625a82ea73fd83915716f85afc13cc465dc80a8a677c9aa620c80534", null ],
-      [ "qeo_abz_output_three_phase", "group__qeov2__interface.html#gga313d646fa625a82ea73fd83915716f85a0b2fbdb6f84998356df4a13ac1109a25", null ],
-      [ "qeo_abz_output_abz", "group__qeov2__interface.html#gga313d646fa625a82ea73fd83915716f85a9e3147bc36d3e75134d3fd7240f88a92", null ],
-      [ "qeo_abz_output_pulse_revise", "group__qeov2__interface.html#gga313d646fa625a82ea73fd83915716f85a5e15f6bd5d23677ac5deb036a99d3973", null ],
-      [ "qeo_abz_output_up_down", "group__qeov2__interface.html#gga313d646fa625a82ea73fd83915716f85afc13cc465dc80a8a677c9aa620c80534", null ],
       [ "qeo_abz_output_three_phase", "group__qeov2__interface.html#gga313d646fa625a82ea73fd83915716f85a0b2fbdb6f84998356df4a13ac1109a25", null ]
     ] ],
     [ "qeo_pwm_force_output_t", "group__qeov2__interface.html#ga73b43a7dbca7d07d7fec430b4e79704a", [
       [ "qeo_pwm_output_force_0", "group__qeov2__interface.html#gga73b43a7dbca7d07d7fec430b4e79704aa5c0ad693076806609a1a4d0fdec99d3e", null ],
       [ "qeo_pwm_output_force_1", "group__qeov2__interface.html#gga73b43a7dbca7d07d7fec430b4e79704aab071508c82aeaa20fdec6b80f841e6e6", null ],
-      [ "qeo_pwm_output_not_force", "group__qeov2__interface.html#gga73b43a7dbca7d07d7fec430b4e79704aaf3f901efae26702a42e75db60fcc19e8", null ],
-      [ "qeo_pwm_output_force_0", "group__qeov2__interface.html#gga73b43a7dbca7d07d7fec430b4e79704aa5c0ad693076806609a1a4d0fdec99d3e", null ],
-      [ "qeo_pwm_output_force_1", "group__qeov2__interface.html#gga73b43a7dbca7d07d7fec430b4e79704aab071508c82aeaa20fdec6b80f841e6e6", null ],
       [ "qeo_pwm_output_not_force", "group__qeov2__interface.html#gga73b43a7dbca7d07d7fec430b4e79704aaf3f901efae26702a42e75db60fcc19e8", null ]
     ] ],
     [ "qeo_pwm_safety_output_t", "group__qeov2__interface.html#ga616e7d102bb92291dc4ddc546b18babc", [
-      [ "qeo_pwm_safety_output_0", "group__qeov2__interface.html#gga616e7d102bb92291dc4ddc546b18babca5df4a22f9cd4e7b0732ae99c91600bf3", null ],
-      [ "qeo_pwm_safety_output_1", "group__qeov2__interface.html#gga616e7d102bb92291dc4ddc546b18babca87b612a85b6674af205ab3d44d8e0a2c", null ],
-      [ "qeo_pwm_safety_output_highz", "group__qeov2__interface.html#gga616e7d102bb92291dc4ddc546b18babca5597b736f3bdf6b4aa2c03b4d91be02f", null ],
       [ "qeo_pwm_safety_output_0", "group__qeov2__interface.html#gga616e7d102bb92291dc4ddc546b18babca5df4a22f9cd4e7b0732ae99c91600bf3", null ],
       [ "qeo_pwm_safety_output_1", "group__qeov2__interface.html#gga616e7d102bb92291dc4ddc546b18babca87b612a85b6674af205ab3d44d8e0a2c", null ],
       [ "qeo_pwm_safety_output_highz", "group__qeov2__interface.html#gga616e7d102bb92291dc4ddc546b18babca5597b736f3bdf6b4aa2c03b4d91be02f", null ]
@@ -40,23 +30,9 @@ var hpm__qeov2__drv_8h =
       [ "qeo_wave_low_area_limit_min_level1_val", "group__qeov2__interface.html#gga000a1885ededf99dca4473da4f4581adaa1503db295400a324bec17a1d56c218c", null ],
       [ "qeo_wave_below_min_limit_zero", "group__qeov2__interface.html#gga000a1885ededf99dca4473da4f4581ada88ed970eddf44ff8661bcfd3ebfdba54", null ],
       [ "qeo_wave_below_min_limit_max_val", "group__qeov2__interface.html#gga000a1885ededf99dca4473da4f4581ada9eb8e4af9d80d53e38c76b774bd758f7", null ],
-      [ "qeo_wave_below_min_limit_min_level1_val", "group__qeov2__interface.html#gga000a1885ededf99dca4473da4f4581ada82db3c50ce11a7d34fb7a1c3c6b2499f", null ],
-      [ "qeo_wave_above_max_limit_max_val", "group__qeov2__interface.html#gga000a1885ededf99dca4473da4f4581adae1100ef81a0d942d1c0a7343b628ba59", null ],
-      [ "qeo_wave_above_max_limit_zero", "group__qeov2__interface.html#gga000a1885ededf99dca4473da4f4581ada86e169eb94b0ecd1231438028fcfe625", null ],
-      [ "qeo_wave_above_max_limit_max_level0_val", "group__qeov2__interface.html#gga000a1885ededf99dca4473da4f4581adadd5bc20bc3ba5fb56a771e2bdf932dcd", null ],
-      [ "qeo_wave_high_area_limit_max_val", "group__qeov2__interface.html#gga000a1885ededf99dca4473da4f4581adaf3c38d2d1bfb2d947d6473b901afc8a8", null ],
-      [ "qeo_wave_high_area_limit_max_level0_val", "group__qeov2__interface.html#gga000a1885ededf99dca4473da4f4581adaaeaffeb7c4b76dbb454c692e73ecf274", null ],
-      [ "qeo_wave_low_area_limit_zero", "group__qeov2__interface.html#gga000a1885ededf99dca4473da4f4581ada0fd322fa27d043b17d03d6a3a97d076d", null ],
-      [ "qeo_wave_low_area_limit_min_level1_val", "group__qeov2__interface.html#gga000a1885ededf99dca4473da4f4581adaa1503db295400a324bec17a1d56c218c", null ],
-      [ "qeo_wave_below_min_limit_zero", "group__qeov2__interface.html#gga000a1885ededf99dca4473da4f4581ada88ed970eddf44ff8661bcfd3ebfdba54", null ],
-      [ "qeo_wave_below_min_limit_max_val", "group__qeov2__interface.html#gga000a1885ededf99dca4473da4f4581ada9eb8e4af9d80d53e38c76b774bd758f7", null ],
       [ "qeo_wave_below_min_limit_min_level1_val", "group__qeov2__interface.html#gga000a1885ededf99dca4473da4f4581ada82db3c50ce11a7d34fb7a1c3c6b2499f", null ]
     ] ],
     [ "qeo_wave_type_t", "group__qeov2__interface.html#gac785f1d025828bc38bf3eae9dad77a43", [
-      [ "qeo_wave_cosine", "group__qeov2__interface.html#ggac785f1d025828bc38bf3eae9dad77a43ac7371d1e0b71ae6caa533f4f8a69cd81", null ],
-      [ "qeo_wave_saddle", "group__qeov2__interface.html#ggac785f1d025828bc38bf3eae9dad77a43acbc105e819349680a0dea3b1cdb9896c", null ],
-      [ "qeo_wave_abs_cosine", "group__qeov2__interface.html#ggac785f1d025828bc38bf3eae9dad77a43a551b13e28322380b4ab6fe7c17fe4b56", null ],
-      [ "qeo_wave_saw", "group__qeov2__interface.html#ggac785f1d025828bc38bf3eae9dad77a43a5bfd79974016d4785224ee79adc757fc", null ],
       [ "qeo_wave_cosine", "group__qeov2__interface.html#ggac785f1d025828bc38bf3eae9dad77a43ac7371d1e0b71ae6caa533f4f8a69cd81", null ],
       [ "qeo_wave_saddle", "group__qeov2__interface.html#ggac785f1d025828bc38bf3eae9dad77a43acbc105e819349680a0dea3b1cdb9896c", null ],
       [ "qeo_wave_abs_cosine", "group__qeov2__interface.html#ggac785f1d025828bc38bf3eae9dad77a43a551b13e28322380b4ab6fe7c17fe4b56", null ],

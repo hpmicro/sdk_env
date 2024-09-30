@@ -140,9 +140,10 @@ HPM6750是一款主频达816Mhz的双核微控制器。该芯片拥有最大2M�
 
 - 以太网PPS信号引脚
 
-| 功能        | 位置   |
-| ----------- | ------ |
-| ENET0.EVTO0 | U29[2] |
+| 功能        | 引脚 | 位置   |
+| ----------- | ---- | ------ |
+| ENET0.EVTO0 | PF05 | U29[2] |
+| ENET0.EVTI1 | PE25 | J12[6] |
 
 - UART13引脚
  UART13用于Core1调试串口或一些使用UART的功能测试，例如uart_software_rx_idle，uart_rx_timeout，uart_software_lin，MICROROS_UART，USB_CDC_ACM_UART, MODBUS_RTU等。

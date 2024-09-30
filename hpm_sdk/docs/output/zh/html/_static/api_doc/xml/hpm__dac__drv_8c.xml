@@ -1,15 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__dac__drv_8c" kind="file" language="C++">
     <compoundname>hpm_dac_drv.c</compoundname>
     <includes refid="hpm__dac__drv_8h" local="yes">hpm_dac_drv.h</includes>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
-      <node id="9">
-        <label>hpm_dac_regs.h</label>
-      </node>
       <node id="3">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -24,24 +18,6 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>assert.h</label>
-      </node>
-      <node id="6">
-        <label>stdint.h</label>
-      </node>
-      <node id="8">
-        <label>stdlib.h</label>
-      </node>
-      <node id="1">
-        <label>drivers/src/hpm_dac_drv.c</label>
-        <link refid="hpm__dac__drv_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>string.h</label>
-      </node>
       <node id="2">
         <label>hpm_dac_drv.h</label>
         <link refid="hpm__dac__drv_8h"/>
@@ -52,11 +28,35 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
+      <node id="1">
+        <label>drivers/src/hpm_dac_drv.c</label>
+        <link refid="hpm__dac__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_dac_regs.h</label>
+      </node>
       <node id="10">
         <label>hpm_soc_feature.h</label>
       </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
     </incdepgraph>
-      <sectiondef kind="func">
+    <sectiondef kind="func">
       <memberdef kind="function" id="hpm__dac__drv_8c_1aee8e54c4697c909b85dbd01c4de812a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void dac_get_default_config</definition>
@@ -402,7 +402,7 @@
         </inbodydescription>
         <location file="drivers/src/hpm_dac_drv.c" line="275" column="10" bodyfile="drivers/src/hpm_dac_drv.c" bodystart="275" bodyend="278"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -435,21 +435,21 @@
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>reset<sp/>DAC<sp/>output<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a36a80424c6c8571b102520c2ef3c2ed0" kindref="member">DAC_CFG0_SW_DAC_DATA_MASK</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~DAC_CFG0_SW_DAC_DATA_MASK;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>sync<sp/>mode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a88cc634679910f8f1f5e47c18d45fea7" kindref="member">DAC_CFG0_SYNC_MODE_MASK</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~DAC_CFG0_SYNC_MODE_MASK;</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a3b689175c2ec8ce80f011c0c85d4d89f" kindref="member">DAC_CFG0_SYNC_MODE_SET</ref>(config-&gt;<ref refid="structdac__config__t_1ad9608e1f205bfd31592b0273fba69c34" kindref="member">sync_mode</ref>);</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>DAC<sp/>mode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a95401fb483fa93d83ccedc0d38a291ac" kindref="member">DAC_CFG0_DAC_MODE_MASK</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~DAC_CFG0_DAC_MODE_MASK;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1aa971e61a0c9a29c5bcd6ac97f59ad26e" kindref="member">DAC_CFG0_DAC_MODE_SET</ref>(config-&gt;<ref refid="structdac__config__t_1acb23457ee2f29c06154f8a24d6d1dc8e" kindref="member">dac_mode</ref>);</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>refresh<sp/>the<sp/>CFG0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a545833987448481414279c8d9492dd80" kindref="member">CFG0</ref><sp/>=<sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref>;</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>DAC<sp/>clock<sp/>config<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1aebaeff55863e77e674eac6c4c0088434" kindref="member">CFG1</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1ace1c4c6af95e836ce65939631e6e1a16" kindref="member">DAC_CFG1_ANA_DIV_CFG_MASK</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1aebaeff55863e77e674eac6c4c0088434" kindref="member">CFG1</ref><sp/>&amp;=<sp/>~DAC_CFG1_ANA_DIV_CFG_MASK;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1aebaeff55863e77e674eac6c4c0088434" kindref="member">CFG1</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a680f0dfb625fff5ecb398db457bf1493" kindref="member">DAC_CFG1_ANA_DIV_CFG_SET</ref>(config-&gt;<ref refid="structdac__config__t_1ab569a94e0905247b7e4d22ce26e9e26d" kindref="member">ana_div</ref>);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structdac__config__t_1acb23457ee2f29c06154f8a24d6d1dc8e" kindref="member">dac_mode</ref><sp/>==<sp/><ref refid="hpm__dac__drv_8h_1a0bd825a98d852d94ff47e480300fe76dad3f0a15a60fab6271a15c8dfaf263b99" kindref="member">dac_mode_direct</ref><sp/>||<sp/>config-&gt;<ref refid="structdac__config__t_1acb23457ee2f29c06154f8a24d6d1dc8e" kindref="member">dac_mode</ref><sp/>==<sp/><ref refid="hpm__dac__drv_8h_1a0bd825a98d852d94ff47e480300fe76da7154e4b5393af389dfb2df0c7ddb8172" kindref="member">dac_mode_trig</ref>)<sp/>{</highlight></codeline>
@@ -493,23 +493,23 @@
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>the<sp/>round<sp/>mode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a1c5c390fa0c6e1e2012ff5335d702daa" kindref="member">DAC_STEP_CFG_ROUND_MODE_MASK</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>&amp;=<sp/>~DAC_STEP_CFG_ROUND_MODE_MASK;</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a0c121f68f00e10dd8491fb85ec4c2ef3" kindref="member">DAC_STEP_CFG_ROUND_MODE_SET</ref>(config-&gt;<ref refid="structdac__step__config__t_1afe048cd5fcdc3facda0388fa34f1aaea" kindref="member">round_mode</ref>);</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>the<sp/>step<sp/>direction<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a1c509c8f4b9c7268ce9cdd4acfe2b952" kindref="member">DAC_STEP_CFG_UP_DOWN_MASK</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>&amp;=<sp/>~DAC_STEP_CFG_UP_DOWN_MASK;</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a9f34816e99a1282777332caf4bc65e34" kindref="member">DAC_STEP_CFG_UP_DOWN_SET</ref>(config-&gt;<ref refid="structdac__step__config__t_1a599770ed85d7bb19713883b51e7577ed" kindref="member">up_down</ref>);</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>the<sp/>start<sp/>point<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a5264fb4b8f069ced61b0d70eaa4b7f88" kindref="member">DAC_STEP_CFG_START_POINT_MASK</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>&amp;=<sp/>~DAC_STEP_CFG_START_POINT_MASK;</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1ad17c24d76c9d41a8bb98e5a01836e68f" kindref="member">DAC_STEP_CFG_START_POINT_SET</ref>(config-&gt;<ref refid="structdac__step__config__t_1ab7d05bfe891d95ea29ec2314652f239b" kindref="member">start_point</ref>);</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>the<sp/>end<sp/>point<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a335a3e9c664ae35f3877540b812a6a4e" kindref="member">DAC_STEP_CFG_END_POINT_MASK</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>&amp;=<sp/>~DAC_STEP_CFG_END_POINT_MASK;</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a6b4230b90ef74e5f1eaa1d660cf906fe" kindref="member">DAC_STEP_CFG_END_POINT_SET</ref>(config-&gt;<ref refid="structdac__step__config__t_1a600bc4aa0767f508bf2664588ed43561" kindref="member">end_point</ref>);</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"></highlight></codeline>
 <codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>the<sp/>step<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a9b0555d3357a6e6405ffd4d131e1a370" kindref="member">DAC_STEP_CFG_STEP_NUM_MASK</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>&amp;=<sp/>~DAC_STEP_CFG_STEP_NUM_MASK;</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a5ddb378936264a73b3851f9f7a2fde92" kindref="member">STEP_CFG</ref>[step_cfg_idx]<sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a587df9e89e47b4a724ad01a6d1ca8869" kindref="member">DAC_STEP_CFG_STEP_NUM_SET</ref>(config-&gt;<ref refid="structdac__step__config__t_1a9124b7ab2b8e34ca9b438d1167b8a8cc" kindref="member">step_num</ref>);</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"></highlight></codeline>
 <codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
@@ -522,44 +522,44 @@
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight></codeline>
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>disable<sp/>the<sp/>internal<sp/>DMA<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a7181b9acb210803b8c42c5beaca3c6d0" kindref="member">DAC_CFG0_DMA_AHB_EN_MASK</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~DAC_CFG0_DMA_AHB_EN_MASK;</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"></highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>refresh<sp/>the<sp/>CFG0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a545833987448481414279c8d9492dd80" kindref="member">CFG0</ref><sp/>=<sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref>;</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight></codeline>
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>buffer<sp/>data<sp/>mode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a80c9b4126678835f6a2eec809ce05475" kindref="member">DAC_CFG0_BUF_DATA_MODE_MASK</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~DAC_CFG0_BUF_DATA_MODE_MASK;</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1aa832a3d197202a9013dcc9832946d37c" kindref="member">DAC_CFG0_BUF_DATA_MODE_SET</ref>(config-&gt;<ref refid="structdac__buffer__config__t_1ae10d41072c1b65fcf883d9d42704a139" kindref="member">buf_data_mode</ref>);</highlight></codeline>
 <codeline lineno="123"><highlight class="normal"></highlight></codeline>
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>burst<sp/>type<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a30e5b0afe702d159655ab90b33d9dade" kindref="member">DAC_CFG0_HBURST_CFG_MASK</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~DAC_CFG0_HBURST_CFG_MASK;</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a645dbca2cd1421403ff482b6ff7b0a3c" kindref="member">DAC_CFG0_HBURST_CFG_SET</ref>(config-&gt;<ref refid="structdac__buffer__config__t_1aa8c9d16a86aff5153b274940a97a2966" kindref="member">burst</ref>);</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"></highlight></codeline>
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>reset<sp/>DMA<sp/>and<sp/>FIFO<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1afb0569fb4db243c016718b7807833074" kindref="member">CFG2</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a98ef73c4b52ac690d47e2fc21418ded6" kindref="member">DAC_CFG2_DMA_RST1_MASK</ref><sp/>|<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a0109d345d4dec0ac8a0aa157474d9704" kindref="member">DAC_CFG2_DMA_RST0_MASK</ref><sp/>|<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a3c6c50fb55d565dda49e2458a91f4c17" kindref="member">DAC_CFG2_FIFO_CLR_MASK</ref>;</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"></highlight></codeline>
 <codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>buffer<sp/>0<sp/>start<sp/>address<sp/>for<sp/>DMA<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1abbb649f8add242394098cea41c88831a" kindref="member">BUF_ADDR</ref>[<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a2256c011efd8dbf1641561a443f6d164" kindref="member">DAC_BUF_ADDR_BUF0</ref>]<sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a24e1f3b74889acc26eb43b837c2f7a4b" kindref="member">DAC_BUF_ADDR_BUF_START_ADDR_MASK</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1abbb649f8add242394098cea41c88831a" kindref="member">BUF_ADDR</ref>[<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a2256c011efd8dbf1641561a443f6d164" kindref="member">DAC_BUF_ADDR_BUF0</ref>]<sp/>&amp;=<sp/>~DAC_BUF_ADDR_BUF_START_ADDR_MASK;</highlight></codeline>
 <codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1abbb649f8add242394098cea41c88831a" kindref="member">BUF_ADDR</ref>[<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a2256c011efd8dbf1641561a443f6d164" kindref="member">DAC_BUF_ADDR_BUF0</ref>]<sp/>|=<sp/>config-&gt;<ref refid="structdac__buffer__config__t_1a7db48204cc2da79ac704b1bd3726be45" kindref="member">buf0</ref>.<ref refid="structdac__buffer__t_1a517807021b5373878b340e65782e4d14" kindref="member">start_addr</ref><sp/>&amp;<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a24e1f3b74889acc26eb43b837c2f7a4b" kindref="member">DAC_BUF_ADDR_BUF_START_ADDR_MASK</ref>;</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"></highlight></codeline>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>buffer<sp/>0<sp/>stop<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1abbb649f8add242394098cea41c88831a" kindref="member">BUF_ADDR</ref>[<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a2256c011efd8dbf1641561a443f6d164" kindref="member">DAC_BUF_ADDR_BUF0</ref>]<sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a72dde1dbb2f1648577e41ad6f84b7b82" kindref="member">DAC_BUF_ADDR_BUF_STOP_MASK</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1abbb649f8add242394098cea41c88831a" kindref="member">BUF_ADDR</ref>[<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a2256c011efd8dbf1641561a443f6d164" kindref="member">DAC_BUF_ADDR_BUF0</ref>]<sp/>&amp;=<sp/>~DAC_BUF_ADDR_BUF_STOP_MASK;</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1abbb649f8add242394098cea41c88831a" kindref="member">BUF_ADDR</ref>[<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a2256c011efd8dbf1641561a443f6d164" kindref="member">DAC_BUF_ADDR_BUF0</ref>]<sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1ad37626fc6ed465ff5181b0dbb6e3e2ea" kindref="member">DAC_BUF_ADDR_BUF_STOP_SET</ref>(config-&gt;<ref refid="structdac__buffer__config__t_1a7db48204cc2da79ac704b1bd3726be45" kindref="member">buf0</ref>.<ref refid="structdac__buffer__t_1ae2cdc3a2882c95afe2c7708286bead92" kindref="member">stop</ref>);</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"></highlight></codeline>
 <codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>buffer<sp/>0<sp/>length<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a7c2b6bfbeb3bfea5940ef5a14cac21f3" kindref="member">BUF_LENGTH</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a215084dac43220e919ec57c2c32fe9ce" kindref="member">DAC_BUF_LENGTH_BUF0_LEN_MASK</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a7c2b6bfbeb3bfea5940ef5a14cac21f3" kindref="member">BUF_LENGTH</ref><sp/>&amp;=<sp/>~DAC_BUF_LENGTH_BUF0_LEN_MASK;</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a7c2b6bfbeb3bfea5940ef5a14cac21f3" kindref="member">BUF_LENGTH</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a39e0b2e461aa8e0c486f4a7cf027bfbf" kindref="member">DAC_BUF_LENGTH_BUF0_LEN_SET</ref>(config-&gt;<ref refid="structdac__buffer__config__t_1a7db48204cc2da79ac704b1bd3726be45" kindref="member">buf0</ref>.<ref refid="structdac__buffer__t_1a519c608c5c0c96a81b1fc693b885737d" kindref="member">len</ref><sp/>-<sp/>1);</highlight></codeline>
 <codeline lineno="142"><highlight class="normal"></highlight></codeline>
 <codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>buffer<sp/>1<sp/>start<sp/>address<sp/>for<sp/>DMA<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1abbb649f8add242394098cea41c88831a" kindref="member">BUF_ADDR</ref>[<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1af78795e9fc5bff1f7c7786cbf457a87f" kindref="member">DAC_BUF_ADDR_BUF1</ref>]<sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a24e1f3b74889acc26eb43b837c2f7a4b" kindref="member">DAC_BUF_ADDR_BUF_START_ADDR_MASK</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1abbb649f8add242394098cea41c88831a" kindref="member">BUF_ADDR</ref>[<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1af78795e9fc5bff1f7c7786cbf457a87f" kindref="member">DAC_BUF_ADDR_BUF1</ref>]<sp/>&amp;=<sp/>~DAC_BUF_ADDR_BUF_START_ADDR_MASK;</highlight></codeline>
 <codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1abbb649f8add242394098cea41c88831a" kindref="member">BUF_ADDR</ref>[<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1af78795e9fc5bff1f7c7786cbf457a87f" kindref="member">DAC_BUF_ADDR_BUF1</ref>]<sp/>|=<sp/>config-&gt;<ref refid="structdac__buffer__config__t_1a8f64a581812ba8ea931eb26cf353032c" kindref="member">buf1</ref>.<ref refid="structdac__buffer__t_1a517807021b5373878b340e65782e4d14" kindref="member">start_addr</ref><sp/>&amp;<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a24e1f3b74889acc26eb43b837c2f7a4b" kindref="member">DAC_BUF_ADDR_BUF_START_ADDR_MASK</ref>;</highlight></codeline>
 <codeline lineno="146"><highlight class="normal"></highlight></codeline>
 <codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>buffer<sp/>1<sp/>stop<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1abbb649f8add242394098cea41c88831a" kindref="member">BUF_ADDR</ref>[<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1af78795e9fc5bff1f7c7786cbf457a87f" kindref="member">DAC_BUF_ADDR_BUF1</ref>]<sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a72dde1dbb2f1648577e41ad6f84b7b82" kindref="member">DAC_BUF_ADDR_BUF_STOP_MASK</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1abbb649f8add242394098cea41c88831a" kindref="member">BUF_ADDR</ref>[<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1af78795e9fc5bff1f7c7786cbf457a87f" kindref="member">DAC_BUF_ADDR_BUF1</ref>]<sp/>&amp;=<sp/>~DAC_BUF_ADDR_BUF_STOP_MASK;</highlight></codeline>
 <codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1abbb649f8add242394098cea41c88831a" kindref="member">BUF_ADDR</ref>[<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1af78795e9fc5bff1f7c7786cbf457a87f" kindref="member">DAC_BUF_ADDR_BUF1</ref>]<sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1ad37626fc6ed465ff5181b0dbb6e3e2ea" kindref="member">DAC_BUF_ADDR_BUF_STOP_SET</ref>(config-&gt;<ref refid="structdac__buffer__config__t_1a8f64a581812ba8ea931eb26cf353032c" kindref="member">buf1</ref>.<ref refid="structdac__buffer__t_1ae2cdc3a2882c95afe2c7708286bead92" kindref="member">stop</ref>);</highlight></codeline>
 <codeline lineno="150"><highlight class="normal"></highlight></codeline>
 <codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>buffer<sp/>1<sp/>length<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a7c2b6bfbeb3bfea5940ef5a14cac21f3" kindref="member">BUF_LENGTH</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1af8e6a9884638a34e30dd4d9b9cc5e262" kindref="member">DAC_BUF_LENGTH_BUF1_LEN_MASK</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a7c2b6bfbeb3bfea5940ef5a14cac21f3" kindref="member">BUF_LENGTH</ref><sp/>&amp;=<sp/>~DAC_BUF_LENGTH_BUF1_LEN_MASK;</highlight></codeline>
 <codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a7c2b6bfbeb3bfea5940ef5a14cac21f3" kindref="member">BUF_LENGTH</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a59c8b9a1e78f20015fab1bab6f75e6ea" kindref="member">DAC_BUF_LENGTH_BUF1_LEN_SET</ref>(config-&gt;<ref refid="structdac__buffer__config__t_1a8f64a581812ba8ea931eb26cf353032c" kindref="member">buf1</ref>.<ref refid="structdac__buffer__t_1a519c608c5c0c96a81b1fc693b885737d" kindref="member">len</ref><sp/>-<sp/>1);</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"></highlight></codeline>
 <codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>enable<sp/>the<sp/>internal<sp/>DMA<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
@@ -578,7 +578,7 @@
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="169"><highlight class="normal"></highlight></codeline>
 <codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>dac<sp/>data<sp/>to<sp/>analog<sp/>output<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a36a80424c6c8571b102520c2ef3c2ed0" kindref="member">DAC_CFG0_SW_DAC_DATA_MASK</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~DAC_CFG0_SW_DAC_DATA_MASK;</highlight></codeline>
 <codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a6c3525015355ef2b6000677af5e62498" kindref="member">DAC_CFG0_SW_DAC_DATA_SET</ref>(data);</highlight></codeline>
 <codeline lineno="173"><highlight class="normal"></highlight></codeline>
 <codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>refresh<sp/>the<sp/>CFG0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
@@ -594,7 +594,7 @@
 <codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="185"><highlight class="normal"></highlight></codeline>
 <codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>output<sp/>frequency<sp/>config<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1aebaeff55863e77e674eac6c4c0088434" kindref="member">CFG1</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a93abb227d5039aaa515d1a6e7d9a8700" kindref="member">DAC_CFG1_DIV_CFG_MASK</ref>;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1aebaeff55863e77e674eac6c4c0088434" kindref="member">CFG1</ref><sp/>&amp;=<sp/>~DAC_CFG1_DIV_CFG_MASK;</highlight></codeline>
 <codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1aebaeff55863e77e674eac6c4c0088434" kindref="member">CFG1</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a789ea477e9287190a84a82d9b4a2bbb0" kindref="member">DAC_CFG1_DIV_CFG_SET</ref>(dac_input_freq<sp/>%<sp/>dac_output_freq<sp/>?<sp/><sp/>(dac_input_freq<sp/>/<sp/>dac_output_freq<sp/>+<sp/>1)<sp/>:<sp/>(dac_input_freq<sp/>/<sp/>dac_output_freq));</highlight></codeline>
 <codeline lineno="189"><highlight class="normal"></highlight></codeline>
 <codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
@@ -607,7 +607,7 @@
 <codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="198"><highlight class="normal"></highlight></codeline>
 <codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>disable<sp/>hw<sp/>trigger<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1ac9339c35bfc6f26364fb1dabdc361650" kindref="member">DAC_CFG0_HW_TRIG_EN_MASK</ref>;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~DAC_CFG0_HW_TRIG_EN_MASK;</highlight></codeline>
 <codeline lineno="201"><highlight class="normal"></highlight></codeline>
 <codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>refresh<sp/>the<sp/>CFG0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a545833987448481414279c8d9492dd80" kindref="member">CFG0</ref><sp/>=<sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref>;</highlight></codeline>
@@ -621,7 +621,7 @@
 <codeline lineno="211"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__dac__drv_8c_1ad3d1a25ab46c37a8a5fd987897270cf8" kindref="member">dac_set_buffer_sw_trigger</ref>(<ref refid="structDAC__Type" kindref="compound">DAC_Type</ref><sp/>*ptr)</highlight></codeline>
 <codeline lineno="212"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>disable<sp/>hw<sp/>trigger<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1ac9339c35bfc6f26364fb1dabdc361650" kindref="member">DAC_CFG0_HW_TRIG_EN_MASK</ref>;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~DAC_CFG0_HW_TRIG_EN_MASK;</highlight></codeline>
 <codeline lineno="215"><highlight class="normal"></highlight></codeline>
 <codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>refresh<sp/>the<sp/>CFG0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a545833987448481414279c8d9492dd80" kindref="member">CFG0</ref><sp/>=<sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref>;</highlight></codeline>
@@ -637,7 +637,7 @@
 <codeline lineno="227"><highlight class="normal"></highlight></codeline>
 <codeline lineno="228"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__dac__drv_8c_1a62748b108fcbde37e930abe0186d4f12" kindref="member">dac_set_hw_trigger_enable</ref>(<ref refid="structDAC__Type" kindref="compound">DAC_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
 <codeline lineno="229"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1ac9339c35bfc6f26364fb1dabdc361650" kindref="member">DAC_CFG0_HW_TRIG_EN_MASK</ref>;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>&amp;=<sp/>~DAC_CFG0_HW_TRIG_EN_MASK;</highlight></codeline>
 <codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1a88f8caa7245d12102e49d46c91a92a01" kindref="member">CFG0_BAK</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a4c7f6890979f40c3ef96a25f78958f21" kindref="member">DAC_CFG0_HW_TRIG_EN_SET</ref>(enable);</highlight></codeline>
 <codeline lineno="232"><highlight class="normal"></highlight></codeline>
 <codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>refresh<sp/>the<sp/>CFG0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
@@ -646,7 +646,7 @@
 <codeline lineno="236"><highlight class="normal"></highlight></codeline>
 <codeline lineno="237"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__dac__drv_8c_1aebe8c3ba3fab40fe248015fc4bc3d1fb" kindref="member">dac_enable_conversion</ref>(<ref refid="structDAC__Type" kindref="compound">DAC_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
 <codeline lineno="238"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1af0ee11053401ad28a70293492d2092f4" kindref="member">ANA_CFG0</ref><sp/>&amp;=<sp/>~<ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a12d2895a1edd1b12c4e34d41a8ce620c" kindref="member">DAC_ANA_CFG0_DAC12BIT_EN_MASK</ref>;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1af0ee11053401ad28a70293492d2092f4" kindref="member">ANA_CFG0</ref><sp/>&amp;=<sp/>~DAC_ANA_CFG0_DAC12BIT_EN_MASK;</highlight></codeline>
 <codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structDAC__Type_1af0ee11053401ad28a70293492d2092f4" kindref="member">ANA_CFG0</ref><sp/>|=<sp/><ref refid="HPM5300_2ip_2hpm__dac__regs_8h_1a4a8047b960be93f15497bfa2cddbadfb" kindref="member">DAC_ANA_CFG0_DAC12BIT_EN_SET</ref>(enable);</highlight></codeline>
 <codeline lineno="241"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="242"><highlight class="normal"></highlight></codeline>

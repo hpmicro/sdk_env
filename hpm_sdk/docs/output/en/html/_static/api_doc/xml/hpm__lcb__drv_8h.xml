@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__lcb__drv_8h" kind="file" language="C++">
     <compoundname>hpm_lcb_drv.h</compoundname>
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
@@ -7,9 +7,6 @@
     <includes refid="hpm__lcb__regs_8h" local="yes">hpm_lcb_regs.h</includes>
     <includedby refid="hpm__lcb__drv_8c" local="yes">drivers/src/hpm_lcb_drv.c</includedby>
     <incdepgraph>
-      <node id="4">
-        <label>stdbool.h</label>
-      </node>
       <node id="2">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -24,15 +21,6 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>assert.h</label>
-      </node>
-      <node id="5">
-        <label>stdint.h</label>
-      </node>
-      <node id="7">
-        <label>stdlib.h</label>
-      </node>
       <node id="1">
         <label>drivers/inc/hpm_lcb_drv.h</label>
         <link refid="hpm__lcb__drv_8h"/>
@@ -43,27 +31,39 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="6">
-        <label>string.h</label>
-      </node>
       <node id="9">
         <label>hpm_lcb_regs.h</label>
         <link refid="hpm__lcb__regs_8h"/>
       </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
       <node id="8">
         <label>hpm_soc.h</label>
       </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2">
-        <label>drivers/src/hpm_lcb_drv.c</label>
-        <link refid="hpm__lcb__drv_8c"/>
-      </node>
       <node id="1">
         <label>drivers/inc/hpm_lcb_drv.h</label>
         <link refid="hpm__lcb__drv_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="2">
+        <label>drivers/src/hpm_lcb_drv.c</label>
+        <link refid="hpm__lcb__drv_8c"/>
       </node>
     </invincdepgraph>
     <innerclass refid="structlcb__display__mode__config" prot="public">lcb_display_mode_config</innerclass>
@@ -71,929 +71,48 @@
     <innerclass refid="structlcb__config" prot="public">lcb_config</innerclass>
     <innerclass refid="structlcb__lvds__phy__data__lane__config" prot="public">lcb_lvds_phy_data_lane_config</innerclass>
     <innerclass refid="structlcb__lvds__phy__clk__lane__config" prot="public">lcb_lvds_phy_clk_lane_config</innerclass>
-      <sectiondef kind="enum">
-      <memberdef kind="enum" id="group__lcb__interface_1gab8c08889660cc9b693b01dcd8d0335cf" prot="public" static="no" strong="no">
-        <type></type>
-        <name>lcb_rxclk_sel</name>
-        <enumvalue id="group__lcb__interface_1ggab8c08889660cc9b693b01dcd8d0335cfa459ada48ab5464c2baf2aaf846607254" prot="public">
-          <name>lcb_rxclk_sel_phy0</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__lcb__interface_1ggab8c08889660cc9b693b01dcd8d0335cfadd4004b2bb2d077c2c9be17f93ada3c1" prot="public">
-          <name>lcb_rxclk_sel_phy1</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="22" column="1" bodyfile="drivers/inc/hpm_lcb_drv.h" bodystart="22" bodyend="25"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__lcb__interface_1gaabc5f4d31e6c9b8907e1c5115930bcd9" prot="public" static="no" strong="no">
-        <type></type>
-        <name>lcb_mode</name>
-        <enumvalue id="group__lcb__interface_1ggaabc5f4d31e6c9b8907e1c5115930bcd9a8f9bdc662ec5ededfe27b372b0b7418b" prot="public">
-          <name>lcb_mode_display</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__lcb__interface_1ggaabc5f4d31e6c9b8907e1c5115930bcd9a6d983f1c489bd5c9cbf7a42a1f50c4b8" prot="public">
-          <name>lcb_mode_cam_link</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="27" column="1" bodyfile="drivers/inc/hpm_lcb_drv.h" bodystart="27" bodyend="30"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__lcb__interface_1gaa449b91fd0240b67c4715e6cf3fdbad5" prot="public" static="no" strong="no">
-        <type></type>
-        <name>lcb_display_mode_mapping</name>
-        <enumvalue id="group__lcb__interface_1ggaa449b91fd0240b67c4715e6cf3fdbad5a1685e337c71e3f4f0b4eaaca078a84e7" prot="public">
-          <name>lcb_display_mode_mapping_vesa</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__lcb__interface_1ggaa449b91fd0240b67c4715e6cf3fdbad5a459ceac0b7b72e9965d35f6eb6b8b85c" prot="public">
-          <name>lcb_display_mode_mapping_jeida</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="32" column="1" bodyfile="drivers/inc/hpm_lcb_drv.h" bodystart="32" bodyend="35"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__lcb__interface_1ga0887702a82d5a9f30d4fc20af9a3bdc0" prot="public" static="no" strong="no">
-        <type></type>
-        <name>lcb_display_mode_data_width</name>
-        <enumvalue id="group__lcb__interface_1gga0887702a82d5a9f30d4fc20af9a3bdc0a75c2b640951f7a715003171413e55624" prot="public">
-          <name>lcb_display_mode_data_width_18bit</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__lcb__interface_1gga0887702a82d5a9f30d4fc20af9a3bdc0af7e0adff3c8581f7e785c7b497d21e45" prot="public">
-          <name>lcb_display_mode_data_width_24bit</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="37" column="1" bodyfile="drivers/inc/hpm_lcb_drv.h" bodystart="37" bodyend="40"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__lcb__interface_1ga4bbccd45de0af559acc948e7fbcb3903" prot="public" static="no" strong="no">
-        <type></type>
-        <name>lcb_cam_link_mode_data_width</name>
-        <enumvalue id="group__lcb__interface_1gga4bbccd45de0af559acc948e7fbcb3903a470b24d3795081192dd8b5213f8ceb4c" prot="public">
-          <name>lcb_cam_link_mode_data_width_24bit</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__lcb__interface_1gga4bbccd45de0af559acc948e7fbcb3903ac9d3b6bbe78424b638117585b0bccb48" prot="public">
-          <name>lcb_cam_link_mode_data_width_30bit</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__lcb__interface_1gga4bbccd45de0af559acc948e7fbcb3903a0308e0c586cf237fbed0cb44dceb44f9" prot="public">
-          <name>lcb_cam_link_mode_data_width_36bit</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="47" column="1" bodyfile="drivers/inc/hpm_lcb_drv.h" bodystart="47" bodyend="51"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__lcb__interface_1ga9306f5cbea05873a4b6fff5f8d2c542e" prot="public" static="no" strong="no">
-        <type></type>
-        <name>lcb_lvds_phy_rterm</name>
-        <enumvalue id="group__lcb__interface_1gga9306f5cbea05873a4b6fff5f8d2c542ea3d06014b5cc47da152e77d83da0d4898" prot="public">
-          <name>lcb_lvds_phy_rterm_hi_z</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__lcb__interface_1gga9306f5cbea05873a4b6fff5f8d2c542ea56717753c9570bde5ad869f78da9a0c7" prot="public">
-          <name>lcb_lvds_phy_rterm_150_ohm</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__lcb__interface_1gga9306f5cbea05873a4b6fff5f8d2c542ea635b2dc3dea0cb280137f1b4f2ae17e8" prot="public">
-          <name>lcb_lvds_phy_rterm_100_ohm</name>
-          <initializer>= 8</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__lcb__interface_1gga9306f5cbea05873a4b6fff5f8d2c542ea82d21749969c10c4ac560f65eb2a4f1f" prot="public">
-          <name>lcb_lvds_phy_rterm_75_ohm</name>
-          <initializer>= 15</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>Terminal impedance regulation. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="69" column="1" bodyfile="drivers/inc/hpm_lcb_drv.h" bodystart="69" bodyend="74"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__lcb__interface_1ga424c1f976baae4164c9f204c4a56c98b" prot="public" static="no" strong="no">
-        <type></type>
-        <name>lcb_lvds_phy_dll_delay_adj_min_freq</name>
-        <enumvalue id="group__lcb__interface_1gga424c1f976baae4164c9f204c4a56c98ba381a0a161d376d4958451a7a70b9565c" prot="public">
-          <name>lcb_lvds_phy_dll_delay_adj_min_freq_40_70mhz</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__lcb__interface_1gga424c1f976baae4164c9f204c4a56c98ba56271e327fe082232c1e6ce70a40356d" prot="public">
-          <name>lcb_lvds_phy_dll_delay_adj_min_freq_70_110mhz</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>DLL loop delay adjustment minimum frequency. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="84" column="1" bodyfile="drivers/inc/hpm_lcb_drv.h" bodystart="84" bodyend="87"/>
-      </memberdef>
-      <memberdef kind="enum" id="group__lcb__interface_1ga881f46c275b7e3408a0c89121ec8f0e2" prot="public" static="no" strong="no">
-        <type></type>
-        <name>lcb_lvds_phy_data_lane_id</name>
-        <enumvalue id="group__lcb__interface_1gga881f46c275b7e3408a0c89121ec8f0e2a43e6c37f0076ba5b973b0bfcabf01920" prot="public">
-          <name>lcb_lvds_phy_data_lane_id_0</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__lcb__interface_1gga881f46c275b7e3408a0c89121ec8f0e2a22dc4d94f8df16e19b218179adc5ad6d" prot="public">
-          <name>lcb_lvds_phy_data_lane_id_1</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="95" column="1" bodyfile="drivers/inc/hpm_lcb_drv.h" bodystart="95" bodyend="98"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="group__lcb__interface_1gadfb3df8e9040ab88f945428fbe4416b4" prot="public" static="no">
-        <type>enum <ref refid="group__lcb__interface_1gab8c08889660cc9b693b01dcd8d0335cf" kindref="member">lcb_rxclk_sel</ref></type>
-        <definition>typedef enum lcb_rxclk_sel lcb_rxclk_sel_t</definition>
-        <argsstring></argsstring>
-        <name>lcb_rxclk_sel_t</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="25" column="17"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__lcb__interface_1ga232375b07a4e67f516f497bf47267d75" prot="public" static="no">
-        <type>enum <ref refid="group__lcb__interface_1gaabc5f4d31e6c9b8907e1c5115930bcd9" kindref="member">lcb_mode</ref></type>
-        <definition>typedef enum lcb_mode lcb_mode_t</definition>
-        <argsstring></argsstring>
-        <name>lcb_mode_t</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="30" column="12"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__lcb__interface_1ga4f864e915a705caaff7e5a2bc6f618b5" prot="public" static="no">
-        <type>enum <ref refid="group__lcb__interface_1gaa449b91fd0240b67c4715e6cf3fdbad5" kindref="member">lcb_display_mode_mapping</ref></type>
-        <definition>typedef enum lcb_display_mode_mapping lcb_display_mode_mapping_t</definition>
-        <argsstring></argsstring>
-        <name>lcb_display_mode_mapping_t</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="35" column="28"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__lcb__interface_1gadca793029093764039c0354048229150" prot="public" static="no">
-        <type>enum <ref refid="group__lcb__interface_1ga0887702a82d5a9f30d4fc20af9a3bdc0" kindref="member">lcb_display_mode_data_width</ref></type>
-        <definition>typedef enum lcb_display_mode_data_width lcb_display_mode_data_width_t</definition>
-        <argsstring></argsstring>
-        <name>lcb_display_mode_data_width_t</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="40" column="31"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__lcb__interface_1ga5aefe066b3c4b562f56132b9b3b16b78" prot="public" static="no">
-        <type>struct <ref refid="structlcb__display__mode__config" kindref="compound">lcb_display_mode_config</ref></type>
-        <definition>typedef struct lcb_display_mode_config lcb_display_mode_config_t</definition>
-        <argsstring></argsstring>
-        <name>lcb_display_mode_config_t</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="45" column="27"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__lcb__interface_1ga2c1fafb5a3350b30e62ebaa9f9ba9eda" prot="public" static="no">
-        <type>enum <ref refid="group__lcb__interface_1ga4bbccd45de0af559acc948e7fbcb3903" kindref="member">lcb_cam_link_mode_data_width</ref></type>
-        <definition>typedef enum lcb_cam_link_mode_data_width lcb_cam_link_mode_data_width_t</definition>
-        <argsstring></argsstring>
-        <name>lcb_cam_link_mode_data_width_t</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="51" column="32"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__lcb__interface_1gac5cca74706dde46cf65dc22eaaac4ee6" prot="public" static="no">
-        <type>struct <ref refid="structlcb__cam__link__mode__config" kindref="compound">lcb_cam_link_mode_config</ref></type>
-        <definition>typedef struct lcb_cam_link_mode_config lcb_cam_link_mode_config_t</definition>
-        <argsstring></argsstring>
-        <name>lcb_cam_link_mode_config_t</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="55" column="28"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__lcb__interface_1ga8821905506fbcf2f5fe5cdd399b4cf26" prot="public" static="no">
-        <type>struct <ref refid="structlcb__config" kindref="compound">lcb_config</ref></type>
-        <definition>typedef struct lcb_config lcb_config_t</definition>
-        <argsstring></argsstring>
-        <name>lcb_config_t</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="64" column="14"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__lcb__interface_1ga7122a54d817acc1f4360727b7083c365" prot="public" static="no">
-        <type>enum <ref refid="group__lcb__interface_1ga9306f5cbea05873a4b6fff5f8d2c542e" kindref="member">lcb_lvds_phy_rterm</ref></type>
-        <definition>typedef enum lcb_lvds_phy_rterm lcb_lvds_phy_rterm_t</definition>
-        <argsstring></argsstring>
-        <name>lcb_lvds_phy_rterm_t</name>
-        <briefdescription>
-<para>Terminal impedance regulation. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="74" column="22"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__lcb__interface_1gaeb3c25afe0e6e1af8688224567bcac46" prot="public" static="no">
-        <type>struct <ref refid="structlcb__lvds__phy__data__lane__config" kindref="compound">lcb_lvds_phy_data_lane_config</ref></type>
-        <definition>typedef struct lcb_lvds_phy_data_lane_config lcb_lvds_phy_data_lane_config_t</definition>
-        <argsstring></argsstring>
-        <name>lcb_lvds_phy_data_lane_config_t</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="79" column="33"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__lcb__interface_1gae4f089244e088ff7fdc9e102ca77c88f" prot="public" static="no">
-        <type>enum <ref refid="group__lcb__interface_1ga424c1f976baae4164c9f204c4a56c98b" kindref="member">lcb_lvds_phy_dll_delay_adj_min_freq</ref></type>
-        <definition>typedef enum lcb_lvds_phy_dll_delay_adj_min_freq lcb_lvds_phy_dll_delay_adj_min_freq_t</definition>
-        <argsstring></argsstring>
-        <name>lcb_lvds_phy_dll_delay_adj_min_freq_t</name>
-        <briefdescription>
-<para>DLL loop delay adjustment minimum frequency. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="87" column="39"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__lcb__interface_1ga056a6eb142866d95a174329601a479d5" prot="public" static="no">
-        <type>struct <ref refid="structlcb__lvds__phy__clk__lane__config" kindref="compound">lcb_lvds_phy_clk_lane_config</ref></type>
-        <definition>typedef struct lcb_lvds_phy_clk_lane_config lcb_lvds_phy_clk_lane_config_t</definition>
-        <argsstring></argsstring>
-        <name>lcb_lvds_phy_clk_lane_config_t</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="93" column="32"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__lcb__interface_1ga73b8ff2ceeb68d5a33cf9a02ada4a7a6" prot="public" static="no">
-        <type>enum <ref refid="group__lcb__interface_1ga881f46c275b7e3408a0c89121ec8f0e2" kindref="member">lcb_lvds_phy_data_lane_id</ref></type>
-        <definition>typedef enum lcb_lvds_phy_data_lane_id lcb_lvds_phy_data_lane_id_t</definition>
-        <argsstring></argsstring>
-        <name>lcb_lvds_phy_data_lane_id_t</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="98" column="29"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__lcb__interface_1gabd87ea9a41eb3fcb4bf5074f97873f8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcb_get_default_config</definition>
-        <argsstring>(lcb_config_t *cfg)</argsstring>
-        <name>lcb_get_default_config</name>
-        <param>
-          <type><ref refid="group__lcb__interface_1ga8821905506fbcf2f5fe5cdd399b4cf26" kindref="member">lcb_config_t</ref> *</type>
-          <declname>cfg</declname>
-        </param>
-        <briefdescription>
-<para>get LCB of default config </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="out">cfg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>config of LCB </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="109" column="6" bodyfile="drivers/src/hpm_lcb_drv.c" bodystart="11" bodyend="17" declfile="drivers/inc/hpm_lcb_drv.h" declline="109" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcb__interface_1gabe8ac7ca4c328990346a5954bfb97d47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcb_init</definition>
-        <argsstring>(LCB_Type *ptr, lcb_config_t *cfg)</argsstring>
-        <name>lcb_init</name>
-        <param>
-          <type><ref refid="structLCB__Type" kindref="compound">LCB_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__lcb__interface_1ga8821905506fbcf2f5fe5cdd399b4cf26" kindref="member">lcb_config_t</ref> *</type>
-          <declname>cfg</declname>
-        </param>
-        <briefdescription>
-<para>LCB init. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCB base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">cfg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>config of LCB </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="117" column="6" bodyfile="drivers/src/hpm_lcb_drv.c" bodystart="19" bodyend="41" declfile="drivers/inc/hpm_lcb_drv.h" declline="117" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcb__interface_1gaa3966c05ab13c4febdfb1a45a091a5a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcb_get_phy_clk_lane_default_config</definition>
-        <argsstring>(lcb_lvds_phy_clk_lane_config_t *cfg)</argsstring>
-        <name>lcb_get_phy_clk_lane_default_config</name>
-        <param>
-          <type><ref refid="group__lcb__interface_1ga056a6eb142866d95a174329601a479d5" kindref="member">lcb_lvds_phy_clk_lane_config_t</ref> *</type>
-          <declname>cfg</declname>
-        </param>
-        <briefdescription>
-<para>get LCB clk_lane of default config </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="out">cfg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>config of clk_lane </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="124" column="6" bodyfile="drivers/src/hpm_lcb_drv.c" bodystart="43" bodyend="48" declfile="drivers/inc/hpm_lcb_drv.h" declline="124" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcb__interface_1ga67d897d38886c7316cf6458e5f49d321" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcb_get_phy_data_lane_default_config</definition>
-        <argsstring>(lcb_lvds_phy_data_lane_config_t *cfg)</argsstring>
-        <name>lcb_get_phy_data_lane_default_config</name>
-        <param>
-          <type><ref refid="group__lcb__interface_1gaeb3c25afe0e6e1af8688224567bcac46" kindref="member">lcb_lvds_phy_data_lane_config_t</ref> *</type>
-          <declname>cfg</declname>
-        </param>
-        <briefdescription>
-<para>get LCB data_lane of default config </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="out">cfg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>config of data_lane </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="131" column="6" bodyfile="drivers/src/hpm_lcb_drv.c" bodystart="50" bodyend="54" declfile="drivers/inc/hpm_lcb_drv.h" declline="131" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcb__interface_1ga359e7e78493e0c6c7343adaf3b63aace" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcb_lvds_phy0_data_lane_config</definition>
-        <argsstring>(LCB_Type *ptr, lcb_lvds_phy_data_lane_config_t *cfg, lcb_lvds_phy_data_lane_id_t lane_id)</argsstring>
-        <name>lcb_lvds_phy0_data_lane_config</name>
-        <param>
-          <type><ref refid="structLCB__Type" kindref="compound">LCB_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__lcb__interface_1gaeb3c25afe0e6e1af8688224567bcac46" kindref="member">lcb_lvds_phy_data_lane_config_t</ref> *</type>
-          <declname>cfg</declname>
-        </param>
-        <param>
-          <type><ref refid="group__lcb__interface_1ga73b8ff2ceeb68d5a33cf9a02ada4a7a6" kindref="member">lcb_lvds_phy_data_lane_id_t</ref></type>
-          <declname>lane_id</declname>
-        </param>
-        <briefdescription>
-<para>LCB phy0 data lane config. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCB base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">cfg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>config of phy0 data lane </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">lane_id</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>data lane id </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="140" column="6" bodyfile="drivers/src/hpm_lcb_drv.c" bodystart="56" bodyend="67" declfile="drivers/inc/hpm_lcb_drv.h" declline="140" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcb__interface_1gab16dc4160441fb8f010bfaa269428a96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcb_lvds_phy0_clk_lane_config</definition>
-        <argsstring>(LCB_Type *ptr, lcb_lvds_phy_clk_lane_config_t *cfg)</argsstring>
-        <name>lcb_lvds_phy0_clk_lane_config</name>
-        <param>
-          <type><ref refid="structLCB__Type" kindref="compound">LCB_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__lcb__interface_1ga056a6eb142866d95a174329601a479d5" kindref="member">lcb_lvds_phy_clk_lane_config_t</ref> *</type>
-          <declname>cfg</declname>
-        </param>
-        <briefdescription>
-<para>LCB phy0 clk lane config. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCB base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">cfg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>config of phy0 clk lane </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="148" column="6" bodyfile="drivers/src/hpm_lcb_drv.c" bodystart="69" bodyend="77" declfile="drivers/inc/hpm_lcb_drv.h" declline="148" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcb__interface_1ga8db3116207ee4c89f3b351cb45eebc8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcb_lvds_phy1_data_lane_config</definition>
-        <argsstring>(LCB_Type *ptr, lcb_lvds_phy_data_lane_config_t *cfg, lcb_lvds_phy_data_lane_id_t lane_id)</argsstring>
-        <name>lcb_lvds_phy1_data_lane_config</name>
-        <param>
-          <type><ref refid="structLCB__Type" kindref="compound">LCB_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__lcb__interface_1gaeb3c25afe0e6e1af8688224567bcac46" kindref="member">lcb_lvds_phy_data_lane_config_t</ref> *</type>
-          <declname>cfg</declname>
-        </param>
-        <param>
-          <type><ref refid="group__lcb__interface_1ga73b8ff2ceeb68d5a33cf9a02ada4a7a6" kindref="member">lcb_lvds_phy_data_lane_id_t</ref></type>
-          <declname>lane_id</declname>
-        </param>
-        <briefdescription>
-<para>LCB phy1 data lane config. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCB base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">cfg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>config of phy1 data lane </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">lane_id</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>data lane id </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="157" column="6" bodyfile="drivers/src/hpm_lcb_drv.c" bodystart="79" bodyend="90" declfile="drivers/inc/hpm_lcb_drv.h" declline="157" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcb__interface_1gad0e2bb35fbf9c85a850acf4ae8724f2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcb_lvds_phy1_clk_lane_config</definition>
-        <argsstring>(LCB_Type *ptr, lcb_lvds_phy_clk_lane_config_t *cfg)</argsstring>
-        <name>lcb_lvds_phy1_clk_lane_config</name>
-        <param>
-          <type><ref refid="structLCB__Type" kindref="compound">LCB_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__lcb__interface_1ga056a6eb142866d95a174329601a479d5" kindref="member">lcb_lvds_phy_clk_lane_config_t</ref> *</type>
-          <declname>cfg</declname>
-        </param>
-        <briefdescription>
-<para>LCB phy1 clk lane config. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCB base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">cfg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>config of phy1 clk lane </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="165" column="6" bodyfile="drivers/src/hpm_lcb_drv.c" bodystart="92" bodyend="100" declfile="drivers/inc/hpm_lcb_drv.h" declline="165" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcb__interface_1ga174551de3ed83c955076e6c3a5a74c23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcb_lvds_phy0_poweron</definition>
-        <argsstring>(LCB_Type *ptr)</argsstring>
-        <name>lcb_lvds_phy0_poweron</name>
-        <param>
-          <type><ref refid="structLCB__Type" kindref="compound">LCB_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>power on LCB phy0 </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCB base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="172" column="6" bodyfile="drivers/src/hpm_lcb_drv.c" bodystart="102" bodyend="108" declfile="drivers/inc/hpm_lcb_drv.h" declline="172" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcb__interface_1ga421458a6fd55fcb0d09aa674d619ec24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcb_lvds_phy1_poweron</definition>
-        <argsstring>(LCB_Type *ptr)</argsstring>
-        <name>lcb_lvds_phy1_poweron</name>
-        <param>
-          <type><ref refid="structLCB__Type" kindref="compound">LCB_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>power on LCB phy1 </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCB base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="179" column="6" bodyfile="drivers/src/hpm_lcb_drv.c" bodystart="110" bodyend="116" declfile="drivers/inc/hpm_lcb_drv.h" declline="179" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcb__interface_1gaa185fa7553d5793882b099f9ffddc904" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcb_lvds_phy0_powerdown</definition>
-        <argsstring>(LCB_Type *ptr)</argsstring>
-        <name>lcb_lvds_phy0_powerdown</name>
-        <param>
-          <type><ref refid="structLCB__Type" kindref="compound">LCB_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>power down LCB phy0 </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCB base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="186" column="6" bodyfile="drivers/src/hpm_lcb_drv.c" bodystart="118" bodyend="124" declfile="drivers/inc/hpm_lcb_drv.h" declline="186" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcb__interface_1gae0b65fddac6d338982a6db0763fd9a24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lcb_lvds_phy1_powerdown</definition>
-        <argsstring>(LCB_Type *ptr)</argsstring>
-        <name>lcb_lvds_phy1_powerdown</name>
-        <param>
-          <type><ref refid="structLCB__Type" kindref="compound">LCB_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>power on LCB phy1 </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCB base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="193" column="6" bodyfile="drivers/src/hpm_lcb_drv.c" bodystart="126" bodyend="132" declfile="drivers/inc/hpm_lcb_drv.h" declline="193" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcb__interface_1ga227bdc9354080bf3a663681e9c072f0b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>static bool lcb_lvds_phy0_dll_is_lock</definition>
-        <argsstring>(LCB_Type *ptr)</argsstring>
-        <name>lcb_lvds_phy0_dll_is_lock</name>
-        <param>
-          <type><ref refid="structLCB__Type" kindref="compound">LCB_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>check LCB phy0 is lock </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCB base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="200" column="20" bodyfile="drivers/inc/hpm_lcb_drv.h" bodystart="200" bodyend="203"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcb__interface_1gadec2a61aa9d85ed5c05eab961bcca4b9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>static bool lcb_lvds_phy1_dll_is_lock</definition>
-        <argsstring>(LCB_Type *ptr)</argsstring>
-        <name>lcb_lvds_phy1_dll_is_lock</name>
-        <param>
-          <type><ref refid="structLCB__Type" kindref="compound">LCB_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>check LCB phy1 is lock </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCB base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="210" column="20" bodyfile="drivers/inc/hpm_lcb_drv.h" bodystart="210" bodyend="213"/>
-      </memberdef>
-      <memberdef kind="function" id="group__lcb__interface_1gaa969a968ee1778d18f8990f72002e41a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>static bool lcb_lvds_display_phy_dll_is_lock</definition>
-        <argsstring>(LCB_Type *ptr)</argsstring>
-        <name>lcb_lvds_display_phy_dll_is_lock</name>
-        <param>
-          <type><ref refid="structLCB__Type" kindref="compound">LCB_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>check LCB display phy is lock </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>LCB base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_lcb_drv.h" line="220" column="20" bodyfile="drivers/inc/hpm_lcb_drv.h" bodystart="220" bodyend="224"/>
-      </memberdef>
-      </sectiondef>
+    <sectiondef kind="enum">
+      <member refid="group__lcb__interface_1gab8c08889660cc9b693b01dcd8d0335cf" kind="enum"><name>lcb_rxclk_sel</name></member>
+      <member refid="group__lcb__interface_1gaabc5f4d31e6c9b8907e1c5115930bcd9" kind="enum"><name>lcb_mode</name></member>
+      <member refid="group__lcb__interface_1gaa449b91fd0240b67c4715e6cf3fdbad5" kind="enum"><name>lcb_display_mode_mapping</name></member>
+      <member refid="group__lcb__interface_1ga0887702a82d5a9f30d4fc20af9a3bdc0" kind="enum"><name>lcb_display_mode_data_width</name></member>
+      <member refid="group__lcb__interface_1ga4bbccd45de0af559acc948e7fbcb3903" kind="enum"><name>lcb_cam_link_mode_data_width</name></member>
+      <member refid="group__lcb__interface_1ga9306f5cbea05873a4b6fff5f8d2c542e" kind="enum"><name>lcb_lvds_phy_rterm</name></member>
+      <member refid="group__lcb__interface_1ga424c1f976baae4164c9f204c4a56c98b" kind="enum"><name>lcb_lvds_phy_dll_delay_adj_min_freq</name></member>
+      <member refid="group__lcb__interface_1ga881f46c275b7e3408a0c89121ec8f0e2" kind="enum"><name>lcb_lvds_phy_data_lane_id</name></member>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <member refid="group__lcb__interface_1gadfb3df8e9040ab88f945428fbe4416b4" kind="typedef"><name>lcb_rxclk_sel_t</name></member>
+      <member refid="group__lcb__interface_1ga232375b07a4e67f516f497bf47267d75" kind="typedef"><name>lcb_mode_t</name></member>
+      <member refid="group__lcb__interface_1ga4f864e915a705caaff7e5a2bc6f618b5" kind="typedef"><name>lcb_display_mode_mapping_t</name></member>
+      <member refid="group__lcb__interface_1gadca793029093764039c0354048229150" kind="typedef"><name>lcb_display_mode_data_width_t</name></member>
+      <member refid="group__lcb__interface_1ga5aefe066b3c4b562f56132b9b3b16b78" kind="typedef"><name>lcb_display_mode_config_t</name></member>
+      <member refid="group__lcb__interface_1ga2c1fafb5a3350b30e62ebaa9f9ba9eda" kind="typedef"><name>lcb_cam_link_mode_data_width_t</name></member>
+      <member refid="group__lcb__interface_1gac5cca74706dde46cf65dc22eaaac4ee6" kind="typedef"><name>lcb_cam_link_mode_config_t</name></member>
+      <member refid="group__lcb__interface_1ga8821905506fbcf2f5fe5cdd399b4cf26" kind="typedef"><name>lcb_config_t</name></member>
+      <member refid="group__lcb__interface_1ga7122a54d817acc1f4360727b7083c365" kind="typedef"><name>lcb_lvds_phy_rterm_t</name></member>
+      <member refid="group__lcb__interface_1gaeb3c25afe0e6e1af8688224567bcac46" kind="typedef"><name>lcb_lvds_phy_data_lane_config_t</name></member>
+      <member refid="group__lcb__interface_1gae4f089244e088ff7fdc9e102ca77c88f" kind="typedef"><name>lcb_lvds_phy_dll_delay_adj_min_freq_t</name></member>
+      <member refid="group__lcb__interface_1ga056a6eb142866d95a174329601a479d5" kind="typedef"><name>lcb_lvds_phy_clk_lane_config_t</name></member>
+      <member refid="group__lcb__interface_1ga73b8ff2ceeb68d5a33cf9a02ada4a7a6" kind="typedef"><name>lcb_lvds_phy_data_lane_id_t</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__lcb__interface_1gabd87ea9a41eb3fcb4bf5074f97873f8b" kind="function"><name>lcb_get_default_config</name></member>
+      <member refid="group__lcb__interface_1gabe8ac7ca4c328990346a5954bfb97d47" kind="function"><name>lcb_init</name></member>
+      <member refid="group__lcb__interface_1gaa3966c05ab13c4febdfb1a45a091a5a9" kind="function"><name>lcb_get_phy_clk_lane_default_config</name></member>
+      <member refid="group__lcb__interface_1ga67d897d38886c7316cf6458e5f49d321" kind="function"><name>lcb_get_phy_data_lane_default_config</name></member>
+      <member refid="group__lcb__interface_1ga359e7e78493e0c6c7343adaf3b63aace" kind="function"><name>lcb_lvds_phy0_data_lane_config</name></member>
+      <member refid="group__lcb__interface_1gab16dc4160441fb8f010bfaa269428a96" kind="function"><name>lcb_lvds_phy0_clk_lane_config</name></member>
+      <member refid="group__lcb__interface_1ga8db3116207ee4c89f3b351cb45eebc8e" kind="function"><name>lcb_lvds_phy1_data_lane_config</name></member>
+      <member refid="group__lcb__interface_1gad0e2bb35fbf9c85a850acf4ae8724f2f" kind="function"><name>lcb_lvds_phy1_clk_lane_config</name></member>
+      <member refid="group__lcb__interface_1ga174551de3ed83c955076e6c3a5a74c23" kind="function"><name>lcb_lvds_phy0_poweron</name></member>
+      <member refid="group__lcb__interface_1ga421458a6fd55fcb0d09aa674d619ec24" kind="function"><name>lcb_lvds_phy1_poweron</name></member>
+      <member refid="group__lcb__interface_1gaa185fa7553d5793882b099f9ffddc904" kind="function"><name>lcb_lvds_phy0_powerdown</name></member>
+      <member refid="group__lcb__interface_1gae0b65fddac6d338982a6db0763fd9a24" kind="function"><name>lcb_lvds_phy1_powerdown</name></member>
+      <member refid="group__lcb__interface_1ga227bdc9354080bf3a663681e9c072f0b" kind="function"><name>lcb_lvds_phy0_dll_is_lock</name></member>
+      <member refid="group__lcb__interface_1gadec2a61aa9d85ed5c05eab961bcca4b9" kind="function"><name>lcb_lvds_phy1_dll_is_lock</name></member>
+      <member refid="group__lcb__interface_1gaa969a968ee1778d18f8990f72002e41a" kind="function"><name>lcb_lvds_display_phy_dll_is_lock</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

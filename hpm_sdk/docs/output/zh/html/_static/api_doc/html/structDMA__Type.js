@@ -1,9 +1,9 @@
 var structDMA__Type =
 [
     [ "CHABORT", "structDMA__Type.html#aedaab530ecfd12429222733b7d394c71", null ],
-    [ "CHCTRL", "structDMA__Type.html#a61a15737924b2c4d9bc4513a40673b69", null ],
-    [ "CHCTRL", "structDMA__Type.html#a2f0863b4b6e0d2adb7caf6d8688af099", null ],
-    [ "CHCTRL", "structDMA__Type.html#a4cab70b317c9694c31ddc4a868f58eca", null ],
+    [ "CHCTRL", "structDMA__Type.html#a1833210df4c150c8abf088fb024f8bb2", null ],
+    [ "CHCTRL", "structDMA__Type.html#af3fb06fc3468a827b834cb5a0d8c6e78", null ],
+    [ "CHCTRL", "structDMA__Type.html#aa99565406808c2afd2ac5707766468ab", null ],
     [ "CHEN", "structDMA__Type.html#a369ef224eb56b7eb4fee41487921005f", null ],
     [ "CTRL", "structDMA__Type.html#a5eb7b20222326896e9c787a3232b6a05", null ],
     [ "DMACFG", "structDMA__Type.html#a23c7cde8527184fb1341a4107a40cba8", null ],

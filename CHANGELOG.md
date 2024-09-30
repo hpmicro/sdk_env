@@ -1,5 +1,10 @@
 # Change Log 
 
+## [1.7.0] - 2024-09-30:
+- update SDK to v1.7.0
+- start_gui:
+  - add button to open board/application folder in explorer
+
 ## [1.6.0] - 2024-06-30:
 - update SDK to v1.6.0
 

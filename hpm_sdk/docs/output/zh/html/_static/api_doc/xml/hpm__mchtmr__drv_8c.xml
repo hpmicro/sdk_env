@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__mchtmr__drv_8c" kind="file" language="C++">
     <compoundname>hpm_mchtmr_drv.c</compoundname>
     <includes refid="hpm__mchtmr__drv_8h" local="yes">hpm_mchtmr_drv.h</includes>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
       <node id="3">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -20,18 +17,6 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-      </node>
-      <node id="4">
-        <label>assert.h</label>
-      </node>
-      <node id="6">
-        <label>stdint.h</label>
-      </node>
-      <node id="8">
-        <label>stdlib.h</label>
-      </node>
-      <node id="7">
-        <label>string.h</label>
       </node>
       <node id="2">
         <label>hpm_mchtmr_drv.h</label>
@@ -47,52 +32,28 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
       <node id="9">
         <label>hpm_mchtmr_regs.h</label>
       </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
     </incdepgraph>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__mchtmr__interface_1ga05a141cc507bde3e1177eb74913764f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void mchtmr_init_counter</definition>
-        <argsstring>(MCHTMR_Type *ptr, uint64_t v)</argsstring>
-        <name>mchtmr_init_counter</name>
-        <param>
-          <type><ref refid="structMCHTMR__Type" kindref="compound">MCHTMR_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint64_t</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-<para>initialize mchtmr counter </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MCHTMR base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">v</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>value to be set </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_mchtmr_drv.c" line="10" column="6" bodyfile="drivers/src/hpm_mchtmr_drv.c" bodystart="10" bodyend="26"/>
-      </memberdef>
-      </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__mchtmr__interface_1ga05a141cc507bde3e1177eb74913764f0" kind="function"><name>mchtmr_init_counter</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -115,7 +76,7 @@
 <codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>then<sp/>set<sp/>high<sp/>32<sp/>bits<sp/>and<sp/>low<sp/>32<sp/>bits;<sp/>otherwise,</highlight></codeline>
 <codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>low<sp/>32<sp/>bit<sp/>can<sp/>be<sp/>set<sp/>firstly<sp/>then<sp/>high<sp/>32<sp/>bits.</highlight></codeline>
 <codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>((v<sp/>&amp;<sp/>0xE0000000)<sp/>==<sp/>0xE0000000)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((v<sp/>&amp;<sp/>0xE0000000)<sp/>==<sp/>0xE0000000)<sp/>{</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*p<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(p<sp/>+<sp/>1)<sp/>=<sp/>v<sp/>&gt;&gt;<sp/>32;</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*p<sp/>=<sp/>v<sp/>&amp;<sp/>0xFFFFFFFF;</highlight></codeline>

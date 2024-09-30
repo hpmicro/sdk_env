@@ -9,7 +9,7 @@ var dir_cf55b2ecca8f1a435bcea4a6a4f0afee =
     [ "hpm_bmon_regs.h", "HPM6E00_2ip_2hpm__bmon__regs_8h.html", "HPM6E00_2ip_2hpm__bmon__regs_8h" ],
     [ "hpm_bpor_regs.h", "HPM6E00_2ip_2hpm__bpor__regs_8h.html", "HPM6E00_2ip_2hpm__bpor__regs_8h" ],
     [ "hpm_bsec_regs.h", "HPM6E00_2ip_2hpm__bsec__regs_8h.html", "HPM6E00_2ip_2hpm__bsec__regs_8h" ],
-    [ "hpm_clc_regs.h", "HPM6E00_2ip_2hpm__clc__regs_8h.html", "HPM6E00_2ip_2hpm__clc__regs_8h" ],
+    [ "hpm_clc_regs.h", "hpm__clc__regs_8h.html", "hpm__clc__regs_8h" ],
     [ "hpm_crc_regs.h", "HPM6E00_2ip_2hpm__crc__regs_8h.html", "HPM6E00_2ip_2hpm__crc__regs_8h" ],
     [ "hpm_dao_regs.h", "HPM6E00_2ip_2hpm__dao__regs_8h.html", "HPM6E00_2ip_2hpm__dao__regs_8h" ],
     [ "hpm_dmamux_regs.h", "HPM6E00_2ip_2hpm__dmamux__regs_8h.html", "HPM6E00_2ip_2hpm__dmamux__regs_8h" ],
@@ -31,7 +31,7 @@ var dir_cf55b2ecca8f1a435bcea4a6a4f0afee =
     [ "hpm_mcan_regs.h", "HPM6E00_2ip_2hpm__mcan__regs_8h.html", "HPM6E00_2ip_2hpm__mcan__regs_8h" ],
     [ "hpm_mchtmr_regs.h", "HPM6E00_2ip_2hpm__mchtmr__regs_8h.html", "HPM6E00_2ip_2hpm__mchtmr__regs_8h" ],
     [ "hpm_mono_regs.h", "HPM6E00_2ip_2hpm__mono__regs_8h.html", "HPM6E00_2ip_2hpm__mono__regs_8h" ],
-    [ "hpm_mtg_regs.h", "HPM6E00_2ip_2hpm__mtg__regs_8h.html", "HPM6E00_2ip_2hpm__mtg__regs_8h" ],
+    [ "hpm_mtg_regs.h", "hpm__mtg__regs_8h.html", "hpm__mtg__regs_8h" ],
     [ "hpm_otp_regs.h", "HPM6E00_2ip_2hpm__otp__regs_8h.html", "HPM6E00_2ip_2hpm__otp__regs_8h" ],
     [ "hpm_pcfg_regs.h", "HPM6E00_2ip_2hpm__pcfg__regs_8h.html", "HPM6E00_2ip_2hpm__pcfg__regs_8h" ],
     [ "hpm_pdgo_regs.h", "HPM6E00_2ip_2hpm__pdgo__regs_8h.html", "HPM6E00_2ip_2hpm__pdgo__regs_8h" ],
@@ -46,9 +46,9 @@ var dir_cf55b2ecca8f1a435bcea4a6a4f0afee =
     [ "hpm_ppor_regs.h", "HPM6E00_2ip_2hpm__ppor__regs_8h.html", "HPM6E00_2ip_2hpm__ppor__regs_8h" ],
     [ "hpm_psec_regs.h", "HPM6E00_2ip_2hpm__psec__regs_8h.html", "HPM6E00_2ip_2hpm__psec__regs_8h" ],
     [ "hpm_ptpc_regs.h", "HPM6E00_2ip_2hpm__ptpc__regs_8h.html", "HPM6E00_2ip_2hpm__ptpc__regs_8h" ],
-    [ "hpm_pwmv2_regs.h", "HPM6E00_2ip_2hpm__pwmv2__regs_8h.html", "HPM6E00_2ip_2hpm__pwmv2__regs_8h" ],
+    [ "hpm_pwmv2_regs.h", "hpm__pwmv2__regs_8h.html", "hpm__pwmv2__regs_8h" ],
     [ "hpm_qeiv2_regs.h", "HPM6E00_2ip_2hpm__qeiv2__regs_8h.html", "HPM6E00_2ip_2hpm__qeiv2__regs_8h" ],
-    [ "hpm_qeov2_regs.h", "HPM6E00_2ip_2hpm__qeov2__regs_8h.html", "HPM6E00_2ip_2hpm__qeov2__regs_8h" ],
+    [ "hpm_qeov2_regs.h", "hpm__qeov2__regs_8h.html", "hpm__qeov2__regs_8h" ],
     [ "hpm_rdc_regs.h", "HPM6E00_2ip_2hpm__rdc__regs_8h.html", "HPM6E00_2ip_2hpm__rdc__regs_8h" ],
     [ "hpm_rng_regs.h", "HPM6E00_2ip_2hpm__rng__regs_8h.html", "HPM6E00_2ip_2hpm__rng__regs_8h" ],
     [ "hpm_rtc_regs.h", "HPM6E00_2ip_2hpm__rtc__regs_8h.html", "HPM6E00_2ip_2hpm__rtc__regs_8h" ],
@@ -64,5 +64,5 @@ var dir_cf55b2ecca8f1a435bcea4a6a4f0afee =
     [ "hpm_tsw_regs.h", "hpm__tsw__regs_8h.html", "hpm__tsw__regs_8h" ],
     [ "hpm_uart_regs.h", "HPM6E00_2ip_2hpm__uart__regs_8h.html", "HPM6E00_2ip_2hpm__uart__regs_8h" ],
     [ "hpm_usb_regs.h", "HPM6E00_2ip_2hpm__usb__regs_8h.html", "HPM6E00_2ip_2hpm__usb__regs_8h" ],
-    [ "hpm_vsc_regs.h", "HPM6E00_2ip_2hpm__vsc__regs_8h.html", "HPM6E00_2ip_2hpm__vsc__regs_8h" ]
+    [ "hpm_vsc_regs.h", "hpm__vsc__regs_8h.html", "hpm__vsc__regs_8h" ]
 ];

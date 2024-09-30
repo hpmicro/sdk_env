@@ -2,10 +2,9 @@ var structDMAV2__Type =
 [
     [ "CHABORT", "structDMAV2__Type.html#a7a203767ced1983d00b7c8bae697e45f", null ],
     [ "CHANREQCTRL", "structDMAV2__Type.html#a6bfaae947296a9ddf68c60ae2fb80ea8", null ],
-    [ "CHCTRL", "structDMAV2__Type.html#a03cf01488719380ff70fd048ffbc75bd", null ],
-    [ "CHCTRL", "structDMAV2__Type.html#a0d0afb78ebc420d082e933c379fd252c", null ],
-    [ "CHCTRL", "structDMAV2__Type.html#aac2bd66900cdcabc6d86e1433778833e", null ],
-    [ "CHCTRL", "structDMAV2__Type.html#acb0e4866489ea4301e4b3cc6c88661bd", null ],
+    [ "CHCTRL", "structDMAV2__Type.html#a825d6829e7a83f769fcab6b2134ea37f", null ],
+    [ "CHCTRL", "structDMAV2__Type.html#a7105356af7d5ff8098635bea7a5c8259", null ],
+    [ "CHCTRL", "structDMAV2__Type.html#aea3746f087f91b6c0b46e0594647d2e6", null ],
     [ "CHEN", "structDMAV2__Type.html#ac1e15a3e0ac984cc67a8ba24558d9bea", null ],
     [ "CTRL", "structDMAV2__Type.html#afd2aff4c00f3161535417a7d29aec2cd", null ],
     [ "DMACFG", "structDMAV2__Type.html#a161ae2038d50b04b8bfef2870546a022", null ],

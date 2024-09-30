@@ -12,7 +12,7 @@ var hpm__i2c__drv_8c =
     [ "i2c_master_configure_transfer", "group__i2c__interface.html#gad8aa723f3d3f80470ab7316d2744dbb6", null ],
     [ "i2c_master_read", "group__i2c__interface.html#gaa838ed222310fa510b6d0ad2fe84b065", null ],
     [ "i2c_master_seq_receive", "group__i2c__interface.html#gabaf4004f5931bfa8dadcddb7364a46b8", null ],
-    [ "i2c_master_seq_transmit", "group__i2c__interface.html#ga1fef797bdd77f88c400158c6e361a938", null ],
+    [ "i2c_master_seq_transmit_check_ack", "group__i2c__interface.html#ga310880255897362043b7b241321b31be", null ],
     [ "i2c_master_start_dma_read", "group__i2c__interface.html#gaec469d9e6a92e934fc456481e11c8a9b", null ],
     [ "i2c_master_start_dma_write", "group__i2c__interface.html#ga047a2df47406b613cb1bdc07a3026856", null ],
     [ "i2c_master_transfer", "group__i2c__interface.html#gae763d01089c1093c5d0cd2a6e3600dac", null ],

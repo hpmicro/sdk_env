@@ -9,7 +9,7 @@ var structxpi__ram__config__t =
     [ "group", "structxpi__ram__config__t.html#a514b8e77cbaa17cdef1ec937dfe9193f", null ],
     [ "instr_set", "structxpi__ram__config__t.html#a599afcc06ebc06b272c9b537786cab56", null ],
     [ "max_cs_low_time", "structxpi__ram__config__t.html#a41590ac95154df4f68b1fb838c223cad", null ],
-    [ "port_info", "structxpi__ram__config__t.html#addae3941e9b6725e031f4cd3afdc180a", null ],
+    [ "port_info", "structxpi__ram__config__t.html#af46644098d01ed5262db961fb23a85a0", null ],
     [ "reserved", "structxpi__ram__config__t.html#a9535f58f00a79b3a5792880a74433c05", null ],
     [ "reserved0", "structxpi__ram__config__t.html#af9e34177d8c352b75a5539e51fbbf6ce", null ],
     [ "rxclk_src", "structxpi__ram__config__t.html#a8c93aaebd41c001e5d56c6e255a1a264", null ],

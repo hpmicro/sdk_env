@@ -1,15 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__mipi__dsi__phy__drv_8h" kind="file" language="C++">
     <compoundname>hpm_mipi_dsi_phy_drv.h</compoundname>
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
     <includes local="yes">hpm_soc.h</includes>
     <includes refid="hpm__mipi__dsi__phy__regs_8h" local="yes">hpm_mipi_dsi_phy_regs.h</includes>
+    <includedby refid="mc10128007__31b_8c" local="yes">components/panel/panels/mc10128007_31b.c</includedby>
     <includedby refid="hpm__mipi__dsi__phy__drv_8c" local="yes">drivers/src/hpm_mipi_dsi_phy_drv.c</includedby>
     <incdepgraph>
-      <node id="4">
-        <label>stdbool.h</label>
-      </node>
       <node id="2">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -24,25 +22,6 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>assert.h</label>
-      </node>
-      <node id="5">
-        <label>stdint.h</label>
-      </node>
-      <node id="7">
-        <label>stdlib.h</label>
-      </node>
-      <node id="6">
-        <label>string.h</label>
-      </node>
-      <node id="8">
-        <label>hpm_soc.h</label>
-      </node>
-      <node id="9">
-        <label>hpm_mipi_dsi_phy_regs.h</label>
-        <link refid="hpm__mipi__dsi__phy__regs_8h"/>
-      </node>
       <node id="1">
         <label>drivers/inc/hpm_mipi_dsi_phy_drv.h</label>
         <link refid="hpm__mipi__dsi__phy__drv_8h"/>
@@ -53,77 +32,54 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
+      <node id="9">
+        <label>hpm_mipi_dsi_phy_regs.h</label>
+        <link refid="hpm__mipi__dsi__phy__regs_8h"/>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="8">
+        <label>hpm_soc.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>drivers/src/hpm_mipi_dsi_phy_drv.c</label>
-        <link refid="hpm__mipi__dsi__phy__drv_8c"/>
+        <label>components/panel/panels/mc10128007_31b.c</label>
+        <link refid="mc10128007__31b_8c"/>
       </node>
       <node id="1">
         <label>drivers/inc/hpm_mipi_dsi_phy_drv.h</label>
         <link refid="hpm__mipi__dsi__phy__drv_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>drivers/src/hpm_mipi_dsi_phy_drv.c</label>
+        <link refid="hpm__mipi__dsi__phy__drv_8c"/>
       </node>
     </invincdepgraph>
     <innerclass refid="structmipi__dsi__phy__config" prot="public">mipi_dsi_phy_config</innerclass>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="group__mipi__dsi__phy__interface_1ga080be44afb68d99b40da7b0317ce8e45" prot="public" static="no">
-        <type>struct <ref refid="structmipi__dsi__phy__config" kindref="compound">mipi_dsi_phy_config</ref></type>
-        <definition>typedef struct mipi_dsi_phy_config mipi_dsi_phy_config_t</definition>
-        <argsstring></argsstring>
-        <name>mipi_dsi_phy_config_t</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_mipi_dsi_phy_drv.h" line="30" column="23"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__mipi__dsi__phy__interface_1gac867383f32e79105984fd96e9dd6449a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void mipi_dsi_phy_init</definition>
-        <argsstring>(MIPI_DSI_PHY_Type *ptr, mipi_dsi_phy_config_t *cfg)</argsstring>
-        <name>mipi_dsi_phy_init</name>
-        <param>
-          <type><ref refid="structMIPI__DSI__PHY__Type" kindref="compound">MIPI_DSI_PHY_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__mipi__dsi__phy__interface_1ga080be44afb68d99b40da7b0317ce8e45" kindref="member">mipi_dsi_phy_config_t</ref> *</type>
-          <declname>cfg</declname>
-        </param>
-        <briefdescription>
-<para>MIPI_DSI_PHY init. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>MIPI_DSI_PHY base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>cfg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>config of MIPI_DSI_PHY </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_mipi_dsi_phy_drv.h" line="38" column="6" bodyfile="drivers/src/hpm_mipi_dsi_phy_drv.c" bodystart="67" bodyend="120" declfile="drivers/inc/hpm_mipi_dsi_phy_drv.h" declline="38" declcolumn="6"/>
-      </memberdef>
-      </sectiondef>
+    <sectiondef kind="typedef">
+      <member refid="group__mipi__dsi__phy__interface_1ga080be44afb68d99b40da7b0317ce8e45" kind="typedef"><name>mipi_dsi_phy_config_t</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__mipi__dsi__phy__interface_1gac867383f32e79105984fd96e9dd6449a" kind="function"><name>mipi_dsi_phy_init</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

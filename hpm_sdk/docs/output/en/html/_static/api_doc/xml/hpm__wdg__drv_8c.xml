@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__wdg__drv_8c" kind="file" language="C++">
     <compoundname>hpm_wdg_drv.c</compoundname>
     <includes refid="hpm__wdg__drv_8h" local="yes">hpm_wdg_drv.h</includes>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
       <node id="3">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -21,24 +18,6 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>assert.h</label>
-      </node>
-      <node id="9">
-        <label>hpm_wdg_regs.h</label>
-      </node>
-      <node id="6">
-        <label>stdint.h</label>
-      </node>
-      <node id="8">
-        <label>stdlib.h</label>
-      </node>
-      <node id="1">
-        <label>drivers/src/hpm_wdg_drv.c</label>
-        <link refid="hpm__wdg__drv_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>hpm_wdg_drv.h</label>
         <link refid="hpm__wdg__drv_8h"/>
@@ -47,13 +26,34 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
+      <node id="1">
+        <label>drivers/src/hpm_wdg_drv.c</label>
+        <link refid="hpm__wdg__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_wdg_regs.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
       <node id="7">
         <label>string.h</label>
       </node>
     </incdepgraph>
     <innerclass refid="structreset__interval__map__t" prot="public">reset_interval_map_t</innerclass>
     <innerclass refid="structinterrupt__interval__map__t" prot="public">interrupt_interval_map_t</innerclass>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="hpm__wdg__drv_8c_1a2f4c050047030eb67bb4f8534c4ceec9" prot="public" static="no">
         <name>TICKS_1K</name>
         <initializer>(1024UL)</initializer>
@@ -98,8 +98,8 @@
         </inbodydescription>
         <location file="drivers/src/hpm_wdg_drv.c" line="12" column="9" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="12" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
+    </sectiondef>
+    <sectiondef kind="var">
       <memberdef kind="variable" id="hpm__wdg__drv_8c_1ad1cc1c7bed42620ac9ab3243f1e2f777" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structreset__interval__map__t" kindref="compound">reset_interval_map_t</ref></type>
         <definition>const reset_interval_map_t k_reset_interval_map[reset_interval_out_of_range+1U]</definition>
@@ -109,11 +109,11 @@
     {128UL, <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7ab36578f2650847d0aa782c51bfdf6be4" kindref="member">reset_interval_clock_period_mult_128</ref>},
     {256UL, <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a1583b97e54d9cb50c98f0a0046bea047" kindref="member">reset_interval_clock_period_mult_256</ref>},
     {512UL, <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a99c7dab01fc8f8dbda4a567142dbf78d" kindref="member">reset_interval_clock_period_mult_512</ref>},
-    {1UL *  (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a879f8a8a7f96ce3c6988148b3ec17d25" kindref="member">reset_interval_clock_period_mult_1k</ref>},
-    {2UL *  (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7abb4211dae13d5a800d238657e4158150" kindref="member">reset_interval_clock_period_mult_2k</ref>},
-    {4UL *  (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7ae9a4a9a89c0b63d8d76c01d95ea2de3f" kindref="member">reset_interval_clock_period_mult_4k</ref>},
-    {8UL *  (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a53e2906f045ad2aa7957137044a7fa1a" kindref="member">reset_interval_clock_period_mult_8k</ref>},
-    {16UL *  (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a95c5a5d5e1ff6d5e2ff8011e7afa729b" kindref="member">reset_interval_clock_period_mult_16k</ref>},
+    {1UL * (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a879f8a8a7f96ce3c6988148b3ec17d25" kindref="member">reset_interval_clock_period_mult_1k</ref>},
+    {2UL * (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7abb4211dae13d5a800d238657e4158150" kindref="member">reset_interval_clock_period_mult_2k</ref>},
+    {4UL * (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7ae9a4a9a89c0b63d8d76c01d95ea2de3f" kindref="member">reset_interval_clock_period_mult_4k</ref>},
+    {8UL * (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a53e2906f045ad2aa7957137044a7fa1a" kindref="member">reset_interval_clock_period_mult_8k</ref>},
+    {16UL * (1024UL) , <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7a95c5a5d5e1ff6d5e2ff8011e7afa729b" kindref="member">reset_interval_clock_period_mult_16k</ref>},
     {0xFFFFFFFFUL, <ref refid="group__wdg__interface_1gga07ea085195867b9c81fc91267bfbaac7aaec6c890ee500575e71b6da392f8d1db" kindref="member">reset_interval_out_of_range</ref>},
 }</initializer>
         <briefdescription>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/src/hpm_wdg_drv.c" line="24" column="35" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="24" bodyend="-1"/>
+        <location file="drivers/src/hpm_wdg_drv.c" line="24" column="35" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="24" bodyend="34"/>
       </memberdef>
       <memberdef kind="variable" id="hpm__wdg__drv_8c_1ac721134b814adbd969e1f3e7b29cd242" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structinterrupt__interval__map__t" kindref="compound">interrupt_interval_map_t</ref></type>
@@ -132,20 +132,20 @@
         <initializer>= {
     {64UL, <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180af5beea2377f1681c46e8fc9aa64be165" kindref="member">interrupt_interval_clock_period_multi_64</ref>},
     {256UL, <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a410a7c85e6c08ecba930528775d94890" kindref="member">interrupt_interval_clock_period_multi_256</ref>},
-    {1UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a581e47d503ff1d327d3ce6a08cee1a57" kindref="member">interrupt_interval_clock_period_multi_1k</ref>},
-    {2UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a47862ac28fc8e8c022b2e29192161f7b" kindref="member">interrupt_interval_clock_period_multi_2k</ref>},
-    {4UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180aa3b824b5e0cde42ca23e97862b56fef8" kindref="member">interrupt_interval_clock_period_multi_4k</ref>},
-    {8UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a636552feec7dfe851ea06e31b62ddb61" kindref="member">interrupt_interval_clock_period_multi_8k</ref>},
-    {16UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a6064c94aaeb7ef0150705720a4f7cbb4" kindref="member">interrupt_interval_clock_period_multi_16k</ref>},
-    {32UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a8247824f77c2a3e37e5aca089f9b1c82" kindref="member">interrupt_interval_clock_period_multi_32k</ref>},
-    {128UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a77a3a312e5ecde3ce181416ea1afedbc" kindref="member">interrupt_interval_clock_period_multi_128k</ref>},
-    {512UL *  (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a4b5691b7d1f084d5ccf9d38988a35be0" kindref="member">interrupt_interval_clock_period_multi_512k</ref>},
-    {2UL *  (1024UL *  (1024UL) ) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a2b5e7d8f88fd66de95f86c3187cc5709" kindref="member">interrupt_interval_clock_period_multi_2m</ref>},
-    {8UL *  (1024UL *  (1024UL) ) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180ae82ab6708da5e41060ea64b565d2cd4a" kindref="member">interrupt_interval_clock_period_multi_8m</ref>},
-    {32UL *  (1024UL *  (1024UL) ) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180afb81f71eb39f236241379b4e914aeae8" kindref="member">interrupt_interval_clock_period_multi_32m</ref>},
-    {128UL *  (1024UL *  (1024UL) ) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a7f71921ffac89052929de75eb291a210" kindref="member">interrupt_interval_clock_period_multi_128m</ref>},
-    {512UL *  (1024UL *  (1024UL) ) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a1c47c56e0c0fd1b8d3815d4e68d1e565" kindref="member">interrupt_interval_clock_period_multi_512m</ref>},
-    {2UL *  (1024UL *  (1024UL *  (1024UL) ) ) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a6504b6b497f4ba9525603021fe767b3e" kindref="member">interrupt_interval_clock_period_multi_2g</ref>},
+    {1UL * (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a581e47d503ff1d327d3ce6a08cee1a57" kindref="member">interrupt_interval_clock_period_multi_1k</ref>},
+    {2UL * (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a47862ac28fc8e8c022b2e29192161f7b" kindref="member">interrupt_interval_clock_period_multi_2k</ref>},
+    {4UL * (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180aa3b824b5e0cde42ca23e97862b56fef8" kindref="member">interrupt_interval_clock_period_multi_4k</ref>},
+    {8UL * (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a636552feec7dfe851ea06e31b62ddb61" kindref="member">interrupt_interval_clock_period_multi_8k</ref>},
+    {16UL * (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a6064c94aaeb7ef0150705720a4f7cbb4" kindref="member">interrupt_interval_clock_period_multi_16k</ref>},
+    {32UL * (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a8247824f77c2a3e37e5aca089f9b1c82" kindref="member">interrupt_interval_clock_period_multi_32k</ref>},
+    {128UL * (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a77a3a312e5ecde3ce181416ea1afedbc" kindref="member">interrupt_interval_clock_period_multi_128k</ref>},
+    {512UL * (1024UL) , <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a4b5691b7d1f084d5ccf9d38988a35be0" kindref="member">interrupt_interval_clock_period_multi_512k</ref>},
+    {2UL * (1024UL * (1024UL) ), <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a2b5e7d8f88fd66de95f86c3187cc5709" kindref="member">interrupt_interval_clock_period_multi_2m</ref>},
+    {8UL * (1024UL * (1024UL) ), <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180ae82ab6708da5e41060ea64b565d2cd4a" kindref="member">interrupt_interval_clock_period_multi_8m</ref>},
+    {32UL * (1024UL * (1024UL) ), <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180afb81f71eb39f236241379b4e914aeae8" kindref="member">interrupt_interval_clock_period_multi_32m</ref>},
+    {128UL * (1024UL * (1024UL) ), <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a7f71921ffac89052929de75eb291a210" kindref="member">interrupt_interval_clock_period_multi_128m</ref>},
+    {512UL * (1024UL * (1024UL) ), <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a1c47c56e0c0fd1b8d3815d4e68d1e565" kindref="member">interrupt_interval_clock_period_multi_512m</ref>},
+    {2UL * (1024UL * (1024UL * (1024UL) )), <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a6504b6b497f4ba9525603021fe767b3e" kindref="member">interrupt_interval_clock_period_multi_2g</ref>},
     {0xFFFFFFFFUL, <ref refid="group__wdg__interface_1gga5d2866730d13550eecb39ad9a5fab180a1b19c677aac9b02827c821352781c263" kindref="member">interrupt_interval_out_of_range</ref>}
 
 }</initializer>
@@ -155,340 +155,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/src/hpm_wdg_drv.c" line="36" column="39" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="36" bodyend="-1"/>
+        <location file="drivers/src/hpm_wdg_drv.c" line="36" column="39" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="36" bodyend="55"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__wdg__interface_1ga6a75a9dcb0a7f065e352a6b12fba1b52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t wdg_init</definition>
-        <argsstring>(WDG_Type *base, wdg_control_t *wdg_ctrl)</argsstring>
-        <name>wdg_init</name>
-        <param>
-          <type><ref refid="structWDG__Type" kindref="compound">WDG_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <param>
-          <type><ref refid="group__wdg__interface_1gacebd23c93dfcc995c568af7cf44029c0" kindref="member">wdg_control_t</ref> *</type>
-          <declname>wdg_ctrl</declname>
-        </param>
-        <briefdescription>
-<para>WDG initialization function. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>WDG base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">wdg_ctrl</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>WDG control structure </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>API</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>execution status </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_wdg_drv.c" line="58" column="12" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="58" bodyend="91"/>
-      </memberdef>
-      <memberdef kind="function" id="group__wdg__interface_1ga5ee58edbf8fc2d629ddee8093883fc63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__wdg__interface_1gae790f3fb338c0b5e39757bb09819f3d3" kindref="member">reset_interval_t</ref></type>
-        <definition>reset_interval_t wdg_convert_reset_interval_from_us</definition>
-        <argsstring>(const uint32_t src_freq, const uint32_t reset_us)</argsstring>
-        <name>wdg_convert_reset_interval_from_us</name>
-        <param>
-          <type>const uint32_t</type>
-          <declname>src_freq</declname>
-        </param>
-        <param>
-          <type>const uint32_t</type>
-          <declname>reset_us</declname>
-        </param>
-        <briefdescription>
-<para>Convert the Reset interval value based on the WDG source clock frequency and the expected reset interval in terms of microseconds. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">src_freq</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>WDG source clock frequency </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">reset_us</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Expected Reset interval in terms of microseconds </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>Converted</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>WDG reset interval </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_wdg_drv.c" line="94" column="18" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="94" bodyend="113"/>
-      </memberdef>
-      <memberdef kind="function" id="group__wdg__interface_1gac28dce29ab25bd11702c0bff5da9485e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__wdg__interface_1ga6ffa3e5927b602832b1d2f94960dc7cd" kindref="member">interrupt_interval_t</ref></type>
-        <definition>interrupt_interval_t wdg_convert_interrupt_interval_from_us</definition>
-        <argsstring>(const uint32_t src_freq, uint32_t interval_us)</argsstring>
-        <name>wdg_convert_interrupt_interval_from_us</name>
-        <param>
-          <type>const uint32_t</type>
-          <declname>src_freq</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>interval_us</declname>
-        </param>
-        <briefdescription>
-<para>Convert the interrupt interval value based on the WDG source clock frequency and the expected interrupt interval in terms of microseconds. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">src_freq</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>WDG source clock frequency </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">interval_us</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Expected Interrupt interval in terms of microseconds </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>Converted</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>WDG interrupt interval </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_wdg_drv.c" line="116" column="22" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="116" bodyend="134"/>
-      </memberdef>
-      <memberdef kind="function" id="group__wdg__interface_1gaefe84da07d9d68e34a3bb99ae9b01fe4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint64_t</type>
-        <definition>uint64_t wdg_convert_interrupt_interval_to_us</definition>
-        <argsstring>(const uint32_t src_freq, interrupt_interval_t interval)</argsstring>
-        <name>wdg_convert_interrupt_interval_to_us</name>
-        <param>
-          <type>const uint32_t</type>
-          <declname>src_freq</declname>
-        </param>
-        <param>
-          <type><ref refid="group__wdg__interface_1ga6ffa3e5927b602832b1d2f94960dc7cd" kindref="member">interrupt_interval_t</ref></type>
-          <declname>interval</declname>
-        </param>
-        <briefdescription>
-<para>Convert the interrupt interval value based on the WDG source clock frequency and the expected interrupt interval in terms of microseconds. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">src_freq</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>WDG source clock frequency </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">interval</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Expected Interrupt interval </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>Converted</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>WDG interrupt interval in us </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_wdg_drv.c" line="136" column="10" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="136" bodyend="150"/>
-      </memberdef>
-      <memberdef kind="function" id="group__wdg__interface_1gac90ff6512ed3b5dbe18d18d8f5bbbd4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>uint32_t wdg_convert_reset_interval_to_us</definition>
-        <argsstring>(const uint32_t src_freq, reset_interval_t interval)</argsstring>
-        <name>wdg_convert_reset_interval_to_us</name>
-        <param>
-          <type>const uint32_t</type>
-          <declname>src_freq</declname>
-        </param>
-        <param>
-          <type><ref refid="group__wdg__interface_1gae790f3fb338c0b5e39757bb09819f3d3" kindref="member">reset_interval_t</ref></type>
-          <declname>interval</declname>
-        </param>
-        <briefdescription>
-<para>Convert the Reset interval value based on the WDG source clock frequency and the expected reset interval in terms of microseconds. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">src_freq</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>WDG source clock frequency </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">interval</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Expected Reset interval </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>Converted</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>WDG reset interval in us </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_wdg_drv.c" line="152" column="10" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="152" bodyend="164"/>
-      </memberdef>
-      <memberdef kind="function" id="group__wdg__interface_1ga3e0428bd9aade4ed05d89a6e027b5bea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint64_t</type>
-        <definition>uint64_t wdg_get_interrupt_interval_in_us</definition>
-        <argsstring>(WDG_Type *base, const uint32_t src_freq)</argsstring>
-        <name>wdg_get_interrupt_interval_in_us</name>
-        <param>
-          <type><ref refid="structWDG__Type" kindref="compound">WDG_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <param>
-          <type>const uint32_t</type>
-          <declname>src_freq</declname>
-        </param>
-        <briefdescription>
-<para>Get Actual WDG Interrupt Interval in terms of microseconds. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>WDG base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">src_freq</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>WDG source clock frequency </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Converted WDG interrupt interval in terms of microseconds </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_wdg_drv.c" line="166" column="10" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="166" bodyend="176"/>
-      </memberdef>
-      <memberdef kind="function" id="group__wdg__interface_1ga6dd2681b76ee866019272291d7658bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint64_t</type>
-        <definition>uint64_t wdg_get_total_reset_interval_in_us</definition>
-        <argsstring>(WDG_Type *base, const uint32_t src_freq)</argsstring>
-        <name>wdg_get_total_reset_interval_in_us</name>
-        <param>
-          <type><ref refid="structWDG__Type" kindref="compound">WDG_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <param>
-          <type>const uint32_t</type>
-          <declname>src_freq</declname>
-        </param>
-        <briefdescription>
-<para>Get Actual WDG Reset Interval in terms of microseconds. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>WDG base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">src_freq</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>WDG source clock frequency </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Converted WDG total reset interval in terms of microseconds </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_wdg_drv.c" line="178" column="10" bodyfile="drivers/src/hpm_wdg_drv.c" bodystart="178" bodyend="189"/>
-      </memberdef>
-      </sectiondef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__wdg__interface_1ga6a75a9dcb0a7f065e352a6b12fba1b52" kind="function"><name>wdg_init</name></member>
+      <member refid="group__wdg__interface_1ga5ee58edbf8fc2d629ddee8093883fc63" kind="function"><name>wdg_convert_reset_interval_from_us</name></member>
+      <member refid="group__wdg__interface_1gac28dce29ab25bd11702c0bff5da9485e" kind="function"><name>wdg_convert_interrupt_interval_from_us</name></member>
+      <member refid="group__wdg__interface_1gaefe84da07d9d68e34a3bb99ae9b01fe4" kind="function"><name>wdg_convert_interrupt_interval_to_us</name></member>
+      <member refid="group__wdg__interface_1gac90ff6512ed3b5dbe18d18d8f5bbbd4d" kind="function"><name>wdg_convert_reset_interval_to_us</name></member>
+      <member refid="group__wdg__interface_1ga3e0428bd9aade4ed05d89a6e027b5bea" kind="function"><name>wdg_get_interrupt_interval_in_us</name></member>
+      <member refid="group__wdg__interface_1ga6dd2681b76ee866019272291d7658bc3" kind="function"><name>wdg_get_total_reset_interval_in_us</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

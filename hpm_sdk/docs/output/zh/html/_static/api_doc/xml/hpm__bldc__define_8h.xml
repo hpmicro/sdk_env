@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__bldc__define_8h" kind="file" language="C++">
     <compoundname>hpm_bldc_define.h</compoundname>
     <includes refid="hpm__motor__math_8h" local="yes">hpm_motor_math.h</includes>
@@ -9,9 +9,6 @@
     <includedby refid="hpm__over__zero_8c" local="yes">middleware/hpm_mcl/sensorless_control/hpm_over_zero.c</includedby>
     <includedby refid="hpm__smc_8c" local="yes">middleware/hpm_mcl/sensorless_control/hpm_smc.c</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>stdint.h</label>
-      </node>
       <node id="1">
         <label>middleware/hpm_mcl/inc/hpm_bldc_define.h</label>
         <link refid="hpm__bldc__define_8h"/>
@@ -29,16 +26,11 @@
       <node id="4">
         <label>math.h</label>
       </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="6">
-        <label>middleware/hpm_mcl/sensorless_control/hpm_over_zero.c</label>
-        <link refid="hpm__over__zero_8c"/>
-      </node>
-      <node id="4">
-        <label>middleware/hpm_mcl/sensor_control/hpm_block.c</label>
-        <link refid="hpm__block_8c"/>
-      </node>
       <node id="1">
         <label>middleware/hpm_mcl/inc/hpm_bldc_define.h</label>
         <link refid="hpm__bldc__define_8h"/>
@@ -53,15 +45,15 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="7">
-        <label>middleware/hpm_mcl/sensorless_control/hpm_smc.c</label>
-        <link refid="hpm__smc_8c"/>
-      </node>
       <node id="2">
         <label>middleware/hpm_mcl/inc/hpm_hfi.h</label>
         <link refid="hpm__hfi_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
+      </node>
+      <node id="4">
+        <label>middleware/hpm_mcl/sensor_control/hpm_block.c</label>
+        <link refid="hpm__block_8c"/>
       </node>
       <node id="5">
         <label>middleware/hpm_mcl/sensor_control/hpm_foc.c</label>
@@ -70,6 +62,14 @@
       <node id="3">
         <label>middleware/hpm_mcl/sensorless_control/hpm_hfi.c</label>
         <link refid="hpm__hfi_8c"/>
+      </node>
+      <node id="6">
+        <label>middleware/hpm_mcl/sensorless_control/hpm_over_zero.c</label>
+        <link refid="hpm__over__zero_8c"/>
+      </node>
+      <node id="7">
+        <label>middleware/hpm_mcl/sensorless_control/hpm_smc.c</label>
+        <link refid="hpm__smc_8c"/>
       </node>
     </invincdepgraph>
     <innerclass refid="structhpm__motor__par" prot="public">hpm_motor_par</innerclass>
@@ -80,506 +80,52 @@
     <innerclass refid="structbldc__control__pwm__par" prot="public">bldc_control_pwm_par</innerclass>
     <innerclass refid="structbldc__func__cal" prot="public">bldc_func_cal</innerclass>
     <innerclass refid="structbldc__contrl__foc__par" prot="public">bldc_contrl_foc_par</innerclass>
-      <sectiondef kind="define">
-      <memberdef kind="define" id="group__mcl__common_1ga74e3356cce8ecb2affbbbb698aa0e706" prot="public" static="no">
-        <name>BLDC_MOTOR_DIR_FORWARD</name>
-        <initializer>0</initializer>
-        <briefdescription>
-<para>bldc motor rotation direction </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="36" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="36" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga36276255366ef4fc59e3b59ed7c42bce" prot="public" static="no">
-        <name>BLDC_MOTOR_DIR_REVERSE</name>
-        <initializer>1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="37" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="37" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1gab12fb8c08d390ffbd730e223008496da" prot="public" static="no">
-        <name>BLDC_PWM_PIN_UH</name>
-        <initializer>0</initializer>
-        <briefdescription>
-<para>Motor pin definition U, V, W three pairs. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="43" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="43" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1gad572ced29310afbdacaa10d879d61581" prot="public" static="no">
-        <name>BLDC_PWM_PIN_UL</name>
-        <initializer>1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="44" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="44" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga03f3375b0e9e67c6d792b0d52ac717c8" prot="public" static="no">
-        <name>BLDC_PWM_PIN_VH</name>
-        <initializer>2</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="45" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="45" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga8443c4a4b9072e491757d717db70d441" prot="public" static="no">
-        <name>BLDC_PWM_PIN_VL</name>
-        <initializer>3</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="46" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="46" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga9043934f79270dfdc64ff3933d2d00fc" prot="public" static="no">
-        <name>BLDC_PWM_PIN_WH</name>
-        <initializer>4</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="47" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="47" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga4bb6f70cc43317ab80416bc21d34ef46" prot="public" static="no">
-        <name>BLDC_PWM_PIN_WL</name>
-        <initializer>5</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="48" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="48" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1gaf7ce02b0ef85b438d594aaa5f43677bf" prot="public" static="no">
-        <name>BLDC_MOTOR0_INDEX</name>
-        <initializer>(1)</initializer>
-        <briefdescription>
-<para>Motor serial number, listing four motors. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="54" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="54" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga686883b7237a65bb652ea732bfb5eca3" prot="public" static="no">
-        <name>BLDC_MOTOR1_INDEX</name>
-        <initializer>(2)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="55" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="55" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga749d5a13f3a29c67fadf880757e121d3" prot="public" static="no">
-        <name>BLDC_MOTOR2_INDEX</name>
-        <initializer>(3)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="56" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="56" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga080f6bdd64d5aeb1ce61f19a037a89f5" prot="public" static="no">
-        <name>BLDC_MOTOR3_INDEX</name>
-        <initializer>(4)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="57" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="57" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga2342fe69f85465d4bf5f72ab23bdcc09" prot="public" static="no">
-        <name>ADCU_INDEX</name>
-        <initializer>(0)</initializer>
-        <briefdescription>
-<para>Serial number of the current sampling array. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="63" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="63" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga4ea5ec88384d0f5dfa38dcfa22be63b1" prot="public" static="no">
-        <name>ADCV_INDEX</name>
-        <initializer>(1)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="64" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="64" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1gaa935ea9c9e3eb2f3f2804148bf925178" prot="public" static="no">
-        <name>ADCW_INDEX</name>
-        <initializer>(2)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="65" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="65" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1gaa566c36fdb0109fd527f18961d9beaec" prot="public" static="no">
-        <name>BLDC_PWM_U</name>
-        <initializer>0</initializer>
-        <briefdescription>
-<para>PWM output channel definition, used for internal calculations. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="71" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="71" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga22d9ac516c715331989e1e98a8ccf44c" prot="public" static="no">
-        <name>BLDC_PWM_V</name>
-        <initializer>1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="72" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="72" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga1702ab8f6c2af9af9a328e0d1b495b02" prot="public" static="no">
-        <name>BLDC_PWM_W</name>
-        <initializer>2</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="73" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="73" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga4dbc88884f4c73ceb732caefc74953b0" prot="public" static="no">
-        <name>GET_ADC_12BIT_VALID_DATA</name>
-        <param><defname>x</defname></param>
-        <initializer>((x &amp; 0xffff) &gt;&gt; 4)</initializer>
-        <briefdescription>
-<para>Get ADC data with 12bit valid bits. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="79" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="79" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga1ef1caa7d730bc3026a05945d46922bc" prot="public" static="no">
-        <name>BLDC_MOTOR_PARA_DEFAULTS</name>
-        <initializer>                                        {0, 0, 0,\
-                                        0, 0, 0,\
-                                        0, 0, 0,\
-                                        NULL}</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="120" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="120" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1gae913fa1e840cd4a97d699d046c19caf3" prot="public" static="no">
-        <name>BLDC_CONTRL_SPD_PARA_DEFAULTS</name>
-        <initializer>                                        {0, 0, 0, 0, 0,\
-                                        0, 0, 0, 0, NULL,\
-                                        NULL}</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="143" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="143" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1gab8911ba2cdd1013021b7fa4ad9d6b8b7" prot="public" static="no">
-        <name>BLDC_CONTRL_PID_PARA_DEFAULTS</name>
-        <initializer>                                        {0, 0, 0, 0,\
-                                        0, 0, 0, 0,\
-                                       NULL}</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="162" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="162" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1gaa35cc8ce5ef4e4a07a21fde4395cf3ce" prot="public" static="no">
-        <name>BLDC_CONTROL_CURRENT_PARA_DEFAULTS</name>
-        <initializer>                                            {0, 0, 0,\
-                                            0, 0, 0,\
-                                            0, 0, 0,\
-                                            NULL, NULL}</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="183" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="183" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga093cab0d646a06e7d696d31dea1632c1" prot="public" static="no">
-        <name>BLDC_CONTROL_PWMOUT_PARA_DEFAULTS</name>
-        <initializer>                                            {0, 0, 0,\
-                                            0, 0, 0,\
-                                            NULL}</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="201" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="201" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga8b7cbf902d89c099f21f4b79949ef0a6" prot="public" static="no">
-        <name>BLDC_CONTROL_PWM_PARA_DEFAULTS</name>
-        <initializer>                                           {0, 0, 0, 0,\
-                                           <ref refid="group__mcl__common_1ga093cab0d646a06e7d696d31dea1632c1" kindref="member">BLDC_CONTROL_PWMOUT_PARA_DEFAULTS</ref>,\
-                                            NULL}</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="216" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="216" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1gafb1cfbd37d2bf544220ed424d46fe24f" prot="public" static="no">
-        <name>BLDC_FUNC_CAL_DEFAULTS</name>
-        <initializer>{NULL, NULL}</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="228" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="228" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__mcl__common_1ga06a637ae074f69bc88e68b3fc9d15587" prot="public" static="no">
-        <name>BLDC_CONTROL_FOC_PARA_DEFAULTS</name>
-        <initializer>                                        {<ref refid="group__mcl__common_1gab8911ba2cdd1013021b7fa4ad9d6b8b7" kindref="member">BLDC_CONTRL_PID_PARA_DEFAULTS</ref>, <ref refid="group__mcl__common_1gab8911ba2cdd1013021b7fa4ad9d6b8b7" kindref="member">BLDC_CONTRL_PID_PARA_DEFAULTS</ref>,\
-                                        <ref refid="group__mcl__common_1gae913fa1e840cd4a97d699d046c19caf3" kindref="member">BLDC_CONTRL_SPD_PARA_DEFAULTS</ref>, 0,\
-                                        <ref refid="group__mcl__common_1gaa35cc8ce5ef4e4a07a21fde4395cf3ce" kindref="member">BLDC_CONTROL_CURRENT_PARA_DEFAULTS</ref>, <ref refid="group__mcl__common_1ga1ef1caa7d730bc3026a05945d46922bc" kindref="member">BLDC_MOTOR_PARA_DEFAULTS</ref>,\
-                                        <ref refid="group__mcl__common_1ga8b7cbf902d89c099f21f4b79949ef0a6" kindref="member">BLDC_CONTROL_PWM_PARA_DEFAULTS</ref>,\
-                                        <ref refid="group__mcl__common_1gafb1cfbd37d2bf544220ed424d46fe24f" kindref="member">BLDC_FUNC_CAL_DEFAULTS</ref>,\
-                                        0, 0, 0, 0, NULL}</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="249" column="9" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="249" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="enum">
-      <memberdef kind="enum" id="group__mcl__common_1ga2268a36fa22f30afe732834b5a6b67fe" prot="public" static="no" strong="no">
-        <type></type>
-        <name>bldc_hall_phase</name>
-        <enumvalue id="group__mcl__common_1gga2268a36fa22f30afe732834b5a6b67feab00af5b40c8920b130690a87cf6fa183" prot="public">
-          <name>bldc_hall_phase_60</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group__mcl__common_1gga2268a36fa22f30afe732834b5a6b67fea69d9a7fde41fda42092e5b6dab8de35e" prot="public">
-          <name>bldc_hall_phase_120</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>The mounting angle of the Hall sensor, 60 degrees or 120 degrees, is an inherent property of the motor. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="94" column="1" bodyfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" bodystart="94" bodyend="97"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="group__mcl__common_1ga60276dc50b07d092a17dc8304a58da68" prot="public" static="no">
-        <type>enum <ref refid="group__mcl__common_1ga2268a36fa22f30afe732834b5a6b67fe" kindref="member">bldc_hall_phase</ref></type>
-        <definition>typedef enum bldc_hall_phase bldc_hall_phase_t</definition>
-        <argsstring></argsstring>
-        <name>bldc_hall_phase_t</name>
-        <briefdescription>
-<para>The mounting angle of the Hall sensor, 60 degrees or 120 degrees, is an inherent property of the motor. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="97" column="19"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__mcl__common_1gaa1c8c368d71f93f073e05ed0e8dbaefa" prot="public" static="no">
-        <type>struct <ref refid="structhpm__motor__par" kindref="compound">hpm_motor_par</ref></type>
-        <definition>typedef struct hpm_motor_par hpm_motor_para_t</definition>
-        <argsstring></argsstring>
-        <name>hpm_motor_para_t</name>
-        <briefdescription>
-<para>Motor related structure definition. Parameters that need to be initialized follow this rule Naming rules: physical property description definition. Input (i)/output (o)_physical_volume_description_units_of_physical_volume. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="118" column="18"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__mcl__common_1gab5f6d4a851a3f0430db48f470eed5643" prot="public" static="no">
-        <type>struct <ref refid="structbldc__contrl__spd__par" kindref="compound">bldc_contrl_spd_par</ref></type>
-        <definition>typedef struct bldc_contrl_spd_par BLDC_CONTRL_SPD_PARA</definition>
-        <argsstring></argsstring>
-        <name>BLDC_CONTRL_SPD_PARA</name>
-        <briefdescription>
-<para>Speed calculation parameters. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="141" column="22"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__mcl__common_1gae35eea906b3329a7d0dd064ae3ab2434" prot="public" static="no">
-        <type>struct <ref refid="structbldc__contrl__pid__par" kindref="compound">bldc_contrl_pid_par</ref></type>
-        <definition>typedef struct bldc_contrl_pid_par BLDC_CONTRL_PID_PARA</definition>
-        <argsstring></argsstring>
-        <name>BLDC_CONTRL_PID_PARA</name>
-        <briefdescription>
-<para>pid control parameters </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="161" column="22"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__mcl__common_1gaf3faf168ae6560bf936d844c60287856" prot="public" static="no">
-        <type>struct <ref refid="structbldc__contrl__current__par" kindref="compound">bldc_contrl_current_par</ref></type>
-        <definition>typedef struct bldc_contrl_current_par BLDC_CONTROL_CURRENT_PARA</definition>
-        <argsstring></argsstring>
-        <name>BLDC_CONTROL_CURRENT_PARA</name>
-        <briefdescription>
-<para>Current sampling parameters. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="182" column="27"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__mcl__common_1gad44644e1b6851f2a8eace4e5af7b06f4" prot="public" static="no">
-        <type>struct <ref refid="structbldc__control__pwmout__par" kindref="compound">bldc_control_pwmout_par</ref></type>
-        <definition>typedef struct bldc_control_pwmout_par BLDC_CONTROL_PWMOUT_PARA</definition>
-        <argsstring></argsstring>
-        <name>BLDC_CONTROL_PWMOUT_PARA</name>
-        <briefdescription>
-<para>PWM output parameters. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="200" column="26"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__mcl__common_1ga7b6937e460cb215db88379af9d0adfcd" prot="public" static="no">
-        <type>struct <ref refid="structbldc__control__pwm__par" kindref="compound">bldc_control_pwm_par</ref></type>
-        <definition>typedef struct bldc_control_pwm_par BLDC_CONTROL_PWM_PARA</definition>
-        <argsstring></argsstring>
-        <name>BLDC_CONTROL_PWM_PARA</name>
-        <briefdescription>
-<para>svpwm parameters </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="215" column="23"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__mcl__common_1gab198118c3fc054f389038207d0711531" prot="public" static="no">
-        <type>struct <ref refid="structbldc__func__cal" kindref="compound">bldc_func_cal</ref></type>
-        <definition>typedef struct bldc_func_cal BLDC_FUNC_CAL</definition>
-        <argsstring></argsstring>
-        <name>BLDC_FUNC_CAL</name>
-        <briefdescription>
-<para>Location estimation function. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="226" column="15"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group__mcl__common_1ga3a102bd1f38d2949774b4acca548fd30" prot="public" static="no">
-        <type>struct <ref refid="structbldc__contrl__foc__par" kindref="compound">bldc_contrl_foc_par</ref></type>
-        <definition>typedef struct bldc_contrl_foc_par BLDC_CONTROL_FOC_PARA</definition>
-        <argsstring></argsstring>
-        <name>BLDC_CONTROL_FOC_PARA</name>
-        <briefdescription>
-<para>foc control </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="248" column="23"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__mcl__common_1ga21e6e0160fa2456207aacf377918d06e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void hpm_mcl_nullcallback_func</definition>
-        <argsstring>(void)</argsstring>
-        <name>hpm_mcl_nullcallback_func</name>
-        <param>
-          <type>void</type>
-        </param>
-        <briefdescription>
-<para>All function pointers defined in the middleware point to this function, and if the implementation of the function is not initialized to make the call, an error will be reported through this function. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="middleware/hpm_mcl/inc/hpm_bldc_define.h" line="87" column="13" bodyfile="middleware/hpm_mcl/sensor_control/hpm_foc.c" bodystart="13" bodyend="18" declfile="middleware/hpm_mcl/inc/hpm_bldc_define.h" declline="87" declcolumn="13"/>
-      </memberdef>
-      </sectiondef>
+    <sectiondef kind="define">
+      <member refid="group__mcl__common_1ga74e3356cce8ecb2affbbbb698aa0e706" kind="define"><name>BLDC_MOTOR_DIR_FORWARD</name></member>
+      <member refid="group__mcl__common_1ga36276255366ef4fc59e3b59ed7c42bce" kind="define"><name>BLDC_MOTOR_DIR_REVERSE</name></member>
+      <member refid="group__mcl__common_1gab12fb8c08d390ffbd730e223008496da" kind="define"><name>BLDC_PWM_PIN_UH</name></member>
+      <member refid="group__mcl__common_1gad572ced29310afbdacaa10d879d61581" kind="define"><name>BLDC_PWM_PIN_UL</name></member>
+      <member refid="group__mcl__common_1ga03f3375b0e9e67c6d792b0d52ac717c8" kind="define"><name>BLDC_PWM_PIN_VH</name></member>
+      <member refid="group__mcl__common_1ga8443c4a4b9072e491757d717db70d441" kind="define"><name>BLDC_PWM_PIN_VL</name></member>
+      <member refid="group__mcl__common_1ga9043934f79270dfdc64ff3933d2d00fc" kind="define"><name>BLDC_PWM_PIN_WH</name></member>
+      <member refid="group__mcl__common_1ga4bb6f70cc43317ab80416bc21d34ef46" kind="define"><name>BLDC_PWM_PIN_WL</name></member>
+      <member refid="group__mcl__common_1gaf7ce02b0ef85b438d594aaa5f43677bf" kind="define"><name>BLDC_MOTOR0_INDEX</name></member>
+      <member refid="group__mcl__common_1ga686883b7237a65bb652ea732bfb5eca3" kind="define"><name>BLDC_MOTOR1_INDEX</name></member>
+      <member refid="group__mcl__common_1ga749d5a13f3a29c67fadf880757e121d3" kind="define"><name>BLDC_MOTOR2_INDEX</name></member>
+      <member refid="group__mcl__common_1ga080f6bdd64d5aeb1ce61f19a037a89f5" kind="define"><name>BLDC_MOTOR3_INDEX</name></member>
+      <member refid="group__mcl__common_1ga2342fe69f85465d4bf5f72ab23bdcc09" kind="define"><name>ADCU_INDEX</name></member>
+      <member refid="group__mcl__common_1ga4ea5ec88384d0f5dfa38dcfa22be63b1" kind="define"><name>ADCV_INDEX</name></member>
+      <member refid="group__mcl__common_1gaa935ea9c9e3eb2f3f2804148bf925178" kind="define"><name>ADCW_INDEX</name></member>
+      <member refid="group__mcl__common_1gaa566c36fdb0109fd527f18961d9beaec" kind="define"><name>BLDC_PWM_U</name></member>
+      <member refid="group__mcl__common_1ga22d9ac516c715331989e1e98a8ccf44c" kind="define"><name>BLDC_PWM_V</name></member>
+      <member refid="group__mcl__common_1ga1702ab8f6c2af9af9a328e0d1b495b02" kind="define"><name>BLDC_PWM_W</name></member>
+      <member refid="group__mcl__common_1ga4dbc88884f4c73ceb732caefc74953b0" kind="define"><name>GET_ADC_12BIT_VALID_DATA</name></member>
+      <member refid="group__mcl__common_1ga1ef1caa7d730bc3026a05945d46922bc" kind="define"><name>BLDC_MOTOR_PARA_DEFAULTS</name></member>
+      <member refid="group__mcl__common_1gae913fa1e840cd4a97d699d046c19caf3" kind="define"><name>BLDC_CONTRL_SPD_PARA_DEFAULTS</name></member>
+      <member refid="group__mcl__common_1gab8911ba2cdd1013021b7fa4ad9d6b8b7" kind="define"><name>BLDC_CONTRL_PID_PARA_DEFAULTS</name></member>
+      <member refid="group__mcl__common_1gaa35cc8ce5ef4e4a07a21fde4395cf3ce" kind="define"><name>BLDC_CONTROL_CURRENT_PARA_DEFAULTS</name></member>
+      <member refid="group__mcl__common_1ga093cab0d646a06e7d696d31dea1632c1" kind="define"><name>BLDC_CONTROL_PWMOUT_PARA_DEFAULTS</name></member>
+      <member refid="group__mcl__common_1ga8b7cbf902d89c099f21f4b79949ef0a6" kind="define"><name>BLDC_CONTROL_PWM_PARA_DEFAULTS</name></member>
+      <member refid="group__mcl__common_1gafb1cfbd37d2bf544220ed424d46fe24f" kind="define"><name>BLDC_FUNC_CAL_DEFAULTS</name></member>
+      <member refid="group__mcl__common_1ga06a637ae074f69bc88e68b3fc9d15587" kind="define"><name>BLDC_CONTROL_FOC_PARA_DEFAULTS</name></member>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <member refid="group__mcl__common_1ga2268a36fa22f30afe732834b5a6b67fe" kind="enum"><name>bldc_hall_phase</name></member>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <member refid="group__mcl__common_1ga60276dc50b07d092a17dc8304a58da68" kind="typedef"><name>bldc_hall_phase_t</name></member>
+      <member refid="group__mcl__common_1gaa1c8c368d71f93f073e05ed0e8dbaefa" kind="typedef"><name>hpm_motor_para_t</name></member>
+      <member refid="group__mcl__common_1gab5f6d4a851a3f0430db48f470eed5643" kind="typedef"><name>BLDC_CONTRL_SPD_PARA</name></member>
+      <member refid="group__mcl__common_1gae35eea906b3329a7d0dd064ae3ab2434" kind="typedef"><name>BLDC_CONTRL_PID_PARA</name></member>
+      <member refid="group__mcl__common_1gaf3faf168ae6560bf936d844c60287856" kind="typedef"><name>BLDC_CONTROL_CURRENT_PARA</name></member>
+      <member refid="group__mcl__common_1gad44644e1b6851f2a8eace4e5af7b06f4" kind="typedef"><name>BLDC_CONTROL_PWMOUT_PARA</name></member>
+      <member refid="group__mcl__common_1ga7b6937e460cb215db88379af9d0adfcd" kind="typedef"><name>BLDC_CONTROL_PWM_PARA</name></member>
+      <member refid="group__mcl__common_1gab198118c3fc054f389038207d0711531" kind="typedef"><name>BLDC_FUNC_CAL</name></member>
+      <member refid="group__mcl__common_1ga3a102bd1f38d2949774b4acca548fd30" kind="typedef"><name>BLDC_CONTROL_FOC_PARA</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__mcl__common_1ga21e6e0160fa2456207aacf377918d06e" kind="function"><name>hpm_mcl_nullcallback_func</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -602,7 +148,7 @@
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>CONFIG_BLDC_HAS_EXTRA_CONFIG</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__motor__math_8h" kindref="compound">hpm_motor_math.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__motor__math_8h" kindref="compound">hpm_motor_math.h</ref>&quot;</highlight></codeline>
 <codeline lineno="36" refid="group__mcl__common_1ga74e3356cce8ecb2affbbbb698aa0e706" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLDC_MOTOR_DIR_FORWARD<sp/>0</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37" refid="group__mcl__common_1ga36276255366ef4fc59e3b59ed7c42bce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLDC_MOTOR_DIR_REVERSE<sp/>1</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
@@ -715,7 +261,7 @@
 <codeline lineno="200" refid="group__mcl__common_1gad44644e1b6851f2a8eace4e5af7b06f4" refkind="member"><highlight class="normal">}<sp/><ref refid="group__mcl__common_1gad44644e1b6851f2a8eace4e5af7b06f4" kindref="member">BLDC_CONTROL_PWMOUT_PARA</ref>;</highlight></codeline>
 <codeline lineno="201" refid="group__mcl__common_1ga093cab0d646a06e7d696d31dea1632c1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLDC_CONTROL_PWMOUT_PARA_DEFAULTS<sp/>{0,<sp/>0,<sp/>0,\</highlight></codeline>
 <codeline lineno="202"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>0,\</highlight></codeline>
-<codeline lineno="203"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL}</highlight></codeline>
 <codeline lineno="208" refid="structbldc__control__pwm__par" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbldc__control__pwm__par" kindref="compound">bldc_control_pwm_par</ref><sp/>{</highlight></codeline>
 <codeline lineno="209" refid="structbldc__control__pwm__par_1a9f5cf5d16aeeb1b0eb2845d9674752b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__mcl__math__interface_1ga54bf15eb67d9e80e4e6749bf0a23efba" kindref="member">HPM_MOTOR_MATH_TYPE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structbldc__control__pwm__par_1a9f5cf5d16aeeb1b0eb2845d9674752b3" kindref="member">target_alpha</ref>;<sp/></highlight></codeline>
 <codeline lineno="210" refid="structbldc__control__pwm__par_1a50c12fc435102af8e4309f198372274e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__mcl__math__interface_1ga54bf15eb67d9e80e4e6749bf0a23efba" kindref="member">HPM_MOTOR_MATH_TYPE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structbldc__control__pwm__par_1a50c12fc435102af8e4309f198372274e" kindref="member">target_beta</ref>;<sp/><sp/></highlight></codeline>
@@ -726,7 +272,7 @@
 <codeline lineno="215" refid="group__mcl__common_1ga7b6937e460cb215db88379af9d0adfcd" refkind="member"><highlight class="normal">}<sp/><ref refid="group__mcl__common_1ga7b6937e460cb215db88379af9d0adfcd" kindref="member">BLDC_CONTROL_PWM_PARA</ref>;</highlight></codeline>
 <codeline lineno="216" refid="group__mcl__common_1ga8b7cbf902d89c099f21f4b79949ef0a6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLDC_CONTROL_PWM_PARA_DEFAULTS<sp/>{0,<sp/>0,<sp/>0,<sp/>0,\</highlight></codeline>
 <codeline lineno="217"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BLDC_CONTROL_PWMOUT_PARA_DEFAULTS,\</highlight></codeline>
-<codeline lineno="218"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL}</highlight></codeline>
 <codeline lineno="223" refid="structbldc__func__cal" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbldc__func__cal" kindref="compound">bldc_func_cal</ref><sp/>{</highlight></codeline>
 <codeline lineno="224" refid="structbldc__func__cal_1a1f67b5bb1437b8e51ebb0bba9cada3ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structbldc__func__cal_1a1f67b5bb1437b8e51ebb0bba9cada3ad" kindref="member">par</ref>;</highlight></codeline>
 <codeline lineno="225" refid="structbldc__func__cal_1a3928f07a62774633af56446c4d6029f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structbldc__func__cal_1a3928f07a62774633af56446c4d6029f5" kindref="member">func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*str);</highlight></codeline>

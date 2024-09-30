@@ -3,6 +3,7 @@ var structFEMC__Type =
     [ "BMW0", "structFEMC__Type.html#a0d1f719b680aa3f63956f4f175952882", null ],
     [ "BMW1", "structFEMC__Type.html#a83e0d9db6244b653e6e4961d2b1a31cf", null ],
     [ "BR", "structFEMC__Type.html#a0f291f698a6d10a31d7a5c74e38ec253", null ],
+    [ "BR2", "structFEMC__Type.html#aaa9eca810ea31ce582bed8c955496ca0", null ],
     [ "BYTEMSK", "structFEMC__Type.html#a13e9231d448da19d2831134f01ca78e8", null ],
     [ "CTRL", "structFEMC__Type.html#aa7b7f6ac8bffdba8d1b5231886d28dca", null ],
     [ "DATSZ", "structFEMC__Type.html#a1cc12aad898c264e59f0b129b8f5674c", null ],
@@ -19,6 +20,8 @@ var structFEMC__Type =
     [ "RESERVED3", "structFEMC__Type.html#afd92f332091e0983e2fedd60bb37edfa", null ],
     [ "RESERVED4", "structFEMC__Type.html#a5a7f21127746a22d5e2da8e51c073c29", null ],
     [ "RESERVED5", "structFEMC__Type.html#a4b95719863a2ba83868a5e047a56f15b", null ],
+    [ "RESERVED6", "structFEMC__Type.html#a991bcfd0c30ff9d939e1197064f8a790", null ],
+    [ "RESERVED7", "structFEMC__Type.html#ae6a36c0bbf2bcd3005bb6e8f6e63fd61", null ],
     [ "SADDR", "structFEMC__Type.html#aaf1c1292cea7e63cef5633901652edf4", null ],
     [ "SDRCTRL0", "structFEMC__Type.html#ad9f11b220fc5549e92bfbb004dd67ea5", null ],
     [ "SDRCTRL1", "structFEMC__Type.html#a5250134b52b47657b6da159e8e7a8f64", null ],
@@ -26,5 +29,7 @@ var structFEMC__Type =
     [ "SDRCTRL3", "structFEMC__Type.html#a0aa560c21cc78917e37040f352d7bf9a", null ],
     [ "SRCTRL0", "structFEMC__Type.html#a2d053c42830e11309897fba9bf3d3e8b", null ],
     [ "SRCTRL1", "structFEMC__Type.html#a88edb9427aab6e1ecba258eeae9a3ea7", null ],
+    [ "SRCTRL2", "structFEMC__Type.html#ab1316eda12eedaeca408ac8d24315492", null ],
+    [ "SRCTRL3", "structFEMC__Type.html#a16b453aa9abbc3a1b5eecdc7ed7ae163", null ],
     [ "STAT0", "structFEMC__Type.html#a8c0cbaf5d8d34ec16809b59babfda547", null ]
 ];

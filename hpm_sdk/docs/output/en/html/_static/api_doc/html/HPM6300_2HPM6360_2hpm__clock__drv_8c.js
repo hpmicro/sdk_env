@@ -48,6 +48,5 @@ var HPM6300_2HPM6360_2hpm__clock__drv_8c =
     [ "hpm_core_clock", "group__clock__interface.html#ga9aabaef387a98b4bd50c844e6bc8f433", null ],
     [ "s_adc_clk_mux_node", "HPM6300_2HPM6360_2hpm__clock__drv_8c.html#af71adec0757da829362b1e8bc3bb3182", null ],
     [ "s_dac_clk_mux_node", "HPM6300_2HPM6360_2hpm__clock__drv_8c.html#af89c3631cc5d7204a805433e8ea75aa5", null ],
-    [ "s_i2s_clk_mux_node", "HPM6300_2HPM6360_2hpm__clock__drv_8c.html#ab24f81a89503cb1722e3c0dddd8ae4e2", null ],
     [ "s_wdgs", "HPM6300_2HPM6360_2hpm__clock__drv_8c.html#a382e646745e13c2b0e08edea4258f0c5", null ]
 ];

@@ -18,6 +18,7 @@ var dir_9babc78f48844cf6bdf653466a1f6dcb =
     [ "hpm_misc.h", "HPM6200_2HPM6280_2hpm__misc_8h.html", "HPM6200_2HPM6280_2hpm__misc_8h" ],
     [ "hpm_otp_drv.c", "HPM6200_2HPM6280_2hpm__otp__drv_8c.html", "HPM6200_2HPM6280_2hpm__otp__drv_8c" ],
     [ "hpm_otp_drv.h", "HPM6200_2HPM6280_2hpm__otp__drv_8h.html", "HPM6200_2HPM6280_2hpm__otp__drv_8h" ],
+    [ "hpm_otp_table.h", "HPM6200_2HPM6280_2hpm__otp__table_8h.html", "HPM6200_2HPM6280_2hpm__otp__table_8h" ],
     [ "hpm_pcfg_drv.h", "HPM6200_2HPM6280_2hpm__pcfg__drv_8h.html", "HPM6200_2HPM6280_2hpm__pcfg__drv_8h" ],
     [ "hpm_plic_drv.h", "HPM6200_2HPM6280_2hpm__plic__drv_8h.html", "HPM6200_2HPM6280_2hpm__plic__drv_8h" ],
     [ "hpm_pmic_iomux.h", "HPM6200_2HPM6280_2hpm__pmic__iomux_8h.html", "HPM6200_2HPM6280_2hpm__pmic__iomux_8h" ],

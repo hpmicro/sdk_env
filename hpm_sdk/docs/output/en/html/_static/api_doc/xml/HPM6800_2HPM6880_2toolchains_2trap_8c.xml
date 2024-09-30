@@ -1,13 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="HPM6800_2HPM6880_2toolchains_2trap_8c" kind="file" language="C++">
     <compoundname>trap.c</compoundname>
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
     <includes local="yes">hpm_soc.h</includes>
     <incdepgraph>
-      <node id="4">
-        <label>stdbool.h</label>
-      </node>
       <node id="2">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -22,8 +19,22 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
+      <node id="1">
+        <label>soc/HPM6800/HPM6880/toolchains/trap.c</label>
+        <link refid="HPM6800_2HPM6880_2toolchains_2trap_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
       <node id="3">
         <label>assert.h</label>
+      </node>
+      <node id="8">
+        <label>hpm_soc.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
       </node>
       <node id="5">
         <label>stdint.h</label>
@@ -34,19 +45,8 @@
       <node id="6">
         <label>string.h</label>
       </node>
-      <node id="8">
-        <label>hpm_soc.h</label>
-      </node>
-      <node id="1">
-        <label>soc/HPM6800/HPM6880/toolchains/trap.c</label>
-        <link refid="HPM6800_2HPM6880_2toolchains_2trap_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="HPM6800_2HPM6880_2toolchains_2trap_8c_1a31268d2ea419bc1ab786e67381a48f31" prot="public" static="no">
         <name>MCAUSE_INSTR_ADDR_MISALIGNED</name>
         <initializer>(0U)       /* !&lt; Instruction Address misaligned */</initializer>
@@ -331,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM6800/HPM6880/toolchains/trap.c" line="114" column="9" bodyfile="soc/HPM6800/HPM6880/toolchains/trap.c" bodystart="211" bodyend="-1"/>
+        <location file="soc/HPM6800/HPM6880/toolchains/trap.c" line="114" column="9" bodyfile="soc/HPM6800/HPM6880/toolchains/trap.c" bodystart="114" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM6800_2HPM6880_2toolchains_2trap_8c_1ac25158181a5fb29002fc9ccf0d24f3b4" prot="public" static="no">
         <name>IRQ_HANDLER_TRAP_AS_ISR</name>
@@ -342,10 +342,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM6800/HPM6880/toolchains/trap.c" line="211" column="9" bodyfile="soc/HPM6800/HPM6880/toolchains/trap.c" bodystart="211" bodyend="-1"/>
+        <location file="soc/HPM6800/HPM6880/toolchains/trap.c" line="211" column="9" bodyfile="soc/HPM6800/HPM6880/toolchains/trap.c" bodystart="114" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="HPM6800_2HPM6880_2toolchains_2trap_8c_1afde0fac1dd8856ba6f54fefa980d8717" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>HPM_ATTR_MACHINE_INTERRUPT void</type>
         <definition>HPM_ATTR_MACHINE_INTERRUPT void irq_handler_trap</definition>
@@ -378,7 +378,7 @@
         </inbodydescription>
         <location file="soc/HPM6800/HPM6880/toolchains/trap.c" line="220" column="6" bodyfile="soc/HPM6800/HPM6880/toolchains/trap.c" bodystart="220" bodyend="282" declfile="soc/HPM6800/HPM6880/toolchains/trap.c" declline="210" declcolumn="36"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -446,33 +446,33 @@
 <codeline lineno="60"><highlight class="normal">__attribute__((weak))<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>exception_handler(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>cause,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>epc)</highlight></codeline>
 <codeline lineno="61"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(cause)<sp/>{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a31268d2ea419bc1ab786e67381a48f31" kindref="member">MCAUSE_INSTR_ADDR_MISALIGNED</ref>:</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1a31268d2ea419bc1ab786e67381a48f31" kindref="member">MCAUSE_INSTR_ADDR_MISALIGNED</ref>:</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1ac7389aace7d3324bb4dfeae91a0a2a98" kindref="member">MCAUSE_INSTR_ACCESS_FAULT</ref>:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1ac7389aace7d3324bb4dfeae91a0a2a98" kindref="member">MCAUSE_INSTR_ACCESS_FAULT</ref>:</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1aee4f06457dd10ec7d72180201bae6155" kindref="member">MCAUSE_ILLEGAL_INSTR</ref>:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1aee4f06457dd10ec7d72180201bae6155" kindref="member">MCAUSE_ILLEGAL_INSTR</ref>:</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a0c4c8a0336541aac8f2cebe0875a6dfd" kindref="member">MCAUSE_BREAKPOINT</ref>:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1a0c4c8a0336541aac8f2cebe0875a6dfd" kindref="member">MCAUSE_BREAKPOINT</ref>:</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a365a1ae9fd4c92e6a28165b6ad685594" kindref="member">MCAUSE_LOAD_ADDR_MISALIGNED</ref>:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1a365a1ae9fd4c92e6a28165b6ad685594" kindref="member">MCAUSE_LOAD_ADDR_MISALIGNED</ref>:</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1afa50235b0119b0fd02b6bbc44484d5de" kindref="member">MCAUSE_LOAD_ACCESS_FAULT</ref>:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1afa50235b0119b0fd02b6bbc44484d5de" kindref="member">MCAUSE_LOAD_ACCESS_FAULT</ref>:</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a1b0ad033cf8abfa07e78c9fbdca21cb6" kindref="member">MCAUSE_STORE_AMO_ADDR_MISALIGNED</ref>:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1a1b0ad033cf8abfa07e78c9fbdca21cb6" kindref="member">MCAUSE_STORE_AMO_ADDR_MISALIGNED</ref>:</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1ac4c344874c1b180fb2ab52f2c37716c8" kindref="member">MCAUSE_STORE_AMO_ACCESS_FAULT</ref>:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1ac4c344874c1b180fb2ab52f2c37716c8" kindref="member">MCAUSE_STORE_AMO_ACCESS_FAULT</ref>:</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a5d9191113a364f2b5a9d6b4f66ae2353" kindref="member">MCAUSE_ECALL_FROM_USER_MODE</ref>:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1a5d9191113a364f2b5a9d6b4f66ae2353" kindref="member">MCAUSE_ECALL_FROM_USER_MODE</ref>:</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a3a092a6366a23e818eee83852ae63d70" kindref="member">MCAUSE_ECALL_FROM_SUPERVISOR_MODE</ref>:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1a3a092a6366a23e818eee83852ae63d70" kindref="member">MCAUSE_ECALL_FROM_SUPERVISOR_MODE</ref>:</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a53f5e785feb7cee4d1f560dc2add8c1c" kindref="member">MCAUSE_ECALL_FROM_MACHINE_MODE</ref>:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1a53f5e785feb7cee4d1f560dc2add8c1c" kindref="member">MCAUSE_ECALL_FROM_MACHINE_MODE</ref>:</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a8a14366a67468e6c80c107a473245e81" kindref="member">MCAUSE_INSTR_PAGE_FAULT</ref>:</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1a8a14366a67468e6c80c107a473245e81" kindref="member">MCAUSE_INSTR_PAGE_FAULT</ref>:</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a9427f269a0414a13ad0f97be78be9eea" kindref="member">MCAUSE_LOAD_PAGE_FAULT</ref>:</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1a9427f269a0414a13ad0f97be78be9eea" kindref="member">MCAUSE_LOAD_PAGE_FAULT</ref>:</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a7022584a7f4fd0ee9f47ac050784c127" kindref="member">MCAUSE_STORE_AMO_PAGE_FAULT</ref>:</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1a7022584a7f4fd0ee9f47ac050784c127" kindref="member">MCAUSE_STORE_AMO_PAGE_FAULT</ref>:</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
@@ -529,12 +529,12 @@
 <codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="144"><highlight class="normal"></highlight></codeline>
 <codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Do<sp/>your<sp/>trap<sp/>handling<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1af3a0fcd1fc939e95bf9b78a66b3f542b" kindref="member">CSR_MCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1ad1c13ea36285f8d6fc501608e2b38a07" kindref="member">CSR_MCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1aa5b87ef0a6024ad69009faff8fd6a9d5" kindref="member">IRQ_M_TIMER</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1af3a0fcd1fc939e95bf9b78a66b3f542b" kindref="member">CSR_MCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1ad1c13ea36285f8d6fc501608e2b38a07" kindref="member">CSR_MCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1aa5b87ef0a6024ad69009faff8fd6a9d5" kindref="member">IRQ_M_TIMER</ref>))<sp/>{</highlight></codeline>
 <codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Machine<sp/>timer<sp/>interrupt<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mchtmr_isr();</highlight></codeline>
 <codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>USE_NONVECTOR_MODE</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1af3a0fcd1fc939e95bf9b78a66b3f542b" kindref="member">CSR_MCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1ad1c13ea36285f8d6fc501608e2b38a07" kindref="member">CSR_MCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a43fba639eb8d7ee37648cc0af12cf59b" kindref="member">IRQ_M_EXT</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1af3a0fcd1fc939e95bf9b78a66b3f542b" kindref="member">CSR_MCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1ad1c13ea36285f8d6fc501608e2b38a07" kindref="member">CSR_MCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1a43fba639eb8d7ee37648cc0af12cf59b" kindref="member">IRQ_M_EXT</ref>))<sp/>{</highlight></codeline>
 <codeline lineno="152"><highlight class="normal"></highlight></codeline>
 <codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void(*isr_func_t)(void);</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"></highlight></codeline>
@@ -552,12 +552,12 @@
 <codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="168"><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1af3a0fcd1fc939e95bf9b78a66b3f542b" kindref="member">CSR_MCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1ad1c13ea36285f8d6fc501608e2b38a07" kindref="member">CSR_MCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a02e2db32b33eb8cf23622150ac372200" kindref="member">IRQ_M_SOFT</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1af3a0fcd1fc939e95bf9b78a66b3f542b" kindref="member">CSR_MCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1ad1c13ea36285f8d6fc501608e2b38a07" kindref="member">CSR_MCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1a02e2db32b33eb8cf23622150ac372200" kindref="member">IRQ_M_SOFT</ref>))<sp/>{</highlight></codeline>
 <codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Machine<sp/>SWI<sp/>interrupt<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__irq__interface_1gae1bd7b85a69b5e1d9851380706548215" kindref="member">intc_m_claim_swi</ref>();</highlight></codeline>
 <codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swi_isr();</highlight></codeline>
 <codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__irq__interface_1gaad4ba35a0915ea4d397b1ee1c84fa2a4" kindref="member">intc_m_complete_swi</ref>();</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1af3a0fcd1fc939e95bf9b78a66b3f542b" kindref="member">CSR_MCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1ad1c13ea36285f8d6fc501608e2b38a07" kindref="member">CSR_MCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a53f5e785feb7cee4d1f560dc2add8c1c" kindref="member">MCAUSE_ECALL_FROM_MACHINE_MODE</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1af3a0fcd1fc939e95bf9b78a66b3f542b" kindref="member">CSR_MCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((mcause<sp/>&amp;<sp/><ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1ad1c13ea36285f8d6fc501608e2b38a07" kindref="member">CSR_MCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1a53f5e785feb7cee4d1f560dc2add8c1c" kindref="member">MCAUSE_ECALL_FROM_MACHINE_MODE</ref>))<sp/>{</highlight></codeline>
 <codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Machine<sp/>Syscal<sp/>call<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__asm<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight></codeline>
 <codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;mv<sp/>a4,<sp/>a3\n&quot;</highlight><highlight class="normal"></highlight></codeline>
@@ -578,13 +578,13 @@
 <codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="193"><highlight class="normal"></highlight></codeline>
 <codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Restore<sp/>CSR<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__l1cache__interface_1ga9332ab725904ed8c02f7002ffc5764f8" kindref="member">write_csr</ref>(<ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1a7086e667c65affe87d2c32115193d736" kindref="member">CSR_MSTATUS</ref>,<sp/>mstatus);</highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__l1cache__interface_1ga9332ab725904ed8c02f7002ffc5764f8" kindref="member">write_csr</ref>(<ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1a53d62065ed74fd3583cca895e6157c5f" kindref="member">CSR_MEPC</ref>,<sp/>mepc);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="riscv__core_8h_1a1c9c31d1835837140288aef5c00b0ece" kindref="member">write_csr</ref>(<ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1a7086e667c65affe87d2c32115193d736" kindref="member">CSR_MSTATUS</ref>,<sp/>mstatus);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="riscv__core_8h_1a1c9c31d1835837140288aef5c00b0ece" kindref="member">write_csr</ref>(<ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1a53d62065ed74fd3583cca895e6157c5f" kindref="member">CSR_MEPC</ref>,<sp/>mepc);</highlight></codeline>
 <codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(SUPPORT_PFT_ARCH)<sp/>&amp;&amp;<sp/>SUPPORT_PFT_ARCH</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__l1cache__interface_1ga9332ab725904ed8c02f7002ffc5764f8" kindref="member">write_csr</ref>(<ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1af2e2a4b14e7cfa1affdf22f483766c9a" kindref="member">CSR_MXSTATUS</ref>,<sp/>mxstatus);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="riscv__core_8h_1a1c9c31d1835837140288aef5c00b0ece" kindref="member">write_csr</ref>(<ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1af2e2a4b14e7cfa1affdf22f483766c9a" kindref="member">CSR_MXSTATUS</ref>,<sp/>mxstatus);</highlight></codeline>
 <codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__riscv_dsp</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__l1cache__interface_1ga9332ab725904ed8c02f7002ffc5764f8" kindref="member">write_csr</ref>(<ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1ae76e6d643aed4d6ea0b986dc7e0c7171" kindref="member">CSR_UCODE</ref>,<sp/>ucode);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="riscv__core_8h_1a1c9c31d1835837140288aef5c00b0ece" kindref="member">write_csr</ref>(<ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h_1ae76e6d643aed4d6ea0b986dc7e0c7171" kindref="member">CSR_UCODE</ref>,<sp/>ucode);</highlight></codeline>
 <codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__riscv_flen</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="riscv__core_8h_1a76dddb517ff7c7f742e42eeaa2f173d6" kindref="member">write_fcsr</ref>(fcsr);</highlight></codeline>
@@ -617,12 +617,12 @@
 <codeline lineno="231"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="232"><highlight class="normal"></highlight></codeline>
 <codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Do<sp/>your<sp/>trap<sp/>handling<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a5abfa8f97fb4b3b920d3a16364464138" kindref="member">CSR_SCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a10e36ed4ff3bc0b33b5bbe4f341bfd91" kindref="member">CSR_SCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1ac7acfa6b0f632b9cd762a0e0abd1df08" kindref="member">IRQ_S_TIMER</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a5abfa8f97fb4b3b920d3a16364464138" kindref="member">CSR_SCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a10e36ed4ff3bc0b33b5bbe4f341bfd91" kindref="member">CSR_SCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM6200_2HPM6280_2toolchains_2trap_8c_1ac7acfa6b0f632b9cd762a0e0abd1df08" kindref="member">IRQ_S_TIMER</ref>))<sp/>{</highlight></codeline>
 <codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Machine<sp/>timer<sp/>interrupt<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mchtmr_s_isr();</highlight></codeline>
 <codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="238"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>USE_NONVECTOR_MODE</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a5abfa8f97fb4b3b920d3a16364464138" kindref="member">CSR_SCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a10e36ed4ff3bc0b33b5bbe4f341bfd91" kindref="member">CSR_SCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1aedc582eeff2cc10dcb000c5f08dda3c3" kindref="member">IRQ_S_EXT</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a5abfa8f97fb4b3b920d3a16364464138" kindref="member">CSR_SCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a10e36ed4ff3bc0b33b5bbe4f341bfd91" kindref="member">CSR_SCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM6200_2HPM6280_2toolchains_2trap_8c_1aedc582eeff2cc10dcb000c5f08dda3c3" kindref="member">IRQ_S_EXT</ref>))<sp/>{</highlight></codeline>
 <codeline lineno="240"><highlight class="normal"></highlight></codeline>
 <codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void(*isr_func_t)(void);</highlight></codeline>
 <codeline lineno="242"><highlight class="normal"></highlight></codeline>
@@ -637,12 +637,12 @@
 <codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="252"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="253"><highlight class="normal"></highlight></codeline>
-<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a5abfa8f97fb4b3b920d3a16364464138" kindref="member">CSR_SCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a10e36ed4ff3bc0b33b5bbe4f341bfd91" kindref="member">CSR_SCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a1f426d6231a15fe1801b3206c712cf76" kindref="member">IRQ_S_SOFT</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a5abfa8f97fb4b3b920d3a16364464138" kindref="member">CSR_SCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a10e36ed4ff3bc0b33b5bbe4f341bfd91" kindref="member">CSR_SCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM6200_2HPM6280_2toolchains_2trap_8c_1a1f426d6231a15fe1801b3206c712cf76" kindref="member">IRQ_S_SOFT</ref>))<sp/>{</highlight></codeline>
 <codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Machine<sp/>SWI<sp/>interrupt<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__irq__interface_1gae1bd7b85a69b5e1d9851380706548215" kindref="member">intc_m_claim_swi</ref>();</highlight></codeline>
 <codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swi_s_isr();</highlight></codeline>
 <codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__irq__interface_1ga1835548953c50f4bd56fe382ae90392d" kindref="member">intc_s_complete_swi</ref>();</highlight></codeline>
-<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a5abfa8f97fb4b3b920d3a16364464138" kindref="member">CSR_SCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a10e36ed4ff3bc0b33b5bbe4f341bfd91" kindref="member">CSR_SCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM6800_2HPM6880_2toolchains_2trap_8c_1a3a092a6366a23e818eee83852ae63d70" kindref="member">MCAUSE_ECALL_FROM_SUPERVISOR_MODE</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a5abfa8f97fb4b3b920d3a16364464138" kindref="member">CSR_SCAUSE_INTERRUPT_MASK</ref>)<sp/>&amp;&amp;<sp/>((scause<sp/>&amp;<sp/><ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a10e36ed4ff3bc0b33b5bbe4f341bfd91" kindref="member">CSR_SCAUSE_EXCEPTION_CODE_MASK</ref>)<sp/>==<sp/><ref refid="HPM5300_2HPM5301_2toolchains_2trap_8c_1a3a092a6366a23e818eee83852ae63d70" kindref="member">MCAUSE_ECALL_FROM_SUPERVISOR_MODE</ref>))<sp/>{</highlight></codeline>
 <codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Machine<sp/>Syscal<sp/>call<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__asm<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight></codeline>
 <codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;mv<sp/>a4,<sp/>a3\n&quot;</highlight><highlight class="normal"></highlight></codeline>
@@ -663,8 +663,8 @@
 <codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="278"><highlight class="normal"></highlight></codeline>
 <codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Restore<sp/>CSR<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__l1cache__interface_1ga9332ab725904ed8c02f7002ffc5764f8" kindref="member">write_csr</ref>(<ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a651e65251cc54d4a553702e4cf061ca7" kindref="member">CSR_SSTATUS</ref>,<sp/>sstatus);</highlight></codeline>
-<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__l1cache__interface_1ga9332ab725904ed8c02f7002ffc5764f8" kindref="member">write_csr</ref>(<ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a3981cba40ee737a2f7cf4228b2bdbb67" kindref="member">CSR_SEPC</ref>,<sp/>sepc);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="riscv__core_8h_1a1c9c31d1835837140288aef5c00b0ece" kindref="member">write_csr</ref>(<ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a651e65251cc54d4a553702e4cf061ca7" kindref="member">CSR_SSTATUS</ref>,<sp/>sstatus);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="riscv__core_8h_1a1c9c31d1835837140288aef5c00b0ece" kindref="member">write_csr</ref>(<ref refid="HPM6200_2HPM6220_2hpm__csr__regs_8h_1a3981cba40ee737a2f7cf4228b2bdbb67" kindref="member">CSR_SEPC</ref>,<sp/>sepc);</highlight></codeline>
 <codeline lineno="282"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="soc/HPM6800/HPM6880/toolchains/trap.c"/>

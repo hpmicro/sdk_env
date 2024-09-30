@@ -46,7 +46,8 @@ var group__spi__interface =
     [ "spi_control_config_t", "structspi__control__config__t.html", [
       [ "common_config", "structspi__control__config__t.html#ad808dc64b56fca1e62005aaaf8618b70", null ],
       [ "master_config", "structspi__control__config__t.html#a96cd87a49bfc5810ea771c8fbb310cde", null ],
-      [ "slave_config", "structspi__control__config__t.html#a74fadddc760f616fbfad225fbfc4dbc5", null ]
+      [ "slave_config", "structspi__control__config__t.html#a74fadddc760f616fbfad225fbfc4dbc5", null ],
+      [ "status_spi_master_busy", "group__spi__interface.html#gga07422cff4c3dd5075f91f87bd0e57ee7a2d497018c6ac935d124ce6c3a3eb4ec0", null ]
     ] ],
     [ "spi_addr_phase_format_t", "group__spi__interface.html#ga005ab1f2922a495cd72705c4f97806ef", [
       [ "spi_address_phase_format_single_io_mode", "group__spi__interface.html#gga005ab1f2922a495cd72705c4f97806efa190261bcad9b03c22a05c9d44ed4225b", null ],

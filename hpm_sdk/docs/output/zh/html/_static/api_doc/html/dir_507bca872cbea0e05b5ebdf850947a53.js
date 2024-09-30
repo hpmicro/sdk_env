@@ -37,6 +37,7 @@ var dir_507bca872cbea0e05b5ebdf850947a53 =
     [ "hpm_mipi_dsi_phy_drv.c", "hpm__mipi__dsi__phy__drv_8c.html", "hpm__mipi__dsi__phy__drv_8c" ],
     [ "hpm_mmc_drv.c", "hpm__mmc__drv_8c.html", "hpm__mmc__drv_8c" ],
     [ "hpm_mtg_drv.c", "hpm__mtg__drv_8c.html", "hpm__mtg__drv_8c" ],
+    [ "hpm_mtgv2_drv.c", "hpm__mtgv2__drv_8c.html", "hpm__mtgv2__drv_8c" ],
     [ "hpm_opamp_drv.c", "hpm__opamp__drv_8c.html", "hpm__opamp__drv_8c" ],
     [ "hpm_pcfg_drv.c", "hpm__pcfg__drv_8c.html", "hpm__pcfg__drv_8c" ],
     [ "hpm_pdm_drv.c", "hpm__pdm__drv_8c.html", "hpm__pdm__drv_8c" ],

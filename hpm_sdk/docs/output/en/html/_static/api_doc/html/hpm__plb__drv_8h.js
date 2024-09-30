@@ -69,8 +69,11 @@ var hpm__plb__drv_8h =
     ] ],
     [ "plb_type_a_inject_by_sw", "group__plb__interface.html#ga26564b81827cb54b7ff0700291b5d188", null ],
     [ "plb_type_a_set_lut", "group__plb__interface.html#ga3e797b9f47b01ca234d8efaf86390d6b", null ],
+    [ "plb_type_b_get_counter", "group__plb__interface.html#ga0b6bafba828c422898bb2d9c7264cf83", null ],
     [ "plb_type_b_inject_by_sw", "group__plb__interface.html#gaec4852f8ebfaf4027203906a94bf4a59", null ],
+    [ "plb_type_b_set_all_slice", "group__plb__interface.html#gaef0c0bcdd9e1ab9c6df3e813294131d7", null ],
     [ "plb_type_b_set_cmp_mode", "group__plb__interface.html#gad50c123867091c92e40604991d06ddd5", null ],
     [ "plb_type_b_set_cmp_val", "group__plb__interface.html#ga4f27f5fd15f78d6751875ab9d9f8c122", null ],
-    [ "plb_type_b_set_lut", "group__plb__interface.html#gacc22a0097fc83cec521c16f7c94aacaf", null ]
+    [ "plb_type_b_set_lut", "group__plb__interface.html#gacc22a0097fc83cec521c16f7c94aacaf", null ],
+    [ "plb_type_b_set_lut_range_mask", "group__plb__interface.html#ga355ec546402821e0f7a7131539ea2352", null ]
 ];

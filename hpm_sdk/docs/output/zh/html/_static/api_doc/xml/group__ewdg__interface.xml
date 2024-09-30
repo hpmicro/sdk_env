@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="group__ewdg__interface" kind="group">
     <compoundname>ewdg_interface</compoundname>
     <title>EWDG driver APIs</title>
@@ -10,13 +10,13 @@
     <innergroup refid="group__ewdg__password__def">EWDG Password definitions</innergroup>
     <innergroup refid="group__ewdg__interrupt">EWDG interrupt definitions</innergroup>
     <innergroup refid="group__ewdg__reset__source">EWDG reset source definitions</innergroup>
-      <sectiondef kind="enum">
+    <sectiondef kind="enum">
       <memberdef kind="enum" id="group__ewdg__interface_1ga531c35e38ede3ea4e5ba5afb24b29493" prot="public" static="no" strong="no">
         <type></type>
-        <name>@63</name>
+        <name></name>
         <enumvalue id="group__ewdg__interface_1gga531c35e38ede3ea4e5ba5afb24b29493abfb1e6fbad6b0576fe69f29aa83190e7" prot="public">
           <name>status_ewdg_tick_out_of_range</name>
-          <initializer>= ((uint32_t)( status_group_ewdg )*1000U + (uint32_t)( 0 ))</initializer>
+          <initializer>=  ((uint32_t)(status_group_ewdg)*1000U + (uint32_t)(0))</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -25,7 +25,7 @@
         </enumvalue>
         <enumvalue id="group__ewdg__interface_1gga531c35e38ede3ea4e5ba5afb24b29493a6254c7a31b7ec7a04822f0ed8c9a3a53" prot="public">
           <name>status_ewdg_div_out_of_range</name>
-          <initializer>= ((uint32_t)( status_group_ewdg )*1000U + (uint32_t)( 1 ))</initializer>
+          <initializer>=  ((uint32_t)(status_group_ewdg)*1000U + (uint32_t)(1))</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -34,7 +34,7 @@
         </enumvalue>
         <enumvalue id="group__ewdg__interface_1gga531c35e38ede3ea4e5ba5afb24b29493a51ccee8220760ae722a80b95f77ea4ce" prot="public">
           <name>status_ewdg_feature_unsupported</name>
-          <initializer>= ((uint32_t)( status_group_ewdg )*1000U + (uint32_t)( 2 ))</initializer>
+          <initializer>=  ((uint32_t)(status_group_ewdg)*1000U + (uint32_t)(2))</initializer>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -315,8 +315,8 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_ewdg_drv.h" line="163" column="1" bodyfile="drivers/inc/hpm_ewdg_drv.h" bodystart="163" bodyend="166"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="group__ewdg__interface_1ga8290f82fc6f8841b08aa3c83f234a042" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>static bool ewdg_is_ctrl_reg_locked</definition>
@@ -842,6 +842,18 @@
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>&lt; Parity Error Reset</para>
+<para>&lt; Unlock Control Register Fail Reset</para>
+<para>&lt; Refresh Register Unlock Fail Reset</para>
+<para>&lt; Update Control Register Violation Reset</para>
+<para>&lt; Watchdog Timeout Reset</para>
+<para>&lt; Refresh Register Violation Reset</para>
+<para>&lt; Watchdog Timeout Interrupt</para>
+<para>&lt; Parity Error Interrupt</para>
+<para>&lt; Unlock Control Register Fail Interrupt</para>
+<para>&lt; Refresh Register Unlock Fail interrupt</para>
+<para>&lt; Update Control Register Violation Interrupt</para>
+<para>&lt; Refresh Register Violation interrupt</para>
 <para>&lt; Parity bit for Control Register</para>
         </inbodydescription>
         <location file="drivers/inc/hpm_ewdg_drv.h" line="403" column="12" bodyfile="drivers/src/hpm_ewdg_drv.c" bodystart="204" bodyend="274" declfile="drivers/inc/hpm_ewdg_drv.h" declline="403" declcolumn="12"/>
@@ -883,6 +895,8 @@
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>&lt; Default EWDG Refresh Password</para>
+<para>&lt; Default EWDG Update Password</para>
         </inbodydescription>
         <location file="drivers/inc/hpm_ewdg_drv.h" line="410" column="6" bodyfile="drivers/src/hpm_ewdg_drv.c" bodystart="60" bodyend="84" declfile="drivers/inc/hpm_ewdg_drv.h" declline="410" declcolumn="6"/>
       </memberdef>
@@ -985,6 +999,7 @@
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>&lt; EWDG Unlock Fixed key</para>
         </inbodydescription>
         <location file="drivers/inc/hpm_ewdg_drv.h" line="431" column="12" bodyfile="drivers/src/hpm_ewdg_drv.c" bodystart="304" bodyend="344" declfile="drivers/inc/hpm_ewdg_drv.h" declline="431" declcolumn="12"/>
       </memberdef>
@@ -1208,6 +1223,12 @@
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>&lt; Parity Error Interrupt</para>
+<para>&lt; Unlock Control Register Fail Interrupt</para>
+<para>&lt; Update Control Register Violation Interrupt</para>
+<para>&lt; Watchdog Timeout Interrupt</para>
+<para>&lt; Refresh Register Unlock Fail interrupt</para>
+<para>&lt; Refresh Register Violation interrupt</para>
 <para>&lt; Parity bit for Control Register</para>
         </inbodydescription>
         <location file="drivers/inc/hpm_ewdg_drv.h" line="479" column="6" bodyfile="drivers/src/hpm_ewdg_drv.c" bodystart="390" bodyend="404" declfile="drivers/inc/hpm_ewdg_drv.h" declline="479" declcolumn="6"/>
@@ -1249,6 +1270,12 @@
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>&lt; Parity Error Interrupt</para>
+<para>&lt; Unlock Control Register Fail Interrupt</para>
+<para>&lt; Update Control Register Violation Interrupt</para>
+<para>&lt; Watchdog Timeout Interrupt</para>
+<para>&lt; Refresh Register Unlock Fail interrupt</para>
+<para>&lt; Refresh Register Violation interrupt</para>
 <para>&lt; Parity bit for Control Register</para>
         </inbodydescription>
         <location file="drivers/inc/hpm_ewdg_drv.h" line="486" column="6" bodyfile="drivers/src/hpm_ewdg_drv.c" bodystart="406" bodyend="420" declfile="drivers/inc/hpm_ewdg_drv.h" declline="486" declcolumn="6"/>
@@ -1290,6 +1317,12 @@
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>&lt; Parity Error Reset</para>
+<para>&lt; Unlock Control Register Fail Reset</para>
+<para>&lt; Update Control Register Violation Reset</para>
+<para>&lt; Watchdog Timeout Reset</para>
+<para>&lt; Refresh Register Unlock Fail Reset</para>
+<para>&lt; Refresh Register Violation Reset</para>
 <para>&lt; Parity bit for Control Register</para>
         </inbodydescription>
         <location file="drivers/inc/hpm_ewdg_drv.h" line="493" column="6" bodyfile="drivers/src/hpm_ewdg_drv.c" bodystart="422" bodyend="436" declfile="drivers/inc/hpm_ewdg_drv.h" declline="493" declcolumn="6"/>
@@ -1331,6 +1364,12 @@
 </para>
         </detaileddescription>
         <inbodydescription>
+<para>&lt; Parity Error Reset</para>
+<para>&lt; Unlock Control Register Fail Reset</para>
+<para>&lt; Update Control Register Violation Reset</para>
+<para>&lt; Watchdog Timeout Reset</para>
+<para>&lt; Refresh Register Unlock Fail Reset</para>
+<para>&lt; Refresh Register Violation Reset</para>
 <para>&lt; Parity bit for Control Register</para>
         </inbodydescription>
         <location file="drivers/inc/hpm_ewdg_drv.h" line="500" column="6" bodyfile="drivers/src/hpm_ewdg_drv.c" bodystart="438" bodyend="452" declfile="drivers/inc/hpm_ewdg_drv.h" declline="500" declcolumn="6"/>
@@ -1376,9 +1415,9 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_ewdg_drv.h" line="507" column="6" bodyfile="drivers/src/hpm_ewdg_drv.c" bodystart="454" bodyend="470" declfile="drivers/inc/hpm_ewdg_drv.h" declline="507" declcolumn="6"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
-<para>EWDG driver APIs. </para>
+<para>EWDG driver APIs  . </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

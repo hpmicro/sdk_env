@@ -17,6 +17,11 @@ var hpm__trgm__drv_8h =
       [ "trgm_output_pulse_at_input_rising_edge", "group__trgm__interface.html#gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f", null ],
       [ "trgm_output_pulse_at_input_both_edge", "group__trgm__interface.html#gga06d91800a6a89291a4ce822231dbde75a7288c47c3db81599af8cc9327a9f4dc1", null ]
     ] ],
+    [ "trgm_pwmv2_calibration_mode_t", "group__trgm__interface.html#ga3018676c1db2846195b30adc2229f6fb", [
+      [ "trgm_pwmv2_calibration_mode_begin", "group__trgm__interface.html#gga3018676c1db2846195b30adc2229f6fbaf4395aed6293798380e78e8cb07a6b28", null ],
+      [ "trgm_pwmv2_calibration_mode_wait", "group__trgm__interface.html#gga3018676c1db2846195b30adc2229f6fbac6dcc506f1ffc34ff7c7aa1092602f18", null ],
+      [ "trgm_pwmv2_calibration_mode_end", "group__trgm__interface.html#gga3018676c1db2846195b30adc2229f6fbaa9adf8fd8ddd0b624c37c80838c4600c", null ]
+    ] ],
     [ "trgm_disable_io_output", "group__trgm__interface.html#gae9c09b4c0a271bd4a1b50be1399e7721", null ],
     [ "trgm_dma_request_config", "group__trgm__interface.html#gaaf5605cb46ad30d89ed7eb018728e12a", null ],
     [ "trgm_enable_io_output", "group__trgm__interface.html#gad4388dcd01f86bdd25b5c88dad22e683", null ],

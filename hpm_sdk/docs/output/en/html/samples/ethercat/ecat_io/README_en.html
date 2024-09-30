@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>37.1. ECAT_IO &mdash; HPMicro Software Development Kit  documentation</title>
+  <title>37.3. ECAT_IO &mdash; HPMicro Software Development Kit  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
@@ -24,8 +24,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Drivers Examples" href="../../drivers/index_en.html" />
-    <link rel="prev" title="37. EtherCAT" href="../index_en.html" /> 
+    <link rel="next" title="38. SMbus" href="../../smbus/index_en.html" />
+    <link rel="prev" title="37.2. ECAT_FOE" href="../ecat_foe/README_en.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,6 +52,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../boards/index_en.html">Evaluation Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../components/index_en.html">Components</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index_en.html">Samples</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../audio_codec/index_en.html">1. Audio Codec</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../cherryrb/README_en.html">2. CherryRB</a></li>
@@ -90,17 +91,22 @@
 <li class="toctree-l2"><a class="reference internal" href="../../spi_sdcard/index_en.html">35. SPI_SDCARD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../cherrysh/index_en.html">36. CherrySH</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index_en.html">37. EtherCAT</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">37.1. ECAT_IO</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#overview">37.1.1. 1. Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#prepare">37.1.2. 2. Prepare</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#project-setting">37.1.3. 3. Project Setting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#generate-ethercat-slave-stack-code">37.1.4. 4. Generate EtherCAT slave stack code</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#twincat-project-setting">37.1.5. 5. TwinCAT Project setting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#running-the-example">37.1.6. 6. Running the example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ecat_cia402/README_en.html">37.1. ECAT_CiA402</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ecat_foe/README_en.html">37.2. ECAT_FOE</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">37.3. ECAT_IO</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">37.3.1. 1. Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prepare">37.3.2. 2. Prepare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project-setting">37.3.3. 3. Project Setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-ethercat-slave-stack-code">37.3.4. 4. Generate EtherCAT slave stack code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#twincat-project-setting">37.3.5. 5. TwinCAT Project setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-example">37.3.6. 6. Running the example</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../smbus/index_en.html">38. SMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pmbus/index_en.html">39. PMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tsn/index_en.html">40. tsn</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../drivers/index_en.html">Drivers Examples</a></li>
@@ -125,7 +131,7 @@
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../index_en.html">Samples</a></li>
           <li class="breadcrumb-item"><a href="../index_en.html"><span class="section-number">37. </span>EtherCAT</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">37.1. </span>ECAT_IO</li>
+      <li class="breadcrumb-item active"><span class="section-number">37.3. </span>ECAT_IO</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/samples/ethercat/ecat_io/README_en.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -136,23 +142,17 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="ecat-io">
-<h1><span class="section-number">37.1. </span>ECAT_IO<a class="headerlink" href="#ecat-io" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">37.3. </span>ECAT_IO<a class="headerlink" href="#ecat-io" title="Permalink to this heading"></a></h1>
 <section id="overview">
-<h2><span class="section-number">37.1.1. </span>1. Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">37.3.1. </span>1. Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>The ECAT_IO example demonstrates the steps to implement an ECAT digital IO slave station with the slave stack code (SSC).</p>
-<ul class="simple">
-<li><p>Input IO(2bit): SW6</p></li>
-<li><p>Output IO(2bit): LED8/LED3</p></li>
-<li><p>RUN LED: LED7</p></li>
-<li><p>ERR LED: LED6</p></li>
-</ul>
 </section>
 <section id="prepare">
-<h2><span class="section-number">37.1.2. </span>2. Prepare<a class="headerlink" href="#prepare" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">37.3.2. </span>2. Prepare<a class="headerlink" href="#prepare" title="Permalink to this heading"></a></h2>
 <section id="hardware">
-<h3><span class="section-number">37.1.2.1. </span>2.1 Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.2.1. </span>2.1 Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading"></a></h3>
 <ul class="simple">
-<li><p>HPM6E00EVK(RevA)</p></li>
+<li><p>Development board with ECAT, please refer to <a class="reference internal" href="../../../boards/index_en.html#lab-board-resource"><span class="std std-ref">Pin Description</span></a> of the development board. Check the ECAT network port/RUN LED/ERR LED and other hardware</p></li>
 <li><p>PC with Ethernet port</p>
 <ul>
 <li><p>TWinCAT3 software has compatibility issues with PC network cards. <a class="reference external" href="https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_overview/9309844363.html&amp;id=1489698440745036069">some supported Intel network cards</a></p></li>
@@ -161,7 +161,7 @@
 </ul>
 </section>
 <section id="software">
-<h3><span class="section-number">37.1.2.2. </span>2.2 Software<a class="headerlink" href="#software" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.2.2. </span>2.2 Software<a class="headerlink" href="#software" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>TwinCAT3.1(Build 4024.56)</p></li>
 <li><p>SSC Tool(SSC Version: 5.13; Config File Vers: 1.5.3.0)
@@ -170,15 +170,16 @@
 </section>
 </section>
 <section id="project-setting">
-<h2><span class="section-number">37.1.3. </span>3. Project Setting<a class="headerlink" href="#project-setting" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">37.3.3. </span>3. Project Setting<a class="headerlink" href="#project-setting" title="Permalink to this heading"></a></h2>
 <section id="eeprom-emulation-setting">
-<h3><span class="section-number">37.1.3.1. </span>3.1 EEPROM Emulation Setting<a class="headerlink" href="#eeprom-emulation-setting" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.3.1. </span>3.1 EEPROM Emulation Setting<a class="headerlink" href="#eeprom-emulation-setting" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The default setting is to use Flash to simulate EEPROM</p></li>
+<li><p><strong>Note</strong>: Please allocate appropriate flash space for FLASH-EEPROM content to avoid conflicts with other flash contents</p></li>
 </ul>
 </section>
 <section id="using-actual-eeprom">
-<h3><span class="section-number">37.1.3.2. </span>3.2 Using actual EEPROM<a class="headerlink" href="#using-actual-eeprom" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.3.2. </span>3.2 Using actual EEPROM<a class="headerlink" href="#using-actual-eeprom" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>set the “ESC_EEPROM_EMULATION” and “CREATE_EEPROM_CONTENT” under the “Hardware” attribute to 0 in SSC Tool, then generate the slave protocol stack code.</p></li>
 <li><p>Modify <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> context to “set(CONFIG_EEPROM_EMULATION 0)”.</p></li>
@@ -186,10 +187,10 @@
 </section>
 </section>
 <section id="generate-ethercat-slave-stack-code">
-<h2><span class="section-number">37.1.4. </span>4. Generate EtherCAT slave stack code<a class="headerlink" href="#generate-ethercat-slave-stack-code" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">37.3.4. </span>4. Generate EtherCAT slave stack code<a class="headerlink" href="#generate-ethercat-slave-stack-code" title="Permalink to this heading"></a></h2>
 <p>Due to licensing issues, HPMSDK does not provide EtherCAT slave protocol stack code (SSC). Users have download the SSC Tool from Beckoff’s official website and generate the slave stack code according to the steps.</p>
 <section id="download-ssc-tool">
-<h3><span class="section-number">37.1.4.1. </span>4.1. Download SSC Tool<a class="headerlink" href="#download-ssc-tool" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.4.1. </span>4.1. Download SSC Tool<a class="headerlink" href="#download-ssc-tool" title="Permalink to this heading"></a></h3>
 <ol class="arabic">
 <li><p>Enter<a class="reference external" href="https://www.ethercat.org/en/downloads.html">ETG Download website</a>, input “SSC” to fliter resource.
 <img alt="" src="../../../_images/SSC_download_1.png" />
@@ -200,7 +201,7 @@
 </ol>
 </section>
 <section id="ssc-tool-import-configuration-files">
-<h3><span class="section-number">37.1.4.2. </span>4.2 SSC Tool import configuration files<a class="headerlink" href="#ssc-tool-import-configuration-files" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.4.2. </span>4.2 SSC Tool import configuration files<a class="headerlink" href="#ssc-tool-import-configuration-files" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Open SSC Tool, click <strong>Tool-&gt;Options</strong>
 <img alt="" src="../../../_images/SSC_Tool_Options.png" /></p></li>
@@ -209,7 +210,7 @@
 </ol>
 </section>
 <section id="ssc-tool-create-new-project">
-<h3><span class="section-number">37.1.4.3. </span>4.3 SSC Tool create new project<a class="headerlink" href="#ssc-tool-create-new-project" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.4.3. </span>4.3 SSC Tool create new project<a class="headerlink" href="#ssc-tool-create-new-project" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>click <strong>File-&gt;New</strong>
 <img alt="" src="../../../_images/SSC_File_New.png" /></p></li>
@@ -226,7 +227,7 @@
 </ol>
 </section>
 <section id="create-slave-stack-files">
-<h3><span class="section-number">37.1.4.4. </span>4.4 Create slave stack files<a class="headerlink" href="#create-slave-stack-files" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.4.4. </span>4.4 Create slave stack files<a class="headerlink" href="#create-slave-stack-files" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Click <strong>Project-&gt;Create new Slave Files</strong>
 <img alt="" src="../../../_images/SSC_Create_Slave_1.png" /></p></li>
@@ -234,15 +235,23 @@
 <img alt="" src="../../../_images/SSC_Create_Slave_2.png" /></p></li>
 </ol>
 </section>
+<section id="ssc-code-change">
+<h3><span class="section-number">37.3.4.5. </span>4.5 SSC code change<a class="headerlink" href="#ssc-code-change" title="Permalink to this heading"></a></h3>
+<p>ESC IP supports generating independent Sync0 \ Sync1 interrupts, and Sync0 \ Sync1 requests can also trigger PDI interrupts. To avoid unnecessary PDI interrupts triggered by Sync0 \ Sync1 requests when using independent Sync0 \ Sync1 interrupts, AL Event Mask Register (0x204) needs to be set for masking
+<img alt="" src="../../../_images/ssc_pdi_int.png" /></p>
+<p>Execute in the command line window under the SSC directory：patch -d Src &lt; ssc_pdi_mask.patch
+<img alt="" src="../../../_images/ssc_patch1.png" /></p>
+<p><strong>Note</strong>：If the patch command is not installed on your PC, you will need to install ver. 2.5.9 or a laterversion of GNU patch. If it is already installed, skip this step. Download the patch command (currently ver. 2.5.9) from the following Web page and store “patch.exe” in a folder on a path that makes the file executable from the command prompt. http://gnuwin32.sourceforge.net/packages/patch.htm</p>
+</section>
 </section>
 <section id="twincat-project-setting">
-<h2><span class="section-number">37.1.5. </span>5. TwinCAT Project setting<a class="headerlink" href="#twincat-project-setting" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">37.3.5. </span>5. TwinCAT Project setting<a class="headerlink" href="#twincat-project-setting" title="Permalink to this heading"></a></h2>
 <section id="add-esi-file">
-<h3><span class="section-number">37.1.5.1. </span>5.1. Add ESI file<a class="headerlink" href="#add-esi-file" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.5.1. </span>5.1. Add ESI file<a class="headerlink" href="#add-esi-file" title="Permalink to this heading"></a></h3>
 <p>Copy the generated (<strong>ECAT-IO.xml</strong>) by SSC tool in previous steps to TwinCAT(<strong>C:\TwinCAT\3.1\Config\Io\EtherCAT</strong>).</p>
 </section>
 <section id="create-project">
-<h3><span class="section-number">37.1.5.2. </span>5.2 Create Project<a class="headerlink" href="#create-project" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.5.2. </span>5.2 Create Project<a class="headerlink" href="#create-project" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Open TwinCAT，click <strong>File-&gt;New-&gt;Project</strong>
 <img alt="" src="../../../_images/Twincat_new_project_1.png" /></p></li>
@@ -251,7 +260,7 @@
 </ol>
 </section>
 <section id="software-configuration">
-<h3><span class="section-number">37.1.5.3. </span>5.3 Software Configuration<a class="headerlink" href="#software-configuration" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.5.3. </span>5.3 Software Configuration<a class="headerlink" href="#software-configuration" title="Permalink to this heading"></a></h3>
 <ol class="arabic">
 <li><p>Update network card driver (required for first use)
 <img alt="" src="../../../_images/Twincat_ethernet_driver.png" />
@@ -266,7 +275,7 @@ The TwinCAT may report the following error during runtime, win8settick.bat needs
 </ol>
 </section>
 <section id="scan-device">
-<h3><span class="section-number">37.1.5.4. </span>5.4 Scan device<a class="headerlink" href="#scan-device" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.5.4. </span>5.4 Scan device<a class="headerlink" href="#scan-device" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Right click Device, then click Scan
 <img alt="" src="../../../_images/Twincat_scan.png" /></p></li>
@@ -275,7 +284,7 @@ The TwinCAT may report the following error during runtime, win8settick.bat needs
 </ol>
 </section>
 <section id="update-eeprom-context">
-<h3><span class="section-number">37.1.5.5. </span>5.5 Update EEPROM context<a class="headerlink" href="#update-eeprom-context" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.5.5. </span>5.5 Update EEPROM context<a class="headerlink" href="#update-eeprom-context" title="Permalink to this heading"></a></h3>
 <ol class="arabic">
 <li><p>Double click on the scanned device, click <strong>Online</strong>, right click<strong>Box</strong>, then click <strong>EEPROM Update</strong>。</p>
 <p><em><strong>For cases where the EEPROM content is empty, it is not possible to find a matching Box when scanning the device. In this case, it is necessary to update the EEPROM content。</strong></em></p>
@@ -290,7 +299,7 @@ The TwinCAT may report the following error during runtime, win8settick.bat needs
 </ol>
 </section>
 <section id="io-control">
-<h3><span class="section-number">37.1.5.6. </span>5.6 IO Control<a class="headerlink" href="#io-control" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.5.6. </span>5.6 IO Control<a class="headerlink" href="#io-control" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Input IO, change DIP switch, “InputCounter” value change in TwinCAT
 <img alt="" src="../../../_images/Twincat_input.png" /></p></li>
@@ -300,23 +309,19 @@ The TwinCAT may report the following error during runtime, win8settick.bat needs
 </ol>
 </section>
 <section id="dc-setting">
-<h3><span class="section-number">37.1.5.7. </span>5.7 DC setting<a class="headerlink" href="#dc-setting" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">37.3.5.7. </span>5.7 DC setting<a class="headerlink" href="#dc-setting" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
-<li><p>double clcik “Box”, click “DC”, click “Advanced Settings”
-<img alt="" src="../../../_images/Twincat_DC_1.png" /></p></li>
-<li><p>Set mode  to “DC-Synchron”, set Shift Time(Usually 20% to 30% of Sync Unit Cycle time)
-<img alt="" src="../../../_images/Twincat_DC_2.png" /></p></li>
-<li><p>double click “Device”, click “EtherCAT”, click “Advanced Settings”
-<img alt="" src="../../../_images/Twincat_DC_3.png" /></p></li>
-<li><p>click “Distributed Clock”, choose “DC in use”, click “OK”
-<img alt="" src="../../../_images/Twincat_DC_4.png" /></p></li>
-<li><p>Restart TwinCAT
-<img alt="" src="../../../_images/Twincat_DC_5.png" /></p></li>
+<li><p>Set the synchronization mode of the slave station, where you can set an individual Shift Time for the slave station (Shift Time is used to ensure that all slave stations receive data from the master station before the DC sync event)
+<img alt="" src="../../../_images/twincat_slave_set_dc.png" /></p></li>
+<li><p>Set the synchronization mode of the master station, through the Sync Shift Time of the master station, you can set the shift time for all DC sync mode slave stations (usually 20%~30% of the Sync Unit Cycle time), Actual Shift Time of a single slave station = Shift Time set by the master station + Shift Time set by the slave station
+<img alt="" src="../../../_images/twincat_master_set_dc.png" /></p></li>
+<li><p>Click Restart TwinCAT (Config Mode), slave stations can enter OP state under DC sync mode. In actual use, tasks should be created in TwinCAT (such as PLC task or NC Task), set the synchronization between slave and master station tasks, activate the configuration, and enter Run Mode to ensure synchronization performance, working under DC sync mode
+<img alt="" src="../../../_images/twincat_restart_config_mode.png" /></p></li>
 </ol>
 </section>
 </section>
 <section id="running-the-example">
-<h2><span class="section-number">37.1.6. </span>6. Running the example<a class="headerlink" href="#running-the-example" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">37.3.6. </span>6. Running the example<a class="headerlink" href="#running-the-example" title="Permalink to this heading"></a></h2>
 <p>After the project is running correctly, the serial terminal will output the following information, and the input-output IO status corresponds to the TwinCAT project configuration:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">EtherCAT IO sample</span>
 <span class="go">EEPROM loading with checksum error.</span>
@@ -341,7 +346,7 @@ The TwinCAT may report the following error during runtime, win8settick.bat needs
 
   <div role="contentinfo">
     <p>&#169; Copyright 2020-2024, HPMicro.
-      <span class="lastupdated">Last updated on Jun 28, 2024.
+      <span class="lastupdated">Last updated on Sep 30, 2024.
       </span></p>
   </div>
 

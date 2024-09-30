@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>19.5. BLDC无传感器过零控制 &mdash; HPMico Software Development Kit  documentation</title>
+  <title>19.6. BLDC无传感器过零控制 &mdash; HPMico Software Development Kit  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
@@ -24,8 +24,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="19.6. BLDC 滑模控制" href="../bldc_smc/README_zh.html" />
-    <link rel="prev" title="19.4. 触摸屏控制BLDC" href="../bldc_littlevgl_foc/README_zh.html" /> 
+    <link rel="next" title="19.7. BLDC 滑模控制" href="../bldc_smc/README_zh.html" />
+    <link rel="prev" title="19.5. BLDC 离线参数检测示例" href="../bldc_offline_param_detection/README_zh.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,6 +52,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">使用说明</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../boards/index_zh.html">开发板介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../components/index_zh.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index_zh.html">例程</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../audio_codec/index_zh.html">1. Audio Codec</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../cherryrb/README_zh.html">2. CherryRB</a></li>
@@ -76,14 +77,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../bldc_foc/README_zh.html">19.2. BLDC FOC控制</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../bldc_hfi/README_zh.html">19.3. BLDC HFI 高频注入</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../bldc_littlevgl_foc/README_zh.html">19.4. 触摸屏控制BLDC</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">19.5. BLDC无传感器过零控制</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">19.5.1. 概述</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">19.5.2. 配置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">19.5.3. 运行现象</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bldc_offline_param_detection/README_zh.html">19.5. BLDC 离线参数检测示例</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">19.6. BLDC无传感器过零控制</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">19.6.1. 概述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">19.6.2. 配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">19.6.3. 运行现象</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../bldc_smc/README_zh.html">19.6. BLDC 滑模控制</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../step_motor_foc/README_zh.html">19.7. 步进电机矢量控制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bldc_smc/README_zh.html">19.7. BLDC 滑模控制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../step_motor_foc/README_zh.html">19.8. 步进电机矢量控制</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../multicore/index_zh.html">20. Multicore</a></li>
@@ -104,6 +106,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../spi_sdcard/index_zh.html">35. SPI驱动SD卡</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../cherrysh/index_zh.html">36. CherrySH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ethercat/index_zh.html">37. EtherCAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smbus/index_zh.html">38. SMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pmbus/index_zh.html">39. PMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tsn/index_zh.html">40. tsn</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../drivers/index_zh.html">驱动示例</a></li>
@@ -128,7 +133,7 @@
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../index_zh.html">例程</a></li>
           <li class="breadcrumb-item"><a href="../index_zh.html"><span class="section-number">19. </span>HPM Motor Ctrl</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">19.5. </span>BLDC无传感器过零控制</li>
+      <li class="breadcrumb-item active"><span class="section-number">19.6. </span>BLDC无传感器过零控制</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/samples/motor_ctrl/bldc_over_zero/README_zh.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -139,9 +144,9 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="bldc">
-<h1><span class="section-number">19.5. </span>BLDC无传感器过零控制<a class="headerlink" href="#bldc" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">19.6. </span>BLDC无传感器过零控制<a class="headerlink" href="#bldc" title="Permalink to this heading"></a></h1>
 <section id="id1">
-<h2><span class="section-number">19.5.1. </span>概述<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">19.6.1. </span>概述<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <p>本工程展示了无刷电机无传感器控制方法</p>
 <ul class="simple">
 <li><p>通过梯形波算法进行控制</p></li>
@@ -150,7 +155,7 @@
 </ul>
 </section>
 <section id="id2">
-<h2><span class="section-number">19.5.2. </span>配置<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">19.6.2. </span>配置<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <ul>
 <li><p>本例程电机使用的是雷赛智能的 <strong>BLM57050-1000</strong> 无刷电机，电机具体参数请参考<a class="reference external" href="https://leisai.com/">雷赛智能官网</a>。</p></li>
 <li><p>板子设置参考开发板文档<a class="reference internal" href="../../../boards/index_zh.html#lab-board-motor-ctrl-pin"><span class="std std-ref">电机引脚</span></a>段的描述</p></li>
@@ -164,7 +169,7 @@
 </ul>
 </section>
 <section id="id3">
-<h2><span class="section-number">19.5.3. </span>运行现象<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">19.6.3. </span>运行现象<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
 <p>当工程正确运行后，电机在速度从5转每秒加速到40转每秒，然后从40转每秒减速到5转每秒，并一直循环。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -182,7 +187,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2020-2024, HPMicro.
-      <span class="lastupdated">Last updated on Jun 28, 2024.
+      <span class="lastupdated">Last updated on Sep 30, 2024.
       </span></p>
   </div>
 

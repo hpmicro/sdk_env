@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__pdm__drv_8c" kind="file" language="C++">
     <compoundname>hpm_pdm_drv.c</compoundname>
     <includes refid="hpm__pdm__drv_8h" local="yes">hpm_pdm_drv.h</includes>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
       <node id="3">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -21,27 +18,6 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>assert.h</label>
-      </node>
-      <node id="6">
-        <label>stdint.h</label>
-      </node>
-      <node id="8">
-        <label>stdlib.h</label>
-      </node>
-      <node id="9">
-        <label>hpm_pdm_regs.h</label>
-      </node>
-      <node id="7">
-        <label>string.h</label>
-      </node>
-      <node id="1">
-        <label>drivers/src/hpm_pdm_drv.c</label>
-        <link refid="hpm__pdm__drv_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>hpm_pdm_drv.h</label>
         <link refid="hpm__pdm__drv_8h"/>
@@ -50,8 +26,32 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
+      <node id="1">
+        <label>drivers/src/hpm_pdm_drv.c</label>
+        <link refid="hpm__pdm__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_pdm_regs.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
     </incdepgraph>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="hpm__pdm__drv_8c_1a18c2da487761b17f082a85c2f92a7788" prot="public" static="no">
         <name>PDM_WORKING_CLOCK_FREQ_IN_HZ</name>
         <initializer>(48000UL)</initializer>
@@ -61,100 +61,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/src/hpm_pdm_drv.c" line="8" column="10" bodyfile="drivers/src/hpm_pdm_drv.c" bodystart="8" bodyend="-1"/>
+        <location file="drivers/src/hpm_pdm_drv.c" line="8" column="9" bodyfile="drivers/src/hpm_pdm_drv.c" bodystart="8" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__pdm__interface_1gaa9eb6217b58344c1299d8bdfbc7b6d09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void pdm_get_default_config</definition>
-        <argsstring>(PDM_Type *ptr, pdm_config_t *config)</argsstring>
-        <name>pdm_get_default_config</name>
-        <param>
-          <type><ref refid="structPDM__Type" kindref="compound">PDM_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__pdm__interface_1ga92651d8129d28f359d5f0b6456c1b333" kindref="member">pdm_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>pdm get default config </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>PDM base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="out">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>pdm_config_t </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_pdm_drv.c" line="10" column="6" bodyfile="drivers/src/hpm_pdm_drv.c" bodystart="10" bodyend="23"/>
-      </memberdef>
-      <memberdef kind="function" id="group__pdm__interface_1ga966562de76f71a502908f7458078e9fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t pdm_init</definition>
-        <argsstring>(PDM_Type *ptr, pdm_config_t *config)</argsstring>
-        <name>pdm_init</name>
-        <param>
-          <type><ref refid="structPDM__Type" kindref="compound">PDM_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="group__pdm__interface_1ga92651d8129d28f359d5f0b6456c1b333" kindref="member">pdm_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>pdm initialization </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>PDM base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>pdm_config_t </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>hpm_stat_t</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>status_invalid_argument or status_success </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_pdm_drv.c" line="25" column="12" bodyfile="drivers/src/hpm_pdm_drv.c" bodystart="25" bodyend="48"/>
-      </memberdef>
-      </sectiondef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__pdm__interface_1gaa9eb6217b58344c1299d8bdfbc7b6d09" kind="function"><name>pdm_get_default_config</name></member>
+      <member refid="group__pdm__interface_1ga966562de76f71a502908f7458078e9fa" kind="function"><name>pdm_init</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

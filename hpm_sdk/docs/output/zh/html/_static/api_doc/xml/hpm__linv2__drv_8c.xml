@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__linv2__drv_8c" kind="file" language="C++">
     <compoundname>hpm_linv2_drv.c</compoundname>
     <includes refid="hpm__linv2__drv_8h" local="yes">hpm_linv2_drv.h</includes>
     <incdepgraph>
-      <node id="6">
-        <label>stdbool.h</label>
-      </node>
       <node id="4">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -21,34 +18,6 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>assert.h</label>
-      </node>
-      <node id="7">
-        <label>stdint.h</label>
-      </node>
-      <node id="9">
-        <label>stdlib.h</label>
-      </node>
-      <node id="1">
-        <label>drivers/src/hpm_linv2_drv.c</label>
-        <link refid="hpm__linv2__drv_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>hpm_linv2_regs.h</label>
-        <link refid="hpm__linv2__regs_8h"/>
-      </node>
-      <node id="8">
-        <label>string.h</label>
-      </node>
-      <node id="3">
-        <label>math.h</label>
-      </node>
-      <node id="11">
-        <label>hpm_soc_feature.h</label>
-      </node>
       <node id="2">
         <label>hpm_linv2_drv.h</label>
         <link refid="hpm__linv2__drv_8h"/>
@@ -61,8 +30,39 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
+      <node id="1">
+        <label>drivers/src/hpm_linv2_drv.c</label>
+        <link refid="hpm__linv2__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>hpm_linv2_regs.h</label>
+        <link refid="hpm__linv2__regs_8h"/>
+      </node>
+      <node id="5">
+        <label>assert.h</label>
+      </node>
+      <node id="11">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="9">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
     </incdepgraph>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="hpm__linv2__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" prot="public" static="no">
         <name>HPM_LIN_DRV_RETRY_COUNT</name>
         <initializer>(50000U)</initializer>
@@ -74,97 +74,10 @@
         </inbodydescription>
         <location file="drivers/src/hpm_linv2_drv.c" line="10" column="9" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="10" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__linv2__interface_1ga9e26e8d5dfd175eeb74ffdbc85ebc626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t lin_master_configure_timing</definition>
-        <argsstring>(LINV2_Type *ptr, lin_timing_t *timing)</argsstring>
-        <name>lin_master_configure_timing</name>
-        <param>
-          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__timing__t" kindref="compound">lin_timing_t</ref> *</type>
-          <declname>timing</declname>
-        </param>
-        <briefdescription>
-<para>lin configure timing on master mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>timing</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__timing__t" kindref="compound">lin_timing_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>hpm_stat_t </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>set master mode</para>
-<para>src =20MHz baudrate = 19.2KHz</para>
-<para>bt_div = 260, scaler = 1, bt_mul = 0</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_linv2_drv.c" line="12" column="12" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="12" bodyend="40"/>
-      </memberdef>
-      <memberdef kind="function" id="group__linv2__interface_1gaf5ff09ff09f7c81df5da4d28def52780" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t lin_slave_configure_timing</definition>
-        <argsstring>(LINV2_Type *ptr, uint32_t src_freq_in_hz)</argsstring>
-        <name>lin_slave_configure_timing</name>
-        <param>
-          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type>uint32_t</type>
-          <declname>src_freq_in_hz</declname>
-        </param>
-        <briefdescription>
-<para>lin config timing on slave mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>src_freq_in_hz</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>source frequency </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>hpm_stat_t </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>set slave mode, clean bt_div, bit_mul, prescl</para>
-<para>src = 20MHz, prescaler = 1, bt_div = 250</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_linv2_drv.c" line="42" column="12" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="42" bodyend="70"/>
-      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__linv2__interface_1ga9e26e8d5dfd175eeb74ffdbc85ebc626" kind="function"><name>lin_master_configure_timing</name></member>
+      <member refid="group__linv2__interface_1gaf5ff09ff09f7c81df5da4d28def52780" kind="function"><name>lin_slave_configure_timing</name></member>
       <memberdef kind="function" id="hpm__linv2__drv_8c_1a77e62603cb9332ee1453641a5a0583f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
         <definition>uint8_t lin_get_data_length_from_id</definition>
@@ -182,361 +95,15 @@
         </inbodydescription>
         <location file="drivers/src/hpm_linv2_drv.c" line="72" column="9" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="72" bodyend="86"/>
       </memberdef>
-      <memberdef kind="function" id="group__linv2__interface_1ga74af34c200cc2d8db66d6bced36e0c83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint8_t</type>
-        <definition>uint8_t lin_get_data_length</definition>
-        <argsstring>(LINV2_Type *ptr)</argsstring>
-        <name>lin_get_data_length</name>
-        <param>
-          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <briefdescription>
-<para>get data length </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>data length is determined by DATA_LEN register and ID</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>uint8_t data length </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_linv2_drv.c" line="88" column="9" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="88" bodyend="97"/>
-      </memberdef>
-      <memberdef kind="function" id="group__linv2__interface_1ga04b6f1b991beb3113c80e505ef80efbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lin_master_transfer</definition>
-        <argsstring>(LINV2_Type *ptr, lin_trans_config_t *config)</argsstring>
-        <name>lin_master_transfer</name>
-        <param>
-          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>lin transfer on master mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>config id</para>
-<para>sent or receive</para>
-<para>start</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_linv2_drv.c" line="99" column="6" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="99" bodyend="126"/>
-      </memberdef>
-      <memberdef kind="function" id="group__linv2__interface_1ga92c9a1e01ad3ec8655f84aacfa68ea24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t lin_master_sent</definition>
-        <argsstring>(LINV2_Type *ptr, lin_trans_config_t *config)</argsstring>
-        <name>lin_master_sent</name>
-        <param>
-          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>lin send data on master mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_timeout </para>
-</simplesect>
-<simplesect kind="return"><para>status_success </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>wait for lin inactive</para>
-<para>config id</para>
-<para>load data into registers</para>
-<para>start</para>
-<para>waiting for lin complete</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_linv2_drv.c" line="128" column="12" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="128" bodyend="177"/>
-      </memberdef>
-      <memberdef kind="function" id="group__linv2__interface_1gaa7cd44d6d3fafbd33aef2727af98b477" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t lin_master_receive</definition>
-        <argsstring>(LINV2_Type *ptr, lin_trans_config_t *config)</argsstring>
-        <name>lin_master_receive</name>
-        <param>
-          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>lin receive data on master mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_timeout </para>
-</simplesect>
-<simplesect kind="return"><para>status_success </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>waiting for lin inactive</para>
-<para>config id</para>
-<para>receive</para>
-<para>start</para>
-<para>waiting for receive complete</para>
-<para>load register data into buffer</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_linv2_drv.c" line="179" column="12" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="179" bodyend="229"/>
-      </memberdef>
-      <memberdef kind="function" id="group__linv2__interface_1ga7e7b1c960282961feeb9001461d2c70e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lin_slave_transfer</definition>
-        <argsstring>(LINV2_Type *ptr, lin_trans_config_t *config)</argsstring>
-        <name>lin_slave_transfer</name>
-        <param>
-          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>lin transfer on slave mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>call this function after lin generate data request interrupt</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>transmit or receive</para>
-<para>data ack</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_linv2_drv.c" line="231" column="6" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="231" bodyend="259"/>
-      </memberdef>
-      <memberdef kind="function" id="group__linv2__interface_1gad61f4b08011f8d78ffc39afeff44f755" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t lin_slave_sent</definition>
-        <argsstring>(LINV2_Type *ptr, lin_trans_config_t *config)</argsstring>
-        <name>lin_slave_sent</name>
-        <param>
-          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>lin send data on slave mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_timeout </para>
-</simplesect>
-<simplesect kind="return"><para>status_success </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>waiting for lin data_req</para>
-<para>transmit</para>
-<para>data ack</para>
-<para>waiting for lin complete</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_linv2_drv.c" line="261" column="12" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="261" bodyend="311"/>
-      </memberdef>
-      <memberdef kind="function" id="group__linv2__interface_1ga3d867566f5bf797d7707d8c1fc66f9ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t lin_slave_receive</definition>
-        <argsstring>(LINV2_Type *ptr, lin_trans_config_t *config)</argsstring>
-        <name>lin_slave_receive</name>
-        <param>
-          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>lin receive data on slave mode </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>status_timeout </para>
-</simplesect>
-<simplesect kind="return"><para>status_success </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-<para>waiting for lin data_req</para>
-<para>receive</para>
-<para>data ack</para>
-<para>waiting for lin complete</para>
-        </inbodydescription>
-        <location file="drivers/src/hpm_linv2_drv.c" line="313" column="12" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="313" bodyend="364"/>
-      </memberdef>
-      <memberdef kind="function" id="group__linv2__interface_1ga4de3f507787e3c2d5205bc81b340bbb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void lin_slave_dma_transfer</definition>
-        <argsstring>(LINV2_Type *ptr, lin_trans_config_t *config)</argsstring>
-        <name>lin_slave_dma_transfer</name>
-        <param>
-          <type><ref refid="structLINV2__Type" kindref="compound">LINV2_Type</ref> *</type>
-          <declname>ptr</declname>
-        </param>
-        <param>
-          <type><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>lin slave dma transfer </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>ptr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>lin base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref> </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_linv2_drv.c" line="366" column="6" bodyfile="drivers/src/hpm_linv2_drv.c" bodystart="366" bodyend="373"/>
-      </memberdef>
-      </sectiondef>
+      <member refid="group__linv2__interface_1ga74af34c200cc2d8db66d6bced36e0c83" kind="function"><name>lin_get_data_length</name></member>
+      <member refid="group__linv2__interface_1ga04b6f1b991beb3113c80e505ef80efbf" kind="function"><name>lin_master_transfer</name></member>
+      <member refid="group__linv2__interface_1ga92c9a1e01ad3ec8655f84aacfa68ea24" kind="function"><name>lin_master_sent</name></member>
+      <member refid="group__linv2__interface_1gaa7cd44d6d3fafbd33aef2727af98b477" kind="function"><name>lin_master_receive</name></member>
+      <member refid="group__linv2__interface_1ga7e7b1c960282961feeb9001461d2c70e" kind="function"><name>lin_slave_transfer</name></member>
+      <member refid="group__linv2__interface_1gad61f4b08011f8d78ffc39afeff44f755" kind="function"><name>lin_slave_sent</name></member>
+      <member refid="group__linv2__interface_1ga3d867566f5bf797d7707d8c1fc66f9ce" kind="function"><name>lin_slave_receive</name></member>
+      <member refid="group__linv2__interface_1ga4de3f507787e3c2d5205bc81b340bbb1" kind="function"><name>lin_slave_dma_transfer</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -563,7 +130,7 @@
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>=<sp/><ref refid="hpm__linv2__regs_8h_1a46c9d0e28df9c4564e4c0fa24a89c32f" kindref="member">LINV2_TIMING_CONTROL_MASTER_MODE_MASK</ref>;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1a4da131ae682bfdb47dd7e82f83be8d4c" kindref="member">LINV2_TIMING_CONTROL_LIN_INITIAL_MASK</ref>;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>&amp;=<sp/>~<ref refid="hpm__linv2__regs_8h_1a4da131ae682bfdb47dd7e82f83be8d4c" kindref="member">LINV2_TIMING_CONTROL_LIN_INITIAL_MASK</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>&amp;=<sp/>~LINV2_TIMING_CONTROL_LIN_INITIAL_MASK;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>bt_mul<sp/>=<sp/>20000U<sp/>/<sp/>timing-&gt;<ref refid="structlin__timing__t_1ab84d7999aebe0d359913012348b0ef86" kindref="member">baudrate</ref><sp/>-<sp/>1U;</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>prescaler<sp/>=<sp/>(uint8_t)(log((timing-&gt;<ref refid="structlin__timing__t_1ab30ce06c5df03213ac0c7225f4624f7a" kindref="member">src_freq_in_hz</ref><sp/>/<sp/>((bt_mul<sp/>+<sp/>1U)<sp/>*<sp/>timing-&gt;<ref refid="structlin__timing__t_1ab84d7999aebe0d359913012348b0ef86" kindref="member">baudrate</ref><sp/>*<sp/>200U)))<sp/>/<sp/>log(2U)<sp/>-<sp/>1U);</highlight></codeline>
@@ -589,7 +156,7 @@
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1a4da131ae682bfdb47dd7e82f83be8d4c" kindref="member">LINV2_TIMING_CONTROL_LIN_INITIAL_MASK</ref>;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>&amp;=<sp/>~<ref refid="hpm__linv2__regs_8h_1a4da131ae682bfdb47dd7e82f83be8d4c" kindref="member">LINV2_TIMING_CONTROL_LIN_INITIAL_MASK</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1af11b589a040fb9b67fb9cece50186823" kindref="member">TIMING_CONTROL</ref><sp/>&amp;=<sp/>~LINV2_TIMING_CONTROL_LIN_INITIAL_MASK;</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>prescaler<sp/>=<sp/>(uint8_t)(log((src_freq_in_hz<sp/>/<sp/>(20000U<sp/>*<sp/>200U)))<sp/>/<sp/>log(2U)<sp/>-<sp/>1U);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>bt_div<sp/>=<sp/>src_freq_in_hz<sp/>/<sp/>((1U<sp/>&lt;&lt;<sp/>(prescaler<sp/>+<sp/>1U))<sp/>*<sp/>20000U);</highlight></codeline>
@@ -611,13 +178,13 @@
 <codeline lineno="72"><highlight class="normal">uint8_t<sp/><ref refid="hpm__linv2__drv_8c_1a77e62603cb9332ee1453641a5a0583f9" kindref="member">lin_get_data_length_from_id</ref>(uint8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="73"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="hpm__lin__drv_8h_1a3cb969fcf81ed46d50c6940489b883e0" kindref="member">LIN_ID_DATA_LEN_GET</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1gga102a6541fa3e7b9cd9ce29c211186319a0cc8305eb1108e4fa09975c8d25f8f76" kindref="member">id_data_length_2bytes</ref>:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__lin__interface_1gga102a6541fa3e7b9cd9ce29c211186319a0cc8305eb1108e4fa09975c8d25f8f76" kindref="member">id_data_length_2bytes</ref>:</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1gga102a6541fa3e7b9cd9ce29c211186319ada394e93bdf4e5095888c66d78b31458" kindref="member">id_data_length_2bytes_2</ref>:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__lin__interface_1gga102a6541fa3e7b9cd9ce29c211186319ada394e93bdf4e5095888c66d78b31458" kindref="member">id_data_length_2bytes_2</ref>:</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1gga102a6541fa3e7b9cd9ce29c211186319a58ab463b755281d09e75243d8da4408c" kindref="member">id_data_length_4bytes</ref>:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__lin__interface_1gga102a6541fa3e7b9cd9ce29c211186319a58ab463b755281d09e75243d8da4408c" kindref="member">id_data_length_4bytes</ref>:</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>4;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__linv2__interface_1gga102a6541fa3e7b9cd9ce29c211186319aaf1f845c1b353becbaffca2986aa3e5f" kindref="member">id_data_length_8bytes</ref>:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__lin__interface_1gga102a6541fa3e7b9cd9ce29c211186319aaf1f845c1b353becbaffca2986aa3e5f" kindref="member">id_data_length_8bytes</ref>:</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>8;</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>8;</highlight></codeline>
@@ -757,7 +324,7 @@
 <codeline lineno="232"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>data_length;</highlight></codeline>
 <codeline lineno="234"><highlight class="normal"></highlight></codeline>
-<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>&amp;=<sp/>~<ref refid="hpm__linv2__regs_8h_1a79994b47e1b5bce3560d9789c12df964" kindref="member">LINV2_CONTROL_STATUS_TRANSMIT_MASK</ref>;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>&amp;=<sp/>~LINV2_CONTROL_STATUS_TRANSMIT_MASK;</highlight></codeline>
 <codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structlin__trans__config__t_1adb0a2b23f87a50380e8182a18f03717c" kindref="member">transmit</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLINV2__Type_1adfe3073ecdb36b3403c89fb084b26c06" kindref="member">CONTROL_STATUS</ref><sp/>|=<sp/><ref refid="hpm__linv2__regs_8h_1a79994b47e1b5bce3560d9789c12df964" kindref="member">LINV2_CONTROL_STATUS_TRANSMIT_MASK</ref>;</highlight></codeline>
 <codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>

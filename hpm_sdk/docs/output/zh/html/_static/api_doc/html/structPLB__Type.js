@@ -6,10 +6,8 @@ var structPLB__Type =
     [ "MODE", "structPLB__Type.html#acdb8d5451ae260ab3b3d9ac188ff2bc1", null ],
     [ "RESERVED0", "structPLB__Type.html#a9bfc153235c7bc8efb9a814e8af2b1e1", null ],
     [ "SW_INJECT", "structPLB__Type.html#a6c5f8f2c5bba003452caa5a65e2dcd88", null ],
-    [ "TYPE_A", "structPLB__Type.html#aa8df1a7c64019f4db6743ab583d90db0", null ],
-    [ "TYPE_A", "structPLB__Type.html#a92828368f82137fa43fd2fee6c7ec368", null ],
-    [ "TYPE_A", "structPLB__Type.html#acd0cef0586edaf65a6ad713f8f9101f9", null ],
-    [ "TYPE_B", "structPLB__Type.html#a3cab639249ca2b185f0d7de874133e72", null ],
-    [ "TYPE_B", "structPLB__Type.html#a69384fa6daccd50a2bafd0e213a5fa02", null ],
-    [ "TYPE_B", "structPLB__Type.html#adbca9aec3ca988aaec3512972d9068c5", null ]
+    [ "TYPE_A", "structPLB__Type.html#ad072cf193681398af759058a5a41d2aa", null ],
+    [ "TYPE_A", "structPLB__Type.html#a17ddea4e4fa2b0206542ddb5553d4ad4", null ],
+    [ "TYPE_B", "structPLB__Type.html#ae9d26db801b7641e1e4c5909ad356fe7", null ],
+    [ "TYPE_B", "structPLB__Type.html#af3eb67705ec7eef29a0f0894b9adc7ae", null ]
 ];

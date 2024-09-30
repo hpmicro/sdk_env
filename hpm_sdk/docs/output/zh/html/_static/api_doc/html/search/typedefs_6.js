@@ -1,17 +1,14 @@
 var searchData=
 [
-  ['hall_5fcount_5fdelay_5fstart_5ft_70185',['hall_count_delay_start_t',['../group__hall__interface.html#ga626b3ed4fcbaa878dff7b26dfa212c5f',1,'hpm_hall_drv.h']]],
-  ['hall_5fcounter_5ftype_5ft_70186',['hall_counter_type_t',['../group__hall__interface.html#ga2115653bcbc48c1da9e3703bd741dae1',1,'hpm_hall_drv.h']]],
-  ['hall_5frotate_5fdirection_5ft_70187',['hall_rotate_direction_t',['../group__hall__interface.html#ga4df0b14a598ca2e88efd2615dd418b48',1,'hpm_hall_drv.h']]],
-  ['hpm_5fhfi_5fpara_5ft_70188',['hpm_hfi_para_t',['../group__mcl__hfi__interface.html#ga4de14ca6e9db27227314a2f9d25a6c61',1,'hpm_hfi.h']]],
-  ['hpm_5fhfi_5fpll_5fpara_5ft_70189',['hpm_hfi_pll_para_t',['../group__mcl__hfi__interface.html#gab0c07bf9068939980a7854357c124cb0',1,'hpm_hfi.h']]],
-  ['hpm_5fhfi_5fpole_5fdetect_5fpara_5ft_70190',['hpm_hfi_pole_detect_para_t',['../group__mcl__hfi__interface.html#gaa45b275d57afd32325b7edc7f3b46e9d',1,'hpm_hfi.h']]],
-  ['hpm_5fmcl_5fover_5fzero_5fcfg_5ft_70191',['hpm_mcl_over_zero_cfg_t',['../hpm__over__zero_8h.html#ae0172c6d71ee088df6d1589b09d0c496',1,'hpm_over_zero.h']]],
-  ['hpm_5fmcl_5fover_5fzero_5fpi_5fpara_5ft_70192',['hpm_mcl_over_zero_pi_para_t',['../hpm__over__zero_8h.html#a284d0177b01c6fc6b66fef63c6f697f5',1,'hpm_over_zero.h']]],
-  ['hpm_5fmcl_5fover_5fzero_5fspd_5fpara_5ft_70193',['hpm_mcl_over_zero_spd_para_t',['../hpm__over__zero_8h.html#a618715b77258e20c546b4cf991d55139',1,'hpm_over_zero.h']]],
-  ['hpm_5fmcl_5fpara_5ft_70194',['hpm_mcl_para_t',['../group__mcl__smc__interface.html#gaa88fd86e0831e2c0166d9dc0d064bdf2',1,'hpm_smc.h']]],
-  ['hpm_5fmotor_5fmath_5ftype_70195',['HPM_MOTOR_MATH_TYPE',['../group__mcl__math__interface.html#ga54bf15eb67d9e80e4e6749bf0a23efba',1,'hpm_motor_math.h']]],
-  ['hpm_5fmotor_5fpara_5ft_70196',['hpm_motor_para_t',['../group__mcl__common.html#gaa1c8c368d71f93f073e05ed0e8dbaefa',1,'hpm_bldc_define.h']]],
-  ['hpm_5fsmc_5fpll_5fpara_5ft_70197',['hpm_smc_pll_para_t',['../group__mcl__smc__interface.html#gacd7ae677b656d38b74b95793e4e1f85e',1,'hpm_smc.h']]],
-  ['hpm_5fstat_5ft_70198',['hpm_stat_t',['../group__common__interface.html#ga087efae82a4b174a0363363d9d5ece19',1,'hpm_common.h']]]
+  ['gpio_5finterrupt_5ftrigger_5ft_0',['gpio_interrupt_trigger_t',['../group__gpio__interface.html#gad7182efe68dbafcf2a7ed1160981bf3e',1,'hpm_gpio_drv.h']]],
+  ['gpiom_5fgpio_5ft_1',['gpiom_gpio_t',['../group__gpiom__interface.html#ga6cefa8d5d0bf5585d1a46eabe02825c2',1,'gpiom_gpio_t:&#160;hpm_gpiom_soc_drv.h'],['../group__gpiom__interface.html#ga6cefa8d5d0bf5585d1a46eabe02825c2',1,'gpiom_gpio_t:&#160;hpm_gpiom_soc_drv.h'],['../group__gpiom__interface.html#ga6cefa8d5d0bf5585d1a46eabe02825c2',1,'gpiom_gpio_t:&#160;hpm_gpiom_soc_drv.h'],['../group__gpiom__interface.html#ga6cefa8d5d0bf5585d1a46eabe02825c2',1,'gpiom_gpio_t:&#160;hpm_gpiom_soc_drv.h'],['../group__gpiom__interface.html#ga6cefa8d5d0bf5585d1a46eabe02825c2',1,'gpiom_gpio_t:&#160;hpm_gpiom_soc_drv.h'],['../group__gpiom__interface.html#ga6cefa8d5d0bf5585d1a46eabe02825c2',1,'gpiom_gpio_t:&#160;hpm_gpiom_soc_drv.h'],['../group__gpiom__interface.html#ga6cefa8d5d0bf5585d1a46eabe02825c2',1,'gpiom_gpio_t:&#160;hpm_gpiom_soc_drv.h']]],
+  ['gpiom_5fpin_5fvisibility_5ft_2',['gpiom_pin_visibility_t',['../group__gpiom__interface.html#ga0d4f1c6a053ec1d2379797cb2775b186',1,'hpm_gpiom_drv.h']]],
+  ['gptmr_5fchannel_5fconfig_5ft_3',['gptmr_channel_config_t',['../group__gptmr__interface.html#ga321e76e4cdae6b46ce3714587192acc8',1,'hpm_gptmr_drv.h']]],
+  ['gptmr_5fcounter_5ftype_5ft_4',['gptmr_counter_type_t',['../group__gptmr__interface.html#gaf611bd36e1590316f8a740a22842d707',1,'hpm_gptmr_drv.h']]],
+  ['gptmr_5fdma_5frequest_5fevent_5ft_5',['gptmr_dma_request_event_t',['../group__gptmr__interface.html#ga33c7837690a0c1d169e3492302123867',1,'hpm_gptmr_drv.h']]],
+  ['gptmr_5fsynci_5fedge_5ft_6',['gptmr_synci_edge_t',['../group__gptmr__interface.html#ga8746dc389b2e4d490a6918e7e416e5b6',1,'hpm_gptmr_drv.h']]],
+  ['gptmr_5fwork_5fmode_5ft_7',['gptmr_work_mode_t',['../group__gptmr__interface.html#ga4d306473008e3c262627dfe9cf09af0c',1,'hpm_gptmr_drv.h']]],
+  ['gwc_5fch_5fconfig_5ft_8',['gwc_ch_config_t',['../group__gwc__interface.html#gaa009847576947a2fa247bdf55abe0403',1,'hpm_gwc_drv.h']]],
+  ['gwc_5fclk_5fpol_5ft_9',['gwc_clk_pol_t',['../group__gwc__interface.html#ga95486f7e4cd2b6cdfa51b57c8f828a13',1,'hpm_gwc_drv.h']]],
+  ['gwc_5fconfig_5ft_10',['gwc_config_t',['../group__gwc__interface.html#ga7fe65c1c3b3b9bd752979c11a9d8eadd',1,'hpm_gwc_drv.h']]]
 ];

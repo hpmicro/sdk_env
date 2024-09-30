@@ -1,13 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__pmon__drv_8h" kind="file" language="C++">
     <compoundname>hpm_pmon_drv.h</compoundname>
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
     <includes local="yes">hpm_pmon_regs.h</includes>
     <incdepgraph>
-      <node id="4">
-        <label>stdbool.h</label>
-      </node>
       <node id="2">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -22,8 +19,22 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
+      <node id="1">
+        <label>drivers/inc/hpm_pmon_drv.h</label>
+        <link refid="hpm__pmon__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
       <node id="3">
         <label>assert.h</label>
+      </node>
+      <node id="8">
+        <label>hpm_pmon_regs.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
       </node>
       <node id="5">
         <label>stdint.h</label>
@@ -34,19 +45,8 @@
       <node id="6">
         <label>string.h</label>
       </node>
-      <node id="1">
-        <label>drivers/inc/hpm_pmon_drv.h</label>
-        <link refid="hpm__pmon__drv_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>hpm_pmon_regs.h</label>
-      </node>
     </incdepgraph>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="hpm__pmon__drv_8h_1a1446d377860d2ae3c189bd5658f327a7" prot="public" static="no">
         <name>PMON_EVENT_GLITCH0</name>
         <initializer>(1U &lt;&lt; 0)</initializer>
@@ -91,8 +91,8 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_pmon_drv.h" line="16" column="9" bodyfile="drivers/inc/hpm_pmon_drv.h" bodystart="16" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="hpm__pmon__drv_8h_1ae8850fd6b9ee9182e916b0e6efdaeb11" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>static void pmon_enable</definition>
@@ -227,7 +227,7 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_pmon_drv.h" line="56" column="24" bodyfile="drivers/inc/hpm_pmon_drv.h" bodystart="56" bodyend="59"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -258,8 +258,8 @@
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>monitor_index,</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
 <codeline lineno="25"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPMON__Type_1ab5b37e1f2e834df9722ca552572a28ca" kindref="member">MONITOR</ref>[monitor_index].<ref refid="structPMON__Type_1a567bf5900fbd001c7c7f87550f4c206d" kindref="member">CONTROL</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPMON__Type_1ab5b37e1f2e834df9722ca552572a28ca" kindref="member">MONITOR</ref>[monitor_index].<ref refid="structPMON__Type_1a567bf5900fbd001c7c7f87550f4c206d" kindref="member">CONTROL</ref></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~<ref refid="HPM6200_2ip_2hpm__pmon__regs_8h_1aae7ad74cc14c35a657fb5a5da9bfaa8d" kindref="member">PMON_MONITOR_CONTROL_ENABLE_MASK</ref>)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPMON__Type_1af0e2efe3081ceef96627f2e77fc37ca7" kindref="member">MONITOR</ref>[monitor_index].<ref refid="structPMON__Type_1a567bf5900fbd001c7c7f87550f4c206d" kindref="member">CONTROL</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPMON__Type_1af0e2efe3081ceef96627f2e77fc37ca7" kindref="member">MONITOR</ref>[monitor_index].<ref refid="structPMON__Type_1a567bf5900fbd001c7c7f87550f4c206d" kindref="member">CONTROL</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~PMON_MONITOR_CONTROL_ENABLE_MASK)</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__pmon__regs_8h_1a549325e09032a9c2a403eb394b47a613" kindref="member">PMON_MONITOR_CONTROL_ENABLE_SET</ref>(enable);</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
@@ -267,14 +267,14 @@
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>monitor_index,</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>active_mode)</highlight></codeline>
 <codeline lineno="34"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPMON__Type_1ab5b37e1f2e834df9722ca552572a28ca" kindref="member">MONITOR</ref>[monitor_index].<ref refid="structPMON__Type_1a567bf5900fbd001c7c7f87550f4c206d" kindref="member">CONTROL</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPMON__Type_1ab5b37e1f2e834df9722ca552572a28ca" kindref="member">MONITOR</ref>[monitor_index].<ref refid="structPMON__Type_1a567bf5900fbd001c7c7f87550f4c206d" kindref="member">CONTROL</ref></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~<ref refid="HPM6200_2ip_2hpm__pmon__regs_8h_1a4ed347d42f6778b2f0b81bf2566afd1a" kindref="member">PMON_MONITOR_CONTROL_ACTIVE_MASK</ref>)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structPMON__Type_1af0e2efe3081ceef96627f2e77fc37ca7" kindref="member">MONITOR</ref>[monitor_index].<ref refid="structPMON__Type_1a567bf5900fbd001c7c7f87550f4c206d" kindref="member">CONTROL</ref><sp/>=<sp/>(ptr-&gt;<ref refid="structPMON__Type_1af0e2efe3081ceef96627f2e77fc37ca7" kindref="member">MONITOR</ref>[monitor_index].<ref refid="structPMON__Type_1a567bf5900fbd001c7c7f87550f4c206d" kindref="member">CONTROL</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>~PMON_MONITOR_CONTROL_ACTIVE_MASK)</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="HPM6200_2ip_2hpm__pmon__regs_8h_1acaae226d763ee4335c2547af2dcfff7d" kindref="member">PMON_MONITOR_CONTROL_ACTIVE_SET</ref>(active_mode);</highlight></codeline>
 <codeline lineno="38"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40" refid="hpm__pmon__drv_8h_1a4ec502a9f13a211dfeece7341c4f467a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="hpm__pmon__drv_8h_1a4ec502a9f13a211dfeece7341c4f467a" kindref="member">pmon_glich_detected</ref>(<ref refid="structPMON__Type" kindref="compound">PMON_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>monitor_index)</highlight></codeline>
 <codeline lineno="41"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structPMON__Type_1ab5b37e1f2e834df9722ca552572a28ca" kindref="member">MONITOR</ref>[monitor_index].<ref refid="structPMON__Type_1a2b5dc9d27d040fcd0ee17614ffb05279" kindref="member">STATUS</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structPMON__Type_1af0e2efe3081ceef96627f2e77fc37ca7" kindref="member">MONITOR</ref>[monitor_index].<ref refid="structPMON__Type_1a2b5dc9d27d040fcd0ee17614ffb05279" kindref="member">STATUS</ref>;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="45" refid="hpm__pmon__drv_8h_1aab64faaab1140f763eaa254adb328754" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__pmon__drv_8h_1aab64faaab1140f763eaa254adb328754" kindref="member">pmon_test_mode_enable</ref>(<ref refid="structPMON__Type" kindref="compound">PMON_Type</ref><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>

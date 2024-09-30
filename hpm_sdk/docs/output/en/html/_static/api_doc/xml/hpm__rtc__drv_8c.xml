@@ -1,13 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hpm__rtc__drv_8c" kind="file" language="C++">
     <compoundname>hpm_rtc_drv.c</compoundname>
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
     <includes refid="hpm__rtc__drv_8h" local="yes">hpm_rtc_drv.h</includes>
     <incdepgraph>
-      <node id="4">
-        <label>stdbool.h</label>
-      </node>
       <node id="2">
         <label>hpm_common.h</label>
         <link refid="hpm__common_8h"/>
@@ -22,29 +19,6 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>assert.h</label>
-      </node>
-      <node id="5">
-        <label>stdint.h</label>
-      </node>
-      <node id="7">
-        <label>stdlib.h</label>
-      </node>
-      <node id="1">
-        <label>drivers/src/hpm_rtc_drv.c</label>
-        <link refid="hpm__rtc__drv_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>string.h</label>
-      </node>
-      <node id="9">
-        <label>hpm_rtc_regs.h</label>
-      </node>
       <node id="8">
         <label>hpm_rtc_drv.h</label>
         <link refid="hpm__rtc__drv_8h"/>
@@ -57,180 +31,45 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="11">
-        <label>time.h</label>
+      <node id="1">
+        <label>drivers/src/hpm_rtc_drv.c</label>
+        <link refid="hpm__rtc__drv_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_rtc_regs.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
       </node>
       <node id="10">
         <label>sys/time.h</label>
       </node>
+      <node id="11">
+        <label>time.h</label>
+      </node>
     </incdepgraph>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="group__rtc__interface_1ga46a1ec510cd686e4f51310a7feaf27f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t rtc_config_time</definition>
-        <argsstring>(RTC_Type *base, time_t time)</argsstring>
-        <name>rtc_config_time</name>
-        <param>
-          <type><ref refid="structRTC__Type" kindref="compound">RTC_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <param>
-          <type>time_t</type>
-          <declname>time</declname>
-        </param>
-        <briefdescription>
-<para>Configure the RTC time. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>RTC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">time</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>seconds since 1970.1.1, 0:0:0 </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>API</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>execution status status_success or status_invalid_argument </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rtc_drv.c" line="12" column="12" bodyfile="drivers/src/hpm_rtc_drv.c" bodystart="12" bodyend="16"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rtc__interface_1ga9b8c5cac50cbb55eefcc4c519860b576" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>time_t</type>
-        <definition>time_t rtc_get_time</definition>
-        <argsstring>(RTC_Type *base)</argsstring>
-        <name>rtc_get_time</name>
-        <param>
-          <type><ref refid="structRTC__Type" kindref="compound">RTC_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <briefdescription>
-<para>Get the time returned by RTC module. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>RTC base address </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>RTC</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>time </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rtc_drv.c" line="18" column="8" bodyfile="drivers/src/hpm_rtc_drv.c" bodystart="18" bodyend="22"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rtc__interface_1ga77c01d638e5e3d651a5af54151fdd8bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>struct timeval</type>
-        <definition>struct timeval rtc_get_timeval</definition>
-        <argsstring>(RTC_Type *base)</argsstring>
-        <name>rtc_get_timeval</name>
-        <param>
-          <type><ref refid="structRTC__Type" kindref="compound">RTC_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <briefdescription>
-<para>Get accurate time return by RTC module. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>RTC base address</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>accurate time(including second and subsecond) </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rtc_drv.c" line="18" column="8" bodyfile="drivers/src/hpm_rtc_drv.c" bodystart="24" bodyend="37"/>
-      </memberdef>
-      <memberdef kind="function" id="group__rtc__interface_1ga30692199d0c99ae87a06a56a2226b5d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
-        <definition>hpm_stat_t rtc_config_alarm</definition>
-        <argsstring>(RTC_Type *base, rtc_alarm_config_t *config)</argsstring>
-        <name>rtc_config_alarm</name>
-        <param>
-          <type><ref refid="structRTC__Type" kindref="compound">RTC_Type</ref> *</type>
-          <declname>base</declname>
-        </param>
-        <param>
-          <type><ref refid="structrtc__alarm__config__t" kindref="compound">rtc_alarm_config_t</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Configure RTC Alarm. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername direction="in">base</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>RTC base address </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername direction="in">config</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>RTC alarm configuration pointer </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>API</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>execution status status_success or status_invalid_argument; </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/src/hpm_rtc_drv.c" line="39" column="12" bodyfile="drivers/src/hpm_rtc_drv.c" bodystart="39" bodyend="77"/>
-      </memberdef>
-      </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__rtc__interface_1ga46a1ec510cd686e4f51310a7feaf27f1" kind="function"><name>rtc_config_time</name></member>
+      <member refid="group__rtc__interface_1ga9b8c5cac50cbb55eefcc4c519860b576" kind="function"><name>rtc_get_time</name></member>
+      <member refid="group__rtc__interface_1ga77c01d638e5e3d651a5af54151fdd8bf" kind="function"><name>rtc_get_timeval</name></member>
+      <member refid="group__rtc__interface_1ga30692199d0c99ae87a06a56a2226b5d8" kind="function"><name>rtc_config_alarm</name></member>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
