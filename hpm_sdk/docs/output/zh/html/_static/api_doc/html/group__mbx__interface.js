@@ -1,7 +1,7 @@
 var group__mbx__interface =
 [
     [ "MBX_CR_ALL_INTERRUPTS_MASK", "group__mbx__interface.html#ga88a217f2d4584891014320787c1df818", [
-      [ "status_mbx_not_available", "group__mbx__interface.html#gga70ad55be767ca0a42c9150d24618e4caa79010cdaf5f6eb258155dcfe0a8bf20c", null ]
+      [ "status_mbx_not_available", "group__mbx__interface.html#ggaa491173a6b1628f4ff82067b2e1ceaa9a79010cdaf5f6eb258155dcfe0a8bf20c", null ]
     ] ],
     [ "mbx_bus_access_resp_t", "group__mbx__interface.html#gae3093239970728d6ccfe0ae56291a27c", [
       [ "no_bus_error_no_wait", "group__mbx__interface.html#ggae3093239970728d6ccfe0ae56291a27caa19d26ae5cff269c6c7af819432341e9", null ],

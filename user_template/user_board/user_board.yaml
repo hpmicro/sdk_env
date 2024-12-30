@@ -1,6 +1,39 @@
 # Copyright (c) 2022-2024 HPMicro
 # SPDX-License-Identifier: BSD-3-Clause
 
+# board:
+#     name: 用户定义的板子名称，与文件夹名称，yaml和cfg文件的名称保持相同
+#     soc: 芯片名称，如HPM6750，属于先楫的soc名称
+#     device: 芯片型号，如HPM6750xVMx
+#     openocd-soc: 芯片对应的openocd脚本文件名称, 见boards/openocd/soc文件夹
+#     openocd-probe: openocd的调试器名称，支持cmsis_dap/ft232/ft2232/jlink/andes_aice, 用户可以指定调试器，生成的工程配置就会默认使用该调试器
+#     on-board-flash: 板子上的flash信息，soc的内置Flash同样在此申明
+#        type: flash类型
+#        size: flash大小，用户根据实际设置该值，该size会被cmake处理并运用于默认的flash相关的linker中，如hpm_sdk\soc\HPM6700\HPM6750\toolchains\segger\flash_xip.icf中的_flash_size
+#     on-board-ram: 板上的RAM信息， 如板载SDRAM，如不存在则无需申明
+#        type: ram类型
+#        size: ram大小，用户根据实际设置该值，该size会被cmake处理并运用于默认的ram相关的linker中，如hpm_sdk\soc\HPM6700\HPM6750\toolchains\segger\flash_sdram_xip.icf中的_extram_size
+#        width: ram宽度，如32bit
+#     feature: 板子特性，用于描述一些板子特有的属性，sample的app.yaml中会使用到该属性, 当条件满足时，对应的sample才能给构建。用户在组织自己的板子和sample时可以不用使用该功能。
+
+# board:
+#     name: User-defined board name, which should be the same as the folder name, yaml and cfg file name.
+#     soc: Chip name, such as HPM6750, which needs to be the name of a HPMicro SOC.
+#     device: Device name, such as HPM6750xVMx.
+#     openocd-soc: The name of the OpenOCD script file.
+#     openocd-probe: The probe name for OpenOCD, supporting cmsis_dap/ft232/ft2232/jlink/andes_aice. Users can specify a probe, and the generated project configuration will use this probe by default.
+#     on-board-flash: Flash information on the board. The built-in Flash of the SOC is also declared here.
+#        type: Type of flash.
+#        size: Flash size, which should be set according to actual conditions. This size will be processed by cmake and applied to the default flash-related linker, such as _flash_size in hpm_sdk\soc\HPM6700\HPM6750\toolchains\segger\flash_xip.icf.
+#     on-board-ram: RAM information on the board, such as on-board SDRAM. If it does not exist, it does not need to be declared.
+#        type: Type of RAM.
+#        size: RAM size, which should be set according to actual conditions. This size will be processed by cmake and applied to the default RAM-related linker, such as _extram_size in hpm_sdk\soc\HPM6700\HPM6750\toolchains\segger\flash_sdram_xip.icf.
+#        width: RAM width, such as 32bit.
+#     feature: Board features used to describe some unique attributes of the board. This attribute is used in the app.yaml of the sample. When the condition is met, the corresponding sample can be built. Users may not need to use this feature when organizing their own boards and samples.
+
+# 注意：以下数据中不可添加注释，避免解析错误
+# Note: Do not add comments in the following data to avoid parsing errors.
+
 board:
     name: user_board
     soc: HPM6750

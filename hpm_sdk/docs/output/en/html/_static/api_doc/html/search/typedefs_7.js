@@ -25,6 +25,7 @@ var searchData=
   ['hpm_5fpanel_5ftiming_5ft_22',['hpm_panel_timing_t',['../hpm__panel_8h.html#a7bcd509fd4d6697ced5376ab368334d3',1,'hpm_panel.h']]],
   ['hpm_5fpmbus_5fcomplete_5fcb_5ft_23',['hpm_pmbus_complete_cb_t',['../hpm__pmbus_8h.html#aae156c33adbdea23fcedfa7bc4c6f3f8',1,'hpm_pmbus.h']]],
   ['hpm_5fsccb_5fbus_5ft_24',['hpm_sccb_bus_t',['../hpm__sccb_8h.html#a6f1d214c329b4f498bce461eb0f6e4c5',1,'hpm_sccb.h']]],
-  ['hpm_5fsmc_5fpll_5fpara_5ft_25',['hpm_smc_pll_para_t',['../group__mcl__smc__interface.html#gacd7ae677b656d38b74b95793e4e1f85e',1,'hpm_smc.h']]],
-  ['hpm_5fstat_5ft_26',['hpm_stat_t',['../group__common__interface.html#ga087efae82a4b174a0363363d9d5ece19',1,'hpm_common.h']]]
+  ['hpm_5fsdmmc_5fosal_5fevent_5ft_25',['hpm_sdmmc_osal_event_t',['../group__hpm__sdmmc.html#gac8fd7e34bc5f3c542e20fe1037d631ce',1,'hpm_sdmmc_osal.h']]],
+  ['hpm_5fsmc_5fpll_5fpara_5ft_26',['hpm_smc_pll_para_t',['../group__mcl__smc__interface.html#gacd7ae677b656d38b74b95793e4e1f85e',1,'hpm_smc.h']]],
+  ['hpm_5fstat_5ft_27',['hpm_stat_t',['../group__common__interface.html#ga087efae82a4b174a0363363d9d5ece19',1,'hpm_common.h']]]
 ];

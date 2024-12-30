@@ -28,6 +28,7 @@ var dir_9babc78f48844cf6bdf653466a1f6dcb =
     [ "hpm_soc.h", "HPM6200_2HPM6280_2hpm__soc_8h.html", "HPM6200_2HPM6280_2hpm__soc_8h" ],
     [ "hpm_soc_feature.h", "HPM6200_2HPM6280_2hpm__soc__feature_8h.html", "HPM6200_2HPM6280_2hpm__soc__feature_8h" ],
     [ "hpm_soc_ip_feature.h", "HPM6200_2HPM6280_2hpm__soc__ip__feature_8h.html", "HPM6200_2HPM6280_2hpm__soc__ip__feature_8h" ],
+    [ "hpm_soc_irq.h", "HPM6200_2HPM6280_2hpm__soc__irq_8h.html", "HPM6200_2HPM6280_2hpm__soc__irq_8h" ],
     [ "hpm_sysctl_drv.c", "HPM6200_2HPM6280_2hpm__sysctl__drv_8c.html", "HPM6200_2HPM6280_2hpm__sysctl__drv_8c" ],
     [ "hpm_sysctl_drv.h", "HPM6200_2HPM6280_2hpm__sysctl__drv_8h.html", "HPM6200_2HPM6280_2hpm__sysctl__drv_8h" ],
     [ "hpm_trgmmux_src.h", "HPM6200_2HPM6280_2hpm__trgmmux__src_8h.html", "HPM6200_2HPM6280_2hpm__trgmmux__src_8h" ],

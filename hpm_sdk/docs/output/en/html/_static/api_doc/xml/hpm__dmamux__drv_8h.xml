@@ -5,6 +5,8 @@
     <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
     <includes local="yes">hpm_dmamux_regs.h</includes>
     <includedby refid="hpm__dma__mgr_8h" local="yes">components/dma_mgr/hpm_dma_mgr.h</includedby>
+    <includedby refid="hpm__i2c_8h" local="yes">components/i2c/hpm_i2c.h</includedby>
+    <includedby refid="hpm__lin__clock__detection_8h" local="yes">components/plb/lin_clock_detection/hpm_lin_clock_detection.h</includedby>
     <includedby refid="hpm__serial__nor__host__spi_8c" local="yes">components/serial_nor/interface/spi/hpm_serial_nor_host_spi.c</includedby>
     <includedby refid="hpm__spi_8h" local="yes">components/spi/hpm_spi.h</includedby>
     <incdepgraph>
@@ -62,6 +64,16 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
+      <node id="7">
+        <label>components/i2c/hpm_i2c.c</label>
+        <link refid="hpm__i2c_8c"/>
+      </node>
+      <node id="6">
+        <label>components/i2c/hpm_i2c.h</label>
+        <link refid="hpm__i2c_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
       <node id="5">
         <label>components/i2s_over_spi/hpm_i2s_over_spi.c</label>
         <link refid="hpm__i2s__over__spi_8c"/>
@@ -72,20 +84,30 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="9">
+        <label>components/plb/lin_clock_detection/hpm_lin_clock_detection.c</label>
+        <link refid="hpm__lin__clock__detection_8c"/>
+      </node>
+      <node id="8">
+        <label>components/plb/lin_clock_detection/hpm_lin_clock_detection.h</label>
+        <link refid="hpm__lin__clock__detection_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
         <label>components/serial_nor/interface/spi/hpm_serial_nor_host_spi.c</label>
         <link refid="hpm__serial__nor__host__spi_8c"/>
       </node>
-      <node id="8">
+      <node id="12">
         <label>components/spi/hpm_spi.c</label>
         <link refid="hpm__spi_8c"/>
       </node>
-      <node id="7">
+      <node id="11">
         <label>components/spi/hpm_spi.h</label>
         <link refid="hpm__spi_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -95,7 +117,11 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

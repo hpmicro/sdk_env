@@ -4,8 +4,57 @@
     <compoundname>i2s_interface</compoundname>
     <title>I2S driver APIs</title>
     <innerclass refid="structi2s__config" prot="public">i2s_config</innerclass>
-    <innerclass refid="structi2x__transfer__config" prot="public">i2x_transfer_config</innerclass>
+    <innerclass refid="structi2s__transfer__config" prot="public">i2s_transfer_config</innerclass>
+    <innerclass refid="structi2s__multiline__transfer__config" prot="public">i2s_multiline_transfer_config</innerclass>
     <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" prot="public" static="no" strong="no">
+        <type></type>
+        <name>i2s_line_num_t</name>
+        <enumvalue id="group__i2s__interface_1ggaffd167c8fd0ce11cd0dc2555e4dc3ff7ab36dd1e9ab7f98f89c5809ad24558743" prot="public">
+          <name>I2S_DATA_LINE_0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__i2s__interface_1ggaffd167c8fd0ce11cd0dc2555e4dc3ff7a8088ac96df5cb32594451848995df4ca" prot="public">
+          <name>I2S_DATA_LINE_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__i2s__interface_1ggaffd167c8fd0ce11cd0dc2555e4dc3ff7a46bc94436f558cbe240181e895e28809" prot="public">
+          <name>I2S_DATA_LINE_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__i2s__interface_1ggaffd167c8fd0ce11cd0dc2555e4dc3ff7acb07f79836276d293e09cb60ace72b2f" prot="public">
+          <name>I2S_DATA_LINE_3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__i2s__interface_1ggaffd167c8fd0ce11cd0dc2555e4dc3ff7a3f37b4855171a45dcd2f7200d3bc870e" prot="public">
+          <name>I2S_DATA_LINE_MAX</name>
+          <initializer>= I2S_DATA_LINE_3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="22" column="1" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="22" bodyend="28"/>
+      </memberdef>
       <memberdef kind="enum" id="group__i2s__interface_1ga94177974134637689caa969ab5470d2e" prot="public" static="no" strong="no">
         <type></type>
         <name>i2s_irq_mask_t</name>
@@ -39,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="65" column="1" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="65" bodyend="69"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="81" column="1" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="81" bodyend="85"/>
       </memberdef>
       <memberdef kind="enum" id="group__i2s__interface_1ga06782981bb1e42e2a799985c12fcf3fa" prot="public" static="no" strong="no">
         <type></type>
@@ -82,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="71" column="1" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="71" bodyend="76"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="87" column="1" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="87" bodyend="92"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -98,11 +147,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="48" column="14"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="47" column="14"/>
       </memberdef>
-      <memberdef kind="typedef" id="group__i2s__interface_1ga564f920f48b4ea29bc67912256aafb66" prot="public" static="no">
-        <type>struct <ref refid="structi2x__transfer__config" kindref="compound">i2x_transfer_config</ref></type>
-        <definition>typedef struct i2x_transfer_config i2s_transfer_config_t</definition>
+      <memberdef kind="typedef" id="group__i2s__interface_1ga322b6efd140ece3c3464aac38ad5eabc" prot="public" static="no">
+        <type>struct <ref refid="structi2s__transfer__config" kindref="compound">i2s_transfer_config</ref></type>
+        <definition>typedef struct i2s_transfer_config i2s_transfer_config_t</definition>
         <argsstring></argsstring>
         <name>i2s_transfer_config_t</name>
         <briefdescription>
@@ -112,7 +161,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="63" column="23"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="62" column="23"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__i2s__interface_1gadbd4b907546027c3e20fdef3573e6690" prot="public" static="no">
+        <type>struct <ref refid="structi2s__multiline__transfer__config" kindref="compound">i2s_multiline_transfer_config</ref></type>
+        <definition>typedef struct i2s_multiline_transfer_config i2s_multiline_transfer_config_t</definition>
+        <argsstring></argsstring>
+        <name>i2s_multiline_transfer_config_t</name>
+        <briefdescription>
+<para>I2S multiline transfer config. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="79" column="33"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -142,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="87" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="87" bodyend="90"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="103" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="103" bodyend="106"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga4a77c299471dcdefb7e42a10858caec7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -170,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="97" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="97" bodyend="100"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="113" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="113" bodyend="116"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga9f722ce6b43f114048042d0290702b34" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -210,7 +273,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="108" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="108" bodyend="112"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="124" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="124" bodyend="128"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1gaac2a54bc99b1c5702aa8e64d9c708056" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -250,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="120" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="120" bodyend="124"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="136" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="136" bodyend="140"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga9f47127d1de1ed13641fb07d642949b3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -278,7 +341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="131" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="131" bodyend="134"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="147" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="147" bodyend="150"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga769fd88f83d0ca70777204a62be8db27" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -306,7 +369,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="141" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="141" bodyend="144"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="157" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="157" bodyend="160"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1gae0bb37dfcf0f1269e697558420db0952" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -334,7 +397,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="151" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="151" bodyend="154"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="167" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="167" bodyend="170"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1gae7fac21a7960f0ef15fa17e7740d952b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -362,7 +425,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="161" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="161" bodyend="164"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="177" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="177" bodyend="180"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga90a0466457bc4f98edfbee0502848674" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -390,7 +453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="171" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="171" bodyend="174"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="187" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="187" bodyend="190"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga37e7165054e3c05673f3a79e60b64c8c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -418,7 +481,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="181" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="181" bodyend="184"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="197" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="197" bodyend="200"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga7cd88eff904afe0e847651cbb2489315" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -446,7 +509,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="191" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="191" bodyend="194"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="207" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="207" bodyend="210"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga70d5ad726b7cd82c3eb90ee75f496f5f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -474,7 +537,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="201" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="201" bodyend="204"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="217" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="217" bodyend="220"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga62bfce3e59509c1e57cfbb7ca2122043" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -514,7 +577,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="212" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="212" bodyend="215"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="228" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="228" bodyend="231"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1gab1d657ee933c22a68ccc9bbcf54b27ac" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -554,7 +617,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="223" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="223" bodyend="226"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="239" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="239" bodyend="242"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga59be739d71f92fff2ecb0945d3193a3f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -584,7 +647,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="235" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="235" bodyend="238"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="251" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="251" bodyend="254"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1gac8665c1a892ad741e4fad5bb45a18dc5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -614,7 +677,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="247" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="247" bodyend="250"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="263" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="263" bodyend="266"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1gadb28302871a32e82ea41ff21460eb3a7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -642,7 +705,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="257" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="257" bodyend="260"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="273" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="273" bodyend="276"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga48bcd03c2f20ad93bb4c4e7520de1b07" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -670,7 +733,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="267" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="267" bodyend="270"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="283" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="283" bodyend="286"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga2af641555d8cf6ca94284e5ac672ce02" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -710,7 +773,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="278" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="278" bodyend="281"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="294" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="294" bodyend="297"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1gae2e767b5b3e1df92ae02474b9c1a0cb6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -750,7 +813,87 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="289" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="289" bodyend="292"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="305" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="305" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2s__interface_1ga6ac7c05ef6b4e0afd96a6fb8d22eb60a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2s_enable_rx_line</definition>
+        <argsstring>(I2S_Type *ptr, i2s_line_num_t line)</argsstring>
+        <name>i2s_enable_rx_line</name>
+        <param>
+          <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>I2S enable rx line function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2S base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rx data line, <ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="316" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="316" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2s__interface_1gaf406c98ea03bec94599facd938396c4a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2s_disable_rx_line</definition>
+        <argsstring>(I2S_Type *ptr, i2s_line_num_t line)</argsstring>
+        <name>i2s_disable_rx_line</name>
+        <param>
+          <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>I2S disable rx line function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2S base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rx data line, <ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="327" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="327" bodyend="330"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1gafd124ee77bd5bd030329e48294fb4a46" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -790,7 +933,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="300" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="300" bodyend="303"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="338" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="338" bodyend="341"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga4d3406188ec039b0849e2e49e606a382" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -830,7 +973,191 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="311" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="311" bodyend="314"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="349" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="349" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2s__interface_1ga1b68863ee1c6a1ddce0db001ff207011" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2s_enable_tx_line</definition>
+        <argsstring>(I2S_Type *ptr, i2s_line_num_t line)</argsstring>
+        <name>i2s_enable_tx_line</name>
+        <param>
+          <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>I2S enable tx function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2S base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tx data line, <ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="360" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="360" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2s__interface_1ga7d5ee7bfa85a39f2c3d9dd0a3bbf6ff2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2s_disable_tx_line</definition>
+        <argsstring>(I2S_Type *ptr, i2s_line_num_t line)</argsstring>
+        <name>i2s_disable_tx_line</name>
+        <param>
+          <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>I2S disbale tx function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2S base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tx data line, <ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="371" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="371" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2s__interface_1ga2268c8ff29d9c752ccc50073a9076f10" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2s_set_txd_slot</definition>
+        <argsstring>(I2S_Type *ptr, i2s_line_num_t line, uint32_t slot_mask)</argsstring>
+        <name>i2s_set_txd_slot</name>
+        <param>
+          <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>slot_mask</declname>
+        </param>
+        <briefdescription>
+<para>I2S set tx slot mask. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2S base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tx data line, <ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slot_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>slot mask </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="383" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="383" bodyend="386"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2s__interface_1ga5bff2444ac8b0180665d56ccee3c7974" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2s_set_rxd_slot</definition>
+        <argsstring>(I2S_Type *ptr, i2s_line_num_t line, uint32_t slot_mask)</argsstring>
+        <name>i2s_set_rxd_slot</name>
+        <param>
+          <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>slot_mask</declname>
+        </param>
+        <briefdescription>
+<para>I2S set rx slot mask. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2S base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rx data line, <ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slot_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>slot mask </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="395" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="395" bodyend="398"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga73ae0c37969f3cd29b07de8450547101" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -858,7 +1185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="321" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="321" bodyend="325"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="405" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="405" bodyend="409"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga6382fa15dbe387c362c7d33e172ee33e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -888,7 +1215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="335" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="335" bodyend="343"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="419" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="419" bodyend="427"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga373803ac684300de887c6e5d69c1f55b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -918,7 +1245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="353" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="353" bodyend="361"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="437" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="437" bodyend="445"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga27e3ca81760a38a21977276e62e44cd9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -948,7 +1275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="371" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="371" bodyend="379"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="455" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="455" bodyend="463"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga11e25d7bfad09702a627aa454caa8c89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -978,7 +1305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="390" column="6" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="59" bodyend="80" declfile="drivers/inc/hpm_i2s_drv.h" declline="390" declcolumn="6"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="474" column="6" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="59" bodyend="80" declfile="drivers/inc/hpm_i2s_drv.h" declline="474" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1gac4c35ad97ebab6fc41894620ecf0d2ae" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -1015,19 +1342,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="399" column="24" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="399" bodyend="402"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="483" column="24" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="483" bodyend="486"/>
       </memberdef>
-      <memberdef kind="function" id="group__i2s__interface_1ga34201484a7ac36beaf72cef18917a616" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="group__i2s__interface_1gae046d863b02608fcee54d21b8f520221" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
         <definition>static uint32_t i2s_get_tx_line_fifo_level</definition>
-        <argsstring>(I2S_Type *ptr, uint8_t line)</argsstring>
+        <argsstring>(I2S_Type *ptr, i2s_line_num_t line)</argsstring>
         <name>i2s_get_tx_line_fifo_level</name>
         <param>
           <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
           <declname>ptr</declname>
         </param>
         <param>
-          <type>uint8_t</type>
+          <type><ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></type>
           <declname>line</declname>
         </param>
         <briefdescription>
@@ -1047,7 +1374,7 @@
 <parametername direction="in">line</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>I2S data line</para>
+<para>I2S data line, <ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1064,7 +1391,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="412" column="24" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="412" bodyend="415"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="496" column="24" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="496" bodyend="499"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga92aa2defc79630fdaecc384a9cddf894" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -1101,19 +1428,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="424" column="24" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="424" bodyend="427"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="508" column="24" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="508" bodyend="511"/>
       </memberdef>
-      <memberdef kind="function" id="group__i2s__interface_1ga9f0e64659cbde2139c7f3d6ce841fae5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="group__i2s__interface_1ga329ffa352a5877b4c6b88f513766e178" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
         <definition>static uint32_t i2s_get_rx_line_fifo_level</definition>
-        <argsstring>(I2S_Type *ptr, uint8_t line)</argsstring>
+        <argsstring>(I2S_Type *ptr, i2s_line_num_t line)</argsstring>
         <name>i2s_get_rx_line_fifo_level</name>
         <param>
           <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
           <declname>ptr</declname>
         </param>
         <param>
-          <type>uint8_t</type>
+          <type><ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></type>
           <declname>line</declname>
         </param>
         <briefdescription>
@@ -1133,7 +1460,7 @@
 <parametername direction="in">line</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>I2S data line</para>
+<para>I2S data line, <ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1150,19 +1477,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="437" column="24" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="437" bodyend="440"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="521" column="24" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="521" bodyend="524"/>
       </memberdef>
-      <memberdef kind="function" id="group__i2s__interface_1ga9b6e4fb34a76e2523df01ca7d5e6c796" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="group__i2s__interface_1ga530a32c52805e0c2bb83a316a398cfe6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
         <definition>static uint32_t i2s_check_data_line_status</definition>
-        <argsstring>(I2S_Type *ptr, uint8_t line)</argsstring>
+        <argsstring>(I2S_Type *ptr, i2s_line_num_t line)</argsstring>
         <name>i2s_check_data_line_status</name>
         <param>
           <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
           <declname>ptr</declname>
         </param>
         <param>
-          <type>uint8_t</type>
+          <type><ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></type>
           <declname>line</declname>
         </param>
         <briefdescription>
@@ -1182,7 +1509,7 @@
 <parametername direction="in">line</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>I2S data line</para>
+<para>I2S data line, <ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1223,7 +1550,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="453" column="24" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="453" bodyend="482"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="537" column="24" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="537" bodyend="566"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga636b436614e688587518b5417c45901f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -1260,7 +1587,47 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="491" column="24" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="491" bodyend="494"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="575" column="24" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="575" bodyend="578"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2s__interface_1ga06ba73457b6bfd289a69c207e632f5f4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2s_clear_irq_status</definition>
+        <argsstring>(I2S_Type *ptr, uint32_t mask)</argsstring>
+        <name>i2s_clear_irq_status</name>
+        <param>
+          <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>I2S get IRQ status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2S base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2S STA.TX_UD or STA.RX_OV mask bits </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="586" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="586" bodyend="589"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga6b18d0ea0372df025628f609356b78e0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1288,7 +1655,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="501" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="501" bodyend="504"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="596" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="596" bodyend="599"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1gae3a885c134db164e97620e0613da3ecb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -1304,7 +1671,7 @@
           <declname>mclk_in_hz</declname>
         </param>
         <param>
-          <type><ref refid="group__i2s__interface_1ga564f920f48b4ea29bc67912256aafb66" kindref="member">i2s_transfer_config_t</ref> *</type>
+          <type><ref refid="group__i2s__interface_1ga322b6efd140ece3c3464aac38ad5eabc" kindref="member">i2s_transfer_config_t</ref> *</type>
           <declname>config</declname>
         </param>
         <briefdescription>
@@ -1351,7 +1718,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="516" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="293" bodyend="308" declfile="drivers/inc/hpm_i2s_drv.h" declline="516" declcolumn="12"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="611" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="293" bodyend="308" declfile="drivers/inc/hpm_i2s_drv.h" declline="611" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga580cc65408077e517af14c8c8b7bed93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -1363,7 +1730,7 @@
           <declname>ptr</declname>
         </param>
         <param>
-          <type><ref refid="group__i2s__interface_1ga564f920f48b4ea29bc67912256aafb66" kindref="member">i2s_transfer_config_t</ref> *</type>
+          <type><ref refid="group__i2s__interface_1ga322b6efd140ece3c3464aac38ad5eabc" kindref="member">i2s_transfer_config_t</ref> *</type>
           <declname>config</declname>
         </param>
         <briefdescription>
@@ -1393,7 +1760,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="526" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="310" bodyend="316" declfile="drivers/inc/hpm_i2s_drv.h" declline="526" declcolumn="12"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="621" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="310" bodyend="316" declfile="drivers/inc/hpm_i2s_drv.h" declline="621" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga42352999b2fb9ea8b5e3f9aa7f051599" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -1409,7 +1776,7 @@
           <declname>mclk_in_hz</declname>
         </param>
         <param>
-          <type><ref refid="group__i2s__interface_1ga564f920f48b4ea29bc67912256aafb66" kindref="member">i2s_transfer_config_t</ref> *</type>
+          <type><ref refid="group__i2s__interface_1ga322b6efd140ece3c3464aac38ad5eabc" kindref="member">i2s_transfer_config_t</ref> *</type>
           <declname>config</declname>
         </param>
         <briefdescription>
@@ -1456,7 +1823,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="538" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="318" bodyend="333" declfile="drivers/inc/hpm_i2s_drv.h" declline="538" declcolumn="12"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="633" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="318" bodyend="333" declfile="drivers/inc/hpm_i2s_drv.h" declline="633" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1gaa303f48f3b9e214b655d14f55230b482" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -1468,7 +1835,7 @@
           <declname>ptr</declname>
         </param>
         <param>
-          <type><ref refid="group__i2s__interface_1ga564f920f48b4ea29bc67912256aafb66" kindref="member">i2s_transfer_config_t</ref> *</type>
+          <type><ref refid="group__i2s__interface_1ga322b6efd140ece3c3464aac38ad5eabc" kindref="member">i2s_transfer_config_t</ref> *</type>
           <declname>config</declname>
         </param>
         <briefdescription>
@@ -1507,7 +1874,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="549" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="335" bodyend="341" declfile="drivers/inc/hpm_i2s_drv.h" declline="549" declcolumn="12"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="644" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="335" bodyend="341" declfile="drivers/inc/hpm_i2s_drv.h" declline="644" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga6dcda38751d3daafed9adff1f74fd75d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -1523,7 +1890,7 @@
           <declname>mclk_in_hz</declname>
         </param>
         <param>
-          <type><ref refid="group__i2s__interface_1ga564f920f48b4ea29bc67912256aafb66" kindref="member">i2s_transfer_config_t</ref> *</type>
+          <type><ref refid="group__i2s__interface_1ga322b6efd140ece3c3464aac38ad5eabc" kindref="member">i2s_transfer_config_t</ref> *</type>
           <declname>config</declname>
         </param>
         <briefdescription>
@@ -1570,7 +1937,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="561" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="343" bodyend="358" declfile="drivers/inc/hpm_i2s_drv.h" declline="561" declcolumn="12"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="656" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="343" bodyend="358" declfile="drivers/inc/hpm_i2s_drv.h" declline="656" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga7df40e4ce235a33044cade4932945103" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -1582,7 +1949,7 @@
           <declname>ptr</declname>
         </param>
         <param>
-          <type><ref refid="group__i2s__interface_1ga564f920f48b4ea29bc67912256aafb66" kindref="member">i2s_transfer_config_t</ref> *</type>
+          <type><ref refid="group__i2s__interface_1ga322b6efd140ece3c3464aac38ad5eabc" kindref="member">i2s_transfer_config_t</ref> *</type>
           <declname>config</declname>
         </param>
         <briefdescription>
@@ -1621,19 +1988,82 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="572" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="360" bodyend="366" declfile="drivers/inc/hpm_i2s_drv.h" declline="572" declcolumn="12"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="667" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="360" bodyend="366" declfile="drivers/inc/hpm_i2s_drv.h" declline="667" declcolumn="12"/>
       </memberdef>
-      <memberdef kind="function" id="group__i2s__interface_1ga5f02b493ab21b8f3ce7dba64502df06e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="group__i2s__interface_1gaa13209bc4d2d16b8e9203156998dc896" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t i2s_config_multiline_transfer</definition>
+        <argsstring>(I2S_Type *ptr, uint32_t mclk_in_hz, i2s_multiline_transfer_config_t *config)</argsstring>
+        <name>i2s_config_multiline_transfer</name>
+        <param>
+          <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mclk_in_hz</declname>
+        </param>
+        <param>
+          <type><ref refid="group__i2s__interface_1gadbd4b907546027c3e20fdef3573e6690" kindref="member">i2s_multiline_transfer_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>I2S config multiline transfer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This API will disable I2S and configure parameters, could call <ref refid="group__i2s__interface_1ga59be739d71f92fff2ecb0945d3193a3f" kindref="member">i2s_enable()</ref> to enable I2S</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2S base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mclk_in_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mclk frequency in Hz </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>i2s_multiline_transfer_config_t </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_invalid_argument or status_success </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="679" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="368" bodyend="456" declfile="drivers/inc/hpm_i2s_drv.h" declline="679" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2s__interface_1gad0a0426b3070ba08f0702ca9f8a8b023" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>static void i2s_send_data</definition>
-        <argsstring>(I2S_Type *ptr, uint8_t tx_line_index, uint32_t data)</argsstring>
+        <argsstring>(I2S_Type *ptr, i2s_line_num_t tx_line_index, uint32_t data)</argsstring>
         <name>i2s_send_data</name>
         <param>
           <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
           <declname>ptr</declname>
         </param>
         <param>
-          <type>uint8_t</type>
+          <type><ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></type>
           <declname>tx_line_index</declname>
         </param>
         <param>
@@ -1657,7 +2087,7 @@
 <parametername direction="in">tx_line_index</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>data line </para>
+<para>data line, <ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1673,19 +2103,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="581" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="581" bodyend="584"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="688" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="688" bodyend="691"/>
       </memberdef>
-      <memberdef kind="function" id="group__i2s__interface_1gaafcf248a0adc3178e409d06c737e146a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="group__i2s__interface_1gaf47e3e91ea8035bea57f5a79d6e1c251" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>static void i2s_receive_data</definition>
-        <argsstring>(I2S_Type *ptr, uint8_t rx_line_index, uint32_t *data)</argsstring>
+        <argsstring>(I2S_Type *ptr, i2s_line_num_t rx_line_index, uint32_t *data)</argsstring>
         <name>i2s_receive_data</name>
         <param>
           <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
           <declname>ptr</declname>
         </param>
         <param>
-          <type>uint8_t</type>
+          <type><ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></type>
           <declname>rx_line_index</declname>
         </param>
         <param>
@@ -1709,7 +2139,7 @@
 <parametername direction="in">rx_line_index</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>data line </para>
+<para>data line, <ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1725,19 +2155,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="593" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="593" bodyend="596"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="700" column="20" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="700" bodyend="703"/>
       </memberdef>
-      <memberdef kind="function" id="group__i2s__interface_1gaf1283fa9a5040b94efe196b0130212ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__i2s__interface_1ga5df51bcb8bc9963bafc969df4a7f3896" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
         <definition>uint32_t i2s_send_buff</definition>
-        <argsstring>(I2S_Type *ptr, uint8_t tx_line_index, uint8_t samplebits, uint8_t *src, uint32_t size)</argsstring>
+        <argsstring>(I2S_Type *ptr, i2s_line_num_t tx_line_index, uint8_t samplebits, uint8_t *src, uint32_t size)</argsstring>
         <name>i2s_send_buff</name>
         <param>
           <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
           <declname>ptr</declname>
         </param>
         <param>
-          <type>uint8_t</type>
+          <type><ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></type>
           <declname>tx_line_index</declname>
         </param>
         <param>
@@ -1769,7 +2199,7 @@
 <parametername direction="in">tx_line_index</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>data line </para>
+<para>data line, <ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1810,19 +2240,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="609" column="10" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="368" bodyend="402" declfile="drivers/inc/hpm_i2s_drv.h" declline="609" declcolumn="10"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="716" column="10" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="458" bodyend="492" declfile="drivers/inc/hpm_i2s_drv.h" declline="716" declcolumn="10"/>
       </memberdef>
-      <memberdef kind="function" id="group__i2s__interface_1gae03958569c4e997b03f24d30a6921120" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__i2s__interface_1gabf98cdf6f561342c02716ed04b9424a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
         <definition>uint32_t i2s_receive_buff</definition>
-        <argsstring>(I2S_Type *ptr, uint8_t rx_line_index, uint8_t samplebits, uint8_t *dst, uint32_t size)</argsstring>
+        <argsstring>(I2S_Type *ptr, i2s_line_num_t rx_line_index, uint8_t samplebits, uint8_t *dst, uint32_t size)</argsstring>
         <name>i2s_receive_buff</name>
         <param>
           <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
           <declname>ptr</declname>
         </param>
         <param>
-          <type>uint8_t</type>
+          <type><ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></type>
           <declname>rx_line_index</declname>
         </param>
         <param>
@@ -1854,7 +2284,7 @@
 <parametername direction="in">rx_line_index</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>data line </para>
+<para>data line, <ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -1895,7 +2325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="622" column="10" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="404" bodyend="440" declfile="drivers/inc/hpm_i2s_drv.h" declline="622" declcolumn="10"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="729" column="10" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="494" bodyend="530" declfile="drivers/inc/hpm_i2s_drv.h" declline="729" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1gaa576c8aa8d58d4e87bb9f48449c03daa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1935,7 +2365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="630" column="6" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="82" bodyend="98" declfile="drivers/inc/hpm_i2s_drv.h" declline="630" declcolumn="6"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="737" column="6" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="82" bodyend="98" declfile="drivers/inc/hpm_i2s_drv.h" declline="737" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga9c7b197d4c55c492ff9dcf7d2879dfc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1975,7 +2405,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="638" column="6" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="100" bodyend="125" declfile="drivers/inc/hpm_i2s_drv.h" declline="638" declcolumn="6"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="745" column="6" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="100" bodyend="125" declfile="drivers/inc/hpm_i2s_drv.h" declline="745" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga395b25e2813858648c4a96d238f328e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1983,7 +2413,7 @@
         <argsstring>(i2s_transfer_config_t *transfer)</argsstring>
         <name>i2s_get_default_transfer_config_for_pdm</name>
         <param>
-          <type><ref refid="group__i2s__interface_1ga564f920f48b4ea29bc67912256aafb66" kindref="member">i2s_transfer_config_t</ref> *</type>
+          <type><ref refid="group__i2s__interface_1ga322b6efd140ece3c3464aac38ad5eabc" kindref="member">i2s_transfer_config_t</ref> *</type>
           <declname>transfer</declname>
         </param>
         <briefdescription>
@@ -2003,7 +2433,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="645" column="6" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="442" bodyend="450" declfile="drivers/inc/hpm_i2s_drv.h" declline="645" declcolumn="6"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="752" column="6" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="532" bodyend="543" declfile="drivers/inc/hpm_i2s_drv.h" declline="752" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1ga8442ec34b16f9820e6e7184ae96f2dea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2011,7 +2441,7 @@
         <argsstring>(i2s_transfer_config_t *transfer)</argsstring>
         <name>i2s_get_default_transfer_config_for_dao</name>
         <param>
-          <type><ref refid="group__i2s__interface_1ga564f920f48b4ea29bc67912256aafb66" kindref="member">i2s_transfer_config_t</ref> *</type>
+          <type><ref refid="group__i2s__interface_1ga322b6efd140ece3c3464aac38ad5eabc" kindref="member">i2s_transfer_config_t</ref> *</type>
           <declname>transfer</declname>
         </param>
         <briefdescription>
@@ -2031,7 +2461,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="652" column="6" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="452" bodyend="462" declfile="drivers/inc/hpm_i2s_drv.h" declline="652" declcolumn="6"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="759" column="6" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="545" bodyend="556" declfile="drivers/inc/hpm_i2s_drv.h" declline="759" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="group__i2s__interface_1gac79456e72d2d01fe58f8b78dae541766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2039,7 +2469,7 @@
         <argsstring>(i2s_transfer_config_t *transfer)</argsstring>
         <name>i2s_get_default_transfer_config</name>
         <param>
-          <type><ref refid="group__i2s__interface_1ga564f920f48b4ea29bc67912256aafb66" kindref="member">i2s_transfer_config_t</ref> *</type>
+          <type><ref refid="group__i2s__interface_1ga322b6efd140ece3c3464aac38ad5eabc" kindref="member">i2s_transfer_config_t</ref> *</type>
           <declname>transfer</declname>
         </param>
         <briefdescription>
@@ -2059,19 +2489,47 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="659" column="6" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="464" bodyend="474" declfile="drivers/inc/hpm_i2s_drv.h" declline="659" declcolumn="6"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="766" column="6" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="558" bodyend="569" declfile="drivers/inc/hpm_i2s_drv.h" declline="766" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="group__i2s__interface_1gab357636af3d2406b9e36626502849e9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__i2s__interface_1ga9b223bf474c0de90738911ece0ab08f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void i2s_get_default_multiline_transfer_config</definition>
+        <argsstring>(i2s_multiline_transfer_config_t *transfer)</argsstring>
+        <name>i2s_get_default_multiline_transfer_config</name>
+        <param>
+          <type><ref refid="group__i2s__interface_1gadbd4b907546027c3e20fdef3573e6690" kindref="member">i2s_multiline_transfer_config_t</ref> *</type>
+          <declname>transfer</declname>
+        </param>
+        <briefdescription>
+<para>I2S get default multiline transfer config. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">transfer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>i2s_multiline_transfer_config_t </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="773" column="6" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="571" bodyend="597" declfile="drivers/inc/hpm_i2s_drv.h" declline="773" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2s__interface_1ga9137d14252fec7b6fa1229ac5d9398d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
         <definition>hpm_stat_t i2s_fill_tx_dummy_data</definition>
-        <argsstring>(I2S_Type *ptr, uint8_t data_line, uint8_t data_count)</argsstring>
+        <argsstring>(I2S_Type *ptr, i2s_line_num_t data_line, uint8_t data_count)</argsstring>
         <name>i2s_fill_tx_dummy_data</name>
         <param>
           <type><ref refid="structI2S__Type" kindref="compound">I2S_Type</ref> *</type>
           <declname>ptr</declname>
         </param>
         <param>
-          <type>uint8_t</type>
+          <type><ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref></type>
           <declname>data_line</declname>
         </param>
         <param>
@@ -2097,7 +2555,7 @@
 <parametername direction="in">data_line</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>data line </para>
+<para>data line, <ref refid="group__i2s__interface_1gaffd167c8fd0ce11cd0dc2555e4dc3ff7" kindref="member">i2s_line_num_t</ref> </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -2122,65 +2580,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="674" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="38" bodyend="56" declfile="drivers/inc/hpm_i2s_drv.h" declline="674" declcolumn="12"/>
-      </memberdef>
-    </sectiondef>
-    <sectiondef kind="define">
-      <memberdef kind="define" id="group__i2s__interface_1gac9ec1cd72f6b5783705453fdbc93fc95" prot="public" static="no">
-        <name>I2S_DATA_LINE_0</name>
-        <initializer>(0U)</initializer>
-        <briefdescription>
-<para>I2S data line. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="25" column="9" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="25" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__i2s__interface_1ga9cba662c9fe299dc0d1e880e7672e5ba" prot="public" static="no">
-        <name>I2S_DATA_LINE_1</name>
-        <initializer>(1U)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="26" column="9" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="26" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__i2s__interface_1ga437c3a49c76b2948ada2ada4e8fcec0c" prot="public" static="no">
-        <name>I2S_DATA_LINE_2</name>
-        <initializer>(2U)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="27" column="9" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="27" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__i2s__interface_1ga45984dc8bb4358183b458aa8cb7a001f" prot="public" static="no">
-        <name>I2S_DATA_LINE_3</name>
-        <initializer>(3U)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="28" column="9" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="28" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="group__i2s__interface_1gade510a977659be9f0651a4ca5ba3e7f1" prot="public" static="no">
-        <name>I2S_DATA_LINE_MAX</name>
-        <initializer><ref refid="group__i2s__interface_1ga45984dc8bb4358183b458aa8cb7a001f" kindref="member">I2S_DATA_LINE_3</ref></initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="drivers/inc/hpm_i2s_drv.h" line="29" column="9" bodyfile="drivers/inc/hpm_i2s_drv.h" bodystart="29" bodyend="-1"/>
+        <location file="drivers/inc/hpm_i2s_drv.h" line="788" column="12" bodyfile="drivers/src/hpm_i2s_drv.c" bodystart="38" bodyend="56" declfile="drivers/inc/hpm_i2s_drv.h" declline="788" declcolumn="12"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

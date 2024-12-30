@@ -1,7 +1,7 @@
 var structSDM__Type =
 [
-    [ "CH", "structSDM__Type.html#ad08aaf2205e773f3cadbcb1b058f0901", null ],
-    [ "CH", "structSDM__Type.html#a431410dd1ac5f2ad0d5567018b6dfc18", null ],
+    [ "CH", "structSDM__Type.html#a0408e0417d0f4842dbcd59430baaedd3", null ],
+    [ "CH", "structSDM__Type.html#a94e2bb28e4b788817818034db9b8fffa", null ],
     [ "CTRL", "structSDM__Type.html#a2e8ffb3fd8f31d4fffeb342ca8707cd1", null ],
     [ "INT_EN", "structSDM__Type.html#a25a57652ecab5a7eb97c13a4c68e5503", null ],
     [ "RESERVED0", "structSDM__Type.html#a6f5d6abc9c6583272125fd0cb3424fc9", null ],

@@ -29,6 +29,7 @@ var dir_4e56b03052746fff05a5ebf67cbc517d =
     [ "hpm_soc.h", "HPM6E00_2HPM6E80_2hpm__soc_8h.html", "HPM6E00_2HPM6E80_2hpm__soc_8h" ],
     [ "hpm_soc_feature.h", "HPM6E00_2HPM6E80_2hpm__soc__feature_8h.html", "HPM6E00_2HPM6E80_2hpm__soc__feature_8h" ],
     [ "hpm_soc_ip_feature.h", "HPM6E00_2HPM6E80_2hpm__soc__ip__feature_8h.html", "HPM6E00_2HPM6E80_2hpm__soc__ip__feature_8h" ],
+    [ "hpm_soc_irq.h", "HPM6E00_2HPM6E80_2hpm__soc__irq_8h.html", "HPM6E00_2HPM6E80_2hpm__soc__irq_8h" ],
     [ "hpm_sysctl_drv.c", "HPM6E00_2HPM6E80_2hpm__sysctl__drv_8c.html", "HPM6E00_2HPM6E80_2hpm__sysctl__drv_8c" ],
     [ "hpm_sysctl_drv.h", "HPM6E00_2HPM6E80_2hpm__sysctl__drv_8h.html", "HPM6E00_2HPM6E80_2hpm__sysctl__drv_8h" ],
     [ "hpm_trgm_soc_drv.c", "hpm__trgm__soc__drv_8c.html", "hpm__trgm__soc__drv_8c" ],

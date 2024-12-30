@@ -1,5 +1,12 @@
 var NAVTREEINDEX315 =
 {
+"HPM6300_2ip_2hpm__adc16__regs_8h.html#ac53896a198d7cec91912c37e3b878f44":[4,0,5,2,6,1,184],
+"HPM6300_2ip_2hpm__adc16__regs_8h.html#ac5784ae132410a569e4302ddbbc1b8bd":[4,0,5,2,6,1,99],
+"HPM6300_2ip_2hpm__adc16__regs_8h.html#ac5e585e0b5d39e18dfcce3035bdff762":[4,0,5,2,6,1,296],
+"HPM6300_2ip_2hpm__adc16__regs_8h.html#ac6a5e914a5b07eff31bfbc540feb1fad":[4,0,5,2,6,1,229],
+"HPM6300_2ip_2hpm__adc16__regs_8h.html#ac71354d09c55dc997f53de82f904ce49":[4,0,5,2,6,1,390],
+"HPM6300_2ip_2hpm__adc16__regs_8h.html#ac756043ef17e93a8bfb39a3456058c07":[4,0,5,2,6,1,37],
+"HPM6300_2ip_2hpm__adc16__regs_8h.html#acb39084fd2a280f57a9cb7ff17765fb6":[4,0,5,2,6,1,280],
 "HPM6300_2ip_2hpm__adc16__regs_8h.html#acb5b39ce26a09eaf268dea37a78adf01":[4,0,5,2,6,1,172],
 "HPM6300_2ip_2hpm__adc16__regs_8h.html#acc24e21ee542c2a52ac399713eece47b":[4,0,5,2,6,1,224],
 "HPM6300_2ip_2hpm__adc16__regs_8h.html#acd1712e03d99b0cff812c479fc34e9e6":[4,0,5,2,6,1,26],
@@ -242,12 +249,5 @@ var NAVTREEINDEX315 =
 "HPM6300_2ip_2hpm__bpor__regs_8h.html#a00f0b8085bcb53ee77f056d91133486f":[4,0,5,2,6,7,9],
 "HPM6300_2ip_2hpm__bpor__regs_8h.html#a22c592c7122197367378c7a6b3a6e5cd":[4,0,5,2,6,7,1],
 "HPM6300_2ip_2hpm__bpor__regs_8h.html#a6525fae042a2c7a88582dfce7449538f":[4,0,5,2,6,7,14],
-"HPM6300_2ip_2hpm__bpor__regs_8h.html#a76ec586c588802a2f54aae3df1989398":[4,0,5,2,6,7,6],
-"HPM6300_2ip_2hpm__bpor__regs_8h.html#a82477752c64dfd02619d5f34f70fa228":[4,0,5,2,6,7,11],
-"HPM6300_2ip_2hpm__bpor__regs_8h.html#a8d6cb1a8b01d732d3971cfbf522d45c6":[4,0,5,2,6,7,3],
-"HPM6300_2ip_2hpm__bpor__regs_8h.html#a8d8d389d34325b074d03b177804f5b44":[4,0,5,2,6,7,13],
-"HPM6300_2ip_2hpm__bpor__regs_8h.html#a93f0d6931f73e2defd0a15a6d3b5158b":[4,0,5,2,6,7,5],
-"HPM6300_2ip_2hpm__bpor__regs_8h.html#aab9d8d94f1ff168d9140347639d1f688":[4,0,5,2,6,7,2],
-"HPM6300_2ip_2hpm__bpor__regs_8h.html#abf5349038d53699a928b70eea6658105":[4,0,5,2,6,7,10],
-"HPM6300_2ip_2hpm__bpor__regs_8h.html#ac29f37897042c16c02279f7fc5b866c5":[4,0,5,2,6,7,12]
+"HPM6300_2ip_2hpm__bpor__regs_8h.html#a76ec586c588802a2f54aae3df1989398":[4,0,5,2,6,7,6]
 };

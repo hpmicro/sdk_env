@@ -18,12 +18,13 @@ var searchData=
   ['linv2_5ftype_15',['LINV2_Type',['../structLINV2__Type.html',1,'']]],
   ['lobs_5fctrl_5fconfig_5ft_16',['lobs_ctrl_config_t',['../structlobs__ctrl__config__t.html',1,'']]],
   ['lobs_5fstate_5fconfig_5ft_17',['lobs_state_config_t',['../structlobs__state__config__t.html',1,'']]],
-  ['lobs_5ftwo_5fgroup_5fmode_5fconfig_5ft_18',['lobs_two_group_mode_config_t',['../structlobs__two__group__mode__config__t.html',1,'']]],
-  ['lobs_5ftype_19',['LOBS_Type',['../structLOBS__Type.html',1,'']]],
-  ['lvb_5fch_5fconfig_20',['lvb_ch_config',['../structlvb__ch__config.html',1,'']]],
-  ['lvb_5fconfig_21',['lvb_config',['../structlvb__config.html',1,'']]],
-  ['lvb_5flvds_5fphy_5flane_5fconfig_22',['lvb_lvds_phy_lane_config',['../structlvb__lvds__phy__lane__config.html',1,'']]],
-  ['lvb_5ftype_23',['LVB_Type',['../structLVB__Type.html',1,'']]],
-  ['lvds_5fphy_5fclk_5fparam_24',['lvds_phy_clk_param',['../structlvds__phy__clk__param.html',1,'']]],
-  ['lvds_5fphy_5fclk_5freg_25',['lvds_phy_clk_reg',['../structlvds__phy__clk__reg.html',1,'']]]
+  ['lobs_5ftrace_5fdata_5ft_18',['lobs_trace_data_t',['../structlobs__trace__data__t.html',1,'']]],
+  ['lobs_5ftwo_5fgroup_5fmode_5fconfig_5ft_19',['lobs_two_group_mode_config_t',['../structlobs__two__group__mode__config__t.html',1,'']]],
+  ['lobs_5ftype_20',['LOBS_Type',['../structLOBS__Type.html',1,'']]],
+  ['lvb_5fch_5fconfig_21',['lvb_ch_config',['../structlvb__ch__config.html',1,'']]],
+  ['lvb_5fconfig_22',['lvb_config',['../structlvb__config.html',1,'']]],
+  ['lvb_5flvds_5fphy_5flane_5fconfig_23',['lvb_lvds_phy_lane_config',['../structlvb__lvds__phy__lane__config.html',1,'']]],
+  ['lvb_5ftype_24',['LVB_Type',['../structLVB__Type.html',1,'']]],
+  ['lvds_5fphy_5fclk_5fparam_25',['lvds_phy_clk_param',['../structlvds__phy__clk__param.html',1,'']]],
+  ['lvds_5fphy_5fclk_5freg_26',['lvds_phy_clk_reg',['../structlvds__phy__clk__reg.html',1,'']]]
 ];

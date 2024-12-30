@@ -17,6 +17,8 @@ var HPM6E00_2HPM6E60_2hpm__soc__ip__feature_8h =
     [ "HPM_IP_FEATURE_QEIV2_SW_RESTART_TRG", "HPM6E00_2HPM6E60_2hpm__soc__ip__feature_8h.html#a3f4af9121452fd9405797f7a9043969b", null ],
     [ "HPM_IP_FEATURE_QEIV2_TIMESTAMP", "HPM6E00_2HPM6E60_2hpm__soc__ip__feature_8h.html#aabd77bf165ca0746c03ba9df0d1eab29", null ],
     [ "HPM_IP_FEATURE_RDC_IIR", "HPM6E00_2HPM6E60_2hpm__soc__ip__feature_8h.html#a724533d0087d232665911eb4145525c4", null ],
+    [ "HPM_IP_FEATURE_SDM_GATE_FUNC", "HPM6E00_2HPM6E60_2hpm__soc__ip__feature_8h.html#ad3bc2a6c36ab5b1d1641ac43a4677feb", null ],
+    [ "HPM_IP_FEATURE_SDM_TIMESTAMP_FUNC", "HPM6E00_2HPM6E60_2hpm__soc__ip__feature_8h.html#ad99085357bbc878317da1a6eca26d088", null ],
     [ "HPM_IP_FEATURE_SEI_ASYNCHRONOUS_MODE_V2", "HPM6E00_2HPM6E60_2hpm__soc__ip__feature_8h.html#a4833206f18b510913ff465dda999e7eb", null ],
     [ "HPM_IP_FEATURE_SEI_HAVE_CTRL2_12", "HPM6E00_2HPM6E60_2hpm__soc__ip__feature_8h.html#a1d513dee18284cb2877afbc77e59235a", null ],
     [ "HPM_IP_FEATURE_SEI_HAVE_DAT10_31", "HPM6E00_2HPM6E60_2hpm__soc__ip__feature_8h.html#a0828a29a0b6050366d5e349dbbc43ee9", null ],

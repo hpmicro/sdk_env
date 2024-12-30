@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>65.10. UART_RXLINE_STATUS &mdash; HPMicro Software Development Kit  documentation</title>
+  <title>65.11. UART_RXLINE_STATUS &mdash; HPMicro Software Development Kit  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css" />
@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="66. VAD" href="../../vad/README_en.html" />
-    <link rel="prev" title="65.9. uart_lin_slave" href="../uart_lin/slave/README_en.html" /> 
+    <link rel="prev" title="65.10. uart_lin_slave_baudrate_adaptive" href="../uart_lin/slave_baudrate_adaptive/README_en.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -129,11 +129,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../uart_tamagawa/README_en.html">65.7. UART tomagawa</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../uart_lin/master/README_en.html">65.8. uart_lin_master</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../uart_lin/slave/README_en.html">65.9. uart_lin_slave</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">65.10. UART_RXLINE_STATUS</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#overview">65.10.1. Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#board-setting">65.10.2. Board Setting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#notice">65.10.3. Notice</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#run-steps">65.10.4. Run steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uart_lin/slave_baudrate_adaptive/README_en.html">65.10. uart_lin_slave_baudrate_adaptive</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">65.11. UART_RXLINE_STATUS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">65.11.1. Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#board-setting">65.11.2. Board Setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#notice">65.11.3. Notice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-steps">65.11.4. Run steps</a></li>
 </ul>
 </li>
 </ul>
@@ -164,7 +165,7 @@
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../index_en.html">Drivers Examples</a></li>
           <li class="breadcrumb-item"><a href="../index_en.html"><span class="section-number">65. </span>UART</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">65.10. </span>UART_RXLINE_STATUS</li>
+      <li class="breadcrumb-item active"><span class="section-number">65.11. </span>UART_RXLINE_STATUS</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../../_sources/samples/drivers/uart/uart_rx_line_status/README_en.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -175,26 +176,26 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="uart-rxline-status">
-<h1><span class="section-number">65.10. </span>UART_RXLINE_STATUS<a class="headerlink" href="#uart-rxline-status" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">65.11. </span>UART_RXLINE_STATUS<a class="headerlink" href="#uart-rxline-status" title="Permalink to this heading"></a></h1>
 <section id="overview">
-<h2><span class="section-number">65.10.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">65.11.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>This sample show uart rxline status detection function, included Overrun errors, parity errors, framing errors, and line breaks</p>
 </section>
 <section id="board-setting">
-<h2><span class="section-number">65.10.2. </span>Board Setting<a class="headerlink" href="#board-setting" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">65.11.2. </span>Board Setting<a class="headerlink" href="#board-setting" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Except for the break tes, all others Use the usb2ttl module for testing,connect the tx pin of the module to rx pin of the board to be tested, connect the rx pin of the module to tx pin of the board to be tested,and connect th gnd pin of the module to gnd pin of the board to be tested</p></li>
 <li><p>Please refer to <a class="reference internal" href="../../../../boards/index_en.html#lab-board-resource"><span class="std std-ref">Pin Description</span></a> for specific board</p></li>
 </ul>
 </section>
 <section id="notice">
-<h2><span class="section-number">65.10.3. </span>Notice<a class="headerlink" href="#notice" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">65.11.3. </span>Notice<a class="headerlink" href="#notice" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>According to each detection test, the uart configuration is different and needs to be configured according to the serial port configuration information output by the terminal.</p></li>
 </ul>
 </section>
 <section id="run-steps">
-<h2><span class="section-number">65.10.4. </span>Run steps<a class="headerlink" href="#run-steps" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">65.11.4. </span>Run steps<a class="headerlink" href="#run-steps" title="Permalink to this heading"></a></h2>
 <p>When the project runs correctly, the serial port terminal will output the information like：</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">---------------------------------------------------------------</span>
 <span class="go">*                                                             *</span>
@@ -208,7 +209,7 @@
 </pre></div>
 </div>
 <section id="overrun-error-test">
-<h3><span class="section-number">65.10.4.1. </span>overrun error test<a class="headerlink" href="#overrun-error-test" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">65.11.4.1. </span>overrun error test<a class="headerlink" href="#overrun-error-test" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Manually input the ‘1’ character through the serial port, it will prompt that the uart of the sending end needs to be configured as follows in advance</p></li>
 <li><p>Serial port baud rate is set to <code class="docutils literal notranslate"><span class="pre">115200bps</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span> <span class="pre">data</span> <span class="pre">length</span> </code> with <code class="docutils literal notranslate"><span class="pre">one</span> <span class="pre">stop</span> <span class="pre">bit</span></code> and <code class="docutils literal notranslate"><span class="pre">no</span> <span class="pre">parity</span> <span class="pre">bit</span></code></p></li>
@@ -236,7 +237,7 @@
 </div>
 </section>
 <section id="parity-error-test">
-<h3><span class="section-number">65.10.4.2. </span>parity error test<a class="headerlink" href="#parity-error-test" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">65.11.4.2. </span>parity error test<a class="headerlink" href="#parity-error-test" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Manually input the ‘2’ character through the serial port, it will prompt that the uart of the sending end needs to be configured as follows in advance</p></li>
 <li><p>Serial port baud rate is set to <code class="docutils literal notranslate"><span class="pre">115200bps</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span> <span class="pre">data</span> <span class="pre">length</span> </code> with <code class="docutils literal notranslate"><span class="pre">one</span> <span class="pre">stop</span> <span class="pre">bit</span></code> and <code class="docutils literal notranslate"><span class="pre">even</span> <span class="pre">parity</span> <span class="pre">bit</span></code></p></li>
@@ -264,7 +265,7 @@
 </div>
 </section>
 <section id="framing-error-test">
-<h3><span class="section-number">65.10.4.3. </span>framing error test<a class="headerlink" href="#framing-error-test" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">65.11.4.3. </span>framing error test<a class="headerlink" href="#framing-error-test" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Manually input the ‘3’ character through the serial port, it will prompt that the uart of the sending end needs to be configured as follows in advance：</p></li>
 <li><p>Serial port baud rate is set to <code class="docutils literal notranslate"><span class="pre">115200bps</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span> <span class="pre">data</span> <span class="pre">length</span> </code> with <code class="docutils literal notranslate"><span class="pre">one</span> <span class="pre">stop</span> <span class="pre">bit</span></code> and <code class="docutils literal notranslate"><span class="pre">no</span> <span class="pre">parity</span> <span class="pre">bit</span></code></p></li>
@@ -291,14 +292,14 @@
 </pre></div>
 </div>
 <section id="known-issues">
-<h4><span class="section-number">65.10.4.3.1. </span>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">65.11.4.3.1. </span>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this heading"></a></h4>
 <ul class="simple">
 <li><p>When the stop bit settings of the sender and receiver are inconsistent, the frame error detection function cannot be guaranteed.</p></li>
 </ul>
 </section>
 </section>
 <section id="line-break-test">
-<h3><span class="section-number">65.10.4.4. </span>line break test<a class="headerlink" href="#line-break-test" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">65.11.4.4. </span>line break test<a class="headerlink" href="#line-break-test" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>connect uart rx pin to break signal pin(Please refer to  <a class="reference internal" href="../../../../boards/index_en.html#lab-board-resource"><span class="std std-ref">Pin Description</span></a>)</p></li>
 <li><p>Manually input the ‘4’ character through the serial port</p></li>
@@ -330,7 +331,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2020-2024, HPMicro.
-      <span class="lastupdated">Last updated on Sep 30, 2024.
+      <span class="lastupdated">Last updated on Dec 30, 2024.
       </span></p>
   </div>
 

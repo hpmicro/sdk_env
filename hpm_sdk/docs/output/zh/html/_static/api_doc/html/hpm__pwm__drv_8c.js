@@ -8,6 +8,8 @@ var hpm__pwm__drv_8c =
     [ "pwm_load_cmp_shadow_on_match", "group__pwm__interface.html#ga875c3b524878f89b2cfc4c8c65ac031b", null ],
     [ "pwm_setup_waveform", "group__pwm__interface.html#ga97f5c1519173b5c73d24d55f7cf5a725", null ],
     [ "pwm_setup_waveform_in_pair", "group__pwm__interface.html#ga5c174ee4e7326813fc3a5c3719d39bbc", null ],
+    [ "pwm_update_duty_central_aligned", "group__pwm__interface.html#gaeedeeef0ac884b58bdef016afcf0eadc", null ],
+    [ "pwm_update_duty_edge_aligned", "group__pwm__interface.html#gace5f5e44b2b433c4e5e6a99588890785", null ],
     [ "pwm_update_raw_cmp_central_aligned", "group__pwm__interface.html#gaaa52e327abf31dd95477c8a9daf432d9", null ],
     [ "pwm_update_raw_cmp_edge_aligned", "group__pwm__interface.html#ga6392dab670e8f4ae9e6476af3c58bacd", null ]
 ];

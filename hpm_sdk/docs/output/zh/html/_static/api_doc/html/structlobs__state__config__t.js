@@ -6,6 +6,6 @@ var structlobs__state__config__t =
     [ "cmp_sig_bit", "structlobs__state__config__t.html#ac65dfb2b6a9235930e73d58ad6c2ca18", null ],
     [ "cmp_sig_en", "structlobs__state__config__t.html#acc143a79cbc71e9665ebb4062ae2ecd5", null ],
     [ "next_state", "structlobs__state__config__t.html#aa59bbdfb6a3784ba48defba59435dd85", null ],
-    [ "sig_group_num", "structlobs__state__config__t.html#a7248f3f225872bd60834a4f4222703ed", null ],
+    [ "sig_group_num", "structlobs__state__config__t.html#ac4df4da4edf2442edb3b1677eeb64deb", null ],
     [ "state_chg_condition", "structlobs__state__config__t.html#a36b22b9fd93448b93e646cc05d9261a2", null ]
 ];

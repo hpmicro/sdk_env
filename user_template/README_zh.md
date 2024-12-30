@@ -31,6 +31,9 @@
 
 若使用到`middleware`、`components`等，请参考hpm_sdk对应sample中的`CMakeList.txt`，然后在依葫芦画瓢在用户的`CMakeList.txt`中添加相关指令。
 
+HPM_SDK中支持的cmake指令可在hpm_sdk\docs\index_zh.html中查看：
+![sdk_cmake_api](doc/sdk_cmake_api.png)
+
 - Tips：修改`CMakeList.txt`后，需要重新生成工程并编译，才能生效。
 
 ## 用户链接脚本Linker
@@ -43,11 +46,15 @@
 
 本模板中的linker文件是从hpm6750evk2的flash_xip liner文件复制过来的，用户可根据自身板子的配置情况将其替换或修改。
 
+用户在应用程序的`CMakeList.txt`中可以指定使用的Linker文件，如果在`CMakeList.txt`中不指定Linker文件，也可在start_gui生成工程的时候指定Linker文件。
+
+如果以上两种情况都不指定Linker文件，则会使用SDK默认的linker文件，位于hpm_sdk/soc/xxxx/xxxx/toolchains中。
+
 ## START_GUI的使用
 
 上述的文件组织完毕后，可使用start_gui生成自己的project工程。
 
-![start_gui_demo](start_gui_demo.png)
+![start_gui_demo](doc/start_gui_demo.png)
 
 - Board Path：指定顶层的`user_template`文件夹，它将自动搜索该文件夹下的板级文件。
 - Application Path：指定顶层的`user_template`文件夹，它将自动搜索该文件夹下的应用程序。

@@ -1,5 +1,12 @@
 var NAVTREEINDEX320 =
 {
+"HPM6300_2ip_2hpm__dma__regs_8h.html#afe4f84f9fc5ca1fcbdc845e2bac9df0c":[4,0,5,2,6,13,67],
+"HPM6300_2ip_2hpm__dma__regs_8h.html#aff90cd42b03aff5c21d27d75f0b10432":[4,0,5,2,6,13,133],
+"HPM6300_2ip_2hpm__dma__regs_8h_source.html":[4,0,5,2,6,13],
+"HPM6300_2ip_2hpm__dmamux__regs_8h.html":[4,0,5,2,6,14],
+"HPM6300_2ip_2hpm__dmamux__regs_8h.html#a0fc0ebb5d7858580cc852c985b03e34e":[4,0,5,2,6,14,21],
+"HPM6300_2ip_2hpm__dmamux__regs_8h.html#a21022da3f0fa154a14f3decb85f7a632":[4,0,5,2,6,14,13],
+"HPM6300_2ip_2hpm__dmamux__regs_8h.html#a29e880adab5b3c1e37b8e2a904d0bd6a":[4,0,5,2,6,14,24],
 "HPM6300_2ip_2hpm__dmamux__regs_8h.html#a478d246ccb921a77ac2de2ca5ec40127":[4,0,5,2,6,14,23],
 "HPM6300_2ip_2hpm__dmamux__regs_8h.html#a54d6544c8b1150d3e2335324453ff891":[4,0,5,2,6,14,9],
 "HPM6300_2ip_2hpm__dmamux__regs_8h.html#a5a7b74d9522c61120e8cba18fdc5b3bf":[4,0,5,2,6,14,18],
@@ -242,12 +249,5 @@ var NAVTREEINDEX320 =
 "HPM6300_2ip_2hpm__enet__regs_8h.html#a1eafa21e7770db3f4c5af78edb9aea32":[4,0,5,2,6,15,1301],
 "HPM6300_2ip_2hpm__enet__regs_8h.html#a1f6acbc58c9cac8fff94298c678a6ffb":[4,0,5,2,6,15,18],
 "HPM6300_2ip_2hpm__enet__regs_8h.html#a1f7f706f8520eddb93b4a5474834cf1c":[4,0,5,2,6,15,1767],
-"HPM6300_2ip_2hpm__enet__regs_8h.html#a1f984f40e5febb5aab41c737a0510646":[4,0,5,2,6,15,25],
-"HPM6300_2ip_2hpm__enet__regs_8h.html#a1fc60cbd03d8d722de0177140096eb85":[4,0,5,2,6,15,1225],
-"HPM6300_2ip_2hpm__enet__regs_8h.html#a1fcf88a353b9e30b7654330769f4b832":[4,0,5,2,6,15,145],
-"HPM6300_2ip_2hpm__enet__regs_8h.html#a1fe8ce28d204b7a2e1670befcaa38552":[4,0,5,2,6,15,708],
-"HPM6300_2ip_2hpm__enet__regs_8h.html#a202b94d8ac6564d8285ba91a2c85d107":[4,0,5,2,6,15,250],
-"HPM6300_2ip_2hpm__enet__regs_8h.html#a203aea6e1a5ce98f8094b857bab67378":[4,0,5,2,6,15,452],
-"HPM6300_2ip_2hpm__enet__regs_8h.html#a20aa7ea6f9c5527da827b922b0331173":[4,0,5,2,6,15,1629],
-"HPM6300_2ip_2hpm__enet__regs_8h.html#a20ab4b8ad1e8448a0a5d1e5f0ef70ac5":[4,0,5,2,6,15,105]
+"HPM6300_2ip_2hpm__enet__regs_8h.html#a1f984f40e5febb5aab41c737a0510646":[4,0,5,2,6,15,25]
 };

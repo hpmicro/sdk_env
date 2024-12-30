@@ -1,5 +1,12 @@
 var NAVTREEINDEX349 =
 {
+"HPM6300_2ip_2hpm__sdxc__regs_8h.html#adacea3c0cd25dce3e100ffedad91767d":[4,0,5,2,6,45,793],
+"HPM6300_2ip_2hpm__sdxc__regs_8h.html#adad51453a8c12be1d50dc4106d55d0a6":[4,0,5,2,6,45,524],
+"HPM6300_2ip_2hpm__sdxc__regs_8h.html#adb28d91228ed204ac25b690bc10235f0":[4,0,5,2,6,45,896],
+"HPM6300_2ip_2hpm__sdxc__regs_8h.html#adb313cf85390b8b2c7099c767234696a":[4,0,5,2,6,45,711],
+"HPM6300_2ip_2hpm__sdxc__regs_8h.html#adbde52d72748f0419422a393a36018eb":[4,0,5,2,6,45,582],
+"HPM6300_2ip_2hpm__sdxc__regs_8h.html#adbeaa294c584751e9794b359bcaef0a3":[4,0,5,2,6,45,617],
+"HPM6300_2ip_2hpm__sdxc__regs_8h.html#adc1318f6c618a46bb4011a58ff4546d4":[4,0,5,2,6,45,852],
 "HPM6300_2ip_2hpm__sdxc__regs_8h.html#adc25a8ef39ab40239a4cd9f2b52cb247":[4,0,5,2,6,45,66],
 "HPM6300_2ip_2hpm__sdxc__regs_8h.html#adca9f67eeb54bc78dd05eda369b9c0d7":[4,0,5,2,6,45,208],
 "HPM6300_2ip_2hpm__sdxc__regs_8h.html#add0012e339d79f6df4b78ca984061dea":[4,0,5,2,6,45,61],
@@ -242,12 +249,5 @@ var NAVTREEINDEX349 =
 "HPM6300_2ip_2hpm__spi__regs_8h.html#a587aa6c5d6db9b4d14777759899d9795":[4,0,5,2,6,46,7],
 "HPM6300_2ip_2hpm__spi__regs_8h.html#a595c77fa66cd08e626dfbd4ae7c4dd7d":[4,0,5,2,6,46,96],
 "HPM6300_2ip_2hpm__spi__regs_8h.html#a59a545997022435256c9af761eb6b68f":[4,0,5,2,6,46,1],
-"HPM6300_2ip_2hpm__spi__regs_8h.html#a59df3f36ea9fcbfb33b5cc8c4aabb28c":[4,0,5,2,6,46,134],
-"HPM6300_2ip_2hpm__spi__regs_8h.html#a5a92cbde0eebb2b9c5ae8989a919db27":[4,0,5,2,6,46,234],
-"HPM6300_2ip_2hpm__spi__regs_8h.html#a5aa37a7faf64c170221cb063653e3bf0":[4,0,5,2,6,46,151],
-"HPM6300_2ip_2hpm__spi__regs_8h.html#a5cb73e2f0648e8943e24262e27ac6394":[4,0,5,2,6,46,70],
-"HPM6300_2ip_2hpm__spi__regs_8h.html#a5d5749a4e3752603d3fc2e1866c78b3d":[4,0,5,2,6,46,120],
-"HPM6300_2ip_2hpm__spi__regs_8h.html#a5e1abd84b1acb36569a87e533944ff70":[4,0,5,2,6,46,61],
-"HPM6300_2ip_2hpm__spi__regs_8h.html#a60590d5b735ff6c8bf6ea805171b1887":[4,0,5,2,6,46,69],
-"HPM6300_2ip_2hpm__spi__regs_8h.html#a616d82af1eb3ae3eff23a63ba420fe57":[4,0,5,2,6,46,57]
+"HPM6300_2ip_2hpm__spi__regs_8h.html#a59df3f36ea9fcbfb33b5cc8c4aabb28c":[4,0,5,2,6,46,134]
 };

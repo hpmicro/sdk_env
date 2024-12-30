@@ -1,13 +1,13 @@
 var group__otp__interface =
 [
     [ "otp_lock_option_t", "group__otp__interface.html#gac83f4aa4e08e84001044bef8b5de1a13", [
-      [ "otp_write_disallowed", "group__otp__interface.html#ggaa53acfc1f86c3ba3efc58c4c0b7a8b06ac35edaf7167583a2dece7fead6a8d4b4", null ],
       [ "otp_write_disallowed", "group__otp__interface.html#gga2db06901d03245a790e5571701aba3dfac35edaf7167583a2dece7fead6a8d4b4", null ],
-      [ "otp_write_disallowed", "group__otp__interface.html#ggad2d3a7869c500e9ee6bfbdcc1cd8ff46ac35edaf7167583a2dece7fead6a8d4b4", null ],
-      [ "otp_write_disallowed", "group__otp__interface.html#gga4b6dac7f69159e91546e9ec128506a66ac35edaf7167583a2dece7fead6a8d4b4", null ],
-      [ "otp_write_disallowed", "group__otp__interface.html#ggaf5bed6e7474947597aecb6f5354544bdac35edaf7167583a2dece7fead6a8d4b4", null ],
-      [ "otp_write_disallowed", "group__otp__interface.html#ggae96dc64a9892ca35a4a779c5f943262cac35edaf7167583a2dece7fead6a8d4b4", null ],
-      [ "otp_write_disallowed", "group__otp__interface.html#gga4b0b0348535f011c7fc29748edc1d520ac35edaf7167583a2dece7fead6a8d4b4", null ],
+      [ "otp_write_disallowed", "group__otp__interface.html#gga7b1472d57861c1c16e0394cd0f614182ac35edaf7167583a2dece7fead6a8d4b4", null ],
+      [ "otp_write_disallowed", "group__otp__interface.html#gga893dbd60c5ebe415600523fbae202880ac35edaf7167583a2dece7fead6a8d4b4", null ],
+      [ "otp_write_disallowed", "group__otp__interface.html#ggaba4f231c4925479386aca2034fb0d745ac35edaf7167583a2dece7fead6a8d4b4", null ],
+      [ "otp_write_disallowed", "group__otp__interface.html#ggacdf1f9b38a124a0672bc6092274d826fac35edaf7167583a2dece7fead6a8d4b4", null ],
+      [ "otp_write_disallowed", "group__otp__interface.html#gga663f37d3e28d272f4c5ef39f7426067dac35edaf7167583a2dece7fead6a8d4b4", null ],
+      [ "otp_write_disallowed", "group__otp__interface.html#gga6de2e1200a9657390733e6300d9bb55aac35edaf7167583a2dece7fead6a8d4b4", null ],
       [ "otp_no_lock", "group__otp__interface.html#ggac83f4aa4e08e84001044bef8b5de1a13a0c2fed07674d60af1747d3366d920c25", null ],
       [ "otp_read_only", "group__otp__interface.html#ggac83f4aa4e08e84001044bef8b5de1a13ab89fcf33d8b0bf2f2184f031ee9634de", null ],
       [ "otp_permanent_no_lock", "group__otp__interface.html#ggac83f4aa4e08e84001044bef8b5de1a13a9b437aca3df46a8fa01d0f40e56933e2", null ],

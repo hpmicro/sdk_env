@@ -123,6 +123,7 @@ var hpm__uart__drv_8h =
     [ "uart_enable_address1_match", "group__uart__interface.html#ga2f684a1b98d1cfb600df4655a5d78d21", null ],
     [ "uart_enable_hardware_trig_transfer", "group__uart__interface.html#gaa8b5441567869dfa16a7a309a861987e", null ],
     [ "uart_enable_irq", "group__uart__interface.html#ga9b33c14075109dff7e32eb2dc17b9cbf", null ],
+    [ "uart_enable_rx_function", "group__uart__interface.html#ga6166a93a0a8a25e6e43ad2fbe30eb53e", null ],
     [ "uart_enable_rxline_idle_detection", "group__uart__interface.html#ga9429caea0270af2f532cb103525d0622", null ],
     [ "uart_enable_txline_idle_detection", "group__uart__interface.html#ga56b9338742b88bc320786b3f14c7872c", null ],
     [ "uart_flush", "group__uart__interface.html#ga093b15f7a263041a2d7144f35b5ebdac", null ],

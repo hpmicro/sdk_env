@@ -1,5 +1,12 @@
 var NAVTREEINDEX332 =
 {
+"HPM6300_2ip_2hpm__hall__regs_8h.html#ad49734350aff6342f12c4a125adc879b":[4,0,5,2,6,21,14],
+"HPM6300_2ip_2hpm__hall__regs_8h.html#ad5d1bf41b21cc26409cdd4b026da3cf6":[4,0,5,2,6,21,37],
+"HPM6300_2ip_2hpm__hall__regs_8h.html#ad6c8101a0f7279c20a515ca86767a378":[4,0,5,2,6,21,188],
+"HPM6300_2ip_2hpm__hall__regs_8h.html#ad6e805aabfdafd67e7f6a4c17b63235e":[4,0,5,2,6,21,157],
+"HPM6300_2ip_2hpm__hall__regs_8h.html#ad6f06d3e05322bd5842b5ed8e3ad084d":[4,0,5,2,6,21,98],
+"HPM6300_2ip_2hpm__hall__regs_8h.html#ad801bd0e6b1b452d55579e622b17393a":[4,0,5,2,6,21,142],
+"HPM6300_2ip_2hpm__hall__regs_8h.html#ad9038d61930e603209b038269471bd66":[4,0,5,2,6,21,62],
 "HPM6300_2ip_2hpm__hall__regs_8h.html#ad9414930df9c298801847b9cf984cb87":[4,0,5,2,6,21,23],
 "HPM6300_2ip_2hpm__hall__regs_8h.html#ad9b40405dae3e5574f07ada82da75cde":[4,0,5,2,6,21,8],
 "HPM6300_2ip_2hpm__hall__regs_8h.html#ada50f6bc0db9e82cbaaff11d677b674b":[4,0,5,2,6,21,72],
@@ -242,12 +249,5 @@ var NAVTREEINDEX332 =
 "HPM6300_2ip_2hpm__i2s__regs_8h.html#a1d72b1bc294023496866e6535e57818e":[4,0,5,2,6,23,84],
 "HPM6300_2ip_2hpm__i2s__regs_8h.html#a1f1c2de4e457dfb08f467d30e2bae6b1":[4,0,5,2,6,23,38],
 "HPM6300_2ip_2hpm__i2s__regs_8h.html#a1f4c7d3a4096bbcf87017d354246f6e6":[4,0,5,2,6,23,166],
-"HPM6300_2ip_2hpm__i2s__regs_8h.html#a205be62d54cedfc5912df832f8fb2967":[4,0,5,2,6,23,170],
-"HPM6300_2ip_2hpm__i2s__regs_8h.html#a207a7bf3a3a7d2627262d83a28fa0292":[4,0,5,2,6,23,51],
-"HPM6300_2ip_2hpm__i2s__regs_8h.html#a2121d44b357b191ddb776431459b9590":[4,0,5,2,6,23,161],
-"HPM6300_2ip_2hpm__i2s__regs_8h.html#a23b2ef076ba331d6a706cc8a4c9554d2":[4,0,5,2,6,23,61],
-"HPM6300_2ip_2hpm__i2s__regs_8h.html#a267320cb8c1b8f813f2daf2edd12b09a":[4,0,5,2,6,23,108],
-"HPM6300_2ip_2hpm__i2s__regs_8h.html#a26baea86d51095ad8b7e318d27b0cd0b":[4,0,5,2,6,23,105],
-"HPM6300_2ip_2hpm__i2s__regs_8h.html#a2ace14faefc4d88cb0634689241ab012":[4,0,5,2,6,23,79],
-"HPM6300_2ip_2hpm__i2s__regs_8h.html#a2ad904149cb83ab52e1f8f89075f86c0":[4,0,5,2,6,23,76]
+"HPM6300_2ip_2hpm__i2s__regs_8h.html#a205be62d54cedfc5912df832f8fb2967":[4,0,5,2,6,23,170]
 };

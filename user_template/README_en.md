@@ -31,6 +31,9 @@ When adding .c and .h files, please use `sdk_app_src` to add the .c files and us
 
 If using `middleware`, `components`, etc., please refer to the `CMakeList.txt` in the sample corresponding to hpm_sdk, and then add relevant instructions in the user's `CMakeList.txt` following the example.
 
+The cmake commands supported in the HPM_SDK can be viewed in `hpm_sdk\docs\index_zh.html`:
+![sdk_cmake_api](doc/sdk_cmake_api.png)
+
 - Tips: After modifying `CMakeList.txt`, the project needs to be regenerated and compiled.
 
 ## User Linker
@@ -41,11 +44,15 @@ Usually, users can copy the linker files from the `gcc`/`iar`/`segger` folder in
 
 - < Note >: After copying, the linker file names under the `gcc`/`iar`/`segger` files should be consistent, only with different suffixes.
 
+Users can specify the Linker file to be used in the user application's `CMakeList.txt`. If a Linker file is not specified in `CMakeList.txt`, it can also be specified when generating the project using `start_gui` Tool.
+
+If a Linker file is not specified in either of the above cases, the SDK's default linker file will be used, which is located in hpm_sdk/soc/xxxx/xxxx/toolchains.
+
 ## START_GUI DEMO
 
 After organizing the above files, you can use start_gui to generate your own project project.
 
-![start_gui_demo](start_gui_demo.png)
+![start_gui_demo](doc/start_gui_demo.png)
 
 - Board Path：Specify the top-level `user_template` folder, start_gui will automatically search for board level files in that folder.
 - Application Path：Specify the top-level `user_template` folder, start_gui will automatically search for applications in that folder.

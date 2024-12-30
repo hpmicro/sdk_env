@@ -58,3 +58,7 @@
   若要解除路径长度限制可以通过导入tools/scripts/win10_enable_long_path.reg。有关该限制的详细信息, 请参考https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd
 ### Windows 7 Python 3.9版本无法使用问题
   - hpm_sdk依赖python 3.9, 而在Windows 7上无法直接运行python 3.9，需要安装python_win7_patch，下载链接为：https://pan.baidu.com/s/1RaYHOD7xk7fnotmgLpoAlA?pwd=xk2n ，路径为`先楫技术资料/SDK`。
+### 使用 CMAKE 构建项目时提示 “The object file directory xxx has xxx characters. The maximum full path to an object file is 250 characters..The build may not work correctly.” 警告
+  该警告是由于当前构建项目的生成目录路径过长，有可能会使编译时生成的某些 obj 文件路径超过编译器支持的最大长度导致编译失败，可以做如下调整：
+  - 将 SDK_ENV 放置到尽量靠近驱动器根目录位置如 “D:\sdk_env” ，缩短绝对路径下 sdk_env 的目录层级，这样可以缩短整个 hpm_sdk 的绝对路径长度；
+  - 或者缩短最终生成目录路径长度，如 start_gui 中缩短 “Build Path” 路径，尽量减少该路径层级（绝对路径长度）可确保项目正常生成；

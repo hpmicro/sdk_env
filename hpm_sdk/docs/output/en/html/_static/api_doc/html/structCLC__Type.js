@@ -4,7 +4,7 @@ var structCLC__Type =
     [ "ADC_EXPECT", "structCLC__Type.html#a2b9dcd864f74f0da8131b2b65a84658f", null ],
     [ "ADC_OFFSET", "structCLC__Type.html#ab561848b1c4386950372587eb4a26bd1", null ],
     [ "ADC_SW", "structCLC__Type.html#a3181bc64827d25b896e6fb1e7561e70f", null ],
-    [ "COEFF", "structCLC__Type.html#a6dc988386e2baf9f52be49361f364d52", null ],
+    [ "COEFF", "structCLC__Type.html#a1091569ce26f137de7d2dcf6bfa08a76", null ],
     [ "COEFF_A0", "structCLC__Type.html#ae0bf30119ab8e701291bb21d04f3a3ea", null ],
     [ "COEFF_A1", "structCLC__Type.html#aef02118a87dba093698a59d90d2449a7", null ],
     [ "COEFF_A2", "structCLC__Type.html#ae1f16b5e24cc8eb82fadb4bc998b4838", null ],
@@ -41,5 +41,5 @@ var structCLC__Type =
     [ "RESERVED4", "structCLC__Type.html#a2e6987bd1144a83c52ded250a4414d50", null ],
     [ "STATUS", "structCLC__Type.html#a23c5d2526262e3be594a1f827b7674cf", null ],
     [ "TIMESTAMP", "structCLC__Type.html#a44d87a7ab5782a3f5dfec3f612952e56", null ],
-    [ "VDVQ_CHAN", "structCLC__Type.html#adacacf7b99952ef3d276e1b9996263bb", null ]
+    [ "VDVQ_CHAN", "structCLC__Type.html#ad9e1bb026f3f5ad9ff8f042fc2206b3a", null ]
 ];

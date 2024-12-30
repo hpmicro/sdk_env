@@ -55,13 +55,13 @@ var group__pcfg__interface =
     [ "PCFG_PERIPH_KEEP_CLOCK_ON", "group__pcfg__interface.html#gac64ef2e43505826af4345b0f0c7054e7", null ],
     [ "PCFG_PERIPH_KEEP_CLOCK_ON", "group__pcfg__interface.html#gac64ef2e43505826af4345b0f0c7054e7", null ],
     [ "PCFG_PERIPH_SET_CLOCK_AUTO", "group__pcfg__interface.html#ga595b3e060d9b0f8c1f4efa3987dd2513", [
-      [ "status_pcfg_ldo_out_of_range", "group__pcfg__interface.html#gga18efc29f05f292310db38a8c7e81dcdaa1555f9fe3b96f09ea67c3982838c3985", null ],
       [ "status_pcfg_ldo_out_of_range", "group__pcfg__interface.html#ggae80a0d22f4afbcca8ed3a82f768038dba1555f9fe3b96f09ea67c3982838c3985", null ],
-      [ "status_pcfg_ldo_out_of_range", "group__pcfg__interface.html#ggac73a083712b6da982dd8d74fa6a79756a1555f9fe3b96f09ea67c3982838c3985", null ],
-      [ "status_pcfg_ldo_out_of_range", "group__pcfg__interface.html#ggaded00f86eb8021d2742e277564cecd43a1555f9fe3b96f09ea67c3982838c3985", null ],
-      [ "status_pcfg_ldo_out_of_range", "group__pcfg__interface.html#gga464ceffb3905a556933d0ea8d4c64d22a1555f9fe3b96f09ea67c3982838c3985", null ],
-      [ "status_pcfg_ldo_out_of_range", "group__pcfg__interface.html#ggaf2678f960a504d716faadba153e23deba1555f9fe3b96f09ea67c3982838c3985", null ],
-      [ "status_pcfg_ldo_out_of_range", "group__pcfg__interface.html#ggaab13ea80e0b94ee155d56e089a17682ca1555f9fe3b96f09ea67c3982838c3985", null ]
+      [ "status_pcfg_ldo_out_of_range", "group__pcfg__interface.html#ggae91638596a8955da23581d7ad008e295a1555f9fe3b96f09ea67c3982838c3985", null ],
+      [ "status_pcfg_ldo_out_of_range", "group__pcfg__interface.html#gga57ea8175acdce8eeb8af23163fe5a045a1555f9fe3b96f09ea67c3982838c3985", null ],
+      [ "status_pcfg_ldo_out_of_range", "group__pcfg__interface.html#gga8b7655aaaf5998fab474a94c6d75de69a1555f9fe3b96f09ea67c3982838c3985", null ],
+      [ "status_pcfg_ldo_out_of_range", "group__pcfg__interface.html#ggad6b352f56878efeec0cd32484ec368f3a1555f9fe3b96f09ea67c3982838c3985", null ],
+      [ "status_pcfg_ldo_out_of_range", "group__pcfg__interface.html#gga336af30912e0daeb90ff5b49509f1a28a1555f9fe3b96f09ea67c3982838c3985", null ],
+      [ "status_pcfg_ldo_out_of_range", "group__pcfg__interface.html#gga3d0ab4eead673bc913047a3ef9927864a1555f9fe3b96f09ea67c3982838c3985", null ]
     ] ],
     [ "pcfg_dcdc_current_hys_t", "group__pcfg__interface.html#gab69c667013b4225b29ea7bf5cd6eef18", [
       [ "pcfg_dcdc_current_hys_12_5mv", "group__pcfg__interface.html#ggab69c667013b4225b29ea7bf5cd6eef18aded84d404af5087d67492da37c38d828", null ],

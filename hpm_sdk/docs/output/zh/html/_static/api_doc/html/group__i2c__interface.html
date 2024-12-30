@@ -186,11 +186,13 @@ Macros</h2></td></tr>
 <tr class="separator:gacb13e35c5e812ea51d29e833be1b72be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3cb9baa1b76a560de0a7b695c26531fc" id="r_ga3cb9baa1b76a560de0a7b695c26531fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3cb9baa1b76a560de0a7b695c26531fc">I2C_ADDR_10BIT</a>&#160;&#160;&#160;(1u &lt;&lt; 2)  /* this is a ten bit chip <a class="el" href="group__l1cache__interface.html#gac0d31ca829f934cccd89f8054e02773e">address</a> */</td></tr>
 <tr class="separator:ga3cb9baa1b76a560de0a7b695c26531fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga195853b1c095946d44b02780bc737258" id="r_ga195853b1c095946d44b02780bc737258"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga195853b1c095946d44b02780bc737258">I2C_NO_START</a>&#160;&#160;&#160;(1u &lt;&lt; 4)  /* no start */</td></tr>
+<tr class="memitem:ga195853b1c095946d44b02780bc737258" id="r_ga195853b1c095946d44b02780bc737258"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga195853b1c095946d44b02780bc737258">I2C_NO_START</a>&#160;&#160;&#160;(1u &lt;&lt; 4)  /* no start phase */</td></tr>
 <tr class="separator:ga195853b1c095946d44b02780bc737258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65b7f2f3b73a8113798bade8c2f94e38" id="r_ga65b7f2f3b73a8113798bade8c2f94e38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga65b7f2f3b73a8113798bade8c2f94e38">I2C_NO_ADDRESS</a>&#160;&#160;&#160;(1u &lt;&lt; 5)  /* no <a class="el" href="group__l1cache__interface.html#gac0d31ca829f934cccd89f8054e02773e">address</a> phase */</td></tr>
+<tr class="separator:ga65b7f2f3b73a8113798bade8c2f94e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1b25e670e092f1111930f5eacde26b75" id="r_ga1b25e670e092f1111930f5eacde26b75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1b25e670e092f1111930f5eacde26b75">I2C_NO_READ_ACK</a>&#160;&#160;&#160;(1u &lt;&lt; 6)  /* when I2C reading, we do not ACK */</td></tr>
 <tr class="separator:ga1b25e670e092f1111930f5eacde26b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadda0d20bd6472bbee03bd0ac07256ef3" id="r_gadda0d20bd6472bbee03bd0ac07256ef3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadda0d20bd6472bbee03bd0ac07256ef3">I2C_NO_STOP</a>&#160;&#160;&#160;(1u &lt;&lt; 7)  /* no stop */</td></tr>
+<tr class="memitem:gadda0d20bd6472bbee03bd0ac07256ef3" id="r_gadda0d20bd6472bbee03bd0ac07256ef3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadda0d20bd6472bbee03bd0ac07256ef3">I2C_NO_STOP</a>&#160;&#160;&#160;(1u &lt;&lt; 7)  /* no stop phase */</td></tr>
 <tr class="separator:gadda0d20bd6472bbee03bd0ac07256ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaff8ca0023d15f72986a50cfe4611206e" id="r_gaff8ca0023d15f72986a50cfe4611206e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaff8ca0023d15f72986a50cfe4611206e">I2C_WRITE_CHECK_ACK</a>&#160;&#160;&#160;(1u &lt;&lt; 8)  /* when I2C writing, need check the slave returns ack */</td></tr>
 <tr class="separator:gaff8ca0023d15f72986a50cfe4611206e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -215,7 +217,8 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#gga68c01102755fc7d1c810bb0b0635fa90a29df3e1817110c936c78e13a324e51f7">status_i2c_no_addr_hit</a> = ((uint32_t)(status_group_i2c)*1000U + (uint32_t)(3))
 , <a class="el" href="#gga68c01102755fc7d1c810bb0b0635fa90a23ce76a1b8b224a249c628d63fa4ef03">status_i2c_transmit_not_completed</a> = ((uint32_t)(status_group_i2c)*1000U + (uint32_t)(4))
 , <br />
-&#160;&#160;<a class="el" href="#gga68c01102755fc7d1c810bb0b0635fa90ad81df1d1a675a6afc2efab35c8da5314">status_i2c_not_supported</a> = ((uint32_t)(status_group_i2c)*1000U + (uint32_t)(9))
+&#160;&#160;<a class="el" href="#gga68c01102755fc7d1c810bb0b0635fa90aca2262ce63d9f87db8e7c15eb3326bec">status_i2c_bus_busy</a> = ((uint32_t)(status_group_i2c)*1000U + (uint32_t)(5))
+, <a class="el" href="#gga68c01102755fc7d1c810bb0b0635fa90ad81df1d1a675a6afc2efab35c8da5314">status_i2c_not_supported</a> = ((uint32_t)(status_group_i2c)*1000U + (uint32_t)(9))
 <br />
  }</td></tr>
 <tr class="memdesc:ga68c01102755fc7d1c810bb0b0635fa90"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C status.  <a href="#ga68c01102755fc7d1c810bb0b0635fa90">More...</a><br /></td></tr>
@@ -358,6 +361,42 @@ Functions</h2></td></tr>
 <tr class="memitem:gae763d01089c1093c5d0cd2a6e3600dac" id="r_gae763d01089c1093c5d0cd2a6e3600dac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__common__interface.html#ga087efae82a4b174a0363363d9d5ece19">hpm_stat_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae763d01089c1093c5d0cd2a6e3600dac">i2c_master_transfer</a> (<a class="el" href="structI2C__Type.html">I2C_Type</a> *ptr, const uint16_t device_address, uint8_t *buf, const uint32_t <a class="el" href="group__nnactivation.html#gaf8fd9ce16b371c8a3bf5e0b37a69419f">size</a>, uint16_t flags)</td></tr>
 <tr class="memdesc:gae763d01089c1093c5d0cd2a6e3600dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">data transfer on master I2C mode in blocking  <br /></td></tr>
 <tr class="separator:gae763d01089c1093c5d0cd2a6e3600dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32776bc1506b1cea4d89131732656ad1" id="r_ga32776bc1506b1cea4d89131732656ad1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__common__interface.html#ga087efae82a4b174a0363363d9d5ece19">hpm_stat_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga32776bc1506b1cea4d89131732656ad1">i2c_set_data_count</a> (<a class="el" href="structI2C__Type.html">I2C_Type</a> *ptr, uint32_t <a class="el" href="group__nnactivation.html#gaf8fd9ce16b371c8a3bf5e0b37a69419f">size</a>)</td></tr>
+<tr class="memdesc:ga32776bc1506b1cea4d89131732656ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the I2C data transfer count.  <br /></td></tr>
+<tr class="separator:ga32776bc1506b1cea4d89131732656ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga73fce469e1c469821afe3d9887811a1f" id="r_ga73fce469e1c469821afe3d9887811a1f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga73fce469e1c469821afe3d9887811a1f">i2c_master_issue_data_transmission</a> (<a class="el" href="structI2C__Type.html">I2C_Type</a> *ptr)</td></tr>
+<tr class="memdesc:ga73fce469e1c469821afe3d9887811a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trigger the I2C controller to issue a data transmission command.  <br /></td></tr>
+<tr class="separator:ga73fce469e1c469821afe3d9887811a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae798328c75293956dc8e4f7e524f5021" id="r_gae798328c75293956dc8e4f7e524f5021"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae798328c75293956dc8e4f7e524f5021">i2c_master_set_slave_address</a> (<a class="el" href="structI2C__Type.html">I2C_Type</a> *ptr, uint16_t <a class="el" href="group__l1cache__interface.html#gac0d31ca829f934cccd89f8054e02773e">address</a>)</td></tr>
+<tr class="memdesc:gae798328c75293956dc8e4f7e524f5021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the slave address for I2C master mode.  <br /></td></tr>
+<tr class="separator:gae798328c75293956dc8e4f7e524f5021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0a5fff141323da215135e3711ae4120" id="r_gae0a5fff141323da215135e3711ae4120"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae0a5fff141323da215135e3711ae4120">i2c_master_enable_start_phase</a> (<a class="el" href="structI2C__Type.html">I2C_Type</a> *ptr)</td></tr>
+<tr class="memdesc:gae0a5fff141323da215135e3711ae4120"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable start phase at the transaction.  <br /></td></tr>
+<tr class="separator:gae0a5fff141323da215135e3711ae4120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f54e3467fc4dd69fbdbf1cf25e7c123" id="r_ga3f54e3467fc4dd69fbdbf1cf25e7c123"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3f54e3467fc4dd69fbdbf1cf25e7c123">i2c_master_disable_start_phase</a> (<a class="el" href="structI2C__Type.html">I2C_Type</a> *ptr)</td></tr>
+<tr class="memdesc:ga3f54e3467fc4dd69fbdbf1cf25e7c123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable start phase at the transaction.  <br /></td></tr>
+<tr class="separator:ga3f54e3467fc4dd69fbdbf1cf25e7c123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b809a6af3d9c49c447a65a3768c5274" id="r_ga4b809a6af3d9c49c447a65a3768c5274"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4b809a6af3d9c49c447a65a3768c5274">i2c_master_enable_addr_phase</a> (<a class="el" href="structI2C__Type.html">I2C_Type</a> *ptr)</td></tr>
+<tr class="memdesc:ga4b809a6af3d9c49c447a65a3768c5274"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable address phase at the transaction.  <br /></td></tr>
+<tr class="separator:ga4b809a6af3d9c49c447a65a3768c5274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac3132a6ea9708955c9b060b86b72720" id="r_gaac3132a6ea9708955c9b060b86b72720"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaac3132a6ea9708955c9b060b86b72720">i2c_master_disable_addr_phase</a> (<a class="el" href="structI2C__Type.html">I2C_Type</a> *ptr)</td></tr>
+<tr class="memdesc:gaac3132a6ea9708955c9b060b86b72720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable address phase at the transaction.  <br /></td></tr>
+<tr class="separator:gaac3132a6ea9708955c9b060b86b72720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52d122cda6245fdbe1fdfca7c692c771" id="r_ga52d122cda6245fdbe1fdfca7c692c771"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga52d122cda6245fdbe1fdfca7c692c771">i2c_master_enable_data_phase</a> (<a class="el" href="structI2C__Type.html">I2C_Type</a> *ptr)</td></tr>
+<tr class="memdesc:ga52d122cda6245fdbe1fdfca7c692c771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable data phase at the transaction.  <br /></td></tr>
+<tr class="separator:ga52d122cda6245fdbe1fdfca7c692c771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga80f9c2daec9046002204c3dca7a91222" id="r_ga80f9c2daec9046002204c3dca7a91222"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga80f9c2daec9046002204c3dca7a91222">i2c_master_disable_data_phase</a> (<a class="el" href="structI2C__Type.html">I2C_Type</a> *ptr)</td></tr>
+<tr class="memdesc:ga80f9c2daec9046002204c3dca7a91222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable data phase at the transaction.  <br /></td></tr>
+<tr class="separator:ga80f9c2daec9046002204c3dca7a91222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ea016d5a73766a0765f80e70ce17495" id="r_ga9ea016d5a73766a0765f80e70ce17495"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9ea016d5a73766a0765f80e70ce17495">i2c_master_enable_stop_phase</a> (<a class="el" href="structI2C__Type.html">I2C_Type</a> *ptr)</td></tr>
+<tr class="memdesc:ga9ea016d5a73766a0765f80e70ce17495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable stop phase at the transaction.  <br /></td></tr>
+<tr class="separator:ga9ea016d5a73766a0765f80e70ce17495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3490c57b9485f6f396aa87114153c7a3" id="r_ga3490c57b9485f6f396aa87114153c7a3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3490c57b9485f6f396aa87114153c7a3">i2c_master_disable_stop_phase</a> (<a class="el" href="structI2C__Type.html">I2C_Type</a> *ptr)</td></tr>
+<tr class="memdesc:ga3490c57b9485f6f396aa87114153c7a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable stop phase at the transaction.  <br /></td></tr>
+<tr class="separator:ga3490c57b9485f6f396aa87114153c7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24675ffd0203d44745663c76ac29f10d" id="r_ga24675ffd0203d44745663c76ac29f10d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga24675ffd0203d44745663c76ac29f10d">i2c_set_direction</a> (<a class="el" href="structI2C__Type.html">I2C_Type</a> *ptr, bool direction)</td></tr>
+<tr class="memdesc:ga24675ffd0203d44745663c76ac29f10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">set i2c transaction direction  <br /></td></tr>
+<tr class="separator:ga24675ffd0203d44745663c76ac29f10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>I2C driver APIs  . </p>
@@ -820,6 +859,22 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga65b7f2f3b73a8113798bade8c2f94e38" name="ga65b7f2f3b73a8113798bade8c2f94e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65b7f2f3b73a8113798bade8c2f94e38">&#9670;&#160;</a></span>I2C_NO_ADDRESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_NO_ADDRESS&#160;&#160;&#160;(1u &lt;&lt; 5)  /* no <a class="el" href="group__l1cache__interface.html#gac0d31ca829f934cccd89f8054e02773e">address</a> phase */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__i2c__drv_8h.html">drivers/inc/hpm_i2c_drv.h</a>&gt;</code></p>
+
+</div>
+</div>
 <a id="ga1b25e670e092f1111930f5eacde26b75" name="ga1b25e670e092f1111930f5eacde26b75"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1b25e670e092f1111930f5eacde26b75">&#9670;&#160;</a></span>I2C_NO_READ_ACK</h2>
 
@@ -843,7 +898,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define I2C_NO_START&#160;&#160;&#160;(1u &lt;&lt; 4)  /* no start */</td>
+          <td class="memname">#define I2C_NO_START&#160;&#160;&#160;(1u &lt;&lt; 4)  /* no start phase */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -859,7 +914,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define I2C_NO_STOP&#160;&#160;&#160;(1u &lt;&lt; 7)  /* no stop */</td>
+          <td class="memname">#define I2C_NO_STOP&#160;&#160;&#160;(1u &lt;&lt; 7)  /* no stop phase */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1061,6 +1116,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="gga68c01102755fc7d1c810bb0b0635fa90a207906923653c26a23879c4d09b2f0df" name="gga68c01102755fc7d1c810bb0b0635fa90a207906923653c26a23879c4d09b2f0df"></a>status_i2c_invalid_data&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga68c01102755fc7d1c810bb0b0635fa90a29df3e1817110c936c78e13a324e51f7" name="gga68c01102755fc7d1c810bb0b0635fa90a29df3e1817110c936c78e13a324e51f7"></a>status_i2c_no_addr_hit&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga68c01102755fc7d1c810bb0b0635fa90a23ce76a1b8b224a249c628d63fa4ef03" name="gga68c01102755fc7d1c810bb0b0635fa90a23ce76a1b8b224a249c628d63fa4ef03"></a>status_i2c_transmit_not_completed&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga68c01102755fc7d1c810bb0b0635fa90aca2262ce63d9f87db8e7c15eb3326bec" name="gga68c01102755fc7d1c810bb0b0635fa90aca2262ce63d9f87db8e7c15eb3326bec"></a>status_i2c_bus_busy&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga68c01102755fc7d1c810bb0b0635fa90ad81df1d1a675a6afc2efab35c8da5314" name="gga68c01102755fc7d1c810bb0b0635fa90ad81df1d1a675a6afc2efab35c8da5314"></a>status_i2c_not_supported&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
@@ -2244,6 +2300,322 @@ When I2C is receiving data, it indicates if fifo is half full.</dd></dl>
 
 </div>
 </div>
+<a id="gaac3132a6ea9708955c9b060b86b72720" name="gaac3132a6ea9708955c9b060b86b72720"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaac3132a6ea9708955c9b060b86b72720">&#9670;&#160;</a></span>i2c_master_disable_addr_phase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void i2c_master_disable_addr_phase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structI2C__Type.html">I2C_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__i2c__drv_8h.html">drivers/inc/hpm_i2c_drv.h</a>&gt;</code></p>
+
+<p>Disable address phase at the transaction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>ptr I2C base address </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga80f9c2daec9046002204c3dca7a91222" name="ga80f9c2daec9046002204c3dca7a91222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga80f9c2daec9046002204c3dca7a91222">&#9670;&#160;</a></span>i2c_master_disable_data_phase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void i2c_master_disable_data_phase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structI2C__Type.html">I2C_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__i2c__drv_8h.html">drivers/inc/hpm_i2c_drv.h</a>&gt;</code></p>
+
+<p>Disable data phase at the transaction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>ptr I2C base address </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3f54e3467fc4dd69fbdbf1cf25e7c123" name="ga3f54e3467fc4dd69fbdbf1cf25e7c123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3f54e3467fc4dd69fbdbf1cf25e7c123">&#9670;&#160;</a></span>i2c_master_disable_start_phase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void i2c_master_disable_start_phase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structI2C__Type.html">I2C_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__i2c__drv_8h.html">drivers/inc/hpm_i2c_drv.h</a>&gt;</code></p>
+
+<p>Disable start phase at the transaction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>ptr I2C base address </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3490c57b9485f6f396aa87114153c7a3" name="ga3490c57b9485f6f396aa87114153c7a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3490c57b9485f6f396aa87114153c7a3">&#9670;&#160;</a></span>i2c_master_disable_stop_phase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void i2c_master_disable_stop_phase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structI2C__Type.html">I2C_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__i2c__drv_8h.html">drivers/inc/hpm_i2c_drv.h</a>&gt;</code></p>
+
+<p>Disable stop phase at the transaction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>ptr I2C base address </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4b809a6af3d9c49c447a65a3768c5274" name="ga4b809a6af3d9c49c447a65a3768c5274"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4b809a6af3d9c49c447a65a3768c5274">&#9670;&#160;</a></span>i2c_master_enable_addr_phase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void i2c_master_enable_addr_phase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structI2C__Type.html">I2C_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__i2c__drv_8h.html">drivers/inc/hpm_i2c_drv.h</a>&gt;</code></p>
+
+<p>Enable address phase at the transaction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>ptr I2C base address </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga52d122cda6245fdbe1fdfca7c692c771" name="ga52d122cda6245fdbe1fdfca7c692c771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52d122cda6245fdbe1fdfca7c692c771">&#9670;&#160;</a></span>i2c_master_enable_data_phase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void i2c_master_enable_data_phase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structI2C__Type.html">I2C_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__i2c__drv_8h.html">drivers/inc/hpm_i2c_drv.h</a>&gt;</code></p>
+
+<p>Enable data phase at the transaction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>ptr I2C base address </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae0a5fff141323da215135e3711ae4120" name="gae0a5fff141323da215135e3711ae4120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae0a5fff141323da215135e3711ae4120">&#9670;&#160;</a></span>i2c_master_enable_start_phase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void i2c_master_enable_start_phase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structI2C__Type.html">I2C_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__i2c__drv_8h.html">drivers/inc/hpm_i2c_drv.h</a>&gt;</code></p>
+
+<p>Enable start phase at the transaction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>ptr I2C base address </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga9ea016d5a73766a0765f80e70ce17495" name="ga9ea016d5a73766a0765f80e70ce17495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ea016d5a73766a0765f80e70ce17495">&#9670;&#160;</a></span>i2c_master_enable_stop_phase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void i2c_master_enable_stop_phase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structI2C__Type.html">I2C_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__i2c__drv_8h.html">drivers/inc/hpm_i2c_drv.h</a>&gt;</code></p>
+
+<p>Enable stop phase at the transaction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>ptr I2C base address </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga73fce469e1c469821afe3d9887811a1f" name="ga73fce469e1c469821afe3d9887811a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga73fce469e1c469821afe3d9887811a1f">&#9670;&#160;</a></span>i2c_master_issue_data_transmission()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void i2c_master_issue_data_transmission </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structI2C__Type.html">I2C_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__i2c__drv_8h.html">drivers/inc/hpm_i2c_drv.h</a>&gt;</code></p>
+
+<p>Trigger the I2C controller to issue a data transmission command. </p>
+<p>Its purpose is to send a command to the I2C controller, instructing it to initiate a data transmission transaction as the master device.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>I2C base address </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="gaa838ed222310fa510b6d0ad2fe84b065" name="gaa838ed222310fa510b6d0ad2fe84b065"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaa838ed222310fa510b6d0ad2fe84b065">&#9670;&#160;</a></span>i2c_master_read()</h2>
 
@@ -2407,6 +2779,47 @@ When I2C is receiving data, it indicates if fifo is half full.</dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">hpm_stat_t</td><td>status_success if transmit is completed without any error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae798328c75293956dc8e4f7e524f5021" name="gae798328c75293956dc8e4f7e524f5021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae798328c75293956dc8e4f7e524f5021">&#9670;&#160;</a></span>i2c_master_set_slave_address()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void i2c_master_set_slave_address </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structI2C__Type.html">I2C_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>address</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__i2c__drv_8h.html">drivers/inc/hpm_i2c_drv.h</a>&gt;</code></p>
+
+<p>Set the slave address for I2C master mode. </p>
+<p>This function configures the slave address in I2C master mode by writing the processed slave address to the ADDR register of the I2C module.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>I2C base address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td>The slave address to be set, which is a 7-bit or 10-bit address depending on the I2C protocol </td></tr>
   </table>
   </dd>
 </dl>
@@ -2743,6 +3156,92 @@ When I2C is receiving data, it indicates if fifo is half full.</dd></dl>
 
 </div>
 </div>
+<a id="ga32776bc1506b1cea4d89131732656ad1" name="ga32776bc1506b1cea4d89131732656ad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32776bc1506b1cea4d89131732656ad1">&#9670;&#160;</a></span>i2c_set_data_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="group__common__interface.html#ga087efae82a4b174a0363363d9d5ece19">hpm_stat_t</a> i2c_set_data_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structI2C__Type.html">I2C_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__i2c__drv_8h.html">drivers/inc/hpm_i2c_drv.h</a>&gt;</code></p>
+
+<p>Set the I2C data transfer count. </p>
+<p>This function configures the I2C controller to specify the amount of data to be transferred. It ensures that the data size does not exceed the system's maximum transfer limit.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>I2C base address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>The amount of data to be transferred, in bytes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">hpm_stat_t</td><td>status_success if set without any error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga24675ffd0203d44745663c76ac29f10d" name="ga24675ffd0203d44745663c76ac29f10d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24675ffd0203d44745663c76ac29f10d">&#9670;&#160;</a></span>i2c_set_direction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void i2c_set_direction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structI2C__Type.html">I2C_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>direction</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__i2c__drv_8h.html">drivers/inc/hpm_i2c_drv.h</a>&gt;</code></p>
+
+<p>set i2c transaction direction </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>ptr I2C base address </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga1d9466a592989852a71ebc987b43058a" name="ga1d9466a592989852a71ebc987b43058a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1d9466a592989852a71ebc987b43058a">&#9670;&#160;</a></span>i2c_slave_dma_transfer()</h2>
 
@@ -2917,7 +3416,7 @@ When I2C is receiving data, it indicates if fifo is half full.</dd></dl>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Sep 30 2024 15:24:03 for HPM SDK by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Mon Dec 30 2024 18:52:06 for HPM SDK by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

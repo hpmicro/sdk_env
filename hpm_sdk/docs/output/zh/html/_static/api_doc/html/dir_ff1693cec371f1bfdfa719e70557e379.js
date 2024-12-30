@@ -30,6 +30,7 @@ var dir_ff1693cec371f1bfdfa719e70557e379 =
     [ "hpm_soc.h", "HPM6700_2HPM6750_2hpm__soc_8h.html", "HPM6700_2HPM6750_2hpm__soc_8h" ],
     [ "hpm_soc_feature.h", "HPM6700_2HPM6750_2hpm__soc__feature_8h.html", "HPM6700_2HPM6750_2hpm__soc__feature_8h" ],
     [ "hpm_soc_ip_feature.h", "HPM6700_2HPM6750_2hpm__soc__ip__feature_8h.html", "HPM6700_2HPM6750_2hpm__soc__ip__feature_8h" ],
+    [ "hpm_soc_irq.h", "HPM6700_2HPM6750_2hpm__soc__irq_8h.html", "HPM6700_2HPM6750_2hpm__soc__irq_8h" ],
     [ "hpm_sysctl_drv.c", "HPM6700_2HPM6750_2hpm__sysctl__drv_8c.html", "HPM6700_2HPM6750_2hpm__sysctl__drv_8c" ],
     [ "hpm_sysctl_drv.h", "HPM6700_2HPM6750_2hpm__sysctl__drv_8h.html", "HPM6700_2HPM6750_2hpm__sysctl__drv_8h" ],
     [ "hpm_trgmmux_src.h", "HPM6700_2HPM6750_2hpm__trgmmux__src_8h.html", "HPM6700_2HPM6750_2hpm__trgmmux__src_8h" ],

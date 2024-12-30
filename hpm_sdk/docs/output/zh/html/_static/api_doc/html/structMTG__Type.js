@@ -1,9 +1,9 @@
 var structMTG__Type =
 [
     [ "ACC_PRESET", "structMTG__Type.html#ae8400766d00192aa68f2fe495a98538c", null ],
-    [ "CMD", "structMTG__Type.html#a11919b739eeef9a27330e86e0c8de9ac", null ],
+    [ "CMD", "structMTG__Type.html#a498b86c5bc367ea0055da051d02cabfe", null ],
     [ "CONTROL", "structMTG__Type.html#a639a7988b8d1252d62672b8cd9f8a1f7", null ],
-    [ "EVENT", "structMTG__Type.html#a290dd891d711e644b0d8245533132f5d", null ],
+    [ "EVENT", "structMTG__Type.html#a83cf5b3d7ec01868cbe7f5affe5a3a5d", null ],
     [ "FILTER_ACC_LOCK", "structMTG__Type.html#a878eac234291f60deb13ef59dc64892a", null ],
     [ "FILTER_ACC_VALUE", "structMTG__Type.html#a9c9c3d9af082ce64db143fb4b5fd8bf4", null ],
     [ "FILTER_CONTROL", "structMTG__Type.html#a09592ac92124eb96f79079c88a537301", null ],
@@ -54,7 +54,7 @@ var structMTG__Type =
     [ "SW_EVENT", "structMTG__Type.html#a5474556a2ac707f2331ed9a63bab76e6", null ],
     [ "SW_GLB_RESET", "structMTG__Type.html#a2ca75f5274baec8402c8d0c86afa68c5", null ],
     [ "TIMESTAMP", "structMTG__Type.html#a2b11168a8a65b64b6e410ec37d7a5926", null ],
-    [ "TRA", "structMTG__Type.html#ac49dd08db9675362622c4ded64670d26", null ],
+    [ "TRA", "structMTG__Type.html#a6959d388e49599174c003ae83db4d0b1", null ],
     [ "VEL_LIMIT_N", "structMTG__Type.html#a399acb8ecec1932e20b246451e6ce6f4", null ],
     [ "VEL_LIMIT_P", "structMTG__Type.html#a41e870d015e18c8e94eeebcdbe26d81f", null ],
     [ "VEL_PRESET", "structMTG__Type.html#a070c1b708d6f4730c57f21686099f730", null ],

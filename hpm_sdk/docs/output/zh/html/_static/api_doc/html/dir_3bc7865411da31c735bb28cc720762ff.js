@@ -30,6 +30,7 @@ var dir_3bc7865411da31c735bb28cc720762ff =
     [ "hpm_soc.h", "HPM6800_2HPM6880_2hpm__soc_8h.html", "HPM6800_2HPM6880_2hpm__soc_8h" ],
     [ "hpm_soc_feature.h", "HPM6800_2HPM6880_2hpm__soc__feature_8h.html", "HPM6800_2HPM6880_2hpm__soc__feature_8h" ],
     [ "hpm_soc_ip_feature.h", "HPM6800_2HPM6880_2hpm__soc__ip__feature_8h.html", "HPM6800_2HPM6880_2hpm__soc__ip__feature_8h" ],
+    [ "hpm_soc_irq.h", "HPM6800_2HPM6880_2hpm__soc__irq_8h.html", "HPM6800_2HPM6880_2hpm__soc__irq_8h" ],
     [ "hpm_sysctl_drv.c", "HPM6800_2HPM6880_2hpm__sysctl__drv_8c.html", "HPM6800_2HPM6880_2hpm__sysctl__drv_8c" ],
     [ "hpm_sysctl_drv.h", "HPM6800_2HPM6880_2hpm__sysctl__drv_8h.html", "HPM6800_2HPM6880_2hpm__sysctl__drv_8h" ],
     [ "system.c", "HPM6800_2HPM6880_2system_8c.html", "HPM6800_2HPM6880_2system_8c" ]

@@ -53,7 +53,7 @@ var structDDRPHY__Type =
     [ "DTPR0", "structDDRPHY__Type.html#ab94bc088a4f9e856156edae5bef0c15f", null ],
     [ "DTPR1", "structDDRPHY__Type.html#a25ee5d2a259b58e688e7b4dce5a7ad50", null ],
     [ "DTPR2", "structDDRPHY__Type.html#a98ac00c75ea9737669c45701c8693c01", null ],
-    [ "DX", "structDDRPHY__Type.html#a0634c937e8a58af4061a444f016b3739", null ],
+    [ "DX", "structDDRPHY__Type.html#a3850feb20c2b53a5c655f924f7a6cf1f", null ],
     [ "DXCCR", "structDDRPHY__Type.html#adc0412945d7c717799ecbe3197ab4e0a", null ],
     [ "EMR", "structDDRPHY__Type.html#a9800fbc4933a9cfb9852e8116c44accb", null ],
     [ "EMR2", "structDDRPHY__Type.html#a0eb73605588f409acb85146622878014", null ],
@@ -97,5 +97,5 @@ var structDDRPHY__Type =
     [ "RIDR", "structDDRPHY__Type.html#abc1b7510238ab476aeee4e34f71fbcac", null ],
     [ "SR0", "structDDRPHY__Type.html#a4588b119747d0a89c63c04a4abb9495a", null ],
     [ "SR1", "structDDRPHY__Type.html#a3786253a552ad25cb30b3ecb54af1ec5", null ],
-    [ "ZQ", "structDDRPHY__Type.html#ac90a1c4694c96324f883096a3c2c61ce", null ]
+    [ "ZQ", "structDDRPHY__Type.html#a6678eda84baac9845ccdc8fcb8dace94", null ]
 ];

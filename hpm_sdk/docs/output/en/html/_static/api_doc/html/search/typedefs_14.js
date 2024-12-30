@@ -1,8 +1,8 @@
 var searchData=
 [
   ['vad_5fconfig_5ft_0',['vad_config_t',['../group__vad__interface.html#ga9c85cd861e752aa35f1bb562e849e691',1,'hpm_vad_drv.h']]],
-  ['vdd_5fcurrent_5fmax_5ft_1',['vdd_current_max_t',['../hpm__sdmmc__emmc_8h.html#a436b2e3b516f7d30ccd31fad237994dc',1,'hpm_sdmmc_emmc.h']]],
-  ['vdd_5fcurrent_5fmin_5ft_2',['vdd_current_min_t',['../hpm__sdmmc__emmc_8h.html#a148516f49ddb7bfeeb23fcaf61084d77',1,'hpm_sdmmc_emmc.h']]],
+  ['vdd_5fcurrent_5fmax_5ft_1',['vdd_current_max_t',['../group__hpm__sdmmc.html#ga436b2e3b516f7d30ccd31fad237994dc',1,'hpm_sdmmc_emmc.h']]],
+  ['vdd_5fcurrent_5fmin_5ft_2',['vdd_current_min_t',['../group__hpm__sdmmc.html#ga148516f49ddb7bfeeb23fcaf61084d77',1,'hpm_sdmmc_emmc.h']]],
   ['vel_5fone_5fway_5fmode_5ft_3',['vel_one_way_mode_t',['../group__mtg__interface.html#ga1dbb02181b504c0f8fefab47def03716',1,'vel_one_way_mode_t:&#160;hpm_mtg_drv.h'],['../group__mtg__interface.html#ga1dbb02181b504c0f8fefab47def03716',1,'vel_one_way_mode_t:&#160;hpm_mtgv2_drv.h']]],
   ['vsc_5fadc_5fsel_5ft_4',['vsc_adc_sel_t',['../group__vsc__interface.html#ga96197f245ebe640b369854d7ef382bc3',1,'hpm_vsc_drv.h']]],
   ['vsc_5fdata_5fopr_5fmode_5ft_5',['vsc_data_opr_mode_t',['../group__vsc__interface.html#ga4beda06843b8e5fd3f5b371450be1d47',1,'hpm_vsc_drv.h']]],

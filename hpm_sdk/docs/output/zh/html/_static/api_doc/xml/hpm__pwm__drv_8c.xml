@@ -68,6 +68,8 @@
       <member refid="group__pwm__interface_1ga6c3f63e3c2bd9fd7f785763994173d85" kind="function"><name>pwm_get_default_pwm_pair_config</name></member>
       <member refid="group__pwm__interface_1ga5c174ee4e7326813fc3a5c3719d39bbc" kind="function"><name>pwm_setup_waveform_in_pair</name></member>
       <member refid="group__pwm__interface_1ga97f5c1519173b5c73d24d55f7cf5a725" kind="function"><name>pwm_setup_waveform</name></member>
+      <member refid="group__pwm__interface_1gace5f5e44b2b433c4e5e6a99588890785" kind="function"><name>pwm_update_duty_edge_aligned</name></member>
+      <member refid="group__pwm__interface_1gaeedeeef0ac884b58bdef016afcf0eadc" kind="function"><name>pwm_update_duty_central_aligned</name></member>
       <member refid="group__pwm__interface_1ga6392dab670e8f4ae9e6476af3c58bacd" kind="function"><name>pwm_update_raw_cmp_edge_aligned</name></member>
       <member refid="group__pwm__interface_1gaaa52e327abf31dd95477c8a9daf432d9" kind="function"><name>pwm_update_raw_cmp_central_aligned</name></member>
     </sectiondef>
@@ -215,55 +217,88 @@
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
 <codeline lineno="138"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"></highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__pwm__interface_1ga6392dab670e8f4ae9e6476af3c58bacd" kindref="member">pwm_update_raw_cmp_edge_aligned</ref>(<ref refid="structPWM__Type" kindref="compound">PWM_Type</ref><sp/>*pwm_x,<sp/>uint8_t<sp/>cmp_index,<sp/>uint32_t<sp/>target_cmp)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__pwm__interface_1gace5f5e44b2b433c4e5e6a99588890785" kindref="member">pwm_update_duty_edge_aligned</ref>(<ref refid="structPWM__Type" kindref="compound">PWM_Type</ref><sp/>*pwm_x,<sp/>uint8_t<sp/>cmp_index,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duty)</highlight></codeline>
 <codeline lineno="141"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga8d60daaaacabde15b02b6c90417ab4c8" kindref="member">pwm_shadow_register_unlock</ref>(pwm_x);</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga996d3cc87106819c86c84a4211896baf" kindref="member">pwm_cmp_update_cmp_value</ref>(pwm_x,<sp/>cmp_index,<sp/>target_cmp,<sp/>0);</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
-<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__pwm__interface_1gaaa52e327abf31dd95477c8a9daf432d9" kindref="member">pwm_update_raw_cmp_central_aligned</ref>(<ref refid="structPWM__Type" kindref="compound">PWM_Type</ref><sp/>*pwm_x,<sp/>uint8_t<sp/>cmp1_index,</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>cmp2_index,<sp/>uint32_t<sp/>target_cmp1,<sp/>uint32_t<sp/>target_cmp2)</highlight></codeline>
-<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reload<sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__pwm__regs_8h_1a74bf17736f4c53d2eee919b89e0fd8f8" kindref="member">PWM_RLD_RLD_GET</ref>(pwm_x-&gt;<ref refid="structPWM__Type_1a497590f2ea6050dc8e08f31b9972c6f8" kindref="member">RLD</ref>);</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!target_cmp1)<sp/>{</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_cmp1<sp/>=<sp/>reload<sp/>+<sp/>1;</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!target_cmp2)<sp/>{</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_cmp2<sp/>=<sp/>reload<sp/>+<sp/>1;</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga8d60daaaacabde15b02b6c90417ab4c8" kindref="member">pwm_shadow_register_unlock</ref>(pwm_x);</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga996d3cc87106819c86c84a4211896baf" kindref="member">pwm_cmp_update_cmp_value</ref>(pwm_x,<sp/>cmp1_index,<sp/>target_cmp1,<sp/>0);</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga996d3cc87106819c86c84a4211896baf" kindref="member">pwm_cmp_update_cmp_value</ref>(pwm_x,<sp/>cmp2_index,<sp/>target_cmp2,<sp/>0);</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PWM_SOC_HRPWM_SUPPORT)<sp/>&amp;&amp;<sp/>PWM_SOC_HRPWM_SUPPORT</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="163"><highlight class="normal"></highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>pwm_update_raw_hrcmp_edge_aligned(<ref refid="structPWM__Type" kindref="compound">PWM_Type</ref><sp/>*pwm_x,<sp/>uint8_t<sp/>cmp_index,<sp/>uint32_t<sp/>target_cmp,</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>target_hrcmp)</highlight></codeline>
-<codeline lineno="166"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga8d60daaaacabde15b02b6c90417ab4c8" kindref="member">pwm_shadow_register_unlock</ref>(pwm_x);</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_cmp_update_hrcmp_value(pwm_x,<sp/>cmp_index,<sp/>target_cmp,<sp/>target_hrcmp);</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
-<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>pwm_update_raw_hrcmp_central_aligned(<ref refid="structPWM__Type" kindref="compound">PWM_Type</ref><sp/>*pwm_x,<sp/>uint8_t<sp/>cmp1_index,</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>cmp2_index,<sp/>uint32_t<sp/>target_cmp1,<sp/>uint32_t<sp/>target_cmp2,</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>target_hrcmp1,<sp/>uint16_t<sp/>target_hrcmp2)</highlight></codeline>
-<codeline lineno="175"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reload<sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__pwm__regs_8h_1a74bf17736f4c53d2eee919b89e0fd8f8" kindref="member">PWM_RLD_RLD_GET</ref>(pwm_x-&gt;<ref refid="structPWM__Type_1a497590f2ea6050dc8e08f31b9972c6f8" kindref="member">RLD</ref>);</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!target_cmp1)<sp/>{</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_cmp1<sp/>=<sp/>reload<sp/>+<sp/>1;</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!target_cmp2)<sp/>{</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_cmp2<sp/>=<sp/>reload<sp/>+<sp/>1;</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga8d60daaaacabde15b02b6c90417ab4c8" kindref="member">pwm_shadow_register_unlock</ref>(pwm_x);</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_cmp_update_hrcmp_value(pwm_x,<sp/>cmp1_index,<sp/>target_cmp1,<sp/>target_hrcmp1);</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_cmp_update_hrcmp_value(pwm_x,<sp/>cmp2_index,<sp/>target_cmp2,<sp/>target_hrcmp2);</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
-<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>target_cmp;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reload;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>reload<sp/>=<sp/><ref refid="group__pwm__interface_1ga3f2bb59665b2484b11b2200ea26f072d" kindref="member">pwm_get_reload_val</ref>(pwm_x);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>target_cmp<sp/>=<sp/>(float)reload<sp/>/<sp/>100<sp/>*<sp/>(100.0f<sp/>-<sp/>duty);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_cmp<sp/>==<sp/>reload)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_cmp<sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga8d60daaaacabde15b02b6c90417ab4c8" kindref="member">pwm_shadow_register_unlock</ref>(pwm_x);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga996d3cc87106819c86c84a4211896baf" kindref="member">pwm_cmp_update_cmp_value</ref>(pwm_x,<sp/>cmp_index,<sp/>target_cmp,<sp/>0);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__pwm__interface_1gaeedeeef0ac884b58bdef016afcf0eadc" kindref="member">pwm_update_duty_central_aligned</ref>(<ref refid="structPWM__Type" kindref="compound">PWM_Type</ref><sp/>*pwm_x,<sp/>uint8_t<sp/>cmp1_index,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>cmp2_index,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duty)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>target_cmp;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reload;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>reload<sp/>=<sp/><ref refid="group__pwm__interface_1ga3f2bb59665b2484b11b2200ea26f072d" kindref="member">pwm_get_reload_val</ref>(pwm_x);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>target_cmp<sp/>=<sp/>(float)reload<sp/>/<sp/>100<sp/>*<sp/>duty;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1gaaa52e327abf31dd95477c8a9daf432d9" kindref="member">pwm_update_raw_cmp_central_aligned</ref>(pwm_x,<sp/>cmp1_index,<sp/>cmp2_index,<sp/>(reload<sp/>-<sp/>target_cmp)<sp/>&gt;&gt;<sp/>1,<sp/>(reload<sp/>+<sp/>target_cmp)<sp/>&gt;&gt;<sp/>1);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__pwm__interface_1ga6392dab670e8f4ae9e6476af3c58bacd" kindref="member">pwm_update_raw_cmp_edge_aligned</ref>(<ref refid="structPWM__Type" kindref="compound">PWM_Type</ref><sp/>*pwm_x,<sp/>uint8_t<sp/>cmp_index,<sp/>uint32_t<sp/>target_cmp)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga8d60daaaacabde15b02b6c90417ab4c8" kindref="member">pwm_shadow_register_unlock</ref>(pwm_x);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga996d3cc87106819c86c84a4211896baf" kindref="member">pwm_cmp_update_cmp_value</ref>(pwm_x,<sp/>cmp_index,<sp/>target_cmp,<sp/>0);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__pwm__interface_1gaaa52e327abf31dd95477c8a9daf432d9" kindref="member">pwm_update_raw_cmp_central_aligned</ref>(<ref refid="structPWM__Type" kindref="compound">PWM_Type</ref><sp/>*pwm_x,<sp/>uint8_t<sp/>cmp1_index,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>cmp2_index,<sp/>uint32_t<sp/>target_cmp1,<sp/>uint32_t<sp/>target_cmp2)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reload<sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__pwm__regs_8h_1a74bf17736f4c53d2eee919b89e0fd8f8" kindref="member">PWM_RLD_RLD_GET</ref>(pwm_x-&gt;<ref refid="structPWM__Type_1a497590f2ea6050dc8e08f31b9972c6f8" kindref="member">RLD</ref>);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>cmp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!target_cmp1)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_cmp1<sp/>=<sp/>reload<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!target_cmp2)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_cmp2<sp/>=<sp/>reload<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_cmp1<sp/>&gt;<sp/>target_cmp2)<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmp<sp/>=<sp/>target_cmp1;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_cmp1<sp/>=<sp/>target_cmp2;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_cmp2<sp/>=<sp/>cmp;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga8d60daaaacabde15b02b6c90417ab4c8" kindref="member">pwm_shadow_register_unlock</ref>(pwm_x);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga996d3cc87106819c86c84a4211896baf" kindref="member">pwm_cmp_update_cmp_value</ref>(pwm_x,<sp/>cmp1_index,<sp/>target_cmp1,<sp/>0);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga996d3cc87106819c86c84a4211896baf" kindref="member">pwm_cmp_update_cmp_value</ref>(pwm_x,<sp/>cmp2_index,<sp/>target_cmp2,<sp/>0);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PWM_SOC_HRPWM_SUPPORT)<sp/>&amp;&amp;<sp/>PWM_SOC_HRPWM_SUPPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>pwm_update_raw_hrcmp_edge_aligned(<ref refid="structPWM__Type" kindref="compound">PWM_Type</ref><sp/>*pwm_x,<sp/>uint8_t<sp/>cmp_index,<sp/>uint32_t<sp/>target_cmp,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>target_hrcmp)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga8d60daaaacabde15b02b6c90417ab4c8" kindref="member">pwm_shadow_register_unlock</ref>(pwm_x);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_cmp_update_hrcmp_value(pwm_x,<sp/>cmp_index,<sp/>target_cmp,<sp/>target_hrcmp);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>pwm_update_raw_hrcmp_central_aligned(<ref refid="structPWM__Type" kindref="compound">PWM_Type</ref><sp/>*pwm_x,<sp/>uint8_t<sp/>cmp1_index,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>cmp2_index,<sp/>uint32_t<sp/>target_cmp1,<sp/>uint32_t<sp/>target_cmp2,</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>target_hrcmp1,<sp/>uint16_t<sp/>target_hrcmp2)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reload<sp/>=<sp/><ref refid="HPM5300_2ip_2hpm__pwm__regs_8h_1a74bf17736f4c53d2eee919b89e0fd8f8" kindref="member">PWM_RLD_RLD_GET</ref>(pwm_x-&gt;<ref refid="structPWM__Type_1a497590f2ea6050dc8e08f31b9972c6f8" kindref="member">RLD</ref>);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!target_cmp1)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_cmp1<sp/>=<sp/>reload<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!target_cmp2)<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_cmp2<sp/>=<sp/>reload<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__pwm__interface_1ga8d60daaaacabde15b02b6c90417ab4c8" kindref="member">pwm_shadow_register_unlock</ref>(pwm_x);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_cmp_update_hrcmp_value(pwm_x,<sp/>cmp1_index,<sp/>target_cmp1,<sp/>target_hrcmp1);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_cmp_update_hrcmp_value(pwm_x,<sp/>cmp2_index,<sp/>target_cmp2,<sp/>target_hrcmp2);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="drivers/src/hpm_pwm_drv.c"/>
   </compounddef>

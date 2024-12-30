@@ -54,6 +54,7 @@ var dir_7e7cf4a74d6064280ca5f49b65fc101b =
     [ "hpm_ptpc_regs.h", "HPM6800_2ip_2hpm__ptpc__regs_8h.html", "HPM6800_2ip_2hpm__ptpc__regs_8h" ],
     [ "hpm_rng_regs.h", "HPM6800_2ip_2hpm__rng__regs_8h.html", "HPM6800_2ip_2hpm__rng__regs_8h" ],
     [ "hpm_rtc_regs.h", "HPM6800_2ip_2hpm__rtc__regs_8h.html", "HPM6800_2ip_2hpm__rtc__regs_8h" ],
+    [ "hpm_sdadc_regs.h", "hpm__sdadc__regs_8h.html", "hpm__sdadc__regs_8h" ],
     [ "hpm_sdp_regs.h", "HPM6800_2ip_2hpm__sdp__regs_8h.html", "HPM6800_2ip_2hpm__sdp__regs_8h" ],
     [ "hpm_sdxc_regs.h", "HPM6800_2ip_2hpm__sdxc__regs_8h.html", "HPM6800_2ip_2hpm__sdxc__regs_8h" ],
     [ "hpm_sec_regs.h", "HPM6800_2ip_2hpm__sec__regs_8h.html", "HPM6800_2ip_2hpm__sec__regs_8h" ],

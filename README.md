@@ -58,4 +58,8 @@ The menu bar supports setting both English and Chinese languages and provides ac
   To enable long path support, please import registry file located at tools/scripts/win10_enable_long_path.reg. For more details about this limitation, please refer to https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd
 ### Windows 7 can't use Python 3.9 or above
   - Hpm_sdk relies on Python 3.9 or above, but it can't run directly on Windows 7, requiring installation of pythonw_win7_patch. Download link: https://pan.baidu.com/s/1RaYHOD7xk7fnotmgLpoAlA?pwd=xk2n, path is `先楫技术资料/SDK`.
+### When building the project with CMake, a warning is displayed “The object file directory xxx has xxx characters. The maximum full path to an object file is 250 characters..The build may not work correctly.”
+  The warning occurs because the path to the current build project's output directory is too long. This may result in some generated obj files having paths that exceed the maximum length supported by the compiler, potentially causing compilation failures. You can address this issue by making the following adjustments:
+  - To minimize the absolute path length for hpm_sdk, place the SDK_ENV directory as close to the root of the drive as possible, such as "D:\sdk_env". This reduces the number of directory levels in the absolute path for sdk_env, thereby shortening the entire path length for hpm_sdk.
+  - Alternatively, you can shorten the final output directory path length. For example, in start_gui, reduce the "Build Path" to minimize the number of directory levels in the absolute path. Ensuring a shorter path length can help guarantee that the project builds successfully.
   

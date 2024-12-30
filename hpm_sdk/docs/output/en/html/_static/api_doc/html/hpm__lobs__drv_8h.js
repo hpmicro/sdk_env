@@ -30,6 +30,19 @@ var hpm__lobs__drv_8h =
       [ "lobs_sample_1_per_6", "group__lobs__interface.html#ggab282611411192f532f035c8570d1c725a1a8688dc2005c4065783262c4553a8ca", null ],
       [ "lobs_sample_1_per_7", "group__lobs__interface.html#ggab282611411192f532f035c8570d1c725abebb14ef665d7eb28bcf7469e3bd7673", null ]
     ] ],
+    [ "lobs_signal_group_t", "group__lobs__interface.html#gab3cbfbef4e6424168cbe9beafbc07a22", [
+      [ "lobs_signal_group_PA", "group__lobs__interface.html#ggab3cbfbef4e6424168cbe9beafbc07a22a7286080aa0a66c79eed37faff4c13992", null ],
+      [ "lobs_signal_group_PB", "group__lobs__interface.html#ggab3cbfbef4e6424168cbe9beafbc07a22a9e821a08b1910862f03261dd9a632989", null ],
+      [ "lobs_signal_group_PC", "group__lobs__interface.html#ggab3cbfbef4e6424168cbe9beafbc07a22ae92fa325c937127870536219148b9b83", null ],
+      [ "lobs_signal_group_PD", "group__lobs__interface.html#ggab3cbfbef4e6424168cbe9beafbc07a22a2acfd89509384865a0f80cae3179d78c", null ],
+      [ "lobs_signal_group_PE", "group__lobs__interface.html#ggab3cbfbef4e6424168cbe9beafbc07a22aef9cf6f5677d0f88a3481ef9f8080735", null ],
+      [ "lobs_signal_group_PF", "group__lobs__interface.html#ggab3cbfbef4e6424168cbe9beafbc07a22adfbab065d6e3fccedbf051e30c6c53a8", null ],
+      [ "lobs_signal_group_PV", "group__lobs__interface.html#ggab3cbfbef4e6424168cbe9beafbc07a22a02ecbde76253296698ebe993eb749756", null ],
+      [ "lobs_signal_group_PW", "group__lobs__interface.html#ggab3cbfbef4e6424168cbe9beafbc07a22a0f7c97e55d1403c70c180aadb527f75e", null ],
+      [ "lobs_signal_group_PX", "group__lobs__interface.html#ggab3cbfbef4e6424168cbe9beafbc07a22ac39b359811a5a1b85c8f123ea16e28d0", null ],
+      [ "lobs_signal_group_PY", "group__lobs__interface.html#ggab3cbfbef4e6424168cbe9beafbc07a22a42a708809a60c3691af779886c6779df", null ],
+      [ "lobs_signal_group_PZ", "group__lobs__interface.html#ggab3cbfbef4e6424168cbe9beafbc07a22a3d8ad288820a0c6e076c81906be566a9", null ]
+    ] ],
     [ "lobs_state_chg_condition_t", "group__lobs__interface.html#gabd459296b1dce4655afb5c16ab8f81b3", [
       [ "lobs_cnt_matched", "group__lobs__interface.html#ggabd459296b1dce4655afb5c16ab8f81b3afaf151297698076b8975b92dd552514a", null ],
       [ "lobs_sig_equal_golden", "group__lobs__interface.html#ggabd459296b1dce4655afb5c16ab8f81b3ad12629cad9e675f60e305413e3822910", null ],

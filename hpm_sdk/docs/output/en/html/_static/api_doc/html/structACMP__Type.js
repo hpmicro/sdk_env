@@ -1,11 +1,11 @@
 var structACMP__Type =
 [
     [ "CFG", "structACMP__Type.html#a7599a70749a9216200b8db16d7b3e39c", null ],
-    [ "CHANNEL", "structACMP__Type.html#adceeecaf654758c67f92fc978c51970f", null ],
-    [ "CHANNEL", "structACMP__Type.html#ac6e2c2190f45905b5c0fc6f2072f266a", null ],
-    [ "CHANNEL", "structACMP__Type.html#adf4f65f5fbcf29bd7d2443518348123e", null ],
-    [ "CHANNEL", "structACMP__Type.html#ae321d04ce2b8ee4ad503af27a4e9246c", null ],
-    [ "CHANNEL", "structACMP__Type.html#af294338e865012bd2062d85503704a71", null ],
+    [ "CHANNEL", "structACMP__Type.html#a2c3658e6d5529fb0993e30375d7e51f8", null ],
+    [ "CHANNEL", "structACMP__Type.html#abc6d079c55faa18c86ed8091bb81680f", null ],
+    [ "CHANNEL", "structACMP__Type.html#a5274c069718b91a6aaba4c5d59c224a4", null ],
+    [ "CHANNEL", "structACMP__Type.html#a9820065d3bee1e209b43758655a2f371", null ],
+    [ "CHANNEL", "structACMP__Type.html#a8f182439b31b21e5cdde6b159d1bae4a", null ],
     [ "DACCFG", "structACMP__Type.html#a429385471178e5501b8d172e7107b0d2", null ],
     [ "DMAEN", "structACMP__Type.html#a9eabe437f7fd6766cc50b7c8ddfcc031", null ],
     [ "IRQEN", "structACMP__Type.html#a644714083fada11311138de3c10580b4", null ],

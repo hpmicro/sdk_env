@@ -1,5 +1,12 @@
 var NAVTREEINDEX336 =
 {
+"HPM6300_2ip_2hpm__otp__regs_8h.html#a8e109afa011d2d4cc45f5a0b032c73af":[4,0,5,2,6,29,68],
+"HPM6300_2ip_2hpm__otp__regs_8h.html#a8ebb15c313fbb1c148e0b5d9d68dc254":[4,0,5,2,6,29,303],
+"HPM6300_2ip_2hpm__otp__regs_8h.html#a8f89d5b463ef4c46a92af38aa5915e45":[4,0,5,2,6,29,127],
+"HPM6300_2ip_2hpm__otp__regs_8h.html#a9001dda762deef46a0a1622afc1781bb":[4,0,5,2,6,29,343],
+"HPM6300_2ip_2hpm__otp__regs_8h.html#a90ba57a0b486357a3df4d8709c9a5fbe":[4,0,5,2,6,29,149],
+"HPM6300_2ip_2hpm__otp__regs_8h.html#a9251bfbe0b4d145b38cb04800e8ceb49":[4,0,5,2,6,29,66],
+"HPM6300_2ip_2hpm__otp__regs_8h.html#a93033d8fe24ed3c7aa3da52dc3218a9c":[4,0,5,2,6,29,129],
 "HPM6300_2ip_2hpm__otp__regs_8h.html#a93f90d5e906991a2ec051e92c267278a":[4,0,5,2,6,29,109],
 "HPM6300_2ip_2hpm__otp__regs_8h.html#a95063dbe10bc9d37aeb624505f410a7d":[4,0,5,2,6,29,263],
 "HPM6300_2ip_2hpm__otp__regs_8h.html#a95120581643b10be9f7549671ea69735":[4,0,5,2,6,29,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX336 =
 "HPM6300_2ip_2hpm__pcfg__regs_8h.html#a4c0fa2951da1b8adc89c3f1a52f19ac1":[4,0,5,2,6,30,37],
 "HPM6300_2ip_2hpm__pcfg__regs_8h.html#a4c54b6439ac79f466d9c020e73945e92":[4,0,5,2,6,30,65],
 "HPM6300_2ip_2hpm__pcfg__regs_8h.html#a4c8c4f3597fb2dcb59da501db4d309d0":[4,0,5,2,6,30,242],
-"HPM6300_2ip_2hpm__pcfg__regs_8h.html#a4e062ee3e16f34f56024b37c262df98d":[4,0,5,2,6,30,95],
-"HPM6300_2ip_2hpm__pcfg__regs_8h.html#a4e52164ca9435ea39acb89289b0fd036":[4,0,5,2,6,30,115],
-"HPM6300_2ip_2hpm__pcfg__regs_8h.html#a4ea1f7de3bba7f1e2cf4945faeabbcb7":[4,0,5,2,6,30,71],
-"HPM6300_2ip_2hpm__pcfg__regs_8h.html#a4f6d1217440e6cf2cd728ffdae8b2d93":[4,0,5,2,6,30,161],
-"HPM6300_2ip_2hpm__pcfg__regs_8h.html#a50ede6aef5f6a2663513966a45a1f919":[4,0,5,2,6,30,47],
-"HPM6300_2ip_2hpm__pcfg__regs_8h.html#a528b9a111aa7720bb107278e87e70904":[4,0,5,2,6,30,164],
-"HPM6300_2ip_2hpm__pcfg__regs_8h.html#a53d0b172ac928a6ac7d52ed6b9c1c3bd":[4,0,5,2,6,30,132],
-"HPM6300_2ip_2hpm__pcfg__regs_8h.html#a53f13af7ba4125658c694014cac33727":[4,0,5,2,6,30,120]
+"HPM6300_2ip_2hpm__pcfg__regs_8h.html#a4e062ee3e16f34f56024b37c262df98d":[4,0,5,2,6,30,95]
 };

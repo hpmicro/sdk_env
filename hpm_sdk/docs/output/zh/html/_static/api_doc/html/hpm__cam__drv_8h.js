@@ -5,7 +5,7 @@ var hpm__cam__drv_8h =
     [ "CAM_COLOR_FORMAT_RGB565", "group__cam__interface.html#ga769478b3c24998f98dda15ed126c4876", null ],
     [ "CAM_COLOR_FORMAT_RGB888", "group__cam__interface.html#ga2f24821cc1d9d27936d2b31a0280cc41", null ],
     [ "CAM_COLOR_FORMAT_UNSUPPORTED", "group__cam__interface.html#ga7064c063c1b714fa983a5504cf2a6935", null ],
-    [ "CAM_COLOR_FORMAT_YCBCR422", "group__cam__interface.html#ga9d4f6206290fee42fa8d54ceb48ad658", null ],
+    [ "CAM_COLOR_FORMAT_YCBCR422_YUV422", "group__cam__interface.html#gabcf37480e0a288f7d3ccee8dc67735a5", null ],
     [ "CAM_COLOR_FORMAT_YUV444", "group__cam__interface.html#ga05b65c98d470413e65e3e1de89621443", null ],
     [ "CAM_DATA_STORE_MODE_BINARY", "group__cam__interface.html#gae4fb4d95ea19ad465640f37156d0ccc3", null ],
     [ "CAM_DATA_STORE_MODE_NORMAL", "group__cam__interface.html#ga9d7e54e43ab1274f2c340d9224549735", null ],

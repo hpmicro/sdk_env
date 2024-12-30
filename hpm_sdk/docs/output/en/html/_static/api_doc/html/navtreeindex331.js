@@ -1,5 +1,12 @@
 var NAVTREEINDEX331 =
 {
+"HPM6300_2ip_2hpm__gptmr__regs_8h.html#a7cc6a0241ea165bcfa493bcb5f8196a4":[4,0,5,2,6,20,71],
+"HPM6300_2ip_2hpm__gptmr__regs_8h.html#a7d255d56be96080e74ceecc19b9ecec0":[4,0,5,2,6,20,75],
+"HPM6300_2ip_2hpm__gptmr__regs_8h.html#a8010762010fbc5570ae3f575c360b662":[4,0,5,2,6,20,205],
+"HPM6300_2ip_2hpm__gptmr__regs_8h.html#a806076321926d058d2c627e9b088eee4":[4,0,5,2,6,20,22],
+"HPM6300_2ip_2hpm__gptmr__regs_8h.html#a80cc61b6c553d33af6945e21abe0f104":[4,0,5,2,6,20,182],
+"HPM6300_2ip_2hpm__gptmr__regs_8h.html#a817426f92a4a3c886f0e5da8a167097c":[4,0,5,2,6,20,18],
+"HPM6300_2ip_2hpm__gptmr__regs_8h.html#a819f4d830b223cf40df52c89c6254dde":[4,0,5,2,6,20,58],
 "HPM6300_2ip_2hpm__gptmr__regs_8h.html#a859e6e9829c6b73d989af266803209e7":[4,0,5,2,6,20,32],
 "HPM6300_2ip_2hpm__gptmr__regs_8h.html#a864d4192935794db85697b9b2b97ee11":[4,0,5,2,6,20,67],
 "HPM6300_2ip_2hpm__gptmr__regs_8h.html#a87a61a950b5db5a70b409eed1e192810":[4,0,5,2,6,20,24],
@@ -242,12 +249,5 @@ var NAVTREEINDEX331 =
 "HPM6300_2ip_2hpm__hall__regs_8h.html#ad053450155ea29ad92b189b9cf9d4338":[4,0,5,2,6,21,185],
 "HPM6300_2ip_2hpm__hall__regs_8h.html#ad295e3b4f0a545caf4f56b6552080978":[4,0,5,2,6,21,92],
 "HPM6300_2ip_2hpm__hall__regs_8h.html#ad2f1c1b09ad38e2d026f16883bab7bbd":[4,0,5,2,6,21,111],
-"HPM6300_2ip_2hpm__hall__regs_8h.html#ad449ffa69f893f7205c7df70265feb54":[4,0,5,2,6,21,206],
-"HPM6300_2ip_2hpm__hall__regs_8h.html#ad49734350aff6342f12c4a125adc879b":[4,0,5,2,6,21,14],
-"HPM6300_2ip_2hpm__hall__regs_8h.html#ad5d1bf41b21cc26409cdd4b026da3cf6":[4,0,5,2,6,21,37],
-"HPM6300_2ip_2hpm__hall__regs_8h.html#ad6c8101a0f7279c20a515ca86767a378":[4,0,5,2,6,21,188],
-"HPM6300_2ip_2hpm__hall__regs_8h.html#ad6e805aabfdafd67e7f6a4c17b63235e":[4,0,5,2,6,21,157],
-"HPM6300_2ip_2hpm__hall__regs_8h.html#ad6f06d3e05322bd5842b5ed8e3ad084d":[4,0,5,2,6,21,98],
-"HPM6300_2ip_2hpm__hall__regs_8h.html#ad801bd0e6b1b452d55579e622b17393a":[4,0,5,2,6,21,142],
-"HPM6300_2ip_2hpm__hall__regs_8h.html#ad9038d61930e603209b038269471bd66":[4,0,5,2,6,21,62]
+"HPM6300_2ip_2hpm__hall__regs_8h.html#ad449ffa69f893f7205c7df70265feb54":[4,0,5,2,6,21,206]
 };

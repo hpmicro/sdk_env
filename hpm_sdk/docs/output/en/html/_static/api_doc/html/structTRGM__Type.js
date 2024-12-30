@@ -30,7 +30,7 @@ var structTRGM__Type =
     [ "RESERVED3", "structTRGM__Type.html#a00b1249fed543438da72c37d0468ad11", null ],
     [ "RESERVED4", "structTRGM__Type.html#a174a4fec9b28ccdc5828804463d955c1", null ],
     [ "RESERVED5", "structTRGM__Type.html#a01549ef7a4b4dd69a3ff6597e3d81793", null ],
-    [ "RESERVED6", "structTRGM__Type.html#a970ba86948e6fbb96450a7726f945f0f", null ],
+    [ "RESERVED6", "structTRGM__Type.html#af1d43b9203b60011936613e9b07e8308", null ],
     [ "RESERVED7", "structTRGM__Type.html#a7939fbb9c68c61fb2bb35ebfed8bd7f1", null ],
     [ "RESERVED8", "structTRGM__Type.html#aab54fa55766b5b78aeb977b3c09904d9", null ],
     [ "RESERVED9", "structTRGM__Type.html#afa7da25a4cc11827fc3b3a0acc21b9af", null ],

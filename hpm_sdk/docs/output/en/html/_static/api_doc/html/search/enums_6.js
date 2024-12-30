@@ -1,21 +1,11 @@
 var searchData=
 [
-  ['hall_5fcount_5fdelay_5fstart_0',['hall_count_delay_start',['../group__hall__interface.html#ga96b4ae1434d85cfa3bd1cd4ed62f5152',1,'hpm_hall_drv.h']]],
-  ['hall_5fcounter_5ftype_1',['hall_counter_type',['../group__hall__interface.html#gae5193aaf9727f986d4bd48bab49a5f3d',1,'hpm_hall_drv.h']]],
-  ['hall_5fphase_5ft_2',['hall_phase_t',['../hpm__mcl__physical_8h.html#a30438820b803592257436214687dd98c',1,'hpm_mcl_physical.h']]],
-  ['hall_5frotate_5fdirection_3',['hall_rotate_direction',['../group__hall__interface.html#ga8864e0956d97664acd7fb70765a6991c',1,'hpm_hall_drv.h']]],
-  ['hpm_5fmcl_5fdir_5ft_4',['hpm_mcl_dir_t',['../hpm__over__zero_8h.html#a2f5a148b304cbc26a45e509ccb0b757c',1,'hpm_over_zero.h']]],
-  ['hpm_5fmcl_5fover_5fzero_5ffsm_5ft_5',['hpm_mcl_over_zero_fsm_t',['../hpm__over__zero_8h.html#a4d35bf4ca8953bbe20c0be897b266fe0',1,'hpm_over_zero.h']]],
-  ['hpm_5fmcl_5fover_5fzero_5finterval_5ft_6',['hpm_mcl_over_zero_interval_t',['../hpm__over__zero_8h.html#ad4974fcb3351c786ed0800e1daf9ce4c',1,'hpm_over_zero.h']]],
-  ['hpm_5fpanel_5fif_5ftype_7',['hpm_panel_if_type',['../hpm__panel_8h.html#aee37ba3d7e07181d3dff50f0c94d3b27',1,'hpm_panel.h']]],
-  ['hpm_5fpanel_5fmipi_5fformat_8',['hpm_panel_mipi_format',['../hpm__panel_8h.html#a6e449cf9aee7bc5b133d6748b5a61a4f',1,'hpm_panel.h']]],
-  ['hpm_5fpanel_5fstate_5fpower_9',['hpm_panel_state_power',['../hpm__panel_8h.html#a2e5bfd3219f28b9cf83b995f40857ad2',1,'hpm_panel.h']]],
-  ['hpm_5fpmbus_5ftransaction_5ftype_10',['hpm_pmbus_transaction_type',['../hpm__pmbus_8h.html#ac6faa3bf66b474647c7b92d3289130dc',1,'hpm_pmbus.h']]],
-  ['hpm_5fsdmmc_5fio_5fvolt_5ft_11',['hpm_sdmmc_io_volt_t',['../hpm__sdmmc__host_8h.html#a55d73ea9113c4369ddf2a40ae67d945a',1,'hpm_sdmmc_host.h']]],
-  ['hpm_5fsdmmc_5foperation_5fmode_5ft_12',['hpm_sdmmc_operation_mode_t',['../hpm__sdmmc__host_8h.html#ae621a656c0803a85dc1742fe648c726d',1,'hpm_sdmmc_host.h']]],
-  ['hpm_5fsdmmc_5fpower_5foption_5ft_13',['hpm_sdmmc_power_option_t',['../hpm__sdmmc__host_8h.html#a989232e6bad561871a2ec1dfbf06c263',1,'hpm_sdmmc_host.h']]],
-  ['hpm_5fserial_5fnor_5fseq_5faddr_5fbit_5ft_14',['hpm_serial_nor_seq_addr_bit_t',['../hpm__serial__nor__host_8h.html#a4ccd3031b99c9438b6ab1a6d384e1419',1,'hpm_serial_nor_host.h']]],
-  ['hpm_5fserial_5fnor_5fseq_5fdirection_5ft_15',['hpm_serial_nor_seq_direction_t',['../hpm__serial__nor__host_8h.html#a7512a4ca0c4465492349c0b1f68e017c',1,'hpm_serial_nor_host.h']]],
-  ['hpm_5fserial_5fnor_5fseq_5fio_5fmode_5ft_16',['hpm_serial_nor_seq_io_mode_t',['../hpm__serial__nor__host_8h.html#a1e82494eee73ff9face760a01503f308',1,'hpm_serial_nor_host.h']]],
-  ['hpm_5fuart_5frxline_5fidle_5fcond_17',['hpm_uart_rxline_idle_cond',['../group__uart__interface.html#ga731be137b0fc694d12e1938d047caa09',1,'hpm_uart_drv.h']]]
+  ['gpio_5finterrupt_5ftrigger_0',['gpio_interrupt_trigger',['../group__gpio__interface.html#ga027ed1423986f66573a6f676734f181d',1,'hpm_gpio_drv.h']]],
+  ['gpiom_5fgpio_1',['gpiom_gpio',['../group__gpiom__interface.html#ga80c9b410d70ae24fbcaf61450d0ffc17',1,'gpiom_gpio:&#160;hpm_gpiom_soc_drv.h'],['../group__gpiom__interface.html#ga80c9b410d70ae24fbcaf61450d0ffc17',1,'gpiom_gpio:&#160;hpm_gpiom_soc_drv.h'],['../group__gpiom__interface.html#ga80c9b410d70ae24fbcaf61450d0ffc17',1,'gpiom_gpio:&#160;hpm_gpiom_soc_drv.h'],['../group__gpiom__interface.html#ga80c9b410d70ae24fbcaf61450d0ffc17',1,'gpiom_gpio:&#160;hpm_gpiom_soc_drv.h'],['../group__gpiom__interface.html#ga80c9b410d70ae24fbcaf61450d0ffc17',1,'gpiom_gpio:&#160;hpm_gpiom_soc_drv.h'],['../group__gpiom__interface.html#ga80c9b410d70ae24fbcaf61450d0ffc17',1,'gpiom_gpio:&#160;hpm_gpiom_soc_drv.h'],['../group__gpiom__interface.html#ga80c9b410d70ae24fbcaf61450d0ffc17',1,'gpiom_gpio:&#160;hpm_gpiom_soc_drv.h']]],
+  ['gpiom_5fpin_5fvisibility_2',['gpiom_pin_visibility',['../group__gpiom__interface.html#gab70bc46521c624c547b41b49749d77d8',1,'hpm_gpiom_drv.h']]],
+  ['gptmr_5fcounter_5ftype_3',['gptmr_counter_type',['../group__gptmr__interface.html#gaf9b031dd043fef84aeb7b29ac0775e53',1,'hpm_gptmr_drv.h']]],
+  ['gptmr_5fdma_5frequest_5fevent_4',['gptmr_dma_request_event',['../group__gptmr__interface.html#ga1e0df932756831fea4f9bf4f81b1d6dd',1,'hpm_gptmr_drv.h']]],
+  ['gptmr_5fsynci_5fedge_5',['gptmr_synci_edge',['../group__gptmr__interface.html#ga495387c7ab901953466249a137bffb0c',1,'hpm_gptmr_drv.h']]],
+  ['gptmr_5fwork_5fmode_6',['gptmr_work_mode',['../group__gptmr__interface.html#ga78170ad26f3ed5e225107d5a148dcce9',1,'hpm_gptmr_drv.h']]],
+  ['gwc_5fclk_5fpol_7',['gwc_clk_pol',['../group__gwc__interface.html#ga7f15ecf2e18d21552dd9b824c8191229',1,'hpm_gwc_drv.h']]]
 ];

@@ -1,17 +1,5 @@
 var NAVTREEINDEX213 =
 {
-"HPM6200_2ip_2hpm__spi__regs_8h.html#a86293ecc194d4eb09d1cc0dc7afc098d":[4,0,5,1,6,43,167],
-"HPM6200_2ip_2hpm__spi__regs_8h.html#a864640c58fd9540dda5c6b6f96972eb6":[4,0,5,1,6,43,99],
-"HPM6200_2ip_2hpm__spi__regs_8h.html#a873e68c1ec78428ad2094d28b683884c":[4,0,5,1,6,43,41],
-"HPM6200_2ip_2hpm__spi__regs_8h.html#a87a716954f5c5fedebd6a9041abb2e1d":[4,0,5,1,6,43,197],
-"HPM6200_2ip_2hpm__spi__regs_8h.html#a889f9a1703fbdca6f56c9784256fc70c":[4,0,5,1,6,43,141],
-"HPM6200_2ip_2hpm__spi__regs_8h.html#a893bd5d4fd0d3a32cc148aa8fe5f1f8f":[4,0,5,1,6,43,205],
-"HPM6200_2ip_2hpm__spi__regs_8h.html#a89f966e51d9693e40a1c44752dfa204d":[4,0,5,1,6,43,88],
-"HPM6200_2ip_2hpm__spi__regs_8h.html#a8a2675254155435e3c64edeffee67df0":[4,0,5,1,6,43,59],
-"HPM6200_2ip_2hpm__spi__regs_8h.html#a8a68448148d41d85d37d8d51f468e143":[4,0,5,1,6,43,107],
-"HPM6200_2ip_2hpm__spi__regs_8h.html#a8b122e542753d8704669ae405299b6a7":[4,0,5,1,6,43,17],
-"HPM6200_2ip_2hpm__spi__regs_8h.html#a8b623e7c83940ddb9a890f6579ca62dd":[4,0,5,1,6,43,48],
-"HPM6200_2ip_2hpm__spi__regs_8h.html#a8c41a963a0c980dcd48b625ac80816ee":[4,0,5,1,6,43,233],
 "HPM6200_2ip_2hpm__spi__regs_8h.html#a8cd244a08d47e6189d01891ee73d64c5":[4,0,5,1,6,43,111],
 "HPM6200_2ip_2hpm__spi__regs_8h.html#a8db4d172201636c0bf4a25c05eb2f93f":[4,0,5,1,6,43,210],
 "HPM6200_2ip_2hpm__spi__regs_8h.html#a8e4501dcab5cbca95dc712033ffb2657":[4,0,5,1,6,43,194],
@@ -249,5 +237,17 @@ var NAVTREEINDEX213 =
 "HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3b1cc9912c8babb3c8bd3c674f68f15a":[4,0,5,1,6,45,337],
 "HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3c4ffec92a057f0f0d094c54d9f4f43f":[4,0,5,1,6,45,490],
 "HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3d33f102b6dfbf636046f31a263ed029":[4,0,5,1,6,45,304],
-"HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3d6987a26b2de2b5f2c5d4a82f9f8f2b":[4,0,5,1,6,45,411]
+"HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3d6987a26b2de2b5f2c5d4a82f9f8f2b":[4,0,5,1,6,45,411],
+"HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3d8fa792c5d7a0d139835cf6132ae8f0":[4,0,5,1,6,45,430],
+"HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3e1540f6c2ce7a57ed7ef555989e0910":[4,0,5,1,6,45,24],
+"HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3e2326ebc65b8a23000e921f56050dcf":[4,0,5,1,6,45,427],
+"HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3e6fd7c1916d129cf898cd99439efac4":[4,0,5,1,6,45,356],
+"HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3e83ccec46483cad29caa725311c9f52":[4,0,5,1,6,45,48],
+"HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3ea3fd559bc94a72b806f1f92d7c3ee5":[4,0,5,1,6,45,15],
+"HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3f638a2087452cfa100599eaa6b07f1c":[4,0,5,1,6,45,439],
+"HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3f992358351ba81d9fc5f1a22b694e34":[4,0,5,1,6,45,94],
+"HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3fb38c008484919df1b188d89bebe1c8":[4,0,5,1,6,45,252],
+"HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3fb3d4972b9e86d04f4696ba0b75e14c":[4,0,5,1,6,45,374],
+"HPM6200_2ip_2hpm__sysctl__regs_8h.html#a3fd612bcdf43e58c291e07963b99f163":[4,0,5,1,6,45,65],
+"HPM6200_2ip_2hpm__sysctl__regs_8h.html#a400dd3c4253964f79e0f8788df517293":[4,0,5,1,6,45,61]
 };

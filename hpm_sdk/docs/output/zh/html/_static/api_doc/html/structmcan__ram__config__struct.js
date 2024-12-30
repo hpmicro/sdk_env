@@ -12,7 +12,7 @@ var structmcan__ram__config__struct =
     [ "operation_mode", "structmcan__ram__config__struct.html#a87de9a2700e740f80c542f8f187315d9", null ],
     [ "rxbuf_data_field_size", "structmcan__ram__config__struct.html#af321237fe68d3931da1d30813c051ec7", null ],
     [ "rxbuf_elem_count", "structmcan__ram__config__struct.html#a27c387c78dd882718e70d12689ebfa50", null ],
-    [ "rxfifos", "structmcan__ram__config__struct.html#a69d362b6a7e61dc3e45c095fb392c2b8", null ],
+    [ "rxfifos", "structmcan__ram__config__struct.html#a24fd43b222dc54cb0e367d52bf1d7b42", null ],
     [ "std_filter_elem_count", "structmcan__ram__config__struct.html#a1a8754285aaa5704c355b70f6cc55ebc", null ],
     [ "tx_evt_fifo_elem_count", "structmcan__ram__config__struct.html#ac62af07197df64eeb3af99063b6b898d", null ],
     [ "tx_evt_fifo_watermark", "structmcan__ram__config__struct.html#a86bf16c31f58dffa8be1db6507c6b083", null ],

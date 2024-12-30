@@ -105,7 +105,7 @@ $(function(){initNavTree('HPM6E00_2HPM6E80_2hpm__plic__drv_8h_source.html',''); 
 </div><!--header-->
 <div class="contents">
 <a href="HPM6E00_2HPM6E80_2hpm__plic__drv_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 2021 HPMicro</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 2021-2024 HPMicro</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * SPDX-License-Identifier: BSD-3-Clause</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
@@ -162,81 +162,90 @@ $(function(){initNavTree('HPM6E00_2HPM6E80_2hpm__plic__drv_8h_source.html',''); 
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    *threshold_ptr = threshold;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __plic_set_irq_priority(uint32_t base,</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                                               uint32_t irq,</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                                               uint32_t priority)</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>{</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">volatile</span> uint32_t *priority_ptr = (<span class="keyword">volatile</span> uint32_t *)(base +</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <a class="code hl_define" href="group__plic__interface.html#gae0e6239ee54d47db46974a72489edc05">HPM_PLIC_PRIORITY_OFFSET</a> + ((irq-1) &lt;&lt; <a class="code hl_define" href="group__plic__interface.html#ga7fe984242795e857192fc3221223bc88">HPM_PLIC_PRIORITY_SHIFT_PER_SOURCE</a>));</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    *priority_ptr = priority;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __plic_set_irq_pending(uint32_t base, uint32_t irq)</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>{</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">volatile</span> uint32_t *current_ptr = (<span class="keyword">volatile</span> uint32_t *)(base +</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <a class="code hl_define" href="group__plic__interface.html#gab0bf25e7e02ce65646d9e8304ce61162">HPM_PLIC_PENDING_OFFSET</a> + ((irq &gt;&gt; 5) &lt;&lt; 2));</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    *current_ptr = (1 &lt;&lt; (irq &amp; 0x1F));</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __plic_enable_irq_edge_trigger(uint32_t base, uint32_t irq)</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>{</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">volatile</span> uint32_t *current_ptr = (<span class="keyword">volatile</span> uint32_t *) (base +</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                                                            <a class="code hl_define" href="group__plic__interface.html#ga8135352f2aad5746b0a5d417b14162d8">HPM_PLIC_TRIGGER_TYPE_OFFSET</a> + ((irq &gt;&gt; 5) &lt;&lt; 2));</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    *current_ptr |= (1UL &lt;&lt; (irq &amp; 0x1F));</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __plic_enable_irq_level_trigger(uint32_t base, uint32_t irq)</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>{</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keyword">volatile</span> uint32_t *current_ptr = (<span class="keyword">volatile</span> uint32_t *) (base +</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                                                            <a class="code hl_define" href="group__plic__interface.html#ga8135352f2aad5746b0a5d417b14162d8">HPM_PLIC_TRIGGER_TYPE_OFFSET</a> + ((irq &gt;&gt; 5) &lt;&lt; 2));</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    *current_ptr &amp;= ~(1UL &lt;&lt; (irq &amp; 0x1F));</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __plic_enable_irq(uint32_t base,</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                                                        uint32_t target,</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                                                        uint32_t irq)</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>{</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keyword">volatile</span> uint32_t *current_ptr = (<span class="keyword">volatile</span> uint32_t *)(base +</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            <a class="code hl_define" href="group__plic__interface.html#ga50a47f73cbc0a9aa6f3cf73e51229657">HPM_PLIC_ENABLE_OFFSET</a> +</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            (target &lt;&lt; <a class="code hl_define" href="group__plic__interface.html#ga196f41c7d52c351d0a02eb6f2838b63e">HPM_PLIC_ENABLE_SHIFT_PER_TARGET</a>) +</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            ((irq &gt;&gt; 5) &lt;&lt; 2));</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    uint32_t current = *current_ptr;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    current = current | (1 &lt;&lt; (irq &amp; 0x1F));</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    *current_ptr = current;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>}</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __plic_disable_irq(uint32_t base,</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                                                         uint32_t target,</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                                                         uint32_t irq)</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>{</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keyword">volatile</span> uint32_t *current_ptr = (<span class="keyword">volatile</span> uint32_t *)(base +</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <a class="code hl_define" href="group__plic__interface.html#ga50a47f73cbc0a9aa6f3cf73e51229657">HPM_PLIC_ENABLE_OFFSET</a> +</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            (target &lt;&lt; <a class="code hl_define" href="group__plic__interface.html#ga196f41c7d52c351d0a02eb6f2838b63e">HPM_PLIC_ENABLE_SHIFT_PER_TARGET</a>) +</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            ((irq &gt;&gt; 5) &lt;&lt; 2));</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    uint32_t current = *current_ptr;</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    current = current &amp; ~((1 &lt;&lt; (irq &amp; 0x1F)));</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    *current_ptr = current;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>}</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> uint32_t __plic_claim_irq(uint32_t base, uint32_t target)</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>{</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keyword">volatile</span> uint32_t *claim_addr = (<span class="keyword">volatile</span> uint32_t *)(base +</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            <a class="code hl_define" href="group__plic__interface.html#ga0e88e945a77a4b9aa3d7be0759db22bf">HPM_PLIC_CLAIM_OFFSET</a> +</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            (target &lt;&lt; <a class="code hl_define" href="group__plic__interface.html#ga4f1760b391c38b46c1c28550aba1ade5">HPM_PLIC_CLAIM_SHIFT_PER_TARGET</a>));</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordflow">return</span> *claim_addr;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>}</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __plic_complete_irq(uint32_t base,</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                                                          uint32_t target,</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                                                          uint32_t irq)</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>{</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keyword">volatile</span> uint32_t *claim_addr = (<span class="keyword">volatile</span> uint32_t *)(base +</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <a class="code hl_define" href="group__plic__interface.html#ga0e88e945a77a4b9aa3d7be0759db22bf">HPM_PLIC_CLAIM_OFFSET</a> +</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            (target &lt;&lt; <a class="code hl_define" href="group__plic__interface.html#ga4f1760b391c38b46c1c28550aba1ade5">HPM_PLIC_CLAIM_SHIFT_PER_TARGET</a>));</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    *claim_addr = irq;</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>}</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">#endif </span><span class="comment">/* __ASSEMBLER__ */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="preprocessor">#endif  </span><span class="comment">/* HPM_PLIC_DRV_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> uint32_t __plic_get_threshold(uint32_t base,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                                                           uint32_t target)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>{</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">volatile</span> uint32_t *threshold_ptr = (<span class="keyword">volatile</span> uint32_t *)(base +</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <a class="code hl_define" href="group__plic__interface.html#ga81200f423525e4c21aac82ae442c5cef">HPM_PLIC_THRESHOLD_OFFSET</a> +</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            (target &lt;&lt; <a class="code hl_define" href="group__plic__interface.html#gafbf7f0f92275bb33e7710893a87eb06a">HPM_PLIC_THRESHOLD_SHIFT_PER_TARGET</a>));</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">return</span> *threshold_ptr;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __plic_set_irq_priority(uint32_t base,</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                                               uint32_t irq,</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                                               uint32_t priority)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>{</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">volatile</span> uint32_t *priority_ptr = (<span class="keyword">volatile</span> uint32_t *)(base +</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <a class="code hl_define" href="group__plic__interface.html#gae0e6239ee54d47db46974a72489edc05">HPM_PLIC_PRIORITY_OFFSET</a> + ((irq-1) &lt;&lt; <a class="code hl_define" href="group__plic__interface.html#ga7fe984242795e857192fc3221223bc88">HPM_PLIC_PRIORITY_SHIFT_PER_SOURCE</a>));</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    *priority_ptr = priority;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __plic_set_irq_pending(uint32_t base, uint32_t irq)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>{</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keyword">volatile</span> uint32_t *current_ptr = (<span class="keyword">volatile</span> uint32_t *)(base +</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <a class="code hl_define" href="group__plic__interface.html#gab0bf25e7e02ce65646d9e8304ce61162">HPM_PLIC_PENDING_OFFSET</a> + ((irq &gt;&gt; 5) &lt;&lt; 2));</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    *current_ptr = (1 &lt;&lt; (irq &amp; 0x1F));</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>}</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __plic_enable_irq_edge_trigger(uint32_t base, uint32_t irq)</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>{</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keyword">volatile</span> uint32_t *current_ptr = (<span class="keyword">volatile</span> uint32_t *) (base +</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                                                            <a class="code hl_define" href="group__plic__interface.html#ga8135352f2aad5746b0a5d417b14162d8">HPM_PLIC_TRIGGER_TYPE_OFFSET</a> + ((irq &gt;&gt; 5) &lt;&lt; 2));</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    *current_ptr |= (1UL &lt;&lt; (irq &amp; 0x1F));</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>}</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __plic_enable_irq_level_trigger(uint32_t base, uint32_t irq)</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>{</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keyword">volatile</span> uint32_t *current_ptr = (<span class="keyword">volatile</span> uint32_t *) (base +</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                                                            <a class="code hl_define" href="group__plic__interface.html#ga8135352f2aad5746b0a5d417b14162d8">HPM_PLIC_TRIGGER_TYPE_OFFSET</a> + ((irq &gt;&gt; 5) &lt;&lt; 2));</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    *current_ptr &amp;= ~(1UL &lt;&lt; (irq &amp; 0x1F));</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>}</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __plic_enable_irq(uint32_t base,</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                                                        uint32_t target,</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                                                        uint32_t irq)</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>{</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keyword">volatile</span> uint32_t *current_ptr = (<span class="keyword">volatile</span> uint32_t *)(base +</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <a class="code hl_define" href="group__plic__interface.html#ga50a47f73cbc0a9aa6f3cf73e51229657">HPM_PLIC_ENABLE_OFFSET</a> +</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            (target &lt;&lt; <a class="code hl_define" href="group__plic__interface.html#ga196f41c7d52c351d0a02eb6f2838b63e">HPM_PLIC_ENABLE_SHIFT_PER_TARGET</a>) +</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            ((irq &gt;&gt; 5) &lt;&lt; 2));</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    uint32_t current = *current_ptr;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    current = current | (1 &lt;&lt; (irq &amp; 0x1F));</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    *current_ptr = current;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>}</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __plic_disable_irq(uint32_t base,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                                                         uint32_t target,</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                                                         uint32_t irq)</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>{</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keyword">volatile</span> uint32_t *current_ptr = (<span class="keyword">volatile</span> uint32_t *)(base +</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            <a class="code hl_define" href="group__plic__interface.html#ga50a47f73cbc0a9aa6f3cf73e51229657">HPM_PLIC_ENABLE_OFFSET</a> +</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            (target &lt;&lt; <a class="code hl_define" href="group__plic__interface.html#ga196f41c7d52c351d0a02eb6f2838b63e">HPM_PLIC_ENABLE_SHIFT_PER_TARGET</a>) +</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            ((irq &gt;&gt; 5) &lt;&lt; 2));</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    uint32_t current = *current_ptr;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    current = current &amp; ~((1 &lt;&lt; (irq &amp; 0x1F)));</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    *current_ptr = current;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>}</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> uint32_t __plic_claim_irq(uint32_t base, uint32_t target)</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>{</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keyword">volatile</span> uint32_t *claim_addr = (<span class="keyword">volatile</span> uint32_t *)(base +</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            <a class="code hl_define" href="group__plic__interface.html#ga0e88e945a77a4b9aa3d7be0759db22bf">HPM_PLIC_CLAIM_OFFSET</a> +</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            (target &lt;&lt; <a class="code hl_define" href="group__plic__interface.html#ga4f1760b391c38b46c1c28550aba1ade5">HPM_PLIC_CLAIM_SHIFT_PER_TARGET</a>));</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordflow">return</span> *claim_addr;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>}</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>ATTR_ALWAYS_INLINE <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __plic_complete_irq(uint32_t base,</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                                                          uint32_t target,</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                                                          uint32_t irq)</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>{</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keyword">volatile</span> uint32_t *claim_addr = (<span class="keyword">volatile</span> uint32_t *)(base +</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <a class="code hl_define" href="group__plic__interface.html#ga0e88e945a77a4b9aa3d7be0759db22bf">HPM_PLIC_CLAIM_OFFSET</a> +</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            (target &lt;&lt; <a class="code hl_define" href="group__plic__interface.html#ga4f1760b391c38b46c1c28550aba1ade5">HPM_PLIC_CLAIM_SHIFT_PER_TARGET</a>));</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    *claim_addr = irq;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>}</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">#endif </span><span class="comment">/* __ASSEMBLER__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="preprocessor">#endif  </span><span class="comment">/* HPM_PLIC_DRV_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="agroup__plic__interface_html_ga0e88e945a77a4b9aa3d7be0759db22bf"><div class="ttname"><a href="group__plic__interface.html#ga0e88e945a77a4b9aa3d7be0759db22bf">HPM_PLIC_CLAIM_OFFSET</a></div><div class="ttdeci">#define HPM_PLIC_CLAIM_OFFSET</div><div class="ttdef"><b>Definition</b> hpm_plic_drv.h:46</div></div>
 <div class="ttc" id="agroup__plic__interface_html_ga196f41c7d52c351d0a02eb6f2838b63e"><div class="ttname"><a href="group__plic__interface.html#ga196f41c7d52c351d0a02eb6f2838b63e">HPM_PLIC_ENABLE_SHIFT_PER_TARGET</a></div><div class="ttdeci">#define HPM_PLIC_ENABLE_SHIFT_PER_TARGET</div><div class="ttdef"><b>Definition</b> hpm_plic_drv.h:38</div></div>
 <div class="ttc" id="agroup__plic__interface_html_ga4f1760b391c38b46c1c28550aba1ade5"><div class="ttname"><a href="group__plic__interface.html#ga4f1760b391c38b46c1c28550aba1ade5">HPM_PLIC_CLAIM_SHIFT_PER_TARGET</a></div><div class="ttdeci">#define HPM_PLIC_CLAIM_SHIFT_PER_TARGET</div><div class="ttdef"><b>Definition</b> hpm_plic_drv.h:47</div></div>
@@ -254,7 +263,7 @@ $(function(){initNavTree('HPM6E00_2HPM6E80_2hpm__plic__drv_8h_source.html',''); 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_19d806e154b23a5f4c4c08b2e30365a6.html">soc</a></li><li class="navelem"><a class="el" href="dir_3c704b5ae633eeec3f8fdcdbd00dedae.html">HPM6E00</a></li><li class="navelem"><a class="el" href="dir_4e56b03052746fff05a5ebf67cbc517d.html">HPM6E80</a></li><li class="navelem"><a class="el" href="HPM6E00_2HPM6E80_2hpm__plic__drv_8h.html">hpm_plic_drv.h</a></li>
-    <li class="footer">Generated on Mon Sep 30 2024 15:22:45 for HPM SDK by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Mon Dec 30 2024 18:50:41 for HPM SDK by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

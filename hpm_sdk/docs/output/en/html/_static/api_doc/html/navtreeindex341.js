@@ -1,5 +1,12 @@
 var NAVTREEINDEX341 =
 {
+"HPM6300_2ip_2hpm__ptpc__regs_8h.html#ab79c42f00bbea8f06095533d2899f617":[4,0,5,2,6,39,124],
+"HPM6300_2ip_2hpm__ptpc__regs_8h.html#abc06331f175321f35f924ffc22b9687d":[4,0,5,2,6,39,97],
+"HPM6300_2ip_2hpm__ptpc__regs_8h.html#abc26757d58fbb737450c2c6b1363a003":[4,0,5,2,6,39,55],
+"HPM6300_2ip_2hpm__ptpc__regs_8h.html#abefa3d9af105bfdc905391e7a36919a8":[4,0,5,2,6,39,8],
+"HPM6300_2ip_2hpm__ptpc__regs_8h.html#abf924e1ec28993e1c50c9edca1bcccda":[4,0,5,2,6,39,66],
+"HPM6300_2ip_2hpm__ptpc__regs_8h.html#ac0444f28e1301f4e06da5bde7996cf9b":[4,0,5,2,6,39,24],
+"HPM6300_2ip_2hpm__ptpc__regs_8h.html#ac16631013dce6cad7d99cfcf19bc9e88":[4,0,5,2,6,39,110],
 "HPM6300_2ip_2hpm__ptpc__regs_8h.html#ac29d00221505387d44715e8ef1c00bdd":[4,0,5,2,6,39,32],
 "HPM6300_2ip_2hpm__ptpc__regs_8h.html#ac306dd867060a505c08d105a970c2273":[4,0,5,2,6,39,104],
 "HPM6300_2ip_2hpm__ptpc__regs_8h.html#ac36ffdcad5b9ac0a29506e1fc19c751f":[4,0,5,2,6,39,35],
@@ -242,12 +249,5 @@ var NAVTREEINDEX341 =
 "HPM6300_2ip_2hpm__pwm__regs_8h.html#a73985c2e49dc1816dc6b4e3e1cab074a":[4,0,5,2,6,40,304],
 "HPM6300_2ip_2hpm__pwm__regs_8h.html#a74bf17736f4c53d2eee919b89e0fd8f8":[4,0,5,2,6,40,339],
 "HPM6300_2ip_2hpm__pwm__regs_8h.html#a75d4d3bab53b0c0b3d04cd2e23a6a795":[4,0,5,2,6,40,346],
-"HPM6300_2ip_2hpm__pwm__regs_8h.html#a76061a18bd7ae1a4a1b2f4fa2849c4b0":[4,0,5,2,6,40,59],
-"HPM6300_2ip_2hpm__pwm__regs_8h.html#a76615afbce439be226139be1033f02bd":[4,0,5,2,6,40,393],
-"HPM6300_2ip_2hpm__pwm__regs_8h.html#a7685821b1f0f816ebbe7ef64ef0771fb":[4,0,5,2,6,40,211],
-"HPM6300_2ip_2hpm__pwm__regs_8h.html#a76e57597c62a96fb5b7f11ed93c536ee":[4,0,5,2,6,40,109],
-"HPM6300_2ip_2hpm__pwm__regs_8h.html#a77c8feb8a360a7e224fd5846082dcb72":[4,0,5,2,6,40,343],
-"HPM6300_2ip_2hpm__pwm__regs_8h.html#a77d5eab7647bc7369dbe6ce4b2d924b7":[4,0,5,2,6,40,283],
-"HPM6300_2ip_2hpm__pwm__regs_8h.html#a783d87ac5c187cffd627279021cf0834":[4,0,5,2,6,40,188],
-"HPM6300_2ip_2hpm__pwm__regs_8h.html#a78451c2bcf1cc87dfa170b94d894c7c6":[4,0,5,2,6,40,350]
+"HPM6300_2ip_2hpm__pwm__regs_8h.html#a76061a18bd7ae1a4a1b2f4fa2849c4b0":[4,0,5,2,6,40,59]
 };

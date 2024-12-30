@@ -10,11 +10,12 @@ var searchData=
   ['ffa_5fcomplex_5fq31_5ft_7',['ffa_complex_q31_t',['../structffa__complex__q31__t.html',1,'']]],
   ['ffa_5ftype_8',['FFA_Type',['../structFFA__Type.html',1,'']]],
   ['fft_5fxfer_5ft_9',['fft_xfer_t',['../structfft__xfer__t.html',1,'']]],
-  ['fir_5fxfer_5ft_10',['fir_xfer_t',['../structfir__xfer__t.html',1,'']]],
-  ['flash_5frun_5fcontext_5ft_11',['flash_run_context_t',['../unionflash__run__context__t.html',1,'']]],
-  ['ft5406_5fcontext_5ft_12',['ft5406_context_t',['../structft5406__context__t.html',1,'']]],
-  ['ft5406_5fsys_5finfo_5ft_13',['ft5406_sys_info_t',['../structft5406__sys__info__t.html',1,'']]],
-  ['ft5406_5ftouch_5fdata_5ft_14',['ft5406_touch_data_t',['../structft5406__touch__data__t.html',1,'']]],
-  ['ft5406_5ftouch_5fpoint_5ft_15',['ft5406_touch_point_t',['../structft5406__touch__point__t.html',1,'']]],
-  ['fw_5finfo_5ftable_5ft_16',['fw_info_table_t',['../structfw__info__table__t.html',1,'']]]
+  ['filter_5fconfig_10',['filter_config',['../structfilter__config.html',1,'']]],
+  ['fir_5fxfer_5ft_11',['fir_xfer_t',['../structfir__xfer__t.html',1,'']]],
+  ['flash_5frun_5fcontext_5ft_12',['flash_run_context_t',['../unionflash__run__context__t.html',1,'']]],
+  ['ft5406_5fcontext_5ft_13',['ft5406_context_t',['../structft5406__context__t.html',1,'']]],
+  ['ft5406_5fsys_5finfo_5ft_14',['ft5406_sys_info_t',['../structft5406__sys__info__t.html',1,'']]],
+  ['ft5406_5ftouch_5fdata_5ft_15',['ft5406_touch_data_t',['../structft5406__touch__data__t.html',1,'']]],
+  ['ft5406_5ftouch_5fpoint_5ft_16',['ft5406_touch_point_t',['../structft5406__touch__point__t.html',1,'']]],
+  ['fw_5finfo_5ftable_5ft_17',['fw_info_table_t',['../structfw__info__table__t.html',1,'']]]
 ];

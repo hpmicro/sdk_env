@@ -1,5 +1,12 @@
 var NAVTREEINDEX353 =
 {
+"HPM6300_2ip_2hpm__tamp__regs_8h.html#af67356e458e4bf12f6a897b9935dfdcb":[4,0,5,2,6,49,55],
+"HPM6300_2ip_2hpm__tamp__regs_8h.html#afde2acb6e9df5565921557bd624d3310":[4,0,5,2,6,49,38],
+"HPM6300_2ip_2hpm__tamp__regs_8h_source.html":[4,0,5,2,6,49],
+"HPM6300_2ip_2hpm__trgm__regs_8h.html":[4,0,5,2,6,50],
+"HPM6300_2ip_2hpm__trgm__regs_8h.html#a0042063760fe3112bb9e61b0f407cb9e":[4,0,5,2,6,50,66],
+"HPM6300_2ip_2hpm__trgm__regs_8h.html#a04fdbcf30db7e384f4bf338539d6788e":[4,0,5,2,6,50,119],
+"HPM6300_2ip_2hpm__trgm__regs_8h.html#a0508a94a09e1e95cf42c645f9a637662":[4,0,5,2,6,50,51],
 "HPM6300_2ip_2hpm__trgm__regs_8h.html#a075192d2f483fbd8d0270d77e3792482":[4,0,5,2,6,50,27],
 "HPM6300_2ip_2hpm__trgm__regs_8h.html#a07f8d69495d83ee7139d8ef0ea866dd7":[4,0,5,2,6,50,117],
 "HPM6300_2ip_2hpm__trgm__regs_8h.html#a0b68fdd7e7cb3616ad1a15066cd26493":[4,0,5,2,6,50,75],
@@ -242,12 +249,5 @@ var NAVTREEINDEX353 =
 "HPM6300_2ip_2hpm__tsns__regs_8h.html#ae7a4c500fccb92dad7f75abcad842612":[4,0,5,2,6,51,26],
 "HPM6300_2ip_2hpm__tsns__regs_8h.html#ae7c288afb0baec6b369acb56963fd1ca":[4,0,5,2,6,51,33],
 "HPM6300_2ip_2hpm__tsns__regs_8h.html#aeabc402b1b72aef32551ea50367ec5a3":[4,0,5,2,6,51,118],
-"HPM6300_2ip_2hpm__tsns__regs_8h.html#af41b46c64b1f51393257070dc70c541f":[4,0,5,2,6,51,86],
-"HPM6300_2ip_2hpm__tsns__regs_8h.html#af561945cafecaa17c3e3cd78e7c46d58":[4,0,5,2,6,51,92],
-"HPM6300_2ip_2hpm__tsns__regs_8h.html#af7b254a92c8208eef5a44f9f6f9beaa3":[4,0,5,2,6,51,17],
-"HPM6300_2ip_2hpm__tsns__regs_8h.html#af8b0056cc9ebd8b67f6014edad6e8ae4":[4,0,5,2,6,51,100],
-"HPM6300_2ip_2hpm__tsns__regs_8h.html#afa5ab2c0e21da8cd5228eb5c5f7164c5":[4,0,5,2,6,51,5],
-"HPM6300_2ip_2hpm__tsns__regs_8h.html#afd64dde5dd4b269baa219f740974ffe0":[4,0,5,2,6,51,49],
-"HPM6300_2ip_2hpm__tsns__regs_8h.html#afdef67e6cc52588a532440818a6b877a":[4,0,5,2,6,51,85],
-"HPM6300_2ip_2hpm__tsns__regs_8h.html#afed58b892faf15c23e20308ad050ec61":[4,0,5,2,6,51,102]
+"HPM6300_2ip_2hpm__tsns__regs_8h.html#af41b46c64b1f51393257070dc70c541f":[4,0,5,2,6,51,86]
 };

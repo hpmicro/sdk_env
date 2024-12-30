@@ -5,6 +5,7 @@ var globals_enum =
     [ "c", "globals_enum_c.html", null ],
     [ "d", "globals_enum_d.html", null ],
     [ "e", "globals_enum_e.html", null ],
+    [ "f", "globals_enum_f.html", null ],
     [ "g", "globals_enum_g.html", null ],
     [ "h", "globals_enum_h.html", null ],
     [ "i", "globals_enum_i.html", null ],

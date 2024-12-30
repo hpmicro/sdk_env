@@ -25,6 +25,7 @@ var dir_5ffea14e7c299b456689719981004368 =
     [ "hpm_soc.h", "HPM5300_2HPM5361_2hpm__soc_8h.html", "HPM5300_2HPM5361_2hpm__soc_8h" ],
     [ "hpm_soc_feature.h", "HPM5300_2HPM5361_2hpm__soc__feature_8h.html", "HPM5300_2HPM5361_2hpm__soc__feature_8h" ],
     [ "hpm_soc_ip_feature.h", "HPM5300_2HPM5361_2hpm__soc__ip__feature_8h.html", "HPM5300_2HPM5361_2hpm__soc__ip__feature_8h" ],
+    [ "hpm_soc_irq.h", "HPM5300_2HPM5361_2hpm__soc__irq_8h.html", "HPM5300_2HPM5361_2hpm__soc__irq_8h" ],
     [ "hpm_sysctl_drv.c", "HPM5300_2HPM5361_2hpm__sysctl__drv_8c.html", "HPM5300_2HPM5361_2hpm__sysctl__drv_8c" ],
     [ "hpm_sysctl_drv.h", "HPM5300_2HPM5361_2hpm__sysctl__drv_8h.html", "HPM5300_2HPM5361_2hpm__sysctl__drv_8h" ],
     [ "hpm_trgm_soc_drv.h", "HPM5300_2HPM5361_2hpm__trgm__soc__drv_8h.html", "HPM5300_2HPM5361_2hpm__trgm__soc__drv_8h" ],

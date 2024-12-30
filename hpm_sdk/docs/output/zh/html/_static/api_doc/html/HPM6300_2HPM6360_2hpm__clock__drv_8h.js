@@ -34,6 +34,8 @@ var HPM6300_2HPM6360_2hpm__clock__drv_8h =
     [ "clock_disable", "HPM6300_2HPM6360_2hpm__clock__drv_8h.html#ab8fb2f71d80bba64c799587c32032691", null ],
     [ "clock_disconnect_group_from_cpu", "HPM6300_2HPM6360_2hpm__clock__drv_8h.html#ae98965cdcc5393ab3e023bc5f14c6108", null ],
     [ "clock_enable", "HPM6300_2HPM6360_2hpm__clock__drv_8h.html#a71218306d90cd4695fe9468c1321c27e", null ],
+    [ "clock_get_core_clock_ticks_per_ms", "HPM6300_2HPM6360_2hpm__clock__drv_8h.html#a238c57299b46818402c4bbcc12fec11e", null ],
+    [ "clock_get_core_clock_ticks_per_us", "HPM6300_2HPM6360_2hpm__clock__drv_8h.html#ab66c8cf6ac649dc572308c55a7467424", null ],
     [ "clock_get_divider", "HPM6300_2HPM6360_2hpm__clock__drv_8h.html#ab3236e62816f4029c62bd037c148b9fa", null ],
     [ "clock_get_frequency", "HPM6300_2HPM6360_2hpm__clock__drv_8h.html#a0b6cfe27aaccef750309ac03a4285189", null ],
     [ "clock_get_source", "HPM6300_2HPM6360_2hpm__clock__drv_8h.html#aa3eb7b84fef0608f1e4fd4a72cfb8814", null ],
@@ -44,6 +46,7 @@ var HPM6300_2HPM6360_2hpm__clock__drv_8h =
     [ "clock_set_source_divider", "HPM6300_2HPM6360_2hpm__clock__drv_8h.html#a645fa0a04343d76c729aad437a564a86", null ],
     [ "clock_set_wdg_source", "HPM6300_2HPM6360_2hpm__clock__drv_8h.html#ac7286ab08a0581a932291fd3cb06b52e", null ],
     [ "clock_update_core_clock", "HPM6300_2HPM6360_2hpm__clock__drv_8h.html#a3772a06fc5e9a7ebae47684f0986248b", null ],
+    [ "clock_wait_source_stable", "HPM6300_2HPM6360_2hpm__clock__drv_8h.html#a7b36021c71c198f228f2201a9d723161", null ],
     [ "get_frequency_for_source", "HPM6300_2HPM6360_2hpm__clock__drv_8h.html#aaec69da7dc160ba76709210b861182f0", null ],
     [ "hpm_core_clock", "HPM6300_2HPM6360_2hpm__clock__drv_8h.html#a9aabaef387a98b4bd50c844e6bc8f433", null ]
 ];

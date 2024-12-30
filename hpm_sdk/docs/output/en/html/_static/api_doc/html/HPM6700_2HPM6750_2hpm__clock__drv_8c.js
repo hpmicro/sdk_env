@@ -15,6 +15,7 @@ var HPM6700_2HPM6750_2hpm__clock__drv_8c =
     [ "FREQ_PRESET1_PLL4_CLK0", "HPM6700_2HPM6750_2hpm__clock__drv_8c.html#a65a601565e0f342248982a0a000fc32d", null ],
     [ "I2S_INSTANCE_NUM", "HPM6700_2HPM6750_2hpm__clock__drv_8c.html#ae3a59a0faddfb7b0c73153afcc94b684", null ],
     [ "WDG_INSTANCE_NUM", "HPM6700_2HPM6750_2hpm__clock__drv_8c.html#a7d111516d1319c1ec3d5e57eff48979e", null ],
+    [ "clk_pll_div_map_t", "HPM6700_2HPM6750_2hpm__clock__drv_8c.html#af98644fba4a8b0097dad89f5004e4e5e", null ],
     [ "clock_add_to_group", "group__clock__interface.html#ga044a6e24b793b3a081cf9804d0a66f8e", null ],
     [ "clock_check_in_group", "group__clock__interface.html#ga4cf3cadc0b363367dfcc4d8e2d40c91c", null ],
     [ "clock_connect_group_to_cpu", "group__clock__interface.html#gafef76f25f1365156238acbfdfbfa31db", null ],
@@ -23,6 +24,8 @@ var HPM6700_2HPM6750_2hpm__clock__drv_8c =
     [ "clock_disable", "group__clock__interface.html#gab8fb2f71d80bba64c799587c32032691", null ],
     [ "clock_disconnect_group_from_cpu", "group__clock__interface.html#gae98965cdcc5393ab3e023bc5f14c6108", null ],
     [ "clock_enable", "group__clock__interface.html#ga71218306d90cd4695fe9468c1321c27e", null ],
+    [ "clock_get_core_clock_ticks_per_ms", "group__clock__interface.html#ga238c57299b46818402c4bbcc12fec11e", null ],
+    [ "clock_get_core_clock_ticks_per_us", "group__clock__interface.html#gab66c8cf6ac649dc572308c55a7467424", null ],
     [ "clock_get_divider", "group__clock__interface.html#gab3236e62816f4029c62bd037c148b9fa", null ],
     [ "clock_get_frequency", "group__clock__interface.html#ga0b6cfe27aaccef750309ac03a4285189", null ],
     [ "clock_get_source", "group__clock__interface.html#gaa3eb7b84fef0608f1e4fd4a72cfb8814", null ],
@@ -32,6 +35,7 @@ var HPM6700_2HPM6750_2hpm__clock__drv_8c =
     [ "clock_set_source_divider", "group__clock__interface.html#ga645fa0a04343d76c729aad437a564a86", null ],
     [ "clock_set_wdg_source", "group__clock__interface.html#gac7286ab08a0581a932291fd3cb06b52e", null ],
     [ "clock_update_core_clock", "group__clock__interface.html#ga3772a06fc5e9a7ebae47684f0986248b", null ],
+    [ "clock_wait_source_stable", "group__clock__interface.html#ga7b36021c71c198f228f2201a9d723161", null ],
     [ "get_frequency_for_i2s_or_adc", "HPM6700_2HPM6750_2hpm__clock__drv_8c.html#afd1ec1a316e49fc8f0e626d7f28e8fcf", null ],
     [ "get_frequency_for_ip_in_common_group", "HPM6700_2HPM6750_2hpm__clock__drv_8c.html#afab08b10e05fd71b704a0ca0cfd18493", null ],
     [ "get_frequency_for_pwdg", "HPM6700_2HPM6750_2hpm__clock__drv_8c.html#a0d33fa4ad24b5be4b797b4330fc89df3", null ],
@@ -41,6 +45,7 @@ var HPM6700_2HPM6750_2hpm__clock__drv_8c =
     [ "switch_ip_clock", "HPM6700_2HPM6750_2hpm__clock__drv_8c.html#a6c42d0ff98661a79e5e139ccb30e7d86", null ],
     [ "hpm_core_clock", "group__clock__interface.html#ga9aabaef387a98b4bd50c844e6bc8f433", null ],
     [ "s_adc_clk_mux_node", "HPM6700_2HPM6750_2hpm__clock__drv_8c.html#af71adec0757da829362b1e8bc3bb3182", null ],
+    [ "s_clk_pll_div_map", "HPM6700_2HPM6750_2hpm__clock__drv_8c.html#ac232237cbb109b126dbd4bf287e8fb63", null ],
     [ "s_i2s_clk_mux_node", "HPM6700_2HPM6750_2hpm__clock__drv_8c.html#ab24f81a89503cb1722e3c0dddd8ae4e2", null ],
     [ "s_wdgs", "HPM6700_2HPM6750_2hpm__clock__drv_8c.html#a382e646745e13c2b0e08edea4258f0c5", null ]
 ];

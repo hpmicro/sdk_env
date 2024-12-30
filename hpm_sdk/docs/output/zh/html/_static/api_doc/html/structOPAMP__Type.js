@@ -1,6 +1,6 @@
 var structOPAMP__Type =
 [
-    [ "CFG", "structOPAMP__Type.html#ac796074dfcdacd6fb53101e689096860", null ],
+    [ "CFG", "structOPAMP__Type.html#ad9281d0dfd688e65f54bc415e2a07e10", null ],
     [ "CFG0", "structOPAMP__Type.html#a5765533815c3a9cba7217c1dde4c1390", null ],
     [ "CFG1", "structOPAMP__Type.html#a67b69551c7e5e53f3dad63b0174d260f", null ],
     [ "CFG2", "structOPAMP__Type.html#a4bb795e3aeeafa5172514c6a9e35eca3", null ],

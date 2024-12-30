@@ -8,8 +8,8 @@ var hpm__trgm__drv_8h =
       [ "trgm_filter_mode_bypass", "group__trgm__interface.html#ggacffb722a7799f4657bb946398552f583ab519f9295c007f7ea7292ba53bcf53ad", null ],
       [ "trgm_filter_mode_rapid_change", "group__trgm__interface.html#ggacffb722a7799f4657bb946398552f583a13cb9b087eee300c274b79e73d2410fb", null ],
       [ "trgm_filter_mode_delay", "group__trgm__interface.html#ggacffb722a7799f4657bb946398552f583a8ba294523ec3972ab60ca810a69606c5", null ],
-      [ "trgm_filter_mode_stable_high", "group__trgm__interface.html#ggacffb722a7799f4657bb946398552f583acd3fcc30138953dad91289621e9a0da8", null ],
-      [ "trgm_filter_mode_stable_low", "group__trgm__interface.html#ggacffb722a7799f4657bb946398552f583ad9a74fe0a6804f561f3d2926cd006ad0", null ]
+      [ "trgm_filter_mode_stable_low", "group__trgm__interface.html#ggacffb722a7799f4657bb946398552f583ad9a74fe0a6804f561f3d2926cd006ad0", null ],
+      [ "trgm_filter_mode_stable_high", "group__trgm__interface.html#ggacffb722a7799f4657bb946398552f583acd3fcc30138953dad91289621e9a0da8", null ]
     ] ],
     [ "trgm_output_type", "group__trgm__interface.html#ga06d91800a6a89291a4ce822231dbde75", [
       [ "trgm_output_same_as_input", "group__trgm__interface.html#gga06d91800a6a89291a4ce822231dbde75aeead3c910b8a94d942ed87c2357c197d", null ],

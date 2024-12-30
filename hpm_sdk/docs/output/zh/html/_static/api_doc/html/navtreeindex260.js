@@ -1,13 +1,5 @@
 var NAVTREEINDEX260 =
 {
-"HPM6300_2HPM6340_2hpm__iomux_8h.html#a43ddbf4df47a2940addd95d2bb0472b5":[4,0,5,2,2,4,302],
-"HPM6300_2HPM6340_2hpm__iomux_8h.html#a441afd4d798ae356b86acd46ccec36ae":[4,0,5,2,2,4,635],
-"HPM6300_2HPM6340_2hpm__iomux_8h.html#a443e7d7ec4d91cf7a6718f91a5c4fa42":[4,0,5,2,2,4,464],
-"HPM6300_2HPM6340_2hpm__iomux_8h.html#a444f438f3bccde9ef8428750cf1462b8":[4,0,5,2,2,4,11],
-"HPM6300_2HPM6340_2hpm__iomux_8h.html#a446a6f26f4d89960ad6c6ee7b9a1fa5a":[4,0,5,2,2,4,493],
-"HPM6300_2HPM6340_2hpm__iomux_8h.html#a448f9e801fce4699f27046032047ca9d":[4,0,5,2,2,4,642],
-"HPM6300_2HPM6340_2hpm__iomux_8h.html#a449cb726cb810747585cdeb294903673":[4,0,5,2,2,4,202],
-"HPM6300_2HPM6340_2hpm__iomux_8h.html#a464f789612962eb64f93370c14bed35d":[4,0,5,2,2,4,281],
 "HPM6300_2HPM6340_2hpm__iomux_8h.html#a46c84e34926bc74848f3ca087d463c1b":[4,0,5,2,2,4,540],
 "HPM6300_2HPM6340_2hpm__iomux_8h.html#a47db7421a3656b31fadf7ece8e25ba70":[4,0,5,2,2,4,609],
 "HPM6300_2HPM6340_2hpm__iomux_8h.html#a481713a33b7b259fff1cf510bddcc354":[4,0,5,2,2,4,664],
@@ -249,5 +241,13 @@ var NAVTREEINDEX260 =
 "HPM6300_2HPM6340_2hpm__iomux_8h.html#a9d70d563c90fddaf7cf81643378faed4":[4,0,5,2,2,4,324],
 "HPM6300_2HPM6340_2hpm__iomux_8h.html#a9db531b6a8eb38662df939946552d22f":[4,0,5,2,2,4,536],
 "HPM6300_2HPM6340_2hpm__iomux_8h.html#a9e5e3606632d947f4142bc0ebfc7f2b2":[4,0,5,2,2,4,49],
-"HPM6300_2HPM6340_2hpm__iomux_8h.html#a9ea89ce5edaa73eb4cf53028f52241fd":[4,0,5,2,2,4,459]
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a9ea89ce5edaa73eb4cf53028f52241fd":[4,0,5,2,2,4,459],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a9ecf570adce01a11b434ce29d4357bb9":[4,0,5,2,2,4,140],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a9ed95f2fc84199207e221926cfd2491a":[4,0,5,2,2,4,14],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a9ee2624d2b5afe7321b1fb34fc3ad5d9":[4,0,5,2,2,4,317],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a9f39e9113c82a50536072810156990c7":[4,0,5,2,2,4,105],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a9fa3919738d62ab722a32cab1bdded52":[4,0,5,2,2,4,617],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a9fdbaa777c658789a6126e89a2447b2a":[4,0,5,2,2,4,541],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#aa031edda7d06f0d1335232039785fb90":[4,0,5,2,2,4,497],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#aa05f8d8d079511bb8938dd7b15208234":[4,0,5,2,2,4,68]
 };

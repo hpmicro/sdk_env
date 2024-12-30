@@ -35,6 +35,7 @@ var HPM6300_2HPM6360_2hpm__soc__feature_8h =
     [ "ENET_SOC_DESC_ADDR_ALIGNMENT", "HPM6300_2HPM6360_2hpm__soc__feature_8h.html#adf9431d88d31c24e30797eb9ae2ba7f3", null ],
     [ "ENET_SOC_DMA_BUS_WIDTH_IN_BYTES", "HPM6300_2HPM6360_2hpm__soc__feature_8h.html#a18aefeb4d9bf0b1c520dacb205c530a3", null ],
     [ "ENET_SOC_PPS_MAX_COUNT", "HPM6300_2HPM6360_2hpm__soc__feature_8h.html#a936c77726ab11f57be64ec62e4db4a54", null ],
+    [ "FFA_SOC_BUFFER_MAX", "HPM6300_2HPM6360_2hpm__soc__feature_8h.html#a5cf08047525c51417659ed25ebe0c5f6", null ],
     [ "I2C_SOC_FIFO_SIZE", "HPM6300_2HPM6360_2hpm__soc__feature_8h.html#af82c6b5c74057101d500a183df93f30d", null ],
     [ "I2C_SOC_TRANSFER_COUNT_MAX", "HPM6300_2HPM6360_2hpm__soc__feature_8h.html#a214369ce4fafa9caa85c2bf60449caf6", null ],
     [ "I2S_SOC_MAX_CHANNEL_NUM", "HPM6300_2HPM6360_2hpm__soc__feature_8h.html#a92f267f2b6c7808587a297c14585603b", null ],

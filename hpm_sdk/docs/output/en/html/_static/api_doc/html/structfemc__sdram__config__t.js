@@ -12,7 +12,6 @@ var structfemc__sdram__config__t =
     [ "cmd_data_width", "structfemc__sdram__config__t.html#a5df8663b6b9ef3d76649cbc060fedc6e", null ],
     [ "col_addr_bits", "structfemc__sdram__config__t.html#aa670810ac8440828418c034f82a374d9", null ],
     [ "cs", "structfemc__sdram__config__t.html#ae2e7010929e70b5c4787d2becb165d3d", null ],
-    [ "cs_mux_pin", "structfemc__sdram__config__t.html#ac58e1a5bc50f6bf82de144996019c426", null ],
     [ "delay_cell_disable", "structfemc__sdram__config__t.html#ae85a7796aabff05d4870e987e8a05521", null ],
     [ "delay_cell_value", "structfemc__sdram__config__t.html#a6928bb76427d1a8f5ffc42ea50f902e3", null ],
     [ "idle_timeout_in_ns", "structfemc__sdram__config__t.html#a7d8ecc941652eb1af5e031ebf814dd4f", null ],

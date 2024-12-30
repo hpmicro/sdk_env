@@ -30,6 +30,8 @@ var HPM5300_2HPM5301_2hpm__clock__drv_8h =
     [ "clock_disable", "HPM5300_2HPM5301_2hpm__clock__drv_8h.html#ab8fb2f71d80bba64c799587c32032691", null ],
     [ "clock_disconnect_group_from_cpu", "HPM5300_2HPM5301_2hpm__clock__drv_8h.html#ae98965cdcc5393ab3e023bc5f14c6108", null ],
     [ "clock_enable", "HPM5300_2HPM5301_2hpm__clock__drv_8h.html#a71218306d90cd4695fe9468c1321c27e", null ],
+    [ "clock_get_core_clock_ticks_per_ms", "HPM5300_2HPM5301_2hpm__clock__drv_8h.html#a238c57299b46818402c4bbcc12fec11e", null ],
+    [ "clock_get_core_clock_ticks_per_us", "HPM5300_2HPM5301_2hpm__clock__drv_8h.html#ab66c8cf6ac649dc572308c55a7467424", null ],
     [ "clock_get_divider", "HPM5300_2HPM5301_2hpm__clock__drv_8h.html#ab3236e62816f4029c62bd037c148b9fa", null ],
     [ "clock_get_frequency", "HPM5300_2HPM5301_2hpm__clock__drv_8h.html#a0b6cfe27aaccef750309ac03a4285189", null ],
     [ "clock_get_source", "HPM5300_2HPM5301_2hpm__clock__drv_8h.html#aa3eb7b84fef0608f1e4fd4a72cfb8814", null ],

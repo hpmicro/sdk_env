@@ -1,5 +1,12 @@
 var NAVTREEINDEX342 =
 {
+"HPM6300_2ip_2hpm__pwm__regs_8h.html#a76615afbce439be226139be1033f02bd":[4,0,5,2,6,40,393],
+"HPM6300_2ip_2hpm__pwm__regs_8h.html#a7685821b1f0f816ebbe7ef64ef0771fb":[4,0,5,2,6,40,211],
+"HPM6300_2ip_2hpm__pwm__regs_8h.html#a76e57597c62a96fb5b7f11ed93c536ee":[4,0,5,2,6,40,109],
+"HPM6300_2ip_2hpm__pwm__regs_8h.html#a77c8feb8a360a7e224fd5846082dcb72":[4,0,5,2,6,40,343],
+"HPM6300_2ip_2hpm__pwm__regs_8h.html#a77d5eab7647bc7369dbe6ce4b2d924b7":[4,0,5,2,6,40,283],
+"HPM6300_2ip_2hpm__pwm__regs_8h.html#a783d87ac5c187cffd627279021cf0834":[4,0,5,2,6,40,188],
+"HPM6300_2ip_2hpm__pwm__regs_8h.html#a78451c2bcf1cc87dfa170b94d894c7c6":[4,0,5,2,6,40,350],
 "HPM6300_2ip_2hpm__pwm__regs_8h.html#a78c52920a633e87ce30ae89de912530f":[4,0,5,2,6,40,63],
 "HPM6300_2ip_2hpm__pwm__regs_8h.html#a793994ec7e1743684b34cc208f809155":[4,0,5,2,6,40,113],
 "HPM6300_2ip_2hpm__pwm__regs_8h.html#a7a4e33e90bcf00c73e9ebaaa96169781":[4,0,5,2,6,40,228],
@@ -242,12 +249,5 @@ var NAVTREEINDEX342 =
 "HPM6300_2ip_2hpm__qei__regs_8h.html#a2d9e72ec1880d972c15ebadcb1765f5e":[4,0,5,2,6,41,178],
 "HPM6300_2ip_2hpm__qei__regs_8h.html#a2ddd51e9aaec27bb196810beff85d69a":[4,0,5,2,6,41,152],
 "HPM6300_2ip_2hpm__qei__regs_8h.html#a2e3c5bb1f5bb93d6cf8585bc19ee7ae2":[4,0,5,2,6,41,42],
-"HPM6300_2ip_2hpm__qei__regs_8h.html#a30617ccbed63f8fa1cfe68d76f77aada":[4,0,5,2,6,41,168],
-"HPM6300_2ip_2hpm__qei__regs_8h.html#a308b64c14eac6099e479217854060f52":[4,0,5,2,6,41,205],
-"HPM6300_2ip_2hpm__qei__regs_8h.html#a31b54d56d4d23a4f3cadfed3eb749c2b":[4,0,5,2,6,41,38],
-"HPM6300_2ip_2hpm__qei__regs_8h.html#a320b9622ecad9599e5b6381df5f71b91":[4,0,5,2,6,41,110],
-"HPM6300_2ip_2hpm__qei__regs_8h.html#a3287c8fdc6e38c0a6f22ad2eaeee0287":[4,0,5,2,6,41,147],
-"HPM6300_2ip_2hpm__qei__regs_8h.html#a33f3d53c21838887fedff6f03200a0b7":[4,0,5,2,6,41,63],
-"HPM6300_2ip_2hpm__qei__regs_8h.html#a3407ef66eac116d0689c25de5a3866b4":[4,0,5,2,6,41,5],
-"HPM6300_2ip_2hpm__qei__regs_8h.html#a34afce8b846868a8b376c49c41505d69":[4,0,5,2,6,41,188]
+"HPM6300_2ip_2hpm__qei__regs_8h.html#a30617ccbed63f8fa1cfe68d76f77aada":[4,0,5,2,6,41,168]
 };

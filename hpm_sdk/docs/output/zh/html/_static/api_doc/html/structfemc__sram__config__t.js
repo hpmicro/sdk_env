@@ -8,6 +8,7 @@ var structfemc__sram__config__t =
     [ "base_address", "structfemc__sram__config__t.html#a2c46e4164bef544cedb8aeac3112b380", null ],
     [ "ceh_in_ns", "structfemc__sram__config__t.html#afbf889669878f706fa8522f52b653575", null ],
     [ "ces_in_ns", "structfemc__sram__config__t.html#abfe1d87a2d15785405d412b220c8f2b2", null ],
+    [ "cs_index", "structfemc__sram__config__t.html#aad45550952bd451e263b50d728e6d724", null ],
     [ "oeh_in_ns", "structfemc__sram__config__t.html#ab94b2c51bf0438ebb18fdcf745640cae", null ],
     [ "oel_in_ns", "structfemc__sram__config__t.html#a5275d3ae51334cb2c6a98d605a73722c", null ],
     [ "port_size", "structfemc__sram__config__t.html#a81cc429f3164f1aea0ada1286d1dbad2", null ],

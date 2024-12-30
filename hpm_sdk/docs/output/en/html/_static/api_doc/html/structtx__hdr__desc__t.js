@@ -5,9 +5,9 @@ var structtx__hdr__desc__t =
     [ "htype", "structtx__hdr__desc__t.html#aef4b39f762112fa878bf59c72a0f9d6e", null ],
     [ "queue", "structtx__hdr__desc__t.html#a73c0232fad9181a32df0b1c59d72448b", null ],
     [ "tx_hdr0", "structtx__hdr__desc__t.html#a10c6f4921692291f17d75e303f7d3586", null ],
-    [ "tx_hdr0_bm", "structtx__hdr__desc__t.html#adb1e1ca056c99e48827a4b7ac5e531fe", null ],
+    [ "tx_hdr0_bm", "structtx__hdr__desc__t.html#affd169e3df90f5ce4c4685a516e3d644", null ],
     [ "tx_hdr1", "structtx__hdr__desc__t.html#a7376565f164c4e08b5a4b4ac0738682c", null ],
-    [ "tx_hdr1_bm", "structtx__hdr__desc__t.html#aad48b6bef1af100c46b2088f6c0dfb79", null ],
+    [ "tx_hdr1_bm", "structtx__hdr__desc__t.html#a6aab793641eb2bfe5a73ef35f5899acf", null ],
     [ "tx_hdr2", "structtx__hdr__desc__t.html#a328cdf0b41d263d17db292d946f7864b", null ],
     [ "tx_hdr3", "structtx__hdr__desc__t.html#a54e03427a98952eed3e3e7f5a051bd5f", null ],
     [ "utag", "structtx__hdr__desc__t.html#a9a9fb26aee776bd941fbbba09402593b", null ]

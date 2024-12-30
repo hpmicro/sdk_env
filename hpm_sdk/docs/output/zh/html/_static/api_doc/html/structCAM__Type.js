@@ -1,7 +1,6 @@
 var structCAM__Type =
 [
     [ "ACT_SIZE", "structCAM__Type.html#a53c84c3861b96de95ec00089fdb93ad0", null ],
-    [ "ALARM_SET", "structCAM__Type.html#a475a584eb97790fd3b81bd8f56dbaa00", null ],
     [ "BUF_PARA", "structCAM__Type.html#a2f4916c1af3146cfeed72d51a6cd8553", null ],
     [ "CLRKEY_HIGH", "structCAM__Type.html#a48a8347cdeef718547c7dfe01c7167cd", null ],
     [ "CLRKEY_LOW", "structCAM__Type.html#a6d9ffb99785cc22e8deb5e159730f7a5", null ],
@@ -14,10 +13,7 @@ var structCAM__Type =
     [ "CSC_COEF2", "structCAM__Type.html#afe025b1cc812f8bcf1ca387f4badf035", null ],
     [ "DMASA_FB1", "structCAM__Type.html#a715eda01c1c628633d6bbfa9757594a7", null ],
     [ "DMASA_FB2", "structCAM__Type.html#adafb78168ac3a329f26e2c4479a40912", null ],
-    [ "DMASA_UV1", "structCAM__Type.html#adcce521386d95fdc3b634c7fe70d6828", null ],
-    [ "DMASA_UV2", "structCAM__Type.html#a2af418df3e2d7c2d3d2316547fc66981", null ],
     [ "HISTOGRAM_FIFO", "structCAM__Type.html#ad19d44207bfa8ec883afb521ad343d6a", null ],
-    [ "HSYNC_VALID_CNT", "structCAM__Type.html#a9f08e0460bcc0dcb12f2e6880c444081", null ],
     [ "IDEAL_WN_SIZE", "structCAM__Type.html#a56ab3396fec9dcc2d050c07ef90653ba", null ],
     [ "INT_EN", "structCAM__Type.html#a1ff23946a9cb4855427a22e8fcb4e916", null ],
     [ "PRO_CTRL", "structCAM__Type.html#a7e49a2c2b6f9b11b0fb11d9e8b2759f4", null ],
@@ -25,11 +21,10 @@ var structCAM__Type =
     [ "RESERVED1", "structCAM__Type.html#a58e28ce7ac30423b2cdaad6c8148a158", null ],
     [ "RESERVED2", "structCAM__Type.html#a9d076ec64d10cb0b71b22c3aeb58d9ba", null ],
     [ "RESERVED3", "structCAM__Type.html#a3dd6416c58f60710db6dba782a3a5960", null ],
-    [ "RESERVED4", "structCAM__Type.html#a4ad31fffb186e51401062e908c1fdbed", null ],
-    [ "RESERVED5", "structCAM__Type.html#ad8f863871dc7e797bb622cb9b9d61e96", null ],
+    [ "RESERVED4", "structCAM__Type.html#a07d897f18d255e365afa5207429cebda", null ],
+    [ "RESERVED5", "structCAM__Type.html#a6186249d8f3e228b732209552985dc95", null ],
+    [ "RESERVED6", "structCAM__Type.html#a5b4e256a77611b2f8998cbed146b51b3", null ],
     [ "ROI_HEIGHT", "structCAM__Type.html#ad8151ac2cdc10cb8c10547f5811b2ae4", null ],
     [ "ROI_WIDTH", "structCAM__Type.html#a8336a215de8832e0fd58c8b02eaaecf2", null ],
-    [ "STA", "structCAM__Type.html#a6dbe4096567c4873876d176407280cd9", null ],
-    [ "VALID_MARGIN", "structCAM__Type.html#a8269d96dba89bd2902b659867ec56ee9", null ],
-    [ "VSYNC_VALID_CNT", "structCAM__Type.html#ad321560ac6b5d96cf5a6ccab764c037a", null ]
+    [ "STA", "structCAM__Type.html#a6dbe4096567c4873876d176407280cd9", null ]
 ];

@@ -113,7 +113,14 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">56. SDM</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#overview">56.1. Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#board-setting">56.2. Board Setting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#running-the-example">56.3. Running the example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#note">56.3. Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-example">56.4. Running the example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sdm-sample-data-in-polling-mode">56.4.1. 1. SDM sample data in polling mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sdm-amplitude-threshold-check">56.4.2. 2. SDM amplitude threshold check</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sdm-sample-data-in-interrupt-mode">56.4.3. 3. SDM sample data in interrupt mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sdm-sample-data-with-sync-signal">56.4.4. 4. SDM sample data with sync signal</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../sdxc/index_en.html">57. SDXC</a></li>
@@ -164,7 +171,7 @@
 <h1><span class="section-number">56. </span>SDM<a class="headerlink" href="#sdm" title="Permalink to this heading"></a></h1>
 <section id="overview">
 <h2><span class="section-number">56.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
-<p>The SDM example shows data filter and comparator functions.</p>
+<p>The SDM sample project demonstrates the function of data sampling and amplitude detection of the data stream output by the Sigma-Delta modulator of SDM peripherals.</p>
 </section>
 <section id="board-setting">
 <h2><span class="section-number">56.2. </span>Board Setting<a class="headerlink" href="#board-setting" title="Permalink to this heading"></a></h2>
@@ -175,25 +182,132 @@ Different hardware setting are used depending on whether an AD sampling chip is 
 <li><p>If there is onboard AD sampling chip, simply connect the analog signal to the input interface of the sampling chip.</p></li>
 </ul>
 </section>
+<section id="note">
+<h2><span class="section-number">56.3. </span>Note<a class="headerlink" href="#note" title="Permalink to this heading"></a></h2>
+<p>This example provides a conversion formula for input voltage and output value suitable for Sigma-Delta modulators such as AD7400 and NSI1306 (Full-scale ±320 mV). If you are using a different type of Sigma-Delta modulator, please check the conversion formula.</p>
+</section>
 <section id="running-the-example">
-<h2><span class="section-number">56.3. </span>Running the example<a class="headerlink" href="#running-the-example" title="Permalink to this heading"></a></h2>
-<p>Running the example, the example will prints the received data in the terminal, Use these data to plot and compare with the original analog waveform:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">printf sdm received data.</span>
-<span class="go">10778477</span>
-<span class="go">13348519</span>
-<span class="go">14046041</span>
-<span class="go">14695587</span>
-<span class="go">15260419</span>
-<span class="go">15795965</span>
-<span class="go">16313123</span>
-<span class="go">16504057</span>
-<span class="go">15999335</span>
-<span class="go">15261047</span>
-<span class="go">14505145</span>
-<span class="go">14053119</span>
-<span class="go">13520479</span>
+<h2><span class="section-number">56.4. </span>Running the example<a class="headerlink" href="#running-the-example" title="Permalink to this heading"></a></h2>
+<p>When running the project, the serial port will output the following information, allowing you to enter different numbers to execute different test functions:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sdm example</span>
+<span class="go">*********************************************************************</span>
+<span class="go">*                                                                   *</span>
+<span class="go">*                         SDM Example Menu                          *</span>
+<span class="go">* Please enter one of following SDM function test(e.g. 1 or 2 ...): *</span>
+<span class="go">* 1 - SDM sample data in polling mode                               *</span>
+<span class="go">* 2 - SDM amplitude threshold check                                 *</span>
+<span class="go">* 3 - SDM sample data in interrupt mode                             *</span>
+<span class="go">* 4 - SDM sample data with sync signal                              *</span>
+<span class="go">*                                                                   *</span>
+<span class="go">*********************************************************************</span>
 </pre></div>
 </div>
+<section id="sdm-sample-data-in-polling-mode">
+<h3><span class="section-number">56.4.1. </span>1. SDM sample data in polling mode<a class="headerlink" href="#sdm-sample-data-in-polling-mode" title="Permalink to this heading"></a></h3>
+<p>SDM Polling Data Valid Flag and Reading Sample Data from FIFO.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Selected option: 1</span>
+
+<span class="go">sdm sample data in polling mode.</span>
+<span class="go">203.57mV</span>
+<span class="go">203.17mV</span>
+<span class="go">203.31mV</span>
+<span class="go">203.14mV</span>
+<span class="go">203.01mV</span>
+<span class="go">203.28mV</span>
+<span class="go">203.17mV</span>
+<span class="go">203.05mV</span>
+<span class="go">203.19mV</span>
+<span class="go">203.21mV</span>
+<span class="go">203.02mV</span>
+<span class="go">203.19mV</span>
+<span class="go">203.43mV</span>
+<span class="go">203.17mV</span>
+<span class="go">203.29mV</span>
+<span class="go">203.24mV</span>
+</pre></div>
+</div>
+</section>
+<section id="sdm-amplitude-threshold-check">
+<h3><span class="section-number">56.4.2. </span>2. SDM amplitude threshold check<a class="headerlink" href="#sdm-amplitude-threshold-check" title="Permalink to this heading"></a></h3>
+<p>SDM detects voltage over-limit events. The high voltage threshold for amplitude detection is set to SDM_AMPLITUDE_HIGH_THRESHOLD. When the input analog voltage increases from below this threshold to above it, an error interrupt is triggered.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Selected option: 2</span>
+
+<span class="go">Set amplitude high threshold 240mV</span>
+<span class="go">sdm channel comparator detected amplitude over the high threshold</span>
+<span class="go">voltage: 253.75mV</span>
+</pre></div>
+</div>
+</section>
+<section id="sdm-sample-data-in-interrupt-mode">
+<h3><span class="section-number">56.4.3. </span>3. SDM sample data in interrupt mode<a class="headerlink" href="#sdm-sample-data-in-interrupt-mode" title="Permalink to this heading"></a></h3>
+<p>SDM samples data from FIFO with the data ready flag. When the data in the FIFO reaches a preset threshold, SDM triggers a data ready interrupt. During the interrupt handler, data is read, and stop the sampling when the number of data read reaches TEST_DATA_COUNT.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Selected option: 3</span>
+
+<span class="go">sdm sample data in interrupt mode.</span>
+<span class="go">203.39mV</span>
+<span class="go">203.08mV</span>
+<span class="go">202.96mV</span>
+<span class="go">202.87mV</span>
+<span class="go">202.85mV</span>
+<span class="go">202.86mV</span>
+<span class="go">202.86mV</span>
+<span class="go">202.84mV</span>
+<span class="go">202.81mV</span>
+<span class="go">202.88mV</span>
+<span class="go">203.01mV</span>
+<span class="go">203.23mV</span>
+<span class="go">203.08mV</span>
+<span class="go">202.97mV</span>
+<span class="go">202.92mV</span>
+<span class="go">202.97mV</span>
+</pre></div>
+</div>
+</section>
+<section id="sdm-sample-data-with-sync-signal">
+<h3><span class="section-number">56.4.4. </span>4. SDM sample data with sync signal<a class="headerlink" href="#sdm-sample-data-with-sync-signal" title="Permalink to this heading"></a></h3>
+<p>In this case, GPTMR is used to output the synchronization signal, it connects to SDM sync input signal through TRGMMUX configuration. When the output signal of GPTMR rises, the synchronization event of SDM is triggered.
+SDM samples data with synchronization signals. When a synchronization event occurs, SDM begins sampling data into the FIFO. Once the data in the FIFO reaches a preset threshold, SDM triggers a data ready interrupt to read the data, and the hardware clears the synchronization event flag, halting further sampling until the next synchronization event takes place.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Selected option: 4</span>
+
+<span class="go">sdm sample data with sync signal. 1 time</span>
+<span class="go">203.88mV</span>
+<span class="go">203.84mV</span>
+<span class="go">203.90mV</span>
+<span class="go">203.87mV</span>
+<span class="go">203.91mV</span>
+<span class="go">203.92mV</span>
+<span class="go">203.85mV</span>
+<span class="go">203.85mV</span>
+<span class="go">sdm sample data with sync signal. 2 time</span>
+<span class="go">203.90mV</span>
+<span class="go">203.96mV</span>
+<span class="go">203.97mV</span>
+<span class="go">203.93mV</span>
+<span class="go">203.94mV</span>
+<span class="go">203.86mV</span>
+<span class="go">203.89mV</span>
+<span class="go">203.90mV</span>
+<span class="go">sdm sample data with sync signal. 3 time</span>
+<span class="go">203.94mV</span>
+<span class="go">204.03mV</span>
+<span class="go">203.97mV</span>
+<span class="go">203.91mV</span>
+<span class="go">203.89mV</span>
+<span class="go">203.87mV</span>
+<span class="go">203.93mV</span>
+<span class="go">203.97mV</span>
+<span class="go">sdm sample data with sync signal. 4 time</span>
+<span class="go">203.93mV</span>
+<span class="go">204.13mV</span>
+<span class="go">204.14mV</span>
+<span class="go">204.16mV</span>
+<span class="go">204.17mV</span>
+<span class="go">204.13mV</span>
+<span class="go">204.14mV</span>
+<span class="go">204.12mV</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -206,7 +320,7 @@ Different hardware setting are used depending on whether an AD sampling chip is 
 
   <div role="contentinfo">
     <p>&#169; Copyright 2020-2024, HPMicro.
-      <span class="lastupdated">Last updated on Sep 30, 2024.
+      <span class="lastupdated">Last updated on Dec 30, 2024.
       </span></p>
   </div>
 

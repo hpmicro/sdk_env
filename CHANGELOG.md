@@ -1,5 +1,12 @@
 # Change Log 
 
+## [1.8.0] - 2024-12-31:
+- update SDK to v1.8.0
+- start_gui: fix cmake build type's error under certain conditions and support saving board and sample info.
+- start_gui: fix bug about default board used and log display error.
+- start_gui: fix bug that error log had false positive if project had "error" or "fail" keywords.
+- README: add known issue for CMAKE_OBJECT_PATH_MAX problem.
+
 ## [1.7.0] - 2024-09-30:
 - update SDK to v1.7.0
 - start_gui:

@@ -55,7 +55,7 @@ var group__uart__interface =
     [ "uart_signal_t", "group__uart__interface.html#gaabeb807de70635ecab1bc70dd6db895f", null ],
     [ "uart_stat_t", "group__uart__interface.html#ga659e30f9f0a4734cae0990ff25eb455b", null ],
     [ "word_length_t", "group__uart__interface.html#ga50f85e080d19ed16e340907c20b18d39", [
-      [ "status_uart_no_suitable_baudrate_parameter_found", "group__uart__interface.html#gga5347260c3611a5e649db7a4a8370d3c5adffac1505396eaee4888bd9ae472a6c7", null ]
+      [ "status_uart_no_suitable_baudrate_parameter_found", "group__uart__interface.html#ggabd4fc2111b94dec34e056f8ef38c38e5adffac1505396eaee4888bd9ae472a6c7", null ]
     ] ],
     [ "hpm_uart_rxline_idle_cond", "group__uart__interface.html#ga731be137b0fc694d12e1938d047caa09", [
       [ "uart_rxline_idle_cond_rxline_logic_one", "group__uart__interface.html#gga731be137b0fc694d12e1938d047caa09aee7f16d64a1502d6de94ae173a004c64", null ],
@@ -166,6 +166,7 @@ var group__uart__interface =
     [ "uart_enable_address1_match", "group__uart__interface.html#ga2f684a1b98d1cfb600df4655a5d78d21", null ],
     [ "uart_enable_hardware_trig_transfer", "group__uart__interface.html#gaa8b5441567869dfa16a7a309a861987e", null ],
     [ "uart_enable_irq", "group__uart__interface.html#ga9b33c14075109dff7e32eb2dc17b9cbf", null ],
+    [ "uart_enable_rx_function", "group__uart__interface.html#ga6166a93a0a8a25e6e43ad2fbe30eb53e", null ],
     [ "uart_enable_rxline_idle_detection", "group__uart__interface.html#ga9429caea0270af2f532cb103525d0622", null ],
     [ "uart_enable_txline_idle_detection", "group__uart__interface.html#ga56b9338742b88bc320786b3f14c7872c", null ],
     [ "uart_flush", "group__uart__interface.html#ga093b15f7a263041a2d7144f35b5ebdac", null ],

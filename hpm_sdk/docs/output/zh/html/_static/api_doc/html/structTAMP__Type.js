@@ -5,10 +5,10 @@ var structTAMP__Type =
     [ "LFSR", "structTAMP__Type.html#a4087dc0df229e2015c3a50fba1144e54", null ],
     [ "POLY", "structTAMP__Type.html#a549e2cfcb964a79ab088eb2febf53787", null ],
     [ "RESERVED0", "structTAMP__Type.html#af0cebe737c071d6b1ad5a43c751e556f", null ],
-    [ "TAMP", "structTAMP__Type.html#a37b40bd582d28fd833a7ff90ae4886be", null ],
-    [ "TAMP", "structTAMP__Type.html#acd14091481b6b7fd65604345e2236f78", null ],
-    [ "TAMP", "structTAMP__Type.html#ad70f027480640c4eab41ada26f5d7f52", null ],
-    [ "TAMP", "structTAMP__Type.html#a82ed3a3ab6ab26aaef23ce0460ffd77a", null ],
-    [ "TAMP", "structTAMP__Type.html#a083fdc40978fb95f2330a898902b7126", null ],
+    [ "TAMP", "structTAMP__Type.html#aba7e25d174f1998f06e5ca5e2178f0d3", null ],
+    [ "TAMP", "structTAMP__Type.html#a9c06483900853dd9b2a07460b0080274", null ],
+    [ "TAMP", "structTAMP__Type.html#ac609dbdaad7e4319368ff72a46c75306", null ],
+    [ "TAMP", "structTAMP__Type.html#aeac07b0af126a99c0476022d3219cab6", null ],
+    [ "TAMP", "structTAMP__Type.html#ae5ec0d97d14bcf276ec4e30e15efe15c", null ],
     [ "TAMP_FLAG", "structTAMP__Type.html#a873278e26762ac6fa67132acb4ffdc48", null ]
 ];

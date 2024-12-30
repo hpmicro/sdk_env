@@ -419,6 +419,12 @@ Functions</h2></td></tr>
 <tr class="memitem:gaaa52e327abf31dd95477c8a9daf432d9" id="r_gaaa52e327abf31dd95477c8a9daf432d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__common__interface.html#ga087efae82a4b174a0363363d9d5ece19">hpm_stat_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaaa52e327abf31dd95477c8a9daf432d9">pwm_update_raw_cmp_central_aligned</a> (<a class="el" href="structPWM__Type.html">PWM_Type</a> *pwm_x, uint8_t cmp1_index, uint8_t cmp2_index, uint32_t target_cmp1, uint32_t target_cmp2)</td></tr>
 <tr class="memdesc:gaaa52e327abf31dd95477c8a9daf432d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">update raw compare value for central aligned waveform  <br /></td></tr>
 <tr class="separator:gaaa52e327abf31dd95477c8a9daf432d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace5f5e44b2b433c4e5e6a99588890785" id="r_gace5f5e44b2b433c4e5e6a99588890785"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__common__interface.html#ga087efae82a4b174a0363363d9d5ece19">hpm_stat_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gace5f5e44b2b433c4e5e6a99588890785">pwm_update_duty_edge_aligned</a> (<a class="el" href="structPWM__Type.html">PWM_Type</a> *pwm_x, uint8_t cmp_index, float duty)</td></tr>
+<tr class="memdesc:gace5f5e44b2b433c4e5e6a99588890785"><td class="mdescLeft">&#160;</td><td class="mdescRight">update duty value for edge aligned waveform  <br /></td></tr>
+<tr class="separator:gace5f5e44b2b433c4e5e6a99588890785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeedeeef0ac884b58bdef016afcf0eadc" id="r_gaeedeeef0ac884b58bdef016afcf0eadc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__common__interface.html#ga087efae82a4b174a0363363d9d5ece19">hpm_stat_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaeedeeef0ac884b58bdef016afcf0eadc">pwm_update_duty_central_aligned</a> (<a class="el" href="structPWM__Type.html">PWM_Type</a> *pwm_x, uint8_t cmp1_index, uint8_t cmp2_index, float duty)</td></tr>
+<tr class="memdesc:gaeedeeef0ac884b58bdef016afcf0eadc"><td class="mdescLeft">&#160;</td><td class="mdescRight">update duty value for central aligned waveform  <br /></td></tr>
+<tr class="separator:gaeedeeef0ac884b58bdef016afcf0eadc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>PWM driver APIs  . </p>
@@ -3172,6 +3178,100 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gaeedeeef0ac884b58bdef016afcf0eadc" name="gaeedeeef0ac884b58bdef016afcf0eadc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeedeeef0ac884b58bdef016afcf0eadc">&#9670;&#160;</a></span>pwm_update_duty_central_aligned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__common__interface.html#ga087efae82a4b174a0363363d9d5ece19">hpm_stat_t</a> pwm_update_duty_central_aligned </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPWM__Type.html">PWM_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>pwm_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>cmp1_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>cmp2_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>duty</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__pwm__drv_8h.html">drivers/inc/hpm_pwm_drv.h</a>&gt;</code></p>
+
+<p>update duty value for central aligned waveform </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pwm_x</td><td>PWM base address, HPM_PWMx(x=0..n) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmp1_index</td><td>index of cmp1 to be adjusted (cmp1_index must be even number) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmp2_index</td><td>index of cmp2 to be adjusted (cmp2_index must be odd number) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">duty</td><td>duty value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">hpm_stat_t</td><td><a class="el" href="group__common__interface.html#ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701">status_invalid_argument</a> or <a class="el" href="group__common__interface.html#ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7">status_success</a> cmp1_index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gace5f5e44b2b433c4e5e6a99588890785" name="gace5f5e44b2b433c4e5e6a99588890785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gace5f5e44b2b433c4e5e6a99588890785">&#9670;&#160;</a></span>pwm_update_duty_edge_aligned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__common__interface.html#ga087efae82a4b174a0363363d9d5ece19">hpm_stat_t</a> pwm_update_duty_edge_aligned </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPWM__Type.html">PWM_Type</a> *</td>          <td class="paramname"><span class="paramname"><em>pwm_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>cmp_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>duty</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="hpm__pwm__drv_8h.html">drivers/inc/hpm_pwm_drv.h</a>&gt;</code></p>
+
+<p>update duty value for edge aligned waveform </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pwm_x</td><td>PWM base address, HPM_PWMx(x=0..n) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmp_index</td><td>index of cmp to be adjusted (0..(PWM_SOC_PWM_MAX_COUNT-1)) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">duty</td><td>duty value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">hpm_stat_t</td><td><a class="el" href="group__common__interface.html#ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701">status_invalid_argument</a> or <a class="el" href="group__common__interface.html#ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7">status_success</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="gaaa52e327abf31dd95477c8a9daf432d9" name="gaaa52e327abf31dd95477c8a9daf432d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaaa52e327abf31dd95477c8a9daf432d9">&#9670;&#160;</a></span>pwm_update_raw_cmp_central_aligned()</h2>
 
@@ -3277,7 +3377,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Sep 30 2024 15:22:52 for HPM SDK by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Mon Dec 30 2024 18:50:49 for HPM SDK by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

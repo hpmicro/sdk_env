@@ -1,6 +1,6 @@
 var structQEOV2__Type =
 [
-    [ "ABZ", "structQEOV2__Type.html#a223d1453509fa2aed43cfffca97bfc14", null ],
+    [ "ABZ", "structQEOV2__Type.html#a57ccff6d81258f49e291084642d8dea0", null ],
     [ "AMPLITUDE", "structQEOV2__Type.html#a0239ff79b385ee365a3c8d56322c7b7b", null ],
     [ "DEADZONE_SHIFT", "structQEOV2__Type.html#aed008d716e8a5851f6acac132a62fd3e", null ],
     [ "DEBUG0", "structQEOV2__Type.html#a0aa8253ae744b4ea03266bd4e18e778b", null ],
@@ -9,8 +9,8 @@ var structQEOV2__Type =
     [ "DEBUG3", "structQEOV2__Type.html#aeb3d7c3200e674cabf67e3de9c27ebd4", null ],
     [ "DEBUG4", "structQEOV2__Type.html#a50173c4862094bfeff040032708fb735", null ],
     [ "DEBUG5", "structQEOV2__Type.html#a56ad2556a8da384f9e2d78f9ba2e4c9d", null ],
-    [ "LIMIT0", "structQEOV2__Type.html#a7a7b33ce9e34168085a025880906764c", null ],
-    [ "LIMIT1", "structQEOV2__Type.html#abfb1f19f68393a1c216f64527e174a47", null ],
+    [ "LIMIT0", "structQEOV2__Type.html#a29c625b4e477cda41378e83108632d3b", null ],
+    [ "LIMIT1", "structQEOV2__Type.html#a5a6cd671871d858bba4f234f66075b13", null ],
     [ "LINE_WIDTH", "structQEOV2__Type.html#a99c3d230aa25e26328834dfae5dbbcce", null ],
     [ "MAX_LEVEL0", "structQEOV2__Type.html#a3828492a3289bb3966286512ea653ec4", null ],
     [ "MAX_LEVEL1", "structQEOV2__Type.html#a552d7fce97cd94b7d5202471eb95f576", null ],
@@ -24,7 +24,7 @@ var structQEOV2__Type =
     [ "POSTION_SEL", "structQEOV2__Type.html#a40efdcaf924214d9c13e4262c6ab3db3", null ],
     [ "POSTION_SOFTWARE", "structQEOV2__Type.html#a39da23f269a0682a15f2303aad005459", null ],
     [ "POSTION_SYNC", "structQEOV2__Type.html#a118cd73b724adcf95e7be50770f2c076", null ],
-    [ "PWM", "structQEOV2__Type.html#a9ab9b0ce029c95fb4791360878560f43", null ],
+    [ "PWM", "structQEOV2__Type.html#ad0c026c0df6d901f1b448d04be7a4b10", null ],
     [ "PWM_CYCLE", "structQEOV2__Type.html#a2ee05cd913d993f57410568a6327aa25", null ],
     [ "RESERVED0", "structQEOV2__Type.html#a95c2df814d529c630153ff219b72f6ce", null ],
     [ "RESERVED1", "structQEOV2__Type.html#a914b8e969f5622f6665d20d2d2e3c354", null ],
@@ -34,6 +34,6 @@ var structQEOV2__Type =
     [ "VD_INJECT", "structQEOV2__Type.html#ad8b2f0c0916d51bd0c99f7e7edd91d44", null ],
     [ "VD_VQ_LOAD", "structQEOV2__Type.html#afc06d463c9cab84a694297b037d66531", null ],
     [ "VQ_INJECT", "structQEOV2__Type.html#a1c308d6060cff175ada4f5f7aef863ae", null ],
-    [ "WAVE", "structQEOV2__Type.html#a684f4f9240c0c09400dd8a6a11f74a07", null ],
+    [ "WAVE", "structQEOV2__Type.html#a08120dae4327827d1cb1542af88b7fd6", null ],
     [ "WDOG_WIDTH", "structQEOV2__Type.html#a09bf84420139e197d8dec23dd04cef14", null ]
 ];

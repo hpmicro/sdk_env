@@ -2937,7 +2937,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="1005" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="140" bodyend="145" declfile="drivers/inc/hpm_pwm_drv.h" declline="1005" declcolumn="12"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="1005" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="167" bodyend="172" declfile="drivers/inc/hpm_pwm_drv.h" declline="1005" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="group__pwm__interface_1gaaa52e327abf31dd95477c8a9daf432d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
@@ -3022,7 +3022,141 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drivers/inc/hpm_pwm_drv.h" line="1018" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="147" bodyend="161" declfile="drivers/inc/hpm_pwm_drv.h" declline="1018" declcolumn="12"/>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="1018" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="174" bodyend="194" declfile="drivers/inc/hpm_pwm_drv.h" declline="1018" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gace5f5e44b2b433c4e5e6a99588890785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t pwm_update_duty_edge_aligned</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t cmp_index, float duty)</argsstring>
+        <name>pwm_update_duty_edge_aligned</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmp_index</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>duty</declname>
+        </param>
+        <briefdescription>
+<para>update duty value for edge aligned waveform </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of cmp to be adjusted (0..(PWM_SOC_PWM_MAX_COUNT-1)) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">duty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>duty value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref> or <ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="1030" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="140" bodyend="153" declfile="drivers/inc/hpm_pwm_drv.h" declline="1030" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pwm__interface_1gaeedeeef0ac884b58bdef016afcf0eadc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t pwm_update_duty_central_aligned</definition>
+        <argsstring>(PWM_Type *pwm_x, uint8_t cmp1_index, uint8_t cmp2_index, float duty)</argsstring>
+        <name>pwm_update_duty_central_aligned</name>
+        <param>
+          <type><ref refid="structPWM__Type" kindref="compound">PWM_Type</ref> *</type>
+          <declname>pwm_x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmp1_index</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmp2_index</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>duty</declname>
+        </param>
+        <briefdescription>
+<para>update duty value for central aligned waveform </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pwm_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PWM base address, HPM_PWMx(x=0..n) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp1_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of cmp1 to be adjusted (cmp1_index must be even number) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmp2_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of cmp2 to be adjusted (cmp2_index must be odd number) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">duty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>duty value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>hpm_stat_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref> or <ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref> cmp1_index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drivers/inc/hpm_pwm_drv.h" line="1041" column="12" bodyfile="drivers/src/hpm_pwm_drv.c" bodystart="155" bodyend="165" declfile="drivers/inc/hpm_pwm_drv.h" declline="1041" declcolumn="12"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="define">

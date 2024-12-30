@@ -1,6 +1,6 @@
 var structPWMV2__Type =
 [
-    [ "CAL", "structPWMV2__Type.html#ae06344f5edbc93b2b7ed1299f71f6f75", null ],
+    [ "CAL", "structPWMV2__Type.html#afcc2afdab11a66b5cdc20c3d9b28c782", null ],
     [ "CAPTURE_NEG", "structPWMV2__Type.html#a067394dffd724261ba7a6a464efa4e19", null ],
     [ "CAPTURE_POS", "structPWMV2__Type.html#a5549e1b23340791179062f7ee5955475", null ],
     [ "CFG", "structPWMV2__Type.html#aa846e4f1fdc8a0d3fda9908133ad805f", null ],
@@ -8,9 +8,9 @@ var structPWMV2__Type =
     [ "CFG1", "structPWMV2__Type.html#af16dee37d9f0bd974bf1bdb57e366b6f", null ],
     [ "CFG2", "structPWMV2__Type.html#a27093701e1bcf015973a1893d4665db2", null ],
     [ "CFG3", "structPWMV2__Type.html#af5b8b6c207471bcdb5cca7421dd946ff", null ],
-    [ "CMP", "structPWMV2__Type.html#a9f6db28b5862ea8f1392aebacb97db63", null ],
+    [ "CMP", "structPWMV2__Type.html#aeb19e67601f341b2cf7058444a2e5c23", null ],
     [ "CMP_VAL_WORK", "structPWMV2__Type.html#aa005108ce5bdb2854e7e19659ce874d8", null ],
-    [ "CNT", "structPWMV2__Type.html#ade34428beaa79e29650aaa480f4574e9", null ],
+    [ "CNT", "structPWMV2__Type.html#a5ade7816b01c7f3106194cae4ae49618", null ],
     [ "CNT_GLBCFG", "structPWMV2__Type.html#a9212edd161e3ce8f9c3e72b58f271746", null ],
     [ "CNT_RELOAD_WORK", "structPWMV2__Type.html#a1744d0ec3c88c5608314cba0773aa34c", null ],
     [ "CNT_VAL", "structPWMV2__Type.html#a1c828886b0eb6ec0614eec4a24ebf896", null ],
@@ -35,7 +35,7 @@ var structPWMV2__Type =
     [ "IRQ_STS_CMP", "structPWMV2__Type.html#a8ff7a0e5a422082acb3c49442cfa3990", null ],
     [ "IRQ_STS_FAULT", "structPWMV2__Type.html#a3f411af013e32e64a9683207fdaab15e", null ],
     [ "IRQ_STS_RELOAD", "structPWMV2__Type.html#a0a7f9ac742124e05f893f8628956d8da", null ],
-    [ "PWM", "structPWMV2__Type.html#a503ad950d28156a24ab6310f960ecd57", null ],
+    [ "PWM", "structPWMV2__Type.html#ab379fa6bc977afd86ac55a644b4e3d55", null ],
     [ "RESERVED0", "structPWMV2__Type.html#a987b5dd0867a207c2aef6400f192caad", null ],
     [ "RESERVED1", "structPWMV2__Type.html#afa6ce6eaca458ede52ea1a99140ad321", null ],
     [ "RESERVED10", "structPWMV2__Type.html#a18c9125d34dd1c84e252f03af52dbc49", null ],

@@ -1,5 +1,12 @@
 var NAVTREEINDEX354 =
 {
+"HPM6300_2ip_2hpm__tsns__regs_8h.html#af561945cafecaa17c3e3cd78e7c46d58":[4,0,5,2,6,51,92],
+"HPM6300_2ip_2hpm__tsns__regs_8h.html#af7b254a92c8208eef5a44f9f6f9beaa3":[4,0,5,2,6,51,17],
+"HPM6300_2ip_2hpm__tsns__regs_8h.html#af8b0056cc9ebd8b67f6014edad6e8ae4":[4,0,5,2,6,51,100],
+"HPM6300_2ip_2hpm__tsns__regs_8h.html#afa5ab2c0e21da8cd5228eb5c5f7164c5":[4,0,5,2,6,51,5],
+"HPM6300_2ip_2hpm__tsns__regs_8h.html#afd64dde5dd4b269baa219f740974ffe0":[4,0,5,2,6,51,49],
+"HPM6300_2ip_2hpm__tsns__regs_8h.html#afdef67e6cc52588a532440818a6b877a":[4,0,5,2,6,51,85],
+"HPM6300_2ip_2hpm__tsns__regs_8h.html#afed58b892faf15c23e20308ad050ec61":[4,0,5,2,6,51,102],
 "HPM6300_2ip_2hpm__tsns__regs_8h.html#afffdaeda4396e916772780f79e914aa2":[4,0,5,2,6,51,83],
 "HPM6300_2ip_2hpm__tsns__regs_8h_source.html":[4,0,5,2,6,51],
 "HPM6300_2ip_2hpm__uart__regs_8h.html":[4,0,5,2,6,52],
@@ -242,12 +249,5 @@ var NAVTREEINDEX354 =
 "HPM6300_2ip_2hpm__usb__regs_8h.html#a24d342c76e3ae3a938839a954c85b93c":[4,0,5,2,6,53,443],
 "HPM6300_2ip_2hpm__usb__regs_8h.html#a250328db328de0bcee9bc7da9918b27a":[4,0,5,2,6,53,307],
 "HPM6300_2ip_2hpm__usb__regs_8h.html#a254cea730838a0083ada1e4a0d077489":[4,0,5,2,6,53,473],
-"HPM6300_2ip_2hpm__usb__regs_8h.html#a25b19f6eeb5e43f3feca65e63804f49c":[4,0,5,2,6,53,261],
-"HPM6300_2ip_2hpm__usb__regs_8h.html#a25cff46f1625fb722d24aacbd526625f":[4,0,5,2,6,53,75],
-"HPM6300_2ip_2hpm__usb__regs_8h.html#a25ff4987eaea221cc19add3407c8f05e":[4,0,5,2,6,53,442],
-"HPM6300_2ip_2hpm__usb__regs_8h.html#a260b8b310d9e2f9b016f0d877c725159":[4,0,5,2,6,53,577],
-"HPM6300_2ip_2hpm__usb__regs_8h.html#a263d93dc4f724ab6fd33338de1acae30":[4,0,5,2,6,53,249],
-"HPM6300_2ip_2hpm__usb__regs_8h.html#a266a57d503b878d75170eaab5d9173a0":[4,0,5,2,6,53,594],
-"HPM6300_2ip_2hpm__usb__regs_8h.html#a26c66eb8f0d3addd423f522fe3ff16c8":[4,0,5,2,6,53,199],
-"HPM6300_2ip_2hpm__usb__regs_8h.html#a2786ae6307d1aa89bfa4307aff97f926":[4,0,5,2,6,53,7]
+"HPM6300_2ip_2hpm__usb__regs_8h.html#a25b19f6eeb5e43f3feca65e63804f49c":[4,0,5,2,6,53,261]
 };

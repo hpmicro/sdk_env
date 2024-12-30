@@ -122,6 +122,8 @@ var hpm__pwm__drv_8h =
     [ "pwm_shadow_register_unlock", "group__pwm__interface.html#ga8d60daaaacabde15b02b6c90417ab4c8", null ],
     [ "pwm_start_counter", "group__pwm__interface.html#gad309e48c2c0d25ad2737e5b79161b13b", null ],
     [ "pwm_stop_counter", "group__pwm__interface.html#gaf264cad56f1f5b28b3119543be96ef39", null ],
+    [ "pwm_update_duty_central_aligned", "group__pwm__interface.html#gaeedeeef0ac884b58bdef016afcf0eadc", null ],
+    [ "pwm_update_duty_edge_aligned", "group__pwm__interface.html#gace5f5e44b2b433c4e5e6a99588890785", null ],
     [ "pwm_update_raw_cmp_central_aligned", "group__pwm__interface.html#gaaa52e327abf31dd95477c8a9daf432d9", null ],
     [ "pwm_update_raw_cmp_edge_aligned", "group__pwm__interface.html#ga6392dab670e8f4ae9e6476af3c58bacd", null ]
 ];

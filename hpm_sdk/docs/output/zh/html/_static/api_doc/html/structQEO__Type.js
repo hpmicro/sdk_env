@@ -1,13 +1,13 @@
 var structQEO__Type =
 [
-    [ "ABZ", "structQEO__Type.html#aaafef34d10602b9d344a188b55c1d099", null ],
+    [ "ABZ", "structQEO__Type.html#a9ae3edac34085ab5a625a124d7f1219e", null ],
     [ "AMPLITUDE", "structQEO__Type.html#ab67e5502bbedb14ba9a37fb08d2c1bb1", null ],
     [ "DEADZONE_SHIFT", "structQEO__Type.html#a8c4868dda6d16a0456fa7c2315eaf63c", null ],
     [ "DEBUG0", "structQEO__Type.html#a0de6cca4bf7413977ad647a63fd7a154", null ],
     [ "DEBUG1", "structQEO__Type.html#ab36aa3d8201042816e11b61a5fc96e31", null ],
     [ "DEBUG2", "structQEO__Type.html#a654dfa71ee14eeec61cfa553c3a57ccd", null ],
     [ "DEBUG3", "structQEO__Type.html#ad3ca5c9085c1b2ff898ca7929279eafb", null ],
-    [ "LIMIT", "structQEO__Type.html#a613769fec2ffb32e02765017b25c97ab", null ],
+    [ "LIMIT", "structQEO__Type.html#a0c103f3c0700101564299bb5bb76812a", null ],
     [ "LINE_WIDTH", "structQEO__Type.html#ac3f7a681e0ea63a4f0940d1510919340", null ],
     [ "MAX", "structQEO__Type.html#a2c37a3d264b2f2083913e91d25e91920", null ],
     [ "MID_POINT", "structQEO__Type.html#a8780fd8b207187a5fb1cd1e27449ebb7", null ],
@@ -18,11 +18,11 @@ var structQEO__Type =
     [ "POSTION_SEL", "structQEO__Type.html#a74cbd945c971c56d436989df42adf3fe", null ],
     [ "POSTION_SOFTWARE", "structQEO__Type.html#ae069e4e90104a716bff7bddcfadd532b", null ],
     [ "POSTION_SYNC", "structQEO__Type.html#ae703007c07515187a23fa6fc93b24073", null ],
-    [ "PWM", "structQEO__Type.html#a0a5e150300e677daa0afecfac728ddbc", null ],
+    [ "PWM", "structQEO__Type.html#ab63d76acfd0d3bc0adde07c81b49a7a6", null ],
     [ "RESOLUTION", "structQEO__Type.html#a1ce5b412cdf4529c4dec17d5f923bc79", null ],
     [ "STATUS", "structQEO__Type.html#a5ec7165fdb8327d1ac9e8f8a76ba358d", null ],
     [ "VD_VQ_INJECT", "structQEO__Type.html#aa675e7031f38b833e5f311da0657b105", null ],
     [ "VD_VQ_LOAD", "structQEO__Type.html#abefc2091253087fd44f8efeeeda7648b", null ],
-    [ "WAVE", "structQEO__Type.html#ad81ca41bf44f1e3bcd315d4c553e1067", null ],
+    [ "WAVE", "structQEO__Type.html#ac0b24c3feee1839443d3a172a25dd3b4", null ],
     [ "WDOG_WIDTH", "structQEO__Type.html#ab8d779fe2f2323f5015247104933eb85", null ]
 ];

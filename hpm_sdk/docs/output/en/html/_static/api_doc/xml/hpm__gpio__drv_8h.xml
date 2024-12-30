@@ -8,7 +8,6 @@
     <includedby refid="hpm__touch__gt9xx_8c" local="yes">components/touch/gt9xx/hpm_touch_gt9xx.c</includedby>
     <includedby refid="hpm__uart__lin_8h" local="yes">components/uart_lin/hpm_uart_lin.h</includedby>
     <includedby refid="hpm__gpio__drv_8c" local="yes">drivers/src/hpm_gpio_drv.c</includedby>
-    <includedby refid="hpm__sdmmc__host_8h" local="yes">middleware/hpm_sdmmc/lib/hpm_sdmmc_host.h</includedby>
     <incdepgraph>
       <node id="2">
         <label>hpm_common.h</label>
@@ -80,76 +79,10 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
       </node>
       <node id="5">
         <label>drivers/src/hpm_gpio_drv.c</label>
         <link refid="hpm__gpio__drv_8c"/>
-      </node>
-      <node id="8">
-        <label>middleware/hpm_sdmmc/lib/hpm_sdmmc_common.c</label>
-        <link refid="hpm__sdmmc__common_8c"/>
-      </node>
-      <node id="7">
-        <label>middleware/hpm_sdmmc/lib/hpm_sdmmc_common.h</label>
-        <link refid="hpm__sdmmc__common_8h"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>middleware/hpm_sdmmc/lib/hpm_sdmmc_emmc.c</label>
-        <link refid="hpm__sdmmc__emmc_8c"/>
-      </node>
-      <node id="9">
-        <label>middleware/hpm_sdmmc/lib/hpm_sdmmc_emmc.h</label>
-        <link refid="hpm__sdmmc__emmc_8h"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>middleware/hpm_sdmmc/lib/hpm_sdmmc_host.c</label>
-        <link refid="hpm__sdmmc__host_8c"/>
-      </node>
-      <node id="6">
-        <label>middleware/hpm_sdmmc/lib/hpm_sdmmc_host.h</label>
-        <link refid="hpm__sdmmc__host_8h"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>middleware/hpm_sdmmc/lib/hpm_sdmmc_sd.c</label>
-        <link refid="hpm__sdmmc__sd_8c"/>
-      </node>
-      <node id="12">
-        <label>middleware/hpm_sdmmc/lib/hpm_sdmmc_sd.h</label>
-        <link refid="hpm__sdmmc__sd_8h"/>
-        <childnode refid="13" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>middleware/hpm_sdmmc/port/hpm_sdmmc_port.c</label>
-        <link refid="hpm__sdmmc__port_8c"/>
-      </node>
-      <node id="15">
-        <label>middleware/hpm_sdmmc/port/hpm_sdmmc_port.h</label>
-        <link refid="hpm__sdmmc__port_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
       </node>
     </invincdepgraph>
     <sectiondef kind="define">
@@ -265,63 +198,63 @@
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
 <codeline lineno="55" refid="group__gpio__interface_1gab3eab86f611cf6a27f2eedbd5acd19fe" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="group__gpio__interface_1gab3eab86f611cf6a27f2eedbd5acd19fe" kindref="member">gpio_read_pin</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>pin)</highlight></codeline>
 <codeline lineno="56"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(ptr-&gt;<ref refid="structGPIO__Type_1a5cec9e977a5953ad32191ac4f0f8e9f3" kindref="member">DI</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref><sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>pin))<sp/>&gt;&gt;<sp/>pin;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(ptr-&gt;<ref refid="structGPIO__Type_1ac344ff4dfa1afb09dd925178da3a21eb" kindref="member">DI</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref><sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>pin))<sp/>&gt;&gt;<sp/>pin;</highlight></codeline>
 <codeline lineno="58"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
 <codeline lineno="69" refid="group__gpio__interface_1ga40d887a85a9b9723f018f985252af467" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__gpio__interface_1ga40d887a85a9b9723f018f985252af467" kindref="member">gpio_get_pin_output_status</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>pin)</highlight></codeline>
 <codeline lineno="70"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(ptr-&gt;<ref refid="structGPIO__Type_1a743c016854b4031ba1b64e9b88685168" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref><sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>pin))<sp/>&gt;&gt;<sp/>pin;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(ptr-&gt;<ref refid="structGPIO__Type_1aa4f012bd1d6296106b5178ce5ba8b73a" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref><sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>pin))<sp/>&gt;&gt;<sp/>pin;</highlight></codeline>
 <codeline lineno="72"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
 <codeline lineno="81" refid="group__gpio__interface_1ga7b7ae7d787377291837de59fcb6faee2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga7b7ae7d787377291837de59fcb6faee2" kindref="member">gpio_toggle_pin</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>pin)</highlight></codeline>
 <codeline lineno="82"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a743c016854b4031ba1b64e9b88685168" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a780e6b7163dffe82bc1594543e8d1d17" kindref="member">TOGGLE</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1aa4f012bd1d6296106b5178ce5ba8b73a" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a780e6b7163dffe82bc1594543e8d1d17" kindref="member">TOGGLE</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
 <codeline lineno="84"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
 <codeline lineno="94" refid="group__gpio__interface_1gac271dd94419de97de2ca71302c4ba8d1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1gac271dd94419de97de2ca71302c4ba8d1" kindref="member">gpio_write_pin</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>pin,<sp/>uint8_t<sp/>high)</highlight></codeline>
 <codeline lineno="95"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(high)<sp/>{</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a743c016854b4031ba1b64e9b88685168" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a2567a627c8388318f1f2992cfa60fbc1" kindref="member">SET</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1aa4f012bd1d6296106b5178ce5ba8b73a" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a2567a627c8388318f1f2992cfa60fbc1" kindref="member">SET</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a743c016854b4031ba1b64e9b88685168" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a08461f7379d01c2e74b80618392712f3" kindref="member">CLEAR</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1aa4f012bd1d6296106b5178ce5ba8b73a" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a08461f7379d01c2e74b80618392712f3" kindref="member">CLEAR</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="101"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"></highlight></codeline>
 <codeline lineno="110" refid="group__gpio__interface_1ga259476313474ac0ffa504a70320c92fa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga259476313474ac0ffa504a70320c92fa" kindref="member">gpio_set_pin_input</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>pin)</highlight></codeline>
 <codeline lineno="111"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a4f08b7e32f0843bbb8d06b6e6a1a36c3" kindref="member">OE</ref>[port].<ref refid="structGPIO__Type_1a08461f7379d01c2e74b80618392712f3" kindref="member">CLEAR</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a1f849b016116feb2c6a253cd390d8b77" kindref="member">OE</ref>[port].<ref refid="structGPIO__Type_1a08461f7379d01c2e74b80618392712f3" kindref="member">CLEAR</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
 <codeline lineno="113"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"></highlight></codeline>
 <codeline lineno="122" refid="group__gpio__interface_1ga15189c20b55f537ab9de013d9bb0c2f0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga15189c20b55f537ab9de013d9bb0c2f0" kindref="member">gpio_set_pin_output</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>pin)</highlight></codeline>
 <codeline lineno="123"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a4f08b7e32f0843bbb8d06b6e6a1a36c3" kindref="member">OE</ref>[port].<ref refid="structGPIO__Type_1a2567a627c8388318f1f2992cfa60fbc1" kindref="member">SET</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a1f849b016116feb2c6a253cd390d8b77" kindref="member">OE</ref>[port].<ref refid="structGPIO__Type_1a2567a627c8388318f1f2992cfa60fbc1" kindref="member">SET</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
 <codeline lineno="125"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"></highlight></codeline>
 <codeline lineno="135"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga9a166919df03e1bf8aa95b3d63d11e28" kindref="member">gpio_set_pin_output_with_initial</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>pin,<sp/>uint8_t<sp/>initial);</highlight></codeline>
 <codeline lineno="136"><highlight class="normal"></highlight></codeline>
 <codeline lineno="146" refid="group__gpio__interface_1ga7b46a53c3b41c26ba0ab1ec603feb35a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga7b46a53c3b41c26ba0ab1ec603feb35a" kindref="member">gpio_check_pin_interrupt_flag</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>pin)</highlight></codeline>
 <codeline lineno="147"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a52a76514d7b745160427dc3479470091" kindref="member">IF</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref><sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>pin);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structGPIO__Type_1aaef7006feacdaa2538f28caa95920b86" kindref="member">IF</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref><sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>pin);</highlight></codeline>
 <codeline lineno="149"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="150"><highlight class="normal"></highlight></codeline>
 <codeline lineno="158" refid="group__gpio__interface_1gab1bfd3ce0d7ca55d73d79da916f5207e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1gab1bfd3ce0d7ca55d73d79da916f5207e" kindref="member">gpio_clear_pin_interrupt_flag</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>pin)</highlight></codeline>
 <codeline lineno="159"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a52a76514d7b745160427dc3479470091" kindref="member">IF</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1aaef7006feacdaa2538f28caa95920b86" kindref="member">IF</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
 <codeline lineno="161"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="162"><highlight class="normal"></highlight></codeline>
 <codeline lineno="172" refid="group__gpio__interface_1ga4c75c7eae33c20332c5bd33504f95c66" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga4c75c7eae33c20332c5bd33504f95c66" kindref="member">gpio_check_pin_interrupt_enabled</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>pin)</highlight></codeline>
 <codeline lineno="173"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(ptr-&gt;<ref refid="structGPIO__Type_1a4d7d121d244bfb915e148209fc8a1556" kindref="member">IE</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref><sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>pin))<sp/>==<sp/>(uint32_t)<sp/>(1<sp/>&lt;&lt;<sp/>pin);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(ptr-&gt;<ref refid="structGPIO__Type_1acd0f0d7f9f28d2af5a2c081fd1f4c6f7" kindref="member">IE</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref><sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>pin))<sp/>==<sp/>(uint32_t)<sp/>(1<sp/>&lt;&lt;<sp/>pin);</highlight></codeline>
 <codeline lineno="175"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="176"><highlight class="normal"></highlight></codeline>
 <codeline lineno="184" refid="group__gpio__interface_1gad7d872375fd34e61b989f45c4d4f6acd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1gad7d872375fd34e61b989f45c4d4f6acd" kindref="member">gpio_enable_pin_interrupt</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>pin)</highlight></codeline>
 <codeline lineno="185"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a4d7d121d244bfb915e148209fc8a1556" kindref="member">IE</ref>[port].<ref refid="structGPIO__Type_1a2567a627c8388318f1f2992cfa60fbc1" kindref="member">SET</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1acd0f0d7f9f28d2af5a2c081fd1f4c6f7" kindref="member">IE</ref>[port].<ref refid="structGPIO__Type_1a2567a627c8388318f1f2992cfa60fbc1" kindref="member">SET</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
 <codeline lineno="187"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="188"><highlight class="normal"></highlight></codeline>
 <codeline lineno="196" refid="group__gpio__interface_1ga4cad69d16584e4f71978c1a8b56f44e8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga4cad69d16584e4f71978c1a8b56f44e8" kindref="member">gpio_disable_pin_interrupt</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>pin)</highlight></codeline>
 <codeline lineno="197"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a4d7d121d244bfb915e148209fc8a1556" kindref="member">IE</ref>[port].<ref refid="structGPIO__Type_1a08461f7379d01c2e74b80618392712f3" kindref="member">CLEAR</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1acd0f0d7f9f28d2af5a2c081fd1f4c6f7" kindref="member">IE</ref>[port].<ref refid="structGPIO__Type_1a08461f7379d01c2e74b80618392712f3" kindref="member">CLEAR</ref><sp/>=<sp/>1<sp/>&lt;&lt;<sp/>pin;</highlight></codeline>
 <codeline lineno="199"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="200"><highlight class="normal"></highlight></codeline>
 <codeline lineno="211" refid="group__gpio__interface_1ga8789029751858d5ef69d8586dea81ca8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga8789029751858d5ef69d8586dea81ca8" kindref="member">gpio_check_clear_interrupt_flag</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>pin)</highlight></codeline>
@@ -336,58 +269,58 @@
 <codeline lineno="220"><highlight class="normal"></highlight></codeline>
 <codeline lineno="229" refid="group__gpio__interface_1gaeab55fd6ebb722ae6991cb44a0930825" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__gpio__interface_1gaeab55fd6ebb722ae6991cb44a0930825" kindref="member">gpio_read_port</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port)</highlight></codeline>
 <codeline lineno="230"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a5cec9e977a5953ad32191ac4f0f8e9f3" kindref="member">DI</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref>;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structGPIO__Type_1ac344ff4dfa1afb09dd925178da3a21eb" kindref="member">DI</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref>;</highlight></codeline>
 <codeline lineno="232"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="233"><highlight class="normal"></highlight></codeline>
 <codeline lineno="241" refid="group__gpio__interface_1ga718acee6ef5db95ecfd18b017be53d4d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga718acee6ef5db95ecfd18b017be53d4d" kindref="member">gpio_toggle_port_with_mask</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint32_t<sp/>mask)</highlight></codeline>
 <codeline lineno="242"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a743c016854b4031ba1b64e9b88685168" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a780e6b7163dffe82bc1594543e8d1d17" kindref="member">TOGGLE</ref><sp/>=<sp/>mask;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1aa4f012bd1d6296106b5178ce5ba8b73a" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a780e6b7163dffe82bc1594543e8d1d17" kindref="member">TOGGLE</ref><sp/>=<sp/>mask;</highlight></codeline>
 <codeline lineno="244"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="245"><highlight class="normal"></highlight></codeline>
 <codeline lineno="253" refid="group__gpio__interface_1ga7173a1a773fdeda69f96a7bbe84f3413" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga7173a1a773fdeda69f96a7bbe84f3413" kindref="member">gpio_write_port</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint32_t<sp/>value)</highlight></codeline>
 <codeline lineno="254"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a743c016854b4031ba1b64e9b88685168" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1aa4f012bd1d6296106b5178ce5ba8b73a" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref><sp/>=<sp/>value;</highlight></codeline>
 <codeline lineno="256"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="257"><highlight class="normal"></highlight></codeline>
 <codeline lineno="265" refid="group__gpio__interface_1ga1dbd0e8cb3c3888823605cbe74f260f8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga1dbd0e8cb3c3888823605cbe74f260f8" kindref="member">gpio_set_port_low_with_mask</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint32_t<sp/>mask)</highlight></codeline>
 <codeline lineno="266"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a743c016854b4031ba1b64e9b88685168" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a08461f7379d01c2e74b80618392712f3" kindref="member">CLEAR</ref><sp/>=<sp/>mask;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1aa4f012bd1d6296106b5178ce5ba8b73a" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a08461f7379d01c2e74b80618392712f3" kindref="member">CLEAR</ref><sp/>=<sp/>mask;</highlight></codeline>
 <codeline lineno="268"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="269"><highlight class="normal"></highlight></codeline>
 <codeline lineno="277" refid="group__gpio__interface_1ga8740a25605d8d23d49ddbd995104ffbe" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga8740a25605d8d23d49ddbd995104ffbe" kindref="member">gpio_set_port_high_with_mask</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint32_t<sp/>mask)</highlight></codeline>
 <codeline lineno="278"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a743c016854b4031ba1b64e9b88685168" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a2567a627c8388318f1f2992cfa60fbc1" kindref="member">SET</ref><sp/>=<sp/>mask;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1aa4f012bd1d6296106b5178ce5ba8b73a" kindref="member">DO</ref>[port].<ref refid="structGPIO__Type_1a2567a627c8388318f1f2992cfa60fbc1" kindref="member">SET</ref><sp/>=<sp/>mask;</highlight></codeline>
 <codeline lineno="280"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="281"><highlight class="normal"></highlight></codeline>
 <codeline lineno="289" refid="group__gpio__interface_1ga2f04729a2e192f161d2b2f138b7b25e3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga2f04729a2e192f161d2b2f138b7b25e3" kindref="member">gpio_enable_port_output_with_mask</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint32_t<sp/>mask)</highlight></codeline>
 <codeline lineno="290"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a4f08b7e32f0843bbb8d06b6e6a1a36c3" kindref="member">OE</ref>[port].<ref refid="structGPIO__Type_1a2567a627c8388318f1f2992cfa60fbc1" kindref="member">SET</ref><sp/>=<sp/>mask;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a1f849b016116feb2c6a253cd390d8b77" kindref="member">OE</ref>[port].<ref refid="structGPIO__Type_1a2567a627c8388318f1f2992cfa60fbc1" kindref="member">SET</ref><sp/>=<sp/>mask;</highlight></codeline>
 <codeline lineno="292"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="293"><highlight class="normal"></highlight></codeline>
 <codeline lineno="301" refid="group__gpio__interface_1ga04704cce5da40c201f2f40a1b638ea61" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga04704cce5da40c201f2f40a1b638ea61" kindref="member">gpio_disable_port_output_with_mask</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint32_t<sp/>mask)</highlight></codeline>
 <codeline lineno="302"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a4f08b7e32f0843bbb8d06b6e6a1a36c3" kindref="member">OE</ref>[port].<ref refid="structGPIO__Type_1a08461f7379d01c2e74b80618392712f3" kindref="member">CLEAR</ref><sp/>=<sp/>mask;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a1f849b016116feb2c6a253cd390d8b77" kindref="member">OE</ref>[port].<ref refid="structGPIO__Type_1a08461f7379d01c2e74b80618392712f3" kindref="member">CLEAR</ref><sp/>=<sp/>mask;</highlight></codeline>
 <codeline lineno="304"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="305"><highlight class="normal"></highlight></codeline>
 <codeline lineno="314" refid="group__gpio__interface_1ga88bfa1a7e4f8ddc297ea3ac3ca0bda8e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__gpio__interface_1ga88bfa1a7e4f8ddc297ea3ac3ca0bda8e" kindref="member">gpio_get_port_interrupt_flags</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port)</highlight></codeline>
 <codeline lineno="315"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a52a76514d7b745160427dc3479470091" kindref="member">IF</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref>;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;<ref refid="structGPIO__Type_1aaef7006feacdaa2538f28caa95920b86" kindref="member">IF</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref>;</highlight></codeline>
 <codeline lineno="317"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="318"><highlight class="normal"></highlight></codeline>
 <codeline lineno="319"><highlight class="normal"></highlight></codeline>
 <codeline lineno="327" refid="group__gpio__interface_1ga7f026a6f6561e2740473364aa4f15d92" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1ga7f026a6f6561e2740473364aa4f15d92" kindref="member">gpio_clear_port_interrupt_flags_with_mask</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint32_t<sp/>mask)</highlight></codeline>
 <codeline lineno="328"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a52a76514d7b745160427dc3479470091" kindref="member">IF</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref><sp/>|=<sp/>mask;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1aaef7006feacdaa2538f28caa95920b86" kindref="member">IF</ref>[port].<ref refid="structGPIO__Type_1a5deabd76ef36e708323232bd7409ce2f" kindref="member">VALUE</ref><sp/>|=<sp/>mask;</highlight></codeline>
 <codeline lineno="330"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="331"><highlight class="normal"></highlight></codeline>
 <codeline lineno="339" refid="group__gpio__interface_1gab118a289275cd260dd12eaa305b76d69" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1gab118a289275cd260dd12eaa305b76d69" kindref="member">gpio_enable_port_interrupt_with_mask</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>mask)</highlight></codeline>
 <codeline lineno="340"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a4d7d121d244bfb915e148209fc8a1556" kindref="member">IE</ref>[port].<ref refid="structGPIO__Type_1a2567a627c8388318f1f2992cfa60fbc1" kindref="member">SET</ref><sp/>=<sp/>mask;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1acd0f0d7f9f28d2af5a2c081fd1f4c6f7" kindref="member">IE</ref>[port].<ref refid="structGPIO__Type_1a2567a627c8388318f1f2992cfa60fbc1" kindref="member">SET</ref><sp/>=<sp/>mask;</highlight></codeline>
 <codeline lineno="342"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="343"><highlight class="normal"></highlight></codeline>
 <codeline lineno="351" refid="group__gpio__interface_1gacb2ec608123be63485bfdc0d70a9be45" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__gpio__interface_1gacb2ec608123be63485bfdc0d70a9be45" kindref="member">gpio_disable_port_interrupt_with_mask</ref>(<ref refid="structGPIO__Type" kindref="compound">GPIO_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>port,<sp/>uint8_t<sp/>mask)</highlight></codeline>
 <codeline lineno="352"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1a4d7d121d244bfb915e148209fc8a1556" kindref="member">IE</ref>[port].<ref refid="structGPIO__Type_1a08461f7379d01c2e74b80618392712f3" kindref="member">CLEAR</ref><sp/>=<sp/>mask;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structGPIO__Type_1acd0f0d7f9f28d2af5a2c081fd1f4c6f7" kindref="member">IE</ref>[port].<ref refid="structGPIO__Type_1a08461f7379d01c2e74b80618392712f3" kindref="member">CLEAR</ref><sp/>=<sp/>mask;</highlight></codeline>
 <codeline lineno="354"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="355"><highlight class="normal"></highlight></codeline>
 <codeline lineno="356"><highlight class="normal"></highlight></codeline>

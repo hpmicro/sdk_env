@@ -41,6 +41,7 @@ var HPM6800_2HPM6880_2hpm__soc__feature_8h =
     [ "EWDG_SOC_CLK_DIV_VAL_MAX", "HPM6800_2HPM6880_2hpm__soc__feature_8h.html#a856f9d15b38a9810122fbb7cfdb694bb", null ],
     [ "EWDG_SOC_OVERTIME_REG_WIDTH", "HPM6800_2HPM6880_2hpm__soc__feature_8h.html#ad1512d7f9102db1a50264083b96b43dd", null ],
     [ "EWDG_SOC_SUPPORT_TIMEOUT_INTERRUPT", "HPM6800_2HPM6880_2hpm__soc__feature_8h.html#a65dad671dac2ff1858ce2a8a083ea186", null ],
+    [ "FFA_SOC_BUFFER_MAX", "HPM6800_2HPM6880_2hpm__soc__feature_8h.html#a5cf08047525c51417659ed25ebe0c5f6", null ],
     [ "I2C_SOC_FIFO_SIZE", "HPM6800_2HPM6880_2hpm__soc__feature_8h.html#af82c6b5c74057101d500a183df93f30d", null ],
     [ "I2C_SOC_TRANSFER_COUNT_MAX", "HPM6800_2HPM6880_2hpm__soc__feature_8h.html#a214369ce4fafa9caa85c2bf60449caf6", null ],
     [ "I2S_SOC_MAX_CHANNEL_NUM", "HPM6800_2HPM6880_2hpm__soc__feature_8h.html#a92f267f2b6c7808587a297c14585603b", null ],

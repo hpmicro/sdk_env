@@ -16,6 +16,7 @@ var hpm__over__zero_8h =
       [ "hpm_mcl_over_zero_fsm_running", "hpm__over__zero_8h.html#a4d35bf4ca8953bbe20c0be897b266fe0ad71051c27f9d5e9aa570587fd3a58229", null ]
     ] ],
     [ "hpm_mcl_over_zero_interval_t", "hpm__over__zero_8h.html#ad4974fcb3351c786ed0800e1daf9ce4c", [
+      [ "hpm_mcl_interval_init", "hpm__over__zero_8h.html#ad4974fcb3351c786ed0800e1daf9ce4ca88411f6e63d205b78f44540c57c601a9", null ],
       [ "hpm_mcl_interval_w_down", "hpm__over__zero_8h.html#ad4974fcb3351c786ed0800e1daf9ce4ca108f16b45eba5128f93fcdf8905de7ae", null ],
       [ "hpm_mcl_interval_v_up", "hpm__over__zero_8h.html#ad4974fcb3351c786ed0800e1daf9ce4ca958a3290a3598c24cdc0ef285ce69780", null ],
       [ "hpm_mcl_interval_u_down", "hpm__over__zero_8h.html#ad4974fcb3351c786ed0800e1daf9ce4ca6bc53cdd677665f9dc5a13176660306c", null ],

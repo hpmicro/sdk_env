@@ -1,13 +1,5 @@
 var NAVTREEINDEX259 =
 {
-"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#affddf054b9273c922df3f5d2cfb6e05a":[4,0,5,2,2,2,270],
-"HPM6300_2HPM6340_2hpm__csr__regs_8h_source.html":[4,0,5,2,2,2],
-"HPM6300_2HPM6340_2hpm__dmamux__src_8h.html":[4,0,5,2,2,3],
-"HPM6300_2HPM6340_2hpm__dmamux__src_8h.html#a03f4e059cd1d84be665656b11d474202":[4,0,5,2,2,3,63],
-"HPM6300_2HPM6340_2hpm__dmamux__src_8h.html#a04a7a90c4149919841c1fc7c9c164ffd":[4,0,5,2,2,3,41],
-"HPM6300_2HPM6340_2hpm__dmamux__src_8h.html#a04efb1117280974b41b7663545c3e994":[4,0,5,2,2,3,7],
-"HPM6300_2HPM6340_2hpm__dmamux__src_8h.html#a0a208d982601d89574fd5b028f7038e7":[4,0,5,2,2,3,32],
-"HPM6300_2HPM6340_2hpm__dmamux__src_8h.html#a0d1179d0ce4968ed250ffc3be4ec36ee":[4,0,5,2,2,3,31],
 "HPM6300_2HPM6340_2hpm__dmamux__src_8h.html#a1c18217286f4c26900ba698275a02af7":[4,0,5,2,2,3,64],
 "HPM6300_2HPM6340_2hpm__dmamux__src_8h.html#a1d1b1dade3dbe66cfffdec41a0c9c07a":[4,0,5,2,2,3,47],
 "HPM6300_2HPM6340_2hpm__dmamux__src_8h.html#a212f7a312b767cb0f9991eb891708b9d":[4,0,5,2,2,3,60],
@@ -249,5 +241,13 @@ var NAVTREEINDEX259 =
 "HPM6300_2HPM6340_2hpm__iomux_8h.html#a4279b927c894af6234ee1e23e8e964df":[4,0,5,2,2,4,103],
 "HPM6300_2HPM6340_2hpm__iomux_8h.html#a42f748091ac3d18c4c638842aa44d65b":[4,0,5,2,2,4,132],
 "HPM6300_2HPM6340_2hpm__iomux_8h.html#a43d0c2c5e228f744362de617300156a2":[4,0,5,2,2,4,170],
-"HPM6300_2HPM6340_2hpm__iomux_8h.html#a43d919e3b71ae175e19f9695e750227f":[4,0,5,2,2,4,337]
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a43d919e3b71ae175e19f9695e750227f":[4,0,5,2,2,4,337],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a43ddbf4df47a2940addd95d2bb0472b5":[4,0,5,2,2,4,302],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a441afd4d798ae356b86acd46ccec36ae":[4,0,5,2,2,4,635],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a443e7d7ec4d91cf7a6718f91a5c4fa42":[4,0,5,2,2,4,464],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a444f438f3bccde9ef8428750cf1462b8":[4,0,5,2,2,4,11],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a446a6f26f4d89960ad6c6ee7b9a1fa5a":[4,0,5,2,2,4,493],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a448f9e801fce4699f27046032047ca9d":[4,0,5,2,2,4,642],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a449cb726cb810747585cdeb294903673":[4,0,5,2,2,4,202],
+"HPM6300_2HPM6340_2hpm__iomux_8h.html#a464f789612962eb64f93370c14bed35d":[4,0,5,2,2,4,281]
 };

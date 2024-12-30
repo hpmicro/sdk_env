@@ -18,9 +18,13 @@ var searchData=
   ['filter_5flen_5f64_5fcycles_15',['filter_len_64_cycles',['../group__tamper__interface.html#gga5cae09a02974372220e854cd1db05ec9adf2b34a40ec227f03170bcbca6843435',1,'hpm_tamp_drv.h']]],
   ['filter_5flen_5f8192_5fcycles_16',['filter_len_8192_cycles',['../group__tamper__interface.html#gga5cae09a02974372220e854cd1db05ec9a118459eff6dfb5e9828b000facac57ff',1,'hpm_tamp_drv.h']]],
   ['filter_5flen_5f8_5fcycles_17',['filter_len_8_cycles',['../group__tamper__interface.html#gga5cae09a02974372220e854cd1db05ec9a9ba8c3655c015a0995c9b8f99a2d2160',1,'hpm_tamp_drv.h']]],
-  ['flash_5faddrlen_5f24bit_18',['flash_addrlen_24bit',['../hpm__serial__nor__host_8h.html#a4ccd3031b99c9438b6ab1a6d384e1419aa89f33867d5483eb93142887a84cbdb9',1,'hpm_serial_nor_host.h']]],
-  ['flash_5faddrlen_5f32bit_19',['flash_addrlen_32bit',['../hpm__serial__nor__host_8h.html#a4ccd3031b99c9438b6ab1a6d384e1419a8ba0cdc93e9646fa745df8bd4ded5a91',1,'hpm_serial_nor_host.h']]],
-  ['flash_5fsize_5f16mb_20',['flash_size_16mb',['../group__xpi__nor__interface.html#gga16db4876b192da08f3ad0cb41afe516faa0ef5e5a7ff15ae55ad4cf636699126f',1,'hpm_romapi_xpi_nor_def.h']]],
-  ['flash_5fsize_5f4mb_21',['flash_size_4mb',['../group__xpi__nor__interface.html#gga16db4876b192da08f3ad0cb41afe516fa9b722c358f01c8a59f7b8bb6ce4d354b',1,'hpm_romapi_xpi_nor_def.h']]],
-  ['flash_5fsize_5f8mb_22',['flash_size_8mb',['../group__xpi__nor__interface.html#gga16db4876b192da08f3ad0cb41afe516fa522c5b2182da1e544d5466275d549321',1,'hpm_romapi_xpi_nor_def.h']]]
+  ['filter_5fmode_5fdelay_18',['filter_mode_delay',['../hpm__filter_8h.html#a7f48c77dcfd08a02f0499a0c7ec663e4ac0b3a940f5bac2617cd708cd43367ae7',1,'hpm_filter.h']]],
+  ['filter_5fmode_5frapid_5fchange_19',['filter_mode_rapid_change',['../hpm__filter_8h.html#a7f48c77dcfd08a02f0499a0c7ec663e4acfa54203927d62363302ef9c197ebae6',1,'hpm_filter.h']]],
+  ['filter_5fmode_5fstable_5fhigh_20',['filter_mode_stable_high',['../hpm__filter_8h.html#a7f48c77dcfd08a02f0499a0c7ec663e4aa52cf93ee5e427ad5cdd9a7680670a45',1,'hpm_filter.h']]],
+  ['filter_5fmode_5fstable_5flow_21',['filter_mode_stable_low',['../hpm__filter_8h.html#a7f48c77dcfd08a02f0499a0c7ec663e4a5cee7eb9883c35658dcb18dec40c59e1',1,'hpm_filter.h']]],
+  ['flash_5faddrlen_5f24bit_22',['flash_addrlen_24bit',['../hpm__serial__nor__host_8h.html#a4ccd3031b99c9438b6ab1a6d384e1419aa89f33867d5483eb93142887a84cbdb9',1,'hpm_serial_nor_host.h']]],
+  ['flash_5faddrlen_5f32bit_23',['flash_addrlen_32bit',['../hpm__serial__nor__host_8h.html#a4ccd3031b99c9438b6ab1a6d384e1419a8ba0cdc93e9646fa745df8bd4ded5a91',1,'hpm_serial_nor_host.h']]],
+  ['flash_5fsize_5f16mb_24',['flash_size_16mb',['../group__xpi__nor__interface.html#gga319d524aadad53dcd886c2bba304ded4aa0ef5e5a7ff15ae55ad4cf636699126f',1,'hpm_romapi_xpi_nor_def.h']]],
+  ['flash_5fsize_5f4mb_25',['flash_size_4mb',['../group__xpi__nor__interface.html#gga319d524aadad53dcd886c2bba304ded4a9b722c358f01c8a59f7b8bb6ce4d354b',1,'hpm_romapi_xpi_nor_def.h']]],
+  ['flash_5fsize_5f8mb_26',['flash_size_8mb',['../group__xpi__nor__interface.html#gga319d524aadad53dcd886c2bba304ded4a522c5b2182da1e544d5466275d549321',1,'hpm_romapi_xpi_nor_def.h']]]
 ];

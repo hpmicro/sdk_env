@@ -6,8 +6,8 @@ var structPLB__Type =
     [ "MODE", "structPLB__Type.html#acdb8d5451ae260ab3b3d9ac188ff2bc1", null ],
     [ "RESERVED0", "structPLB__Type.html#a9bfc153235c7bc8efb9a814e8af2b1e1", null ],
     [ "SW_INJECT", "structPLB__Type.html#a6c5f8f2c5bba003452caa5a65e2dcd88", null ],
-    [ "TYPE_A", "structPLB__Type.html#ad072cf193681398af759058a5a41d2aa", null ],
-    [ "TYPE_A", "structPLB__Type.html#a17ddea4e4fa2b0206542ddb5553d4ad4", null ],
-    [ "TYPE_B", "structPLB__Type.html#ae9d26db801b7641e1e4c5909ad356fe7", null ],
-    [ "TYPE_B", "structPLB__Type.html#af3eb67705ec7eef29a0f0894b9adc7ae", null ]
+    [ "TYPE_A", "structPLB__Type.html#a9601d8b00b7c59b1e77251a011a80e50", null ],
+    [ "TYPE_A", "structPLB__Type.html#a84fa2bdf6cf3ede3e95d12330456d616", null ],
+    [ "TYPE_B", "structPLB__Type.html#a2c81790f8e7eae61e8add1990e3a411d", null ],
+    [ "TYPE_B", "structPLB__Type.html#a398a6031a892328ef179fb9ac662e45d", null ]
 ];

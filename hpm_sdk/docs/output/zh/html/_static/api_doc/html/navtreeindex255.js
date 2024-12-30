@@ -1,13 +1,5 @@
 var NAVTREEINDEX255 =
 {
-"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#a8e27337cc82e0b08475a4229d85dee77":[4,0,5,2,2,2,1238],
-"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#a8e28589d6b82d5fe600f476b30fc204f":[4,0,5,2,2,2,1412],
-"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#a8e459c05241ec95f8819e32ca0d0d3ee":[4,0,5,2,2,2,13],
-"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#a8e6807152ad4cb5a13c9df6f1af32509":[4,0,5,2,2,2,582],
-"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#a8e6ba09a70703450b5c841203e4f8eaf":[4,0,5,2,2,2,70],
-"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#a8ea96ec34ebd6454ff18036acd51d5ef":[4,0,5,2,2,2,900],
-"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#a8ed1a1d8c14cd614cdfeedf05d1aa584":[4,0,5,2,2,2,2078],
-"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#a8ede2383c0f2fb222de7fa4ee5d4dd92":[4,0,5,2,2,2,1608],
 "HPM6300_2HPM6340_2hpm__csr__regs_8h.html#a8ee4fae8a3dc4d5239efbbbe4996828a":[4,0,5,2,2,2,561],
 "HPM6300_2HPM6340_2hpm__csr__regs_8h.html#a8eeef444ffa8aff6eb4c37bab8896fc6":[4,0,5,2,2,2,787],
 "HPM6300_2HPM6340_2hpm__csr__regs_8h.html#a8ef3cc72b5d456f4033cf6b377d3d4d2":[4,0,5,2,2,2,1464],
@@ -249,5 +241,13 @@ var NAVTREEINDEX255 =
 "HPM6300_2HPM6340_2hpm__csr__regs_8h.html#aa9df1c8fc5c6df796972618f9bdec63c":[4,0,5,2,2,2,1539],
 "HPM6300_2HPM6340_2hpm__csr__regs_8h.html#aa9e34070fffba9244ff1c2899a3361d5":[4,0,5,2,2,2,1073],
 "HPM6300_2HPM6340_2hpm__csr__regs_8h.html#aa9ff7ae2c57e2e47a5eca0de20fa1bf5":[4,0,5,2,2,2,541],
-"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#aaa1f309d3dc641ce2bb3d5cad35d54b4":[4,0,5,2,2,2,547]
+"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#aaa1f309d3dc641ce2bb3d5cad35d54b4":[4,0,5,2,2,2,547],
+"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#aaa24b5016a0164f0af9b2908dd1140a9":[4,0,5,2,2,2,1885],
+"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#aaa346594cd18c53f5ff46c5910ef98aa":[4,0,5,2,2,2,926],
+"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#aaa4c3c3047c4bd4ae161b3044033c369":[4,0,5,2,2,2,1768],
+"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#aaa5cb8ef547f998b20b99e5a28a3474d":[4,0,5,2,2,2,904],
+"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#aaa62902f21282250fd975372f9e5e24e":[4,0,5,2,2,2,1029],
+"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#aaa69874e6a98ad1c83d93ac472d10ce3":[4,0,5,2,2,2,1842],
+"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#aaaed245e08e04818c2ced3266efdee79":[4,0,5,2,2,2,1961],
+"HPM6300_2HPM6340_2hpm__csr__regs_8h.html#aab08b2ca1e8785af5657159db0bec266":[4,0,5,2,2,2,1085]
 };

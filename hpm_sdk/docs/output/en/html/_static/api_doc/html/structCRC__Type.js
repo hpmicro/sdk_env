@@ -1,9 +1,9 @@
 var structCRC__Type =
 [
-    [ "CHN", "structCRC__Type.html#a4a6b4b1a6f2acd2de842b0aa6f9909f7", null ],
-    [ "CHN", "structCRC__Type.html#aed911b40558b2f42c99b64629b387334", null ],
-    [ "CHN", "structCRC__Type.html#a97a8227b66c8bd0c73e8373a6f0a46f7", null ],
-    [ "CHN", "structCRC__Type.html#a726294a6beadec01a2c76a96f7db3f17", null ],
+    [ "CHN", "structCRC__Type.html#ad92da3a50b19dd740811ad51e1b77bda", null ],
+    [ "CHN", "structCRC__Type.html#a28d40229ea584fe2a19a836951ffeb65", null ],
+    [ "CHN", "structCRC__Type.html#a5136bbfd73f7f4b2936aa7fb9deb5491", null ],
+    [ "CHN", "structCRC__Type.html#a452c99372b7893c7a531c3c33f086a79", null ],
     [ "CLR", "structCRC__Type.html#a304f4fb9391447a9ecd299ee990a482b", null ],
     [ "DATA", "structCRC__Type.html#af0308a53985f750508a809a7ba787077", null ],
     [ "INIT_DATA", "structCRC__Type.html#a4ef9aa6e825339864283d9900ef5eb45", null ],

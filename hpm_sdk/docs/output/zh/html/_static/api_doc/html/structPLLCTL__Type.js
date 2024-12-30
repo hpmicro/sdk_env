@@ -7,7 +7,7 @@ var structPLLCTL__Type =
     [ "DIV1", "structPLLCTL__Type.html#ac31e7d887c0f815c47047a5e01e0304a", null ],
     [ "FREQ", "structPLLCTL__Type.html#aeaeb12f7d67a7e9327cd47a7f25e43d8", null ],
     [ "LOCK", "structPLLCTL__Type.html#abb22b2e12ffd973ee342a3c9938c5a71", null ],
-    [ "PLL", "structPLLCTL__Type.html#a7d0ee99f4b85efaac13e8ef1f1d2ceac", null ],
+    [ "PLL", "structPLLCTL__Type.html#a4537f5c68b8dc39507fba15787c56416", null ],
     [ "RESERVED0", "structPLLCTL__Type.html#a8816f51bb65af870efbcfacd522fdcbb", null ],
     [ "RESERVED1", "structPLLCTL__Type.html#af2bd5cb322f9abc15611563d470b4b47", null ],
     [ "RESERVED2", "structPLLCTL__Type.html#a9522ac8486b9b0e4a7aba7c02c1f0612", null ],

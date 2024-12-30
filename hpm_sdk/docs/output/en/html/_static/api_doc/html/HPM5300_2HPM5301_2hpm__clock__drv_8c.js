@@ -24,6 +24,8 @@ var HPM5300_2HPM5301_2hpm__clock__drv_8c =
     [ "clock_disable", "group__clock__interface.html#gab8fb2f71d80bba64c799587c32032691", null ],
     [ "clock_disconnect_group_from_cpu", "group__clock__interface.html#gae98965cdcc5393ab3e023bc5f14c6108", null ],
     [ "clock_enable", "group__clock__interface.html#ga71218306d90cd4695fe9468c1321c27e", null ],
+    [ "clock_get_core_clock_ticks_per_ms", "group__clock__interface.html#ga238c57299b46818402c4bbcc12fec11e", null ],
+    [ "clock_get_core_clock_ticks_per_us", "group__clock__interface.html#gab66c8cf6ac649dc572308c55a7467424", null ],
     [ "clock_get_divider", "group__clock__interface.html#gab3236e62816f4029c62bd037c148b9fa", null ],
     [ "clock_get_frequency", "group__clock__interface.html#ga0b6cfe27aaccef750309ac03a4285189", null ],
     [ "clock_get_source", "group__clock__interface.html#gaa3eb7b84fef0608f1e4fd4a72cfb8814", null ],

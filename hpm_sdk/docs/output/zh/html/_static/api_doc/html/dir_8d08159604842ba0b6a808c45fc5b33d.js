@@ -9,5 +9,6 @@ var dir_8d08159604842ba0b6a808c45fc5b33d =
     [ "hpm_pmic_iomux.h", "HPM6300_2HPM6350_2hpm__pmic__iomux_8h.html", "HPM6300_2HPM6350_2hpm__pmic__iomux_8h" ],
     [ "hpm_soc.h", "HPM6300_2HPM6350_2hpm__soc_8h.html", "HPM6300_2HPM6350_2hpm__soc_8h" ],
     [ "hpm_soc_ip_feature.h", "HPM6300_2HPM6350_2hpm__soc__ip__feature_8h.html", "HPM6300_2HPM6350_2hpm__soc__ip__feature_8h" ],
+    [ "hpm_soc_irq.h", "HPM6300_2HPM6350_2hpm__soc__irq_8h.html", "HPM6300_2HPM6350_2hpm__soc__irq_8h" ],
     [ "hpm_trgmmux_src.h", "HPM6300_2HPM6350_2hpm__trgmmux__src_8h.html", "HPM6300_2HPM6350_2hpm__trgmmux__src_8h" ]
 ];
