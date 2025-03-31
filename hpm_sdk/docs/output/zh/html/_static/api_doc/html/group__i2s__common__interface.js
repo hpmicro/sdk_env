@@ -9,13 +9,13 @@ var group__i2s__common__interface =
     [ "I2S_PROTOCOL_MSB_JUSTIFIED", "group__i2s__common__interface.html#ga591acf7217def0c129dd61b8582ecd56", null ],
     [ "I2S_PROTOCOL_PCM", "group__i2s__common__interface.html#ga86d7996f9c01e74c88f6b37ce16029f7", null ],
     [ "I2S_PROTOCOL_RIGHT_JUSTIFIED", "group__i2s__common__interface.html#ga1ff2874bec118b14d8f5956f0a0ac91c", [
-      [ "i2s_audio_depth_16_bits", "group__i2s__common__interface.html#ggaa618c4d8c29ef4efe6f10c741fb1f47aa91f0ad2a34d60c2c5b16b8e66fae4269", null ],
-      [ "i2s_audio_depth_24_bits", "group__i2s__common__interface.html#ggaa618c4d8c29ef4efe6f10c741fb1f47aa678143f0b7800ea32f048253aaba7f15", null ],
-      [ "i2s_audio_depth_32_bits", "group__i2s__common__interface.html#ggaa618c4d8c29ef4efe6f10c741fb1f47aa6761aacf611e251321e8df4458454602", null ],
-      [ "i2s_channel_length_16_bits", "group__i2s__common__interface.html#ggad63240694c6dc2a28c24bfc2db90ad7aae44fd5aeb910b7d5e9eea083a1560d43", null ],
-      [ "i2s_channel_length_32_bits", "group__i2s__common__interface.html#ggad63240694c6dc2a28c24bfc2db90ad7aa6efba209e07977686fcf25e1c5457e6c", null ],
-      [ "i2s_mono_left", "group__i2s__common__interface.html#gga7859c0a3efa8b1c360f5c2376baf051ea8cf666ec23f3a140febd49c1597b37dc", null ],
-      [ "i2s_mono_right", "group__i2s__common__interface.html#gga7859c0a3efa8b1c360f5c2376baf051ea756a9255c61782829eb14a646c56b3af", null ],
-      [ "i2s_stereo", "group__i2s__common__interface.html#gga7859c0a3efa8b1c360f5c2376baf051ea187a344007b04c3c449fe0575786b4d1", null ]
+      [ "i2s_audio_depth_16_bits", "group__i2s__common__interface.html#ggab6e24b6113474c727d794fdd29adf712a91f0ad2a34d60c2c5b16b8e66fae4269", null ],
+      [ "i2s_audio_depth_24_bits", "group__i2s__common__interface.html#ggab6e24b6113474c727d794fdd29adf712a678143f0b7800ea32f048253aaba7f15", null ],
+      [ "i2s_audio_depth_32_bits", "group__i2s__common__interface.html#ggab6e24b6113474c727d794fdd29adf712a6761aacf611e251321e8df4458454602", null ],
+      [ "i2s_channel_length_16_bits", "group__i2s__common__interface.html#ggaf76d0cdf6b777465397803f09c77be10ae44fd5aeb910b7d5e9eea083a1560d43", null ],
+      [ "i2s_channel_length_32_bits", "group__i2s__common__interface.html#ggaf76d0cdf6b777465397803f09c77be10a6efba209e07977686fcf25e1c5457e6c", null ],
+      [ "i2s_mono_left", "group__i2s__common__interface.html#gga3102bd112628db8f2402a8dab7855b4ea8cf666ec23f3a140febd49c1597b37dc", null ],
+      [ "i2s_mono_right", "group__i2s__common__interface.html#gga3102bd112628db8f2402a8dab7855b4ea756a9255c61782829eb14a646c56b3af", null ],
+      [ "i2s_stereo", "group__i2s__common__interface.html#gga3102bd112628db8f2402a8dab7855b4ea187a344007b04c3c449fe0575786b4d1", null ]
     ] ]
 ];

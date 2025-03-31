@@ -1,6 +1,5 @@
 var HPM5300_2HPM5361_2hpm__romapi__xpi__soc__def_8h =
 [
-    [ "xpi_ahb_buffer_cfg_t", "structxpi__ahb__buffer__cfg__t.html", "structxpi__ahb__buffer__cfg__t" ],
     [ "xpi_io_config_t", "structxpi__io__config__t.html", "structxpi__io__config__t" ],
     [ "xpi_clk_config_t", "unionxpi__clk__config__t.html", "unionxpi__clk__config__t" ],
     [ "XPI_CLK_OUT_FREQ_OPTION_104MHz", "HPM5300_2HPM5361_2hpm__romapi__xpi__soc__def_8h.html#aec48f2f08d8e1a047ef71a38caeb0954", null ],

@@ -5,7 +5,6 @@ var structewdg__func__ctrl__config__t =
     [ "ctrl_reg_update_password", "structewdg__func__ctrl__config__t.html#af04de4a68cf43ed86b00207bd5ab6947", null ],
     [ "ctrl_reg_update_period_bus_clk_x_128", "structewdg__func__ctrl__config__t.html#ae1a88d0ee759b7760c587beade036aae", null ],
     [ "enable_config_lock", "structewdg__func__ctrl__config__t.html#a0f415b7f6425110c40f8feb2dbdc0a14", null ],
-    [ "enable_overtime_self_clear", "structewdg__func__ctrl__config__t.html#adafc0caa6412ac713003df1c2680f8b2", null ],
     [ "enable_refresh_lock", "structewdg__func__ctrl__config__t.html#abfa68346a0223c890df8a05af875f3df", null ],
     [ "enable_refresh_period", "structewdg__func__ctrl__config__t.html#ac32ce920f29f6e7f45122c7bedaa0f96", null ],
     [ "enable_window_mode", "structewdg__func__ctrl__config__t.html#a55fcb03334de27a5baf2f103df45d7f0", null ],

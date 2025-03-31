@@ -3,7 +3,7 @@ var structxpi__device__info__t =
     [ "block_size_kbytes", "structxpi__device__info__t.html#a68888e64ab7071295561d7c26860f586", null ],
     [ "busy_offset", "structxpi__device__info__t.html#ac23cd684a6326d9e285283bfc9f2ef41", null ],
     [ "busy_polarity", "structxpi__device__info__t.html#a0fc4b1b4bc18da36b612080709c1a5e5", null ],
-    [ "cfg_instr_seq", "structxpi__device__info__t.html#a00c55e9677fe1d1346aef3e1f2028bee", null ],
+    [ "cfg_instr_seq", "structxpi__device__info__t.html#a503fc5f5ed7c12b9419a57b4c2085d79", null ],
     [ "clk_freq_for_device_cfg", "structxpi__device__info__t.html#ad186faaa8b453ca490de734a7240cbdc", null ],
     [ "clk_freq_for_non_read_cmd", "structxpi__device__info__t.html#a9135d7046b5fbe91b115129e13d841c7", null ],
     [ "cs_hold_time", "structxpi__device__info__t.html#aac8270bb2e88f6c1451783edb4af8ac3", null ],

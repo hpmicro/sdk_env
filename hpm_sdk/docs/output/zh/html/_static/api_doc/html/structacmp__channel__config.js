@@ -1,7 +1,6 @@
 var structacmp__channel__config =
 [
     [ "bypass_filter", "structacmp__channel__config.html#aff5be143ec876d6d35afc041eebaabf4", null ],
-    [ "enable_clock_sync", "structacmp__channel__config.html#a268808c7305d97a717d7cfaed46391c6", null ],
     [ "enable_cmp_output", "structacmp__channel__config.html#ab4682cfa00e127abd6b32cc222d64189", null ],
     [ "enable_dac", "structacmp__channel__config.html#a4c78538561e368e5f307266c5a1604e1", null ],
     [ "enable_hpmode", "structacmp__channel__config.html#aaf7d923bfa5c37cec759f0723c9e75af", null ],

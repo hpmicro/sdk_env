@@ -1,13 +1,14 @@
 var group__otp__interface =
 [
     [ "otp_lock_option_t", "group__otp__interface.html#gac83f4aa4e08e84001044bef8b5de1a13", [
-      [ "otp_write_disallowed", "group__otp__interface.html#gga2db06901d03245a790e5571701aba3dfac35edaf7167583a2dece7fead6a8d4b4", null ],
-      [ "otp_write_disallowed", "group__otp__interface.html#gga7b1472d57861c1c16e0394cd0f614182ac35edaf7167583a2dece7fead6a8d4b4", null ],
-      [ "otp_write_disallowed", "group__otp__interface.html#gga893dbd60c5ebe415600523fbae202880ac35edaf7167583a2dece7fead6a8d4b4", null ],
-      [ "otp_write_disallowed", "group__otp__interface.html#ggaba4f231c4925479386aca2034fb0d745ac35edaf7167583a2dece7fead6a8d4b4", null ],
-      [ "otp_write_disallowed", "group__otp__interface.html#ggacdf1f9b38a124a0672bc6092274d826fac35edaf7167583a2dece7fead6a8d4b4", null ],
-      [ "otp_write_disallowed", "group__otp__interface.html#gga663f37d3e28d272f4c5ef39f7426067dac35edaf7167583a2dece7fead6a8d4b4", null ],
-      [ "otp_write_disallowed", "group__otp__interface.html#gga6de2e1200a9657390733e6300d9bb55aac35edaf7167583a2dece7fead6a8d4b4", null ],
+      [ "otp_write_disallowed", "group__otp__interface.html#gga7cbdee2993c5c86fc9cd1237ecd7b15eac35edaf7167583a2dece7fead6a8d4b4", null ],
+      [ "otp_write_disallowed", "group__otp__interface.html#gga5905cdd3eb8e51d02f28308e787de71dac35edaf7167583a2dece7fead6a8d4b4", null ],
+      [ "otp_write_disallowed", "group__otp__interface.html#gga1d64d4a07b3b039a96894b5627cffedcac35edaf7167583a2dece7fead6a8d4b4", null ],
+      [ "otp_write_disallowed", "group__otp__interface.html#gga6c59ab04c8875246a4631d309d7cc392ac35edaf7167583a2dece7fead6a8d4b4", null ],
+      [ "otp_write_disallowed", "group__otp__interface.html#ggae6169455b9e4956f9b2213f4e61afc16ac35edaf7167583a2dece7fead6a8d4b4", null ],
+      [ "otp_write_disallowed", "group__otp__interface.html#gga6cd3a5c7c6d830160e94fa202f6d2d91ac35edaf7167583a2dece7fead6a8d4b4", null ],
+      [ "otp_write_disallowed", "group__otp__interface.html#ggabae4b9e568f0785f04a44b13e6bd0c31ac35edaf7167583a2dece7fead6a8d4b4", null ],
+      [ "otp_write_disallowed", "group__otp__interface.html#ggaff72327131bf393064bf309468a8347aac35edaf7167583a2dece7fead6a8d4b4", null ],
       [ "otp_no_lock", "group__otp__interface.html#ggac83f4aa4e08e84001044bef8b5de1a13a0c2fed07674d60af1747d3366d920c25", null ],
       [ "otp_read_only", "group__otp__interface.html#ggac83f4aa4e08e84001044bef8b5de1a13ab89fcf33d8b0bf2f2184f031ee9634de", null ],
       [ "otp_permanent_no_lock", "group__otp__interface.html#ggac83f4aa4e08e84001044bef8b5de1a13a9b437aca3df46a8fa01d0f40e56933e2", null ],
@@ -55,6 +56,19 @@ var group__otp__interface =
       [ "otp_permanent_no_lock", "group__otp__interface.html#ggac83f4aa4e08e84001044bef8b5de1a13a9b437aca3df46a8fa01d0f40e56933e2", null ],
       [ "otp_disable_access", "group__otp__interface.html#ggac83f4aa4e08e84001044bef8b5de1a13aa242f70ac53023ae86ee90c79a343788", null ],
       [ "otp_lock_option_max", "group__otp__interface.html#ggac83f4aa4e08e84001044bef8b5de1a13ac93e8eef4128c3c37d943b258d3ea94b", null ]
+    ] ],
+    [ "otp_lock_option_t", "group__otp__interface.html#gac83f4aa4e08e84001044bef8b5de1a13", [
+      [ "otp_no_lock", "group__otp__interface.html#ggac83f4aa4e08e84001044bef8b5de1a13a0c2fed07674d60af1747d3366d920c25", null ],
+      [ "otp_read_only", "group__otp__interface.html#ggac83f4aa4e08e84001044bef8b5de1a13ab89fcf33d8b0bf2f2184f031ee9634de", null ],
+      [ "otp_permanent_no_lock", "group__otp__interface.html#ggac83f4aa4e08e84001044bef8b5de1a13a9b437aca3df46a8fa01d0f40e56933e2", null ],
+      [ "otp_disable_access", "group__otp__interface.html#ggac83f4aa4e08e84001044bef8b5de1a13aa242f70ac53023ae86ee90c79a343788", null ],
+      [ "otp_lock_option_max", "group__otp__interface.html#ggac83f4aa4e08e84001044bef8b5de1a13ac93e8eef4128c3c37d943b258d3ea94b", null ]
+    ] ],
+    [ "otp_region_t", "group__otp__interface.html#ga91f037922a2221da2cf80318ef7f1cab", [
+      [ "otp_region0_mask", "group__otp__interface.html#gga91f037922a2221da2cf80318ef7f1caba6b764179e42cba7177fcc4944a3a5718", null ],
+      [ "otp_region1_mask", "group__otp__interface.html#gga91f037922a2221da2cf80318ef7f1caba857f381b8b4f4f085411942e9d22d729", null ],
+      [ "otp_region2_mask", "group__otp__interface.html#gga91f037922a2221da2cf80318ef7f1cababaa4ce2a38cf371656f50539b4c4efaa", null ],
+      [ "otp_region3_mask", "group__otp__interface.html#gga91f037922a2221da2cf80318ef7f1caba51c4abc4d4f7f31064661ab7e4e47986", null ]
     ] ],
     [ "otp_region_t", "group__otp__interface.html#ga91f037922a2221da2cf80318ef7f1cab", [
       [ "otp_region0_mask", "group__otp__interface.html#gga91f037922a2221da2cf80318ef7f1caba6b764179e42cba7177fcc4944a3a5718", null ],

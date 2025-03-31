@@ -1,5 +1,14 @@
 # Change Log 
 
+## [1.9.0] - 2025-03-31:
+- tools: openocd: support hybrid_xip
+- start_gui: replace sdk path with parameters in preset.bat.
+- start_gui: add search path in openocd commands.
+- start_gui: fix bug that start_gui will crash if the path of hpm_sdk is too long.
+- start_gui: fix bug that cmake process will be blocked if the build folder of current sample is removed when generating another sample
+- start_gui: show animation when localize sdk process starting.
+- update sdk to v1.9.0
+
 ## [1.8.0] - 2024-12-31:
 - update SDK to v1.8.0
 - start_gui: fix cmake build type's error under certain conditions and support saving board and sample info.
@@ -144,3 +153,6 @@
  - Update openocd with improved flash erasing
  - Update included gnu gcc toolchain
 
+
+    
+    Signed-off-by: Joe YIN <qiang.yin@hpmicro.com>

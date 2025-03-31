@@ -1,0 +1,945 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="eeprom__emulation_8h" kind="file" language="C++">
+    <compoundname>eeprom_emulation.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes refid="user__config_8h" local="yes">user_config.h</includes>
+    <includes refid="hpm__nor__flash_8h" local="yes">hpm_nor_flash.h</includes>
+    <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
+    <includedby refid="eeprom__emulation_8c" local="yes">components/eeprom_emulation/eeprom_emulation.c</includedby>
+    <includedby refid="hpm__nor__flash_8c" local="yes">components/eeprom_emulation/port/hpm_nor_flash.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>user_config.h</label>
+        <link refid="user__config_8h"/>
+      </node>
+      <node id="1">
+        <label>components/eeprom_emulation/eeprom_emulation.h</label>
+        <link refid="eeprom__emulation_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>hpm_nor_flash.h</label>
+        <link refid="hpm__nor__flash_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>assert.h</label>
+      </node>
+      <node id="10">
+        <label>hpm_romapi.h</label>
+      </node>
+      <node id="7">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+      <node id="9">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>components/eeprom_emulation/eeprom_emulation.c</label>
+        <link refid="eeprom__emulation_8c"/>
+      </node>
+      <node id="1">
+        <label>components/eeprom_emulation/eeprom_emulation.h</label>
+        <link refid="eeprom__emulation_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>components/eeprom_emulation/port/hpm_nor_flash.c</label>
+        <link refid="hpm__nor__flash_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structe2p__header" prot="public">e2p_header</innerclass>
+    <innerclass refid="structe2p__block" prot="public">e2p_block</innerclass>
+    <innerclass refid="structe2p__config__t" prot="public">e2p_config_t</innerclass>
+    <innerclass refid="structe2p__t" prot="public">e2p_t</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="eeprom__emulation_8h_1a0249c0a8de63512e319b1fde4fb28b6e" prot="public" static="no">
+        <name>E2P_DEBUG_LEVEL_TRACE</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="20" column="9" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1a9a33286a1fb975d103b40ac4f56629e6" prot="public" static="no">
+        <name>E2P_DEBUG_LEVEL_INFO</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="21" column="9" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1a0b04ea26052c4b6b2e4b2c002326bdad" prot="public" static="no">
+        <name>E2P_DEBUG_LEVEL_WARN</name>
+        <initializer>(2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="22" column="9" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1adc72a5d7673ede5d43f5bcc77e405f3d" prot="public" static="no">
+        <name>E2P_DEBUG_LEVEL_ERROR</name>
+        <initializer>(3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="23" column="9" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1a104d5b6fa5aa6a2a587ef262e392dbcb" prot="public" static="no">
+        <name>E2P_TRACE</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>printf(&quot;%s: %d: debug: &quot;fmt&quot;%s\n&quot;, __func__, __LINE__, __VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="27" column="16" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1afef0838acf21868a560ed1c8a40f6513" prot="public" static="no">
+        <name>e2p_trace</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="eeprom__emulation_8h_1a104d5b6fa5aa6a2a587ef262e392dbcb" kindref="member">E2P_TRACE</ref>(__VA_ARGS__, &quot;&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="28" column="16" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1a08b32ac7042d73962099be7e427c1918" prot="public" static="no">
+        <name>E2P_INFO</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>printf(&quot;&quot;fmt&quot;%s\n&quot;, __VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="36" column="16" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1aba7ea60149e319a91ca8f4475d3e30e0" prot="public" static="no">
+        <name>e2p_info</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="eeprom__emulation_8h_1a08b32ac7042d73962099be7e427c1918" kindref="member">E2P_INFO</ref>(__VA_ARGS__, &quot;&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="37" column="16" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1a2cf59c163629642d2881f6c794375210" prot="public" static="no">
+        <name>E2P_WARN</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>printf(&quot;&quot;fmt&quot;%s\n&quot;, __VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="45" column="16" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1a8ab21f2f3f40d15c4042fd7669382ebc" prot="public" static="no">
+        <name>e2p_warn</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="eeprom__emulation_8h_1a2cf59c163629642d2881f6c794375210" kindref="member">E2P_WARN</ref>(__VA_ARGS__, &quot;&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="46" column="16" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1ad45d3f6b3894bb04b523cfbf3c3d1dad" prot="public" static="no">
+        <name>E2P_ERR</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>printf(&quot;&quot;fmt&quot;%s\n&quot;, __VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="54" column="16" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1aed54ba4e4be7a4fa7f4230d4cb56b0d3" prot="public" static="no">
+        <name>e2p_err</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="eeprom__emulation_8h_1ad45d3f6b3894bb04b523cfbf3c3d1dad" kindref="member">E2P_ERR</ref>(__VA_ARGS__, &quot;&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="55" column="16" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1a0225346fcfef90bf2b666608e8604f6a" prot="public" static="no">
+        <name>E2P_MAX_VAR_CNT</name>
+        <initializer>(100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="61" column="9" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1aebcc98e2a6358fb5d7476755c6c5725a" prot="public" static="no">
+        <name>E2P_MAGIC_ID</name>
+        <initializer>(0x48504D43)       /*&apos;H&apos; &apos;P&apos; &apos;M&apos; &apos;C&apos;*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="127" column="9" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1a509519d72b303930718407475515d5dd" prot="public" static="no">
+        <name>E2P_VALID_STATE</name>
+        <initializer>(0xFFFFFFF0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="129" column="9" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1ab519081c8ae4f59cf2a060aff822e90d" prot="public" static="no">
+        <name>E2P_EARSED_ID</name>
+        <initializer>(0xFFFFFFFF)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="130" column="9" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1a81c679990966f51bbae6e8e5748e34c4" prot="public" static="no">
+        <name>E2P_EARSED_VAR</name>
+        <initializer>(0xFF)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="131" column="9" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1a1b74a0336826abac921d9b399306865d" prot="public" static="no">
+        <name>E2P_FLUSH_TRY</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="133" column="9" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1a88a014c4dd86220da4a6ec2f1e604fd7" prot="public" static="no">
+        <name>E2P_FLUSH_BEGIN</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="134" column="9" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1a574aa3fb47822cfb567b3333a98b8ee1" prot="public" static="no">
+        <name>E2P_CRITICAL_ENTER</name>
+        <param></param>
+        <initializer><ref refid="eeprom__emulation_8h_1ac73bcd50ecffee04904b2bd864a2dfea" kindref="member">e2p_enter_critical</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="135" column="9" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="eeprom__emulation_8h_1a4564e5ca52b666f445d53df4796e65f0" prot="public" static="no">
+        <name>E2P_CRITICAL_EXIT</name>
+        <param></param>
+        <initializer><ref refid="eeprom__emulation_8h_1af49fa0aceb4611f04d6f5e0460fdafd9" kindref="member">e2p_exit_critical</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="136" column="9" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98" prot="public" static="no" strong="no">
+        <type></type>
+        <name></name>
+        <enumvalue id="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98a02cf16972790553851c44a9e6147d009" prot="public">
+          <name>e2p_state_valid</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98ad66282c2de09fe47091adb08994a10e8" prot="public">
+          <name>e2p_state_finish</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98ab50b4c419684b4b7923bfede2a1d4767" prot="public">
+          <name>e2p_state_write</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98a37992f9d1837760777e041373fb4e8a5" prot="public">
+          <name>e2p_state_start</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98af1c5b8e4be1126278a7549c83d618029" prot="public">
+          <name>e2p_state_invalid</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="67" column="1" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="67" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="enum" id="eeprom__emulation_8h_1a0c00fad0b9e031f806832264008fbc12" prot="public" static="no" strong="no">
+        <type></type>
+        <name>e2p_valid_state</name>
+        <enumvalue id="eeprom__emulation_8h_1a0c00fad0b9e031f806832264008fbc12a3e3a196dc91cf8c4f21081f6f0b1dcb3" prot="public">
+          <name>e2p_invalid</name>
+          <initializer>= 0xCCCC</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="eeprom__emulation_8h_1a0c00fad0b9e031f806832264008fbc12a908181ad6409553a8eeace5eb6e41ef1" prot="public">
+          <name>e2p_valid</name>
+          <initializer>= 0xEEEE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="eeprom__emulation_8h_1a0c00fad0b9e031f806832264008fbc12aebb9e2239bed17dc6463f8f23099f6a0" prot="public">
+          <name>e2p_earsed</name>
+          <initializer>= 0xFFFF</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="75" column="1" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="75" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="enum" id="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872" prot="public" static="no" strong="no">
+        <type></type>
+        <name></name>
+        <enumvalue id="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a1fe5c695bd2b046686cba9a0ae88bbee" prot="public">
+          <name>E2P_STATUS_OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a984380bcc47e9ad658779bbac885a04a" prot="public">
+          <name>E2P_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a372087d58dbebbccbdf217275053076c" prot="public">
+          <name>E2P_ERROR_NO_MEM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a234b389882ba4d0b247f0f763e8e8269" prot="public">
+          <name>E2P_ERROR_INIT_ERR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872afe981ed68dccbd913ea23e6bee3aefd2" prot="public">
+          <name>E2P_ERROR_BAD_ID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a19a973d585f4ececb5ffbb92c39fb43d" prot="public">
+          <name>E2P_ERROR_BAD_ADDR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a1ea7119748a435ff2d27b27bc95a9ccb" prot="public">
+          <name>E2P_ERROR_MUL_VAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="81" column="1" bodyfile="components/eeprom_emulation/eeprom_emulation.h" bodystart="81" bodyend="89"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="eeprom__emulation_8h_1ac73bcd50ecffee04904b2bd864a2dfea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void e2p_enter_critical</definition>
+        <argsstring>(void)</argsstring>
+        <name>e2p_enter_critical</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="138" column="6" bodyfile="components/eeprom_emulation/port/hpm_nor_flash.c" bodystart="13" bodyend="16" declfile="components/eeprom_emulation/eeprom_emulation.h" declline="138" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="eeprom__emulation_8h_1af49fa0aceb4611f04d6f5e0460fdafd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void e2p_exit_critical</definition>
+        <argsstring>(void)</argsstring>
+        <name>e2p_exit_critical</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="139" column="6" bodyfile="components/eeprom_emulation/port/hpm_nor_flash.c" bodystart="18" bodyend="21" declfile="components/eeprom_emulation/eeprom_emulation.h" declline="139" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="eeprom__emulation_8h_1af238d5c47d9044b48f56baa29c955ea2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t e2p_config</definition>
+        <argsstring>(e2p_t *e2p)</argsstring>
+        <name>e2p_config</name>
+        <param>
+          <type><ref refid="structe2p__t" kindref="compound">e2p_t</ref> *</type>
+          <declname>e2p</declname>
+        </param>
+        <briefdescription>
+<para>eeprom emulation config </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e2p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>instance context </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="147" column="12" bodyfile="components/eeprom_emulation/eeprom_emulation.c" bodystart="316" bodyend="374" declfile="components/eeprom_emulation/eeprom_emulation.h" declline="147" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="eeprom__emulation_8h_1a7b5379423de65f9a174ac91aad760acb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t e2p_flush</definition>
+        <argsstring>(uint8_t flag)</argsstring>
+        <name>e2p_flush</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>eeprom emulation flush whole area, remove redundancy </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>E2P_FLUSH_TRY - conditional flush, E2P_FLUSH_BEGIN - force flush </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="155" column="12" bodyfile="components/eeprom_emulation/eeprom_emulation.c" bodystart="377" bodyend="449" declfile="components/eeprom_emulation/eeprom_emulation.h" declline="155" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="eeprom__emulation_8h_1af9d54f2aeb8cd6bb638940edae0784ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t e2p_write</definition>
+        <argsstring>(uint32_t block_id, uint16_t length, uint8_t *data)</argsstring>
+        <name>e2p_write</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>block_id</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>eeprom emulation write </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>block_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>custom id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data length </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="165" column="12" bodyfile="components/eeprom_emulation/eeprom_emulation.c" bodystart="452" bodyend="463" declfile="components/eeprom_emulation/eeprom_emulation.h" declline="165" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="eeprom__emulation_8h_1a52d7a936270bbd48095f18cf96898be3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t e2p_read</definition>
+        <argsstring>(uint32_t block_id, uint16_t length, uint8_t *data)</argsstring>
+        <name>e2p_read</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>block_id</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>eeprom emulation read </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>block_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>custom id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data length </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="175" column="12" bodyfile="components/eeprom_emulation/eeprom_emulation.c" bodystart="466" bodyend="486" declfile="components/eeprom_emulation/eeprom_emulation.h" declline="175" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="eeprom__emulation_8h_1a76a9aa4eef9dcb9e188272fe3fbbcc89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t e2p_generate_id</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>e2p_generate_id</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>generate custom id </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uint32_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="183" column="10" bodyfile="components/eeprom_emulation/eeprom_emulation.c" bodystart="499" bodyend="502" declfile="components/eeprom_emulation/eeprom_emulation.h" declline="183" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="eeprom__emulation_8h_1a6c65940b97c465754c0837acec1ab9ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void e2p_clear</definition>
+        <argsstring>(void)</argsstring>
+        <name>e2p_clear</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>format whole area, 0xFF </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="188" column="6" bodyfile="components/eeprom_emulation/eeprom_emulation.c" bodystart="489" bodyend="496" declfile="components/eeprom_emulation/eeprom_emulation.h" declline="188" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="eeprom__emulation_8h_1ae0ed3cd538c0b66b0474501dd2bbb26e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void e2p_show_info</definition>
+        <argsstring>(void)</argsstring>
+        <name>e2p_show_info</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>show e2p instance info include config info and store info </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/eeprom_emulation/eeprom_emulation.h" line="193" column="6" bodyfile="components/eeprom_emulation/eeprom_emulation.c" bodystart="505" bodyend="508" declfile="components/eeprom_emulation/eeprom_emulation.h" declline="193" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2023-2024<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_EEPROM_EMULATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_EEPROM_EMULATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="user__config_8h" kindref="compound">user_config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__nor__flash_8h" kindref="compound">hpm_nor_flash.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__common_8h" kindref="compound">hpm_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="eeprom__emulation_8h_1a0249c0a8de63512e319b1fde4fb28b6e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>E2P_DEBUG_LEVEL_TRACE<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="eeprom__emulation_8h_1a9a33286a1fb975d103b40ac4f56629e6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>E2P_DEBUG_LEVEL_INFO<sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="eeprom__emulation_8h_1a0b04ea26052c4b6b2e4b2c002326bdad" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>E2P_DEBUG_LEVEL_WARN<sp/><sp/>(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="eeprom__emulation_8h_1adc72a5d7673ede5d43f5bcc77e405f3d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>E2P_DEBUG_LEVEL_ERROR<sp/>(3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>E2P_DEBUG_TRACE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>if<sp/>E2P_DEBUG_LEVEL<sp/>&lt;=<sp/>E2P_DEBUG_LEVEL_TRACE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="eeprom__emulation_8h_1a104d5b6fa5aa6a2a587ef262e392dbcb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>E2P_TRACE(fmt,<sp/>...)<sp/>printf(&quot;%s:<sp/>%d:<sp/>debug:<sp/>&quot;fmt&quot;%s\n&quot;,<sp/>__func__,<sp/>__LINE__,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="eeprom__emulation_8h_1afef0838acf21868a560ed1c8a40f6513" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>e2p_trace(...)<sp/>E2P_TRACE(__VA_ARGS__,<sp/>&quot;&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>e2p_trace(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>E2P_DEBUG_INFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>if<sp/>E2P_DEBUG_LEVEL<sp/>&lt;=<sp/>E2P_DEBUG_LEVEL_INFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="eeprom__emulation_8h_1a08b32ac7042d73962099be7e427c1918" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>E2P_INFO(fmt,<sp/>...)<sp/>printf(&quot;&quot;fmt&quot;%s\n&quot;,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="eeprom__emulation_8h_1aba7ea60149e319a91ca8f4475d3e30e0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>e2p_info(...)<sp/>E2P_INFO(__VA_ARGS__,<sp/>&quot;&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>e2p_info(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>E2P_DEBUG_WARN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>if<sp/>E2P_DEBUG_LEVEL<sp/>&lt;=<sp/>E2P_DEBUG_LEVEL_WARN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="eeprom__emulation_8h_1a2cf59c163629642d2881f6c794375210" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>E2P_WARN(fmt,<sp/>...)<sp/>printf(&quot;&quot;fmt&quot;%s\n&quot;,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="eeprom__emulation_8h_1a8ab21f2f3f40d15c4042fd7669382ebc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>e2p_warn(...)<sp/>E2P_WARN(__VA_ARGS__,<sp/>&quot;&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>e2p_warn(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>E2P_DEBUG_ERROR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>if<sp/>E2P_DEBUG_LEVEL<sp/>&lt;=<sp/>E2P_DEBUG_LEVEL_ERROR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="eeprom__emulation_8h_1ad45d3f6b3894bb04b523cfbf3c3d1dad" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>E2P_ERR(fmt,<sp/>...)<sp/>printf(&quot;&quot;fmt&quot;%s\n&quot;,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="eeprom__emulation_8h_1aed54ba4e4be7a4fa7f4230d4cb56b0d3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>e2p_err(...)<sp/>E2P_ERR(__VA_ARGS__,<sp/>&quot;&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>e2p_err(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="eeprom__emulation_8h_1a0225346fcfef90bf2b666608e8604f6a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>E2P_MAX_VAR_CNT<sp/>(100)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>EEPROM_MAX_VAR_CNT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>E2P_MAX_VAR_CNT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>E2P_MAX_VAR_CNT<sp/><sp/><sp/><sp/><sp/>EEPROM_MAX_VAR_CNT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="68" refid="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98a02cf16972790553851c44a9e6147d009" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98a02cf16972790553851c44a9e6147d009" kindref="member">e2p_state_valid</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="69" refid="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98ad66282c2de09fe47091adb08994a10e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98ad66282c2de09fe47091adb08994a10e8" kindref="member">e2p_state_finish</ref><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="70" refid="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98ab50b4c419684b4b7923bfede2a1d4767" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98ab50b4c419684b4b7923bfede2a1d4767" kindref="member">e2p_state_write</ref><sp/>=<sp/>12,</highlight></codeline>
+<codeline lineno="71" refid="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98a37992f9d1837760777e041373fb4e8a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98a37992f9d1837760777e041373fb4e8a5" kindref="member">e2p_state_start</ref><sp/>=<sp/>14,</highlight></codeline>
+<codeline lineno="72" refid="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98af1c5b8e4be1126278a7549c83d618029" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a4fd73b892fae72a68aca95870dd8bc98af1c5b8e4be1126278a7549c83d618029" kindref="member">e2p_state_invalid</ref><sp/>=<sp/>15</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="eeprom__emulation_8h_1a0c00fad0b9e031f806832264008fbc12" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="76" refid="eeprom__emulation_8h_1a0c00fad0b9e031f806832264008fbc12a3e3a196dc91cf8c4f21081f6f0b1dcb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a0c00fad0b9e031f806832264008fbc12a3e3a196dc91cf8c4f21081f6f0b1dcb3" kindref="member">e2p_invalid</ref><sp/>=<sp/>0xCCCC,</highlight></codeline>
+<codeline lineno="77" refid="eeprom__emulation_8h_1a0c00fad0b9e031f806832264008fbc12a908181ad6409553a8eeace5eb6e41ef1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a0c00fad0b9e031f806832264008fbc12a908181ad6409553a8eeace5eb6e41ef1" kindref="member">e2p_valid</ref><sp/>=<sp/>0xEEEE,</highlight></codeline>
+<codeline lineno="78" refid="eeprom__emulation_8h_1a0c00fad0b9e031f806832264008fbc12aebb9e2239bed17dc6463f8f23099f6a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a0c00fad0b9e031f806832264008fbc12aebb9e2239bed17dc6463f8f23099f6a0" kindref="member">e2p_earsed</ref><sp/>=<sp/>0xFFFF,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}<sp/><ref refid="eeprom__emulation_8h_1a0c00fad0b9e031f806832264008fbc12" kindref="member">e2p_valid_state</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="82" refid="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a1fe5c695bd2b046686cba9a0ae88bbee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a1fe5c695bd2b046686cba9a0ae88bbee" kindref="member">E2P_STATUS_OK</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="83" refid="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a984380bcc47e9ad658779bbac885a04a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a984380bcc47e9ad658779bbac885a04a" kindref="member">E2P_ERROR</ref>,</highlight></codeline>
+<codeline lineno="84" refid="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a372087d58dbebbccbdf217275053076c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a372087d58dbebbccbdf217275053076c" kindref="member">E2P_ERROR_NO_MEM</ref>,</highlight></codeline>
+<codeline lineno="85" refid="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a234b389882ba4d0b247f0f763e8e8269" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a234b389882ba4d0b247f0f763e8e8269" kindref="member">E2P_ERROR_INIT_ERR</ref>,</highlight></codeline>
+<codeline lineno="86" refid="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872afe981ed68dccbd913ea23e6bee3aefd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872afe981ed68dccbd913ea23e6bee3aefd2" kindref="member">E2P_ERROR_BAD_ID</ref>,</highlight></codeline>
+<codeline lineno="87" refid="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a19a973d585f4ececb5ffbb92c39fb43d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a19a973d585f4ececb5ffbb92c39fb43d" kindref="member">E2P_ERROR_BAD_ADDR</ref>,</highlight></codeline>
+<codeline lineno="88" refid="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a1ea7119748a435ff2d27b27bc95a9ccb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="eeprom__emulation_8h_1a273c76befc05e354260e5dec03075872a1ea7119748a435ff2d27b27bc95a9ccb" kindref="member">E2P_ERROR_MUL_VAR</ref>,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="structe2p__header" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92" refid="structe2p__header_1a1c3fb347fcfa33e95c34ae4d2c821fac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structe2p__header_1a1c3fb347fcfa33e95c34ae4d2c821fac" kindref="member">version</ref>;</highlight></codeline>
+<codeline lineno="93" refid="structe2p__header_1acdcc3eab2abb824c1355df0f99901e6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structe2p__header_1acdcc3eab2abb824c1355df0f99901e6b" kindref="member">magic</ref>;</highlight></codeline>
+<codeline lineno="94" refid="structe2p__header_1a5789b5630c0e747cd4faf2fc6be2d8cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structe2p__header_1a5789b5630c0e747cd4faf2fc6be2d8cd" kindref="member">state</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}<sp/><ref refid="structe2p__header" kindref="compound">e2p_header</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>pack(push,<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="structe2p__block" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99" refid="structe2p__block_1a17d2a7652053f72fa984a79ffee27c3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structe2p__block_1a17d2a7652053f72fa984a79ffee27c3e" kindref="member">block_id</ref>;</highlight></codeline>
+<codeline lineno="100" refid="structe2p__block_1ae7ac094e3abd0471123bac38eeda27f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structe2p__block_1ae7ac094e3abd0471123bac38eeda27f9" kindref="member">data_addr</ref>;</highlight></codeline>
+<codeline lineno="101" refid="structe2p__block_1a8511e1f608aece33069de3d946a3f1a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structe2p__block_1a8511e1f608aece33069de3d946a3f1a2" kindref="member">length</ref>;</highlight></codeline>
+<codeline lineno="102" refid="structe2p__block_1ac73d30c312aa5b30e86395de9a195550" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structe2p__block_1ac73d30c312aa5b30e86395de9a195550" kindref="member">valid_state</ref>;</highlight></codeline>
+<codeline lineno="103" refid="structe2p__block_1a810b7f27700a0b169f6ae2c2bc70d410" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structe2p__block_1a810b7f27700a0b169f6ae2c2bc70d410" kindref="member">crc</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}<sp/><ref refid="structe2p__block" kindref="compound">e2p_block</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>pack(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="structe2p__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108" refid="structe2p__config__t_1a48c2c3224092a1da604015c3130d550e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structe2p__config__t_1a48c2c3224092a1da604015c3130d550e" kindref="member">start_addr</ref>;</highlight></codeline>
+<codeline lineno="109" refid="structe2p__config__t_1a59d204b3c4b5cf5ecd53513850510355" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structe2p__config__t_1a59d204b3c4b5cf5ecd53513850510355" kindref="member">sector_cnt</ref>;</highlight></codeline>
+<codeline lineno="110" refid="structe2p__config__t_1a37d3fe4abe392d12fa3126f88fdaefdb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structe2p__config__t_1a37d3fe4abe392d12fa3126f88fdaefdb" kindref="member">erase_size</ref>;</highlight></codeline>
+<codeline lineno="111" refid="structe2p__config__t_1a76e2b769bbf649c4ee1c129218083bff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structe2p__config__t_1a76e2b769bbf649c4ee1c129218083bff" kindref="member">version</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="structe2p__config__t_1a4fbb57cef8e8bc7733e8a100556ba953" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>(*<ref refid="structe2p__config__t_1a4fbb57cef8e8bc7733e8a100556ba953" kindref="member">flash_read</ref>)(uint8_t<sp/>*buf,<sp/>uint32_t<sp/>addr,<sp/>uint32_t<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="114" refid="structe2p__config__t_1aa3c64dd1b48ddc23d9ac310a779a4322" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>(*<ref refid="structe2p__config__t_1aa3c64dd1b48ddc23d9ac310a779a4322" kindref="member">flash_write</ref>)(uint8_t<sp/>*buf,<sp/>uint32_t<sp/>addr,<sp/>uint32_t<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="115" refid="structe2p__config__t_1aa1d6886a2e985b94e470bc691caf3146" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structe2p__config__t_1aa1d6886a2e985b94e470bc691caf3146" kindref="member">flash_erase</ref>)(uint32_t<sp/><ref refid="structe2p__config__t_1a48c2c3224092a1da604015c3130d550e" kindref="member">start_addr</ref>,<sp/>uint32_t<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}<sp/><ref refid="structe2p__config__t" kindref="compound">e2p_config_t</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="structe2p__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119" refid="structe2p__t_1a99248ef5d9e5be6bd48c4fb434d0e95d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structe2p__config__t" kindref="compound">e2p_config_t</ref><sp/><ref refid="structe2p__t_1a99248ef5d9e5be6bd48c4fb434d0e95d" kindref="member">config</ref>;</highlight></codeline>
+<codeline lineno="120" refid="structe2p__t_1a7172f9b4656e948122e7876c138eebc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnor__flash__config__t" kindref="compound">nor_flash_config_t</ref><sp/><ref refid="structe2p__t_1a7172f9b4656e948122e7876c138eebc2" kindref="member">nor_config</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="structe2p__t_1a38607ef6648cb09b4bd6d8a2d2d7b2cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structe2p__t_1a38607ef6648cb09b4bd6d8a2d2d7b2cf" kindref="member">p_data</ref>;</highlight></codeline>
+<codeline lineno="123" refid="structe2p__t_1a4cf8f846e3f1a268142a50a78abf2ade" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structe2p__t_1a4cf8f846e3f1a268142a50a78abf2ade" kindref="member">p_info</ref>;</highlight></codeline>
+<codeline lineno="124" refid="structe2p__t_1a07e9876022159bf089c3117bb08e2e24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structe2p__t_1a07e9876022159bf089c3117bb08e2e24" kindref="member">remain_size</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}<sp/><ref refid="structe2p__t" kindref="compound">e2p_t</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="eeprom__emulation_8h_1aebcc98e2a6358fb5d7476755c6c5725a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>E2P_MAGIC_ID<sp/>(0x48504D43)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&apos;H&apos;<sp/>&apos;P&apos;<sp/>&apos;M&apos;<sp/>&apos;C&apos;*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="eeprom__emulation_8h_1a509519d72b303930718407475515d5dd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>E2P_VALID_STATE<sp/><sp/><sp/><sp/><sp/>(0xFFFFFFF0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="eeprom__emulation_8h_1ab519081c8ae4f59cf2a060aff822e90d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>E2P_EARSED_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0xFFFFFFFF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="eeprom__emulation_8h_1a81c679990966f51bbae6e8e5748e34c4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>E2P_EARSED_VAR<sp/><sp/><sp/><sp/><sp/><sp/>(0xFF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="eeprom__emulation_8h_1a1b74a0336826abac921d9b399306865d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>E2P_FLUSH_TRY<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="eeprom__emulation_8h_1a88a014c4dd86220da4a6ec2f1e604fd7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>E2P_FLUSH_BEGIN<sp/><sp/><sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="eeprom__emulation_8h_1a574aa3fb47822cfb567b3333a98b8ee1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>E2P_CRITICAL_ENTER()<sp/><sp/><sp/>e2p_enter_critical()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="eeprom__emulation_8h_1a4564e5ca52b666f445d53df4796e65f0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>E2P_CRITICAL_EXIT()<sp/><sp/><sp/><sp/>e2p_exit_critical()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="eeprom__emulation_8h_1ac73bcd50ecffee04904b2bd864a2dfea" kindref="member">e2p_enter_critical</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="eeprom__emulation_8h_1af49fa0aceb4611f04d6f5e0460fdafd9" kindref="member">e2p_exit_critical</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="eeprom__emulation_8h_1af238d5c47d9044b48f56baa29c955ea2" kindref="member">e2p_config</ref>(<ref refid="structe2p__t" kindref="compound">e2p_t</ref><sp/>*e2p);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="eeprom__emulation_8h_1a7b5379423de65f9a174ac91aad760acb" kindref="member">e2p_flush</ref>(uint8_t<sp/>flag);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="eeprom__emulation_8h_1af9d54f2aeb8cd6bb638940edae0784ca" kindref="member">e2p_write</ref>(uint32_t<sp/>block_id,<sp/>uint16_t<sp/>length,<sp/>uint8_t<sp/>*data);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="eeprom__emulation_8h_1a52d7a936270bbd48095f18cf96898be3" kindref="member">e2p_read</ref>(uint32_t<sp/>block_id,<sp/>uint16_t<sp/>length,<sp/>uint8_t<sp/>*data);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal">uint32_t<sp/><ref refid="eeprom__emulation_8h_1a76a9aa4eef9dcb9e188272fe3fbbcc89" kindref="member">e2p_generate_id</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="eeprom__emulation_8h_1a6c65940b97c465754c0837acec1ab9ad" kindref="member">e2p_clear</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="eeprom__emulation_8h_1ae0ed3cd538c0b66b0474501dd2bbb26e" kindref="member">e2p_show_info</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="196"><highlight class="comment"><sp/><sp/><sp/><sp/>e2p_t<sp/>demo<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.config.start_addr<sp/>=<sp/>0x80080000,</highlight></codeline>
+<codeline lineno="198"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.config.erase_size<sp/>=<sp/>4096,</highlight></codeline>
+<codeline lineno="199"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.config.sector_cnt<sp/>=<sp/>128,</highlight></codeline>
+<codeline lineno="200"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.config.version<sp/>=<sp/>0x4553,</highlight></codeline>
+<codeline lineno="201"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.config.flash_read<sp/>=<sp/>flash_read,</highlight></codeline>
+<codeline lineno="202"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.config.flash_write<sp/>=<sp/>flash_write,</highlight></codeline>
+<codeline lineno="203"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.config.flash_erase<sp/>=<sp/>flash_erase,</highlight></codeline>
+<codeline lineno="204"><highlight class="comment"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="205"><highlight class="comment"></highlight></codeline>
+<codeline lineno="206"><highlight class="comment"></highlight></codeline>
+<codeline lineno="207"><highlight class="comment"><sp/><sp/><sp/><sp/>int<sp/>main(void)</highlight></codeline>
+<codeline lineno="208"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e2p_config(&amp;demo);</highlight></codeline>
+<codeline lineno="210"><highlight class="comment"></highlight></codeline>
+<codeline lineno="211"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="212"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline lineno="213"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline lineno="214"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="comment"></highlight></codeline>
+<codeline lineno="216"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="components/eeprom_emulation/eeprom_emulation.h"/>
+  </compounddef>
+</doxygen>

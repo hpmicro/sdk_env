@@ -13,7 +13,7 @@ var dir_bb92b17e51de1ea98cc7c8b7b4d06033 =
     [ "hpm_i2c_regs.h", "HPM5300_2ip_2hpm__i2c__regs_8h.html", "HPM5300_2ip_2hpm__i2c__regs_8h" ],
     [ "hpm_ioc_regs.h", "HPM5300_2ip_2hpm__ioc__regs_8h.html", "HPM5300_2ip_2hpm__ioc__regs_8h" ],
     [ "hpm_keym_regs.h", "HPM5300_2ip_2hpm__keym__regs_8h.html", "HPM5300_2ip_2hpm__keym__regs_8h" ],
-    [ "hpm_linv2_regs.h", "hpm__linv2__regs_8h.html", "hpm__linv2__regs_8h" ],
+    [ "hpm_linv2_regs.h", "HPM5300_2ip_2hpm__linv2__regs_8h.html", "HPM5300_2ip_2hpm__linv2__regs_8h" ],
     [ "hpm_mbx_regs.h", "HPM5300_2ip_2hpm__mbx__regs_8h.html", "HPM5300_2ip_2hpm__mbx__regs_8h" ],
     [ "hpm_mcan_regs.h", "HPM5300_2ip_2hpm__mcan__regs_8h.html", "HPM5300_2ip_2hpm__mcan__regs_8h" ],
     [ "hpm_mchtmr_regs.h", "HPM5300_2ip_2hpm__mchtmr__regs_8h.html", "HPM5300_2ip_2hpm__mchtmr__regs_8h" ],

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="hpm__lin__drv_8c" kind="file" language="C++">
     <compoundname>hpm_lin_drv.c</compoundname>
     <includes refid="hpm__lin__drv_8h" local="yes">hpm_lin_drv.h</includes>
@@ -129,14 +129,14 @@
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>|=<sp/><ref refid="hpm__lin__regs_8h_1a9dbaba0aa2790c8e4021585d501ff065" kindref="member">LIN_TV_MASTER_MODE_MASK</ref>;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>|=<sp/><ref refid="hpm__lin__regs_8h_1a763ec0f3bc72d809369a30fbe2b10331" kindref="member">LIN_TV_INITIAL_MODE_MASK</ref>;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>&amp;=<sp/>~LIN_TV_INITIAL_MODE_MASK;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>&amp;=<sp/><ref refid="hpm__lin__regs_8h_1a763ec0f3bc72d809369a30fbe2b10331" kindref="member">~LIN_TV_INITIAL_MODE_MASK</ref>;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>bt_mul<sp/>=<sp/>20000U<sp/>/<sp/>timing-&gt;<ref refid="structlin__timing__t_1ab84d7999aebe0d359913012348b0ef86" kindref="member">baudrate</ref><sp/>-<sp/>1U;</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>prescaler<sp/>=<sp/>log((timing-&gt;<ref refid="structlin__timing__t_1ab30ce06c5df03213ac0c7225f4624f7a" kindref="member">src_freq_in_hz</ref><sp/>/<sp/>((bt_mul<sp/>+<sp/>1U)<sp/>*<sp/>timing-&gt;<ref refid="structlin__timing__t_1ab84d7999aebe0d359913012348b0ef86" kindref="member">baudrate</ref><sp/>*<sp/>200U)))<sp/>/<sp/>log(2U)<sp/>-<sp/>1U;</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>bt_div<sp/>=<sp/>timing-&gt;<ref refid="structlin__timing__t_1ab30ce06c5df03213ac0c7225f4624f7a" kindref="member">src_freq_in_hz</ref><sp/>/<sp/>((1U<sp/>&lt;&lt;<sp/>(prescaler<sp/>+<sp/>1U))<sp/>*<sp/>(bt_mul<sp/>+<sp/>1U)<sp/>*<sp/>timing-&gt;<ref refid="structlin__timing__t_1ab84d7999aebe0d359913012348b0ef86" kindref="member">baudrate</ref>);</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((bt_div<sp/>&lt;<sp/>200)<sp/>||<sp/>(bt_div<sp/>&gt;<sp/>512))<sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1a75d2e158294ca2eae55a7357999ca43a" kindref="member">BAUDRATE_CTL_LOW</ref><sp/>=<sp/>bt_div<sp/>&amp;<sp/>0xFF;</highlight></codeline>
@@ -144,7 +144,7 @@
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__lin__regs_8h_1af3708b8d218742402bf160b880f29eac" kindref="member">LIN_BARDRATE_CTL_HIGH_BT_MUL_SET</ref>(bt_mul)</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__lin__regs_8h_1acf7408a23b07c1b283424a509598b4f2" kindref="member">LIN_BARDRATE_CTL_HIGH_PRESCL_SET</ref>(prescaler);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__lin__interface_1ga89ac476a45e2ffb5ef8aa80169e31e16" kindref="member">lin_slave_configure_timing</ref>(<ref refid="structLIN__Type" kindref="compound">LIN_Type</ref><sp/>*ptr,<sp/>uint32_t<sp/>src_freq_in_hz)</highlight></codeline>
@@ -154,22 +154,22 @@
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>prescaler;</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>bt_div;</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>&amp;=<sp/>~LIN_TV_MASTER_MODE_MASK;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>&amp;=<sp/><ref refid="hpm__lin__regs_8h_1a9dbaba0aa2790c8e4021585d501ff065" kindref="member">~LIN_TV_MASTER_MODE_MASK</ref>;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>|=<sp/><ref refid="hpm__lin__regs_8h_1a763ec0f3bc72d809369a30fbe2b10331" kindref="member">LIN_TV_INITIAL_MODE_MASK</ref>;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>&amp;=<sp/>~LIN_TV_INITIAL_MODE_MASK;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1afcdd45e8c8764a79eeaebceceb81d4a4" kindref="member">TV</ref><sp/>&amp;=<sp/><ref refid="hpm__lin__regs_8h_1a763ec0f3bc72d809369a30fbe2b10331" kindref="member">~LIN_TV_INITIAL_MODE_MASK</ref>;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>prescaler<sp/>=<sp/>log((src_freq_in_hz<sp/>/<sp/>(20000U<sp/>*<sp/>200U)))<sp/>/<sp/>log(2U)<sp/>-<sp/>1U;</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>bt_div<sp/>=<sp/>src_freq_in_hz<sp/>/<sp/>((1U<sp/>&lt;&lt;<sp/>(prescaler<sp/>+<sp/>1U))<sp/>*<sp/>20000U);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((bt_div<sp/>&lt;<sp/>200)<sp/>||<sp/>(bt_div<sp/>&gt;<sp/>512))<sp/>{</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1a75d2e158294ca2eae55a7357999ca43a" kindref="member">BAUDRATE_CTL_LOW</ref><sp/>=<sp/>bt_div<sp/>&amp;<sp/>0xFF;</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1adbfb39d58752277fd8138c2d6d916b9e" kindref="member">BARDRATE_CTL_HIGH</ref><sp/>=<sp/><ref refid="hpm__lin__regs_8h_1aa603bbd001421b7c7e53e38c17a001c5" kindref="member">LIN_BARDRATE_CTL_HIGH_BT_DIV_HIGH_SET</ref>(bt_div<sp/>&gt;&gt;<sp/>8U)</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><ref refid="hpm__lin__regs_8h_1acf7408a23b07c1b283424a509598b4f2" kindref="member">LIN_BARDRATE_CTL_HIGH_PRESCL_SET</ref>(prescaler);</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
 <codeline lineno="68"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
 <codeline lineno="70"><highlight class="normal">uint8_t<sp/><ref refid="hpm__lin__drv_8c_1a77e62603cb9332ee1453641a5a0583f9" kindref="member">lin_get_data_length_from_id</ref>(uint8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
@@ -240,7 +240,7 @@
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"></highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__lin__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
 <codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight></codeline>
 <codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1aa9e5692752634f63a7cc7c4955674412" kindref="member">ID</ref><sp/>=<sp/>config-&gt;<ref refid="structlin__trans__config__t_1a0e4aa1065597c43d034c52c74ee59781" kindref="member">id</ref>;</highlight></codeline>
@@ -270,9 +270,9 @@
 <codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="172"><highlight class="normal"></highlight></codeline>
 <codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__lin__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref><sp/>*<sp/>8)<sp/>{</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
 <codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
 <codeline lineno="177"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"></highlight></codeline>
 <codeline lineno="179"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__lin__interface_1gad90e9b5cb8385e6b0971e1e122215465" kindref="member">lin_master_receive</ref>(<ref refid="structLIN__Type" kindref="compound">LIN_Type</ref><sp/>*ptr,<sp/><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref><sp/>*config)</highlight></codeline>
@@ -288,7 +288,7 @@
 <codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="191"><highlight class="normal"></highlight></codeline>
 <codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__lin__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
 <codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="195"><highlight class="normal"></highlight></codeline>
 <codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1aa9e5692752634f63a7cc7c4955674412" kindref="member">ID</ref><sp/>=<sp/>config-&gt;<ref refid="structlin__trans__config__t_1a0e4aa1065597c43d034c52c74ee59781" kindref="member">id</ref>;</highlight></codeline>
@@ -313,14 +313,14 @@
 <codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="219"><highlight class="normal"></highlight></codeline>
 <codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__lin__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref><sp/>*<sp/>8)<sp/>{</highlight></codeline>
-<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9ab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
 <codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="223"><highlight class="normal"></highlight></codeline>
 <codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>data_length;<sp/>i++)<sp/>{</highlight></codeline>
 <codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*((config-&gt;<ref refid="structlin__trans__config__t_1ab166cc5e567bd96cd744bd1812c2252c" kindref="member">data_buff</ref>)++)<sp/>=<sp/>ptr-&gt;<ref refid="structLIN__Type_1a3ad74a5a991f7dfb770cf2eb0dbfb6ff" kindref="member">DATABYTE</ref>[i];</highlight></codeline>
 <codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="228"><highlight class="normal"></highlight></codeline>
-<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
 <codeline lineno="230"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="231"><highlight class="normal"></highlight></codeline>
 <codeline lineno="232"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__lin__interface_1ga4b6d7ed6df0c3ef6f0f37144cb786b50" kindref="member">lin_slave_transfer</ref>(<ref refid="structLIN__Type" kindref="compound">LIN_Type</ref><sp/>*ptr,<sp/><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref><sp/>*config)</highlight></codeline>
@@ -359,7 +359,7 @@
 <codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="270"><highlight class="normal"></highlight></codeline>
 <codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__lin__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
 <codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="274"><highlight class="normal"></highlight></codeline>
 <codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1af1235a177577a79c6fd2cb0e9ccc2c06" kindref="member">CONTROL</ref><sp/>=<sp/><ref refid="hpm__lin__regs_8h_1a03939e7b4409abfe639de5ede233cdfb" kindref="member">LIN_CONTROL_TRANSMIT_MASK</ref>;</highlight></codeline>
@@ -387,9 +387,9 @@
 <codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="301"><highlight class="normal"></highlight></codeline>
 <codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__lin__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref><sp/>*<sp/>8)<sp/>{</highlight></codeline>
-<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
 <codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
 <codeline lineno="306"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="307"><highlight class="normal"></highlight></codeline>
 <codeline lineno="308"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__lin__interface_1gace26a93afd541d3de7c7491b65cc0585" kindref="member">lin_slave_receive</ref>(<ref refid="structLIN__Type" kindref="compound">LIN_Type</ref><sp/>*ptr,<sp/><ref refid="structlin__trans__config__t" kindref="compound">lin_trans_config_t</ref><sp/>*config)</highlight></codeline>
@@ -405,7 +405,7 @@
 <codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="320"><highlight class="normal"></highlight></codeline>
 <codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__lin__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
 <codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="324"><highlight class="normal"></highlight></codeline>
 <codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structLIN__Type_1af1235a177577a79c6fd2cb0e9ccc2c06" kindref="member">CONTROL</ref><sp/>=<sp/>0U;</highlight></codeline>
@@ -429,14 +429,14 @@
 <codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="347"><highlight class="normal"></highlight></codeline>
 <codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retry<sp/>&gt;<sp/><ref refid="hpm__lin__drv_8c_1a6ebaa944037838ee4d5695e4396d1b84" kindref="member">HPM_LIN_DRV_RETRY_COUNT</ref><sp/>*<sp/>8)<sp/>{</highlight></codeline>
-<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa19319d05fb8a35cc93f77e40e06b9617" kindref="member">status_timeout</ref>;</highlight></codeline>
 <codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="351"><highlight class="normal"></highlight></codeline>
 <codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>data_length;<sp/>i++)<sp/>{</highlight></codeline>
 <codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*((config-&gt;<ref refid="structlin__trans__config__t_1ab166cc5e567bd96cd744bd1812c2252c" kindref="member">data_buff</ref>)++)<sp/>=<sp/>ptr-&gt;<ref refid="structLIN__Type_1a3ad74a5a991f7dfb770cf2eb0dbfb6ff" kindref="member">DATABYTE</ref>[i];</highlight></codeline>
 <codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="355"><highlight class="normal"></highlight></codeline>
-<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1ggaae05225933a42f81e7c4a9fb286596f9a99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
 <codeline lineno="357"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="drivers/src/hpm_lin_drv.c"/>

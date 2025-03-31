@@ -1,0 +1,1261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="hpm__panel_8c" kind="file" language="C++">
+    <compoundname>hpm_panel.c</compoundname>
+    <includes refid="hpm__panel_8h" local="yes">hpm_panel.h</includes>
+    <includes local="yes">hpm_clock_drv.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>components/panel/hpm_panel.c</label>
+        <link refid="hpm__panel_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hpm_panel.h</label>
+        <link refid="hpm__panel_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>hpm_clock_drv.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structpanel__list" prot="public">panel_list</innerclass>
+    <innerclass refid="structpanel__memory__node" prot="public">panel_memory_node</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="hpm__panel_8c_1a35b01da744aabb9752b02f09cafca145" prot="public" static="no">
+        <name>PANEL_ROUNDUP</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer>((((x) + ((y) - 1)) / (y)) * y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="138" column="9" bodyfile="components/panel/hpm_panel.c" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__panel_8c_1a3438a2bc0e7eb1f8eec30e97bc9fe56b" prot="public" static="no">
+        <name>PANEL_MEM_ALIGN</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="139" column="9" bodyfile="components/panel/hpm_panel.c" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__panel_8c_1a154805590db01bfc7910329e92f09689" prot="public" static="no">
+        <name>PANEL_MEM_NODE_NUM</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="140" column="9" bodyfile="components/panel/hpm_panel.c" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__panel_8c_1a9a82283778ee31abfbf66143fbefefd9" prot="public" static="no">
+        <name>panel_list_for_each</name>
+        <param><defname>node</defname></param>
+        <param><defname>head</defname></param>
+        <initializer>for (<ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref> *node = (head)-&gt;nxt; node != (head); node = node-&gt;nxt)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="173" column="9" bodyfile="components/panel/hpm_panel.c" bodystart="173" bodyend="174"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" prot="public" static="no">
+        <type>struct <ref refid="structpanel__list" kindref="compound">panel_list</ref></type>
+        <definition>typedef struct panel_list panel_list_t</definition>
+        <argsstring></argsstring>
+        <name>panel_list_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="127" column="14"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" prot="public" static="no">
+        <type>struct <ref refid="structpanel__memory__node" kindref="compound">panel_memory_node</ref></type>
+        <definition>typedef struct panel_memory_node panel_memory_node_t</definition>
+        <argsstring></argsstring>
+        <name>panel_memory_node_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="136" column="21"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="hpm__panel_8c_1a44493c5a4f40e017ad9d8aa123d5ed0b" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref></type>
+        <definition>hpm_panel_t panel_tm070rdh13</definition>
+        <argsstring></argsstring>
+        <name>panel_tm070rdh13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="11" column="20" bodyfile="components/panel/panels/tm070rdh13.c" bodystart="49" bodyend="72" declfile="components/panel/hpm_panel.c" declline="11" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="hpm__panel_8c_1a13b2071049cc62567942da13a1f85dfd" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref></type>
+        <definition>hpm_panel_t panel_cc10128007</definition>
+        <argsstring></argsstring>
+        <name>panel_cc10128007</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="12" column="20" bodyfile="components/panel/panels/cc10128007.c" bodystart="117" bodyend="138" declfile="components/panel/hpm_panel.c" declline="12" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="hpm__panel_8c_1a4f4afa750bfa42780dac94953458c981" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref></type>
+        <definition>hpm_panel_t panel_mc10128007_31b</definition>
+        <argsstring></argsstring>
+        <name>panel_mc10128007_31b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="13" column="20" bodyfile="components/panel/panels/mc10128007_31b.c" bodystart="332" bodyend="353" declfile="components/panel/hpm_panel.c" declline="13" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="hpm__panel_8c_1ac3ebeed552af8322007042c40321e97b" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref></type>
+        <definition>hpm_panel_t panel_tm103xdgp01</definition>
+        <argsstring></argsstring>
+        <name>panel_tm103xdgp01</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="14" column="20" bodyfile="components/panel/panels/tm103xdgp01.c" bodystart="87" bodyend="106" declfile="components/panel/hpm_panel.c" declline="14" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="hpm__panel_8c_1ae0f527c162e6119708e194021bc14e7f" prot="public" static="yes" mutable="no">
+        <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref> *</type>
+        <definition>hpm_panel_t* panel_list[]</definition>
+        <argsstring>[]</argsstring>
+        <name>panel_list</name>
+        <initializer>= {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="16" column="20" bodyfile="components/panel/hpm_panel.c" bodystart="16" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="variable" id="hpm__panel_8c_1a8f6bfdb6c9e1ec27fa38b0f4e57fdc05" prot="public" static="yes" mutable="no">
+        <type><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref></type>
+        <definition>panel_memory_node_t panel_mem_nodes[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>panel_mem_nodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="142" column="28" bodyfile="components/panel/hpm_panel.c" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="hpm__panel_8c_1a0462d5ce5c4b0269e3f1d8b5f90dab7e" prot="public" static="yes" mutable="no">
+        <type><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref></type>
+        <definition>panel_list_t panel_mem_pool[HPM_PANEL_MEM_TYPE_MAX]</definition>
+        <argsstring>[HPM_PANEL_MEM_TYPE_MAX]</argsstring>
+        <name>panel_mem_pool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="143" column="21" bodyfile="components/panel/hpm_panel.c" bodystart="143" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="hpm__panel_8c_1a5f49fe905e10e7da150ecb3fb988243d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref> *</type>
+        <definition>hpm_panel_t * hpm_panel_find_device_default</definition>
+        <argsstring>(void)</argsstring>
+        <name>hpm_panel_find_device_default</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Find default panel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>pointer of panel instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="34" column="13" bodyfile="components/panel/hpm_panel.c" bodystart="34" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1aaa49b6d94ae528494ca5b27343aaa69c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref> *</type>
+        <definition>hpm_panel_t * hpm_panel_find_device</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>hpm_panel_find_device</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Find panel for name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of panel</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer of panel instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="41" column="13" bodyfile="components/panel/hpm_panel.c" bodystart="41" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1a3a5fa859e400c9930aa100a322505cad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * hpm_panel_get_name</definition>
+        <argsstring>(hpm_panel_t *panel)</argsstring>
+        <name>hpm_panel_get_name</name>
+        <param>
+          <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref> *</type>
+          <declname>panel</declname>
+        </param>
+        <briefdescription>
+<para>Get panel name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>panel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of panel instance</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>panel name </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="52" column="12" bodyfile="components/panel/hpm_panel.c" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1aaf8550bc7ed4c7c50cdece54bcd66983" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="hpm__panel_8h_1a7bcd509fd4d6697ced5376ab368334d3" kindref="member">hpm_panel_timing_t</ref> *</type>
+        <definition>const hpm_panel_timing_t * hpm_panel_get_timing</definition>
+        <argsstring>(hpm_panel_t *panel)</argsstring>
+        <name>hpm_panel_get_timing</name>
+        <param>
+          <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref> *</type>
+          <declname>panel</declname>
+        </param>
+        <briefdescription>
+<para>Get panel timing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>panel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of panel instance</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer of timing </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="57" column="26" bodyfile="components/panel/hpm_panel.c" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1a2c50b1eee369efa91fb93637a6adc7ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="hpm__panel_8h_1a6bcbee3b0dab5879c329e5d4cd855888" kindref="member">hpm_panel_if_type_t</ref></type>
+        <definition>hpm_panel_if_type_t hpm_panel_get_if_type</definition>
+        <argsstring>(hpm_panel_t *panel)</argsstring>
+        <name>hpm_panel_get_if_type</name>
+        <param>
+          <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref> *</type>
+          <declname>panel</declname>
+        </param>
+        <briefdescription>
+<para>Get panel interface type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">panel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of panel instance</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>panel interface type <ref refid="hpm__panel_8h_1a6bcbee3b0dab5879c329e5d4cd855888" kindref="member">hpm_panel_if_type_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="62" column="21" bodyfile="components/panel/hpm_panel.c" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1a5858271196f94f562300ee5834b6ff8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_panel_register_interface</definition>
+        <argsstring>(hpm_panel_t *panel, hpm_panel_hw_interface_t *hw_if)</argsstring>
+        <name>hpm_panel_register_interface</name>
+        <param>
+          <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref> *</type>
+          <declname>panel</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__panel_8h_1add6c20fa922fb67498fe50b44983d5ce" kindref="member">hpm_panel_hw_interface_t</ref> *</type>
+          <declname>hw_if</declname>
+        </param>
+        <briefdescription>
+<para>Register platform level hardware interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">panel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of panel instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hw_if</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of hardware interface </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="67" column="6" bodyfile="components/panel/hpm_panel.c" bodystart="67" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1a30dac453e8169ca96ddceb9c014cb5a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_panel_reset</definition>
+        <argsstring>(hpm_panel_t *panel)</argsstring>
+        <name>hpm_panel_reset</name>
+        <param>
+          <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref> *</type>
+          <declname>panel</declname>
+        </param>
+        <briefdescription>
+<para>Reset the panel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">panel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of panel instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="73" column="6" bodyfile="components/panel/hpm_panel.c" bodystart="73" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1a95f73d7d67c7e9b471e3c269eb72ce2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_panel_init</definition>
+        <argsstring>(hpm_panel_t *panel)</argsstring>
+        <name>hpm_panel_init</name>
+        <param>
+          <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref> *</type>
+          <declname>panel</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the panel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">panel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of panel instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="79" column="6" bodyfile="components/panel/hpm_panel.c" bodystart="79" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1a140a21f4b95f362df5b5873d3fd0e626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_panel_power_on</definition>
+        <argsstring>(hpm_panel_t *panel)</argsstring>
+        <name>hpm_panel_power_on</name>
+        <param>
+          <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref> *</type>
+          <declname>panel</declname>
+        </param>
+        <briefdescription>
+<para>Power on the panel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">panel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of panel instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="85" column="6" bodyfile="components/panel/hpm_panel.c" bodystart="85" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1a837bf394a63288ec289c950bc8b4084a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_panel_power_off</definition>
+        <argsstring>(hpm_panel_t *panel)</argsstring>
+        <name>hpm_panel_power_off</name>
+        <param>
+          <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref> *</type>
+          <declname>panel</declname>
+        </param>
+        <briefdescription>
+<para>Power off the panel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">panel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of panel instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="91" column="6" bodyfile="components/panel/hpm_panel.c" bodystart="91" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1a37151cd0c3dab3abeecf00e288c6dfee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_panel_set_backlight</definition>
+        <argsstring>(hpm_panel_t *panel, uint16_t percent)</argsstring>
+        <name>hpm_panel_set_backlight</name>
+        <param>
+          <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref> *</type>
+          <declname>panel</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>percent</declname>
+        </param>
+        <briefdescription>
+<para>Set backlight value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">panel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of panel instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">percent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>percent of backlight [0 - 100] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="97" column="6" bodyfile="components/panel/hpm_panel.c" bodystart="97" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1ade6e9b00983ba55798676caf028fd685" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t hpm_panel_get_backlight</definition>
+        <argsstring>(hpm_panel_t *panel)</argsstring>
+        <name>hpm_panel_get_backlight</name>
+        <param>
+          <type><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref> *</type>
+          <declname>panel</declname>
+        </param>
+        <briefdescription>
+<para>Get backlight value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">panel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of panel instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>percent of backlight [0 - 100] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="109" column="9" bodyfile="components/panel/hpm_panel.c" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1aa89cf49e16950aa0bc733c430d1b33ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_panel_delay_ms</definition>
+        <argsstring>(uint32_t ms)</argsstring>
+        <name>hpm_panel_delay_ms</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>ms</declname>
+        </param>
+        <briefdescription>
+<para>Delay specified milliseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expected delay interval in milliseconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="114" column="6" bodyfile="components/panel/hpm_panel.c" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1ad9d54e80ea8f8fd998b25765a575ca69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_panel_delay_us</definition>
+        <argsstring>(uint32_t us)</argsstring>
+        <name>hpm_panel_delay_us</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>us</declname>
+        </param>
+        <briefdescription>
+<para>Delay specified microseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">us</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expected delay interval in microseconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="119" column="6" bodyfile="components/panel/hpm_panel.c" bodystart="119" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1a9587504f37238ee299739c50cb93f337" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void panel_list_node_init</definition>
+        <argsstring>(panel_list_t *node)</argsstring>
+        <name>panel_list_node_init</name>
+        <param>
+          <type><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="145" column="20" bodyfile="components/panel/hpm_panel.c" bodystart="145" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1a3d8518afab69189b5aff30f1290752e2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void panel_list_del</definition>
+        <argsstring>(panel_list_t *node)</argsstring>
+        <name>panel_list_del</name>
+        <param>
+          <type><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="151" column="20" bodyfile="components/panel/hpm_panel.c" bodystart="151" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1addbb4ab94695eabf28cbab15c1a69b3d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void panel_list_add</definition>
+        <argsstring>(panel_list_t *head, panel_list_t *node)</argsstring>
+        <name>panel_list_add</name>
+        <param>
+          <type><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="157" column="20" bodyfile="components/panel/hpm_panel.c" bodystart="157" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1ada7b1e7e783c469b20d718a8a6afe67a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void panel_list_add_tail</definition>
+        <argsstring>(panel_list_t *head, panel_list_t *node)</argsstring>
+        <name>panel_list_add_tail</name>
+        <param>
+          <type><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="165" column="20" bodyfile="components/panel/hpm_panel.c" bodystart="165" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1ab450df6ee82618397055edc70e6895cc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref> *</type>
+        <definition>static panel_memory_node_t * panel_get_mem_node</definition>
+        <argsstring>(void)</argsstring>
+        <name>panel_get_mem_node</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="176" column="28" bodyfile="components/panel/hpm_panel.c" bodystart="176" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1ac72e2a629143dce6cc9fa099dd50482b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void panel_put_mem_node</definition>
+        <argsstring>(panel_memory_node_t *node)</argsstring>
+        <name>panel_put_mem_node</name>
+        <param>
+          <type><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="190" column="13" bodyfile="components/panel/hpm_panel.c" bodystart="190" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1a9c6803a89ab6f71cf1d590d530fa28b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * hpm_panel_memory_alloc</definition>
+        <argsstring>(hpm_panel_mem_type_t type, uint32_t size)</argsstring>
+        <name>hpm_panel_memory_alloc</name>
+        <param>
+          <type><ref refid="hpm__panel_8h_1aa99409fc15f9115c131ddb5365e9b11d" kindref="member">hpm_panel_mem_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Allocate panel memory of a specified type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>memory type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>memory size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="195" column="6" bodyfile="components/panel/hpm_panel.c" bodystart="195" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1a1a91d680ec1fb477267aba8aace657cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_panel_memory_free</definition>
+        <argsstring>(void *addr)</argsstring>
+        <name>hpm_panel_memory_free</name>
+        <param>
+          <type>void *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+<para>Free panel memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>memory address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="238" column="6" bodyfile="components/panel/hpm_panel.c" bodystart="238" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1af030a0c64d4748705dd83cc1bff9ea6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="hpm__panel_8h_1aa99409fc15f9115c131ddb5365e9b11d" kindref="member">hpm_panel_mem_type_t</ref></type>
+        <definition>hpm_panel_mem_type_t hpm_panel_memory_get_type</definition>
+        <argsstring>(void *addr)</argsstring>
+        <name>hpm_panel_memory_get_type</name>
+        <param>
+          <type>void *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+<para>Get panel memory type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>memory address</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>memory type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="287" column="22" bodyfile="components/panel/hpm_panel.c" bodystart="287" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__panel_8c_1adb510ed50480e59899e7f227c4f6df24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_panel_memory_register</definition>
+        <argsstring>(hpm_panel_mem_type_t type, void *addr, uint32_t size)</argsstring>
+        <name>hpm_panel_memory_register</name>
+        <param>
+          <type><ref refid="hpm__panel_8h_1aa99409fc15f9115c131ddb5365e9b11d" kindref="member">hpm_panel_mem_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Register panel memory block to panel subsystem. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>memory block type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>memory block address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>memory block size</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0: success, other: failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/panel/hpm_panel.c" line="305" column="5" bodyfile="components/panel/hpm_panel.c" bodystart="305" bodyend="342"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2023-2025<sp/>HPMicro</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__panel_8h" kindref="compound">hpm_panel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_clock_drv.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/><ref refid="hpm__panel_8c_1a44493c5a4f40e017ad9d8aa123d5ed0b" kindref="member">panel_tm070rdh13</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/><ref refid="hpm__panel_8c_1a13b2071049cc62567942da13a1f85dfd" kindref="member">panel_cc10128007</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/><ref refid="hpm__panel_8c_1a4f4afa750bfa42780dac94953458c981" kindref="member">panel_mc10128007_31b</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/><ref refid="hpm__panel_8c_1ac3ebeed552af8322007042c40321e97b" kindref="member">panel_tm103xdgp01</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/>*<ref refid="structpanel__list" kindref="compound">panel_list</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CONFIG_PANEL_RGB_TM070RDH13)<sp/>&amp;&amp;<sp/>CONFIG_PANEL_RGB_TM070RDH13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;<ref refid="hpm__panel_8c_1a44493c5a4f40e017ad9d8aa123d5ed0b" kindref="member">panel_tm070rdh13</ref>,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CONFIG_PANEL_LVDS_CC10128007)<sp/>&amp;&amp;<sp/>CONFIG_PANEL_LVDS_CC10128007</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;<ref refid="hpm__panel_8c_1a13b2071049cc62567942da13a1f85dfd" kindref="member">panel_cc10128007</ref>,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CONFIG_PANEL_MIPI_MC10128007_31B)<sp/>&amp;&amp;<sp/>CONFIG_PANEL_MIPI_MC10128007_31B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;<ref refid="hpm__panel_8c_1a4f4afa750bfa42780dac94953458c981" kindref="member">panel_mc10128007_31b</ref>,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CONFIG_PANEL_LVDS_TM103XDGP01)<sp/>&amp;&amp;<sp/>CONFIG_PANEL_LVDS_TM103XDGP01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;<ref refid="hpm__panel_8c_1ac3ebeed552af8322007042c40321e97b" kindref="member">panel_tm103xdgp01</ref>,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/>*<ref refid="hpm__panel_8c_1a5f49fe905e10e7da150ecb3fb988243d" kindref="member">hpm_panel_find_device_default</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structpanel__list" kindref="compound">panel_list</ref>)<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpanel__list" kindref="compound">panel_list</ref>[0];</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/>*<ref refid="hpm__panel_8c_1aaa49b6d94ae528494ca5b27343aaa69c" kindref="member">hpm_panel_find_device</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structpanel__list" kindref="compound">panel_list</ref>)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structpanel__list" kindref="compound">panel_list</ref>[0]);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>i++)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp(<ref refid="structpanel__list" kindref="compound">panel_list</ref>[i]-&gt;name,<sp/>name))</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpanel__list" kindref="compound">panel_list</ref>[i];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="hpm__panel_8c_1a3a5fa859e400c9930aa100a322505cad" kindref="member">hpm_panel_get_name</ref>(<ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/>*panel)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>panel-&gt;<ref refid="structhpm__panel_1a70a7994f8fbf56b9b6c993a8f2ef443a" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8h_1a7bcd509fd4d6697ced5376ab368334d3" kindref="member">hpm_panel_timing_t</ref><sp/>*<ref refid="hpm__panel_8c_1aaf8550bc7ed4c7c50cdece54bcd66983" kindref="member">hpm_panel_get_timing</ref>(<ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/>*panel)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;panel-&gt;<ref refid="structhpm__panel_1ac873b90c63b8952521ef2d29143e3bff" kindref="member">timing</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="hpm__panel_8h_1a6bcbee3b0dab5879c329e5d4cd855888" kindref="member">hpm_panel_if_type_t</ref><sp/><ref refid="hpm__panel_8c_1a2c50b1eee369efa91fb93637a6adc7ab" kindref="member">hpm_panel_get_if_type</ref>(<ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/>*panel)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>panel-&gt;<ref refid="structhpm__panel_1a5aed835423ffc22cf404a9e06f3296a6" kindref="member">if_type</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1a5858271196f94f562300ee5834b6ff8c" kindref="member">hpm_panel_register_interface</ref>(<ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/>*panel,<sp/><ref refid="hpm__panel_8h_1add6c20fa922fb67498fe50b44983d5ce" kindref="member">hpm_panel_hw_interface_t</ref><sp/>*hw_if)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hw_if)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(&amp;panel-&gt;<ref refid="structhpm__panel_1a8b0f988109a60bc272edb034a82b6110" kindref="member">hw_if</ref>,<sp/>hw_if,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*hw_if));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1a30dac453e8169ca96ddceb9c014cb5a9" kindref="member">hpm_panel_reset</ref>(<ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/>*panel)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(panel-&gt;<ref refid="structhpm__panel_1a09a8d4c18fa9956ac7cb66dad83c5129" kindref="member">funcs</ref>.<ref refid="structhpm__panel__funcs_1a3a605928271b567b2fdac7049f528632" kindref="member">reset</ref>)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panel-&gt;<ref refid="structhpm__panel_1a09a8d4c18fa9956ac7cb66dad83c5129" kindref="member">funcs</ref>.<ref refid="structhpm__panel__funcs_1a3a605928271b567b2fdac7049f528632" kindref="member">reset</ref>(panel);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1a95f73d7d67c7e9b471e3c269eb72ce2d" kindref="member">hpm_panel_init</ref>(<ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/>*panel)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(panel-&gt;<ref refid="structhpm__panel_1a09a8d4c18fa9956ac7cb66dad83c5129" kindref="member">funcs</ref>.<ref refid="structhpm__panel__funcs_1add22016107e005a45f8a5f158c035024" kindref="member">init</ref>)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panel-&gt;<ref refid="structhpm__panel_1a09a8d4c18fa9956ac7cb66dad83c5129" kindref="member">funcs</ref>.<ref refid="structhpm__panel__funcs_1add22016107e005a45f8a5f158c035024" kindref="member">init</ref>(panel);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1a140a21f4b95f362df5b5873d3fd0e626" kindref="member">hpm_panel_power_on</ref>(<ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/>*panel)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(panel-&gt;<ref refid="structhpm__panel_1a09a8d4c18fa9956ac7cb66dad83c5129" kindref="member">funcs</ref>.<ref refid="structhpm__panel__funcs_1a63620cff55432ca592fb4b0965f00479" kindref="member">power_on</ref>)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panel-&gt;<ref refid="structhpm__panel_1a09a8d4c18fa9956ac7cb66dad83c5129" kindref="member">funcs</ref>.<ref refid="structhpm__panel__funcs_1a63620cff55432ca592fb4b0965f00479" kindref="member">power_on</ref>(panel);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1a837bf394a63288ec289c950bc8b4084a" kindref="member">hpm_panel_power_off</ref>(<ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/>*panel)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(panel-&gt;<ref refid="structhpm__panel_1a09a8d4c18fa9956ac7cb66dad83c5129" kindref="member">funcs</ref>.<ref refid="structhpm__panel__funcs_1aef8e78d8cb9b8b6d0a8b48fac8e81287" kindref="member">power_off</ref>)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panel-&gt;<ref refid="structhpm__panel_1a09a8d4c18fa9956ac7cb66dad83c5129" kindref="member">funcs</ref>.<ref refid="structhpm__panel__funcs_1aef8e78d8cb9b8b6d0a8b48fac8e81287" kindref="member">power_off</ref>(panel);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1a37151cd0c3dab3abeecf00e288c6dfee" kindref="member">hpm_panel_set_backlight</ref>(<ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/>*panel,<sp/>uint16_t<sp/>percent)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(percent<sp/>&gt;<sp/>100)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>percent<sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(panel-&gt;<ref refid="structhpm__panel_1a8b0f988109a60bc272edb034a82b6110" kindref="member">hw_if</ref>.<ref refid="structhpm__panel__hw__interface_1a206afc5fa0495e0c1de09ace725d784f" kindref="member">set_backlight</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panel-&gt;<ref refid="structhpm__panel_1a306e0e06a2d08a6e2988832243aac1a8" kindref="member">state</ref>.<ref refid="structhpm__panel__state_1a7163a522c32dd28c0a72368e63d98db3" kindref="member">backlight_percent</ref><sp/>!=<sp/>percent)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panel-&gt;<ref refid="structhpm__panel_1a8b0f988109a60bc272edb034a82b6110" kindref="member">hw_if</ref>.<ref refid="structhpm__panel__hw__interface_1a206afc5fa0495e0c1de09ace725d784f" kindref="member">set_backlight</ref>(percent);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>panel-&gt;<ref refid="structhpm__panel_1a306e0e06a2d08a6e2988832243aac1a8" kindref="member">state</ref>.<ref refid="structhpm__panel__state_1a7163a522c32dd28c0a72368e63d98db3" kindref="member">backlight_percent</ref><sp/>=<sp/>percent;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">uint8_t<sp/><ref refid="hpm__panel_8c_1ade6e9b00983ba55798676caf028fd685" kindref="member">hpm_panel_get_backlight</ref>(<ref refid="hpm__panel_8h_1a7862798a9cdfbf3622dc98a0273ee7e8" kindref="member">hpm_panel_t</ref><sp/>*panel)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>panel-&gt;<ref refid="structhpm__panel_1a306e0e06a2d08a6e2988832243aac1a8" kindref="member">state</ref>.<ref refid="structhpm__panel__state_1a7163a522c32dd28c0a72368e63d98db3" kindref="member">backlight_percent</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1aa89cf49e16950aa0bc733c430d1b33ce" kindref="member">hpm_panel_delay_ms</ref>(uint32_t<sp/>ms)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__clock__interface_1gacf0a61151ba85c95ddb228068e42bb2a" kindref="member">clock_cpu_delay_ms</ref>(ms);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1ad9d54e80ea8f8fd998b25765a575ca69" kindref="member">hpm_panel_delay_us</ref>(uint32_t<sp/>us)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__clock__interface_1ga794cf502e086e50113536b05f4171800" kindref="member">clock_cpu_delay_us</ref>(us);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="structpanel__list" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpanel__list" kindref="compound">panel_list</ref><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpanel__list" kindref="compound">panel_list</ref><sp/>*<ref refid="structpanel__list_1a54616ef5d71db5d0c4bdeac1c2be0706" kindref="member">pre</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpanel__list" kindref="compound">panel_list</ref><sp/>*<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}<sp/><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="structpanel__memory__node" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpanel__memory__node" kindref="compound">panel_memory_node</ref><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref><sp/><ref refid="structpanel__memory__node_1aa6d326b50ab971f9481b1e030dc88e5b" kindref="member">list</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structpanel__memory__node_1a6cf0aee252c1f9726e987b390ff313b4" kindref="member">pool_addr</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structpanel__memory__node_1ad44a39283b07896d3186d68da0f10648" kindref="member">addr</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpanel__memory__node_1aa19c2cd0f35f9789fb3f15c518cb09bb" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpanel__memory__node_1ad49de11a58bfb6f12561ff88c326e8ca" kindref="member">is_alloced</ref>:<sp/>1;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpanel__memory__node_1abf089d616e46d0a4e31ecedf09d64258" kindref="member">is_used</ref>:<sp/>1;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}<sp/><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PANEL_ROUNDUP(x,<sp/>y)<sp/>((((x)<sp/>+<sp/>((y)<sp/>-<sp/>1))<sp/>/<sp/>(y))<sp/>*<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PANEL_MEM_ALIGN<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PANEL_MEM_NODE_NUM<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/><ref refid="hpm__panel_8c_1a8f6bfdb6c9e1ec27fa38b0f4e57fdc05" kindref="member">panel_mem_nodes</ref>[<ref refid="hpm__panel_8c_1a154805590db01bfc7910329e92f09689" kindref="member">PANEL_MEM_NODE_NUM</ref>];</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref><sp/><ref refid="hpm__panel_8c_1a0462d5ce5c4b0269e3f1d8b5f90dab7e" kindref="member">panel_mem_pool</ref>[<ref refid="hpm__panel_8h_1a7f71a904e44d9ec2b7bce5c58d87dcdfa24adba53bd5b750b7a2ef7ce7b173605" kindref="member">HPM_PANEL_MEM_TYPE_MAX</ref>];</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1a9587504f37238ee299739c50cb93f337" kindref="member">panel_list_node_init</ref>(<ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref><sp/>*node)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref><sp/>=<sp/>node;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structpanel__list_1a54616ef5d71db5d0c4bdeac1c2be0706" kindref="member">pre</ref><sp/>=<sp/>node;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1a3d8518afab69189b5aff30f1290752e2" kindref="member">panel_list_del</ref>(<ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref><sp/>*node)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structpanel__list_1a54616ef5d71db5d0c4bdeac1c2be0706" kindref="member">pre</ref>-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref><sp/>=<sp/>node-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref>-&gt;<ref refid="structpanel__list_1a54616ef5d71db5d0c4bdeac1c2be0706" kindref="member">pre</ref><sp/>=<sp/>node-&gt;<ref refid="structpanel__list_1a54616ef5d71db5d0c4bdeac1c2be0706" kindref="member">pre</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1addbb4ab94695eabf28cbab15c1a69b3d" kindref="member">panel_list_add</ref>(<ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref><sp/>*head,<sp/><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref><sp/>*node)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref><sp/>=<sp/>head-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structpanel__list_1a54616ef5d71db5d0c4bdeac1c2be0706" kindref="member">pre</ref><sp/>=<sp/>head;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>head-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref>-&gt;<ref refid="structpanel__list_1a54616ef5d71db5d0c4bdeac1c2be0706" kindref="member">pre</ref><sp/>=<sp/>node;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>head-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref><sp/>=<sp/>node;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1ada7b1e7e783c469b20d718a8a6afe67a" kindref="member">panel_list_add_tail</ref>(<ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref><sp/>*head,<sp/><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref><sp/>*node)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref><sp/>=<sp/>head;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structpanel__list_1a54616ef5d71db5d0c4bdeac1c2be0706" kindref="member">pre</ref><sp/>=<sp/>head-&gt;<ref refid="structpanel__list_1a54616ef5d71db5d0c4bdeac1c2be0706" kindref="member">pre</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>head-&gt;<ref refid="structpanel__list_1a54616ef5d71db5d0c4bdeac1c2be0706" kindref="member">pre</ref>-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref><sp/>=<sp/>node;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>head-&gt;<ref refid="structpanel__list_1a54616ef5d71db5d0c4bdeac1c2be0706" kindref="member">pre</ref><sp/>=<sp/>node;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>panel_list_for_each(node,<sp/>head)\</highlight></codeline>
+<codeline lineno="174"><highlight class="preprocessor">for<sp/>(panel_list_t<sp/>*node<sp/>=<sp/>(head)-&gt;nxt;<sp/>node<sp/>!=<sp/>(head);<sp/>node<sp/>=<sp/>node-&gt;nxt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*<ref refid="hpm__panel_8c_1ab450df6ee82618397055edc70e6895cc" kindref="member">panel_get_mem_node</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*node<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="hpm__panel_8c_1a154805590db01bfc7910329e92f09689" kindref="member">PANEL_MEM_NODE_NUM</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="hpm__panel_8c_1a8f6bfdb6c9e1ec27fa38b0f4e57fdc05" kindref="member">panel_mem_nodes</ref>[i].is_used)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node<sp/>=<sp/>&amp;<ref refid="hpm__panel_8c_1a8f6bfdb6c9e1ec27fa38b0f4e57fdc05" kindref="member">panel_mem_nodes</ref>[i];</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structpanel__memory__node_1abf089d616e46d0a4e31ecedf09d64258" kindref="member">is_used</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>node;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1ac72e2a629143dce6cc9fa099dd50482b" kindref="member">panel_put_mem_node</ref>(<ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*node)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structpanel__memory__node_1abf089d616e46d0a4e31ecedf09d64258" kindref="member">is_used</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="hpm__panel_8c_1a9c6803a89ab6f71cf1d590d530fa28b6" kindref="member">hpm_panel_memory_alloc</ref>(<ref refid="hpm__panel_8h_1aa99409fc15f9115c131ddb5365e9b11d" kindref="member">hpm_panel_mem_type_t</ref><sp/>type,<sp/>uint32_t<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref><sp/>*mem_pool;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*_node<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*mem_node<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*split_mem_node;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>&gt;<sp/><ref refid="hpm__panel_8h_1a7f71a904e44d9ec2b7bce5c58d87dcdfa24adba53bd5b750b7a2ef7ce7b173605" kindref="member">HPM_PANEL_MEM_TYPE_MAX</ref>)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>mem_pool<sp/>=<sp/>&amp;<ref refid="hpm__panel_8c_1a0462d5ce5c4b0269e3f1d8b5f90dab7e" kindref="member">panel_mem_pool</ref>[type];</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mem_pool-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref><sp/>||<sp/>mem_pool-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref><sp/>==<sp/>mem_pool)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>=<sp/><ref refid="hpm__panel_8c_1a35b01da744aabb9752b02f09cafca145" kindref="member">PANEL_ROUNDUP</ref>(<ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>,<sp/><ref refid="hpm__panel_8c_1a3438a2bc0e7eb1f8eec30e97bc9fe56b" kindref="member">PANEL_MEM_ALIGN</ref>);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a9a82283778ee31abfbf66143fbefefd9" kindref="member">panel_list_for_each</ref>(node,<sp/>mem_pool)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_node<sp/>=<sp/>(<ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*)node;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_node-&gt;<ref refid="structpanel__memory__node_1ad49de11a58bfb6f12561ff88c326e8ca" kindref="member">is_alloced</ref><sp/>&amp;&amp;<sp/>_node-&gt;<ref refid="structpanel__memory__node_1aa19c2cd0f35f9789fb3f15c518cb09bb" kindref="member">size</ref><sp/>&gt;=<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mem_node<sp/>=<sp/>_node;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mem_node-&gt;<ref refid="structpanel__memory__node_1ad49de11a58bfb6f12561ff88c326e8ca" kindref="member">is_alloced</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mem_node)</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mem_node-&gt;<ref refid="structpanel__memory__node_1aa19c2cd0f35f9789fb3f15c518cb09bb" kindref="member">size</ref><sp/>&gt;=<sp/>(<ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/><ref refid="hpm__panel_8c_1a3438a2bc0e7eb1f8eec30e97bc9fe56b" kindref="member">PANEL_MEM_ALIGN</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>split_mem_node<sp/>=<sp/><ref refid="hpm__panel_8c_1ab450df6ee82618397055edc70e6895cc" kindref="member">panel_get_mem_node</ref>();</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(split_mem_node)<sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>split_mem_node-&gt;<ref refid="structpanel__memory__node_1ad44a39283b07896d3186d68da0f10648" kindref="member">addr</ref><sp/>=<sp/>mem_node-&gt;<ref refid="structpanel__memory__node_1ad44a39283b07896d3186d68da0f10648" kindref="member">addr</ref><sp/>+<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>split_mem_node-&gt;<ref refid="structpanel__memory__node_1aa19c2cd0f35f9789fb3f15c518cb09bb" kindref="member">size</ref><sp/>=<sp/>mem_node-&gt;<ref refid="structpanel__memory__node_1aa19c2cd0f35f9789fb3f15c518cb09bb" kindref="member">size</ref><sp/>-<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>split_mem_node-&gt;<ref refid="structpanel__memory__node_1a6cf0aee252c1f9726e987b390ff313b4" kindref="member">pool_addr</ref><sp/>=<sp/>mem_node-&gt;<ref refid="structpanel__memory__node_1a6cf0aee252c1f9726e987b390ff313b4" kindref="member">pool_addr</ref>;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>split_mem_node-&gt;<ref refid="structpanel__memory__node_1ad49de11a58bfb6f12561ff88c326e8ca" kindref="member">is_alloced</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a9587504f37238ee299739c50cb93f337" kindref="member">panel_list_node_init</ref>(&amp;split_mem_node-&gt;<ref refid="structpanel__memory__node_1aa6d326b50ab971f9481b1e030dc88e5b" kindref="member">list</ref>);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1addbb4ab94695eabf28cbab15c1a69b3d" kindref="member">panel_list_add</ref>(&amp;mem_node-&gt;<ref refid="structpanel__memory__node_1aa6d326b50ab971f9481b1e030dc88e5b" kindref="member">list</ref>,<sp/>&amp;split_mem_node-&gt;<ref refid="structpanel__memory__node_1aa6d326b50ab971f9481b1e030dc88e5b" kindref="member">list</ref>);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mem_node-&gt;<ref refid="structpanel__memory__node_1aa19c2cd0f35f9789fb3f15c518cb09bb" kindref="member">size</ref><sp/>=<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)mem_node-&gt;<ref refid="structpanel__memory__node_1ad44a39283b07896d3186d68da0f10648" kindref="member">addr</ref>;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1a1a91d680ec1fb477267aba8aace657cc" kindref="member">hpm_panel_memory_free</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*addr)</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref><sp/>*mem_pool;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*_node<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*mem_node<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*pre_mem_node<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*nxt_mem_node<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="hpm__panel_8h_1a7f71a904e44d9ec2b7bce5c58d87dcdfa24adba53bd5b750b7a2ef7ce7b173605" kindref="member">HPM_PANEL_MEM_TYPE_MAX</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mem_pool<sp/>=<sp/>&amp;<ref refid="hpm__panel_8c_1a0462d5ce5c4b0269e3f1d8b5f90dab7e" kindref="member">panel_mem_pool</ref>[i];</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mem_pool-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref><sp/>||<sp/>mem_pool-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref><sp/>==<sp/>mem_pool)</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a9a82283778ee31abfbf66143fbefefd9" kindref="member">panel_list_for_each</ref>(node,<sp/>mem_pool)<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_node<sp/>=<sp/>(<ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*)node;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)_node-&gt;<ref refid="structpanel__memory__node_1ad44a39283b07896d3186d68da0f10648" kindref="member">addr</ref><sp/>==<sp/>addr<sp/>&amp;&amp;<sp/>_node-&gt;<ref refid="structpanel__memory__node_1ad49de11a58bfb6f12561ff88c326e8ca" kindref="member">is_alloced</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mem_node<sp/>=<sp/>_node;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mem_node-&gt;<ref refid="structpanel__memory__node_1ad49de11a58bfb6f12561ff88c326e8ca" kindref="member">is_alloced</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/><ref refid="hpm__panel_8h_1a7f71a904e44d9ec2b7bce5c58d87dcdfa24adba53bd5b750b7a2ef7ce7b173605" kindref="member">HPM_PANEL_MEM_TYPE_MAX</ref>;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mem_node)</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>nxt_mem_node<sp/>=<sp/>(<ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*)mem_node-&gt;<ref refid="structpanel__memory__node_1aa6d326b50ab971f9481b1e030dc88e5b" kindref="member">list</ref>.<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref>;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(&amp;nxt_mem_node-&gt;<ref refid="structpanel__memory__node_1aa6d326b50ab971f9481b1e030dc88e5b" kindref="member">list</ref><sp/>!=<sp/>mem_pool<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nxt_mem_node-&gt;<ref refid="structpanel__memory__node_1a6cf0aee252c1f9726e987b390ff313b4" kindref="member">pool_addr</ref><sp/>==<sp/>mem_node-&gt;<ref refid="structpanel__memory__node_1a6cf0aee252c1f9726e987b390ff313b4" kindref="member">pool_addr</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!nxt_mem_node-&gt;<ref refid="structpanel__memory__node_1ad49de11a58bfb6f12561ff88c326e8ca" kindref="member">is_alloced</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mem_node-&gt;<ref refid="structpanel__memory__node_1aa19c2cd0f35f9789fb3f15c518cb09bb" kindref="member">size</ref><sp/>+=<sp/>nxt_mem_node-&gt;<ref refid="structpanel__memory__node_1aa19c2cd0f35f9789fb3f15c518cb09bb" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a3d8518afab69189b5aff30f1290752e2" kindref="member">panel_list_del</ref>(&amp;nxt_mem_node-&gt;<ref refid="structpanel__memory__node_1aa6d326b50ab971f9481b1e030dc88e5b" kindref="member">list</ref>);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1ac72e2a629143dce6cc9fa099dd50482b" kindref="member">panel_put_mem_node</ref>(nxt_mem_node);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="275"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Merge<sp/>to<sp/>prev<sp/>memory<sp/>node<sp/>if<sp/>prev<sp/>node<sp/>is<sp/>free.</highlight></codeline>
+<codeline lineno="276"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>pre_mem_node<sp/>=<sp/>(<ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*)mem_node-&gt;<ref refid="structpanel__memory__node_1aa6d326b50ab971f9481b1e030dc88e5b" kindref="member">list</ref>.<ref refid="structpanel__list_1a54616ef5d71db5d0c4bdeac1c2be0706" kindref="member">pre</ref>;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(&amp;pre_mem_node-&gt;<ref refid="structpanel__memory__node_1aa6d326b50ab971f9481b1e030dc88e5b" kindref="member">list</ref><sp/>!=<sp/>mem_pool<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pre_mem_node-&gt;<ref refid="structpanel__memory__node_1a6cf0aee252c1f9726e987b390ff313b4" kindref="member">pool_addr</ref><sp/>==<sp/>mem_node-&gt;<ref refid="structpanel__memory__node_1a6cf0aee252c1f9726e987b390ff313b4" kindref="member">pool_addr</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!pre_mem_node-&gt;<ref refid="structpanel__memory__node_1ad49de11a58bfb6f12561ff88c326e8ca" kindref="member">is_alloced</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pre_mem_node-&gt;<ref refid="structpanel__memory__node_1aa19c2cd0f35f9789fb3f15c518cb09bb" kindref="member">size</ref><sp/>+=<sp/>mem_node-&gt;<ref refid="structpanel__memory__node_1aa19c2cd0f35f9789fb3f15c518cb09bb" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a3d8518afab69189b5aff30f1290752e2" kindref="member">panel_list_del</ref>(&amp;mem_node-&gt;<ref refid="structpanel__memory__node_1aa6d326b50ab971f9481b1e030dc88e5b" kindref="member">list</ref>);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1ac72e2a629143dce6cc9fa099dd50482b" kindref="member">panel_put_mem_node</ref>(mem_node);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><ref refid="hpm__panel_8h_1aa99409fc15f9115c131ddb5365e9b11d" kindref="member">hpm_panel_mem_type_t</ref><sp/><ref refid="hpm__panel_8c_1af030a0c64d4748705dd83cc1bff9ea6e" kindref="member">hpm_panel_memory_get_type</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*addr)</highlight></codeline>
+<codeline lineno="288"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*mem_node;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8h_1aa99409fc15f9115c131ddb5365e9b11d" kindref="member">hpm_panel_mem_type_t</ref><sp/>type<sp/>=<sp/><ref refid="hpm__panel_8h_1a7f71a904e44d9ec2b7bce5c58d87dcdfa0bba963c6e47cd02f9a76d3c4ec807bd" kindref="member">HPM_PANEL_MEM_TYPE_UNKNOWN</ref>;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="hpm__panel_8h_1a7f71a904e44d9ec2b7bce5c58d87dcdfa24adba53bd5b750b7a2ef7ce7b173605" kindref="member">HPM_PANEL_MEM_TYPE_MAX</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a9a82283778ee31abfbf66143fbefefd9" kindref="member">panel_list_for_each</ref>(node,<sp/>&amp;<ref refid="hpm__panel_8c_1a0462d5ce5c4b0269e3f1d8b5f90dab7e" kindref="member">panel_mem_pool</ref>[i])<sp/>{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mem_node<sp/>=<sp/>(<ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*)node;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)mem_node-&gt;<ref refid="structpanel__memory__node_1ad44a39283b07896d3186d68da0f10648" kindref="member">addr</ref><sp/>==<sp/>addr)<sp/>{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/>(<ref refid="hpm__panel_8h_1aa99409fc15f9115c131ddb5365e9b11d" kindref="member">hpm_panel_mem_type_t</ref>)i;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/><ref refid="hpm__panel_8h_1a7f71a904e44d9ec2b7bce5c58d87dcdfa24adba53bd5b750b7a2ef7ce7b173605" kindref="member">HPM_PANEL_MEM_TYPE_MAX</ref>;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__panel_8c_1adb510ed50480e59899e7f227c4f6df24" kindref="member">hpm_panel_memory_register</ref>(<ref refid="hpm__panel_8h_1aa99409fc15f9115c131ddb5365e9b11d" kindref="member">hpm_panel_mem_type_t</ref><sp/>type,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*addr,<sp/>uint32_t<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>)</highlight></codeline>
+<codeline lineno="306"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1ab64b8188ee8f44d5fef86e36061159cf" kindref="member">panel_list_t</ref><sp/>*mem_pool;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*mem_node;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>&gt;<sp/><ref refid="hpm__panel_8h_1a7f71a904e44d9ec2b7bce5c58d87dcdfa24adba53bd5b750b7a2ef7ce7b173605" kindref="member">HPM_PANEL_MEM_TYPE_MAX</ref>)</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>mem_pool<sp/>=<sp/>&amp;<ref refid="hpm__panel_8c_1a0462d5ce5c4b0269e3f1d8b5f90dab7e" kindref="member">panel_mem_pool</ref>[type];</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mem_pool-&gt;<ref refid="structpanel__list_1aa31dc4cf150b32ce03b1e2818e6ffe5b" kindref="member">nxt</ref><sp/>||<sp/>!mem_pool-&gt;<ref refid="structpanel__list_1a54616ef5d71db5d0c4bdeac1c2be0706" kindref="member">pre</ref>)</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a9587504f37238ee299739c50cb93f337" kindref="member">panel_list_node_init</ref>(mem_pool);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>aligned_addr<sp/>=<sp/><ref refid="hpm__panel_8c_1a35b01da744aabb9752b02f09cafca145" kindref="member">PANEL_ROUNDUP</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)addr,<sp/><ref refid="hpm__panel_8c_1a3438a2bc0e7eb1f8eec30e97bc9fe56b" kindref="member">PANEL_MEM_ALIGN</ref>);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>diff<sp/>=<sp/>aligned_addr<sp/>-<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>long)addr;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="321"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>addr<sp/>exist</highlight></codeline>
+<codeline lineno="322"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a9a82283778ee31abfbf66143fbefefd9" kindref="member">panel_list_for_each</ref>(node,<sp/>mem_pool)<sp/>{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mem_node<sp/>=<sp/>(<ref refid="hpm__panel_8c_1a510b7d3872c1d9c8aae9e7ed41793523" kindref="member">panel_memory_node_t</ref><sp/>*)node;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mem_node-&gt;<ref refid="structpanel__memory__node_1ad44a39283b07896d3186d68da0f10648" kindref="member">addr</ref><sp/>==<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)aligned_addr)<sp/>{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>mem_node<sp/>=<sp/><ref refid="hpm__panel_8c_1ab450df6ee82618397055edc70e6895cc" kindref="member">panel_get_mem_node</ref>();</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mem_node)</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>mem_node-&gt;<ref refid="structpanel__memory__node_1a6cf0aee252c1f9726e987b390ff313b4" kindref="member">pool_addr</ref><sp/>=<sp/>addr;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/>mem_node-&gt;<ref refid="structpanel__memory__node_1ad44a39283b07896d3186d68da0f10648" kindref="member">addr</ref><sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)aligned_addr;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>mem_node-&gt;<ref refid="structpanel__memory__node_1aa19c2cd0f35f9789fb3f15c518cb09bb" kindref="member">size</ref><sp/>=<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>-<sp/>diff;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>mem_node-&gt;<ref refid="structpanel__memory__node_1ad49de11a58bfb6f12561ff88c326e8ca" kindref="member">is_alloced</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1a9587504f37238ee299739c50cb93f337" kindref="member">panel_list_node_init</ref>(&amp;mem_node-&gt;<ref refid="structpanel__memory__node_1aa6d326b50ab971f9481b1e030dc88e5b" kindref="member">list</ref>);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__panel_8c_1ada7b1e7e783c469b20d718a8a6afe67a" kindref="member">panel_list_add_tail</ref>(mem_pool,<sp/>&amp;mem_node-&gt;<ref refid="structpanel__memory__node_1aa6d326b50ab971f9481b1e030dc88e5b" kindref="member">list</ref>);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="components/panel/hpm_panel.c"/>
+  </compounddef>
+</doxygen>

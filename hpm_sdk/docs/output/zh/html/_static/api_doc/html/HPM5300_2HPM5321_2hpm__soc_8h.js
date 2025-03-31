@@ -93,7 +93,6 @@ var HPM5300_2HPM5321_2hpm__soc_8h =
     [ "HPM_PUART_BASE", "HPM5300_2HPM5321_2hpm__soc_8h.html#a95eff3c2b04b5895031b418a50c5d13c", null ],
     [ "HPM_RNG", "HPM5300_2HPM5321_2hpm__soc_8h.html#ace0dbcc15372272733f241cb4cf3a49d", null ],
     [ "HPM_RNG_BASE", "HPM5300_2HPM5321_2hpm__soc_8h.html#a5901361ed4ab105653999e1749ec2756", null ],
-    [ "HPM_ROMC_BASE", "HPM5300_2HPM5321_2hpm__soc_8h.html#a5032a1a24c5caa3e4e918d790c9cf99c", null ],
     [ "HPM_SDP", "HPM5300_2HPM5321_2hpm__soc_8h.html#a1d6f4c848d7084fe4ca6dea80e98e2d0", null ],
     [ "HPM_SDP_BASE", "HPM5300_2HPM5321_2hpm__soc_8h.html#a2166f337f81d4ad6896b0f5557998672", null ],
     [ "HPM_SEC", "HPM5300_2HPM5321_2hpm__soc_8h.html#a58a04a2772fc6be220a0d76a11da80a8", null ],

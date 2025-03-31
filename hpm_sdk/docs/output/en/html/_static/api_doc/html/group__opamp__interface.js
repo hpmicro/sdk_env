@@ -63,14 +63,14 @@ var group__opamp__interface =
       [ "inm_pad_vim0", "group__opamp__interface.html#gga397f33cabd712c1ff32b129076321cfdafe2de68846167fa32d768b57cb864aef", null ],
       [ "inm_pad_vim1", "group__opamp__interface.html#gga397f33cabd712c1ff32b129076321cfda9eaad81c0b6cbf4fbc9b656ae4d79fab", null ],
       [ "inm_pad_vim2", "group__opamp__interface.html#gga397f33cabd712c1ff32b129076321cfdab94658844a2ce6ad91198df184b9a31f", null ],
-      [ "inm_pad_dac", "group__opamp__interface.html#gga397f33cabd712c1ff32b129076321cfda048e644071a8e4cbc1490933af0cd9ab", null ],
+      [ "inm_pad_vim3", "group__opamp__interface.html#gga397f33cabd712c1ff32b129076321cfda4da3ba8c4d9a766fae2432c9942da2c0", null ],
       [ "inm_pad_floating", "group__opamp__interface.html#gga397f33cabd712c1ff32b129076321cfda31b38775292450cbf8161bcaf4e30d6e", null ]
     ] ],
     [ "opamp_inp_pad_t", "group__opamp__interface.html#ga4e802c83d809f8054a6b502df85620ad", [
       [ "inp_pad_vip0", "group__opamp__interface.html#gga4e802c83d809f8054a6b502df85620ada046a9575d8507089729e60e9c9a3f0f4", null ],
       [ "inp_pad_vip1", "group__opamp__interface.html#gga4e802c83d809f8054a6b502df85620adafaaf23fa72c2a6f6b7bfc17059741885", null ],
       [ "inp_pad_vip2", "group__opamp__interface.html#gga4e802c83d809f8054a6b502df85620adac5bc06acea2e7744366abf6d2f0ef521", null ],
-      [ "inp_pad_dac", "group__opamp__interface.html#gga4e802c83d809f8054a6b502df85620ada7164a7ce0f04549f9560b99985100e0d", null ],
+      [ "inp_pad_vip3", "group__opamp__interface.html#gga4e802c83d809f8054a6b502df85620ada069db746bc478f6fc6c8f19d733365c6", null ],
       [ "inp_pad_vsupply_x_0_25", "group__opamp__interface.html#gga4e802c83d809f8054a6b502df85620adab9ab1541a670fe9772a662cead3bb6f4", null ],
       [ "inp_pad_vsupply_x_0_5", "group__opamp__interface.html#gga4e802c83d809f8054a6b502df85620adadc57b1cbc5509d00f5b07315604978b1", null ],
       [ "inp_pad_vsupply_x_0_75", "group__opamp__interface.html#gga4e802c83d809f8054a6b502df85620adaaa811145b5e1d579126ab9258c1283e1", null ],

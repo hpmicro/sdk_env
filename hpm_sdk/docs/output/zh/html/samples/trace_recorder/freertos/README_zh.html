@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>45.1. Trace Recorder FreeRTOS &mdash; HPMico Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="45.2. Trace Recorder RT-Thread" href="../rtthread-nano/README_zh.html" />
+    <link rel="prev" title="45. Trace Recorder" href="../index_zh.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../boards/index_zh.html">开发板介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../components/index_zh.html">组件</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index_zh.html">例程</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../audio_codec/index_zh.html">1. Audio Codec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../canopen/README_zh.html">2. CANOPEN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryrb/README_zh.html">3. CherryRB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherrysh/index_zh.html">4. CherrySH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryusb/index_zh.html">5. CherryUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coremark/README_zh.html">6. CoreMark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dhrystone/README_zh.html">7. Dhrystone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dma_manager/README_zh.html">8. DMA Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dsp/README_zh.html">9. DSP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dual_panel/README_zh.html">10. DUAL_PANEL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../eeprom_emulation/index_zh.html">11. EEPROM Emulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ethercat/index_zh.html">12. EtherCAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freemaster/README_zh.html">13. Freemaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hello_world/README_zh.html">14. Hello World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hpm_math/index_zh.html">15. HPM Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2c_components/index_zh.html">16. I2C Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2s_emulation/README_zh.html">17. SPI模拟I2S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image/index_zh.html">18. IMAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lvgl/index_zh.html">19. LVGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lwip/index_zh.html">20. lwIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mbedtls/README_zh.html">21. Mbedtls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../memstress/index_zh.html">22. Memory Stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../microros/index_zh.html">23. Microros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modbus/index_zh.html">24. Modbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motor_ctrl/index_zh.html">25. HPM Motor Ctrl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multicore/index_zh.html">26. Multicore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opener/index_zh.html">27. OpENer Ethernet/IP协议栈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pmbus/index_zh.html">28. PMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../power_mode_switch/README_zh.html">29. Power Mode Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rgb_led/README_zh.html">30. RGB LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rom_api/index_zh.html">31. ROM API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rtos/index_zh.html">32. RTOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rvbacktrace/index_zh.html">33. Rvbacktrace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../segger_rtt/README_zh.html">34. Segger RTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../segment_led_key/README_zh.html">35. SEGMENT LED KEY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smbus/index_zh.html">36. SMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_components/index_zh.html">37. SPI Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_sdcard/index_zh.html">38. SPI驱动SD卡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tflm/index_zh.html">39. TensorFlow Lite For Microcontroller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinycrypt/index_zh.html">40. Tinycrypt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyengine/person_obj/README_zh.html">41. Person Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyuf2/README_zh.html">42. TinyUF2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyusb/index_zh.html">43. TinyUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../touch_panel/README_zh.html">44. Touch Panel</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_zh.html">45. Trace Recorder</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">45.1. Trace Recorder FreeRTOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">45.1.1. 概述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">45.1.2. 硬件设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">45.1.3. 操作步骤</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">45.1.4. 运行现象</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rtthread-nano/README_zh.html">45.2. Trace Recorder RT-Thread</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tsn/index_zh.html">46. tsn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vglite/index_zh.html">47. VGLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sent/index_zh.html">48. sent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../drivers/index_zh.html">驱动示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_doc.html">SDK API 参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HPMico Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index_zh.html">例程</a></li>
+          <li class="breadcrumb-item"><a href="../index_zh.html"><span class="section-number">45. </span>Trace Recorder</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">45.1. </span>Trace Recorder FreeRTOS</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/samples/trace_recorder/freertos/README_zh.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="trace-recorder-freertos">
+<span id="id1"></span><h1><span class="section-number">45.1. </span>Trace Recorder FreeRTOS<a class="headerlink" href="#trace-recorder-freertos" title="Permalink to this heading"></a></h1>
+<section id="id2">
+<h2><span class="section-number">45.1.1. </span>概述<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>该工程演示了Trace Recorder跟踪freertos的任务调度功能。</p>
+</section>
+<section id="id3">
+<h2><span class="section-number">45.1.2. </span>硬件设置<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>推荐使用JLink进行跟踪</p></li>
+<li><p>GDB只支持快照模式</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2><span class="section-number">45.1.3. </span>操作步骤<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<section id="id5">
+<h3><span class="section-number">45.1.3.1. </span>快照模式<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<p>在CMakeLists.txt中加入set(CONFIG_TRACE_RECORDER_SNAPSHOT_MODE 1)并删除set(CONFIG_TRACE_RECORDER_STREAM_MODE “JLink RTT”)从而使能快照模式。因为需要大量的内存存储跟踪的数据，所以在一些内存较小的配置下，此模式可能不被支持，例如当构建方式为ram和flash_xip时。
+快照模式下，TraceRecorder将数据存储在内存中，需要将数据导出，然后使用上位机工具进行分析。</p>
+<section id="id6">
+<h4><span class="section-number">45.1.3.1.1. </span>获取数据存储的地址<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>打开编译生成的.map文件，搜索RecorderData，即可看到其地址和大小</p></li>
+</ul>
+</section>
+<section id="id7">
+<h4><span class="section-number">45.1.3.1.2. </span>导出快照数据<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h4>
+<section id="gdb">
+<h5><span class="section-number">45.1.3.1.2.1. </span>使用GDB<a class="headerlink" href="#gdb" title="Permalink to this heading"></a></h5>
+<p>使用GDB Server获取快照数据，需要先连接GDB Server，然后再运行程序，防止GDB Server连接时将MCU复位从而丢失快照数据。打开GDB Server(openocd/JLink GDB Sever),使用GDB连接目标，运行程序，在需要导出数据时暂停程序的执行。</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>tar remo :2331
+mo reset halt
+//Download program to target if needed
+continue
+//Press CTRL - C to halt mcu
+dump binary memory target_data.bin {start address of RecorderData} {end address of RecorderData}
+</pre></div>
+</div>
+<p>然后打开tracealyzer4软件，打开target_data.bin文件即可</p>
+</section>
+<section id="jlink">
+<h5><span class="section-number">45.1.3.1.2.2. </span>使用JLink<a class="headerlink" href="#jlink" title="Permalink to this heading"></a></h5>
+<p>打开tracealyzer4软件，打开snapshot模式，切换到JLink接口，并在JLink配置中选择目标芯片</p>
+<img alt="" src="../../../_images/jlink_setting.jpg" />
+<p>在内存配置中配置RecorderData的首地址和大小</p>
+<img alt="" src="../../../_images/memory_setting.jpg" />
+<p>暂停目标程序执行，然后读取数据。</p>
+<img alt="" src="../../../_images/read_data.jpg" />
+</section>
+</section>
+</section>
+<section id="id8">
+<h3><span class="section-number">45.1.3.2. </span>流模式<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<p>在CMakeLists.txt中加入set(CONFIG_TRACE_RECORDER_STREAM_MODE “JLink RTT”)并删除set(CONFIG_TRACE_RECORDER_SNAPSHOT_MODE 1)从而使能流模式。</p>
+<section id="jlink-rtt">
+<h4><span class="section-number">45.1.3.2.1. </span>获取JLink RTT控制块地址<a class="headerlink" href="#jlink-rtt" title="Permalink to this heading"></a></h4>
+<p>打开编译生成的.map文件，搜索_SEGGER_RTT变量，即可获取其地址</p>
+</section>
+<section id="id9">
+<h4><span class="section-number">45.1.3.2.2. </span>上位机软件配置<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h4>
+<p>首先打开tracealyzer4软件，打开stream mode，切换到JLink接口，并在JLink配置中选择目标芯片,配置好RTT控制块地址，以及RTT的通道序列号（默认为1）</p>
+<img alt="" src="../../../_images/jlink_setting_stream.jpg" />
+<p>在控制界面中，开启数据抓取: 依次点击Reset, Reconnect, Start Session。</p>
+<img alt="" src="../../../_images/stream.jpg" />
+</section>
+</section>
+</section>
+<section id="id10">
+<h2><span class="section-number">45.1.4. </span>运行现象<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h2>
+<section id="id11">
+<h3><span class="section-number">45.1.4.1. </span>快照模式<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h3>
+<img alt="" src="../../../_images/result.jpg" />
+</section>
+<section id="id12">
+<h3><span class="section-number">45.1.4.2. </span>流模式<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<p>不用暂停cpu就可以动态的查看数据。</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2025, HPMicro.
+      <span class="lastupdated">Last updated on Mar 31, 2025.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

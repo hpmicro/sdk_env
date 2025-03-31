@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.2. ECAT_FOE &mdash; HPMicro Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="12.3. ECAT_IO" href="../ecat_io/README_en.html" />
+    <link rel="prev" title="12.1. ECAT_CiA402" href="../ecat_cia402/README_en.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../boards/index_en.html">Evaluation Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../components/index_en.html">Components</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index_en.html">Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../audio_codec/index_en.html">1. Audio Codec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../canopen/README_en.html">2. CANOPEN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryrb/README_en.html">3. CherryRB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherrysh/index_en.html">4. CherrySH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryusb/index_en.html">5. CherryUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coremark/README_en.html">6. CoreMark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dhrystone/README_en.html">7. Dhrystone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dma_manager/README_en.html">8. DMA Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dsp/README_en.html">9. DSP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dual_panel/README_en.html">10. DUAL_PANEL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../eeprom_emulation/index_en.html">11. EEPROM Emulation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_en.html">12. EtherCAT</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ecat_cia402/README_en.html">12.1. ECAT_CiA402</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">12.2. ECAT_FOE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">12.2.1. 1. Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prepare">12.2.2. 2. Prepare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project-setting">12.2.3. 3. Project Setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-ethercat-slave-stack-code">12.2.4. 4. Generate EtherCAT slave stack code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#twincat-project-setting">12.2.5. 5. TwinCAT Project setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-example">12.2.6. 6. Running the example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ecat_io/README_en.html">12.3. ECAT_IO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../freemaster/README_en.html">13. Freemaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hello_world/README_en.html">14. Hello World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hpm_math/index_en.html">15. HPM Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2c_components/index_en.html">16. I2C Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2s_emulation/README_en.html">17. I2S EMULATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image/index_en.html">18. Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lvgl/index_en.html">19. LVGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lwip/index_en.html">20. lwIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mbedtls/README_en.html">21. Mbedtls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../memstress/index_en.html">22. Memory Stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../microros/index_en.html">23. Microros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modbus/index_en.html">24. Modbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motor_ctrl/index_en.html">25. HPM Motor Ctrl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multicore/index_en.html">26. Multicore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opener/index_en.html">27. OpENer Ethernet/IP Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pmbus/index_en.html">28. PMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../power_mode_switch/README_en.html">29. Power Mode Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rgb_led/README_en.html">30. RGB LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rom_api/index_en.html">31. ROM API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rtos/index_en.html">32. RTOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rvbacktrace/index_en.html">33. Rvbacktrace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../segger_rtt/README_en.html">34. Segger RTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../segment_led_key/README_en.html">35. SEGMENT LED KEY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smbus/index_en.html">36. SMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_components/index_en.html">37. SPI Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_sdcard/index_en.html">38. SPI SD Card</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tflm/index_en.html">39. TensorFlow Lite For Microcontroller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinycrypt/index_en.html">40. Tinycrypt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyengine/person_obj/README_en.html">41. Person Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyuf2/README_en.html">42. TinyUF2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyusb/index_en.html">43. TinyUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../touch_panel/README_en.html">44. Touch Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../trace_recorder/index_en.html">45. Trace Recorder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tsn/index_en.html">46. tsn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vglite/index_en.html">47. VGLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sent/index_en.html">48. sent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../drivers/index_en.html">Drivers Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_doc.html">SDK API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HPMicro Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index_en.html">Samples</a></li>
+          <li class="breadcrumb-item"><a href="../index_en.html"><span class="section-number">12. </span>EtherCAT</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">12.2. </span>ECAT_FOE</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/samples/ethercat/ecat_foe/README_en.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ecat-foe">
+<span id="id1"></span><h1><span class="section-number">12.2. </span>ECAT_FOE<a class="headerlink" href="#ecat-foe" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<h2><span class="section-number">12.2.1. </span>1. Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>The ECAT_FOE example demonstrates the functionality of ECAT FOE to write and read slave files.</p>
+<p>Using ECAT FOE to update firmware, please refer to the OTA sample in hpm_apps repo.</p>
+<p>This routine program supports initializing the EEPROM data of the ESC, simplifying the process of updating the ESC’s EEPROM.</p>
+<p>If the program code contains EEPROM data (eeprom.h) generated by the SSC Tool, it will check the data stored in the ESC’s EEPROM and update it based on conditions.</p>
+<p>If the checksum of the EtherCAT Slave Controller Configuration Area (the first 8 words) of the EEPROM failed, the EEPROM will be initialized with the data from eeprom.h.</p>
+<p>If the checksum of the EtherCAT Slave Controller Configuration Area (the first 8 words) of the EEPROM succeeds, will verify the Product Code and Revision Code in the EEPROM data.</p>
+<p>When the Product Code differs or the Revision Number in eeprom.h is greater than the Revision Number of the currently stored EEPROM data, the EEPROM will be initialized with the data from eeprom.h.</p>
+<p>This method can solve the problem of checksum failure caused by EEPROM being empty during initial use, it will initialize EEPROM. During program upgrades, if the Revision Number in the eeprom.h included in the new program code is greater than the Revision Number of the currently stored EEPROM data, the EEPROM will be initialized with the eeprom.h, eliminating the need to update the EEPROM through master station tools such as TwinCAT.</p>
+<dl class="simple">
+<dt>hpm_apps repo：</dt><dd><p>github: <a class="reference external" href="https://github.com/hpmicro/hpm_apps">https://github.com/hpmicro/hpm_apps</a>
+gitee: <a class="reference external" href="https://gitee.com/hpmicro/hpm_apps">https://gitee.com/hpmicro/hpm_apps</a></p>
+</dd>
+</dl>
+</section>
+<section id="prepare">
+<h2><span class="section-number">12.2.2. </span>2. Prepare<a class="headerlink" href="#prepare" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>Please refer to the README of ECAT_IO sample
+Software tool version: SSC Tool (SSC Version: 5.13.1; Config File Vers: 1.5.3.0)</p>
+</div></blockquote>
+</section>
+<section id="project-setting">
+<h2><span class="section-number">12.2.3. </span>3. Project Setting<a class="headerlink" href="#project-setting" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>Please refer to the README of ECAT_IO sample</p>
+<p><strong>Note</strong> : When using FLASH to simulate EEPROM, please allocate appropriate flash space for FLASH-EEPROM content to avoid conflicts with other flash contents</p>
+</div></blockquote>
+</section>
+<section id="generate-ethercat-slave-stack-code">
+<h2><span class="section-number">12.2.4. </span>4. Generate EtherCAT slave stack code<a class="headerlink" href="#generate-ethercat-slave-stack-code" title="Permalink to this heading"></a></h2>
+<p>Due to licensing issues, HPMSDK does not provide EtherCAT slave protocol stack code (SSC). Users have download the SSC Tool from Beckoff’s official website and generate the slave stack code according to the steps.</p>
+<section id="download-ssc-tool">
+<h3><span class="section-number">12.2.4.1. </span>4.1. Download SSC Tool<a class="headerlink" href="#download-ssc-tool" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Please refer to the README of ECAT_IO sample</p>
+</div></blockquote>
+</section>
+<section id="ssc-tool-import-configuration-files">
+<h3><span class="section-number">12.2.4.2. </span>4.2 SSC Tool import configuration files<a class="headerlink" href="#ssc-tool-import-configuration-files" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>configuration file path: &lt;hpm_sdk&gt;/samples/ethercat/ecat_foe/SSC/Config/HPM_ECAT_FOE_Config.xml</p>
+</div></blockquote>
+</section>
+<section id="ssc-tool-create-slave-stack">
+<h3><span class="section-number">12.2.4.3. </span>4.3 SSC Tool create slave stack<a class="headerlink" href="#ssc-tool-create-slave-stack" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Create new project based on specified configuration</p></li>
+<li><p>Import application file: &lt;hpm_sdk&gt;/samples/ethercat/ecat_foe/SSC/foe.xlsx</p></li>
+<li><p>Specify the output path and generate slave stack code</p></li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+<section id="twincat-project-setting">
+<h2><span class="section-number">12.2.5. </span>5. TwinCAT Project setting<a class="headerlink" href="#twincat-project-setting" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>Please refer to the README of ECAT_IO sample</p>
+</div></blockquote>
+<section id="add-esi-file">
+<h3><span class="section-number">12.2.5.1. </span>5.1. Add ESI file<a class="headerlink" href="#add-esi-file" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Please modify the device attributes(&lt;Device Physics=”YY”&gt;) in generated ESI xml by SSC tool according to the actual number of ports, The default attribute generated in ESI is “YY”, indicating that Port0 and Port1 are implemented. If Port0, Port1, and Port2 are actually implemented, please manually modify the attribute to “YYY”.</p></li>
+</ol>
+<img alt="" src="../../../_images/esc_device_physics_foe.png" />
+<ol class="arabic simple" start="2">
+<li><p>Copy the ESI xml to TwinCAT( <strong>C:/TwinCAT/3.1/Config/Io/EtherCAT</strong> ).</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="create-project">
+<h3><span class="section-number">12.2.5.2. </span>5.2 Create Project<a class="headerlink" href="#create-project" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Please refer to the README of ECAT_IO sample</p>
+</div></blockquote>
+</section>
+<section id="software-configuration">
+<h3><span class="section-number">12.2.5.3. </span>5.3 Software Configuration<a class="headerlink" href="#software-configuration" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Please refer to the README of ECAT_IO sample</p>
+</div></blockquote>
+</section>
+<section id="scan-device">
+<h3><span class="section-number">12.2.5.4. </span>5.4 Scan device<a class="headerlink" href="#scan-device" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Please refer to the README of ECAT_IO sample</p>
+</div></blockquote>
+</section>
+<section id="update-eeprom-context">
+<h3><span class="section-number">12.2.5.5. </span>5.5 Update EEPROM context<a class="headerlink" href="#update-eeprom-context" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>select <strong>foe</strong></p>
+<img alt="" src="../../../_images/twincat_eeprom_update_foe.png" />
+</div></blockquote>
+</section>
+<section id="foe-action">
+<h3><span class="section-number">12.2.5.6. </span>5.6 FOE action<a class="headerlink" href="#foe-action" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Set MailBox timeout time (when the file is large, the timeout time needs to be adjusted)</p></li>
+</ol>
+<img alt="" src="../../../_images/twincat_device_timeout.png" />
+<ol class="arabic simple" start="2">
+<li><p>Enter Bootstrap mode</p></li>
+</ol>
+<img alt="" src="../../../_images/twincat_device_bootstrap.png" />
+<ol class="arabic simple" start="3">
+<li><p>Download file</p></li>
+</ol>
+<blockquote>
+<div><p>click ‘Download’</p>
+<img alt="" src="../../../_images/twincat_foe_download_1.png" />
+<p>select file to download</p>
+<img alt="" src="../../../_images/twincat_foe_download_2.png" />
+<p>edit file name and password， file name： <strong>app</strong> ; pass word： <strong>87654321</strong> .</p>
+<img alt="" src="../../../_images/twincat_foe_download_3.png" />
+<p>waiting for completion of writing</p>
+<ol class="arabic simple" start="4">
+<li><p>Enter Bootstrap mode，uploade file</p></li>
+</ol>
+<p>click ‘Uplaod’</p>
+<img alt="" src="../../../_images/twincat_foe_read_1.png" />
+<p>select file name and path</p>
+<img alt="" src="../../../_images/twincat_foe_read_2.png" />
+<p>edit file name and password， file name： <strong>app</strong> ; pass word： <strong>87654321</strong> .</p>
+<img alt="" src="../../../_images/twincat_foe_download_3.png" />
+<p>waiting for completion of reading</p>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>quit Bootstrap mode</p></li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+<section id="running-the-example">
+<h2><span class="section-number">12.2.6. </span>6. Running the example<a class="headerlink" href="#running-the-example" title="Permalink to this heading"></a></h2>
+<p>After the project is running correctly：</p>
+<p>When EEPROM data needs to be initialized, the log is as follows:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">EtherCAT FOE sample</span>
+<span class="go">Write or Read file from flash by FOE</span>
+<span class="go">Init EEPROM content.</span>
+<span class="go">Init EEPROM content successful.</span>
+<span class="go">EEPROM loading successful, no checksum error.</span>
+</pre></div>
+</div>
+<p>When EEPROM data does not need to be initialized, execute file write and read operations in Twincat, comparing the written and read files to ensure consistency. The log is as follows:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">EtherCAT FOE sample</span>
+<span class="go">Write or Read file from flash by FOE</span>
+<span class="go">No need to init EEPROM content.</span>
+<span class="go">EEPROM loading successful, no checksum error.</span>
+<span class="go">Write file start</span>
+<span class="go">Write file finish</span>
+<span class="go">Read file start</span>
+<span class="go">Read file finish</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2025, HPMicro.
+      <span class="lastupdated">Last updated on Mar 31, 2025.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

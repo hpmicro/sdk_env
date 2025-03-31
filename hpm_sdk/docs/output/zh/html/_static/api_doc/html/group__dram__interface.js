@@ -13,6 +13,7 @@ var group__dram__interface =
       [ "act_to_act_in_ns", "structfemc__sdram__config__t.html#a0f08ea1dc69257400ae19fe23dc46e7a", null ],
       [ "act_to_precharge_in_ns", "structfemc__sdram__config__t.html#a3c9425213a300440b14962bd93487d55", null ],
       [ "act_to_rw_in_ns", "structfemc__sdram__config__t.html#ad38ab011b656f21d8e71c877c77215da", null ],
+      [ "auto_refresh_cmd_count", "structfemc__sdram__config__t.html#aaf41775b611d59a51afdffa1f0ed3faf", null ],
       [ "auto_refresh_count_in_one_burst", "structfemc__sdram__config__t.html#a0f11cad862dfb41747a1c1c4bf2d58e5", null ],
       [ "bank_num", "structfemc__sdram__config__t.html#aae1f97ca088f31e109a8e91ac2a42a94", null ],
       [ "base_address", "structfemc__sdram__config__t.html#a64de6c73ec24d2b1d5eade1bcf32e033", null ],
@@ -104,7 +105,7 @@ var group__dram__interface =
     [ "FEMC_SRAM_ADV_HOLD_LOW", "group__dram__interface.html#gaec48ef5d48cacfec432954dca066c02c", null ],
     [ "FEMC_SRAM_PORT_SIZE_16_BITS", "group__dram__interface.html#ga0f2ded9e3984e9987ac5f20f59b6b226", null ],
     [ "FEMC_SRAM_PORT_SIZE_8_BITS", "group__dram__interface.html#ga0e714179ab617de8a694665e7a759e33", [
-      [ "status_femc_cmd_err", "group__dram__interface.html#gga550cb4231d535863c55643bbd2d3c6baa86c4e0027fad08319239dd5ae00f609a", null ]
+      [ "status_femc_cmd_err", "group__dram__interface.html#gga7be4d6772160afac92d84709f1de28eea86c4e0027fad08319239dd5ae00f609a", null ]
     ] ],
     [ "femc_config_sdram", "group__dram__interface.html#ga45f77237d47d51c79c453c57d5e980b6", null ],
     [ "femc_config_sram", "group__dram__interface.html#gaee9729014949c9432ff57ccc5147cf0d", null ],

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>26.5. OpENer Erpc Motor &mdash; HPMicro Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="26.6. eRPC two_way_rpc demo" href="../erpc_two_way_rpc_rpmsg_rtos/README_en.html" />
+    <link rel="prev" title="26.4. eRPC rtos demo" href="../erpc_matrix_multiply_rpmsg_rtos/README_en.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html">
+            
+              <img src="../../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../get_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../boards/index_en.html">Evaluation Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../components/index_en.html">Components</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index_en.html">Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../audio_codec/index_en.html">1. Audio Codec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../canopen/README_en.html">2. CANOPEN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cherryrb/README_en.html">3. CherryRB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cherrysh/index_en.html">4. CherrySH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cherryusb/index_en.html">5. CherryUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coremark/README_en.html">6. CoreMark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dhrystone/README_en.html">7. Dhrystone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dma_manager/README_en.html">8. DMA Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dsp/README_en.html">9. DSP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dual_panel/README_en.html">10. DUAL_PANEL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../eeprom_emulation/index_en.html">11. EEPROM Emulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ethercat/index_en.html">12. EtherCAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../freemaster/README_en.html">13. Freemaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../hello_world/README_en.html">14. Hello World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../hpm_math/index_en.html">15. HPM Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../i2c_components/index_en.html">16. I2C Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../i2s_emulation/README_en.html">17. I2S EMULATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../image/index_en.html">18. Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lvgl/index_en.html">19. LVGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lwip/index_en.html">20. lwIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../mbedtls/README_en.html">21. Mbedtls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../memstress/index_en.html">22. Memory Stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../microros/index_en.html">23. Microros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modbus/index_en.html">24. Modbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motor_ctrl/index_en.html">25. HPM Motor Ctrl</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index_en.html">26. Multicore</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../README_en.html">26.1. Multicore General Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../console_coremark/README_en.html">26.2. Console Coremark Demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../erpc_matrix_multiply_rpmsg_bm/README_en.html">26.3. eRPC bare metal demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../erpc_matrix_multiply_rpmsg_rtos/README_en.html">26.4. eRPC rtos demo</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">26.5. OpENer Erpc Motor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">26.5.1. 1.Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#preparation">26.5.2. 2.Preparation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#twincat-project-settings">26.5.3. 3. TwinCAT project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operation-phenomenon">26.5.4. 6. Operation phenomenon</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../erpc_two_way_rpc_rpmsg_rtos/README_en.html">26.6. eRPC two_way_rpc demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hello/README_en.html">26.7. Hello demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lvgl_coremark/README_en.html">26.8. LVGL Coremark Demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mbx/README_en.html">26.9. MBX dualcore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../opener/index_en.html">27. OpENer Ethernet/IP Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pmbus/index_en.html">28. PMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../power_mode_switch/README_en.html">29. Power Mode Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rgb_led/README_en.html">30. RGB LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rom_api/index_en.html">31. ROM API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rtos/index_en.html">32. RTOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rvbacktrace/index_en.html">33. Rvbacktrace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../segger_rtt/README_en.html">34. Segger RTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../segment_led_key/README_en.html">35. SEGMENT LED KEY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../smbus/index_en.html">36. SMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../spi_components/index_en.html">37. SPI Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../spi_sdcard/index_en.html">38. SPI SD Card</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tflm/index_en.html">39. TensorFlow Lite For Microcontroller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tinycrypt/index_en.html">40. Tinycrypt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tinyengine/person_obj/README_en.html">41. Person Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tinyuf2/README_en.html">42. TinyUF2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tinyusb/index_en.html">43. TinyUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../touch_panel/README_en.html">44. Touch Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../trace_recorder/index_en.html">45. Trace Recorder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tsn/index_en.html">46. tsn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../vglite/index_en.html">47. VGLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../sent/index_en.html">48. sent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../drivers/index_en.html">Drivers Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api_doc.html">SDK API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">HPMicro Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index_en.html">Samples</a></li>
+          <li class="breadcrumb-item"><a href="../../index_en.html"><span class="section-number">26. </span>Multicore</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">26.5. </span>OpENer Erpc Motor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/samples/multicore/erpc/erpc_motor/README_en.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="opener-erpc-motor">
+<span id="id1"></span><h1><span class="section-number">26.5. </span>OpENer Erpc Motor<a class="headerlink" href="#opener-erpc-motor" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<h2><span class="section-number">26.5.1. </span>1.Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>The OpENer Erpc Motor dual core example is used to demonstrate the function of realizing remote motor speed control through the Ethernet/IP (EIP) protocol using OpENer. Core0 runs FreeRTOS, Lwip and OpENer, core1 runs motor controlling mothod, while erpc is used between two cores.</p>
+<p>For how to use erpc, see <cite>middleware/samples/multicore/erpc/erpc_matrix_multiply_rpmsg_bm/README_en.md</cite></p>
+</section>
+<section id="preparation">
+<h2><span class="section-number">26.5.2. </span>2.Preparation<a class="headerlink" href="#preparation" title="Permalink to this heading"></a></h2>
+<section id="hardware">
+<h3><span class="section-number">26.5.2.1. </span>2.1 Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>A development board with Ethernet. Refer to the {ref}pin description &lt;board_resource&gt; of the specific development board to view the Ethernet hardware.</p>
+<ul>
+<li><p><strong>According to your development board, select RMII/RGMII and ethernet phy in the CMakeLists.txt</strong></p></li>
+</ul>
+</li>
+<li><p>A PC with a network port.</p>
+<ul>
+<li><p>The TwinCAT3 software has adaptation issues with PC network cards. Some supported Intel network cards.</p></li>
+</ul>
+</li>
+<li><p>This program uses the <strong>BLM57050-1000</strong>  brushless motor of “Leisai Intelligence”, please refer to the <a class="reference external" href="https://leisai.com/">Leisai Intelligence</a> website for the specific parameters of the motor.</p></li>
+<li><p>Board settings refer to the development board documentation  <a class="reference internal" href="../../../../boards/index_en.html#board-resource"><span class="std std-ref">Motor Pin</span></a>  related content</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="software">
+<h3><span class="section-number">26.5.2.2. </span>2.2 Software<a class="headerlink" href="#software" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>TwinCAT3.1(Build 4024.56)</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="twincat-project-settings">
+<h2><span class="section-number">26.5.3. </span>3. TwinCAT project settings<a class="headerlink" href="#twincat-project-settings" title="Permalink to this heading"></a></h2>
+<section id="create-a-project">
+<h3><span class="section-number">26.5.3.1. </span>3.1 Create a project<a class="headerlink" href="#create-a-project" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Open the TwinCAT software and select File -&gt; New -&gt; Project.</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/Twincat_new_project_11.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Select TwinCAT Project, name it and click OK.</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/Twincat_new_project_21.png" />
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="software-configuration">
+<h3><span class="section-number">26.5.3.2. </span>3.2 Software configuration<a class="headerlink" href="#software-configuration" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Update the network card driver (required when using for the first time).</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/Twincat_ethernet_driver1.png" />
+<img alt="" src="../../../../_images/Twincat_ethernet_driver_21.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Clock setting</p></li>
+</ol>
+<blockquote>
+<div><dl>
+<dt>When the software is running, the following error may be encountered: It is necessary to run C:TwinCAT3.1Systemwin8settick.bat with administrator privileges.</dt><dd><ul class="simple">
+<li><ul>
+<li><ul>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>Init4RTime：Start Interrupt：Ticker started &gt;&gt; AdsWarning4115 （0x1013,RTIME：system clock setup failed）</em>
+- - -</p>
+<img alt="" src="../../../../_images/Twincat_set_tick1.png" />
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="add-eip-scanner">
+<h3><span class="section-number">26.5.3.3. </span>3.3 Add EIP Scanner<a class="headerlink" href="#add-eip-scanner" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Click on Device, right-click to add a new item.</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/add_new_interface.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Select EIP Scanner.</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/seclet_new_interface.png" />
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Select the network card after the driver is updated.</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/seclet_local_interface.png" />
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>Configure the IP address.</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/set_ip_address.png" />
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>Re-enter the configuration mode to make the IP configuration in the previous step take effect.</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/reenter_config_mode.png" />
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="add-eds-file">
+<h3><span class="section-number">26.5.3.4. </span>3.4. Add EDS file<a class="headerlink" href="#add-eds-file" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Right-click on EIP Scanner and select import EDS file. Select opener/opener_blinky_app.eds.</p>
+<blockquote>
+<div><img alt="" src="../../../../_images/import_eds_file.png" />
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="scan-devices">
+<h3><span class="section-number">26.5.3.5. </span>3.5. Scan devices<a class="headerlink" href="#scan-devices" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Right-click on EIP Scanner and then scan.</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/scan.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Add a device.</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/found_new_device.png" />
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="add-io-connection">
+<h3><span class="section-number">26.5.3.6. </span>3.6 Add IO connection<a class="headerlink" href="#add-io-connection" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><img alt="" src="../../../../_images/add_io_connection.png" />
+<p>If there is no <cite>Exclusive Owner</cite> is the combox, specify the eds file manually.</p>
+<img alt="" src="../../../../_images/load_from_eds.png" />
+</div></blockquote>
+</section>
+<section id="io-operation">
+<h3><span class="section-number">26.5.3.7. </span>3.7 IO operation<a class="headerlink" href="#io-operation" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>For input IO, press the button KEYA on the evaluation board, and the value of Input/Key State changes.</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/keystate.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>For output IO, right-click on Led State, select Online, and click Write to write a value. When writing 1, the LED on the development board lights up. When writing 0, the LED on the development board turns off.</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/ledstate.png" />
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>For output IO. Right-click “Motor Target Speed”, select “Online”, and click “Write” to enter a value. The motor rotates according to the input value. Note that the upper limit of the motor speed is 35.</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/set_motor_speed.png" />
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>For input IO. Observe “Inputs/Motor Current Speed”, which shows the real-time motor speed.</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/current_motor_speed.png" />
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>For input IO, right-click Break, select Online, and write values by motor Write. When inputting 1, the motor stops rotating. When inputting 0, the motor resumes the rotating state before stopping.</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../../_images/break.png" />
+</div></blockquote>
+</div></blockquote>
+</section>
+</section>
+<section id="operation-phenomenon">
+<h2><span class="section-number">26.5.4. </span>6. Operation phenomenon<a class="headerlink" href="#operation-phenomenon" title="Permalink to this heading"></a></h2>
+<p>After the project runs correctly, the serial terminal will output the following information. The input and output IO states correspond to the TwinCAT project configuration:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">This is an Ethernet/IP demo.</span>
+<span class="go">LwIP Version: 2.1.2</span>
+<span class="go">Enet phy init passed !</span>
+
+<span class="go">Primary core started</span>
+
+<span class="go">Copying secondary core image to destination memory: 0x80003178</span>
+<span class="go">Starting secondary core...</span>
+
+<span class="go">Link Status: Down</span>
+
+<span class="go">Secondary core started...</span>
+<span class="go">Link Status: Down</span>
+<span class="go">Link Status: Down</span>
+<span class="go">Link Status: Down</span>
+<span class="go">Link Status: Down</span>
+<span class="go">Link Status: Up</span>
+<span class="go">Link Speed:  100Mbps</span>
+<span class="go">Link Duplex: Full duplex</span>
+<span class="go">IPv4 Address: 192.168.100.10</span>
+<span class="go">IPv4 Netmask: 255.255.255.0</span>
+<span class="go">IPv4 Gateway: 192.168.100.1</span>
+
+<span class="go">eRPC request is sent to the server</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2025, HPMicro.
+      <span class="lastupdated">Last updated on Mar 31, 2025.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

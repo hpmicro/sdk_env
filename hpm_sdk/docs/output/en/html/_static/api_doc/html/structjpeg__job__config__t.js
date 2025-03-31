@@ -9,5 +9,6 @@ var structjpeg__job__config__t =
     [ "out_buffer", "structjpeg__job__config__t.html#a61d26eac50535a32f4d109ceaaf39597", null ],
     [ "out_byte_order", "structjpeg__job__config__t.html#acdb8eb20e2eb18e351f1917c372bd174", null ],
     [ "out_pixel_format", "structjpeg__job__config__t.html#a09f521b7fd64c63a439e23cf9577aec2", null ],
+    [ "stride", "structjpeg__job__config__t.html#a1dcb53b3337be82b3751fd233715dd2c", null ],
     [ "width_in_pixel", "structjpeg__job__config__t.html#a122d30120d6ae1e81401a56b0993a939", null ]
 ];

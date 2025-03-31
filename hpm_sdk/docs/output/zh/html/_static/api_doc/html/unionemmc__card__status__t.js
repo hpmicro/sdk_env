@@ -1,0 +1,25 @@
+var unionemmc__card__status__t =
+[
+    [ "address_error", "unionemmc__card__status__t.html#a57390cde61ecb941f0b0b391fbdfbf4f", null ],
+    [ "app_cmd", "unionemmc__card__status__t.html#a01f0f9b419fad60e26c8e96bfbf1cfd4", null ],
+    [ "block_len_error", "unionemmc__card__status__t.html#a58ee0e02e136bb4c73ebbf0e179a7f0a", null ],
+    [ "card_status", "unionemmc__card__status__t.html#aa158b3549f02594ef14868c23f767e5f", null ],
+    [ "cc_error", "unionemmc__card__status__t.html#a596f64a20c5c83afcb8437c85558ed27", null ],
+    [ "cid_or_csd_overwrite", "unionemmc__card__status__t.html#aed895725186d84975267003bb78fc6ca", null ],
+    [ "com_crc_err", "unionemmc__card__status__t.html#a27712dc6c9099f7e0aaf2233243e75e2", null ],
+    [ "current_state", "unionemmc__card__status__t.html#a914e0f18632520d37260928ce25652d1", null ],
+    [ "device_ecc_failed", "unionemmc__card__status__t.html#a06a1c6f2e85f6ecc9eee542f51b46b87", null ],
+    [ "device_is_locked", "unionemmc__card__status__t.html#abf27f6d30879377772e15ac5a5504bcf", null ],
+    [ "erase_param", "unionemmc__card__status__t.html#a36c72a8207ef7cf10c379ee76f5548eb", null ],
+    [ "erase_reset", "unionemmc__card__status__t.html#a3858f9494b01035f09bd76845c874ff2", null ],
+    [ "erase_seq_error", "unionemmc__card__status__t.html#af5e6d65dff179c055c9055ba9b915b5b", null ],
+    [ "error", "unionemmc__card__status__t.html#a9603612f8d4f38b0dd6c99ce5050963a", null ],
+    [ "exception_event", "unionemmc__card__status__t.html#ade2a5afec89eb2948da8cc99d243ed4d", null ],
+    [ "illegal_command", "unionemmc__card__status__t.html#a77c8f66620f317676741f6849f4c3986", null ],
+    [ "lock_unlock_failed", "unionemmc__card__status__t.html#a208f3b8b58b9a042eec0622704d82e72", null ],
+    [ "out_of_range", "unionemmc__card__status__t.html#ac502cb718fc0298e78aae2d307276301", null ],
+    [ "ready_for_data", "unionemmc__card__status__t.html#ad76cd5e8ec5db4b505ba79d7de9a04b7", null ],
+    [ "switch_error", "unionemmc__card__status__t.html#af946f1e5aafae2bc9d725dfbd72be28a", null ],
+    [ "wp_erase_skip", "unionemmc__card__status__t.html#ae2409d583a75b8e24ff1e9cc7912587d", null ],
+    [ "wp_violation", "unionemmc__card__status__t.html#a7b39be2ed1d6caae9851f96e769c8606", null ]
+];

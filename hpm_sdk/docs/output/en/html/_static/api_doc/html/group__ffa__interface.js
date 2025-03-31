@@ -34,11 +34,11 @@ var group__ffa__interface =
     [ "FFA_OPCMD_FIR", "group__ffa__interface.html#ga444630c8186fcabcd0c2e9ff9f719889", null ],
     [ "ffa_q15_t", "group__ffa__interface.html#ga713aa90e8b057c1e8df3aa0ca6e2ba96", null ],
     [ "ffa_q31_t", "group__ffa__interface.html#gae2b31d5e5f249f1ef350b8600755291e", [
-      [ "status_ffa_fir_overflow", "group__ffa__interface.html#gga83e8bc15645f9d99ab91a152bb3dc8ceae0247dc1bdeb1daef537a78c04dbe0ba", null ],
-      [ "status_ffa_fft_overflow", "group__ffa__interface.html#gga83e8bc15645f9d99ab91a152bb3dc8cea7b4e8b1e8e7aea7627952afc1cd4d6da", null ],
-      [ "status_ffa_write_error", "group__ffa__interface.html#gga83e8bc15645f9d99ab91a152bb3dc8cea4492a81c778b9286d7d144fe084344ba", null ],
-      [ "status_ffa_read_next_error", "group__ffa__interface.html#gga83e8bc15645f9d99ab91a152bb3dc8cea78f561f808e778c73a9dd1ce33d38cf1", null ],
-      [ "status_ffa_read_error", "group__ffa__interface.html#gga83e8bc15645f9d99ab91a152bb3dc8ceaa42f437ec24ceab79d60132dbbc56c28", null ]
+      [ "status_ffa_fir_overflow", "group__ffa__interface.html#ggaaff7507baa14a46cb5c601e34273ba70ae0247dc1bdeb1daef537a78c04dbe0ba", null ],
+      [ "status_ffa_fft_overflow", "group__ffa__interface.html#ggaaff7507baa14a46cb5c601e34273ba70a7b4e8b1e8e7aea7627952afc1cd4d6da", null ],
+      [ "status_ffa_write_error", "group__ffa__interface.html#ggaaff7507baa14a46cb5c601e34273ba70a4492a81c778b9286d7d144fe084344ba", null ],
+      [ "status_ffa_read_next_error", "group__ffa__interface.html#ggaaff7507baa14a46cb5c601e34273ba70a78f561f808e778c73a9dd1ce33d38cf1", null ],
+      [ "status_ffa_read_error", "group__ffa__interface.html#ggaaff7507baa14a46cb5c601e34273ba70aa42f437ec24ceab79d60132dbbc56c28", null ]
     ] ],
     [ "ffa_calculate_fft_blocking", "group__ffa__interface.html#ga77d761e7ed7aeabd0c567debde5e78b2", null ],
     [ "ffa_calculate_fir_blocking", "group__ffa__interface.html#ga45e70f073a381048d0a19e3d31d1d775", null ],

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="group__xpi__interface" kind="group">
     <compoundname>xpi_interface</compoundname>
     <title>XPI driver APIs</title>
@@ -7,6 +7,8 @@
     <innerclass refid="structxpi__instr__seq__t" prot="public">xpi_instr_seq_t</innerclass>
     <innerclass refid="structxpi__config__t" prot="public">xpi_config_t</innerclass>
     <innerclass refid="structxpi__device__config__t" prot="public">xpi_device_config_t</innerclass>
+    <innerclass refid="structxpi__ahb__buffer__cfg__t" prot="public">xpi_ahb_buffer_cfg_t</innerclass>
+    <innerclass refid="structxpi__driver__interface__t" prot="public">xpi_driver_interface_t</innerclass>
     <sectiondef kind="enum">
       <memberdef kind="enum" id="group__xpi__interface_1ga2a84113527f0b7d617a6b219974b3a8a" prot="public" static="no" strong="no">
         <type></type>
@@ -251,10 +253,10 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_romapi_xpi_def.h" line="84" column="1" bodyfile="drivers/inc/hpm_romapi_xpi_def.h" bodystart="84" bodyend="88"/>
       </memberdef>
-      <memberdef kind="enum" id="group__xpi__interface_1ga337d6b8d9f9cc2b4d207e433a70d3987" prot="public" static="no" strong="no">
+      <memberdef kind="enum" id="group__xpi__interface_1ga3625aae0fb91cd50e743ac53bb2e9bb3" prot="public" static="no" strong="no">
         <type></type>
         <name></name>
-        <enumvalue id="group__xpi__interface_1gga337d6b8d9f9cc2b4d207e433a70d3987a1383558c122092c54b8314d1b02817f0" prot="public">
+        <enumvalue id="group__xpi__interface_1gga3625aae0fb91cd50e743ac53bb2e9bb3a1383558c122092c54b8314d1b02817f0" prot="public">
           <name>status_xpi_apb_jump_on_cs</name>
           <initializer>=  ((uint32_t)(status_group_xpi)*1000U + (uint32_t)(1))</initializer>
           <briefdescription>
@@ -262,7 +264,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__xpi__interface_1gga337d6b8d9f9cc2b4d207e433a70d3987a71d3523b453b9fd03d19aeadb95f5922" prot="public">
+        <enumvalue id="group__xpi__interface_1gga3625aae0fb91cd50e743ac53bb2e9bb3a71d3523b453b9fd03d19aeadb95f5922" prot="public">
           <name>status_xpi_apb_unknown_inst</name>
           <initializer>=  ((uint32_t)(status_group_xpi)*1000U + (uint32_t)(2))</initializer>
           <briefdescription>
@@ -270,7 +272,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__xpi__interface_1gga337d6b8d9f9cc2b4d207e433a70d3987adf54c0e4d302a631603925f633dd0e9f" prot="public">
+        <enumvalue id="group__xpi__interface_1gga3625aae0fb91cd50e743ac53bb2e9bb3adf54c0e4d302a631603925f633dd0e9f" prot="public">
           <name>status_xpi_apb_dummy_sdr_in_ddr_seq</name>
           <initializer>=  ((uint32_t)(status_group_xpi)*1000U + (uint32_t)(3))</initializer>
           <briefdescription>
@@ -278,7 +280,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__xpi__interface_1gga337d6b8d9f9cc2b4d207e433a70d3987a3cee604b4b549d4accb75efcde42a831" prot="public">
+        <enumvalue id="group__xpi__interface_1gga3625aae0fb91cd50e743ac53bb2e9bb3a3cee604b4b549d4accb75efcde42a831" prot="public">
           <name>status_xpi_apb_dummy_ddr_in_sdr_seq</name>
           <initializer>=  ((uint32_t)(status_group_xpi)*1000U + (uint32_t)(4))</initializer>
           <briefdescription>
@@ -286,7 +288,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__xpi__interface_1gga337d6b8d9f9cc2b4d207e433a70d3987afd5ae700f74e3c206bc0d7baedf3edfa" prot="public">
+        <enumvalue id="group__xpi__interface_1gga3625aae0fb91cd50e743ac53bb2e9bb3afd5ae700f74e3c206bc0d7baedf3edfa" prot="public">
           <name>status_xpi_apb_exceed_addr_range</name>
           <initializer>=  ((uint32_t)(status_group_xpi)*1000U + (uint32_t)(5))</initializer>
           <briefdescription>
@@ -294,7 +296,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__xpi__interface_1gga337d6b8d9f9cc2b4d207e433a70d3987a9874b2d975b8e01270a5b8649c005a09" prot="public">
+        <enumvalue id="group__xpi__interface_1gga3625aae0fb91cd50e743ac53bb2e9bb3a9874b2d975b8e01270a5b8649c005a09" prot="public">
           <name>status_xpi_apb_seq_timeout</name>
           <initializer>=  ((uint32_t)(status_group_xpi)*1000U + (uint32_t)(6))</initializer>
           <briefdescription>
@@ -302,7 +304,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__xpi__interface_1gga337d6b8d9f9cc2b4d207e433a70d3987a155d12963d729dd044142577462329d5" prot="public">
+        <enumvalue id="group__xpi__interface_1gga3625aae0fb91cd50e743ac53bb2e9bb3a155d12963d729dd044142577462329d5" prot="public">
           <name>status_xpi_apb_cross_boundary</name>
           <initializer>=  ((uint32_t)(status_group_xpi)*1000U + (uint32_t)(7))</initializer>
           <briefdescription>
@@ -319,10 +321,10 @@
         </inbodydescription>
         <location file="drivers/inc/hpm_romapi_xpi_def.h" line="137" column="1" bodyfile="drivers/inc/hpm_romapi_xpi_def.h" bodystart="137" bodyend="145"/>
       </memberdef>
-      <memberdef kind="enum" id="group__xpi__interface_1ga441c033e3d3f086db9e3901c0d66bd3d" prot="public" static="no" strong="no">
+      <memberdef kind="enum" id="group__xpi__interface_1ga18813f5f63803020b8e95e5d83c0417a" prot="public" static="no" strong="no">
         <type></type>
         <name></name>
-        <enumvalue id="group__xpi__interface_1gga441c033e3d3f086db9e3901c0d66bd3dad4a84cc114dce34010ddffc171232796" prot="public">
+        <enumvalue id="group__xpi__interface_1gga18813f5f63803020b8e95e5d83c0417aad4a84cc114dce34010ddffc171232796" prot="public">
           <name>xpi_dll_half_cycle</name>
           <initializer>= 0xFU</initializer>
           <briefdescription>
@@ -330,7 +332,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__xpi__interface_1gga441c033e3d3f086db9e3901c0d66bd3dabdee6c2c09dd2c5b5c6be6f9966b1119" prot="public">
+        <enumvalue id="group__xpi__interface_1gga18813f5f63803020b8e95e5d83c0417aabdee6c2c09dd2c5b5c6be6f9966b1119" prot="public">
           <name>xpi_dll_quarter_cycle</name>
           <initializer>= 0x7U</initializer>
           <briefdescription>
@@ -338,7 +340,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__xpi__interface_1gga441c033e3d3f086db9e3901c0d66bd3da145f4f5da56c0a272c3cda070c9e5607" prot="public">
+        <enumvalue id="group__xpi__interface_1gga18813f5f63803020b8e95e5d83c0417aa145f4f5da56c0a272c3cda070c9e5607" prot="public">
           <name>xpi_dll_sdr_default_cycle</name>
           <initializer>= xpi_dll_half_cycle</initializer>
           <briefdescription>
@@ -346,7 +348,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__xpi__interface_1gga441c033e3d3f086db9e3901c0d66bd3dacb6636aa8f605d13e8d0458fd41afe31" prot="public">
+        <enumvalue id="group__xpi__interface_1gga18813f5f63803020b8e95e5d83c0417aacb6636aa8f605d13e8d0458fd41afe31" prot="public">
           <name>xpi_dll_ddr_default_cycle</name>
           <initializer>= xpi_dll_quarter_cycle</initializer>
           <briefdescription>
@@ -371,7 +373,7 @@
         <argsstring></argsstring>
         <name>XPI_Type</name>
         <briefdescription>
-<para>XPI_Type definitions for. </para>
+<para><ref refid="group__xpi__interface_1ga87560204ea6254a4c1b7dbbbae1bf60b" kindref="member">XPI_Type</ref> definitions for. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="note"><para>For compatibility </para>
@@ -726,7 +728,7 @@
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>XPI ROM APIs  . </para>
+<para>XPI ROM APIs. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

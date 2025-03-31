@@ -5,7 +5,7 @@ if not "%~1"=="true" (
     setlocal enabledelayedexpansion
 )
 set SDK_ENV=%~1
-set HPM_SDK_BASE=%~1\hpm_sdk
+set HPM_SDK_BASE=%~2
 echo SDK_ENV %SDK_ENV%
 echo HPM_SDK_BASE %HPM_SDK_BASE%
 pushd %SDK_ENV%

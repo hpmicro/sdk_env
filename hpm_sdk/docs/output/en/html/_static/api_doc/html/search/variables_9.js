@@ -1,11 +1,21 @@
 var searchData=
 [
-  ['jer_5fpreset_0',['JER_PRESET',['../structMTG__Type.html#a8ac2656ac561b937f0cf5e1855b711f0',1,'MTG_Type']]],
+  ['jer_5fpreset_0',['JER_PRESET',['../structMTG__Type.html#a8ac2656ac561b937f0cf5e1855b711f0',1,'MTG_Type::JER_PRESET'],['../structMTGV2__Type.html#a4f1e1cd0c43a5880b9883c3e4826e78b',1,'MTGV2_Type::JER_PRESET']]],
   ['jer_5fpreset_1',['jer_preset',['../structmtg__tra__cmd__cfg.html#a576f9820bb76485789a8acd85a3e81c6',1,'mtg_tra_cmd_cfg']]],
   ['jerk_5fshift_2',['jerk_shift',['../structmtg__tra__shift.html#af1e51a789b4725ec796830ecc4596cab',1,'mtg_tra_shift']]],
   ['jitter_5fcmp_3',['jitter_cmp',['../structpwm__cmp__config.html#aafe8c28ff4ad8447c9ba46d72b317171',1,'pwm_cmp_config']]],
-  ['jpeg_5fformat_4',['jpeg_format',['../structjpeg__job__config__t.html#ae2c9313e989740cd2e72f22d99290b3c',1,'jpeg_job_config_t']]],
-  ['jpeg_5fsupported_5fpixel_5fformat_5',['jpeg_supported_pixel_format',['../hpm__jpeg__drv_8c.html#ac368a7f49201dc3f420cb995f365e9e8',1,'hpm_jpeg_drv.c']]],
-  ['jpeg_5fsupported_5fsampling_6',['jpeg_supported_sampling',['../hpm__jpeg__drv_8c.html#ab9ba9867930733e693802a2c3342bc7c',1,'hpm_jpeg_drv.c']]],
-  ['jt_7',['jt',['../structenet__tx__desc__t.html#a9d069adf3fcac7e4e43e9398b2705d2f',1,'enet_tx_desc_t']]]
+  ['jpeg_5fbase_4',['jpeg_base',['../structhpm__jpeg__context.html#a39ed6c7d5ab2f2ef578795c38fe63b53',1,'hpm_jpeg_context::jpeg_base'],['../structhpm__jpeg__cfg.html#ac66db72b9264264e5e5ff21194524b40',1,'hpm_jpeg_cfg::jpeg_base']]],
+  ['jpeg_5fbuf_5',['jpeg_buf',['../structhpm__jpeg__jpeg__file.html#aa922ef4ee717eff509e92f12d296f65e',1,'hpm_jpeg_jpeg_file']]],
+  ['jpeg_5ffile_6',['jpeg_file',['../structhpm__jpeg__encode__job.html#ad92568a4a748289ffe3c044040086556',1,'hpm_jpeg_encode_job']]],
+  ['jpeg_5fformat_7',['jpeg_format',['../structjpeg__job__config__t.html#ae2c9313e989740cd2e72f22d99290b3c',1,'jpeg_job_config_t']]],
+  ['jpeg_5finfo_8',['jpeg_info',['../structhpm__jpeg__decode__job.html#a284e4df28b319f6f53d0d4a633b66a83',1,'hpm_jpeg_decode_job::jpeg_info'],['../structhpm__jpeg__encode__job.html#affa9fc02f8546a82ccd192e64544de6f',1,'hpm_jpeg_encode_job::jpeg_info']]],
+  ['jpeg_5fquality_9',['jpeg_quality',['../structhpm__jpeg__encode__cfg.html#a1f767eba93d53bd44da8bc7fadbb4255',1,'hpm_jpeg_encode_cfg']]],
+  ['jpeg_5fsampling_10',['jpeg_sampling',['../structhpm__jpeg__encode__cfg.html#a7c25af7b9284fe675f2fca2babd61f79',1,'hpm_jpeg_encode_cfg']]],
+  ['jpeg_5fstd_5fhtab_5fac0_11',['jpeg_std_htab_ac0',['../hpm__jpeg_8c.html#aa14a4df26e39ce2ffb78932edc94af1e',1,'hpm_jpeg.c']]],
+  ['jpeg_5fstd_5fhtab_5fac1_12',['jpeg_std_htab_ac1',['../hpm__jpeg_8c.html#a5505b6e481418cbd352b76e74bfae2f4',1,'hpm_jpeg.c']]],
+  ['jpeg_5fstd_5fhtab_5fdc0_13',['jpeg_std_htab_dc0',['../hpm__jpeg_8c.html#a0dedcffc5574889b0336aa5f77d03b32',1,'hpm_jpeg.c']]],
+  ['jpeg_5fstd_5fhtab_5fdc1_14',['jpeg_std_htab_dc1',['../hpm__jpeg_8c.html#a0b27b28313ea1667de6bb485faa17b54',1,'hpm_jpeg.c']]],
+  ['jpeg_5fsupported_5fpixel_5fformat_15',['jpeg_supported_pixel_format',['../hpm__jpeg__drv_8c.html#ac368a7f49201dc3f420cb995f365e9e8',1,'hpm_jpeg_drv.c']]],
+  ['jpeg_5fsupported_5fsampling_16',['jpeg_supported_sampling',['../hpm__jpeg__drv_8c.html#ab9ba9867930733e693802a2c3342bc7c',1,'hpm_jpeg_drv.c']]],
+  ['jt_17',['jt',['../structenet__tx__desc__t.html#a9d069adf3fcac7e4e43e9398b2705d2f',1,'enet_tx_desc_t']]]
 ];

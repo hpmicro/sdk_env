@@ -5,8 +5,8 @@ var group__esc__interface =
       [ "eeprom_emulation", "structesc__eeprom__clock__config__t.html#ac1cce6a72ca2c0862d239018ea9215cb", null ],
       [ "eeprom_size_over_16kbit", "structesc__eeprom__clock__config__t.html#aaa3f55115c82684d66b374ff6f8fbb02", null ],
       [ "phy_refclk_en", "structesc__eeprom__clock__config__t.html#a53a5f04ae634927992fa4432dcf97932", null ],
-      [ "status_esc_eeprom_ack_error", "group__esc__interface.html#gga2f80701c36e79c0640d91c788feee0b3a615143de263ba9df39c1222356f097d2", null ],
-      [ "status_esc_eeprom_checksum_error", "group__esc__interface.html#gga2f80701c36e79c0640d91c788feee0b3abc27a7c058f4b013bdeb46229ba5b7cf", null ]
+      [ "status_esc_eeprom_ack_error", "group__esc__interface.html#gga6aadca4f8658b8ce5fd97fa479978838a615143de263ba9df39c1222356f097d2", null ],
+      [ "status_esc_eeprom_checksum_error", "group__esc__interface.html#gga6aadca4f8658b8ce5fd97fa479978838abc27a7c058f4b013bdeb46229ba5b7cf", null ]
     ] ],
     [ "esc_ctrl_signal_function_t", "group__esc__interface.html#ga40fbe82036b22639e2d4c5e267688ad2", [
       [ "esc_ctrl_signal_func_alt_nmii_link0", "group__esc__interface.html#gga40fbe82036b22639e2d4c5e267688ad2abb09fabef7d116ce4ef97eef677f573b", null ],

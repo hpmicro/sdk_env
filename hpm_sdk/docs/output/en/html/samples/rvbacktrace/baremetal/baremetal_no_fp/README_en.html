@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>33.2. rvbacktrace_no_fp &mdash; HPMicro Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="33.3. rvbacktrace_RTThread" href="../../rtthread_fp/README_en.html" />
+    <link rel="prev" title="33.1. rvbacktrace_fp" href="../baremetal_fp/README_en.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html">
+            
+              <img src="../../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../get_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../boards/index_en.html">Evaluation Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../components/index_en.html">Components</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index_en.html">Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../audio_codec/index_en.html">1. Audio Codec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../canopen/README_en.html">2. CANOPEN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cherryrb/README_en.html">3. CherryRB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cherrysh/index_en.html">4. CherrySH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cherryusb/index_en.html">5. CherryUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coremark/README_en.html">6. CoreMark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dhrystone/README_en.html">7. Dhrystone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dma_manager/README_en.html">8. DMA Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dsp/README_en.html">9. DSP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dual_panel/README_en.html">10. DUAL_PANEL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../eeprom_emulation/index_en.html">11. EEPROM Emulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ethercat/index_en.html">12. EtherCAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../freemaster/README_en.html">13. Freemaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../hello_world/README_en.html">14. Hello World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../hpm_math/index_en.html">15. HPM Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../i2c_components/index_en.html">16. I2C Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../i2s_emulation/README_en.html">17. I2S EMULATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../image/index_en.html">18. Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lvgl/index_en.html">19. LVGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lwip/index_en.html">20. lwIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../mbedtls/README_en.html">21. Mbedtls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../memstress/index_en.html">22. Memory Stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../microros/index_en.html">23. Microros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modbus/index_en.html">24. Modbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motor_ctrl/index_en.html">25. HPM Motor Ctrl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../multicore/index_en.html">26. Multicore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../opener/index_en.html">27. OpENer Ethernet/IP Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pmbus/index_en.html">28. PMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../power_mode_switch/README_en.html">29. Power Mode Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rgb_led/README_en.html">30. RGB LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rom_api/index_en.html">31. ROM API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rtos/index_en.html">32. RTOS</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index_en.html">33. Rvbacktrace</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../baremetal_fp/README_en.html">33.1. rvbacktrace_fp</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">33.2. rvbacktrace_no_fp</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">33.2.1. Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hardware-configuration">33.2.2. Hardware Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-example">33.2.3. Running the example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../rtthread_fp/README_en.html">33.3. rvbacktrace_RTThread</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../segger_rtt/README_en.html">34. Segger RTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../segment_led_key/README_en.html">35. SEGMENT LED KEY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../smbus/index_en.html">36. SMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../spi_components/index_en.html">37. SPI Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../spi_sdcard/index_en.html">38. SPI SD Card</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tflm/index_en.html">39. TensorFlow Lite For Microcontroller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tinycrypt/index_en.html">40. Tinycrypt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tinyengine/person_obj/README_en.html">41. Person Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tinyuf2/README_en.html">42. TinyUF2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tinyusb/index_en.html">43. TinyUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../touch_panel/README_en.html">44. Touch Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../trace_recorder/index_en.html">45. Trace Recorder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tsn/index_en.html">46. tsn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../vglite/index_en.html">47. VGLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../sent/index_en.html">48. sent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../drivers/index_en.html">Drivers Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api_doc.html">SDK API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">HPMicro Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index_en.html">Samples</a></li>
+          <li class="breadcrumb-item"><a href="../../index_en.html"><span class="section-number">33. </span>Rvbacktrace</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">33.2. </span>rvbacktrace_no_fp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/samples/rvbacktrace/baremetal/baremetal_no_fp/README_en.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rvbacktrace-no-fp">
+<span id="id1"></span><h1><span class="section-number">33.2. </span>rvbacktrace_no_fp<a class="headerlink" href="#rvbacktrace-no-fp" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<h2><span class="section-number">33.2.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>This example demonstrates the use of instruction parsing to perform stack backtracking for interrupts, function calls and exception on a riscv32 machine.</p>
+</section>
+<section id="hardware-configuration">
+<h2><span class="section-number">33.2.2. </span>Hardware Configuration<a class="headerlink" href="#hardware-configuration" title="Permalink to this heading"></a></h2>
+<p>No special configuration is required.</p>
+</section>
+<section id="running-the-example">
+<h2><span class="section-number">33.2.3. </span>Running the example<a class="headerlink" href="#running-the-example" title="Permalink to this heading"></a></h2>
+<p>Once this program runs correctly, the function call information corresponding to the situation will be output on the console. In case of an exception, the register values saved in the stack when the exception occurs will be output.</p>
+<ul class="simple">
+<li><p>interrupt</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ENTER ISR</span>
+
+<span class="go">---- RV_Backtrace Call Frame Start: ----</span>
+<span class="go">[0]Stack interval :[0x87f10 - 0x87f50]  ra 0x800086c6</span>
+<span class="go">[1]Stack interval :[0x87f50 - 0x87f60]  ra 0x80005f82</span>
+<span class="go">[2]Stack interval :[0x87f60 - 0x87f70]  ra 0x22c</span>
+<span class="go">[3]Stack interval :[0x87f70 - 0x87f80]  ra 0x274</span>
+<span class="go">[4]Stack interval :[0x87f80 - 0x87fd0]  ra 0x80006084</span>
+<span class="go">[5]Stack interval :[0x87fd0 - 0x87ff0]  ra 0x80006406</span>
+<span class="go">[6]Stack interval :[0x87ff0 - 0x88000]  ra 0x8000305a</span>
+
+<span class="go">addr2line -e xxx.elf -a -f 800086c6 80005f82 22c 274 80006084 80006406 8000305a</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>caller and callee</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">F[function_recursion]: recursion cycle[1]</span>
+
+<span class="go">---- RV_Backtrace Call Frame Start: ----</span>
+<span class="go">[0]Stack interval :[0x87f60 - 0x87fa0]  ra 0x800086c6</span>
+<span class="go">[1]Stack interval :[0x87fa0 - 0x87fb0]  ra 0x80005f06</span>
+<span class="go">[2]Stack interval :[0x87fb0 - 0x87fd0]  ra 0x80006098</span>
+<span class="go">[3]Stack interval :[0x87fd0 - 0x87ff0]  ra 0x80006406</span>
+<span class="go">[4]Stack interval :[0x87ff0 - 0x88000]  ra 0x8000305a</span>
+
+<span class="go">addr2line -e xxx.elf -a -f 800086c6 80005f06 80006098 80006406 8000305a</span>
+<span class="go">---- RV_Backtrace Call Frame End:----</span>
+
+<span class="go">F[function_recursion]: recursion cycle[2]</span>
+
+<span class="go">---- RV_Backtrace Call Frame Start: ----</span>
+<span class="go">[0]Stack interval :[0x87f40 - 0x87f80]  ra 0x800086c6</span>
+<span class="go">[1]Stack interval :[0x87f80 - 0x87f90]  ra 0x80005f06</span>
+<span class="go">[2]Stack interval :[0x87f90 - 0x87fb0]  ra 0x80005f0e</span>
+<span class="go">[3]Stack interval :[0x87fb0 - 0x87fd0]  ra 0x80006098</span>
+<span class="go">[4]Stack interval :[0x87fd0 - 0x87ff0]  ra 0x80006406</span>
+<span class="go">[5]Stack interval :[0x87ff0 - 0x88000]  ra 0x8000305a</span>
+
+<span class="go">addr2line -e xxx.elf -a -f 800086c6 80005f06 80005f0e 80006098 80006406 8000305a</span>
+<span class="go">---- RV_Backtrace Call Frame End:----</span>
+
+<span class="go">F[function_recursion]: recursion cycle[3]</span>
+
+<span class="go">---- RV_Backtrace Call Frame Start: ----</span>
+<span class="go">[0]Stack interval :[0x87f20 - 0x87f60]  ra 0x800086c6</span>
+<span class="go">[1]Stack interval :[0x87f60 - 0x87f70]  ra 0x80005f06</span>
+<span class="go">[2]Stack interval :[0x87f70 - 0x87f90]  ra 0x80005f0e</span>
+<span class="go">[3]Stack interval :[0x87f90 - 0x87fb0]  ra 0x80005f0e</span>
+<span class="go">[4]Stack interval :[0x87fb0 - 0x87fd0]  ra 0x80006098</span>
+<span class="go">[5]Stack interval :[0x87fd0 - 0x87ff0]  ra 0x80006406</span>
+<span class="go">[6]Stack interval :[0x87ff0 - 0x88000]  ra 0x8000305a</span>
+
+<span class="go">addr2line -e xxx.elf -a -f 800086c6 80005f06 80005f0e 80005f0e 80006098 80006406 8000305a</span>
+<span class="go">---- RV_Backtrace Call Frame End:----</span>
+
+<span class="go">F[function_recursion]: recursion cycle[4]</span>
+
+<span class="go">---- RV_Backtrace Call Frame Start: ----</span>
+<span class="go">[0]Stack interval :[0x87f00 - 0x87f40]  ra 0x800086c6</span>
+<span class="go">[1]Stack interval :[0x87f40 - 0x87f50]  ra 0x80005f06</span>
+<span class="go">[2]Stack interval :[0x87f50 - 0x87f70]  ra 0x80005f0e</span>
+<span class="go">[3]Stack interval :[0x87f70 - 0x87f90]  ra 0x80005f0e</span>
+<span class="go">[4]Stack interval :[0x87f90 - 0x87fb0]  ra 0x80005f0e</span>
+<span class="go">[5]Stack interval :[0x87fb0 - 0x87fd0]  ra 0x80006098</span>
+<span class="go">[6]Stack interval :[0x87fd0 - 0x87ff0]  ra 0x80006406</span>
+<span class="go">[7]Stack interval :[0x87ff0 - 0x88000]  ra 0x8000305a</span>
+
+<span class="go">addr2line -e xxx.elf -a -f 800086c6 80005f06 80005f0e 80005f0e 80005f0e 80006098 80006406 8000305a</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>exception</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">GET FAULT ADDRESS, ENTER TRAP</span>
+
+<span class="go">---- RV_Backtrace In Trap Start: ----</span>
+<span class="go">[0]Stack interval :[0x87e80 - 0x87ec0]  ra 0x800086e0</span>
+<span class="go">[1]Stack interval :[0x87ec0 - 0x87ee0]  ra 0x80005f66</span>
+<span class="go">[2]Stack interval :[0x87ee0 - 0x87f00]  ra 0x3cc</span>
+<span class="go">[3]Stack interval :[0x87f00 - 0x87f80]  ra 0x80005f2a</span>
+<span class="go">[4]Stack interval :[0x87f80 - 0x87fb0]  ra 0x80005f48</span>
+<span class="go">[5]Stack interval :[0x87fb0 - 0x87fd0]  ra 0x8000609a</span>
+<span class="go">[6]Stack interval :[0x87fd0 - 0x87ff0]  ra 0x80006406</span>
+<span class="go">[7]Stack interval :[0x87ff0 - 0x88000]  ra 0x8000305a</span>
+
+<span class="go">addr2line -e xxx.elf -a -f 800086e0 80005f66 3cc 80005f2a 80005f48 8000609a 80006406 8000305a</span>
+<span class="go">---- RV_Backtrace In Trap End:----</span>
+
+<span class="go">---- RV Core Dump:----</span>
+<span class="go">    mcause:       0x5</span>
+<span class="go">    mepc:                 0x80005f2c</span>
+<span class="go">    ra:           0x80005f2a</span>
+<span class="go">    t0:           0x0</span>
+<span class="go">    t1:           0x87ecc</span>
+<span class="go">    t2:           0x20</span>
+<span class="go">    a0:           0x1e</span>
+<span class="go">    a1:           0xa</span>
+<span class="go">    a2:           0x1e</span>
+<span class="go">    a3:           0xf0040000</span>
+<span class="go">    a4:           0x6e1</span>
+<span class="go">    a5:           0xffffffff</span>
+<span class="go">    a6:           0x8000ea18</span>
+<span class="go">    a7:           0x73</span>
+<span class="go">    t3:           0x271a</span>
+<span class="go">    t4:           0x10bacb8</span>
+<span class="go">    t5:           0x3acb8</span>
+<span class="go">    t6:           0x10bf9e0</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li><p>The first stack frame of the print information is the stack frame of the stack backtrace API, and the call starts at <code class="docutils literal notranslate"><span class="pre">[1]Stack</span> <span class="pre">interval</span></code> .</p></li>
+<li><p>In exception situations, <code class="docutils literal notranslate"><span class="pre">rvbacktrace_trap()</span></code>  needs to be used. For interrupts and function calls, <code class="docutils literal notranslate"><span class="pre">rvbacktrace()</span></code>  is used.</p></li>
+<li><p>This component is generally used for software debugging. It is recommended to use it under the debug level.</p></li>
+<li><p>The method of rvbacktrace through instruction parsing is applicable to the situation where instructions are in a separate <cite>text</cite> segment. However, the presence of gaps between instructions or <cite>RODATA</cite> may lead to incorrect instruction parsing and ultimately result in the failure of rvbacktrace.</p></li>
+<li><p>To view the call chain of function names, the <code class="docutils literal notranslate"><span class="pre">addr2line</span></code>  tool needs to be used</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">addr2line -e xxx.elf -a -f &lt;addr1&gt; &lt;addr2&gt; ...</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2025, HPMicro.
+      <span class="lastupdated">Last updated on Mar 31, 2025.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

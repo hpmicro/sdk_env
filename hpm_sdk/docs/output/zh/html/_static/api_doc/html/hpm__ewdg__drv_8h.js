@@ -72,7 +72,6 @@ var hpm__ewdg__drv_8h =
     [ "ewdg_get_default_config", "group__ewdg__interface.html#gae3efabfbfa99578f5a518c4d17df8f56", null ],
     [ "ewdg_get_refresh_unlock_method", "group__ewdg__interface.html#gac473755599fa5bc9314ff7e1efb9e758", null ],
     [ "ewdg_get_status_flags", "group__ewdg__interface.html#gaef142adababca9e3baec2ee1a28d7934", null ],
-    [ "ewdg_get_timeout_interrupt_ticks", "group__ewdg__interface.html#gad208697888b6e51d7512d5a100e0a2ab", null ],
     [ "ewdg_get_timeout_reset_ticks", "group__ewdg__interface.html#ga928c20729538f7f3ff5707552b3bcfef", null ],
     [ "ewdg_init", "group__ewdg__interface.html#ga0f447fb16164b4b14b970218ee3b7a51", null ],
     [ "ewdg_init_ctrl_func", "group__ewdg__interface.html#ga3161a29add9fdae7ba40e8f5e9c1f87d", null ],

@@ -13,6 +13,7 @@ var HPM6300_2HPM6360_2hpm__bpor__drv_8h =
     [ "bpor_enable_power_on_cause", "HPM6300_2HPM6360_2hpm__bpor__drv_8h.html#ga43a0e3d13dbdaa499f59c4af1a4fe69f", null ],
     [ "bpor_enable_reg_value_retention", "HPM6300_2HPM6360_2hpm__bpor__drv_8h.html#ga64fdbcd2810da268b4ee354110db2500", null ],
     [ "bpor_get_power_on_cause", "HPM6300_2HPM6360_2hpm__bpor__drv_8h.html#gad72555e5a46b0fa34febc247758c5f0a", null ],
+    [ "bpor_is_reg_value_retention_enable", "HPM6300_2HPM6360_2hpm__bpor__drv_8h.html#ga8136428505123d29a8fbc5d676cd045f", null ],
     [ "bpor_set_power_down_counter", "HPM6300_2HPM6360_2hpm__bpor__drv_8h.html#gad0b507af6887806563dea637127c661d", null ],
     [ "bpor_set_power_on_cause", "HPM6300_2HPM6360_2hpm__bpor__drv_8h.html#ga869652447962c7279fdf70b346960f46", null ]
 ];

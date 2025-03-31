@@ -41,6 +41,27 @@ var group__xpi__interface =
       [ "serial_root_clk_freq", "structxpi__device__config__t.html#a1299e635b91de8810132a5168254f6cc", null ],
       [ "size_in_kbytes", "structxpi__device__config__t.html#aac0e640e5578d411924a211fb7922e37", null ]
     ] ],
+    [ "xpi_ahb_buffer_cfg_t", "structxpi__ahb__buffer__cfg__t.html", [
+      [ "buf_size_in_dword", "structxpi__ahb__buffer__cfg__t.html#a0e8781b79396614a859480888b945d1e", null ],
+      [ "enable_prefetch", "structxpi__ahb__buffer__cfg__t.html#a8d95ad3b59d7b47fed9d193876767931", null ],
+      [ "entry", "structxpi__ahb__buffer__cfg__t.html#af063d7548348482403cd403ad8ef5dd4", null ],
+      [ "master_idx", "structxpi__ahb__buffer__cfg__t.html#a8560a3e3503c660a8088da3471084458", null ],
+      [ "priority", "structxpi__ahb__buffer__cfg__t.html#af88dcb83d964dfa831a35c585c8901a3", null ]
+    ] ],
+    [ "xpi_driver_interface_t", "structxpi__driver__interface__t.html", [
+      [ "config_ahb_buffer", "structxpi__driver__interface__t.html#a9c4713d5736fd1c00f7367304f90605c", null ],
+      [ "config_device", "structxpi__driver__interface__t.html#acd3f56a3e5351dd0f9b996560bb8af24", null ],
+      [ "get_abs_apb_xfer_addr", "structxpi__driver__interface__t.html#ab4bd4e99de5364a1c028cbfacc1c35c0", null ],
+      [ "get_default_config", "structxpi__driver__interface__t.html#a367208804f7d3a54ee31d6119939790f", null ],
+      [ "get_default_device_config", "structxpi__driver__interface__t.html#ab2e70678d09704b0d80a9d61df865dba", null ],
+      [ "init", "structxpi__driver__interface__t.html#a4c7e410062f2aeb735acfb8b487188a9", null ],
+      [ "is_idle", "structxpi__driver__interface__t.html#a87dd5588cb0d12ab4864d0b2351363a9", null ],
+      [ "software_reset", "structxpi__driver__interface__t.html#a74c62da8706989c08b63dfe842d183b7", null ],
+      [ "transfer_blocking", "structxpi__driver__interface__t.html#aa71f539255fa755246591818d9518bb3", null ],
+      [ "update_dllcr", "structxpi__driver__interface__t.html#ae8efbc83ac984770681617877e4f0c12", null ],
+      [ "update_instr_table", "structxpi__driver__interface__t.html#a882c69bcbc429527b26ba8812dd97bd9", null ],
+      [ "version", "structxpi__driver__interface__t.html#af2e2d152e59ab867e4d7033319f61cf9", null ]
+    ] ],
     [ "SUB_INSTR", "group__xpi__interface.html#ga22ab53c0fd42209793826eb9ad9f495c", null ],
     [ "XPI_1PAD", "group__xpi__interface.html#gae70bcef08c9c1368b392cc399bb67fba", null ],
     [ "XPI_2PADS", "group__xpi__interface.html#ga2e890b80c9019226a9ef589aafd51653", null ],
@@ -67,17 +88,17 @@ var group__xpi__interface =
     [ "XPI_PHASE_WRITE_DDR", "group__xpi__interface.html#ga254f9f8c9d97bf25af258227ffa2dc02", null ],
     [ "XPI_PHASE_WRITE_SDR", "group__xpi__interface.html#ga075ab8935c4653e55d9a7fff985690d1", null ],
     [ "XPI_Type", "group__xpi__interface.html#ga87560204ea6254a4c1b7dbbbae1bf60b", [
-      [ "status_xpi_apb_jump_on_cs", "group__xpi__interface.html#gga337d6b8d9f9cc2b4d207e433a70d3987a1383558c122092c54b8314d1b02817f0", null ],
-      [ "status_xpi_apb_unknown_inst", "group__xpi__interface.html#gga337d6b8d9f9cc2b4d207e433a70d3987a71d3523b453b9fd03d19aeadb95f5922", null ],
-      [ "status_xpi_apb_dummy_sdr_in_ddr_seq", "group__xpi__interface.html#gga337d6b8d9f9cc2b4d207e433a70d3987adf54c0e4d302a631603925f633dd0e9f", null ],
-      [ "status_xpi_apb_dummy_ddr_in_sdr_seq", "group__xpi__interface.html#gga337d6b8d9f9cc2b4d207e433a70d3987a3cee604b4b549d4accb75efcde42a831", null ],
-      [ "status_xpi_apb_exceed_addr_range", "group__xpi__interface.html#gga337d6b8d9f9cc2b4d207e433a70d3987afd5ae700f74e3c206bc0d7baedf3edfa", null ],
-      [ "status_xpi_apb_seq_timeout", "group__xpi__interface.html#gga337d6b8d9f9cc2b4d207e433a70d3987a9874b2d975b8e01270a5b8649c005a09", null ],
-      [ "status_xpi_apb_cross_boundary", "group__xpi__interface.html#gga337d6b8d9f9cc2b4d207e433a70d3987a155d12963d729dd044142577462329d5", null ],
-      [ "xpi_dll_half_cycle", "group__xpi__interface.html#gga441c033e3d3f086db9e3901c0d66bd3dad4a84cc114dce34010ddffc171232796", null ],
-      [ "xpi_dll_quarter_cycle", "group__xpi__interface.html#gga441c033e3d3f086db9e3901c0d66bd3dabdee6c2c09dd2c5b5c6be6f9966b1119", null ],
-      [ "xpi_dll_sdr_default_cycle", "group__xpi__interface.html#gga441c033e3d3f086db9e3901c0d66bd3da145f4f5da56c0a272c3cda070c9e5607", null ],
-      [ "xpi_dll_ddr_default_cycle", "group__xpi__interface.html#gga441c033e3d3f086db9e3901c0d66bd3dacb6636aa8f605d13e8d0458fd41afe31", null ]
+      [ "xpi_dll_half_cycle", "group__xpi__interface.html#gga18813f5f63803020b8e95e5d83c0417aad4a84cc114dce34010ddffc171232796", null ],
+      [ "xpi_dll_quarter_cycle", "group__xpi__interface.html#gga18813f5f63803020b8e95e5d83c0417aabdee6c2c09dd2c5b5c6be6f9966b1119", null ],
+      [ "xpi_dll_sdr_default_cycle", "group__xpi__interface.html#gga18813f5f63803020b8e95e5d83c0417aa145f4f5da56c0a272c3cda070c9e5607", null ],
+      [ "xpi_dll_ddr_default_cycle", "group__xpi__interface.html#gga18813f5f63803020b8e95e5d83c0417aacb6636aa8f605d13e8d0458fd41afe31", null ],
+      [ "status_xpi_apb_jump_on_cs", "group__xpi__interface.html#gga3625aae0fb91cd50e743ac53bb2e9bb3a1383558c122092c54b8314d1b02817f0", null ],
+      [ "status_xpi_apb_unknown_inst", "group__xpi__interface.html#gga3625aae0fb91cd50e743ac53bb2e9bb3a71d3523b453b9fd03d19aeadb95f5922", null ],
+      [ "status_xpi_apb_dummy_sdr_in_ddr_seq", "group__xpi__interface.html#gga3625aae0fb91cd50e743ac53bb2e9bb3adf54c0e4d302a631603925f633dd0e9f", null ],
+      [ "status_xpi_apb_dummy_ddr_in_sdr_seq", "group__xpi__interface.html#gga3625aae0fb91cd50e743ac53bb2e9bb3a3cee604b4b549d4accb75efcde42a831", null ],
+      [ "status_xpi_apb_exceed_addr_range", "group__xpi__interface.html#gga3625aae0fb91cd50e743ac53bb2e9bb3afd5ae700f74e3c206bc0d7baedf3edfa", null ],
+      [ "status_xpi_apb_seq_timeout", "group__xpi__interface.html#gga3625aae0fb91cd50e743ac53bb2e9bb3a9874b2d975b8e01270a5b8649c005a09", null ],
+      [ "status_xpi_apb_cross_boundary", "group__xpi__interface.html#gga3625aae0fb91cd50e743ac53bb2e9bb3a155d12963d729dd044142577462329d5", null ]
     ] ],
     [ "xpi_apb_xfer_type_t", "group__xpi__interface.html#ga23bcf72f7d797a4992af3ccb0f560479", [
       [ "xpi_apb_xfer_type_cmd", "group__xpi__interface.html#gga23bcf72f7d797a4992af3ccb0f560479a77e6b01adbe8fe706b352d0602a080e4", null ],

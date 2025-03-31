@@ -23,6 +23,6 @@ var structFFA__Type =
     [ "OP_REG6", "structFFA__Type.html#a214643f87ff1ba4345393e7f661254be", null ],
     [ "OP_REG7", "structFFA__Type.html#ab45bb778888ee00c7ca97d83c61a4aff", null ],
     [ "RESERVED0", "structFFA__Type.html#a08a55d53746d74a0082d0b9c418a7045", null ],
-    [ "RESERVED1", "structFFA__Type.html#a9d882ab66e668dac46880b876c6cb0e3", null ],
+    [ "RESERVED1", "structFFA__Type.html#ad1c38607b08508cb446b47b436218c8e", null ],
     [ "STATUS", "structFFA__Type.html#a7500a3029b4869590cbbdb6e13679dc4", null ]
 ];

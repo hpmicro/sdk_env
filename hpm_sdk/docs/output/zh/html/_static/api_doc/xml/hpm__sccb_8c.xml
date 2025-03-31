@@ -1,0 +1,1095 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="hpm__sccb_8c" kind="file" language="C++">
+    <compoundname>hpm_sccb.c</compoundname>
+    <includes refid="hpm__sccb_8h" local="yes">hpm_sccb.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>components/sccb/hpm_sccb.c</label>
+        <link refid="hpm__sccb_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hpm_sccb.h</label>
+        <link refid="hpm__sccb_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>hpm_i2c_drv.h</label>
+        <link refid="hpm__i2c__drv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="11">
+        <label>hpm_i2c_regs.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="hpm__sccb_8c_1a2b2762d001463933e9f6bb6093a4f0a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sccb_master_init</definition>
+        <argsstring>(sccb_type sccb)</argsstring>
+        <name>sccb_master_init</name>
+        <param>
+          <type><ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref></type>
+          <declname>sccb</declname>
+        </param>
+        <briefdescription>
+<para>sccb master initialization </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialized sccb working at master mode</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sccb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if initialization is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/sccb/hpm_sccb.c" line="10" column="12" bodyfile="components/sccb/hpm_sccb.c" bodystart="10" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__sccb_8c_1a610c5f2bfe8d50eceedf5dd827f9fa94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t sccb_master_scan</definition>
+        <argsstring>(sccb_type sccb)</argsstring>
+        <name>sccb_master_scan</name>
+        <param>
+          <type><ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref></type>
+          <declname>sccb</declname>
+        </param>
+        <briefdescription>
+<para>sccb master scan slave addr </para>
+        </briefdescription>
+        <detaileddescription>
+<para>master scan the slave</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sccb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb base address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the slave address val is zero if scan slave fail </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/sccb/hpm_sccb.c" line="16" column="9" bodyfile="components/sccb/hpm_sccb.c" bodystart="16" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__sccb_8c_1a7e260c1661f453e7a3278c4e94fc9e5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sccb_master_gencall</definition>
+        <argsstring>(sccb_type sccb, uint8_t cmd)</argsstring>
+        <name>sccb_master_gencall</name>
+        <param>
+          <type><ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref></type>
+          <declname>sccb</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+<para>sccb master gen call slave </para>
+        </briefdescription>
+        <detaileddescription>
+<para>the controller sends the command to determine whether the slave responds</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sccb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb master sends command </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if the slave responds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/sccb/hpm_sccb.c" line="26" column="12" bodyfile="components/sccb/hpm_sccb.c" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__sccb_8c_1a2d8fb977d3b9902564b7dd8445a9512a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sccb_master_readb</definition>
+        <argsstring>(sccb_type sccb, uint8_t slv_addr, uint8_t reg_addr, uint8_t *reg_data)</argsstring>
+        <name>sccb_master_readb</name>
+        <param>
+          <type><ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref></type>
+          <declname>sccb</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slv_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>reg_data</declname>
+        </param>
+        <briefdescription>
+<para>sccb master read 8bit data of specify 8bit register from certain slave device </para>
+        </briefdescription>
+        <detaileddescription>
+<para>the function used to access 8 bit register address,read 8bit data <simplesect kind="note"><para>the register address must be 8bit</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sccb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slv_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8bit register address of sccb slave device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point of the buffer to store 8bit data from device the number of bytes is 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if reading is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/sccb/hpm_sccb.c" line="32" column="12" bodyfile="components/sccb/hpm_sccb.c" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__sccb_8c_1a907a137f9830e478e3d69f2a2bff8b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sccb_master_writeb</definition>
+        <argsstring>(sccb_type sccb, uint8_t slv_addr, uint8_t reg_addr, uint8_t reg_data)</argsstring>
+        <name>sccb_master_writeb</name>
+        <param>
+          <type><ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref></type>
+          <declname>sccb</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slv_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg_data</declname>
+        </param>
+        <briefdescription>
+<para>sccb master write 8bit data of specify 8bit register from certain slave device </para>
+        </briefdescription>
+        <detaileddescription>
+<para>the function used to access 8 bit register address,write 8bit data <simplesect kind="note"><para>the register address must be 8bit</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sccb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slv_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8bit register address of sccb slave device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>write 8bit data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if writing is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/sccb/hpm_sccb.c" line="37" column="12" bodyfile="components/sccb/hpm_sccb.c" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__sccb_8c_1adddb38ebb89369c102372e295b15c0c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sccb_master_readb2</definition>
+        <argsstring>(sccb_type sccb, uint8_t slv_addr, uint16_t reg_addr, uint8_t *reg_data)</argsstring>
+        <name>sccb_master_readb2</name>
+        <param>
+          <type><ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref></type>
+          <declname>sccb</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slv_addr</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>reg_data</declname>
+        </param>
+        <briefdescription>
+<para>sccb master read 8bit data of specify 16bit register from certain slave device </para>
+        </briefdescription>
+        <detaileddescription>
+<para>the function used to access 16 bit register address,read 8bit data <simplesect kind="note"><para>the register address must be 16bit</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sccb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slv_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>16bit register address of sccb slave device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point of the buffer to store 8bit data from device the number of bytes is 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if reading is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/sccb/hpm_sccb.c" line="42" column="12" bodyfile="components/sccb/hpm_sccb.c" bodystart="42" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__sccb_8c_1a88bb6385d6c11bf72bf44be1c87b7ce4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sccb_master_writeb2</definition>
+        <argsstring>(sccb_type sccb, uint8_t slv_addr, uint16_t reg_addr, uint8_t reg_data)</argsstring>
+        <name>sccb_master_writeb2</name>
+        <param>
+          <type><ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref></type>
+          <declname>sccb</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slv_addr</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg_data</declname>
+        </param>
+        <briefdescription>
+<para>sccb master write 8bit data of specify 16bit register from certain slave device </para>
+        </briefdescription>
+        <detaileddescription>
+<para>the function used to access 16 bit register address,write 8bit data <simplesect kind="note"><para>the register address must be 8bit</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sccb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slv_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>16bit register address of sccb slave device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>wirite 8bit data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if writing is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/sccb/hpm_sccb.c" line="50" column="12" bodyfile="components/sccb/hpm_sccb.c" bodystart="50" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__sccb_8c_1a7fce75c990fd1a293a1269c9a7b1065e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sccb_master_readw</definition>
+        <argsstring>(sccb_type sccb, uint8_t slv_addr, uint8_t reg_addr, uint16_t *reg_data)</argsstring>
+        <name>sccb_master_readw</name>
+        <param>
+          <type><ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref></type>
+          <declname>sccb</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slv_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>reg_data</declname>
+        </param>
+        <briefdescription>
+<para>sccb master read 16bit data of specify 8bit register from certain slave device </para>
+        </briefdescription>
+        <detaileddescription>
+<para>the function used to access 8 bit register address,read 16bit data <simplesect kind="note"><para>the register address must be 8bit</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sccb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slv_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8bit register address of sccb slave device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point of the buffer to store 16bit data from device the number of bytes is 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if reading is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/sccb/hpm_sccb.c" line="59" column="12" bodyfile="components/sccb/hpm_sccb.c" bodystart="59" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__sccb_8c_1aacb727dcdae989a831673f268f1542a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sccb_master_writew</definition>
+        <argsstring>(sccb_type sccb, uint8_t slv_addr, uint8_t reg_addr, uint16_t reg_data)</argsstring>
+        <name>sccb_master_writew</name>
+        <param>
+          <type><ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref></type>
+          <declname>sccb</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slv_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>reg_data</declname>
+        </param>
+        <briefdescription>
+<para>sccb master write 16bit data of specify 8bit register from certain slave device </para>
+        </briefdescription>
+        <detaileddescription>
+<para>the function used to access 8 bit register address,write 16bit data <simplesect kind="note"><para>the register address must be 8bit</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sccb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slv_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8bit register address of sccb slave device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>wirite 16bit data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if writing is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/sccb/hpm_sccb.c" line="70" column="12" bodyfile="components/sccb/hpm_sccb.c" bodystart="70" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__sccb_8c_1a4f7b284935f2ea60fa51beef539687dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sccb_master_readw2</definition>
+        <argsstring>(sccb_type sccb, uint8_t slv_addr, uint16_t reg_addr, uint16_t *reg_data)</argsstring>
+        <name>sccb_master_readw2</name>
+        <param>
+          <type><ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref></type>
+          <declname>sccb</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slv_addr</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>reg_data</declname>
+        </param>
+        <briefdescription>
+<para>sccb master read 16bit data of specify 16it register from certain slave device </para>
+        </briefdescription>
+        <detaileddescription>
+<para>the function used to access 16 bit register address,read 16bit data <simplesect kind="note"><para>the register address must be 16bit</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sccb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slv_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>16bit register address of sccb slave device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point of the buffer to store 16bit data from device the number of bytes is 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if reading is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/sccb/hpm_sccb.c" line="76" column="12" bodyfile="components/sccb/hpm_sccb.c" bodystart="76" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__sccb_8c_1a177b11b98864c2d75a3b4359d0083e36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sccb_master_writew2</definition>
+        <argsstring>(sccb_type sccb, uint8_t slv_addr, uint16_t reg_addr, uint16_t reg_data)</argsstring>
+        <name>sccb_master_writew2</name>
+        <param>
+          <type><ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref></type>
+          <declname>sccb</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slv_addr</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>reg_data</declname>
+        </param>
+        <briefdescription>
+<para>sccb master write 16bit data of specify 16bit register from certain slave device </para>
+        </briefdescription>
+        <detaileddescription>
+<para>the function used to access 16bit register address,write 16bit data <simplesect kind="note"><para>the register address must be 16bit</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sccb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slv_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>16bit register address of sccb slave device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">reg_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>wirite 16bit data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if writing is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/sccb/hpm_sccb.c" line="87" column="12" bodyfile="components/sccb/hpm_sccb.c" bodystart="87" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__sccb_8c_1a99ecf7736aa12c176316daa2d85fbe5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t sccb_master_read_bytes</definition>
+        <argsstring>(sccb_type sccb, uint8_t slv_addr, uint8_t *buf, const uint32_t len, uint8_t flags)</argsstring>
+        <name>sccb_master_read_bytes</name>
+        <param>
+          <type><ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref></type>
+          <declname>sccb</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slv_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>sccb master reads the specified number of bytes continuously at the specified flag </para>
+        </briefdescription>
+        <detaileddescription>
+<para>the size should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sccb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slv_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point of the buffer to store 8bit data from device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be read in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="hpm__sccb_8h_1a8810c3de4ab64c2f9fc97fe04ba72866" kindref="member">sccb_xfer_flags_t</ref> enmu flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if reading is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/sccb/hpm_sccb.c" line="96" column="12" bodyfile="components/sccb/hpm_sccb.c" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__sccb_8c_1a71dc8b6b8d3347542b5e8da07e72c3b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t cambus_write_bytes</definition>
+        <argsstring>(sccb_type sccb, uint8_t slv_addr, uint8_t *buf, const uint32_t len, uint8_t flags)</argsstring>
+        <name>cambus_write_bytes</name>
+        <param>
+          <type><ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref></type>
+          <declname>sccb</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slv_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>sccb master weite the specified number of bytes continuously at the specified flag </para>
+        </briefdescription>
+        <detaileddescription>
+<para>the size should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sccb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slv_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sccb slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point of the buffer to store 8bit data from device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be write in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="hpm__sccb_8h_1a8810c3de4ab64c2f9fc97fe04ba72866" kindref="member">sccb_xfer_flags_t</ref> enmu flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if writing is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/sccb/hpm_sccb.c" line="101" column="12" bodyfile="components/sccb/hpm_sccb.c" bodystart="101" bodyend="118"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2023<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__sccb_8h" kindref="compound">hpm_sccb.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__sccb_8c_1a2b2762d001463933e9f6bb6093a4f0a3" kindref="member">sccb_master_init</ref>(<ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref><sp/>sccb)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*TODO*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">uint8_t<sp/><ref refid="hpm__sccb_8c_1a610c5f2bfe8d50eceedf5dd827f9fa94" kindref="member">sccb_master_scan</ref>(<ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref><sp/>sccb)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>addr<sp/>=<sp/>0x01,<sp/>rxdata;<sp/>addr<sp/>&lt;<sp/>0xff;<sp/>addr++)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__i2c__interface_1gaa838ed222310fa510b6d0ad2fe84b065" kindref="member">i2c_master_read</ref>(sccb,<sp/>addr,<sp/>&amp;rxdata,<sp/>1)<sp/>==<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>addr;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__sccb_8c_1a7e260c1661f453e7a3278c4e94fc9e5d" kindref="member">sccb_master_gencall</ref>(<ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref><sp/>sccb,<sp/>uint8_t<sp/>cmd)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>reg_data<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__i2c__interface_1ga19bed50d02b008bb83acc23cda5ae5c2" kindref="member">i2c_master_address_write</ref>(sccb,<sp/>0x00,<sp/>&amp;cmd,<sp/>1,<sp/>&amp;reg_data,<sp/>1);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__sccb_8c_1a2d8fb977d3b9902564b7dd8445a9512a" kindref="member">sccb_master_readb</ref>(<ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref><sp/>sccb,<sp/>uint8_t<sp/>slv_addr,<sp/>uint8_t<sp/>reg_addr,<sp/>uint8_t<sp/>*reg_data)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__i2c__interface_1ga60246f25bb1994cdf9438b98617f6904" kindref="member">i2c_master_address_read</ref>(sccb,<sp/>(uint16_t)slv_addr,<sp/>(uint8_t<sp/>*)&amp;reg_addr,<sp/>1,<sp/>reg_data,<sp/>1);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__sccb_8c_1a907a137f9830e478e3d69f2a2bff8b9e" kindref="member">sccb_master_writeb</ref>(<ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref><sp/>sccb,<sp/>uint8_t<sp/>slv_addr,<sp/>uint8_t<sp/>reg_addr,<sp/>uint8_t<sp/>reg_data)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__i2c__interface_1ga19bed50d02b008bb83acc23cda5ae5c2" kindref="member">i2c_master_address_write</ref>(sccb,<sp/>(uint16_t)slv_addr,<sp/>(uint8_t<sp/>*)&amp;reg_addr,<sp/>1,<sp/>(uint8_t<sp/>*)&amp;reg_data,<sp/>1);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__sccb_8c_1adddb38ebb89369c102372e295b15c0c9" kindref="member">sccb_master_readb2</ref>(<ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref><sp/>sccb,<sp/>uint8_t<sp/>slv_addr,<sp/>uint16_t<sp/>reg_addr,<sp/>uint8_t<sp/>*reg_data)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>r[2];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>r[0]<sp/>=<sp/>reg_addr<sp/>&gt;&gt;<sp/>8;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>r[1]<sp/>=<sp/>reg_addr<sp/>&amp;<sp/>0xFF;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__i2c__interface_1ga60246f25bb1994cdf9438b98617f6904" kindref="member">i2c_master_address_read</ref>(sccb,<sp/>(uint16_t)slv_addr,<sp/>r,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(r),<sp/>reg_data,<sp/>1);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__sccb_8c_1a88bb6385d6c11bf72bf44be1c87b7ce4" kindref="member">sccb_master_writeb2</ref>(<ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref><sp/>sccb,<sp/>uint8_t<sp/>slv_addr,<sp/>uint16_t<sp/>reg_addr,<sp/>uint8_t<sp/>reg_data)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>r[2];</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>r[0]<sp/>=<sp/>reg_addr<sp/>&gt;&gt;<sp/>8;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>r[1]<sp/>=<sp/>reg_addr<sp/>&amp;<sp/>0xFF;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__i2c__interface_1ga19bed50d02b008bb83acc23cda5ae5c2" kindref="member">i2c_master_address_write</ref>(sccb,<sp/>(uint16_t)slv_addr,<sp/>r,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(r),<sp/>(uint8_t<sp/>*)&amp;reg_data,<sp/>1);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__sccb_8c_1a7fce75c990fd1a293a1269c9a7b1065e" kindref="member">sccb_master_readw</ref>(<ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref><sp/>sccb,<sp/>uint8_t<sp/>slv_addr,<sp/>uint8_t<sp/>reg_addr,<sp/>uint16_t<sp/>*reg_data)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>ret<sp/>=<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="group__i2c__interface_1ga60246f25bb1994cdf9438b98617f6904" kindref="member">i2c_master_address_read</ref>(sccb,<sp/>(uint16_t)slv_addr,<sp/>(uint8_t<sp/>*)&amp;reg_addr,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/>(uint8_t<sp/>*)reg_data,<sp/>2);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>==<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*reg_data<sp/>=<sp/>(*reg_data<sp/>&gt;&gt;<sp/>8)<sp/>|<sp/>(*reg_data<sp/>&lt;&lt;<sp/>8);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__sccb_8c_1aacb727dcdae989a831673f268f1542a6" kindref="member">sccb_master_writew</ref>(<ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref><sp/>sccb,<sp/>uint8_t<sp/>slv_addr,<sp/>uint8_t<sp/>reg_addr,<sp/>uint16_t<sp/>reg_data)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>reg_data<sp/>=<sp/>(reg_data<sp/>&gt;&gt;<sp/>8)<sp/>|<sp/>(reg_data<sp/>&lt;&lt;<sp/>8);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__i2c__interface_1ga19bed50d02b008bb83acc23cda5ae5c2" kindref="member">i2c_master_address_write</ref>(sccb,<sp/>(uint16_t)slv_addr,<sp/>(uint8_t<sp/>*)&amp;reg_addr,<sp/>1,<sp/>(uint8_t<sp/>*)&amp;reg_data,<sp/>2);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__sccb_8c_1a4f7b284935f2ea60fa51beef539687dd" kindref="member">sccb_master_readw2</ref>(<ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref><sp/>sccb,<sp/>uint8_t<sp/>slv_addr,<sp/>uint16_t<sp/>reg_addr,<sp/>uint16_t<sp/>*reg_data)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>ret<sp/>=<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="group__i2c__interface_1ga60246f25bb1994cdf9438b98617f6904" kindref="member">i2c_master_address_read</ref>(sccb,<sp/>(uint16_t)slv_addr,<sp/>(uint8_t<sp/>*)&amp;reg_addr,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2,<sp/>(uint8_t<sp/>*)reg_data,<sp/>2);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>==<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*reg_data<sp/>=<sp/>(*reg_data<sp/>&gt;&gt;<sp/>8)<sp/>|<sp/>(*reg_data<sp/>&lt;&lt;<sp/>8);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__sccb_8c_1a177b11b98864c2d75a3b4359d0083e36" kindref="member">sccb_master_writew2</ref>(<ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref><sp/>sccb,<sp/>uint8_t<sp/>slv_addr,<sp/>uint16_t<sp/>reg_addr,<sp/>uint16_t<sp/>reg_data)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>reg_data<sp/>=<sp/>(reg_data<sp/>&gt;&gt;<sp/>8)<sp/>|<sp/>(reg_data<sp/>&lt;&lt;<sp/>8);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__i2c__interface_1ga19bed50d02b008bb83acc23cda5ae5c2" kindref="member">i2c_master_address_write</ref>(sccb,<sp/>(uint16_t)slv_addr,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t<sp/>*)&amp;reg_addr,<sp/>2,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t<sp/>*)&amp;reg_data,<sp/>2);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__sccb_8c_1a99ecf7736aa12c176316daa2d85fbe5c" kindref="member">sccb_master_read_bytes</ref>(<ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref><sp/>sccb,<sp/>uint8_t<sp/>slv_addr,<sp/>uint8_t<sp/>*buf,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>len,<sp/>uint8_t<sp/>flags)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__i2c__interface_1gaa838ed222310fa510b6d0ad2fe84b065" kindref="member">i2c_master_read</ref>(sccb,<sp/>(uint16_t)slv_addr,<sp/>buf,<sp/>len);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__sccb_8c_1a71dc8b6b8d3347542b5e8da07e72c3b9" kindref="member">cambus_write_bytes</ref>(<ref refid="hpm__sccb_8h_1ae68220b108e3275fd7bde9f038fbf2ad" kindref="member">sccb_type</ref><sp/>sccb,<sp/>uint8_t<sp/>slv_addr,<sp/>uint8_t<sp/>*buf,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>len,<sp/>uint8_t<sp/>flags)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>sta<sp/>=<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_len<sp/>=<sp/>len;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>remain<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(_len<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>remain<sp/>=<sp/>(_len<sp/>&gt;<sp/>100)<sp/>?<sp/>100<sp/>:<sp/>_len;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sta<sp/>=<sp/><ref refid="group__i2c__interface_1ga14e1065a0ea6722b9aa9f22667adf33c" kindref="member">i2c_master_write</ref>(sccb,<sp/>(uint16_t)slv_addr,<sp/>&amp;buf[offset],<sp/>remain);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sta<sp/>!=<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offset<sp/>+=<sp/>remain;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_len<sp/>-=<sp/>remain;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sta;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="components/sccb/hpm_sccb.c"/>
+  </compounddef>
+</doxygen>

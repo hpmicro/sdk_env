@@ -7,7 +7,6 @@
   <title>1.1. Audio Codec Loopback &mdash; HPMico Software Development Kit  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
 
   
   <!--[if lt IE 9]>
@@ -20,7 +19,6 @@
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/sphinx_highlight.js"></script>
-        <script src="../../../_static/tabs.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -50,16 +48,16 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">内容</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">使用说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">快速入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../boards/index_zh.html">开发板介绍</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../components/index_zh.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index_zh.html">例程</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index_zh.html">1. Audio Codec</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">1.1. Audio Codec Loopback</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">1.1.1. 概述</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">1.1.2. 工程配置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">1.1.3. 硬件设置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">1.1.4. 运行现象</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1.1.1. 概述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">1.1.2. 工程配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">1.1.3. 硬件设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">1.1.4. 运行现象</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../decoder_mp3/README_zh.html">1.2. Audio MP3 Decoder</a></li>
@@ -69,47 +67,51 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../canopen/README_zh.html">2. CANOPEN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../cherryrb/README_zh.html">3. CherryRB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../cherryusb/index_zh.html">4. CherryUSB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../coremark/README_zh.html">5. CoreMark</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../dhrystone/README_zh.html">6. Dhrystone</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../dma_manager/README_zh.html">7. DMA Manager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../dsp/README_zh.html">8. DSP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../eeprom_emulation/index_zh.html">9. EEPROM Emulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../freemaster/README_zh.html">10. Freemaster</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../hello_world/README_zh.html">11. Hello World</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../hpm_math/index_zh.html">12. HPM Math</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../image/index_zh.html">13. IMAGE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../lvgl/index_zh.html">14. LVGL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../lwip/index_zh.html">15. lwIP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../mbedtls/README_zh.html">16. Mbedtls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../memstress/index_zh.html">17. Memory Stress</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../microros/index_zh.html">18. Microros</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../modbus/index_zh.html">19. Modbus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../motor_ctrl/index_zh.html">20. HPM Motor Ctrl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../multicore/index_zh.html">21. Multicore</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../power_mode_switch/README_zh.html">22. Power Mode Switch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rgb_led/README_zh.html">23. RGB LED</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rom_api/index_zh.html">24. ROM API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rtos/index_zh.html">25. RTOS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rvbacktrace/index_zh.html">26. Rvbacktrace</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../segger_rtt/README_zh.html">27. Segger RTT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tflm/index_zh.html">28. TensorFlowLiteMicro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tinycrypt/index_zh.html">29. Tinycrypt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tinyengine/person_obj/README_zh.html">30. Person Detection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tinyuf2/README_zh.html">31. TinyUF2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tinyusb/index_zh.html">32. TinyUSB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../touch_panel/README_zh.html">33. Touch Panel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../vglite/index_zh.html">34. VGLite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../spi_components/index_zh.html">35. SPI_COMPONENTS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../i2s_emulation/README_zh.html">36. SPI模拟I2S</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../spi_sdcard/index_zh.html">37. SPI驱动SD卡</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../cherrysh/index_zh.html">38. CherrySH</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ethercat/index_zh.html">39. EtherCAT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../smbus/index_zh.html">40. SMbus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../pmbus/index_zh.html">41. PMbus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tsn/index_zh.html">42. tsn</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../opener/index_zh.html">43. OpENer Ethernet/IP协议栈</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../trace_recorder/index_zh.html">44. Trace Recorder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherrysh/index_zh.html">4. CherrySH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryusb/index_zh.html">5. CherryUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coremark/README_zh.html">6. CoreMark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dhrystone/README_zh.html">7. Dhrystone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dma_manager/README_zh.html">8. DMA Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dsp/README_zh.html">9. DSP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dual_panel/README_zh.html">10. DUAL_PANEL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../eeprom_emulation/index_zh.html">11. EEPROM Emulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ethercat/index_zh.html">12. EtherCAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freemaster/README_zh.html">13. Freemaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hello_world/README_zh.html">14. Hello World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hpm_math/index_zh.html">15. HPM Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2c_components/index_zh.html">16. I2C Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2s_emulation/README_zh.html">17. SPI模拟I2S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image/index_zh.html">18. IMAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lvgl/index_zh.html">19. LVGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lwip/index_zh.html">20. lwIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mbedtls/README_zh.html">21. Mbedtls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../memstress/index_zh.html">22. Memory Stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../microros/index_zh.html">23. Microros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modbus/index_zh.html">24. Modbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motor_ctrl/index_zh.html">25. HPM Motor Ctrl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multicore/index_zh.html">26. Multicore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opener/index_zh.html">27. OpENer Ethernet/IP协议栈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pmbus/index_zh.html">28. PMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../power_mode_switch/README_zh.html">29. Power Mode Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rgb_led/README_zh.html">30. RGB LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rom_api/index_zh.html">31. ROM API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rtos/index_zh.html">32. RTOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rvbacktrace/index_zh.html">33. Rvbacktrace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../segger_rtt/README_zh.html">34. Segger RTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../segment_led_key/README_zh.html">35. SEGMENT LED KEY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smbus/index_zh.html">36. SMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_components/index_zh.html">37. SPI Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_sdcard/index_zh.html">38. SPI驱动SD卡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tflm/index_zh.html">39. TensorFlow Lite For Microcontroller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinycrypt/index_zh.html">40. Tinycrypt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyengine/person_obj/README_zh.html">41. Person Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyuf2/README_zh.html">42. TinyUF2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyusb/index_zh.html">43. TinyUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../touch_panel/README_zh.html">44. Touch Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../trace_recorder/index_zh.html">45. Trace Recorder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tsn/index_zh.html">46. tsn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vglite/index_zh.html">47. VGLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sent/index_zh.html">48. sent</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../drivers/index_zh.html">驱动示例</a></li>
@@ -136,7 +138,7 @@
           <li class="breadcrumb-item"><a href="../index_zh.html"><span class="section-number">1. </span>Audio Codec</a></li>
       <li class="breadcrumb-item active"><span class="section-number">1.1. </span>Audio Codec Loopback</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../../_sources/samples/audio_codec/audio_loopback/README_zh.md.txt" rel="nofollow"> View page source</a>
+            <a href="../../../_sources/samples/audio_codec/audio_loopback/README_zh.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -144,34 +146,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="audio-codec-loopback">
-<h1><span class="section-number">1.1. </span>Audio Codec Loopback<a class="headerlink" href="#audio-codec-loopback" title="Permalink to this heading"></a></h1>
-<section id="id1">
-<h2><span class="section-number">1.1.1. </span>概述<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+  <section id="audio-codec-loopback">
+<span id="id1"></span><h1><span class="section-number">1.1. </span>Audio Codec Loopback<a class="headerlink" href="#audio-codec-loopback" title="Permalink to this heading"></a></h1>
+<section id="id2">
+<h2><span class="section-number">1.1.1. </span>概述<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <p>音频编解码示例工程展示了如何使用板载的音频编解码器记录和播放音频信息。
 在这个工程中，音频编解码器采集音频信息，编码后通过I2S接口传送给MCU,
 MCU会通过I2S接口将收到的编码数据发送回音频编解码器，音频编解码器会解码收到的数据并播放。</p>
 </section>
-<section id="id2">
-<h2><span class="section-number">1.1.2. </span>工程配置<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h2><span class="section-number">1.1.2. </span>工程配置<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>在文件<code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>中,  根据开发板原理图，设置匹配的audio codec类型，例如：“set(CONFIG_CODEC “sgtl5000”)”</p></li>
+<li><p>在文件`CMakeLists.txt`中,  根据开发板原理图，设置匹配的audio codec类型，例如：”set(CONFIG_CODEC “sgtl5000”)”</p></li>
 </ul>
 </section>
-<section id="id3">
-<h2><span class="section-number">1.1.3. </span>硬件设置<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<section id="id4">
+<h2><span class="section-number">1.1.3. </span>硬件设置<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>根据开发板原理图选择下列方式中的一种音频录入方式：</p>
-<ul class="simple">
+<li><dl class="simple">
+<dt>根据开发板原理图选择下列方式中的一种音频录入方式：</dt><dd><ul class="simple">
 <li><p>使用3.5mm音频连接线将音乐播放器与板上codec的LINE_IN接口相连, 录入音频数据</p></li>
 <li><p>使用板上codec的mic录入音频数据</p></li>
 </ul>
+</dd>
+</dl>
 </li>
-<li><p>连接3.5mm耳机到音频编解码芯片的<a class="reference internal" href="../../../boards/index_zh.html#lab-board-app-headphone"><span class="std std-ref">耳机</span></a>接口， 播放音频数据</p></li>
+<li><p>连接3.5mm耳机到音频编解码芯片的 <a class="reference internal" href="../../../boards/index_zh.html#board-resource"><span class="std std-ref">耳机</span></a> 接口， 播放音频数据</p></li>
 </ol>
 </section>
-<section id="id4">
-<h2><span class="section-number">1.1.4. </span>运行现象<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<section id="id5">
+<h2><span class="section-number">1.1.4. </span>运行现象<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
 <p>当工程正确运行后，耳机会播放音频播放器正在放的声音，而串口终端会输出如下信息：</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Audio Codec example</span>
 <span class="go">Test Codec playback and record</span>
@@ -188,8 +192,8 @@ MCU会通过I2S接口将收到的编码数据发送回音频编解码器，音�
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020-2024, HPMicro.
-      <span class="lastupdated">Last updated on Dec 30, 2024.
+    <p>&#169; Copyright 2020-2025, HPMicro.
+      <span class="lastupdated">Last updated on Mar 31, 2025.
       </span></p>
   </div>
 

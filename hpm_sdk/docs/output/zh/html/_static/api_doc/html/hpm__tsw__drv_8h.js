@@ -7,6 +7,8 @@ var hpm__tsw__drv_8h =
     [ "TSW_BUS_FREQ", "group__tsw__interface.html#ga2e36ae1475811dca0872713762057154", null ],
     [ "TSW_FPE_MMS_MAX_VTIME_MAX", "group__tsw__interface.html#ga0e62cc1fe02cbbe488b04e283588297e", null ],
     [ "TSW_FPE_MMS_MIN_VTIME_MIN", "group__tsw__interface.html#ga9243ce10f5ef8caea6394ea919bab60f", null ],
+    [ "TSW_MM2S_DMA_CHECK_RBUFE_TIMEOUT", "group__tsw__interface.html#gac7e31c2283c46f02a745e8fc44eb1820", null ],
+    [ "TSW_MM2S_DMA_WAIT_CBUFF_TIMEOUT", "group__tsw__interface.html#gab826707794610de80ef60467ddbe019b", null ],
     [ "TSW_NS_IN_ONE_SEC", "group__tsw__interface.html#ga78845b4b5b8ccb2c7648fc4c2a22cdd2", null ],
     [ "TSW_RECV_BUFF_LEN", "group__tsw__interface.html#gade328a8477a668ed77df094a97d850ff", null ],
     [ "TSW_RECV_DESC_COUNT", "group__tsw__interface.html#ga4d70a41be049456b6d8c4e904b446bdf", null ],
@@ -61,6 +63,10 @@ var hpm__tsw__drv_8h =
     [ "tsw_mac_mode_t", "group__tsw__interface.html#gad56d46a0282b4cb87d4a4334844d7aba", [
       [ "tsw_mac_mode_mii", "group__tsw__interface.html#ggad56d46a0282b4cb87d4a4334844d7abaae7d0129fe64da78c7f101bd0eb984f6f", null ],
       [ "tsw_mac_mode_gmii", "group__tsw__interface.html#ggad56d46a0282b4cb87d4a4334844d7abaa4107beb2596fc299459dfeee8a6c4010", null ]
+    ] ],
+    [ "tsw_mac_type_t", "group__tsw__interface.html#ga767259fde40d3445f5aced24b366674e", [
+      [ "tsw_mac_type_emac", "group__tsw__interface.html#gga767259fde40d3445f5aced24b366674ea7bd7b663d90c21dc3b6daa41e8fd2e0a", null ],
+      [ "tsw_mac_type_pmac", "group__tsw__interface.html#gga767259fde40d3445f5aced24b366674ea83621952a2907ef00aaa8d56aeee46b9", null ]
     ] ],
     [ "tsw_port_phy_itf_t", "group__tsw__interface.html#ga801abec1fef9b7562846d408e28ac73e", [
       [ "tsw_port_phy_itf_mii", "group__tsw__interface.html#gga801abec1fef9b7562846d408e28ac73ea6053e3fa6915787d441cd13334064625", null ],
@@ -151,15 +157,16 @@ var hpm__tsw__drv_8h =
     [ "tsw_commit_recv_desc", "group__tsw__interface.html#gabcc87750423cdc58c7436f21d7212de1", null ],
     [ "tsw_disable_store_forward_mode", "group__tsw__interface.html#ga27014466da324a5bc79a02c20ebf8a69", null ],
     [ "tsw_enable_store_forward_mode", "group__tsw__interface.html#ga6c842083388bbcfc1767977a7c3780ca", null ],
-    [ "tsw_ep_disable_all_mac_ctrl", "group__tsw__interface.html#ga002fae3cb979d97b369f5fd8f681d20b", null ],
-    [ "tsw_ep_disable_mac_ctrl", "group__tsw__interface.html#ga2e006506fd99fcbea8bfae73f95eaa04", null ],
-    [ "tsw_ep_enable_all_mac_ctrl", "group__tsw__interface.html#ga960d4bc9f0c71d03e7d796b2f023d693", null ],
-    [ "tsw_ep_enable_mac_ctrl", "group__tsw__interface.html#gad5598ba5d5a07dd85c7b5ef98aac119a", null ],
+    [ "tsw_ep_disable_all_mac_ctrl", "group__tsw__interface.html#gabcebad8000a75df507959ec0cd94aa39", null ],
+    [ "tsw_ep_disable_mac_ctrl", "group__tsw__interface.html#gab8a04b755239457918aeaef50cca5d43", null ],
+    [ "tsw_ep_enable_all_mac_ctrl", "group__tsw__interface.html#gaa136b794053c3a9f0163fffea6dbcdd3", null ],
+    [ "tsw_ep_enable_mac_ctrl", "group__tsw__interface.html#ga5ab916712c08ada59c4b3a38da7b159b", null ],
     [ "tsw_ep_mdio_read", "group__tsw__interface.html#ga43f610c57807ba7dcbdea807b16255fa", null ],
     [ "tsw_ep_mdio_write", "group__tsw__interface.html#ga74216cdd4c2ac6f6c1fd71baef2eab6e", null ],
     [ "tsw_ep_set_mac_addr", "group__tsw__interface.html#ga7b0b82fe781660ef039331d807196ce6", null ],
     [ "tsw_ep_set_mac_mode", "group__tsw__interface.html#gabdc814c7a30a9a0dbcdc6977f48dfd7f", null ],
     [ "tsw_ep_set_mdio_config", "group__tsw__interface.html#ga8f9ef553623940cb2c369831243af8e1", null ],
+    [ "tsw_ep_set_xmac_mode", "group__tsw__interface.html#ga8bc202003b8476af64b35bb089e02322", null ],
     [ "tsw_fpe_disable_mms", "group__tsw__interface.html#ga59d88d07a006c91d189e361a56d1781e", null ],
     [ "tsw_fpe_enable_mms", "group__tsw__interface.html#gabdd4f6b3434e5170d54186209a03ec52", null ],
     [ "tsw_fpe_get_default_mms_ctrl_config", "group__tsw__interface.html#gacc900cf369f93e5bb5698e27d746eb81", null ],
@@ -182,6 +189,7 @@ var hpm__tsw__drv_8h =
     [ "tsw_psfp_set_gate_static_mode", "group__tsw__interface.html#ga3b219d76f89a8ba37e15cee49c8a2d70", null ],
     [ "tsw_recv_frame", "group__tsw__interface.html#ga0b5e98659c1c241107ea62e7e0a5c58a", null ],
     [ "tsw_send_frame", "group__tsw__interface.html#ga1426b3109d72ce882fd14e60076adc13", null ],
+    [ "tsw_send_frame_check_response", "group__tsw__interface.html#gaa49f38ffb7da1fc7841c1b2daf7dd04e", null ],
     [ "tsw_set_broadcast_frame_action", "group__tsw__interface.html#ga2469bc2b4edb058814aef0879d500af1", null ],
     [ "tsw_set_cam_vlan_port", "group__tsw__interface.html#ga4858eef76b44f9c94637d88488431a52", null ],
     [ "tsw_set_internal_frame_action", "group__tsw__interface.html#ga3c7cb9abc04cbf13027ddc492adb89c5", null ],

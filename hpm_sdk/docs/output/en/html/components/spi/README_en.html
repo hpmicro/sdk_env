@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. SPI Component &mdash; HPMicro Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Samples" href="../../samples/index_en.html" />
+    <link rel="prev" title="3. I2C Component" href="../i2c/README_en.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../get_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/index_en.html">Evaluation Boards</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_en.html">Components</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ppi/README_en.html">1. PPI Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plb/filter/README_en.html">2. PLB Filter Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../i2c/README_en.html">3. I2C Component</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4. SPI Component</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">4.1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-relevant-enums-and-structs">4.2. Introduction to Relevant Enums and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-call-flow-introduction">4.3. API Call Flow Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#define-spi-initialization-variable">4.3.1. Define SPI Initialization Variable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#default-spi-initialization-variable">4.3.2. Default SPI Initialization Variable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spi-initialization">4.3.3. SPI Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-spi-master-sclk-frequency">4.3.4. Set SPI Master SCLK Frequency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dma-configuration">4.3.5. DMA Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#read-write-operations-supporting-master-and-slave-modes">4.3.6. Read/Write Operations Supporting Master and Slave Modes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../samples/index_en.html">Samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../samples/drivers/index_en.html">Drivers Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_doc.html">SDK API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">HPMicro Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index_en.html">Components</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4. </span>SPI Component</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/components/spi/README_en.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="spi-component">
+<span id="id1"></span><h1><span class="section-number">4. </span>SPI Component<a class="headerlink" href="#spi-component" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<h2><span class="section-number">4.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>The SPI component provides a higher-level set of APIs compared to the driver layer for configuring, initializing, and operating the SPI bus. It supports multiple SPI devices and offers data transmission functionalities in both blocking and non-blocking modes. Below are the key features of this component:</p>
+<ul>
+<li><p>Multi-instance support</p>
+<ul>
+<li><p>Supports multiple SPI instances (such as SPI0, SPI1, etc.), each with independent configuration parameters.</p></li>
+</ul>
+</li>
+<li><p>Blocking and non-blocking read/write operation interfaces</p>
+<ul>
+<li><p>Supports both master and slave modes.</p></li>
+<li><p>Provides non-blocking read/write functions.</p></li>
+<li><p>Provides blocking read/write functions with timeout mechanisms to ensure timely error status returns in case of long unresponsiveness.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="introduction-to-relevant-enums-and-structs">
+<h2><span class="section-number">4.2. </span>Introduction to Relevant Enums and Structs<a class="headerlink" href="#introduction-to-relevant-enums-and-structs" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p>Enum introduction</p>
+<ul>
+<li><p>SPI working mode enum type: This enum defines two different SPI working mode options, namely master mode and slave mode. This enum is defined in <cite>hpm_spi_drv.h</cite>.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">spi_master_mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="n">spi_slave_mode</span>
+<span class="p">}</span><span class="w"> </span><span class="n">spi_mode_selection_t</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>SPI data transfer format enum type: Supports three data formats—single-wire, dual-wire, and quad-wire. This enum is defined in <cite>hpm_spi_drv.h</cite>.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">spi_single_io_mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="n">spi_dual_io_mode</span><span class="p">,</span>
+<span class="w">    </span><span class="n">spi_quad_io_mode</span><span class="p">,</span>
+<span class="p">}</span><span class="w"> </span><span class="n">spi_data_phase_format_t</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>SPI CPOL enum type: This enum defines the idle state level of the SPI SCLK. Specifically, it defines low idle and high idle states. This enum is defined in <cite>hpm_spi_drv.h</cite>.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">spi_sclk_low_idle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="n">spi_sclk_high_idle</span>
+<span class="p">}</span><span class="w"> </span><span class="n">spi_sclk_idle_state_t</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>SPI CPHA enum type: This enum specifies whether the SPI SCLK sampling occurs on odd or even clock edges. Specifically, it defines odd clock edges and even clock edges. This enum is defined in <cite>hpm_spi_drv.h</cite>.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">spi_sclk_sampling_odd_clk_edges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="n">spi_sclk_sampling_even_clk_edges</span>
+<span class="p">}</span><span class="w"> </span><span class="n">spi_sclk_sampling_clk_edges_t</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p>SPI bit order enum type: This enum specifies the bit order in SPI communication. <cite>spi_msb_first</cite> indicates most significant bit first, while <cite>spi_lsb_first</cite> indicates least significant bit first. This enum is defined in <cite>hpm_spi_drv.h</cite>.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">spi_msb_first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="n">spi_lsb_first</span><span class="p">,</span>
+<span class="p">}</span><span class="w"> </span><span class="n">spi_shift_direction_t</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Struct introduction</p>
+<ul>
+<li><p>Initialization configuration struct, used for configuring settings of the SPI. It includes parameters such as SPI operation mode, data line mode, clock polarity, clock phase, data shift direction, data length (in bits), and data merging mode.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">spi_mode_selection_t</span><span class="w"> </span><span class="n">mode</span><span class="p">;</span><span class="w">               </span><span class="cm">/*!&lt; SPI working mode */</span>
+<span class="w">    </span><span class="n">spi_data_phase_format_t</span><span class="w"> </span><span class="n">io_mode</span><span class="p">;</span><span class="w">         </span><span class="cm">/*!&lt; SPI data line mode */</span>
+<span class="w">    </span><span class="n">spi_sclk_idle_state_t</span><span class="w"> </span><span class="n">clk_polarity</span><span class="p">;</span><span class="w">      </span><span class="cm">/*!&lt; Clock polarity (CPOL) */</span>
+<span class="w">    </span><span class="n">spi_sclk_sampling_clk_edges_t</span><span class="w"> </span><span class="n">clk_phase</span><span class="p">;</span><span class="w"> </span><span class="cm">/*!&lt; Clock phase (CPHA) */</span>
+<span class="w">    </span><span class="n">spi_shift_direction_t</span><span class="w"> </span><span class="n">direction</span><span class="p">;</span><span class="w">         </span><span class="cm">/*!&lt; Data shift direction (MSB or LSB) */</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">data_len</span><span class="p">;</span><span class="w">                        </span><span class="cm">/*!&lt; Length in bits (1~32 bits) */</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">data_merge</span><span class="p">;</span><span class="w">                         </span><span class="cm">/*!&lt; Data merging mode, only supported when data_len is 8 */</span>
+<span class="p">}</span><span class="w"> </span><span class="n">spi_initialize_config_t</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="api-call-flow-introduction">
+<h2><span class="section-number">4.3. </span>API Call Flow Introduction<a class="headerlink" href="#api-call-flow-introduction" title="Permalink to this heading"></a></h2>
+<section id="define-spi-initialization-variable">
+<h3><span class="section-number">4.3.1. </span>Define SPI Initialization Variable<a class="headerlink" href="#define-spi-initialization-variable" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Define a variable of the <code class="docutils literal notranslate"><span class="pre">spi_initialize_config_t</span></code>  struct. For example, the <code class="docutils literal notranslate"><span class="pre">init_config</span></code>  variable used in the sample.</p></li>
+</ul>
+</section>
+<section id="default-spi-initialization-variable">
+<h3><span class="section-number">4.3.2. </span>Default SPI Initialization Variable<a class="headerlink" href="#default-spi-initialization-variable" title="Permalink to this heading"></a></h3>
+<ul>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">hpm_spi_get_default_init_config</span></code>  API to assign default values to the <code class="docutils literal notranslate"><span class="pre">init_config</span></code>  variable’s parameters within the API’s <code class="docutils literal notranslate"><span class="pre">spi_initialize_config_t</span></code> .</p>
+<ul>
+<li><p>Prototype of the <code class="docutils literal notranslate"><span class="pre">hpm_spi_get_default_init_config</span></code>  API:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">hpm_spi_get_default_init_config</span><span class="p">(</span><span class="n">spi_initialize_config_t</span><span class="w"> </span><span class="o">*</span><span class="n">config</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+<li><p>This function sets each member to default values:</p>
+<ul class="simple">
+<li><p>Master operation mode</p></li>
+<li><p>Single-wire data line mode</p></li>
+<li><p>Clock polarity low idle</p></li>
+<li><p>Clock phase sampling on odd clock edges</p></li>
+<li><p>Data length of 8 bits</p></li>
+<li><p>No data merging</p></li>
+<li><p>Data transfer direction MSB first</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="spi-initialization">
+<h3><span class="section-number">4.3.3. </span>SPI Initialization<a class="headerlink" href="#spi-initialization" title="Permalink to this heading"></a></h3>
+<ul>
+<li><p>Call the <code class="docutils literal notranslate"><span class="pre">hpm_spi_initialize</span></code>  API to initialize the SPI. During this process, the parameters of the <code class="docutils literal notranslate"><span class="pre">init_config</span></code>  variable are assigned and take effect in the API’s <code class="docutils literal notranslate"><span class="pre">config</span></code>  parameter.</p></li>
+<li><p>Prototype of the <code class="docutils literal notranslate"><span class="pre">hpm_spi_initialize</span></code>  API:</p>
+<blockquote>
+<div><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">hpm_stat_t</span><span class="w"> </span><span class="nf">hpm_spi_initialize</span><span class="p">(</span><span class="n">SPI_Type</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="n">spi_initialize_config_t</span><span class="w"> </span><span class="o">*</span><span class="n">config</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>Example</strong> : Instantiate SPI0, set SPI0 to master mode, quad-wire data line, CPOL high idle, CPHA sampling on odd clock edges, data transfer direction MSB first, data unit length of 16 bits.</p>
+<blockquote>
+<div><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">init_config</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spi_master_mode</span><span class="p">;</span>
+<span class="n">init_config</span><span class="p">.</span><span class="n">io_mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spi_quad_io_mode</span><span class="p">;</span>
+<span class="n">init_config</span><span class="p">.</span><span class="n">clk_polarity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spi_sclk_high_idle</span><span class="p">;</span>
+<span class="n">init_config</span><span class="p">.</span><span class="n">clk_phase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spi_sclk_sampling_odd_clk_edges</span><span class="p">;</span>
+<span class="n">init_config</span><span class="p">.</span><span class="n">data_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span>
+<span class="n">init_config</span><span class="p">.</span><span class="n">direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spi_msb_first</span><span class="p">;</span>
+<span class="n">hpm_spi_initialize</span><span class="p">(</span><span class="n">HPM_SPI0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">init_config</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>Example</strong> : Instantiate SPI1, set SPI1 to slave mode, single-wire data line, CPOL low idle, CPHA sampling on even clock edges, data transfer direction LSB first, data unit length of 8 bits.</p>
+<blockquote>
+<div><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">init_config</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spi_slave_mode</span><span class="p">;</span>
+<span class="n">init_config</span><span class="p">.</span><span class="n">io_mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spi_dual_io_mode</span><span class="p">;</span>
+<span class="n">init_config</span><span class="p">.</span><span class="n">clk_polarity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spi_sclk_low_idle</span><span class="p">;</span>
+<span class="n">init_config</span><span class="p">.</span><span class="n">clk_phase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spi_sclk_sampling_even_clk_edges</span><span class="p">;</span>
+<span class="n">init_config</span><span class="p">.</span><span class="n">data_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+<span class="n">init_config</span><span class="p">.</span><span class="n">direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spi_lsb_first</span><span class="p">;</span>
+<span class="n">hpm_spi_initialize</span><span class="p">(</span><span class="n">HPM_SPI1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">init_config</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="set-spi-master-sclk-frequency">
+<h3><span class="section-number">4.3.4. </span>Set SPI Master SCLK Frequency<a class="headerlink" href="#set-spi-master-sclk-frequency" title="Permalink to this heading"></a></h3>
+<ul>
+<li><p>Not required in slave mode.</p></li>
+<li><p>Call the <code class="docutils literal notranslate"><span class="pre">hpm_spi_set_sclk_frequency</span></code>  API to set the SPI’s SCLK frequency.</p></li>
+<li><p>Prototype of the <code class="docutils literal notranslate"><span class="pre">hpm_spi_set_sclk_frequency</span></code>  API:</p>
+<blockquote>
+<div><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">hpm_spi_set_sclk_frequency</span><span class="p">(</span><span class="n">SPI_Type</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">freq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ul>
+<li><p>This function sets the specified SPI’s SCLK frequency by selecting appropriate clock sources and division factors to ensure the SPI clock frequency is as close as possible to the requested frequency.</p></li>
+<li><p>Parameter Description</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 20.0%" />
+<col style="width: 55.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ptr</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SPI_Type</span> <span class="pre">*</span></code></p></td>
+<td><p>Pointer to the SPI module register structure</p></td>
+</tr>
+<tr class="row-odd"><td><p>freq</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td><p>Target SPI clock frequency (unit: Hz)</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p>Return Values</p>
+<ul class="simple">
+<li><p>status_success: Successfully set the SPI clock frequency.</p></li>
+<li><p>status_invalid_argument: Invalid argument provided (e.g., configuration object is NULL)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Example</strong> : How to use the <code class="docutils literal notranslate"><span class="pre">hpm_spi_set_sclk_frequency</span></code>  function to set the SPI1 master SCLK frequency to 1 MHz.</p>
+<blockquote>
+<div><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">desired_freq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000000</span><span class="p">;</span><span class="w"> </span><span class="cm">/* Desired frequency is 1MHz */</span>
+<span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hpm_spi_set_sclk_frequency</span><span class="p">(</span><span class="n">HPM_SPI1</span><span class="p">,</span><span class="w"> </span><span class="n">desired_freq</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">status_success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;SPI SCLK frequency set successfully.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed to set SPI SCLK frequency.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="dma-configuration">
+<h3><span class="section-number">4.3.5. </span>DMA Configuration<a class="headerlink" href="#dma-configuration" title="Permalink to this heading"></a></h3>
+<ul>
+<li><p>If using non-blocking read/write interfaces, this step is necessary.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">hpm_spi_dma_mgr_install_callback</span></code>  API for DMA initialization and to register callback functions. This function must be called when using non-blocking APIs for data transmission. If no callback function is needed, NULL can be passed as the callback parameter.</p></li>
+<li><p>It is used to configure callback functions for DMA transfers in the SPI module. This function allows users to set completion callback functions for both TX and RX DMA channels separately to perform specific operations upon completion of DMA transfers.</p></li>
+<li><p>Prototype of the <code class="docutils literal notranslate"><span class="pre">hpm_spi_dma_mgr_install_callback</span></code>  API:</p>
+<blockquote>
+<div><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">hpm_spi_dma_mgr_install_callback</span><span class="p">(</span><span class="n">SPI_Type</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="n">spi_dma_complete_cb</span><span class="w"> </span><span class="n">tx_complete</span><span class="p">,</span><span class="w"> </span><span class="n">spi_dma_complete_cb</span><span class="w"> </span><span class="n">rx_complete</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Parameter Description</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ptr</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SPI_Type*</span></code></p></td>
+<td><p>Pointer to the SPI module register structure</p></td>
+</tr>
+<tr class="row-odd"><td><p>tx_complete</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">spi_dma_complete_cb</span></code></p></td>
+<td><p>Callback function for TX DMA transfer completion</p></td>
+</tr>
+<tr class="row-even"><td><p>rx_complete</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">spi_dma_complete_cb</span></code></p></td>
+<td><p>Callback function for RX DMA transfer completion</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p>Return Values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">status_success</span></code> : Success</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status_invalid_argument</span></code> : Invalid argument</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Example</strong> : How to use the <code class="docutils literal notranslate"><span class="pre">hpm_spi_dma_mgr_install_callback</span></code>  function to register callback functions.</p>
+<blockquote>
+<div><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm">* Example TX DMA transfer completion callback function.</span>
+<span class="cm">*/</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">tx_dma_complete_callback</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;TX DMA transfer completed.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Example RX DMA transfer completion callback function.</span>
+<span class="cm">*/</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">rx_dma_complete_callback</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;RX DMA transfer completed.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Initialize SPI... Not listed */</span>
+
+<span class="w">    </span><span class="cm">/* Register DMA transfer completion callbacks */</span>
+<span class="w">    </span><span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hpm_spi_dma_mgr_install_callback</span><span class="p">(</span><span class="n">spi_ptr</span><span class="p">,</span><span class="w"> </span><span class="n">tx_dma_complete_callback</span><span class="p">,</span><span class="w"> </span><span class="n">rx_dma_complete_callback</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">status_success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="cm">/* Successfully installed DMA transfer completion callback functions */</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;DMA callback functions installed successfully.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="cm">/* Failed to install DMA transfer completion callback functions */</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed to install DMA callback functions.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/* TODO */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="read-write-operations-supporting-master-and-slave-modes">
+<h3><span class="section-number">4.3.6. </span>Read/Write Operations Supporting Master and Slave Modes<a class="headerlink" href="#read-write-operations-supporting-master-and-slave-modes" title="Permalink to this heading"></a></h3>
+<section id="blocking-read-write-operations-divided-into-full-duplex-and-half-duplex-operations">
+<h4><span class="section-number">4.3.6.1. </span>Blocking Read/Write Operations, Divided into Full-Duplex and Half-Duplex Operations<a class="headerlink" href="#blocking-read-write-operations-divided-into-full-duplex-and-half-duplex-operations" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p><strong>Full-Duplex Read/Write Operation</strong> : Used for blocking simultaneous read/write operations. It waits until data transmission is complete or a timeout occurs, provided by the <code class="docutils literal notranslate"><span class="pre">hpm_spi_transmit_receive_blocking</span></code>  API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hpm_spi_transmit_receive_blocking</span></code>  API</p>
+<ul>
+<li><p>Prototype of the <code class="docutils literal notranslate"><span class="pre">hpm_spi_transmit_receive_blocking</span></code>  API:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">hpm_spi_transmit_receive_blocking</span><span class="p">(</span><span class="n">SPI_Type</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">wbuff</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">rbuff</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">timeout</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Parameter Description</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 15.0%" />
+<col style="width: 65.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ptr</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SPI_Type*</span></code></p></td>
+<td><p>Pointer to the SPI module register structure</p></td>
+</tr>
+<tr class="row-odd"><td><p>wbuff</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint8_t*</span></code></p></td>
+<td><p>Pointer to the buffer containing data to send</p></td>
+</tr>
+<tr class="row-even"><td><p>rbuff</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint8_t*</span></code></p></td>
+<td><p>Pointer to the buffer to receive data</p></td>
+</tr>
+<tr class="row-odd"><td><p>size</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td><p>Size of data to transmit (in bytes)</p></td>
+</tr>
+<tr class="row-even"><td><p>timeout</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td><p>Timeout in milliseconds. If the operation does not complete within this time, the function will return a timeout error</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p>Return Values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">status_success</span></code> : Successfully completed data transmission</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status_invalid_argument</span></code> : Invalid argument provided</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status_timeout</span></code> : If the operation did not complete within the specified timeout</p></li>
+</ul>
+</li>
+<li><p><strong>Example</strong> : An SPI1 master or slave device simultaneously sending and receiving some data over the SPI bus.</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">tx_buffer</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="mh">0x03</span><span class="p">,</span><span class="w"> </span><span class="mh">0x04</span><span class="p">};</span><span class="w">  </span><span class="cm">/* Transmit buffer */</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">rx_buffer</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="w">  </span><span class="cm">/* Receive buffer */</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">transfer_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Data size to transfer */</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Timeout of 1 second */</span>
+
+<span class="cm">/* Initialize SPI... Not listed */</span>
+
+<span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hpm_spi_transmit_receive_blocking</span><span class="p">(</span><span class="n">HPM_SPI1</span><span class="p">,</span><span class="w"> </span><span class="n">tx_buffer</span><span class="p">,</span><span class="w"> </span><span class="n">rx_buffer</span><span class="p">,</span><span class="w"> </span><span class="n">transfer_size</span><span class="p">,</span><span class="w"> </span><span class="n">timeout_ms</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">status_success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Successfully completed data transmission */</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Data transfer completed successfully.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Received data: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">transfer_size</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%02X &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">rx_buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Data transmission failed */</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed to complete data transfer.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Half-Duplex Read/Write Operation</strong> : Used for blocking half-duplex read/write operations. It waits until data transmission is complete or a timeout occurs, provided by the <code class="docutils literal notranslate"><span class="pre">hpm_spi_transmit_blocking</span></code>  and <code class="docutils literal notranslate"><span class="pre">hpm_spi_receive_blocking</span></code>  APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hpm_spi_transmit_blocking</span></code>  API</p>
+<ul>
+<li><p>Used for sending data through the SPI interface. The function works in blocking mode, meaning it waits until data transmission completes or times out.</p></li>
+<li><p>Prototype of the <code class="docutils literal notranslate"><span class="pre">hpm_spi_transmit_blocking</span></code>  API:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">hpm_spi_transmit_blocking</span><span class="p">(</span><span class="n">SPI_Type</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">timeout</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Parameter Description</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 15.0%" />
+<col style="width: 65.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ptr</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SPI_Type*</span></code></p></td>
+<td><p>Pointer to the SPI module register structure</p></td>
+</tr>
+<tr class="row-odd"><td><p>buff</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint8_t*</span></code></p></td>
+<td><p>Pointer to the buffer containing data to send</p></td>
+</tr>
+<tr class="row-even"><td><p>size</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td><p>Size of data to transmit (in bytes)</p></td>
+</tr>
+<tr class="row-odd"><td><p>timeout</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td><p>Timeout in milliseconds. If the operation does not complete within this time, the function will return a timeout error</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p>Return Values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">status_success</span></code> : Successfully completed data transmission</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status_invalid_argument</span></code> : Invalid argument provided</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status_timeout</span></code> : If the operation did not complete within the specified timeout</p></li>
+</ul>
+</li>
+<li><p><strong>Example</strong> : An SPI1 master or slave device sending some data over the SPI bus.</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">tx_buffer</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="mh">0x03</span><span class="p">,</span><span class="w"> </span><span class="mh">0x04</span><span class="p">};</span><span class="w">  </span><span class="cm">/* Transmit buffer */</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">transfer_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Data size to transfer */</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Timeout of 1 second */</span>
+
+<span class="cm">/* Initialize SPI... Not listed */</span>
+
+<span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hpm_spi_transmit_blocking</span><span class="p">(</span><span class="n">HPM_SPI1</span><span class="p">,</span><span class="w"> </span><span class="n">tx_buffer</span><span class="p">,</span><span class="w"> </span><span class="n">transfer_size</span><span class="p">,</span><span class="w"> </span><span class="n">timeout_ms</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">status_success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Successfully completed data transmission */</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Data transmission completed successfully.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Data transmission failed */</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed to complete data transmission.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hpm_spi_receive_blocking</span></code>  API</p>
+<ul>
+<li><p>Used for receiving data through the SPI interface. The function works in blocking mode, meaning it waits until data reception completes or times out.</p></li>
+<li><p>Prototype of the <code class="docutils literal notranslate"><span class="pre">hpm_spi_receive_blocking</span></code>  API:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">hpm_spi_receive_blocking</span><span class="p">(</span><span class="n">SPI_Type</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">timeout</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Parameter Description</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 15.0%" />
+<col style="width: 65.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ptr</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SPI_Type*</span></code></p></td>
+<td><p>Pointer to the SPI module register structure</p></td>
+</tr>
+<tr class="row-odd"><td><p>buff</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint8_t*</span></code></p></td>
+<td><p>Pointer to the buffer to receive data</p></td>
+</tr>
+<tr class="row-even"><td><p>size</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td><p>Size of data to receive (in bytes)</p></td>
+</tr>
+<tr class="row-odd"><td><p>timeout</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td><p>Timeout in milliseconds. If the operation does not complete within this time, the function will return a timeout error</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p>Return Values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">status_success</span></code> : Successfully completed data reception</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status_invalid_argument</span></code> : Invalid argument provided</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status_timeout</span></code> : If the operation did not complete within the specified timeout</p></li>
+</ul>
+</li>
+<li><p><strong>Example</strong> : An SPI1 master or slave device receiving some data over the SPI bus.</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">rx_buffer</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="w">  </span><span class="cm">/* Receive buffer */</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">transfer_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Data size to transfer */</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Timeout of 1 second */</span>
+
+<span class="cm">/* Initialize SPI... Not listed */</span>
+<span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hpm_spi_receive_blocking</span><span class="p">(</span><span class="n">HPM_SPI1</span><span class="p">,</span><span class="w"> </span><span class="n">rx_buffer</span><span class="p">,</span><span class="w"> </span><span class="n">transfer_size</span><span class="p">,</span><span class="w"> </span><span class="n">timeout_ms</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">status_success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Successfully completed data reception */</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Data reception completed successfully.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Received data: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">transfer_size</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%02X &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">rx_buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Data reception failed */</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed to complete data reception.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="non-blocking-read-write-operations-divided-into-full-duplex-and-half-duplex-operations">
+<h4><span class="section-number">4.3.6.2. </span>Non-blocking Read/Write Operations, Divided into Full-Duplex and Half-Duplex Operations<a class="headerlink" href="#non-blocking-read-write-operations-divided-into-full-duplex-and-half-duplex-operations" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p><strong>Full-Duplex Read/Write Operation</strong> : Used for non-blocking simultaneous read/write operations. It allows other tasks to continue executing without waiting for the operation to complete, provided by the <code class="docutils literal notranslate"><span class="pre">hpm_spi_transmit_receive_nonblocking</span></code>  API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hpm_spi_transmit_receive_nonblocking</span></code>  API</p>
+<ul>
+<li><p>Prototype of the <code class="docutils literal notranslate"><span class="pre">hpm_spi_transmit_receive_nonblocking</span></code>  API:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">hpm_stat_t</span><span class="w"> </span><span class="nf">hpm_spi_transmit_receive_nonblocking</span><span class="p">(</span><span class="n">SPI_Type</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">wbuff</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">rbuff</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Parameter Description</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 15.0%" />
+<col style="width: 65.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ptr</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SPI_Type*</span></code></p></td>
+<td><p>Pointer to the SPI module register structure</p></td>
+</tr>
+<tr class="row-odd"><td><p>wbuff</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint8_t*</span></code></p></td>
+<td><p>Pointer to the buffer containing data to send</p></td>
+</tr>
+<tr class="row-even"><td><p>rbuff</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint8_t*</span></code></p></td>
+<td><p>Pointer to the buffer to receive data</p></td>
+</tr>
+<tr class="row-odd"><td><p>size</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td><p>Size of data to transfer (in bytes)</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p>Return Values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">status_success</span></code> : Successfully configured non-blocking data transmission/reception</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status_invalid_argument</span></code> : Invalid argument provided</p></li>
+</ul>
+</li>
+<li><p><strong>Example</strong> : An SPI1 master or slave device simultaneously sending and receiving some data over the SPI bus.</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">tx_buffer</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="mh">0x03</span><span class="p">,</span><span class="w"> </span><span class="mh">0x04</span><span class="p">};</span><span class="w">  </span><span class="cm">/* Transmit buffer */</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">rx_buffer</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="w">  </span><span class="cm">/* Receive buffer */</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">transfer_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Data size to transfer */</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Timeout of 1 second */</span>
+
+<span class="cm">/* Initialize SPI... Not listed */</span>
+
+<span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hpm_spi_transmit_receive_nonblocking</span><span class="p">(</span><span class="n">spi_ptr</span><span class="p">,</span><span class="w"> </span><span class="n">tx_buffer</span><span class="p">,</span><span class="w"> </span><span class="n">rx_buffer</span><span class="p">,</span><span class="w"> </span><span class="n">transfer_size</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">status_success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Successfully configured non-blocking transmission/reception */</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Non-blocking data transmission and reception configured successfully.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Failed to configure non-blocking transmission/reception */</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed to configure non-blocking data transmission and reception.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/* TODO Since it&#39;s a non-blocking operation, the function returns immediately, allowing the program to continue executing other tasks. For example, wait for this transmission to complete */</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Half-Duplex Read/Write Operation</strong> : Used for non-blocking half-duplex read/write operations, provided by the <code class="docutils literal notranslate"><span class="pre">hpm_spi_transmit_nonblocking</span></code>  and <code class="docutils literal notranslate"><span class="pre">hpm_spi_receive_nonblocking</span></code>  APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hpm_spi_transmit_nonblocking</span></code>  API</p>
+<ul>
+<li><p>Used for non-blocking data transmission through the SPI interface. The function does not wait for the transmission to complete but returns immediately, allowing background processing of data transmission.</p></li>
+<li><p>Prototype of the <code class="docutils literal notranslate"><span class="pre">hpm_spi_transmit_nonblocking</span></code>  API:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">hpm_spi_transmit_nonblocking</span><span class="p">(</span><span class="n">SPI_Type</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Parameter Description</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 15.0%" />
+<col style="width: 65.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ptr</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SPI_Type*</span></code></p></td>
+<td><p>Pointer to the SPI module register structure</p></td>
+</tr>
+<tr class="row-odd"><td><p>buff</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint8_t*</span></code></p></td>
+<td><p>Pointer to the buffer containing data to send</p></td>
+</tr>
+<tr class="row-even"><td><p>size</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td><p>Size of data to transmit (in bytes)</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p>Return Values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">status_success</span></code> : Successfully completed data transmission</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status_invalid_argument</span></code> : Invalid argument provided</p></li>
+</ul>
+</li>
+<li><p><strong>Example</strong> : An SPI1 master or slave device sending some data over the SPI bus.</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">tx_buffer</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="mh">0x03</span><span class="p">,</span><span class="w"> </span><span class="mh">0x04</span><span class="p">};</span><span class="w">  </span><span class="cm">/* Transmit buffer */</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">transfer_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Data size to transfer */</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Timeout of 1 second */</span>
+
+<span class="cm">/* Initialize SPI... Not listed */</span>
+
+<span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hpm_spi_transmit_nonblocking</span><span class="p">(</span><span class="n">HPM_SPI1</span><span class="p">,</span><span class="w"> </span><span class="n">tx_buffer</span><span class="p">,</span><span class="w"> </span><span class="n">transfer_size</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">status_success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Successfully configured non-blocking transmission */</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Non-blocking data transmission configured successfully.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Failed to configure non-blocking transmission */</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed to configure non-blocking data transmission.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cm">/* TODO Since it&#39;s a non-blocking operation, the function returns immediately, allowing the program to continue executing other tasks. For example, wait for this transmission to complete */</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hpm_spi_receive_nonblocking</span></code>  API</p>
+<ul>
+<li><p>Used for non-blocking data reception through the SPI interface. The function does not wait for the reception to complete but returns immediately, allowing background processing of data reception.</p></li>
+<li><p>Prototype of the <code class="docutils literal notranslate"><span class="pre">hpm_spi_receive_nonblocking</span></code>  API:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">hpm_spi_receive_nonblocking</span><span class="p">(</span><span class="n">SPI_Type</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Parameter Description</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 15.0%" />
+<col style="width: 65.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ptr</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SPI_Type*</span></code></p></td>
+<td><p>Pointer to the SPI module register structure</p></td>
+</tr>
+<tr class="row-odd"><td><p>buff</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint8_t*</span></code></p></td>
+<td><p>Pointer to the buffer to receive data</p></td>
+</tr>
+<tr class="row-even"><td><p>size</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td><p>Size of data to receive (in bytes)</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><p>Return Values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">status_success</span></code> : Successfully configured non-blocking reception</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status_invalid_argument</span></code> : Invalid argument provided</p></li>
+</ul>
+</li>
+<li><p><strong>Example</strong> : An SPI1 master or slave device receiving some data over the SPI bus.</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">rx_buffer</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="w">  </span><span class="cm">/* Receive buffer */</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">transfer_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Data size to transfer */</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w">  </span><span class="cm">/* Timeout of 1 second */</span>
+
+<span class="cm">/* Initialize SPI... Not listed */</span>
+<span class="n">hpm_stat_t</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hpm_spi_receive_nonblocking</span><span class="p">(</span><span class="n">spi_ptr</span><span class="p">,</span><span class="w"> </span><span class="n">rx_buffer</span><span class="p">,</span><span class="w"> </span><span class="n">transfer_size</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">status_success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Successfully configured non-blocking reception */</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Non-blocking data reception configured successfully.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Failed to configure non-blocking reception */</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Failed to configure non-blocking data reception.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cm">/* TODO Since it&#39;s a non-blocking operation, the function returns immediately, allowing the program to continue executing other tasks. For example, wait for this transmission to complete */</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li><p>As the SPI component uses the DMA manager component, configurations such as DMA channels are allocated by the DMA manager. When using DMA, ensure that the allocated DMA channels do not conflict with those used by the SPI component.</p></li>
+<li><p>The transmit DMA channel used by the SPI component can be obtained by calling the <code class="docutils literal notranslate"><span class="pre">hpm_spi_get_tx_dma_resource</span></code>  API to get the SPI transmit DMA channel resources.</p>
+<ul>
+<li><p>Prototype of the <code class="docutils literal notranslate"><span class="pre">hpm_spi_get_tx_dma_resource</span></code>  API:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">dma_resource_t</span><span class="w"> </span><span class="o">*</span><span class="n">hpm_spi_get_tx_dma_resource</span><span class="p">(</span><span class="n">SPI_Type</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>The receive DMA channel used by the SPI component can be obtained by calling the <code class="docutils literal notranslate"><span class="pre">hpm_spi_get_rx_dma_resource</span></code>  API to get the SPI receive DMA channel resources.</p>
+<ul>
+<li><p>Prototype of the <code class="docutils literal notranslate"><span class="pre">hpm_spi_get_rx_dma_resource</span></code>  API:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">dma_resource_t</span><span class="w"> </span><span class="o">*</span><span class="n">hpm_spi_get_rx_dma_resource</span><span class="p">(</span><span class="n">SPI_Type</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2025, HPMicro.
+      <span class="lastupdated">Last updated on Mar 31, 2025.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

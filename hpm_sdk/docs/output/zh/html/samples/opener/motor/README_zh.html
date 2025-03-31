@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>27.2. OpENer Motor &mdash; HPMico Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="28. PMbus" href="../../pmbus/index_zh.html" />
+    <link rel="prev" title="27.1. OpENer Blinky" href="../blinky/README_zh.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../boards/index_zh.html">开发板介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../components/index_zh.html">组件</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index_zh.html">例程</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../audio_codec/index_zh.html">1. Audio Codec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../canopen/README_zh.html">2. CANOPEN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryrb/README_zh.html">3. CherryRB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherrysh/index_zh.html">4. CherrySH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cherryusb/index_zh.html">5. CherryUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coremark/README_zh.html">6. CoreMark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dhrystone/README_zh.html">7. Dhrystone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dma_manager/README_zh.html">8. DMA Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dsp/README_zh.html">9. DSP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dual_panel/README_zh.html">10. DUAL_PANEL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../eeprom_emulation/index_zh.html">11. EEPROM Emulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ethercat/index_zh.html">12. EtherCAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freemaster/README_zh.html">13. Freemaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hello_world/README_zh.html">14. Hello World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hpm_math/index_zh.html">15. HPM Math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2c_components/index_zh.html">16. I2C Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2s_emulation/README_zh.html">17. SPI模拟I2S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image/index_zh.html">18. IMAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lvgl/index_zh.html">19. LVGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lwip/index_zh.html">20. lwIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mbedtls/README_zh.html">21. Mbedtls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../memstress/index_zh.html">22. Memory Stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../microros/index_zh.html">23. Microros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modbus/index_zh.html">24. Modbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motor_ctrl/index_zh.html">25. HPM Motor Ctrl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multicore/index_zh.html">26. Multicore</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_zh.html">27. OpENer Ethernet/IP协议栈</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../blinky/README_zh.html">27.1. OpENer Blinky</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">27.2. OpENer Motor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">27.2.1. 概述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">27.2.2. 准备</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#twincat">27.2.3. TwinCAT工程设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">27.2.4. 运行现象</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../pmbus/index_zh.html">28. PMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../power_mode_switch/README_zh.html">29. Power Mode Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rgb_led/README_zh.html">30. RGB LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rom_api/index_zh.html">31. ROM API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rtos/index_zh.html">32. RTOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rvbacktrace/index_zh.html">33. Rvbacktrace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../segger_rtt/README_zh.html">34. Segger RTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../segment_led_key/README_zh.html">35. SEGMENT LED KEY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smbus/index_zh.html">36. SMbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_components/index_zh.html">37. SPI Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi_sdcard/index_zh.html">38. SPI驱动SD卡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tflm/index_zh.html">39. TensorFlow Lite For Microcontroller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinycrypt/index_zh.html">40. Tinycrypt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyengine/person_obj/README_zh.html">41. Person Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyuf2/README_zh.html">42. TinyUF2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tinyusb/index_zh.html">43. TinyUSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../touch_panel/README_zh.html">44. Touch Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../trace_recorder/index_zh.html">45. Trace Recorder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tsn/index_zh.html">46. tsn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vglite/index_zh.html">47. VGLite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sent/index_zh.html">48. sent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../drivers/index_zh.html">驱动示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_doc.html">SDK API 参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HPMico Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index_zh.html">例程</a></li>
+          <li class="breadcrumb-item"><a href="../index_zh.html"><span class="section-number">27. </span>OpENer Ethernet/IP协议栈</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">27.2. </span>OpENer Motor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/samples/opener/motor/README_zh.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="opener-motor">
+<span id="id1"></span><h1><span class="section-number">27.2. </span>OpENer Motor<a class="headerlink" href="#opener-motor" title="Permalink to this heading"></a></h1>
+<section id="id2">
+<h2><span class="section-number">27.2.1. </span>概述<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>OpENer Motor示例用于演示使用OpENer通过Ethernet/IP(EIP)协议实现远程控制电机转速的功能。</p>
+</section>
+<section id="id3">
+<h2><span class="section-number">27.2.2. </span>准备<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<section id="id4">
+<h3><span class="section-number">27.2.2.1. </span>硬件<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ul>
+<li><p>带Ethernet的开发板，请参考具体开发板  <a class="reference internal" href="../../../boards/index_zh.html#board-resource"><span class="std std-ref">引脚描述</span></a>  查看Ethernet硬件</p>
+<ul class="simple">
+<li><p>==根据开发板的硬件配置，在CMakeLists.txt中选择相应的RMII/RGMII，和phy芯片。==</p></li>
+</ul>
+</li>
+<li><p>带网口的PC</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>TwinCAT3软件对PC网卡有适配问题, <a class="reference external" href="https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_overview/9309844363.html&amp;id=1489698440745036069">部分支持的Intel网卡</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>本例程电机使用的是雷赛智能的 <strong>BLM57050-1000</strong>  无刷电机，电机具体参数请参考`雷赛智能官网 &lt;<a class="reference external" href="https://leisai.com/">https://leisai.com/</a>&gt;`_。</p></li>
+<li><p>板子设置参考开发板文档 <a class="reference internal" href="../../../boards/index_zh.html#board-resource"><span class="std std-ref">Motor Pin</span></a> 相关内容</p></li>
+<li><p>完成上述过程后，给驱动板上电观察电流无异常后，给核心板上电，再次确认电流无异常后，就可以烧录程序，观察运行现象。</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id5">
+<h3><span class="section-number">27.2.2.2. </span>软件<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>TwinCAT3.1(Build 4024.56)</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="twincat">
+<h2><span class="section-number">27.2.3. </span>TwinCAT工程设置<a class="headerlink" href="#twincat" title="Permalink to this heading"></a></h2>
+<section id="id6">
+<h3><span class="section-number">27.2.3.1. </span>创建工程<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>打开TwinCAT软件，选择 <strong>File-&gt;New-&gt;Project</strong></p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/Twincat_new_project_13.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>选择 <strong>TwinCAT Project</strong> , 命名后点击 <strong>OK</strong></p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/Twincat_new_project_23.png" />
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="id7">
+<h3><span class="section-number">27.2.3.2. </span>软件配置<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>更新网卡驱动(第一次使用时需要)</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/Twincat_ethernet_driver3.png" />
+<img alt="" src="../../../_images/Twincat_ethernet_driver_23.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>时钟设置</p></li>
+</ol>
+<blockquote>
+<div><dl>
+<dt>软件运行时可能遇到如下报错： 需要以管理员权限运行C：TwinCAT3.1Systemwin8settick.bat</dt><dd><ul class="simple">
+<li><ul>
+<li><ul>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>Init4RTime：Start Interrupt：Ticker started &gt;&gt; AdsWarning4115 （0x1013,RTIME：system clock setup failed）</em>
+- - -</p>
+<img alt="" src="../../../_images/Twincat_set_tick3.png" />
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="eip-scaner">
+<h3><span class="section-number">27.2.3.3. </span>添加EIP Scaner<a class="headerlink" href="#eip-scaner" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>点击Device, 右键添加新项</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/add_new_interface2.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>选择EIP Scaner</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/seclet_new_interface2.png" />
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>选择前边更新驱动后的网卡</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/seclet_local_interface2.png" />
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>配置ip地址</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/set_ip_address2.png" />
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>重新进入配置模式，使上一步的ip配置生效</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/reenter_config_mode2.png" />
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="eds">
+<h3><span class="section-number">27.2.3.4. </span>添加EDS文件<a class="headerlink" href="#eds" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>右键EIP Scaner，选择import EDS file，选择opener/opener_blinky_app.eds</p>
+<blockquote>
+<div><img alt="" src="../../../_images/import_eds_file2.png" />
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="id8">
+<h3><span class="section-number">27.2.3.5. </span>扫描设备<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>右键EIP Scaner, 然后扫描</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/scan2.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>添加设备</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/found_new_device2.png" />
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="io">
+<h3><span class="section-number">27.2.3.6. </span>添加IO链接<a class="headerlink" href="#io" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><img alt="" src="../../../_images/add_io_connection2.png" />
+<p>如果此时列表中没有找到Exclusive Owner，那么可以手动指定一下eds文件。</p>
+<img alt="" src="../../../_images/load_from_eds1.png" />
+</div></blockquote>
+</section>
+<section id="id9">
+<h3><span class="section-number">27.2.3.7. </span>IO操作<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>输入IO, 按动评估板上的按键KEYA, Input/Key State数值发生变化</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/keystate2.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>输出IO,右键Led State, 选择Online, 点击Write写入数值。 写入1开发板LED亮起，写入0开发板LED熄灭。</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/ledstate2.png" />
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>输出IO,右键Motor Target Speed, 选择Online, 点击Write写入数值。电机按照输入的数值进行转动。注意电机转速的上限为35。</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/set_motor_speed1.png" />
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>输入IO,观察Inputs/Motor Current Speed, 显示为实时的电机转速。</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/current_motor_speed1.png" />
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>输入IO,右键Break，选择Online, 电机Write写入数值。输入1电机停止转动，输入0电机恢复停止之前的转动状态。</p></li>
+</ol>
+<blockquote>
+<div><img alt="" src="../../../_images/break1.png" />
+</div></blockquote>
+</div></blockquote>
+</section>
+</section>
+<section id="id10">
+<h2><span class="section-number">27.2.4. </span>运行现象<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h2>
+<p>当工程正确运行后, 串口终端会输出如下信息：</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">This is an Ethernet/IP demo.</span>
+<span class="go">LwIP Version: 2.1.2</span>
+
+<span class="go">Speed mode, motor run, speed is: 0.000000.</span>
+<span class="go">Enet phy init passed !</span>
+<span class="go">Link Status: Down</span>
+<span class="go">Link Status: Down</span>
+<span class="go">Link Status: Up</span>
+<span class="go">Link Speed:  100Mbps</span>
+<span class="go">Link Duplex: Full duplex</span>
+<span class="go">IPv4 Address: 192.168.100.10</span>
+<span class="go">IPv4 Netmask: 255.255.255.0</span>
+<span class="go">IPv4 Gateway: 192.168.100.1</span>
+<span class="go">Mesaage receieved from host!</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2025, HPMicro.
+      <span class="lastupdated">Last updated on Mar 31, 2025.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

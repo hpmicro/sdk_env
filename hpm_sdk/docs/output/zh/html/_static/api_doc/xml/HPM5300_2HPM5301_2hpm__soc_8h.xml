@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="HPM5300_2HPM5301_2hpm__soc_8h" kind="file" language="C++">
     <compoundname>hpm_soc.h</compoundname>
     <includes refid="HPM5300_2HPM5301_2hpm__soc__irq_8h" local="yes">hpm_soc_irq.h</includes>
@@ -19,6 +19,8 @@
     <includes local="yes">hpm_dmamux_regs.h</includes>
     <includes local="yes">hpm_dmav2_regs.h</includes>
     <includes local="yes">hpm_gpiom_regs.h</includes>
+    <includes local="yes">hpm_synt_regs.h</includes>
+    <includes local="yes">hpm_trgm_regs.h</includes>
     <includes local="yes">hpm_usb_regs.h</includes>
     <includes local="yes">hpm_sec_regs.h</includes>
     <includes local="yes">hpm_mon_regs.h</includes>
@@ -39,15 +41,15 @@
     <includes refid="HPM5300_2HPM5301_2hpm__misc_8h" local="yes">hpm_misc.h</includes>
     <includes refid="HPM5300_2HPM5301_2hpm__otp__table_8h" local="yes">hpm_otp_table.h</includes>
     <includes refid="HPM5300_2HPM5301_2hpm__dmamux__src_8h" local="yes">hpm_dmamux_src.h</includes>
+    <includes refid="HPM5300_2HPM5301_2hpm__trgmmux__src_8h" local="yes">hpm_trgmmux_src.h</includes>
     <includes refid="HPM5300_2HPM5301_2hpm__iomux_8h" local="yes">hpm_iomux.h</includes>
     <includes refid="HPM5300_2HPM5301_2hpm__pmic__iomux_8h" local="yes">hpm_pmic_iomux.h</includes>
     <includedby refid="HPM5300_2HPM5301_2hpm__clock__drv_8c" local="yes">soc/HPM5300/HPM5301/hpm_clock_drv.c</includedby>
-    <includedby refid="HPM5300_2HPM5301_2hpm__l1c__drv_8h" local="yes">soc/HPM5300/HPM5301/hpm_l1c_drv.h</includedby>
     <includedby refid="HPM5300_2HPM5301_2hpm__otp__drv_8c" local="yes">soc/HPM5300/HPM5301/hpm_otp_drv.c</includedby>
     <includedby refid="HPM5300_2HPM5301_2hpm__soc__feature_8h" local="yes">soc/HPM5300/HPM5301/hpm_soc_feature.h</includedby>
     <includedby refid="HPM5300_2HPM5301_2system_8c" local="yes">soc/HPM5300/HPM5301/system.c</includedby>
     <incdepgraph>
-      <node id="38">
+      <node id="40">
         <label>riscv/riscv_core.h</label>
         <link refid="riscv__core_8h"/>
         <childnode refid="3" relation="include">
@@ -67,49 +69,49 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="41">
+      <node id="43">
         <label>hpm_csr_drv.h</label>
         <link refid="hpm__csr__drv_8h"/>
-        <childnode refid="42" relation="include">
+        <childnode refid="44" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
       </node>
-      <node id="39">
+      <node id="41">
         <label>hpm_csr_regs.h</label>
         <link refid="HPM5300_2HPM5301_2hpm__csr__regs_8h"/>
       </node>
-      <node id="46">
+      <node id="48">
         <label>hpm_dmamux_src.h</label>
         <link refid="HPM5300_2HPM5301_2hpm__dmamux__src_8h"/>
       </node>
-      <node id="40">
+      <node id="42">
         <label>hpm_interrupt.h</label>
         <link refid="HPM5300_2HPM5301_2hpm__interrupt_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="41" relation="include">
-        </childnode>
         <childnode refid="43" relation="include">
         </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
       </node>
-      <node id="47">
+      <node id="50">
         <label>hpm_iomux.h</label>
         <link refid="HPM5300_2HPM5301_2hpm__iomux_8h"/>
       </node>
-      <node id="44">
+      <node id="46">
         <label>hpm_misc.h</label>
         <link refid="HPM5300_2HPM5301_2hpm__misc_8h"/>
       </node>
-      <node id="45">
+      <node id="47">
         <label>hpm_otp_table.h</label>
         <link refid="HPM5300_2HPM5301_2hpm__otp__table_8h"/>
       </node>
-      <node id="43">
+      <node id="45">
         <label>hpm_plic_drv.h</label>
         <link refid="HPM5300_2HPM5301_2hpm__plic__drv_8h"/>
       </node>
-      <node id="48">
+      <node id="51">
         <label>hpm_pmic_iomux.h</label>
         <link refid="HPM5300_2HPM5301_2hpm__pmic__iomux_8h"/>
       </node>
@@ -184,9 +186,9 @@
         </childnode>
         <childnode refid="40" relation="include">
         </childnode>
-        <childnode refid="44" relation="include">
+        <childnode refid="41" relation="include">
         </childnode>
-        <childnode refid="45" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
         <childnode refid="46" relation="include">
         </childnode>
@@ -194,24 +196,34 @@
         </childnode>
         <childnode refid="48" relation="include">
         </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>hpm_soc_irq.h</label>
         <link refid="HPM5300_2HPM5301_2hpm__soc__irq_8h"/>
       </node>
+      <node id="49">
+        <label>hpm_trgmmux_src.h</label>
+        <link refid="HPM5300_2HPM5301_2hpm__trgmmux__src_8h"/>
+      </node>
       <node id="4">
         <label>assert.h</label>
       </node>
-      <node id="30">
+      <node id="32">
         <label>hpm_acmp_regs.h</label>
       </node>
-      <node id="29">
+      <node id="31">
         <label>hpm_adc16_regs.h</label>
       </node>
       <node id="17">
         <label>hpm_crc_regs.h</label>
       </node>
-      <node id="42">
+      <node id="44">
         <label>hpm_csr_regs.h</label>
       </node>
       <node id="21">
@@ -235,10 +247,10 @@
       <node id="15">
         <label>hpm_i2c_regs.h</label>
       </node>
-      <node id="32">
+      <node id="34">
         <label>hpm_ioc_regs.h</label>
       </node>
-      <node id="28">
+      <node id="30">
         <label>hpm_keym_regs.h</label>
       </node>
       <node id="19">
@@ -247,19 +259,19 @@
       <node id="11">
         <label>hpm_mchtmr_regs.h</label>
       </node>
-      <node id="26">
+      <node id="28">
         <label>hpm_mon_regs.h</label>
       </node>
-      <node id="27">
+      <node id="29">
         <label>hpm_otp_regs.h</label>
       </node>
-      <node id="35">
+      <node id="37">
         <label>hpm_pcfg_regs.h</label>
       </node>
-      <node id="37">
+      <node id="39">
         <label>hpm_pdgo_regs.h</label>
       </node>
-      <node id="36">
+      <node id="38">
         <label>hpm_pgpr_regs.h</label>
       </node>
       <node id="10">
@@ -268,20 +280,26 @@
       <node id="12">
         <label>hpm_plic_sw_regs.h</label>
       </node>
-      <node id="33">
+      <node id="35">
         <label>hpm_pllctlv2_regs.h</label>
       </node>
-      <node id="34">
+      <node id="36">
         <label>hpm_ppor_regs.h</label>
       </node>
-      <node id="25">
+      <node id="27">
         <label>hpm_sec_regs.h</label>
       </node>
       <node id="16">
         <label>hpm_spi_regs.h</label>
       </node>
-      <node id="31">
+      <node id="24">
+        <label>hpm_synt_regs.h</label>
+      </node>
+      <node id="33">
         <label>hpm_sysctl_regs.h</label>
+      </node>
+      <node id="25">
+        <label>hpm_trgm_regs.h</label>
       </node>
       <node id="18">
         <label>hpm_tsns_regs.h</label>
@@ -289,7 +307,7 @@
       <node id="14">
         <label>hpm_uart_regs.h</label>
       </node>
-      <node id="24">
+      <node id="26">
         <label>hpm_usb_regs.h</label>
       </node>
       <node id="5">
@@ -310,23 +328,11 @@
         <label>soc/HPM5300/HPM5301/hpm_clock_drv.c</label>
         <link refid="HPM5300_2HPM5301_2hpm__clock__drv_8c"/>
       </node>
-      <node id="4">
-        <label>soc/HPM5300/HPM5301/hpm_l1c_drv.c</label>
-        <link refid="HPM5300_2HPM5301_2hpm__l1c__drv_8c"/>
-      </node>
       <node id="3">
-        <label>soc/HPM5300/HPM5301/hpm_l1c_drv.h</label>
-        <link refid="HPM5300_2HPM5301_2hpm__l1c__drv_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
         <label>soc/HPM5300/HPM5301/hpm_otp_drv.c</label>
         <link refid="HPM5300_2HPM5301_2hpm__otp__drv_8c"/>
       </node>
-      <node id="8">
+      <node id="5">
         <label>soc/HPM5300/HPM5301/hpm_romapi.h</label>
         <link refid="HPM5300_2HPM5301_2hpm__romapi_8h"/>
       </node>
@@ -337,26 +343,24 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
       </node>
-      <node id="7">
+      <node id="4">
         <label>soc/HPM5300/HPM5301/hpm_soc_feature.h</label>
         <link refid="HPM5300_2HPM5301_2hpm__soc__feature_8h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="6">
         <label>soc/HPM5300/HPM5301/hpm_sysctl_drv.c</label>
         <link refid="HPM5300_2HPM5301_2hpm__sysctl__drv_8c"/>
       </node>
-      <node id="5">
+      <node id="7">
         <label>soc/HPM5300/HPM5301/system.c</label>
         <link refid="HPM5300_2HPM5301_2system_8c"/>
       </node>
@@ -1077,6 +1081,50 @@
         </inbodydescription>
         <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="191" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="191" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a88f85c75e82339a31decd79c1bfcc7af" prot="public" static="no">
+        <name>HPM_SYNT_BASE</name>
+        <initializer>(0xF0328000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="196" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a26562c51d2575bf57e04d9d2efd127a7" prot="public" static="no">
+        <name>HPM_SYNT</name>
+        <initializer>((<ref refid="structSYNT__Type" kindref="compound">SYNT_Type</ref> *) <ref refid="HPM5300_2HPM5301_2hpm__soc_8h_1a88f85c75e82339a31decd79c1bfcc7af" kindref="member">HPM_SYNT_BASE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="198" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1aec66855a25aa016f6ca349ae396a7cc5" prot="public" static="no">
+        <name>HPM_TRGM0_BASE</name>
+        <initializer>(0xF033C000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="203" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a3b29b797389c39482fd18df39b91fc4d" prot="public" static="no">
+        <name>HPM_TRGM0</name>
+        <initializer>((<ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> *) <ref refid="HPM5300_2HPM5301_2hpm__soc_8h_1aec66855a25aa016f6ca349ae396a7cc5" kindref="member">HPM_TRGM0_BASE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="205" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a81fa6b1b12e598837b12ce462a443d6c" prot="public" static="no">
         <name>HPM_USB0_BASE</name>
         <initializer>(0xF300C000UL)</initializer>
@@ -1086,7 +1134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="196" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="196" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="210" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="210" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1ab3197c70bcc13e74f69a64330f84fd82" prot="public" static="no">
         <name>HPM_USB0</name>
@@ -1097,18 +1145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="198" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="198" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a5032a1a24c5caa3e4e918d790c9cf99c" prot="public" static="no">
-        <name>HPM_ROMC_BASE</name>
-        <initializer>(0xF3014000UL)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="202" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="202" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="212" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="212" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a4e498ad7c0c3a5b9396f80bd36b42843" prot="public" static="no">
         <name>HPM_SEC_BASE</name>
@@ -1119,7 +1156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="207" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="207" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="217" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="217" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a58a04a2772fc6be220a0d76a11da80a8" prot="public" static="no">
         <name>HPM_SEC</name>
@@ -1130,7 +1167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="209" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="209" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="219" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="219" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a2e5452351293a148ae8ab178ff0e686c" prot="public" static="no">
         <name>HPM_MON_BASE</name>
@@ -1141,7 +1178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="214" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="214" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="224" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="224" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a2f91767f5e188d1e2fb2c3139ec965e8" prot="public" static="no">
         <name>HPM_MON</name>
@@ -1152,7 +1189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="216" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="216" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="226" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="226" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a8b3515723e7e41627075759f5246d9e4" prot="public" static="no">
         <name>HPM_OTP_BASE</name>
@@ -1163,7 +1200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="221" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="221" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="231" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="231" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1afe3351c4c4dbb29e74c7a8ddd206f217" prot="public" static="no">
         <name>HPM_OTP</name>
@@ -1174,7 +1211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="223" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="223" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="233" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="233" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a4e1c8fbbd7eb4adae1bcbb0e4affc0f4" prot="public" static="no">
         <name>HPM_KEYM_BASE</name>
@@ -1185,7 +1222,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="228" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="228" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="238" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="238" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1ad52af964da9bc222b10ca8a81f6dcaed" prot="public" static="no">
         <name>HPM_KEYM</name>
@@ -1196,7 +1233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="230" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="230" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="240" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="240" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a35b37da2abbbbea0ed10e1816e14d6ba" prot="public" static="no">
         <name>HPM_ADC0_BASE</name>
@@ -1207,7 +1244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="235" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="235" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="245" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="245" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a86c244da8fbac3be5027e5ddad4e4ddd" prot="public" static="no">
         <name>HPM_ADC0</name>
@@ -1218,7 +1255,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="237" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="237" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="247" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="247" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1ad985031f777f0ded338811908a41c7da" prot="public" static="no">
         <name>HPM_ACMP_BASE</name>
@@ -1229,7 +1266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="242" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="242" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="252" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="252" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a77949071d27d9c9ee48787df85e6966b" prot="public" static="no">
         <name>HPM_ACMP</name>
@@ -1240,7 +1277,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="244" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="244" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="254" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="254" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a76b88ebb33170f9330c9bc3fbaa86545" prot="public" static="no">
         <name>HPM_SYSCTL_BASE</name>
@@ -1251,7 +1288,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="249" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="249" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="259" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="259" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1ac47807cb2adea29b25e4eb6ff2e9a2c2" prot="public" static="no">
         <name>HPM_SYSCTL</name>
@@ -1262,7 +1299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="251" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="251" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="261" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="261" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1aa96b8daac8d2031ab9ffbb37ea4b33bc" prot="public" static="no">
         <name>HPM_IOC_BASE</name>
@@ -1273,7 +1310,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="256" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="256" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="266" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="266" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1afc2aa40562732245ffaf3cbec47fc6b2" prot="public" static="no">
         <name>HPM_IOC</name>
@@ -1284,7 +1321,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="258" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="258" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="268" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="268" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1acf6f8e5d087425d80cc9cf2710738b56" prot="public" static="no">
         <name>HPM_PIOC_BASE</name>
@@ -1295,7 +1332,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="260" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="260" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="270" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="270" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1ab2fb27a7d7c62b24e7fbdbacadf774aa" prot="public" static="no">
         <name>HPM_PIOC</name>
@@ -1306,7 +1343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="262" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="262" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="272" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="272" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1ab6629521dc6cc08cf41b035193aad463" prot="public" static="no">
         <name>HPM_PLLCTLV2_BASE</name>
@@ -1317,7 +1354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="267" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="267" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="277" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="277" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1af660fbee6ddf3d04568a7cd3cf3dfa04" prot="public" static="no">
         <name>HPM_PLLCTLV2</name>
@@ -1328,7 +1365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="269" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="269" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="279" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="279" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1ac2809123a097a873bc904911a84fb2d9" prot="public" static="no">
         <name>HPM_PPOR_BASE</name>
@@ -1339,7 +1376,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="274" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="274" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="284" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="284" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a6c9992110b2009fd9577c7e30656cbba" prot="public" static="no">
         <name>HPM_PPOR</name>
@@ -1350,7 +1387,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="276" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="276" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="286" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="286" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1ab489307fa94b5d7b1b78b877da2cc216" prot="public" static="no">
         <name>HPM_PCFG_BASE</name>
@@ -1361,7 +1398,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="281" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="281" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="291" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="291" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a77b8f934434abda2a68642fcf7d2520e" prot="public" static="no">
         <name>HPM_PCFG</name>
@@ -1372,7 +1409,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="283" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="283" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="293" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="293" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1ac856611d4502e7ebb618d120fed1b274" prot="public" static="no">
         <name>HPM_PGPR0_BASE</name>
@@ -1383,7 +1420,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="288" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="288" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="298" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="298" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a1e09727de2ca562fef4e8e9969e47b4e" prot="public" static="no">
         <name>HPM_PGPR0</name>
@@ -1394,7 +1431,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="290" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="290" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="300" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="300" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a53f1181edc21518d6bdd3500bf9adcbd" prot="public" static="no">
         <name>HPM_PGPR1_BASE</name>
@@ -1405,7 +1442,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="292" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="292" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="302" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="302" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a133335eda51d4cb25898de95ed3a2be1" prot="public" static="no">
         <name>HPM_PGPR1</name>
@@ -1416,7 +1453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="294" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="294" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="304" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="304" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1aea1cd09a5afee2368d7e818fdf1fda0d" prot="public" static="no">
         <name>HPM_PDGO_BASE</name>
@@ -1427,7 +1464,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="299" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="299" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="309" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="309" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="HPM5300_2HPM5301_2hpm__soc_8h_1a8dcdf60ef7a3ad809eaf0a766edb1b42" prot="public" static="no">
         <name>HPM_PDGO</name>
@@ -1438,7 +1475,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="301" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="301" bodyend="-1"/>
+        <location file="soc/HPM5300/HPM5301/hpm_soc.h" line="311" column="9" bodyfile="soc/HPM5300/HPM5301/hpm_soc.h" bodystart="311" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -1447,7 +1484,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2024<sp/>HPMicro</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021-2025<sp/>HPMicro</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
@@ -1638,126 +1675,137 @@
 <codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GPIOM<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="191" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ad3c37d2b60c8fb53452f10a9328ad47f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_GPIOM<sp/>((GPIOM_Type<sp/>*)<sp/>HPM_GPIOM_BASE)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="192"><highlight class="normal"></highlight></codeline>
-<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_usb_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="194"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>USB<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USB0<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="196" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a81fa6b1b12e598837b12ce462a443d6c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_USB0_BASE<sp/>(0xF300C000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="197"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USB0<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="198" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ab3197c70bcc13e74f69a64330f84fd82" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_USB0<sp/>((USB_Type<sp/>*)<sp/>HPM_USB0_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_synt_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>SYNT<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SYNT<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a88f85c75e82339a31decd79c1bfcc7af" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_SYNT_BASE<sp/>(0xF0328000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SYNT<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a26562c51d2575bf57e04d9d2efd127a7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_SYNT<sp/>((SYNT_Type<sp/>*)<sp/>HPM_SYNT_BASE)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="199"><highlight class="normal"></highlight></codeline>
-<codeline lineno="200"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>ROMC<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="201"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ROMC<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="202" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a5032a1a24c5caa3e4e918d790c9cf99c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_ROMC_BASE<sp/>(0xF3014000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="203"><highlight class="normal"></highlight></codeline>
-<codeline lineno="204"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_sec_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="205"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>SEC<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="206"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SEC<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="207" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a4e498ad7c0c3a5b9396f80bd36b42843" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_SEC_BASE<sp/>(0xF3044000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SEC<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="209" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a58a04a2772fc6be220a0d76a11da80a8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_SEC<sp/>((SEC_Type<sp/>*)<sp/>HPM_SEC_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="210"><highlight class="normal"></highlight></codeline>
-<codeline lineno="211"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_mon_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="212"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>MON<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="213"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>MON<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="214" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a2e5452351293a148ae8ab178ff0e686c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_MON_BASE<sp/>(0xF3048000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="215"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>MON<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="216" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a2f91767f5e188d1e2fb2c3139ec965e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_MON<sp/>((MON_Type<sp/>*)<sp/>HPM_MON_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="217"><highlight class="normal"></highlight></codeline>
-<codeline lineno="218"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_otp_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="219"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>OTP<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="220"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>OTP<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="221" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a8b3515723e7e41627075759f5246d9e4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_OTP_BASE<sp/>(0xF3050000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="222"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>OTP<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="223" refid="HPM5300_2HPM5301_2hpm__soc_8h_1afe3351c4c4dbb29e74c7a8ddd206f217" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_OTP<sp/>((OTP_Type<sp/>*)<sp/>HPM_OTP_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="224"><highlight class="normal"></highlight></codeline>
-<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_keym_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="226"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>KEYM<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="227"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>KEYM<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="228" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a4e1c8fbbd7eb4adae1bcbb0e4affc0f4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_KEYM_BASE<sp/>(0xF3054000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="229"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>KEYM<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="230" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ad52af964da9bc222b10ca8a81f6dcaed" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_KEYM<sp/>((KEYM_Type<sp/>*)<sp/>HPM_KEYM_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="231"><highlight class="normal"></highlight></codeline>
-<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_adc16_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="233"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>ADC16<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="234"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ADC0<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="235" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a35b37da2abbbbea0ed10e1816e14d6ba" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_ADC0_BASE<sp/>(0xF3080000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="236"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ADC0<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="237" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a86c244da8fbac3be5027e5ddad4e4ddd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_ADC0<sp/>((ADC16_Type<sp/>*)<sp/>HPM_ADC0_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="238"><highlight class="normal"></highlight></codeline>
-<codeline lineno="239"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_acmp_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="240"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>ACMP<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="241"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ACMP<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="242" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ad985031f777f0ded338811908a41c7da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_ACMP_BASE<sp/>(0xF30B0000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="243"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ACMP<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="244" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a77949071d27d9c9ee48787df85e6966b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_ACMP<sp/>((ACMP_Type<sp/>*)<sp/>HPM_ACMP_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="245"><highlight class="normal"></highlight></codeline>
-<codeline lineno="246"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_sysctl_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="247"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>SYSCTL<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="248"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SYSCTL<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="249" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a76b88ebb33170f9330c9bc3fbaa86545" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_SYSCTL_BASE<sp/>(0xF4000000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="250"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SYSCTL<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="251" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ac47807cb2adea29b25e4eb6ff2e9a2c2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_SYSCTL<sp/>((SYSCTL_Type<sp/>*)<sp/>HPM_SYSCTL_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="252"><highlight class="normal"></highlight></codeline>
-<codeline lineno="253"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_ioc_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="254"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>IOC<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="255"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>IOC<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="256" refid="HPM5300_2HPM5301_2hpm__soc_8h_1aa96b8daac8d2031ab9ffbb37ea4b33bc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_IOC_BASE<sp/>(0xF4040000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="257"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>IOC<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="258" refid="HPM5300_2HPM5301_2hpm__soc_8h_1afc2aa40562732245ffaf3cbec47fc6b2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_IOC<sp/>((IOC_Type<sp/>*)<sp/>HPM_IOC_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="259"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PIOC<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="260" refid="HPM5300_2HPM5301_2hpm__soc_8h_1acf6f8e5d087425d80cc9cf2710738b56" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PIOC_BASE<sp/>(0xF4118000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="261"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PIOC<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="262" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ab2fb27a7d7c62b24e7fbdbacadf774aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PIOC<sp/>((IOC_Type<sp/>*)<sp/>HPM_PIOC_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="263"><highlight class="normal"></highlight></codeline>
-<codeline lineno="264"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_pllctlv2_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="265"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>PLLCTLV2<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="266"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PLLCTLV2<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="267" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ab6629521dc6cc08cf41b035193aad463" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PLLCTLV2_BASE<sp/>(0xF40C0000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="268"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PLLCTLV2<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="269" refid="HPM5300_2HPM5301_2hpm__soc_8h_1af660fbee6ddf3d04568a7cd3cf3dfa04" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PLLCTLV2<sp/>((PLLCTLV2_Type<sp/>*)<sp/>HPM_PLLCTLV2_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="270"><highlight class="normal"></highlight></codeline>
-<codeline lineno="271"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_ppor_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="272"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>PPOR<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="273"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PPOR<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="274" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ac2809123a097a873bc904911a84fb2d9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PPOR_BASE<sp/>(0xF4100000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="275"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PPOR<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="276" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a6c9992110b2009fd9577c7e30656cbba" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PPOR<sp/>((PPOR_Type<sp/>*)<sp/>HPM_PPOR_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="277"><highlight class="normal"></highlight></codeline>
-<codeline lineno="278"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_pcfg_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="279"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>PCFG<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="280"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PCFG<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="281" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ab489307fa94b5d7b1b78b877da2cc216" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PCFG_BASE<sp/>(0xF4104000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="282"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PCFG<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="283" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a77b8f934434abda2a68642fcf7d2520e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PCFG<sp/>((PCFG_Type<sp/>*)<sp/>HPM_PCFG_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="284"><highlight class="normal"></highlight></codeline>
-<codeline lineno="285"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_pgpr_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="286"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>PGPR<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="287"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PGPR0<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="288" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ac856611d4502e7ebb618d120fed1b274" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PGPR0_BASE<sp/>(0xF4110000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="289"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PGPR0<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="290" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a1e09727de2ca562fef4e8e9969e47b4e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PGPR0<sp/>((PGPR_Type<sp/>*)<sp/>HPM_PGPR0_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="291"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PGPR1<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="292" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a53f1181edc21518d6bdd3500bf9adcbd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PGPR1_BASE<sp/>(0xF4114000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="293"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PGPR1<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="294" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a133335eda51d4cb25898de95ed3a2be1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PGPR1<sp/>((PGPR_Type<sp/>*)<sp/>HPM_PGPR1_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="295"><highlight class="normal"></highlight></codeline>
-<codeline lineno="296"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_pdgo_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="297"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>PDGO<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="298"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PDGO<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="299" refid="HPM5300_2HPM5301_2hpm__soc_8h_1aea1cd09a5afee2368d7e818fdf1fda0d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PDGO_BASE<sp/>(0xF4134000UL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="300"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PDGO<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="301" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a8dcdf60ef7a3ad809eaf0a766edb1b42" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PDGO<sp/>((PDGO_Type<sp/>*)<sp/>HPM_PDGO_BASE)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="302"><highlight class="normal"></highlight></codeline>
-<codeline lineno="303"><highlight class="normal"></highlight></codeline>
-<codeline lineno="304"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="riscv__core_8h" kindref="compound">riscv/riscv_core.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="305"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h" kindref="compound">hpm_csr_regs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="306"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__interrupt_8h" kindref="compound">hpm_interrupt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="307"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__misc_8h" kindref="compound">hpm_misc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="308"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__otp__table_8h" kindref="compound">hpm_otp_table.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="309"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__dmamux__src_8h" kindref="compound">hpm_dmamux_src.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="310"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__iomux_8h" kindref="compound">hpm_iomux.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="311"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__pmic__iomux_8h" kindref="compound">hpm_pmic_iomux.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="312"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HPM_SOC_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_trgm_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>TRGM<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TRGM0<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="HPM5300_2HPM5301_2hpm__soc_8h_1aec66855a25aa016f6ca349ae396a7cc5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_TRGM0_BASE<sp/>(0xF033C000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TRGM0<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a3b29b797389c39482fd18df39b91fc4d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_TRGM0<sp/>((TRGM_Type<sp/>*)<sp/>HPM_TRGM0_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_usb_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>USB<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USB0<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a81fa6b1b12e598837b12ce462a443d6c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_USB0_BASE<sp/>(0xF300C000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USB0<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ab3197c70bcc13e74f69a64330f84fd82" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_USB0<sp/>((USB_Type<sp/>*)<sp/>HPM_USB0_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_sec_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>SEC<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SEC<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a4e498ad7c0c3a5b9396f80bd36b42843" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_SEC_BASE<sp/>(0xF3044000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SEC<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a58a04a2772fc6be220a0d76a11da80a8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_SEC<sp/>((SEC_Type<sp/>*)<sp/>HPM_SEC_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_mon_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>MON<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>MON<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a2e5452351293a148ae8ab178ff0e686c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_MON_BASE<sp/>(0xF3048000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>MON<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a2f91767f5e188d1e2fb2c3139ec965e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_MON<sp/>((MON_Type<sp/>*)<sp/>HPM_MON_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_otp_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>OTP<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>OTP<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a8b3515723e7e41627075759f5246d9e4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_OTP_BASE<sp/>(0xF3050000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>OTP<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="HPM5300_2HPM5301_2hpm__soc_8h_1afe3351c4c4dbb29e74c7a8ddd206f217" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_OTP<sp/>((OTP_Type<sp/>*)<sp/>HPM_OTP_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_keym_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>KEYM<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>KEYM<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a4e1c8fbbd7eb4adae1bcbb0e4affc0f4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_KEYM_BASE<sp/>(0xF3054000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>KEYM<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ad52af964da9bc222b10ca8a81f6dcaed" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_KEYM<sp/>((KEYM_Type<sp/>*)<sp/>HPM_KEYM_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_adc16_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>ADC16<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ADC0<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a35b37da2abbbbea0ed10e1816e14d6ba" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_ADC0_BASE<sp/>(0xF3080000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ADC0<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a86c244da8fbac3be5027e5ddad4e4ddd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_ADC0<sp/>((ADC16_Type<sp/>*)<sp/>HPM_ADC0_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_acmp_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>ACMP<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ACMP<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ad985031f777f0ded338811908a41c7da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_ACMP_BASE<sp/>(0xF30B0000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ACMP<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a77949071d27d9c9ee48787df85e6966b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_ACMP<sp/>((ACMP_Type<sp/>*)<sp/>HPM_ACMP_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_sysctl_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>SYSCTL<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SYSCTL<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a76b88ebb33170f9330c9bc3fbaa86545" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_SYSCTL_BASE<sp/>(0xF4000000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SYSCTL<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ac47807cb2adea29b25e4eb6ff2e9a2c2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_SYSCTL<sp/>((SYSCTL_Type<sp/>*)<sp/>HPM_SYSCTL_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_ioc_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>IOC<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>IOC<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266" refid="HPM5300_2HPM5301_2hpm__soc_8h_1aa96b8daac8d2031ab9ffbb37ea4b33bc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_IOC_BASE<sp/>(0xF4040000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>IOC<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="HPM5300_2HPM5301_2hpm__soc_8h_1afc2aa40562732245ffaf3cbec47fc6b2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_IOC<sp/>((IOC_Type<sp/>*)<sp/>HPM_IOC_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PIOC<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270" refid="HPM5300_2HPM5301_2hpm__soc_8h_1acf6f8e5d087425d80cc9cf2710738b56" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PIOC_BASE<sp/>(0xF4118000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PIOC<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ab2fb27a7d7c62b24e7fbdbacadf774aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PIOC<sp/>((IOC_Type<sp/>*)<sp/>HPM_PIOC_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_pllctlv2_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>PLLCTLV2<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PLLCTLV2<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ab6629521dc6cc08cf41b035193aad463" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PLLCTLV2_BASE<sp/>(0xF40C0000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PLLCTLV2<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279" refid="HPM5300_2HPM5301_2hpm__soc_8h_1af660fbee6ddf3d04568a7cd3cf3dfa04" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PLLCTLV2<sp/>((PLLCTLV2_Type<sp/>*)<sp/>HPM_PLLCTLV2_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_ppor_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>PPOR<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PPOR<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ac2809123a097a873bc904911a84fb2d9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PPOR_BASE<sp/>(0xF4100000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PPOR<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a6c9992110b2009fd9577c7e30656cbba" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PPOR<sp/>((PPOR_Type<sp/>*)<sp/>HPM_PPOR_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_pcfg_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>PCFG<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PCFG<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ab489307fa94b5d7b1b78b877da2cc216" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PCFG_BASE<sp/>(0xF4104000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PCFG<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a77b8f934434abda2a68642fcf7d2520e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PCFG<sp/>((PCFG_Type<sp/>*)<sp/>HPM_PCFG_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_pgpr_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>PGPR<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PGPR0<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298" refid="HPM5300_2HPM5301_2hpm__soc_8h_1ac856611d4502e7ebb618d120fed1b274" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PGPR0_BASE<sp/>(0xF4110000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PGPR0<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a1e09727de2ca562fef4e8e9969e47b4e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PGPR0<sp/>((PGPR_Type<sp/>*)<sp/>HPM_PGPR0_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PGPR1<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a53f1181edc21518d6bdd3500bf9adcbd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PGPR1_BASE<sp/>(0xF4114000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PGPR1<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a133335eda51d4cb25898de95ed3a2be1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PGPR1<sp/>((PGPR_Type<sp/>*)<sp/>HPM_PGPR1_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_pdgo_regs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Address<sp/>of<sp/>PDGO<sp/>instances<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PDGO<sp/>base<sp/>address<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309" refid="HPM5300_2HPM5301_2hpm__soc_8h_1aea1cd09a5afee2368d7e818fdf1fda0d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PDGO_BASE<sp/>(0xF4134000UL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PDGO<sp/>base<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311" refid="HPM5300_2HPM5301_2hpm__soc_8h_1a8dcdf60ef7a3ad809eaf0a766edb1b42" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PDGO<sp/>((PDGO_Type<sp/>*)<sp/>HPM_PDGO_BASE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="riscv__core_8h" kindref="compound">riscv/riscv_core.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__csr__regs_8h" kindref="compound">hpm_csr_regs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__interrupt_8h" kindref="compound">hpm_interrupt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__misc_8h" kindref="compound">hpm_misc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__otp__table_8h" kindref="compound">hpm_otp_table.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__dmamux__src_8h" kindref="compound">hpm_dmamux_src.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__trgmmux__src_8h" kindref="compound">hpm_trgmmux_src.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__iomux_8h" kindref="compound">hpm_iomux.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HPM5300_2HPM5301_2hpm__pmic__iomux_8h" kindref="compound">hpm_pmic_iomux.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HPM_SOC_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="soc/HPM5300/HPM5301/hpm_soc.h"/>
   </compounddef>

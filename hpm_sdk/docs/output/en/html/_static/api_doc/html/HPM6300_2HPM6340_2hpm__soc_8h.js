@@ -133,7 +133,6 @@ var HPM6300_2HPM6340_2hpm__soc_8h =
     [ "HPM_QEI1_BASE", "HPM6300_2HPM6340_2hpm__soc_8h.html#a182221175645316b922a34b2c27b62bd", null ],
     [ "HPM_RNG", "HPM6300_2HPM6340_2hpm__soc_8h.html#ace0dbcc15372272733f241cb4cf3a49d", null ],
     [ "HPM_RNG_BASE", "HPM6300_2HPM6340_2hpm__soc_8h.html#a5901361ed4ab105653999e1749ec2756", null ],
-    [ "HPM_ROMC_BASE", "HPM6300_2HPM6340_2hpm__soc_8h.html#a5032a1a24c5caa3e4e918d790c9cf99c", null ],
     [ "HPM_RTC", "HPM6300_2HPM6340_2hpm__soc_8h.html#a10f5043e6ac741750c1f5bb5508be0c9", null ],
     [ "HPM_RTC_BASE", "HPM6300_2HPM6340_2hpm__soc_8h.html#ac6a064a25dc09ece703a6f8a13dbc037", null ],
     [ "HPM_SDP", "HPM6300_2HPM6340_2hpm__soc_8h.html#a1d6f4c848d7084fe4ca6dea80e98e2d0", null ],

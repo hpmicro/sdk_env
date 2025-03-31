@@ -1,6 +1,6 @@
 var structdisplay__buf =
 [
-    [ "alpha", "structdisplay__buf.html#ac673de1e6eda84d36e325cab60a1baa1", null ],
+    [ "alpha", "structdisplay__buf.html#ac898146e5e681d2545ccc0d4f905aadc", null ],
     [ "buf", "structdisplay__buf.html#a18c674a000787365649919fd96a759c4", null ],
     [ "format", "structdisplay__buf.html#a7e1fd87a38469fb0f9e5b888c1dc798e", null ],
     [ "height", "structdisplay__buf.html#a1e62dfdfbb4767477c2b38aa4a9b67ff", null ],

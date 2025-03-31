@@ -5,7 +5,7 @@ var structpdma__output__config =
     [ "height", "structpdma__output__config.html#a328d37c961acf246fd7b875db17dd78c", null ],
     [ "pitch", "structpdma__output__config.html#a08dd703f84148edf02ec8ed273572cd8", null ],
     [ "pixel_format", "structpdma__output__config.html#aa9263775e0061f9668ef283f655621da", null ],
-    [ "plane", "structpdma__output__config.html#ac85b09fb5127fb8e342ee6ae8d38e975", null ],
+    [ "plane", "structpdma__output__config.html#a910b9a8859004113a4dbe1c03bd7966d", null ],
     [ "rgb2yuv_config", "structpdma__output__config.html#afe3c532bd3af236d27936ea0adc70f47", null ],
     [ "width", "structpdma__output__config.html#a21d588effa1fa6fb0f080703ff690236", null ],
     [ "x", "structpdma__output__config.html#a46e7c2b28bc83c494659e381e49510a7", null ],

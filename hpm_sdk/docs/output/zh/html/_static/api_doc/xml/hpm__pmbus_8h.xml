@@ -1,0 +1,699 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="hpm__pmbus_8h" kind="file" language="C++">
+    <compoundname>hpm_pmbus.h</compoundname>
+    <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
+    <includes local="yes">hpm_soc_feature.h</includes>
+    <includes refid="hpm__i2c__drv_8h" local="yes">hpm_i2c_drv.h</includes>
+    <includes refid="hpm__pmbus__def_8h" local="yes">hpm_pmbus_def.h</includes>
+    <includedby refid="hpm__pmbus_8c" local="yes">components/pmbus/hpm_pmbus.c</includedby>
+    <includedby refid="hpm__pmbus__private_8h" local="yes">components/pmbus/hpm_pmbus_private.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>components/pmbus/hpm_pmbus.h</label>
+        <link refid="hpm__pmbus_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>hpm_pmbus_def.h</label>
+        <link refid="hpm__pmbus__def_8h"/>
+      </node>
+      <node id="2">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>hpm_i2c_drv.h</label>
+        <link refid="hpm__i2c__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="10">
+        <label>hpm_i2c_regs.h</label>
+      </node>
+      <node id="8">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>components/pmbus/hpm_pmbus.c</label>
+        <link refid="hpm__pmbus_8c"/>
+      </node>
+      <node id="1">
+        <label>components/pmbus/hpm_pmbus.h</label>
+        <link refid="hpm__pmbus_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>components/pmbus/hpm_pmbus_private.h</label>
+        <link refid="hpm__pmbus__private_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structhpm__pmbus__complete__cb__cfg__t" prot="public">hpm_pmbus_complete_cb_cfg_t</innerclass>
+    <innerclass refid="structhpm__pmbus__cmd__param__t" prot="public">hpm_pmbus_cmd_param_t</innerclass>
+    <innerclass refid="structhpm__pmbus__slave__cfg__t" prot="public">hpm_pmbus_slave_cfg_t</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dc" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hpm_pmbus_transaction_type</name>
+        <enumvalue id="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dcab7e4e0120a041dbe6528b050c04269e0" prot="public">
+          <name>none</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>No operation </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca35a1625adb5c75b40fa826f84f39559d" prot="public">
+          <name>write_byte</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Write a byte </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca55adc67d1e33f04a564337bc2741cf4b" prot="public">
+          <name>read_byte</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Read a byte </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dcaa67f66f4e26fdb3f293340b6066c14cc" prot="public">
+          <name>write_word</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Write a word (two bytes) </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dcaeaaf9715fe64b1b3d28a975e06bb9563" prot="public">
+          <name>read_word</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Read a word (two bytes) </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca2404264202ebf0f5ba57f11fe6ea7027" prot="public">
+          <name>write_block</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Write a block </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca8cad95eb12a6cdd1eaf7e6dc2ab7ad4d" prot="public">
+          <name>read_block</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Read a block </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dcae3e9faa36631033ac2d4478ce75d2e7e" prot="public">
+          <name>send_byte</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Send a byte </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca5420b4b9f7fb997eb215dc271a2cfe6d" prot="public">
+          <name>mfr_defined</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Manufacturer-defined command </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca521a00a1e11617a9ff2a87149439eadd" prot="public">
+          <name>extended_command</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Extended command </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Define the HPM PMBUS transaction type enumeration, used to distinguish between different PMBUS operation types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/pmbus/hpm_pmbus.h" line="40" column="1" bodyfile="components/pmbus/hpm_pmbus.h" bodystart="40" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="enum" id="hpm__pmbus_8h_1a3f6bc4f8848e6f16b2ed7149a68c04b7" prot="public" static="no" strong="no">
+        <type></type>
+        <name></name>
+        <enumvalue id="hpm__pmbus_8h_1a3f6bc4f8848e6f16b2ed7149a68c04b7a79a1698d05bc982e7fcae8ff01de51d1" prot="public">
+          <name>status_pmbus_not_support_cmd</name>
+          <initializer>= MAKE_STATUS(status_group_pmbus, 1)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__pmbus_8h_1a3f6bc4f8848e6f16b2ed7149a68c04b7ac9326e19d51068986dab3f7cdd2c0eeb" prot="public">
+          <name>status_pmbus_not_transaction_type</name>
+          <initializer>= MAKE_STATUS(status_group_pmbus, 2)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>PMBUS status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/pmbus/hpm_pmbus.h" line="89" column="1" bodyfile="components/pmbus/hpm_pmbus.h" bodystart="89" bodyend="92"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="hpm__pmbus_8h_1aae156c33adbdea23fcedfa7bc4c6f3f8" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* hpm_pmbus_complete_cb_t) (I2C_Type *base, hpm_pmbus_complete_cb_cfg_t *cfg)</definition>
+        <argsstring>)(I2C_Type *base, hpm_pmbus_complete_cb_cfg_t *cfg)</argsstring>
+        <name>hpm_pmbus_complete_cb_t</name>
+        <briefdescription>
+<para>Define a callback function type <ref refid="hpm__pmbus_8h_1aae156c33adbdea23fcedfa7bc4c6f3f8" kindref="member">hpm_pmbus_complete_cb_t</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This callback function is called after an I2C operation completes, allowing users to implement specific completion handling logic. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/pmbus/hpm_pmbus.h" line="35" column="9" bodyfile="components/pmbus/hpm_pmbus.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="hpm__pmbus_8h_1a72464f1d4b1e56952e8e183aa9847903" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_pmbus_isr_handler</definition>
+        <argsstring>(I2C_Type *ptr)</argsstring>
+        <name>hpm_pmbus_isr_handler</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Handles the HPM PMBUS interrupt service request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function serves as an interrupt service routine (ISR) handler for communication with PMBUS devices over I2C.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the I2C </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/pmbus/hpm_pmbus.h" line="106" column="6" bodyfile="components/pmbus/hpm_pmbus.c" bodystart="168" bodyend="338" declfile="components/pmbus/hpm_pmbus.h" declline="106" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__pmbus_8h_1a8902b3a7d992a8e8a68e316229f3d7d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_pmbus_slave_init</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t slave_addr)</argsstring>
+        <name>hpm_pmbus_slave_init</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slave_addr</declname>
+        </param>
+        <briefdescription>
+<para>PMBus Slave Initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes an I2C slave device to respond to a specific slave address and communicate according to the PMBus protocol.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the base address of the I2C, pointing to the I2C slave device to be initialized </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slave_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the slave device, used to identify the specific slave on the I2C bus</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref> Returns the status of the initialization operation, indicating success or failure reasons </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/pmbus/hpm_pmbus.h" line="118" column="12" bodyfile="components/pmbus/hpm_pmbus.c" bodystart="340" bodyend="352" declfile="components/pmbus/hpm_pmbus.h" declline="118" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__pmbus_8h_1a529f7ff8b3280afbe271ea2bbbbd3248" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_pmbus_master_read</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t slave_address, uint8_t command, uint8_t *data, uint32_t *len)</argsstring>
+        <name>hpm_pmbus_master_read</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slave_address</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Reads data from a PMBus slave device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from a specified PMBus slave device over the I2C bus. It first sends a command and then reads the response data. Primarily used for communication with PMBus-compatible power management devices to retrieve device status or measurement data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the base address of the I2C controller </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slave_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 7-bit PMBus address of the slave device, used to select the correct slave device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PMBus command sent to the slave device, specifying the type of data or register to read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to store the data returned from the slave device; this function will store the read data into the buffer pointed to by this pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a variable that specifies the maximum read length; this function will write the actual read length into this variable</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref> Returns the status of the read operation, indicating success or various error states </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/pmbus/hpm_pmbus.h" line="134" column="12" bodyfile="components/pmbus/hpm_pmbus.c" bodystart="354" bodyend="385" declfile="components/pmbus/hpm_pmbus.h" declline="134" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__pmbus_8h_1ab47d0a55e344dbd60d5dfb58051aff95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_pmbus_master_write</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t slave_address, uint8_t command, uint8_t *data, uint32_t len)</argsstring>
+        <name>hpm_pmbus_master_write</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slave_address</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Writes data to a PMBus slave device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>function is used to send commands and data to a slave device over the I2C interface. It is primarily intended for communication with PMBus-compatible devices, allowing the host to send instructions and data to PMBus-compatible devices.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the base address of the I2C controller </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slave_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 7-bit address of the slave device, used to address the slave device on the I2C bus </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The command or register address to be sent to the slave device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data to be written to the slave device; the data will be written in order </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data to be written, in bytes</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the result of the write operation: HPM_STAT_SUCCESS indicates success, other values indicate different error states</para>
+</simplesect>
+Note: Before using this function, ensure that the I2C controller has been properly initialized, and the clock and interrupts (if needed) have also been configured. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/pmbus/hpm_pmbus.h" line="153" column="12" bodyfile="components/pmbus/hpm_pmbus.c" bodystart="387" bodyend="418" declfile="components/pmbus/hpm_pmbus.h" declline="153" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__pmbus_8h_1a94ff376d35a63808e01c2f9b96d74f8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_pmbus_slave_command_transaction_install</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t command, uint8_t *wdata, uint8_t *rdata, uint32_t len, hpm_pmbus_complete_cb_t callback)</argsstring>
+        <name>hpm_pmbus_slave_command_transaction_install</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>wdata</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>rdata</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__pmbus_8h_1aae156c33adbdea23fcedfa7bc4c6f3f8" kindref="member">hpm_pmbus_complete_cb_t</ref></type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Installs a PMBus Slave Command Transaction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function installs a PMBus slave command transaction for writing and reading data. The command is for the master, such as the read command, which is read for the master and write for the slave</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the base address of the I2C </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PMBus command byte specifying the PMBus command to be sen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data to be written, containing the data to write to the slave </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the buffer where the data read from the slave will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data to be transferred, in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the completion callback function that will be called when the transaction completes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref> Returns the installation status of the transaction, indicating success or the reason for failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/pmbus/hpm_pmbus.h" line="169" column="12" bodyfile="components/pmbus/hpm_pmbus.c" bodystart="420" bodyend="443" declfile="components/pmbus/hpm_pmbus.h" declline="169" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__pmbus_8h_1a893126cb1465cc5f2d98841704f312ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_pmbus_slave_command_transaction_uninstall</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t command)</argsstring>
+        <name>hpm_pmbus_slave_command_transaction_uninstall</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Uninstalls a specified PMBus slave command transaction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is used to uninstall a PMBus slave command transaction to reduce unnecessary resource usage. In certain cases, if a specific slave command transaction is no longer needed, it can be uninstalled using this function to free up related resources.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the I2C </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PMBus command to uninstall. This parameter specifies the exact command to be uninstalled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref> Returns the operation status, indicating whether the uninstallation was successful. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/pmbus/hpm_pmbus.h" line="182" column="12" bodyfile="components/pmbus/hpm_pmbus.c" bodystart="445" bodyend="454" declfile="components/pmbus/hpm_pmbus.h" declline="182" declcolumn="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2024<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPM_PMBUS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_PMBUS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__common_8h" kindref="compound">hpm_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hpm_soc_feature.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__i2c__drv_8h" kindref="compound">hpm_i2c_drv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__pmbus__def_8h" kindref="compound">hpm_pmbus_def.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="structhpm__pmbus__complete__cb__cfg__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23" refid="structhpm__pmbus__complete__cb__cfg__t_1ac28527fb3c97784fcc9ebfffb262bc45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structhpm__pmbus__complete__cb__cfg__t_1ac28527fb3c97784fcc9ebfffb262bc45" kindref="member">command</ref>;<sp/></highlight></codeline>
+<codeline lineno="24" refid="structhpm__pmbus__complete__cb__cfg__t_1a8d969360d79a1abf260e32ac0e7c58b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structhpm__pmbus__complete__cb__cfg__t_1a8d969360d79a1abf260e32ac0e7c58b4" kindref="member">len</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="structhpm__pmbus__complete__cb__cfg__t_1a5aec65b937b7b75444c4d2e8840fd68d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structhpm__pmbus__complete__cb__cfg__t_1a5aec65b937b7b75444c4d2e8840fd68d" kindref="member">read</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="structhpm__pmbus__complete__cb__cfg__t_1a6722ab2d77ff2a4920dc0145237c261a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structhpm__pmbus__complete__cb__cfg__t_1a6722ab2d77ff2a4920dc0145237c261a" kindref="member">pec_check</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="structhpm__pmbus__complete__cb__cfg__t_1ac86bcb8394c59d6689ae5738d58ad57c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="structhpm__pmbus__complete__cb__cfg__t_1ac86bcb8394c59d6689ae5738d58ad57c" kindref="member">data</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}<sp/><ref refid="structhpm__pmbus__complete__cb__cfg__t" kindref="compound">hpm_pmbus_complete_cb_cfg_t</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="hpm__pmbus_8h_1aae156c33adbdea23fcedfa7bc4c6f3f8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="hpm__pmbus_8h_1aae156c33adbdea23fcedfa7bc4c6f3f8" kindref="member">hpm_pmbus_complete_cb_t</ref>)(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*base,<sp/><ref refid="structhpm__pmbus__complete__cb__cfg__t" kindref="compound">hpm_pmbus_complete_cb_cfg_t</ref><sp/>*cfg);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="41" refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dcab7e4e0120a041dbe6528b050c04269e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dcab7e4e0120a041dbe6528b050c04269e0" kindref="member">none</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca35a1625adb5c75b40fa826f84f39559d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca35a1625adb5c75b40fa826f84f39559d" kindref="member">write_byte</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca55adc67d1e33f04a564337bc2741cf4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca55adc67d1e33f04a564337bc2741cf4b" kindref="member">read_byte</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dcaa67f66f4e26fdb3f293340b6066c14cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dcaa67f66f4e26fdb3f293340b6066c14cc" kindref="member">write_word</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dcaeaaf9715fe64b1b3d28a975e06bb9563" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dcaeaaf9715fe64b1b3d28a975e06bb9563" kindref="member">read_word</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca2404264202ebf0f5ba57f11fe6ea7027" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca2404264202ebf0f5ba57f11fe6ea7027" kindref="member">write_block</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>5,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca8cad95eb12a6cdd1eaf7e6dc2ab7ad4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca8cad95eb12a6cdd1eaf7e6dc2ab7ad4d" kindref="member">read_block</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>6,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dcae3e9faa36631033ac2d4478ce75d2e7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dcae3e9faa36631033ac2d4478ce75d2e7e" kindref="member">send_byte</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>7,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca5420b4b9f7fb997eb215dc271a2cfe6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca5420b4b9f7fb997eb215dc271a2cfe6d" kindref="member">mfr_defined</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>8,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca521a00a1e11617a9ff2a87149439eadd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dca521a00a1e11617a9ff2a87149439eadd" kindref="member">extended_command</ref><sp/>=<sp/>9,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}<sp/><ref refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dc" kindref="member">hpm_pmbus_transaction_type</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="structhpm__pmbus__cmd__param__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63" refid="structhpm__pmbus__cmd__param__t_1a7cf55185d84242b2d611ca18367ee9ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structhpm__pmbus__cmd__param__t_1a7cf55185d84242b2d611ca18367ee9ce" kindref="member">command_code</ref>;</highlight></codeline>
+<codeline lineno="65" refid="structhpm__pmbus__cmd__param__t_1a347f40747d1267fe43d99a1505ae7bfc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dc" kindref="member">hpm_pmbus_transaction_type</ref><sp/><ref refid="structhpm__pmbus__cmd__param__t_1a347f40747d1267fe43d99a1505ae7bfc" kindref="member">write_transaction_type</ref>;</highlight></codeline>
+<codeline lineno="67" refid="structhpm__pmbus__cmd__param__t_1aadde6ee1b3362d68795a0941783ca7ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1ac6faa3bf66b474647c7b92d3289130dc" kindref="member">hpm_pmbus_transaction_type</ref><sp/><ref refid="structhpm__pmbus__cmd__param__t_1aadde6ee1b3362d68795a0941783ca7ff" kindref="member">read_transaction_type</ref>;</highlight></codeline>
+<codeline lineno="69" refid="structhpm__pmbus__cmd__param__t_1a1f4466959ad696241f3295708a5236aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structhpm__pmbus__cmd__param__t_1a1f4466959ad696241f3295708a5236aa" kindref="member">data_length</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}<sp/><ref refid="structhpm__pmbus__cmd__param__t" kindref="compound">hpm_pmbus_cmd_param_t</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="structhpm__pmbus__slave__cfg__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79" refid="structhpm__pmbus__slave__cfg__t_1af7f763e8a8c1a034f36ed0ce3a5cc79f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structhpm__pmbus__slave__cfg__t_1af7f763e8a8c1a034f36ed0ce3a5cc79f" kindref="member">is_valid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="structhpm__pmbus__slave__cfg__t_1a180d46f41d40841586070d02b4b43bc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="structhpm__pmbus__slave__cfg__t_1a180d46f41d40841586070d02b4b43bc2" kindref="member">wdata</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81" refid="structhpm__pmbus__slave__cfg__t_1a4dae29460929757801ac4bf76671a99b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="structhpm__pmbus__slave__cfg__t_1a4dae29460929757801ac4bf76671a99b" kindref="member">rdata</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82" refid="structhpm__pmbus__slave__cfg__t_1afd4825ddecff7d5627fff937385bef8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structhpm__pmbus__slave__cfg__t_1afd4825ddecff7d5627fff937385bef8b" kindref="member">data_length</ref>;<sp/></highlight></codeline>
+<codeline lineno="83" refid="structhpm__pmbus__slave__cfg__t_1a639b1dc8d37680e8911caf8bb597f06e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1aae156c33adbdea23fcedfa7bc4c6f3f8" kindref="member">hpm_pmbus_complete_cb_t</ref><sp/><ref refid="structhpm__pmbus__slave__cfg__t_1a639b1dc8d37680e8911caf8bb597f06e" kindref="member">callback</ref>;<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}<sp/><ref refid="structhpm__pmbus__slave__cfg__t" kindref="compound">hpm_pmbus_slave_cfg_t</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="90" refid="hpm__pmbus_8h_1a3f6bc4f8848e6f16b2ed7149a68c04b7a79a1698d05bc982e7fcae8ff01de51d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1a3f6bc4f8848e6f16b2ed7149a68c04b7a79a1698d05bc982e7fcae8ff01de51d1" kindref="member">status_pmbus_not_support_cmd</ref><sp/>=<sp/><ref refid="group__common__interface_1gad76dfbb0423d0cd3a7b77cbcd9043146" kindref="member">MAKE_STATUS</ref>(<ref refid="group__common__interface_1ggacad94efac306983cc3f6080053dbb94fac95c84fb767b18908e1432e51c27cd94" kindref="member">status_group_pmbus</ref>,<sp/>1),</highlight></codeline>
+<codeline lineno="91" refid="hpm__pmbus_8h_1a3f6bc4f8848e6f16b2ed7149a68c04b7ac9326e19d51068986dab3f7cdd2c0eeb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__pmbus_8h_1a3f6bc4f8848e6f16b2ed7149a68c04b7ac9326e19d51068986dab3f7cdd2c0eeb" kindref="member">status_pmbus_not_transaction_type</ref><sp/>=<sp/><ref refid="group__common__interface_1gad76dfbb0423d0cd3a7b77cbcd9043146" kindref="member">MAKE_STATUS</ref>(<ref refid="group__common__interface_1ggacad94efac306983cc3f6080053dbb94fac95c84fb767b18908e1432e51c27cd94" kindref="member">status_group_pmbus</ref>,<sp/>2),</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__pmbus_8h_1a72464f1d4b1e56952e8e183aa9847903" kindref="member">hpm_pmbus_isr_handler</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__pmbus_8h_1a8902b3a7d992a8e8a68e316229f3d7d5" kindref="member">hpm_pmbus_slave_init</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>slave_addr);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__pmbus_8h_1a529f7ff8b3280afbe271ea2bbbbd3248" kindref="member">hpm_pmbus_master_read</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>slave_address,<sp/>uint8_t<sp/>command,<sp/>uint8_t<sp/>*data,<sp/>uint32_t<sp/>*len);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__pmbus_8h_1ab47d0a55e344dbd60d5dfb58051aff95" kindref="member">hpm_pmbus_master_write</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>slave_address,<sp/>uint8_t<sp/>command,<sp/>uint8_t<sp/>*data,<sp/>uint32_t<sp/>len);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__pmbus_8h_1a94ff376d35a63808e01c2f9b96d74f8a" kindref="member">hpm_pmbus_slave_command_transaction_install</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>command,<sp/>uint8_t<sp/>*wdata,<sp/>uint8_t<sp/>*rdata,<sp/>uint32_t<sp/>len,<sp/><ref refid="hpm__pmbus_8h_1aae156c33adbdea23fcedfa7bc4c6f3f8" kindref="member">hpm_pmbus_complete_cb_t</ref><sp/>callback);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__pmbus_8h_1a893126cb1465cc5f2d98841704f312ff" kindref="member">hpm_pmbus_slave_command_transaction_uninstall</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>command);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="components/pmbus/hpm_pmbus.h"/>
+  </compounddef>
+</doxygen>

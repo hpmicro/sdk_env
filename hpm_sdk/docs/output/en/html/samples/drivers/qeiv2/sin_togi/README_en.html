@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>53.3. QEIV2 Sin Mode TOGI &mdash; HPMicro Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="53.4. QEIV2 Sin/Cos Encoder" href="../sincos/README_en.html" />
+    <link rel="prev" title="53.2. QEIV2 ABZ Encoder Oneshot Mode" href="../abz_oneshot/README_en.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html">
+            
+              <img src="../../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../get_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../boards/index_en.html">Evaluation Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../components/index_en.html">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_en.html">Samples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index_en.html">Drivers Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../acmp/README_en.html">1. ACMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../adc/index_en.html">2. ADC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bgpr/README_en.html">3. BPGR Retention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../butn/README_en.html">4. BUTN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cam_dvp/README_en.html">5. CAM_DVP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../can/README_en.html">6. CAN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../crc/README_en.html">7. CRC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dac/README_en.html">8. DAC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dma/index_en.html">9. DMA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dmav2/index_en.html">10. DMAV2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../enet/index_en.html">11. ENET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../eui/README_en.html">12. EUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ewdg/README_en.html">13. EWDG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../femc/index_en.html">14. FEMC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ffa/README_en.html">15. FFA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gpio/README_en.html">16. GPIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gpiom/README_en.html">17. GPIOM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gptmr/index_en.html">18. GPTMR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gwc/README_en.html">19. GWC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hall/README_en.html">20. Hall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2c/index_en.html">21. I2C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../i2s/index_en.html">22. I2S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jpeg/README_en.html">23. JPEG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../l1c/README_en.html">24. L1 Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lcdc/README_en.html">25. LCDC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lin/index_en.html">26. LIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../linv2/index_en.html">27. LINV2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lobs/README_en.html">28. LOBS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mbx/index_en.html">29. MBX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mcan/README_en.html">30. MCAN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mchtmr/README_en.html">31. MCHTMR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mipi_csi/README_en.html">32. MIPI_CSI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mmc/index_en.html">33. MMC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mono/README_en.html">34. MONO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mtg/index_en.html">35. MTG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mtgv2/index_en.html">36. MTGV2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opamp/README_en.html">37. OPAMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../owr/README_en.html">38. 1-Wire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pdgo/README_en.html">39. PDGO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pdma/README_en.html">40. PDMA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pla/index_en.html">41. PLA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plb/index_en.html">42. PLB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plic/README_en.html">43. PLIC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pllctl/README_en.html">44. PLLCTL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pllctlv2/README_en.html">45. PLLCTLV2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pmp/README_en.html">46. PMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ppi/index_en.html">47. PPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ppor/README_en.html">48. PPOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ptpc/README_en.html">49. PTPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pwm/index_en.html">50. PWM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pwmv2/index_en.html">51. PWMV2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../qei/README_en.html">52. QEI</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_en.html">53. QEIV2</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../abz/README_en.html">53.1. QEIV2 ABZ Encoder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../abz_oneshot/README_en.html">53.2. QEIV2 ABZ Encoder Oneshot Mode</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">53.3. QEIV2 Sin Mode TOGI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">53.3.1. Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configurations">53.3.2. Configurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-demo">53.3.3. Running the Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sincos/README_en.html">53.4. QEIV2 Sin/Cos Encoder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uvw/README_en.html">53.5. QEIV2 UVW Encoder</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../qeo/index_en.html">54. QEO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../qeov2/index_en.html">55. QEOV2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rdc/README_en.html">56. RDC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rng/README_en.html">57. RNG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rtc/README_en.html">58. RTC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sdm/README_en.html">59. SDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sdxc/index_en.html">60. SDXC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sei/index_en.html">61. SEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../smix/index_en.html">62. SMIX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spi/index_en.html">63. SPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../synt/README_en.html">64. SYNT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tamp/README_en.html">65. TAMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tfa/README_en.html">66. TFA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tsns/README_en.html">67. TSNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tsw/README_en.html">68. TSW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../uart/index_en.html">69. UART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vad/README_en.html">70. VAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../vsc/index_en.html">71. VSC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../wdg/README_en.html">72. WDG</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api_doc.html">SDK API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">HPMicro Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index_en.html">Drivers Examples</a></li>
+          <li class="breadcrumb-item"><a href="../index_en.html"><span class="section-number">53. </span>QEIV2</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">53.3. </span>QEIV2 Sin Mode TOGI</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/samples/drivers/qeiv2/sin_togi/README_en.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qeiv2-sin-mode-togi">
+<span id="id1"></span><h1><span class="section-number">53.3. </span>QEIV2 Sin Mode TOGI<a class="headerlink" href="#qeiv2-sin-mode-togi" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<h2><span class="section-number">53.3.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p><strong>Qeiv2 Sin TOGI Mode</strong>  project demonstrates the configuration of the single Sin mode TOGI function. In single Sin mode, when TOGI is enabled and w_param is set, QEIV2 will calculate another set of orthogonal signals and use the orthogonal sine and cosine signals to calculate the phase position, thereby improving the accuracy of phase position calculation.</p>
+<p>This application can be used for phase calculation during grid connection, such as solar power generation. To integrate the generated electricity into the grid, it is necessary to calculate the phase of the grid, so that the phase of the electricity to be connected to the grid is consistent with the phase of the grid.</p>
+</section>
+<section id="configurations">
+<h2><span class="section-number">53.3.2. </span>Configurations<a class="headerlink" href="#configurations" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Use a signal generator to generate a set of Sin sine waves with a frequency of 50Hz, peak to peak value of 2V, and center offset of 1.65V.</p></li>
+<li><p>Connect sine signal to QEIV2 Sin pin, as detailed in the development board documentation <a class="reference internal" href="../../../../boards/index_en.html#board-resource"><span class="std std-ref">QEIV2 Sin/Cos Pin</span></a> .</p></li>
+</ul>
+</section>
+<section id="running-the-demo">
+<h2><span class="section-number">53.3.3. </span>Running the Demo<a class="headerlink" href="#running-the-demo" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Sin sine and cosine wave injection, simulating single-phase signals in the power grid.</p></li>
+<li><p>After powering on, open the serial port terminal and print 2000 data messages. ADC is the sine waveform, pos and ang are the phases, and 0-360 degrees correspond to 0x0-0xFFFFFFFF.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">adc:0x7b96, pos:0x205aff, ang:0x205b00, z:0x1</span>
+<span class="go">adc:0x7c42, pos:0x91d5ff, ang:0x91d600, z:0x1</span>
+<span class="go">adc:0x7c42, pos:0x91d5ff, ang:0x91d600, z:0x1</span>
+<span class="go">adc:0x7d46, pos:0x1038fff, ang:0x1039000, z:0x1</span>
+<span class="go">adc:0x7d46, pos:0x1038fff, ang:0x1039000, z:0x1</span>
+<span class="go">adc:0x7e14, pos:0x17544ff, ang:0x1754500, z:0x1</span>
+<span class="go">adc:0x7e6c, pos:0x1e677ff, ang:0x1e67800, z:0x1</span>
+<span class="go">adc:0x7e6c, pos:0x1e677ff, ang:0x1e67800, z:0x1</span>
+<span class="go">adc:0x7f43, pos:0x257b1ff, ang:0x257b200, z:0x1</span>
+<span class="go">adc:0x80c1, pos:0x2c9a7ff, ang:0x2c9a800, z:0x1</span>
+<span class="go">adc:0x80c1, pos:0x2c9a7ff, ang:0x2c9a800, z:0x1</span>
+<span class="go">adc:0x8129, pos:0x33b29ff, ang:0x33b2a00, z:0x1</span>
+<span class="go">adc:0x8129, pos:0x33b29ff, ang:0x33b2a00, z:0x1</span>
+<span class="go">adc:0x8273, pos:0x3ad2aff, ang:0x3ad2b00, z:0x1</span>
+<span class="go">adc:0x82c7, pos:0x41ea4ff, ang:0x41ea500, z:0x1</span>
+<span class="go">adc:0x82c7, pos:0x41ea4ff, ang:0x41ea500, z:0x1</span>
+<span class="go">adc:0x8362, pos:0x48fe5ff, ang:0x48fe600, z:0x1</span>
+<span class="go">adc:0x845f, pos:0x50150ff, ang:0x5015100, z:0x1</span>
+<span class="go">adc:0x845f, pos:0x50150ff, ang:0x5015100, z:0x1</span>
+<span class="go">adc:0x8494, pos:0x5721dff, ang:0x5721e00, z:0x1</span>
+<span class="go">adc:0x8494, pos:0x5721dff, ang:0x5721e00, z:0x1</span>
+<span class="go">adc:0x86fa, pos:0x5e475ff, ang:0x5e47600, z:0x1</span>
+<span class="go">adc:0x8690, pos:0x65595ff, ang:0x6559600, z:0x1</span>
+<span class="go">adc:0x8690, pos:0x65595ff, ang:0x6559600, z:0x1</span>
+<span class="go">adc:0x8883, pos:0x6c7c0ff, ang:0x6c7c100, z:0x1</span>
+<span class="go">adc:0x8883, pos:0x6c7c0ff, ang:0x6c7c100, z:0x1</span>
+<span class="go">adc:0x87ba, pos:0x73863ff, ang:0x7386400, z:0x1</span>
+<span class="go">adc:0x89c7, pos:0x7aa29ff, ang:0x7aa2a00, z:0x1</span>
+<span class="go">adc:0x89c7, pos:0x7aa29ff, ang:0x7aa2a00, z:0x1</span>
+<span class="go">adc:0x8a08, pos:0x81b60ff, ang:0x81b6100, z:0x1</span>
+<span class="go">adc:0x8b1c, pos:0x88cceff, ang:0x88ccf00, z:0x1</span>
+<span class="go">adc:0x8b1c, pos:0x88cceff, ang:0x88ccf00, z:0x1</span>
+<span class="go">adc:0x8c30, pos:0x8fe6bff, ang:0x8fe6c00, z:0x1</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>After the above printing is completed, the following information will be printed periodically, which is interrupted when the phase is at 0 degrees.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">position: 0x2c29ff</span>
+<span class="go">ang: 0x2c2a00</span>
+<span class="go">z: 0x1bf</span>
+<span class="go">position: 0x229dff</span>
+<span class="go">ang: 0x229e00</span>
+<span class="go">z: 0x1c0</span>
+<span class="go">position: 0x1c2dff</span>
+<span class="go">ang: 0x1c2e00</span>
+<span class="go">z: 0x1c1</span>
+<span class="go">position: 0xebdff</span>
+<span class="go">ang: 0xebe00</span>
+<span class="go">z: 0x1c2</span>
+<span class="go">position: 0x647ff</span>
+<span class="go">ang: 0x64800</span>
+<span class="go">z: 0x1c3</span>
+<span class="go">position: 0x6c7fff</span>
+<span class="go">ang: 0x6c8000</span>
+<span class="go">z: 0x1c4</span>
+<span class="go">position: 0x63cbff</span>
+<span class="go">ang: 0x63cc00</span>
+<span class="go">z: 0x1c5</span>
+<span class="go">position: 0x5e46ff</span>
+<span class="go">ang: 0x5e4700</span>
+<span class="go">z: 0x1c6</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2025, HPMicro.
+      <span class="lastupdated">Last updated on Mar 31, 2025.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

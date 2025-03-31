@@ -18,11 +18,15 @@ var searchData=
   ['jpeg_5fget_5fstatus_15',['jpeg_get_status',['../group__Jpeg__interface.html#ga3713a8d8aa3311decc3146c4a504d58a',1,'hpm_jpeg_drv.h']]],
   ['jpeg_5finit_16',['jpeg_init',['../group__Jpeg__interface.html#ga31f3752442feb2f832b6f15b78763ed9',1,'jpeg_init(JPEG_Type *ptr):&#160;hpm_jpeg_drv.c'],['../group__Jpeg__interface.html#ga31f3752442feb2f832b6f15b78763ed9',1,'jpeg_init(JPEG_Type *ptr):&#160;hpm_jpeg_drv.c']]],
   ['jpeg_5fis_5fvalid_5fsize_17',['jpeg_is_valid_size',['../hpm__jpeg__drv_8c.html#a1917d11373ffc3c5b4e62d0097135ccb',1,'hpm_jpeg_drv.c']]],
-  ['jpeg_5fneed_5fcsc_18',['jpeg_need_csc',['../hpm__jpeg__drv_8c.html#a2c10e2b395778e1a6c45719221d09db5',1,'hpm_jpeg_drv.c']]],
-  ['jpeg_5freset_19',['jpeg_reset',['../group__Jpeg__interface.html#ga1b68ae13f410f3b2a26fa7924076915b',1,'jpeg_reset(JPEG_Type *ptr):&#160;hpm_jpeg_drv.c'],['../group__Jpeg__interface.html#ga1b68ae13f410f3b2a26fa7924076915b',1,'jpeg_reset(JPEG_Type *ptr):&#160;hpm_jpeg_drv.c']]],
-  ['jpeg_5fsoftware_5freset_20',['jpeg_software_reset',['../group__Jpeg__interface.html#ga0e3585dfc768d43366450befa94dae06',1,'hpm_jpeg_drv.h']]],
-  ['jpeg_5fstart_21',['jpeg_start',['../group__Jpeg__interface.html#ga9d6ca413a2de61ccc14214d1c3506652',1,'hpm_jpeg_drv.h']]],
-  ['jpeg_5fstart_5fdecode_22',['jpeg_start_decode',['../group__Jpeg__interface.html#ga54945116d7d8d0b5c4a408cfdfa3bcbd',1,'jpeg_start_decode(JPEG_Type *ptr, jpeg_job_config_t *config, uint32_t length):&#160;hpm_jpeg_drv.c'],['../group__Jpeg__interface.html#ga54945116d7d8d0b5c4a408cfdfa3bcbd',1,'jpeg_start_decode(JPEG_Type *ptr, jpeg_job_config_t *config, uint32_t length):&#160;hpm_jpeg_drv.c']]],
-  ['jpeg_5fstart_5fencode_23',['jpeg_start_encode',['../group__Jpeg__interface.html#ga50902f03c37747a8c6f13366921b0fba',1,'jpeg_start_encode(JPEG_Type *ptr, jpeg_job_config_t *config):&#160;hpm_jpeg_drv.c'],['../group__Jpeg__interface.html#ga50902f03c37747a8c6f13366921b0fba',1,'jpeg_start_encode(JPEG_Type *ptr, jpeg_job_config_t *config):&#160;hpm_jpeg_drv.c']]],
-  ['jpeg_5fstop_24',['jpeg_stop',['../group__Jpeg__interface.html#gacb7848423a3ef6e04b09667dc6c7ffa3',1,'hpm_jpeg_drv.h']]]
+  ['jpeg_5flist_5fadd_5ftail_18',['jpeg_list_add_tail',['../hpm__jpeg_8c.html#add0fb006d7a62ff3fb1bedf08d7d4d0f',1,'hpm_jpeg.c']]],
+  ['jpeg_5flist_5fdel_19',['jpeg_list_del',['../hpm__jpeg_8c.html#a6ff2f9e8c06aaa86dd2d118f3b3f65ff',1,'hpm_jpeg.c']]],
+  ['jpeg_5flist_5fnode_5fget_20',['jpeg_list_node_get',['../hpm__jpeg_8c.html#a382b709af09267c647207d2f67d9b1aa',1,'hpm_jpeg.c']]],
+  ['jpeg_5flist_5fnode_5finit_21',['jpeg_list_node_init',['../hpm__jpeg_8c.html#a2d2ad3b33af487c242b26d4710213792',1,'hpm_jpeg.c']]],
+  ['jpeg_5fneed_5fcsc_22',['jpeg_need_csc',['../hpm__jpeg__drv_8c.html#a690406539a8ac64e5e07de94a40f67af',1,'hpm_jpeg_drv.c']]],
+  ['jpeg_5freset_23',['jpeg_reset',['../group__Jpeg__interface.html#ga1b68ae13f410f3b2a26fa7924076915b',1,'jpeg_reset(JPEG_Type *ptr):&#160;hpm_jpeg_drv.c'],['../group__Jpeg__interface.html#ga1b68ae13f410f3b2a26fa7924076915b',1,'jpeg_reset(JPEG_Type *ptr):&#160;hpm_jpeg_drv.c']]],
+  ['jpeg_5fsoftware_5freset_24',['jpeg_software_reset',['../group__Jpeg__interface.html#ga0e3585dfc768d43366450befa94dae06',1,'hpm_jpeg_drv.h']]],
+  ['jpeg_5fstart_25',['jpeg_start',['../group__Jpeg__interface.html#ga9d6ca413a2de61ccc14214d1c3506652',1,'hpm_jpeg_drv.h']]],
+  ['jpeg_5fstart_5fdecode_26',['jpeg_start_decode',['../group__Jpeg__interface.html#ga54945116d7d8d0b5c4a408cfdfa3bcbd',1,'jpeg_start_decode(JPEG_Type *ptr, jpeg_job_config_t *config, uint32_t length):&#160;hpm_jpeg_drv.c'],['../group__Jpeg__interface.html#ga54945116d7d8d0b5c4a408cfdfa3bcbd',1,'jpeg_start_decode(JPEG_Type *ptr, jpeg_job_config_t *config, uint32_t length):&#160;hpm_jpeg_drv.c']]],
+  ['jpeg_5fstart_5fencode_27',['jpeg_start_encode',['../group__Jpeg__interface.html#ga50902f03c37747a8c6f13366921b0fba',1,'jpeg_start_encode(JPEG_Type *ptr, jpeg_job_config_t *config):&#160;hpm_jpeg_drv.c'],['../group__Jpeg__interface.html#ga50902f03c37747a8c6f13366921b0fba',1,'jpeg_start_encode(JPEG_Type *ptr, jpeg_job_config_t *config):&#160;hpm_jpeg_drv.c']]],
+  ['jpeg_5fstop_28',['jpeg_stop',['../group__Jpeg__interface.html#gacb7848423a3ef6e04b09667dc6c7ffa3',1,'hpm_jpeg_drv.h']]]
 ];

@@ -7,10 +7,10 @@ var hpm__pllctlv2__drv_8c =
     [ "PLLCTLV2_PLL_MFI_MIN", "hpm__pllctlv2__drv_8c.html#aad8a33daa51aeb9139664567511a8683", null ],
     [ "PLLCTLV2_PLL_MFN_FACTOR", "hpm__pllctlv2__drv_8c.html#a37c620093d7780c70189faa9cd18c8c0", null ],
     [ "PLLCTLV2_PLL_XTAL_FREQ", "hpm__pllctlv2__drv_8c.html#a06a6ddec4b15852eab15b7a4e5dfb563", null ],
-    [ "pllctlv2_enable_spread_spectrum", "group__pllctlv2__interface.html#gab41eb08256054a6b3b4bd7a88e8a7e8d", null ],
-    [ "pllctlv2_get_pll_freq_in_hz", "group__pllctlv2__interface.html#ga5da82012c20e61d57c4eb25d07eec48b", null ],
-    [ "pllctlv2_get_pll_postdiv_freq_in_hz", "group__pllctlv2__interface.html#ga17dbea12fc6c2bccb279beead41018a5", null ],
-    [ "pllctlv2_init_pll_with_freq", "group__pllctlv2__interface.html#gacf2349e8337f2c07b70b4185a4c678f1", null ],
-    [ "pllctlv2_set_pll_with_mfi_mfn", "group__pllctlv2__interface.html#ga90b8e7a170d012739f0269169a6e599d", null ],
-    [ "pllctlv2_set_postdiv", "group__pllctlv2__interface.html#gaff5bb0f3606276e5d4fe2fe52c3cd3d2", null ]
+    [ "pllctlv2_enable_spread_spectrum", "group__pllctlv2__interface.html#ga6bfe4d5a351c21041cb921e30c13ef57", null ],
+    [ "pllctlv2_get_pll_freq_in_hz", "group__pllctlv2__interface.html#ga676efd0fcb8eb7d9661224c6cfbc9d77", null ],
+    [ "pllctlv2_get_pll_postdiv_freq_in_hz", "group__pllctlv2__interface.html#gabacd45b7f6bde940f7f4f255004cd849", null ],
+    [ "pllctlv2_init_pll_with_freq", "group__pllctlv2__interface.html#ga01b2456d392fcf817fac9f1ff51de635", null ],
+    [ "pllctlv2_set_pll_with_mfi_mfn", "group__pllctlv2__interface.html#ga9170ba5927c3aa1a24de09d1ddc2caa6", null ],
+    [ "pllctlv2_set_postdiv", "group__pllctlv2__interface.html#gae20147ca84cbb30290c78cb021485a1f", null ]
 ];

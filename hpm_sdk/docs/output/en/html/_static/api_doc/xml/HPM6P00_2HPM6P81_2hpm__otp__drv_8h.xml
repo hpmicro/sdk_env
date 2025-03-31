@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="HPM6P00_2HPM6P81_2hpm__otp__drv_8h" kind="file" language="C++">
+    <compoundname>hpm_otp_drv.h</compoundname>
+    <includes refid="hpm__common_8h" local="yes">hpm_common.h</includes>
+    <includedby refid="HPM6P00_2HPM6P81_2hpm__otp__drv_8c" local="yes">soc/HPM6P00/HPM6P81/hpm_otp_drv.c</includedby>
+    <includedby refid="HPM6P00_2HPM6P81_2hpm__romapi_8h" local="yes">soc/HPM6P00/HPM6P81/hpm_romapi.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>soc/HPM6P00/HPM6P81/hpm_otp_drv.h</label>
+        <link refid="HPM6P00_2HPM6P81_2hpm__otp__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>soc/HPM6P00/HPM6P81/hpm_otp_drv.c</label>
+        <link refid="HPM6P00_2HPM6P81_2hpm__otp__drv_8c"/>
+      </node>
+      <node id="1">
+        <label>soc/HPM6P00/HPM6P81/hpm_otp_drv.h</label>
+        <link refid="HPM6P00_2HPM6P81_2hpm__otp__drv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>soc/HPM6P00/HPM6P81/hpm_romapi.h</label>
+        <link refid="HPM6P00_2HPM6P81_2hpm__romapi_8h"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="enum">
+      <member refid="group__otp__interface_1ga91f037922a2221da2cf80318ef7f1cab" kind="enum"><name>otp_region_t</name></member>
+      <member refid="group__otp__interface_1gac83f4aa4e08e84001044bef8b5de1a13" kind="enum"><name>otp_lock_option_t</name></member>
+      <member refid="group__otp__interface_1ga1d64d4a07b3b039a96894b5627cffedc" kind="enum"><name></name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__otp__interface_1ga87fbd0acc30a134aa9cc40dacef95969" kind="function"><name>otp_init</name></member>
+      <member refid="group__otp__interface_1ga76d02255e49c9ee217ed10210b41b45f" kind="function"><name>otp_deinit</name></member>
+      <member refid="group__otp__interface_1gaf064e1753e6fcbf4de9266bf0e448f54" kind="function"><name>otp_read_from_shadow</name></member>
+      <member refid="group__otp__interface_1ga128f5830f773e62e5356e47fb7910805" kind="function"><name>otp_read_from_ip</name></member>
+      <member refid="group__otp__interface_1ga2546063d6d3596be6340bed0ec6fd86d" kind="function"><name>otp_program</name></member>
+      <member refid="group__otp__interface_1gac3af4dd92b9a3cab42a462396da91aba" kind="function"><name>otp_reload</name></member>
+      <member refid="group__otp__interface_1gacffdd0e0855669b9a4d029a12d0904ab" kind="function"><name>otp_lock_otp</name></member>
+      <member refid="group__otp__interface_1ga14ece2f012550646c8b2f6cb18fa2527" kind="function"><name>otp_lock_shadow</name></member>
+      <member refid="group__otp__interface_1ga62ed549f0ef1fd234b76bea2da32050f" kind="function"><name>otp_set_configurable_region</name></member>
+      <member refid="group__otp__interface_1ga849cc5c0fd491377c1b35eb7ec22ec49" kind="function"><name>otp_write_shadow_register</name></member>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2021<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPM_OTP_DRV_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_OTP_DRV_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__common_8h" kindref="compound">hpm_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">/***********************************************************************************************************************</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>Definitions</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>**********************************************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="group__otp__interface_1ga91f037922a2221da2cf80318ef7f1cab" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="25" refid="group__otp__interface_1gga91f037922a2221da2cf80318ef7f1caba6b764179e42cba7177fcc4944a3a5718" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__otp__interface_1gga91f037922a2221da2cf80318ef7f1caba6b764179e42cba7177fcc4944a3a5718" kindref="member">otp_region0_mask</ref><sp/>=<sp/>1U,<sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="group__otp__interface_1gga91f037922a2221da2cf80318ef7f1caba857f381b8b4f4f085411942e9d22d729" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__otp__interface_1gga91f037922a2221da2cf80318ef7f1caba857f381b8b4f4f085411942e9d22d729" kindref="member">otp_region1_mask</ref><sp/>=<sp/>2U,<sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="group__otp__interface_1gga91f037922a2221da2cf80318ef7f1cababaa4ce2a38cf371656f50539b4c4efaa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__otp__interface_1gga91f037922a2221da2cf80318ef7f1cababaa4ce2a38cf371656f50539b4c4efaa" kindref="member">otp_region2_mask</ref><sp/>=<sp/>4U,<sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="group__otp__interface_1gga91f037922a2221da2cf80318ef7f1caba51c4abc4d4f7f31064661ab7e4e47986" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__otp__interface_1gga91f037922a2221da2cf80318ef7f1caba51c4abc4d4f7f31064661ab7e4e47986" kindref="member">otp_region3_mask</ref><sp/>=<sp/>8U,<sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}<sp/><ref refid="group__otp__interface_1ga91f037922a2221da2cf80318ef7f1cab" kindref="member">otp_region_t</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="group__otp__interface_1gac83f4aa4e08e84001044bef8b5de1a13" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="group__otp__interface_1ggac83f4aa4e08e84001044bef8b5de1a13a0c2fed07674d60af1747d3366d920c25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__otp__interface_1ggac83f4aa4e08e84001044bef8b5de1a13a0c2fed07674d60af1747d3366d920c25" kindref="member">otp_no_lock</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="36" refid="group__otp__interface_1ggac83f4aa4e08e84001044bef8b5de1a13ab89fcf33d8b0bf2f2184f031ee9634de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__otp__interface_1ggac83f4aa4e08e84001044bef8b5de1a13ab89fcf33d8b0bf2f2184f031ee9634de" kindref="member">otp_read_only</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="37" refid="group__otp__interface_1ggac83f4aa4e08e84001044bef8b5de1a13a9b437aca3df46a8fa01d0f40e56933e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__otp__interface_1ggac83f4aa4e08e84001044bef8b5de1a13a9b437aca3df46a8fa01d0f40e56933e2" kindref="member">otp_permanent_no_lock</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="38" refid="group__otp__interface_1ggac83f4aa4e08e84001044bef8b5de1a13aa242f70ac53023ae86ee90c79a343788" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__otp__interface_1ggac83f4aa4e08e84001044bef8b5de1a13aa242f70ac53023ae86ee90c79a343788" kindref="member">otp_disable_access</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="39" refid="group__otp__interface_1ggac83f4aa4e08e84001044bef8b5de1a13ac93e8eef4128c3c37d943b258d3ea94b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__otp__interface_1ggac83f4aa4e08e84001044bef8b5de1a13ac93e8eef4128c3c37d943b258d3ea94b" kindref="member">otp_lock_option_max</ref><sp/>=<sp/><ref refid="group__otp__interface_1ggac83f4aa4e08e84001044bef8b5de1a13aa242f70ac53023ae86ee90c79a343788" kindref="member">otp_disable_access</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}<sp/><ref refid="group__otp__interface_1gac83f4aa4e08e84001044bef8b5de1a13" kindref="member">otp_lock_option_t</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="43" refid="group__otp__interface_1gga1d64d4a07b3b039a96894b5627cffedcac35edaf7167583a2dece7fead6a8d4b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__otp__interface_1ggae6169455b9e4956f9b2213f4e61afc16ac35edaf7167583a2dece7fead6a8d4b4" kindref="member">otp_write_disallowed</ref><sp/>=<sp/><ref refid="group__common__interface_1gad76dfbb0423d0cd3a7b77cbcd9043146" kindref="member">MAKE_STATUS</ref>(<ref refid="group__common__interface_1ggacad94efac306983cc3f6080053dbb94fa852b00513609faab56caa1a16a37a432" kindref="member">status_group_otp</ref>,<sp/>0),</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/***********************************************************************************************************************</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>Prototypes</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>**********************************************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cpluscplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__otp__interface_1ga87fbd0acc30a134aa9cc40dacef95969" kindref="member">otp_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__otp__interface_1ga76d02255e49c9ee217ed10210b41b45f" kindref="member">otp_deinit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">uint32_t<sp/><ref refid="group__otp__interface_1gaf064e1753e6fcbf4de9266bf0e448f54" kindref="member">otp_read_from_shadow</ref>(uint32_t<sp/>addr);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">uint32_t<sp/><ref refid="group__otp__interface_1ga128f5830f773e62e5356e47fb7910805" kindref="member">otp_read_from_ip</ref>(uint32_t<sp/>addr);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__otp__interface_1ga2546063d6d3596be6340bed0ec6fd86d" kindref="member">otp_program</ref>(uint32_t<sp/>addr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>*src,<sp/>uint32_t<sp/>num_of_words);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__otp__interface_1gac3af4dd92b9a3cab42a462396da91aba" kindref="member">otp_reload</ref>(<ref refid="group__otp__interface_1ga91f037922a2221da2cf80318ef7f1cab" kindref="member">otp_region_t</ref><sp/>region);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__otp__interface_1gacffdd0e0855669b9a4d029a12d0904ab" kindref="member">otp_lock_otp</ref>(uint32_t<sp/>addr,<sp/><ref refid="group__otp__interface_1gac83f4aa4e08e84001044bef8b5de1a13" kindref="member">otp_lock_option_t</ref><sp/>lock_option);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__otp__interface_1ga14ece2f012550646c8b2f6cb18fa2527" kindref="member">otp_lock_shadow</ref>(uint32_t<sp/>addr,<sp/><ref refid="group__otp__interface_1gac83f4aa4e08e84001044bef8b5de1a13" kindref="member">otp_lock_option_t</ref><sp/>lock_option);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__otp__interface_1ga62ed549f0ef1fd234b76bea2da32050f" kindref="member">otp_set_configurable_region</ref>(uint32_t<sp/>start,<sp/>uint32_t<sp/>num_of_words);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="group__otp__interface_1ga849cc5c0fd491377c1b35eb7ec22ec49" kindref="member">otp_write_shadow_register</ref>(uint32_t<sp/>addr,<sp/>uint32_t<sp/>val);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cpluscplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="soc/HPM6P00/HPM6P81/hpm_otp_drv.h"/>
+  </compounddef>
+</doxygen>

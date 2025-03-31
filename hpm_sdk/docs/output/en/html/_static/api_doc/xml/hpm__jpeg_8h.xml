@@ -1,0 +1,1508 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="hpm__jpeg_8h" kind="file" language="C++">
+    <compoundname>hpm_jpeg.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includedby refid="hpm__jpeg_8c" local="yes">components/jpeg/hpm_jpeg.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>components/jpeg/hpm_jpeg.h</label>
+        <link refid="hpm__jpeg_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>components/jpeg/hpm_jpeg.c</label>
+        <link refid="hpm__jpeg_8c"/>
+      </node>
+      <node id="1">
+        <label>components/jpeg/hpm_jpeg.h</label>
+        <link refid="hpm__jpeg_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structhpm__jpeg__image" prot="public">hpm_jpeg_image</innerclass>
+    <innerclass refid="structhpm__jpeg__jpeg__file" prot="public">hpm_jpeg_jpeg_file</innerclass>
+    <innerclass refid="structhpm__jpeg__decode__info" prot="public">hpm_jpeg_decode_info</innerclass>
+    <innerclass refid="structhpm__jpeg__encode__info" prot="public">hpm_jpeg_encode_info</innerclass>
+    <innerclass refid="structhpm__jpeg__decode__cfg" prot="public">hpm_jpeg_decode_cfg</innerclass>
+    <innerclass refid="structhpm__jpeg__encode__cfg" prot="public">hpm_jpeg_encode_cfg</innerclass>
+    <innerclass refid="structhpm__jpeg__cfg" prot="public">hpm_jpeg_cfg</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="hpm__jpeg_8h_1acdeb22e8ed263fa1906191424d0ead88" prot="public" static="no">
+        <name>HPM_JPEG_LOG_LEVEL</name>
+        <initializer><ref refid="hpm__jpeg_8h_1a7ce5ba69c80abd386284e62dcc11df19" kindref="member">HPM_JPEG_LOG_LEVEL_WARN</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="15" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1aae0100db5b1cc48df5bb49be0092e0f6" prot="public" static="no">
+        <name>HPM_JPEG_LOG_LEVEL_DEBUG</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="18" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1aa6b2f932a79a2075a989c8df8c6fdd32" prot="public" static="no">
+        <name>HPM_JPEG_LOG_LEVEL_INFO</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="19" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1a7ce5ba69c80abd386284e62dcc11df19" prot="public" static="no">
+        <name>HPM_JPEG_LOG_LEVEL_WARN</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="20" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1a23f017e320a87cc099d5b9348e30fcf9" prot="public" static="no">
+        <name>HPM_JPEG_LOG_LEVEL_ERR</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="21" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1a344b5499a4a1cade5359b289cd12acc0" prot="public" static="no">
+        <name>HPM_JPEG_PRINTF</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>printf(fmt, ##__VA_ARGS__);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="23" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1a6d580485b404deb1054453fdefd9968a" prot="public" static="no">
+        <name>HPM_JPEG_DLOG</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="31" column="10" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1aa5ae7a0829f38aec5900d4e0ec9e8bc5" prot="public" static="no">
+        <name>HPM_JPEG_ILOG</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="40" column="10" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1a724c2823275d5af43ac2260490fbafab" prot="public" static="no">
+        <name>HPM_JPEG_WLOG</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>    ({\
+    printf(&quot;HPM_JPEG: [W: %s:%u]: &quot;, __func__, __LINE__);\
+    printf(fmt, ##__VA_ARGS__);\
+})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="44" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1af0d54eba1e94679e9c585024d4af8596" prot="public" static="no">
+        <name>HPM_JPEG_ELOG</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>    ({\
+    printf(&quot;HPM_JPEG: [E: %s:%u]: &quot;, __func__, __LINE__);\
+    printf(fmt, ##__VA_ARGS__);\
+})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="53" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1acc752e90236b12f83fabb7e062f5c5c4" prot="public" static="no">
+        <name>HPM_JPEG_RET_OK</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="61" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1a8066c3ea75a283792dc555f2abe0e55d" prot="public" static="no">
+        <name>HPM_JPEG_RET_MALLOC_ERR</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="62" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1a292655e9c7b7d4a5bf97aed3e1310521" prot="public" static="no">
+        <name>HPM_JPEG_RET_PARA_ERR</name>
+        <initializer>-2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="63" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1a9916b204d20b8601b74db4f78ac8179e" prot="public" static="no">
+        <name>HPM_JPEG_RET_JPEG_FILE_ERROR</name>
+        <initializer>-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="64" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1afe5e4c8bd3907b66dbd28c0c53f59ccc" prot="public" static="no">
+        <name>HPM_JPEG_RET_STATUS_ERR</name>
+        <initializer>-4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="65" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpm__jpeg_8h_1a119a8ac5ed606c11a58115e54582a9f2" prot="public" static="no">
+        <name>HPM_JPEG_RET_MARKER_ERR</name>
+        <initializer>-5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="66" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeae" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hpm_jpeg_sampling_format</name>
+        <enumvalue id="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaea71cd4ed2b6a30976dc94bf849762dfe5" prot="public">
+          <name>HPM_JPEG_SAMPLING_FORMAT_420</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>hy=2, vy=2, hc=1, vc=1 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaeaf4c3d1779b4044b80aad48658906a321" prot="public">
+          <name>HPM_JPEG_SAMPLING_FORMAT_422H</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>hy=2, vy=1, hc=1, vc=1 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaea010728d72728307221c3ea8203434b8a" prot="public">
+          <name>HPM_JPEG_SAMPLING_FORMAT_422V</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>hy=1, vy=2, hc=1, vc=1 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaeac7a0b7d48d2e894b7c3cf30c8753f7ad" prot="public">
+          <name>HPM_JPEG_SAMPLING_FORMAT_444</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>hy=1, vy=1, hc=1, vc=1 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaea0006d402d119d53e0c3127fc2926138a" prot="public">
+          <name>HPM_JPEG_SAMPLING_FORMAT_400</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>hy=2, vy=2, hc=0, vc=0 </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="70" column="1" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="70" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="enum" id="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hpm_jpeg_image_format</name>
+        <enumvalue id="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713a163fa55a52bc03ac0319cb193ba5f260" prot="public">
+          <name>HPM_JPEG_IMAGE_FORMAT_RGB565</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>memory layout: byte0, byte1, byte2... memory: [G2:0,B4:0], [R4:0,G5:3], [G2:0,B4:0], [R4:0,G5:3], ... </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713a78848c5019cbbb719d234efa0523f091" prot="public">
+          <name>HPM_JPEG_IMAGE_FORMAT_ARGB8888</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>memory: B, G, R, A, B, G, ... </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713a02d11c00a430b0745d5ef1b3f02b9f9b" prot="public">
+          <name>HPM_JPEG_IMAGE_FORMAT_BGRA8888</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>memory: A, R, G, B, A, R, ... </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713a5c744012b319aebc32c60dc6d47f170a" prot="public">
+          <name>HPM_JPEG_IMAGE_FORMAT_YUYV422</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>memory: Y0, U0, Y1, V1, ... </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713af25ed5557a3ca0f7ea08dbc20c640b5c" prot="public">
+          <name>HPM_JPEG_IMAGE_FORMAT_UYVY422</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>memory: U0, Y0, V1, Y1, ... </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713ad10d2a7fe497190bf0270d39f14e6680" prot="public">
+          <name>HPM_JPEG_IMAGE_FORMAT_Y8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>memory: Y0, Y1, Y2, Y3, ... </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="78" column="1" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="78" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="enum" id="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hpm_jpeg_job_status</name>
+        <enumvalue id="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a4e2366056c5dded05dab6b750fa059de" prot="public">
+          <name>HPM_JPEG_JOB_STATUS_ALLOCED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a5ee84484b993b1a1380ddef461f6475c" prot="public">
+          <name>HPM_JPEG_JOB_STATUS_FILLING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a160151db0e97dc9b28f5b2655a74d7b2" prot="public">
+          <name>HPM_JPEG_JOB_STATUS_FILL_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96afa0d494f5279e48cffacedadf6ab1070" prot="public">
+          <name>HPM_JPEG_JOB_STATUS_FILLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a9c05bea7791a6027f42a6edf0c4d4750" prot="public">
+          <name>HPM_JPEG_JOB_STATUS_STARTING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a96abbe62998f8094c6f4ffcfc48c313b" prot="public">
+          <name>HPM_JPEG_JOB_STATUS_START_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96aff19103fe07cd43a9245b2a30c9244d6" prot="public">
+          <name>HPM_JPEG_JOB_STATUS_WAITING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a7515fe7bd5eaf08496f84082ef28b402" prot="public">
+          <name>HPM_JPEG_JOB_STATUS_PROCESSING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a1e52f4622a09f254a1a3b8f48479c11b" prot="public">
+          <name>HPM_JPEG_JOB_STATUS_FINISHED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a491d1ab0c652a83d4064ab6ae9a3194a" prot="public">
+          <name>HPM_JPEG_JOB_STATUS_STOPPED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96adb98e66be1c55bc235f28d133b847dd4" prot="public">
+          <name>HPM_JPEG_JOB_STATUS_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="100" column="1" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="100" bodyend="112"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" prot="public" static="no">
+        <type>void</type>
+        <definition>typedef void hpm_jpeg_job_t</definition>
+        <argsstring></argsstring>
+        <name>hpm_jpeg_job_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="68" column="14" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpm__jpeg_8h_1a257e235cec55cb830a609158684439fb" prot="public" static="no">
+        <type>enum <ref refid="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeae" kindref="member">hpm_jpeg_sampling_format</ref></type>
+        <definition>typedef enum hpm_jpeg_sampling_format hpm_jpeg_sampling_format_t</definition>
+        <argsstring></argsstring>
+        <name>hpm_jpeg_sampling_format_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="76" column="28"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpm__jpeg_8h_1a1a37698ef48fb9339bc31c69cbc2d42a" prot="public" static="no">
+        <type>enum <ref refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713" kindref="member">hpm_jpeg_image_format</ref></type>
+        <definition>typedef enum hpm_jpeg_image_format hpm_jpeg_image_format_t</definition>
+        <argsstring></argsstring>
+        <name>hpm_jpeg_image_format_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="85" column="25"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpm__jpeg_8h_1a2c423a17f7edaa994c5607831a132c71" prot="public" static="no">
+        <type>struct <ref refid="structhpm__jpeg__image" kindref="compound">hpm_jpeg_image</ref></type>
+        <definition>typedef struct hpm_jpeg_image hpm_jpeg_image_t</definition>
+        <argsstring></argsstring>
+        <name>hpm_jpeg_image_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="93" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpm__jpeg_8h_1a497c1f9287dbaca17b7f13e7891a15d3" prot="public" static="no">
+        <type>struct <ref refid="structhpm__jpeg__jpeg__file" kindref="compound">hpm_jpeg_jpeg_file</ref></type>
+        <definition>typedef struct hpm_jpeg_jpeg_file hpm_jpeg_file_t</definition>
+        <argsstring></argsstring>
+        <name>hpm_jpeg_file_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="98" column="17"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpm__jpeg_8h_1a9d81a5a240795d816801b5213f605993" prot="public" static="no">
+        <type>enum <ref refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96" kindref="member">hpm_jpeg_job_status</ref></type>
+        <definition>typedef enum hpm_jpeg_job_status hpm_jpeg_job_status_t</definition>
+        <argsstring></argsstring>
+        <name>hpm_jpeg_job_status_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="112" column="23"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpm__jpeg_8h_1a32e4c27f3a3d9d48fae1f1cc6164feaf" prot="public" static="no">
+        <type>struct <ref refid="structhpm__jpeg__decode__info" kindref="compound">hpm_jpeg_decode_info</ref></type>
+        <definition>typedef struct hpm_jpeg_decode_info hpm_jpeg_decode_info_t</definition>
+        <argsstring></argsstring>
+        <name>hpm_jpeg_decode_info_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="118" column="24"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpm__jpeg_8h_1a03e1820e1c496e5c0225b46d79234626" prot="public" static="no">
+        <type>struct <ref refid="structhpm__jpeg__encode__info" kindref="compound">hpm_jpeg_encode_info</ref></type>
+        <definition>typedef struct hpm_jpeg_encode_info hpm_jpeg_encode_info_t</definition>
+        <argsstring></argsstring>
+        <name>hpm_jpeg_encode_info_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="124" column="24"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpm__jpeg_8h_1afe8913c260b533f03381b9200c43b6d9" prot="public" static="no">
+        <type>struct <ref refid="structhpm__jpeg__decode__cfg" kindref="compound">hpm_jpeg_decode_cfg</ref></type>
+        <definition>typedef struct hpm_jpeg_decode_cfg hpm_jpeg_decode_cfg_t</definition>
+        <argsstring></argsstring>
+        <name>hpm_jpeg_decode_cfg_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="129" column="23"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpm__jpeg_8h_1a90ee0d815ef841173b0c2fc99eebfa0a" prot="public" static="no">
+        <type>struct <ref refid="structhpm__jpeg__encode__cfg" kindref="compound">hpm_jpeg_encode_cfg</ref></type>
+        <definition>typedef struct hpm_jpeg_encode_cfg hpm_jpeg_encode_cfg_t</definition>
+        <argsstring></argsstring>
+        <name>hpm_jpeg_encode_cfg_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="134" column="23"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpm__jpeg_8h_1a449bfc8615bb44afab138bc380043301" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* hpm_jpeg_job_state_cb_t) (hpm_jpeg_job_t *job)</definition>
+        <argsstring>)(hpm_jpeg_job_t *job)</argsstring>
+        <name>hpm_jpeg_job_state_cb_t</name>
+        <briefdescription>
+<para>Job&apos;t state info notice callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hpm_jpeg job pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Note: The function is called in isr, long-time or complex operation are not recommend. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="143" column="9" bodyfile="components/jpeg/hpm_jpeg.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpm__jpeg_8h_1aacd9859eebabd0a5e5a99d2cee178a65" prot="public" static="no">
+        <type>struct <ref refid="structhpm__jpeg__cfg" kindref="compound">hpm_jpeg_cfg</ref></type>
+        <definition>typedef struct hpm_jpeg_cfg hpm_jpeg_cfg_t</definition>
+        <argsstring></argsstring>
+        <name>hpm_jpeg_cfg_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="152" column="16"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="hpm__jpeg_8h_1a670206a8b793bbaf206e2d920d12de20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_jpeg_init</definition>
+        <argsstring>(hpm_jpeg_cfg_t *cfg)</argsstring>
+        <name>hpm_jpeg_init</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1aacd9859eebabd0a5e5a99d2cee178a65" kindref="member">hpm_jpeg_cfg_t</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+<para>Initializte hpm_jpeg component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hpm_jpeg configuration pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>failed code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="162" column="5" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="2302" bodyend="2323" declfile="components/jpeg/hpm_jpeg.h" declline="162" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a81ef76ccbb2bf1c746d5802143c4bede" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_jpeg_deinit</definition>
+        <argsstring>(void)</argsstring>
+        <name>hpm_jpeg_deinit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Deinitializte hpm_jpeg component and free source. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>failed code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="169" column="5" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="2325" bodyend="2375" declfile="components/jpeg/hpm_jpeg.h" declline="169" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a3567cdecfe96c2e53d6666053b56e497" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_jpeg_isr</definition>
+        <argsstring>(void)</argsstring>
+        <name>hpm_jpeg_isr</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>jpeg ip interrupt service routine </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="175" column="6" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="2377" bodyend="2411" declfile="components/jpeg/hpm_jpeg.h" declline="175" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a0843845165be9c19f1f32adc18d9b361" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+        <definition>hpm_jpeg_job_t * hpm_jpeg_decode_job_alloc</definition>
+        <argsstring>(hpm_jpeg_decode_cfg_t *cfg)</argsstring>
+        <name>hpm_jpeg_decode_job_alloc</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1afe8913c260b533f03381b9200c43b6d9" kindref="member">hpm_jpeg_decode_cfg_t</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+<para>Alloc a decode job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>job configuration pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>decode job pointer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="185" column="16" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="1685" bodyend="1706" declfile="components/jpeg/hpm_jpeg.h" declline="185" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1afc042d61b8b7c53f4aaae00ece47fcfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_jpeg_decode_job_fill_file</definition>
+        <argsstring>(hpm_jpeg_job_t *job, const hpm_jpeg_file_t *file, int direct)</argsstring>
+        <name>hpm_jpeg_decode_job_fill_file</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+          <declname>job</declname>
+        </param>
+        <param>
+          <type>const <ref refid="hpm__jpeg_8h_1a497c1f9287dbaca17b7f13e7891a15d3" kindref="member">hpm_jpeg_file_t</ref> *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>direct</declname>
+        </param>
+        <briefdescription>
+<para>Fill jpeg file to job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>decode job pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>jpeg file data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">direct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1: The buffer of file will be used by decoder. 0: Firstly, the buffer of file is copied to internal buffer and the internal buffer will be used.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>failed code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="199" column="5" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="1708" bodyend="1779" declfile="components/jpeg/hpm_jpeg.h" declline="199" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a1486d7b943ceb3c30d8f6708bc12a8aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_jpeg_decode_job_force_direct_image_buf</definition>
+        <argsstring>(hpm_jpeg_job_t *job, void *buf, uint32_t len)</argsstring>
+        <name>hpm_jpeg_decode_job_force_direct_image_buf</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+          <declname>job</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Set a buffer that is used by decoder out image to job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>decode job pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Receive decode image data. the buf will be used decoder, so nocacheable buffer is recommend. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buf length</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>failed code</para>
+</simplesect>
+Note: Internal buffer will be used if the buf have not been set. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="212" column="5" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="1781" bodyend="1800" declfile="components/jpeg/hpm_jpeg.h" declline="212" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a73b80d4eaa4b6ecd80f5b89fb2bfb095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_jpeg_decode_job_start</definition>
+        <argsstring>(hpm_jpeg_job_t *job, hpm_jpeg_job_state_cb_t cb)</argsstring>
+        <name>hpm_jpeg_decode_job_start</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+          <declname>job</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1a449bfc8615bb44afab138bc380043301" kindref="member">hpm_jpeg_job_state_cb_t</ref></type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Start decode of the job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>decode job pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>job state notice callback</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>failed code</para>
+</simplesect>
+Note: The cb is called in isr, long-time or complex operation are not recommend. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="224" column="5" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="1802" bodyend="1897" declfile="components/jpeg/hpm_jpeg.h" declline="224" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a8ea786b9f9dce82fd6bbba7e997ba1b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_jpeg_decode_job_stop</definition>
+        <argsstring>(hpm_jpeg_job_t *job)</argsstring>
+        <name>hpm_jpeg_decode_job_stop</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+          <declname>job</declname>
+        </param>
+        <briefdescription>
+<para>Stop decode of the job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>decode job pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>failed code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="234" column="5" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="1899" bodyend="1915" declfile="components/jpeg/hpm_jpeg.h" declline="234" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a35b1610d4c623e8e579c196507a1007f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_jpeg_decode_job_get_info</definition>
+        <argsstring>(hpm_jpeg_job_t *job, hpm_jpeg_decode_info_t *info)</argsstring>
+        <name>hpm_jpeg_decode_job_get_info</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+          <declname>job</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1a32e4c27f3a3d9d48fae1f1cc6164feaf" kindref="member">hpm_jpeg_decode_info_t</ref> *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+<para>Get job work info. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>decode job pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>job work info pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>failed code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="245" column="5" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="1917" bodyend="1927" declfile="components/jpeg/hpm_jpeg.h" declline="245" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a6fea9f315e8e7678030e4adf1fcb8327" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_jpeg_decode_job_free</definition>
+        <argsstring>(hpm_jpeg_job_t *job)</argsstring>
+        <name>hpm_jpeg_decode_job_free</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+          <declname>job</declname>
+        </param>
+        <briefdescription>
+<para>Free decode job. All source of job will be free. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>decode job pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>failed code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="255" column="5" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="1929" bodyend="1946" declfile="components/jpeg/hpm_jpeg.h" declline="255" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a1a7bcd85acb1b80910add26e789dba94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+        <definition>hpm_jpeg_job_t * hpm_jpeg_encode_job_alloc</definition>
+        <argsstring>(hpm_jpeg_encode_cfg_t *cfg)</argsstring>
+        <name>hpm_jpeg_encode_job_alloc</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1a90ee0d815ef841173b0c2fc99eebfa0a" kindref="member">hpm_jpeg_encode_cfg_t</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+<para>Alloc a encode job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>job configuration pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>encode job pointer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="265" column="16" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="1948" bodyend="1971" declfile="components/jpeg/hpm_jpeg.h" declline="265" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a5d25f2af1f8b1a1b093e65439e5e1f15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_jpeg_encode_job_fill_image</definition>
+        <argsstring>(hpm_jpeg_job_t *job, const hpm_jpeg_image_t *image, int direct)</argsstring>
+        <name>hpm_jpeg_encode_job_fill_image</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+          <declname>job</declname>
+        </param>
+        <param>
+          <type>const <ref refid="hpm__jpeg_8h_1a2c423a17f7edaa994c5607831a132c71" kindref="member">hpm_jpeg_image_t</ref> *</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>direct</declname>
+        </param>
+        <briefdescription>
+<para>Fill image data to job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>encode job pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>image data for waiting encode </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">direct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1: The buffer of file will be used by encoder. 0: Firstly, the buffer of image is copied to internal buffer and the internal buffer will be used.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>failed code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="279" column="5" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="1973" bodyend="2114" declfile="components/jpeg/hpm_jpeg.h" declline="279" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a45d596f854c520ea5c5122d7b9e05b79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_jpeg_encode_job_force_direct_file_buf</definition>
+        <argsstring>(hpm_jpeg_job_t *job, void *buf, uint32_t len)</argsstring>
+        <name>hpm_jpeg_encode_job_force_direct_file_buf</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+          <declname>job</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Set a buffer that is used by encoder out jpeg file to job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>encode job pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Receive encode jpeg file data. the buf will be used encoder, so nocacheable buffer is recommend. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buf length</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>failed code</para>
+</simplesect>
+Note: Internal buffer will be used if the buf have not been set. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="292" column="5" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="2116" bodyend="2135" declfile="components/jpeg/hpm_jpeg.h" declline="292" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1aadef0d233f1d42a7298a4609fca228ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_jpeg_encode_job_start</definition>
+        <argsstring>(hpm_jpeg_job_t *job, hpm_jpeg_job_state_cb_t cb)</argsstring>
+        <name>hpm_jpeg_encode_job_start</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+          <declname>job</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1a449bfc8615bb44afab138bc380043301" kindref="member">hpm_jpeg_job_state_cb_t</ref></type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Start encode of the job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>encode job pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>job state notice callback</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>failed code</para>
+</simplesect>
+Note: The cb is called in isr, long-time or complex operation are not recommend. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="304" column="5" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="2137" bodyend="2237" declfile="components/jpeg/hpm_jpeg.h" declline="304" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a093ed42cff59fd57affebca830f17bb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_jpeg_encode_job_stop</definition>
+        <argsstring>(hpm_jpeg_job_t *job)</argsstring>
+        <name>hpm_jpeg_encode_job_stop</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+          <declname>job</declname>
+        </param>
+        <briefdescription>
+<para>Stop encode of the job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>encode job pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>failed code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="314" column="5" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="2239" bodyend="2255" declfile="components/jpeg/hpm_jpeg.h" declline="314" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a6b72cc7ac158fdd2d60f5ec85e98b680" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_jpeg_encode_job_get_info</definition>
+        <argsstring>(hpm_jpeg_job_t *job, hpm_jpeg_encode_info_t *info)</argsstring>
+        <name>hpm_jpeg_encode_job_get_info</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+          <declname>job</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1a03e1820e1c496e5c0225b46d79234626" kindref="member">hpm_jpeg_encode_info_t</ref> *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+<para>Get job work info. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>encode job pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>job work info pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>failed code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="325" column="5" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="2257" bodyend="2267" declfile="components/jpeg/hpm_jpeg.h" declline="325" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a2596dfd49a4756fd1826365972a92484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpm_jpeg_encode_job_free</definition>
+        <argsstring>(hpm_jpeg_job_t *job)</argsstring>
+        <name>hpm_jpeg_encode_job_free</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+          <declname>job</declname>
+        </param>
+        <briefdescription>
+<para>Free encode job. All source of job will be free. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>encode job pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>failed code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="335" column="5" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="2269" bodyend="2286" declfile="components/jpeg/hpm_jpeg.h" declline="335" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1a354c8c610e024196c78a52cb290bee9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpm_jpeg_job_set_user_data</definition>
+        <argsstring>(hpm_jpeg_job_t *job, void *user_data)</argsstring>
+        <name>hpm_jpeg_job_set_user_data</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+          <declname>job</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>user_data</declname>
+        </param>
+        <briefdescription>
+<para>Set user data to job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>job pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">user_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>user data pointer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="344" column="6" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="2288" bodyend="2293" declfile="components/jpeg/hpm_jpeg.h" declline="344" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__jpeg_8h_1ae3b489225acf45c1e0459bc6086557fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * hpm_jpeg_job_get_user_data</definition>
+        <argsstring>(hpm_jpeg_job_t *job)</argsstring>
+        <name>hpm_jpeg_job_get_user_data</name>
+        <param>
+          <type><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref> *</type>
+          <declname>job</declname>
+        </param>
+        <briefdescription>
+<para>Get user data to job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>job pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>user data pointer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/jpeg/hpm_jpeg.h" line="354" column="6" bodyfile="components/jpeg/hpm_jpeg.c" bodystart="2295" bodyend="2300" declfile="components/jpeg/hpm_jpeg.h" declline="354" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2024<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__HPM_JPEG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HPM_JPEG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPM_JPEG_LOG_LEVEL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="hpm__jpeg_8h_1acdeb22e8ed263fa1906191424d0ead88" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_LOG_LEVEL<sp/>HPM_JPEG_LOG_LEVEL_WARN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="hpm__jpeg_8h_1aae0100db5b1cc48df5bb49be0092e0f6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_LOG_LEVEL_DEBUG<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="hpm__jpeg_8h_1aa6b2f932a79a2075a989c8df8c6fdd32" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_LOG_LEVEL_INFO<sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="hpm__jpeg_8h_1a7ce5ba69c80abd386284e62dcc11df19" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_LOG_LEVEL_WARN<sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="hpm__jpeg_8h_1a23f017e320a87cc099d5b9348e30fcf9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_LOG_LEVEL_ERR<sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="hpm__jpeg_8h_1a344b5499a4a1cade5359b289cd12acc0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_PRINTF(fmt,<sp/>...)<sp/>printf(fmt,<sp/>##__VA_ARGS__);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HPM_JPEG_LOG_LEVEL<sp/>&gt;=<sp/>HPM_JPEG_LOG_LEVEL_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_DLOG(fmt,<sp/>...)<sp/>({\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(&quot;HPM_JPEG:<sp/>[D:<sp/>%s:%u]:<sp/>&quot;,<sp/>__func__,<sp/>__LINE__);\</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(fmt,<sp/>##__VA_ARGS__);\</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor">})</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="hpm__jpeg_8h_1a6d580485b404deb1054453fdefd9968a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_DLOG(fmt,<sp/>...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HPM_JPEG_LOG_LEVEL<sp/>&gt;=<sp/>HPM_JPEG_LOG_LEVEL_INFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_ILOG(fmt,<sp/>...)<sp/>({\</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(&quot;HPM_JPEG:<sp/>[I:<sp/>%s:%u]:<sp/>&quot;,<sp/>__func__,<sp/>__LINE__);\</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(fmt,<sp/>##__VA_ARGS__);\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor">})</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="hpm__jpeg_8h_1aa5ae7a0829f38aec5900d4e0ec9e8bc5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_ILOG(fmt,<sp/>...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HPM_JPEG_LOG_LEVEL<sp/>&gt;=<sp/>HPM_JPEG_LOG_LEVEL_WARN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="hpm__jpeg_8h_1a724c2823275d5af43ac2260490fbafab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_WLOG(fmt,<sp/>...)<sp/>({\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(&quot;HPM_JPEG:<sp/>[W:<sp/>%s:%u]:<sp/>&quot;,<sp/>__func__,<sp/>__LINE__);\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(fmt,<sp/>##__VA_ARGS__);\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor">})</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_WLOG(fmt,<sp/>...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HPM_JPEG_LOG_LEVEL<sp/>&gt;=<sp/>HPM_JPEG_LOG_LEVEL_ERR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="hpm__jpeg_8h_1af0d54eba1e94679e9c585024d4af8596" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_ELOG(fmt,<sp/>...)<sp/>({\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(&quot;HPM_JPEG:<sp/>[E:<sp/>%s:%u]:<sp/>&quot;,<sp/>__func__,<sp/>__LINE__);\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(fmt,<sp/>##__VA_ARGS__);\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor">})</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_ELOG(fmt,<sp/>...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="hpm__jpeg_8h_1acc752e90236b12f83fabb7e062f5c5c4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_RET_OK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="hpm__jpeg_8h_1a8066c3ea75a283792dc555f2abe0e55d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_RET_MALLOC_ERR<sp/><sp/><sp/><sp/><sp/><sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="hpm__jpeg_8h_1a292655e9c7b7d4a5bf97aed3e1310521" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_RET_PARA_ERR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="hpm__jpeg_8h_1a9916b204d20b8601b74db4f78ac8179e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_RET_JPEG_FILE_ERROR<sp/>-3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="hpm__jpeg_8h_1afe5e4c8bd3907b66dbd28c0c53f59ccc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_RET_STATUS_ERR<sp/><sp/><sp/><sp/><sp/><sp/>-4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="hpm__jpeg_8h_1a119a8ac5ed606c11a58115e54582a9f2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPM_JPEG_RET_MARKER_ERR<sp/><sp/><sp/><sp/><sp/><sp/>-5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeae" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeae" kindref="member">hpm_jpeg_sampling_format</ref><sp/>{</highlight></codeline>
+<codeline lineno="71" refid="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaea71cd4ed2b6a30976dc94bf849762dfe5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaea71cd4ed2b6a30976dc94bf849762dfe5" kindref="member">HPM_JPEG_SAMPLING_FORMAT_420</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="72" refid="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaeaf4c3d1779b4044b80aad48658906a321" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaeaf4c3d1779b4044b80aad48658906a321" kindref="member">HPM_JPEG_SAMPLING_FORMAT_422H</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaea010728d72728307221c3ea8203434b8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaea010728d72728307221c3ea8203434b8a" kindref="member">HPM_JPEG_SAMPLING_FORMAT_422V</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaeac7a0b7d48d2e894b7c3cf30c8753f7ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaeac7a0b7d48d2e894b7c3cf30c8753f7ad" kindref="member">HPM_JPEG_SAMPLING_FORMAT_444</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaea0006d402d119d53e0c3127fc2926138a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a9de11074fafdd8b485df13a5fd2ebeaea0006d402d119d53e0c3127fc2926138a" kindref="member">HPM_JPEG_SAMPLING_FORMAT_400</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="hpm__jpeg_8h_1a257e235cec55cb830a609158684439fb" refkind="member"><highlight class="normal">}<sp/><ref refid="hpm__jpeg_8h_1a257e235cec55cb830a609158684439fb" kindref="member">hpm_jpeg_sampling_format_t</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713" kindref="member">hpm_jpeg_image_format</ref><sp/>{</highlight></codeline>
+<codeline lineno="79" refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713a163fa55a52bc03ac0319cb193ba5f260" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713a163fa55a52bc03ac0319cb193ba5f260" kindref="member">HPM_JPEG_IMAGE_FORMAT_RGB565</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713a78848c5019cbbb719d234efa0523f091" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713a78848c5019cbbb719d234efa0523f091" kindref="member">HPM_JPEG_IMAGE_FORMAT_ARGB8888</ref>,<sp/></highlight></codeline>
+<codeline lineno="81" refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713a02d11c00a430b0745d5ef1b3f02b9f9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713a02d11c00a430b0745d5ef1b3f02b9f9b" kindref="member">HPM_JPEG_IMAGE_FORMAT_BGRA8888</ref>,<sp/></highlight></codeline>
+<codeline lineno="82" refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713a5c744012b319aebc32c60dc6d47f170a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713a5c744012b319aebc32c60dc6d47f170a" kindref="member">HPM_JPEG_IMAGE_FORMAT_YUYV422</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713af25ed5557a3ca0f7ea08dbc20c640b5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713af25ed5557a3ca0f7ea08dbc20c640b5c" kindref="member">HPM_JPEG_IMAGE_FORMAT_UYVY422</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713ad10d2a7fe497190bf0270d39f14e6680" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713ad10d2a7fe497190bf0270d39f14e6680" kindref="member">HPM_JPEG_IMAGE_FORMAT_Y8</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="hpm__jpeg_8h_1a1a37698ef48fb9339bc31c69cbc2d42a" refkind="member"><highlight class="normal">}<sp/><ref refid="hpm__jpeg_8h_1a1a37698ef48fb9339bc31c69cbc2d42a" kindref="member">hpm_jpeg_image_format_t</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="structhpm__jpeg__image" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpm__jpeg__image" kindref="compound">hpm_jpeg_image</ref><sp/>{</highlight></codeline>
+<codeline lineno="88" refid="structhpm__jpeg__image_1aa93faebb5850ff20c8b45fdfbf54e70d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structhpm__jpeg__image_1aa93faebb5850ff20c8b45fdfbf54e70d" kindref="member">image_buf</ref>;</highlight></codeline>
+<codeline lineno="89" refid="structhpm__jpeg__image_1a077708327120f5b0cb434f30001f8f5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a30e0af64f77ffd7363446338cf49c713" kindref="member">hpm_jpeg_image_format</ref><sp/><ref refid="structhpm__jpeg__image_1a077708327120f5b0cb434f30001f8f5b" kindref="member">format</ref>;</highlight></codeline>
+<codeline lineno="90" refid="structhpm__jpeg__image_1ad0490b24ef5dcbb3a5e222a9f12aeed3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structhpm__jpeg__image_1ad0490b24ef5dcbb3a5e222a9f12aeed3" kindref="member">width</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="91" refid="structhpm__jpeg__image_1ad003ae32e5eebffe62a0e4c39d1a5548" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structhpm__jpeg__image_1ad003ae32e5eebffe62a0e4c39d1a5548" kindref="member">height</ref>;<sp/></highlight></codeline>
+<codeline lineno="92" refid="structhpm__jpeg__image_1a4d678661daa70a3ca3292239f139efb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structhpm__jpeg__image_1a4d678661daa70a3ca3292239f139efb0" kindref="member">stride</ref>;<sp/></highlight></codeline>
+<codeline lineno="93" refid="hpm__jpeg_8h_1a2c423a17f7edaa994c5607831a132c71" refkind="member"><highlight class="normal">}<sp/><ref refid="hpm__jpeg_8h_1a2c423a17f7edaa994c5607831a132c71" kindref="member">hpm_jpeg_image_t</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="structhpm__jpeg__jpeg__file" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpm__jpeg__jpeg__file" kindref="compound">hpm_jpeg_jpeg_file</ref><sp/>{</highlight></codeline>
+<codeline lineno="96" refid="structhpm__jpeg__jpeg__file_1aa922ef4ee717eff509e92f12d296f65e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structhpm__jpeg__jpeg__file_1aa922ef4ee717eff509e92f12d296f65e" kindref="member">jpeg_buf</ref>;</highlight></codeline>
+<codeline lineno="97" refid="structhpm__jpeg__jpeg__file_1a75b5d928bf0547167ce12287f9e0b781" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structhpm__jpeg__jpeg__file_1a75b5d928bf0547167ce12287f9e0b781" kindref="member">len</ref>;</highlight></codeline>
+<codeline lineno="98" refid="hpm__jpeg_8h_1a497c1f9287dbaca17b7f13e7891a15d3" refkind="member"><highlight class="normal">}<sp/><ref refid="hpm__jpeg_8h_1a497c1f9287dbaca17b7f13e7891a15d3" kindref="member">hpm_jpeg_file_t</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96" kindref="member">hpm_jpeg_job_status</ref><sp/>{</highlight></codeline>
+<codeline lineno="101" refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a4e2366056c5dded05dab6b750fa059de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a4e2366056c5dded05dab6b750fa059de" kindref="member">HPM_JPEG_JOB_STATUS_ALLOCED</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="102" refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a5ee84484b993b1a1380ddef461f6475c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a5ee84484b993b1a1380ddef461f6475c" kindref="member">HPM_JPEG_JOB_STATUS_FILLING</ref>,</highlight></codeline>
+<codeline lineno="103" refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a160151db0e97dc9b28f5b2655a74d7b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a160151db0e97dc9b28f5b2655a74d7b2" kindref="member">HPM_JPEG_JOB_STATUS_FILL_FAILED</ref>,</highlight></codeline>
+<codeline lineno="104" refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96afa0d494f5279e48cffacedadf6ab1070" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96afa0d494f5279e48cffacedadf6ab1070" kindref="member">HPM_JPEG_JOB_STATUS_FILLED</ref>,</highlight></codeline>
+<codeline lineno="105" refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a9c05bea7791a6027f42a6edf0c4d4750" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a9c05bea7791a6027f42a6edf0c4d4750" kindref="member">HPM_JPEG_JOB_STATUS_STARTING</ref>,</highlight></codeline>
+<codeline lineno="106" refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a96abbe62998f8094c6f4ffcfc48c313b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a96abbe62998f8094c6f4ffcfc48c313b" kindref="member">HPM_JPEG_JOB_STATUS_START_FAILED</ref>,</highlight></codeline>
+<codeline lineno="107" refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96aff19103fe07cd43a9245b2a30c9244d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96aff19103fe07cd43a9245b2a30c9244d6" kindref="member">HPM_JPEG_JOB_STATUS_WAITING</ref>,</highlight></codeline>
+<codeline lineno="108" refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a7515fe7bd5eaf08496f84082ef28b402" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a7515fe7bd5eaf08496f84082ef28b402" kindref="member">HPM_JPEG_JOB_STATUS_PROCESSING</ref>,</highlight></codeline>
+<codeline lineno="109" refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a1e52f4622a09f254a1a3b8f48479c11b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a1e52f4622a09f254a1a3b8f48479c11b" kindref="member">HPM_JPEG_JOB_STATUS_FINISHED</ref>,</highlight></codeline>
+<codeline lineno="110" refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a491d1ab0c652a83d4064ab6ae9a3194a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96a491d1ab0c652a83d4064ab6ae9a3194a" kindref="member">HPM_JPEG_JOB_STATUS_STOPPED</ref>,</highlight></codeline>
+<codeline lineno="111" refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96adb98e66be1c55bc235f28d133b847dd4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1afdc1593c61b9b2f7ac78e2b40c036d96adb98e66be1c55bc235f28d133b847dd4" kindref="member">HPM_JPEG_JOB_STATUS_ERROR</ref></highlight></codeline>
+<codeline lineno="112" refid="hpm__jpeg_8h_1a9d81a5a240795d816801b5213f605993" refkind="member"><highlight class="normal">}<sp/><ref refid="hpm__jpeg_8h_1a9d81a5a240795d816801b5213f605993" kindref="member">hpm_jpeg_job_status_t</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="structhpm__jpeg__decode__info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpm__jpeg__decode__info" kindref="compound">hpm_jpeg_decode_info</ref><sp/>{</highlight></codeline>
+<codeline lineno="115" refid="structhpm__jpeg__decode__info_1abe7f61b7d56d12ca159ac4186dc877c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structhpm__jpeg__decode__info_1abe7f61b7d56d12ca159ac4186dc877c6" kindref="member">hw_status</ref>;</highlight></codeline>
+<codeline lineno="116" refid="structhpm__jpeg__decode__info_1ac4aa02dec10fa896604899f8c9c63646" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a9d81a5a240795d816801b5213f605993" kindref="member">hpm_jpeg_job_status_t</ref><sp/><ref refid="structhpm__jpeg__decode__info_1ac4aa02dec10fa896604899f8c9c63646" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="117" refid="structhpm__jpeg__decode__info_1a824815c3b4c4ee5d266da16cf43ab2ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a2c423a17f7edaa994c5607831a132c71" kindref="member">hpm_jpeg_image_t</ref><sp/>*<ref refid="structhpm__jpeg__decode__info_1a824815c3b4c4ee5d266da16cf43ab2ea" kindref="member">image</ref>;</highlight></codeline>
+<codeline lineno="118" refid="hpm__jpeg_8h_1a32e4c27f3a3d9d48fae1f1cc6164feaf" refkind="member"><highlight class="normal">}<sp/><ref refid="hpm__jpeg_8h_1a32e4c27f3a3d9d48fae1f1cc6164feaf" kindref="member">hpm_jpeg_decode_info_t</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="structhpm__jpeg__encode__info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpm__jpeg__encode__info" kindref="compound">hpm_jpeg_encode_info</ref><sp/>{</highlight></codeline>
+<codeline lineno="121" refid="structhpm__jpeg__encode__info_1a2a1227136f970c006646a15961d731a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structhpm__jpeg__encode__info_1a2a1227136f970c006646a15961d731a8" kindref="member">hw_status</ref>;</highlight></codeline>
+<codeline lineno="122" refid="structhpm__jpeg__encode__info_1adabd99eb47201a087a6b5a78dd979dff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a9d81a5a240795d816801b5213f605993" kindref="member">hpm_jpeg_job_status_t</ref><sp/><ref refid="structhpm__jpeg__encode__info_1adabd99eb47201a087a6b5a78dd979dff" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="123" refid="structhpm__jpeg__encode__info_1af8a3b4aea3a47803f1f0e944b869a584" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a497c1f9287dbaca17b7f13e7891a15d3" kindref="member">hpm_jpeg_file_t</ref><sp/>*<ref refid="structhpm__jpeg__encode__info_1af8a3b4aea3a47803f1f0e944b869a584" kindref="member">file</ref>;</highlight></codeline>
+<codeline lineno="124" refid="hpm__jpeg_8h_1a03e1820e1c496e5c0225b46d79234626" refkind="member"><highlight class="normal">}<sp/><ref refid="hpm__jpeg_8h_1a03e1820e1c496e5c0225b46d79234626" kindref="member">hpm_jpeg_encode_info_t</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="structhpm__jpeg__decode__cfg" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpm__jpeg__decode__cfg" kindref="compound">hpm_jpeg_decode_cfg</ref><sp/>{</highlight></codeline>
+<codeline lineno="127" refid="structhpm__jpeg__decode__cfg_1a8437a58b138db7a6a17b80567c2bcace" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a1a37698ef48fb9339bc31c69cbc2d42a" kindref="member">hpm_jpeg_image_format_t</ref><sp/><ref refid="structhpm__jpeg__decode__cfg_1a8437a58b138db7a6a17b80567c2bcace" kindref="member">out_format</ref>;</highlight></codeline>
+<codeline lineno="128" refid="structhpm__jpeg__decode__cfg_1a8f8f2234d6dfcb5beacae2d3aa134305" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structhpm__jpeg__decode__cfg_1a8f8f2234d6dfcb5beacae2d3aa134305" kindref="member">out_image_stride</ref>;<sp/></highlight></codeline>
+<codeline lineno="129" refid="hpm__jpeg_8h_1afe8913c260b533f03381b9200c43b6d9" refkind="member"><highlight class="normal">}<sp/><ref refid="hpm__jpeg_8h_1afe8913c260b533f03381b9200c43b6d9" kindref="member">hpm_jpeg_decode_cfg_t</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="structhpm__jpeg__encode__cfg" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpm__jpeg__encode__cfg" kindref="compound">hpm_jpeg_encode_cfg</ref><sp/>{</highlight></codeline>
+<codeline lineno="132" refid="structhpm__jpeg__encode__cfg_1a7c25af7b9284fe675f2fca2babd61f79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hpm__jpeg_8h_1a257e235cec55cb830a609158684439fb" kindref="member">hpm_jpeg_sampling_format_t</ref><sp/><ref refid="structhpm__jpeg__encode__cfg_1a7c25af7b9284fe675f2fca2babd61f79" kindref="member">jpeg_sampling</ref>;</highlight></codeline>
+<codeline lineno="133" refid="structhpm__jpeg__encode__cfg_1a1f767eba93d53bd44da8bc7fadbb4255" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structhpm__jpeg__encode__cfg_1a1f767eba93d53bd44da8bc7fadbb4255" kindref="member">jpeg_quality</ref>;<sp/></highlight></codeline>
+<codeline lineno="134" refid="hpm__jpeg_8h_1a90ee0d815ef841173b0c2fc99eebfa0a" refkind="member"><highlight class="normal">}<sp/><ref refid="hpm__jpeg_8h_1a90ee0d815ef841173b0c2fc99eebfa0a" kindref="member">hpm_jpeg_encode_cfg_t</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="hpm__jpeg_8h_1a449bfc8615bb44afab138bc380043301" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="hpm__jpeg_8h_1a449bfc8615bb44afab138bc380043301" kindref="member">hpm_jpeg_job_state_cb_t</ref>)(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="structhpm__jpeg__cfg" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpm__jpeg__cfg" kindref="compound">hpm_jpeg_cfg</ref><sp/>{</highlight></codeline>
+<codeline lineno="146" refid="structhpm__jpeg__cfg_1ac66db72b9264264e5e5ff21194524b40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structhpm__jpeg__cfg_1ac66db72b9264264e5e5ff21194524b40" kindref="member">jpeg_base</ref>;</highlight></codeline>
+<codeline lineno="147" refid="structhpm__jpeg__cfg_1adf701d20d2860f1fcbd42a54a0b5d547" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>(*malloc)(uint32_t<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="148" refid="structhpm__jpeg__cfg_1a7d74fc77ace613ebef3365ecd509e1a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structhpm__jpeg__cfg_1a7d74fc77ace613ebef3365ecd509e1a2" kindref="member">free</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p);</highlight></codeline>
+<codeline lineno="149" refid="structhpm__jpeg__cfg_1a244793694bb39bcf10711914962bdc54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structhpm__jpeg__cfg_1a244793694bb39bcf10711914962bdc54" kindref="member">cache_line_size</ref>;</highlight></codeline>
+<codeline lineno="150" refid="structhpm__jpeg__cfg_1a38bc337baf2cce4d357f930b71773a9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structhpm__jpeg__cfg_1a38bc337baf2cce4d357f930b71773a9d" kindref="member">cache_writeback</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*start,<sp/>uint32_t<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="151" refid="structhpm__jpeg__cfg_1a20603f0b98437141e78c7a28a8aeffbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structhpm__jpeg__cfg_1a20603f0b98437141e78c7a28a8aeffbf" kindref="member">cache_invalidate</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*start,<sp/>uint32_t<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="152" refid="hpm__jpeg_8h_1aacd9859eebabd0a5e5a99d2cee178a65" refkind="member"><highlight class="normal">}<sp/><ref refid="hpm__jpeg_8h_1aacd9859eebabd0a5e5a99d2cee178a65" kindref="member">hpm_jpeg_cfg_t</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a670206a8b793bbaf206e2d920d12de20" kindref="member">hpm_jpeg_init</ref>(<ref refid="hpm__jpeg_8h_1aacd9859eebabd0a5e5a99d2cee178a65" kindref="member">hpm_jpeg_cfg_t</ref><sp/>*cfg);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a81ef76ccbb2bf1c746d5802143c4bede" kindref="member">hpm_jpeg_deinit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a3567cdecfe96c2e53d6666053b56e497" kindref="member">hpm_jpeg_isr</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*<ref refid="hpm__jpeg_8h_1a0843845165be9c19f1f32adc18d9b361" kindref="member">hpm_jpeg_decode_job_alloc</ref>(<ref refid="hpm__jpeg_8h_1afe8913c260b533f03381b9200c43b6d9" kindref="member">hpm_jpeg_decode_cfg_t</ref><sp/>*cfg);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1afc042d61b8b7c53f4aaae00ece47fcfb" kindref="member">hpm_jpeg_decode_job_fill_file</ref>(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a497c1f9287dbaca17b7f13e7891a15d3" kindref="member">hpm_jpeg_file_t</ref><sp/>*file,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>direct);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a1486d7b943ceb3c30d8f6708bc12a8aa" kindref="member">hpm_jpeg_decode_job_force_direct_image_buf</ref>(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buf,<sp/>uint32_t<sp/>len);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a73b80d4eaa4b6ecd80f5b89fb2bfb095" kindref="member">hpm_jpeg_decode_job_start</ref>(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job,<sp/><ref refid="hpm__jpeg_8h_1a449bfc8615bb44afab138bc380043301" kindref="member">hpm_jpeg_job_state_cb_t</ref><sp/>cb);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a8ea786b9f9dce82fd6bbba7e997ba1b7" kindref="member">hpm_jpeg_decode_job_stop</ref>(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a35b1610d4c623e8e579c196507a1007f" kindref="member">hpm_jpeg_decode_job_get_info</ref>(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job,<sp/><ref refid="hpm__jpeg_8h_1a32e4c27f3a3d9d48fae1f1cc6164feaf" kindref="member">hpm_jpeg_decode_info_t</ref><sp/>*info);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a6fea9f315e8e7678030e4adf1fcb8327" kindref="member">hpm_jpeg_decode_job_free</ref>(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*<ref refid="hpm__jpeg_8h_1a1a7bcd85acb1b80910add26e789dba94" kindref="member">hpm_jpeg_encode_job_alloc</ref>(<ref refid="hpm__jpeg_8h_1a90ee0d815ef841173b0c2fc99eebfa0a" kindref="member">hpm_jpeg_encode_cfg_t</ref><sp/>*cfg);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a5d25f2af1f8b1a1b093e65439e5e1f15" kindref="member">hpm_jpeg_encode_job_fill_image</ref>(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a2c423a17f7edaa994c5607831a132c71" kindref="member">hpm_jpeg_image_t</ref><sp/>*image,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>direct);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a45d596f854c520ea5c5122d7b9e05b79" kindref="member">hpm_jpeg_encode_job_force_direct_file_buf</ref>(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buf,<sp/>uint32_t<sp/>len);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1aadef0d233f1d42a7298a4609fca228ea" kindref="member">hpm_jpeg_encode_job_start</ref>(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job,<sp/><ref refid="hpm__jpeg_8h_1a449bfc8615bb44afab138bc380043301" kindref="member">hpm_jpeg_job_state_cb_t</ref><sp/>cb);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a093ed42cff59fd57affebca830f17bb3" kindref="member">hpm_jpeg_encode_job_stop</ref>(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a6b72cc7ac158fdd2d60f5ec85e98b680" kindref="member">hpm_jpeg_encode_job_get_info</ref>(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job,<sp/><ref refid="hpm__jpeg_8h_1a03e1820e1c496e5c0225b46d79234626" kindref="member">hpm_jpeg_encode_info_t</ref><sp/>*info);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a2596dfd49a4756fd1826365972a92484" kindref="member">hpm_jpeg_encode_job_free</ref>(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__jpeg_8h_1a354c8c610e024196c78a52cb290bee9b" kindref="member">hpm_jpeg_job_set_user_data</ref>(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*user_data);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="hpm__jpeg_8h_1ae3b489225acf45c1e0459bc6086557fd" kindref="member">hpm_jpeg_job_get_user_data</ref>(<ref refid="hpm__jpeg_8h_1ac633ca1bb547e99044405c0a295e1359" kindref="member">hpm_jpeg_job_t</ref><sp/>*job);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="components/jpeg/hpm_jpeg.h"/>
+  </compounddef>
+</doxygen>

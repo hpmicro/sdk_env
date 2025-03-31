@@ -4,6 +4,7 @@ var group__matrix =
     [ "hpm_dsp_cmat_mul_q15", "group__matrix.html#ga5ce2d2f57c1a36afdef01f60c81356ec", null ],
     [ "hpm_dsp_cmat_mul_q31", "group__matrix.html#ga6cbad2e069f4544598e4496b0b011a9e", null ],
     [ "hpm_dsp_mat_add_f32", "group__matrix.html#ga9c803c210d7ac4b76fb44924660482b0", null ],
+    [ "hpm_dsp_mat_add_f64", "group__matrix.html#ga8aca909dfb3559a8724b098613a616c2", null ],
     [ "hpm_dsp_mat_add_q15", "group__matrix.html#gaa94129caac06a0bf0e755f3160f6ff57", null ],
     [ "hpm_dsp_mat_add_q31", "group__matrix.html#ga37263640ebdd852d21bb736a562cbdd0", null ],
     [ "hpm_dsp_mat_inv_f32", "group__matrix.html#ga28939f8f448b65162dbe7b838443d04c", null ],

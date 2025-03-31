@@ -10,7 +10,6 @@ var group__ewdg__interface =
       [ "ctrl_reg_update_password", "structewdg__func__ctrl__config__t.html#af04de4a68cf43ed86b00207bd5ab6947", null ],
       [ "ctrl_reg_update_period_bus_clk_x_128", "structewdg__func__ctrl__config__t.html#ae1a88d0ee759b7760c587beade036aae", null ],
       [ "enable_config_lock", "structewdg__func__ctrl__config__t.html#a0f415b7f6425110c40f8feb2dbdc0a14", null ],
-      [ "enable_overtime_self_clear", "structewdg__func__ctrl__config__t.html#adafc0caa6412ac713003df1c2680f8b2", null ],
       [ "enable_refresh_lock", "structewdg__func__ctrl__config__t.html#abfa68346a0223c890df8a05af875f3df", null ],
       [ "enable_refresh_period", "structewdg__func__ctrl__config__t.html#ac32ce920f29f6e7f45122c7bedaa0f96", null ],
       [ "enable_window_mode", "structewdg__func__ctrl__config__t.html#a55fcb03334de27a5baf2f103df45d7f0", null ],
@@ -46,9 +45,9 @@ var group__ewdg__interface =
       [ "ctrl_config", "structewdg__config__t.html#acaa01c5cdb5851ba1ef18173e36faac0", null ],
       [ "enable_watchdog", "structewdg__config__t.html#aa1bc518de58392d669dcfbc7651eec51", null ],
       [ "int_rst_config", "structewdg__config__t.html#ad1e38b5ad1917ecf3f28cc09201ee5d5", null ],
-      [ "status_ewdg_tick_out_of_range", "group__ewdg__interface.html#gga531c35e38ede3ea4e5ba5afb24b29493abfb1e6fbad6b0576fe69f29aa83190e7", null ],
-      [ "status_ewdg_div_out_of_range", "group__ewdg__interface.html#gga531c35e38ede3ea4e5ba5afb24b29493a6254c7a31b7ec7a04822f0ed8c9a3a53", null ],
-      [ "status_ewdg_feature_unsupported", "group__ewdg__interface.html#gga531c35e38ede3ea4e5ba5afb24b29493a51ccee8220760ae722a80b95f77ea4ce", null ]
+      [ "status_ewdg_tick_out_of_range", "group__ewdg__interface.html#gga726b4866ddc0f5f3c414dd7e7de99e57abfb1e6fbad6b0576fe69f29aa83190e7", null ],
+      [ "status_ewdg_div_out_of_range", "group__ewdg__interface.html#gga726b4866ddc0f5f3c414dd7e7de99e57a6254c7a31b7ec7a04822f0ed8c9a3a53", null ],
+      [ "status_ewdg_feature_unsupported", "group__ewdg__interface.html#gga726b4866ddc0f5f3c414dd7e7de99e57a51ccee8220760ae722a80b95f77ea4ce", null ]
     ] ],
     [ "ewdg_cnt_clk_sel_t", "group__ewdg__interface.html#ga9a509cdb5b9bf7fcf0698d8501435b2b", [
       [ "ewdg_cnt_clk_src_bus_clk", "group__ewdg__interface.html#gga9a509cdb5b9bf7fcf0698d8501435b2ba2a6e2b6b1c7175f2b2efdbbf554090d5", null ],
@@ -97,7 +96,6 @@ var group__ewdg__interface =
     [ "ewdg_get_default_config", "group__ewdg__interface.html#gae3efabfbfa99578f5a518c4d17df8f56", null ],
     [ "ewdg_get_refresh_unlock_method", "group__ewdg__interface.html#gac473755599fa5bc9314ff7e1efb9e758", null ],
     [ "ewdg_get_status_flags", "group__ewdg__interface.html#gaef142adababca9e3baec2ee1a28d7934", null ],
-    [ "ewdg_get_timeout_interrupt_ticks", "group__ewdg__interface.html#gad208697888b6e51d7512d5a100e0a2ab", null ],
     [ "ewdg_get_timeout_reset_ticks", "group__ewdg__interface.html#ga928c20729538f7f3ff5707552b3bcfef", null ],
     [ "ewdg_init", "group__ewdg__interface.html#ga0f447fb16164b4b14b970218ee3b7a51", null ],
     [ "ewdg_init_ctrl_func", "group__ewdg__interface.html#ga3161a29add9fdae7ba40e8f5e9c1f87d", null ],

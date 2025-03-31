@@ -7,7 +7,6 @@
   <title>以太网端口配置 &mdash; HPMicro Software Development Kit  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
 
   
   <!--[if lt IE 9]>
@@ -20,7 +19,6 @@
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/sphinx_highlight.js"></script>
-        <script src="../../../_static/tabs.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -74,7 +72,7 @@
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active"><strong>以太网端口配置</strong></li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../../_sources/samples/lwip/doc/Ethernet_Common_Project_Settings_zh.md.txt" rel="nofollow"> View page source</a>
+            <a href="../../../_sources/samples/lwip/doc/Ethernet_Common_Project_Settings_zh.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -82,32 +80,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1><strong>以太网端口配置</strong><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+  <section id="ethernet-port-configurations-zh">
+<span id="id1"></span><h1><strong>以太网端口配置</strong><a class="headerlink" href="#ethernet-port-configurations-zh" title="Permalink to this heading"></a></h1>
 <ul class="simple">
-<li><p>对于仅支持单网口的sample：开发板上有双网口，在<code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>中，支持如下配置：</p>
+<li><p>对于仅支持单网口的sample：开发板上有双网口，在`CMakeLists.txt`中，支持如下配置：</p>
 <ul>
-<li><p>set(APP_USE_ENET_PORT_COUNT 1): 使能开发板上ENet0对应的RGMII或RMII端口 <sup><strong>5/6</strong></sup></p></li>
-<li><p>set(APP_USE_ENET_PORT_COUNT 1)且set(APP_USE_ENET_ITF_RGMII 1): 使能开发板上RGMII端口 <sup><strong>6</strong></sup></p></li>
-<li><p>set(APP_USE_ENET_PORT_COUNT 1)且set(APP_USE_ENET_ITF_RMII 1): 使能开发板上RMII端口 <sup><strong>6</strong></sup></p></li>
-<li><p>set(APP_USE_ENET_PORT_COUNT 1)且set(APP_USE_ENET_PHY_DP83867 1): 使能开发板上RGMII端口 <sup><strong>1</strong></sup></p></li>
-<li><p>set(APP_USE_ENET_PORT_COUNT 1)且set(APP_USE_ENET_PHY_RTL8211 1): 使能开发板上RGMII端口 <sup><strong>2</strong></sup></p></li>
-<li><p>set(APP_USE_ENET_PORT_COUNT 1)且set(APP_USE_ENET_PHY_DP83848 1): 使能开发板上RMII端口 <sup><strong>3</strong></sup></p></li>
-<li><p>set(APP_USE_ENET_PORT_COUNT 1)且set(APP_USE_ENET_PHY_RTL8201 1): 使能开发板上RMII端口 <sup><strong>4</strong></sup></p></li>
+<li><p>set(APP_USE_ENET_PORT_COUNT 1): 使能开发板上ENet0对应的RGMII或RMII端口 &lt;sup&gt; <strong>5/6</strong> &lt;/sup&gt;</p></li>
+<li><p>set(APP_USE_ENET_PORT_COUNT 1)且set(APP_USE_ENET_ITF_RGMII 1): 使能开发板上RGMII端口 &lt;sup&gt; <strong>6</strong> &lt;/sup&gt;</p></li>
+<li><p>set(APP_USE_ENET_PORT_COUNT 1)且set(APP_USE_ENET_ITF_RMII 1): 使能开发板上RMII端口 &lt;sup&gt; <strong>6</strong> &lt;/sup&gt;</p></li>
+<li><p>set(APP_USE_ENET_PORT_COUNT 1)且set(APP_USE_ENET_PHY_DP83867 1): 使能开发板上RGMII端口 &lt;sup&gt; <strong>1</strong> &lt;/sup&gt;</p></li>
+<li><p>set(APP_USE_ENET_PORT_COUNT 1)且set(APP_USE_ENET_PHY_RTL8211 1): 使能开发板上RGMII端口 &lt;sup&gt; <strong>2</strong> &lt;/sup&gt;</p></li>
+<li><p>set(APP_USE_ENET_PORT_COUNT 1)且set(APP_USE_ENET_PHY_DP83848 1): 使能开发板上RMII端口 &lt;sup&gt; <strong>3</strong> &lt;/sup&gt;</p></li>
+<li><p>set(APP_USE_ENET_PORT_COUNT 1)且set(APP_USE_ENET_PHY_RTL8201 1): 使能开发板上RMII端口 &lt;sup&gt; <strong>4</strong> &lt;/sup&gt;</p></li>
 </ul>
 </li>
-<li><p>对于仅支持单网口的sample：开发板上只有一个网口，在<code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>中，仅支持如下配置：</p>
+<li><p>对于仅支持单网口的sample：开发板上只有一个网口，在`CMakeLists.txt`中，仅支持如下配置：</p>
 <ul>
-<li><p>set(APP_USE_ENET_PORT_COUNT 1): 使能开发板上RGMII或RMII端口 <sup><strong>5/6</strong></sup></p></li>
+<li><p>set(APP_USE_ENET_PORT_COUNT 1): 使能开发板上RGMII或RMII端口 &lt;sup&gt; <strong>5/6</strong> &lt;/sup&gt;</p></li>
 </ul>
 </li>
-<li><p>对于支持双网口的sample：开发板上必需有双网口，在<code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>中，仅支持如下配置：</p>
+<li><p>对于支持双网口的sample：开发板上必需有双网口，在`CMakeLists.txt`中，仅支持如下配置：</p>
 <ul>
-<li><p>set(APP_USE_ENET_PORT_COUNT 2): 使能开发板上双以太网端口 <sup><strong>5/6</strong></sup></p></li>
+<li><p>set(APP_USE_ENET_PORT_COUNT 2): 使能开发板上双以太网端口 &lt;sup&gt; <strong>5/6</strong> &lt;/sup&gt;</p></li>
 </ul>
 </li>
 </ul>
-<p><strong>注</strong>:</p>
+<p><strong>注</strong> :</p>
 <ol class="arabic simple">
 <li><p>仅在有DP83867的开发板上支持</p></li>
 <li><p>仅在有RTL8211的开发板上支持</p></li>
@@ -126,8 +124,8 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020-2024, HPMicro.
-      <span class="lastupdated">Last updated on Dec 30, 2024.
+    <p>&#169; Copyright 2020-2025, HPMicro.
+      <span class="lastupdated">Last updated on Mar 31, 2025.
       </span></p>
   </div>
 

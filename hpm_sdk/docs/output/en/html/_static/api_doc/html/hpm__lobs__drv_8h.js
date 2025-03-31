@@ -14,7 +14,7 @@ var hpm__lobs__drv_8h =
       [ "lobs_cnt_cmp_mode", "group__lobs__interface.html#gga8e988a24f728836be55b55cbb941d787ae06ce75ed4a5adb6fcdf8db18d7106dc", null ]
     ] ],
     [ "lobs_group_mode_t", "group__lobs__interface.html#gac8a84318f81ee2a61237892d707585ab", [
-      [ "lobs_one_group_128_bits", "group__lobs__interface.html#ggac8a84318f81ee2a61237892d707585ababbffd87aaded9de4b74a27e31756fb55", null ],
+      [ "lobs_one_group_96_bits", "group__lobs__interface.html#ggac8a84318f81ee2a61237892d707585aba10cd9eff61e0ae3631dec3b0d8e14008", null ],
       [ "lobs_two_group_8_bits", "group__lobs__interface.html#ggac8a84318f81ee2a61237892d707585aba6aff47dab06163e0c67b6ef36175d330", null ]
     ] ],
     [ "lobs_next_state_t", "group__lobs__interface.html#ga05c6633c55c801c707a2388a139fa80c", [

@@ -16,7 +16,7 @@ var hpm__jpeg__drv_8c =
     [ "jpeg_fill_table", "group__Jpeg__interface.html#gae3b3e404e365c5bf4d4ccf28de62d7c3", null ],
     [ "jpeg_init", "group__Jpeg__interface.html#ga31f3752442feb2f832b6f15b78763ed9", null ],
     [ "jpeg_is_valid_size", "hpm__jpeg__drv_8c.html#a1917d11373ffc3c5b4e62d0097135ccb", null ],
-    [ "jpeg_need_csc", "hpm__jpeg__drv_8c.html#a2c10e2b395778e1a6c45719221d09db5", null ],
+    [ "jpeg_need_csc", "hpm__jpeg__drv_8c.html#a690406539a8ac64e5e07de94a40f67af", null ],
     [ "jpeg_reset", "group__Jpeg__interface.html#ga1b68ae13f410f3b2a26fa7924076915b", null ],
     [ "jpeg_start_decode", "group__Jpeg__interface.html#ga54945116d7d8d0b5c4a408cfdfa3bcbd", null ],
     [ "jpeg_start_encode", "group__Jpeg__interface.html#ga50902f03c37747a8c6f13366921b0fba", null ],

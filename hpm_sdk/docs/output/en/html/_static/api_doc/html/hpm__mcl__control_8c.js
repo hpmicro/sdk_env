@@ -1,0 +1,28 @@
+var hpm__mcl__control_8c =
+[
+    [ "hpm_mcl_control_arctan", "hpm__mcl__control_8c.html#a4a47b8d6f48b4b5d674250bc92200630", null ],
+    [ "hpm_mcl_control_clarke", "hpm__mcl__control_8c.html#ac8498b3ed22bd88368f0be757d70d83d", null ],
+    [ "hpm_mcl_control_cos", "hpm__mcl__control_8c.html#a9eed8b13d0fe7d33d27a316c00bf5e1b", null ],
+    [ "hpm_mcl_control_dead_area_polarity_detection", "hpm__mcl__control_8c.html#a10b660cbdcbdce5810505826631b3294", null ],
+    [ "hpm_mcl_control_detection_init", "hpm__mcl__control_8c.html#ac99d062321c4d9458be17e1966f08b15", null ],
+    [ "hpm_mcl_control_get_block_sector", "hpm__mcl__control_8c.html#aa7987101435cf854990afd69c05cf98b", null ],
+    [ "hpm_mcl_control_init", "hpm__mcl__control_8c.html#ac5ad3b4585f403299ae01f45d207c4be", null ],
+    [ "hpm_mcl_control_inv_park", "hpm__mcl__control_8c.html#a0cabfa5f4552500da32d846b1b3b6b81", null ],
+    [ "hpm_mcl_control_lowpass_filter", "hpm__mcl__control_8c.html#a42a4c2f5b4e4b1f69a86dbd79afcef20", null ],
+    [ "hpm_mcl_control_offline_param_detection_flux", "hpm__mcl__control_8c.html#a7817c0ee134ce2c78aed2c001d88994a", null ],
+    [ "hpm_mcl_control_offline_param_detection_ld", "hpm__mcl__control_8c.html#a0929f0daa5d559fb6784e1c56ed99506", null ],
+    [ "hpm_mcl_control_offline_param_detection_lq", "hpm__mcl__control_8c.html#a092a4c5c7263aa81d6dbd643e4a09d8a", null ],
+    [ "hpm_mcl_control_offline_param_detection_ls", "hpm__mcl__control_8c.html#afa8322e3055d0bfed528e12f860ad0e6", null ],
+    [ "hpm_mcl_control_offline_param_detection_rs", "hpm__mcl__control_8c.html#a82b6227c01040c551206748da75169cb", null ],
+    [ "hpm_mcl_control_park", "hpm__mcl__control_8c.html#a01da966f300642cb6ac7e6804ad8c634", null ],
+    [ "hpm_mcl_control_pi", "hpm__mcl__control_8c.html#a10d274023589a13d90b0d81d7e7c5ce4", null ],
+    [ "hpm_mcl_control_sin", "hpm__mcl__control_8c.html#af15b6aafc29d742ba76eb172b1e78e1e", null ],
+    [ "hpm_mcl_control_smc_init", "hpm__mcl__control_8c.html#a62798bfab381ef9dcdd7c81e9b6849c1", null ],
+    [ "hpm_mcl_control_smc_process", "hpm__mcl__control_8c.html#ab2ce88265e3ee34eb6856db36b630206", null ],
+    [ "hpm_mcl_control_step_svpwm", "hpm__mcl__control_8c.html#a01a9191032b7ee3d3f90e64a1a7dc34b", null ],
+    [ "hpm_mcl_control_svpwm", "hpm__mcl__control_8c.html#a609133c55635515e61fa49f43fb809a2", null ],
+    [ "hpm_mcl_delta_pid", "hpm__mcl__control_8c.html#acd8ced301aebbfa79203b9eb616942f6", null ],
+    [ "hpm_mcl_pid_init", "hpm__mcl__control_8c.html#a1e92c82c6637aa4d2f8a8896a6e16bca", null ],
+    [ "hpm_mcl_pid_to_3p3z", "hpm__mcl__control_8c.html#ae9a162eee97e535cfb0009e8ca5eace0", null ],
+    [ "hpm_mcl_position_pid", "hpm__mcl__control_8c.html#ab2e17529888204fa31e5adc963f5f340", null ]
+];

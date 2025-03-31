@@ -1,10 +1,10 @@
 var hpm__sei__drv_8h =
 [
     [ "sei_engine_config_t", "structsei__engine__config__t.html", "structsei__engine__config__t" ],
-    [ "sei_tranceiver_synchronous_master_config_t", "structsei__tranceiver__synchronous__master__config__t.html", "structsei__tranceiver__synchronous__master__config__t" ],
-    [ "sei_tranceiver_synchronous_slave_config_t", "structsei__tranceiver__synchronous__slave__config__t.html", "structsei__tranceiver__synchronous__slave__config__t" ],
-    [ "sei_tranceiver_asynchronous_config_t", "structsei__tranceiver__asynchronous__config__t.html", "structsei__tranceiver__asynchronous__config__t" ],
-    [ "sei_tranceiver_config_t", "structsei__tranceiver__config__t.html", "structsei__tranceiver__config__t" ],
+    [ "sei_transceiver_synchronous_master_config_t", "structsei__transceiver__synchronous__master__config__t.html", "structsei__transceiver__synchronous__master__config__t" ],
+    [ "sei_transceiver_synchronous_slave_config_t", "structsei__transceiver__synchronous__slave__config__t.html", "structsei__transceiver__synchronous__slave__config__t" ],
+    [ "sei_transceiver_asynchronous_config_t", "structsei__transceiver__asynchronous__config__t.html", "structsei__transceiver__asynchronous__config__t" ],
+    [ "sei_transceiver_config_t", "structsei__transceiver__config__t.html", "structsei__transceiver__config__t" ],
     [ "sei_trigger_input_config_t", "structsei__trigger__input__config__t.html", "structsei__trigger__input__config__t" ],
     [ "sei_trigger_output_config_t", "structsei__trigger__output__config__t.html", "structsei__trigger__output__config__t" ],
     [ "sei_data_format_config_t", "structsei__data__format__config__t.html", "structsei__data__format__config__t" ],
@@ -138,10 +138,10 @@ var hpm__sei__drv_8h =
       [ "sei_state_tran_condition_rise_entry", "hpm__sei__drv_8h.html#a2dce539a96685b0ea76be7d173645198a90ef2bc10652b1c785a6a750359a23ed", null ],
       [ "sei_state_tran_condition_fall_leave", "hpm__sei__drv_8h.html#a2dce539a96685b0ea76be7d173645198abc01780c36d3c5ecab18bbe1040f1a72", null ]
     ] ],
-    [ "sei_tranceiver_mode_t", "hpm__sei__drv_8h.html#a6a1b4810ac93a1924cac4ce89a035b2a", [
-      [ "sei_synchronous_master_mode", "hpm__sei__drv_8h.html#a6a1b4810ac93a1924cac4ce89a035b2aa2816acff4945a9dc56d7f729b2b6d1e2", null ],
-      [ "sei_synchronous_slave_mode", "hpm__sei__drv_8h.html#a6a1b4810ac93a1924cac4ce89a035b2aa42678794f9496bf7c0e3dca31ba3b320", null ],
-      [ "sei_asynchronous_mode", "hpm__sei__drv_8h.html#a6a1b4810ac93a1924cac4ce89a035b2aa61f1ec5399e9a7415f5018ac4ebd4fa9", null ]
+    [ "sei_transceiver_mode_t", "hpm__sei__drv_8h.html#ad7429398f0dfb9d539c057002022498b", [
+      [ "sei_synchronous_master_mode", "hpm__sei__drv_8h.html#ad7429398f0dfb9d539c057002022498ba2816acff4945a9dc56d7f729b2b6d1e2", null ],
+      [ "sei_synchronous_slave_mode", "hpm__sei__drv_8h.html#ad7429398f0dfb9d539c057002022498ba42678794f9496bf7c0e3dca31ba3b320", null ],
+      [ "sei_asynchronous_mode", "hpm__sei__drv_8h.html#ad7429398f0dfb9d539c057002022498ba61f1ec5399e9a7415f5018ac4ebd4fa9", null ]
     ] ],
     [ "sei_trig_in_type_t", "hpm__sei__drv_8h.html#ad8808b22bb62b20faa12bdb62f96cc7d", [
       [ "sei_trig_in0", "hpm__sei__drv_8h.html#ad8808b22bb62b20faa12bdb62f96cc7dae8fbfe70f3f84f9f5836ef10336b28ce", null ],
@@ -198,7 +198,7 @@ var hpm__sei__drv_8h =
     [ "sei_set_xcvr_tx_point", "hpm__sei__drv_8h.html#a8292710f6c296c28ff70569026274e15", null ],
     [ "sei_state_transition_config_init", "hpm__sei__drv_8h.html#ab311a1b6b933c5a6cde775a155b88f9c", null ],
     [ "sei_state_transition_latch_config_init", "hpm__sei__drv_8h.html#a069071ccb72c50eac6aa53ffd9b2022e", null ],
-    [ "sei_tranceiver_config_init", "hpm__sei__drv_8h.html#ada38e9edad291af0f0bcb8a579a2404f", null ],
+    [ "sei_transceiver_config_init", "hpm__sei__drv_8h.html#a8abb8de1ba1b931e1c24b77530dc57e4", null ],
     [ "sei_trigger_input_config_init", "hpm__sei__drv_8h.html#a66bc0e03916095f0337c7589072ee9c1", null ],
     [ "sei_trigger_output_config_init", "hpm__sei__drv_8h.html#a9c8f69006cc4a312e59b44e90e41b984", null ],
     [ "sei_update_config_init", "hpm__sei__drv_8h.html#aed43d587cc7e0d75a451212eabb0aa4d", null ]

@@ -42,12 +42,12 @@ var group__i2c__interface =
     [ "I2C_WRITE_CHECK_ACK", "group__i2c__interface.html#gaff8ca0023d15f72986a50cfe4611206e", null ],
     [ "i2c_mode_t", "group__i2c__interface.html#gae1ff7126fb6f404391717fbde555149c", null ],
     [ "i2c_seq_transfer_opt_t", "group__i2c__interface.html#ga22b03cb19f5ee510a6cee7ad02b432c8", [
-      [ "status_i2c_no_ack", "group__i2c__interface.html#gga68c01102755fc7d1c810bb0b0635fa90ab82b07e617d3b9182e390846257e82d0", null ],
-      [ "status_i2c_invalid_data", "group__i2c__interface.html#gga68c01102755fc7d1c810bb0b0635fa90a207906923653c26a23879c4d09b2f0df", null ],
-      [ "status_i2c_no_addr_hit", "group__i2c__interface.html#gga68c01102755fc7d1c810bb0b0635fa90a29df3e1817110c936c78e13a324e51f7", null ],
-      [ "status_i2c_transmit_not_completed", "group__i2c__interface.html#gga68c01102755fc7d1c810bb0b0635fa90a23ce76a1b8b224a249c628d63fa4ef03", null ],
-      [ "status_i2c_bus_busy", "group__i2c__interface.html#gga68c01102755fc7d1c810bb0b0635fa90aca2262ce63d9f87db8e7c15eb3326bec", null ],
-      [ "status_i2c_not_supported", "group__i2c__interface.html#gga68c01102755fc7d1c810bb0b0635fa90ad81df1d1a675a6afc2efab35c8da5314", null ]
+      [ "status_i2c_no_ack", "group__i2c__interface.html#ggad2d0aa8988c75981972c1aed8ffad898ab82b07e617d3b9182e390846257e82d0", null ],
+      [ "status_i2c_invalid_data", "group__i2c__interface.html#ggad2d0aa8988c75981972c1aed8ffad898a207906923653c26a23879c4d09b2f0df", null ],
+      [ "status_i2c_no_addr_hit", "group__i2c__interface.html#ggad2d0aa8988c75981972c1aed8ffad898a29df3e1817110c936c78e13a324e51f7", null ],
+      [ "status_i2c_transmit_not_completed", "group__i2c__interface.html#ggad2d0aa8988c75981972c1aed8ffad898a23ce76a1b8b224a249c628d63fa4ef03", null ],
+      [ "status_i2c_bus_busy", "group__i2c__interface.html#ggad2d0aa8988c75981972c1aed8ffad898aca2262ce63d9f87db8e7c15eb3326bec", null ],
+      [ "status_i2c_not_supported", "group__i2c__interface.html#ggad2d0aa8988c75981972c1aed8ffad898ad81df1d1a675a6afc2efab35c8da5314", null ]
     ] ],
     [ "i2c_mode", "group__i2c__interface.html#ga9e7157514d73fc7628b8150ad6844b70", [
       [ "i2c_mode_normal", "group__i2c__interface.html#gga9e7157514d73fc7628b8150ad6844b70add7e9b08db65db145a62fa6c3c098224", null ],

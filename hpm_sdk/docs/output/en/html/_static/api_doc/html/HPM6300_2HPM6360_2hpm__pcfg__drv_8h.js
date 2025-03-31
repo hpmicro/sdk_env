@@ -39,11 +39,18 @@ var HPM6300_2HPM6360_2hpm__pcfg__drv_8h =
       [ "pcfg_pmc_periph_debug", "group__pcfg__interface.html#gga4471d0183b961ae9bdb70f1b98a988a6a9ee71126ca0802136cec0ab14fc77dd0", null ]
     ] ],
     [ "pcfg_wakeup_src_t", "group__pcfg__interface.html#ga8189b2d880afe26808747af2225d2afa", [
+      [ "pcfg_wakeup_src_soc", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaac68f9ed219a27b45e5b0081c9840734d", null ],
       [ "pcfg_wakeup_src_otp", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaa7fbb936e003513707c45b1906ee33670", null ],
       [ "pcfg_wakeup_src_puart", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaa8d277bd2e3d539a2a43f9ba6183c5e42", null ],
       [ "pcfg_wakeup_src_ptimer", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaaf6672d65e10bae147fbaf443ffa95f51", null ],
       [ "pcfg_wakeup_src_pwdg", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaa54530ef52461b5ed2a8d886761814102", null ],
-      [ "pcfg_wakeup_src_pgpio", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaa7cc7df3e475aba5124c525b7c483f032", null ]
+      [ "pcfg_wakeup_src_pgpio", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaa7cc7df3e475aba5124c525b7c483f032", null ],
+      [ "pcfg_wakeup_src_monitor", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaaa34d50205f57f930bb7c72076d065566", null ],
+      [ "pcfg_wakeup_src_psecurity", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaa62085581619b79d7066ac2c4a020f311", null ],
+      [ "pcfg_wakeup_src_bsecurity", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaaee2ee3db6fa038231bfd14fd8f420919", null ],
+      [ "pcfg_wakeup_src_bgpio", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaa293e1a10bebd20d7a8876ef7ed2e5f32", null ],
+      [ "pcfg_wakeup_src_wbutn", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaa3df34a356f76eaf83bd2202dbee8ec29", null ],
+      [ "pcfg_wakeup_src_rtc", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaaf9385160759dc55e560af3f80a3a22c2", null ]
     ] ],
     [ "pcfg_bandgap_disable_lowpower_mode", "HPM6300_2HPM6360_2hpm__pcfg__drv_8h.html#ga1fd20fd98c9000ba12574cc484855382", null ],
     [ "pcfg_bandgap_disable_power_save_mode", "HPM6300_2HPM6360_2hpm__pcfg__drv_8h.html#ga82ccccb3cca1122041b38e57dc93fb85", null ],

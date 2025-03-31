@@ -2,7 +2,6 @@ var group__acmp__interface =
 [
     [ "acmp_channel_config", "structacmp__channel__config.html", [
       [ "bypass_filter", "structacmp__channel__config.html#aff5be143ec876d6d35afc041eebaabf4", null ],
-      [ "enable_clock_sync", "structacmp__channel__config.html#a268808c7305d97a717d7cfaed46391c6", null ],
       [ "enable_cmp_output", "structacmp__channel__config.html#ab4682cfa00e127abd6b32cc222d64189", null ],
       [ "enable_dac", "structacmp__channel__config.html#a4c78538561e368e5f307266c5a1604e1", null ],
       [ "enable_hpmode", "structacmp__channel__config.html#aaf7d923bfa5c37cec759f0723c9e75af", null ],
@@ -49,7 +48,6 @@ var group__acmp__interface =
     [ "acmp_channel_enable_dac", "group__acmp__interface.html#gad3fd4d3fb7e00ee7954f1d977cfbad9a", null ],
     [ "acmp_channel_enable_hpmode", "group__acmp__interface.html#ga89fc74b3037cd268c0021b0f95ea017a", null ],
     [ "acmp_channel_enable_irq", "group__acmp__interface.html#ga6f2d0d9747c7ce0025e6360c1c75bd68", null ],
-    [ "acmp_channel_enable_sync", "group__acmp__interface.html#ga536b6c23a44f01d744482590947d97db", null ],
     [ "acmp_channel_get_default_config", "group__acmp__interface.html#gaf9e88ca1c6410eb21ee0e19fe8c83733", null ],
     [ "acmp_channel_get_status", "group__acmp__interface.html#ga1938f290f1bbbccea28e3bb11bce0a37", null ],
     [ "acmp_channel_invert_output", "group__acmp__interface.html#gae0d64c1dae1d653b067be9af4f9c07de", null ],

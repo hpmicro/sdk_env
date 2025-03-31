@@ -47,7 +47,7 @@ var group__spi__interface =
       [ "common_config", "structspi__control__config__t.html#ad808dc64b56fca1e62005aaaf8618b70", null ],
       [ "master_config", "structspi__control__config__t.html#a96cd87a49bfc5810ea771c8fbb310cde", null ],
       [ "slave_config", "structspi__control__config__t.html#a74fadddc760f616fbfad225fbfc4dbc5", null ],
-      [ "status_spi_master_busy", "group__spi__interface.html#gga775634eda7917b3f2142895169300799a2d497018c6ac935d124ce6c3a3eb4ec0", null ]
+      [ "status_spi_master_busy", "group__spi__interface.html#ggaaa9607bf535272bd730af073728be224a2d497018c6ac935d124ce6c3a3eb4ec0", null ]
     ] ],
     [ "spi_addr_phase_format_t", "group__spi__interface.html#ga005ab1f2922a495cd72705c4f97806ef", [
       [ "spi_address_phase_format_single_io_mode", "group__spi__interface.html#gga005ab1f2922a495cd72705c4f97806efa190261bcad9b03c22a05c9d44ed4225b", null ],
@@ -133,8 +133,8 @@ var group__spi__interface =
       [ "spi_sclk_sampling_even_clk_edges", "group__spi__interface.html#ggab063d70616d6d55c73b01e9a1d2fb162aea2fabd92a138e8c88809d265a2d0408", null ]
     ] ],
     [ "spi_shift_direction_t", "group__spi__interface.html#gaa68518c16202382c2e1f1c7c66a9d53d", [
-      [ "msb_first", "group__spi__interface.html#ggaa68518c16202382c2e1f1c7c66a9d53daf32736f3740a3bb0da46775f24314b51", null ],
-      [ "lsb_first", "group__spi__interface.html#ggaa68518c16202382c2e1f1c7c66a9d53da58e7384444d0f08edde227a31593115e", null ]
+      [ "spi_msb_first", "group__spi__interface.html#ggaa68518c16202382c2e1f1c7c66a9d53dac8c28b25e0dd1ca37ffe2a9fcb691550", null ],
+      [ "spi_lsb_first", "group__spi__interface.html#ggaa68518c16202382c2e1f1c7c66a9d53daf5d46ccfe932dfcbb11552e439f7dc64", null ]
     ] ],
     [ "spi_token_value_t", "group__spi__interface.html#gac0796b7f31e5676ab9e039b8dfa3b7f5", [
       [ "spi_token_value_0x00", "group__spi__interface.html#ggac0796b7f31e5676ab9e039b8dfa3b7f5a17a2324369c04c125198cf1e6bc32f18", null ],

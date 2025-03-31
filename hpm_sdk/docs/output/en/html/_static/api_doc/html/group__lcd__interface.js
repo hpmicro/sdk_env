@@ -49,8 +49,8 @@ var group__lcd__interface =
     [ "lcdc_layer_max_bytes_per_transfer_t", "group__lcd__interface.html#ga0272f1dd52fd2261a6e00c21ab69e669", null ],
     [ "lcdc_line_pattern_t", "group__lcd__interface.html#gaeb9b6aa8e37e2ecc814cbc10f1b1fdfc", null ],
     [ "lcdc_xsync_config_t", "group__lcd__interface.html#ga864f51e879f69ddeb9930e7f9a96042a", [
-      [ "status_lcdc_no_active_layer_yet", "group__lcd__interface.html#gga1b70d876770ccff427513794d6b0b2a7a5ac506e0f76f957ddb4a86402bde06fe", null ],
-      [ "status_lcdc_layer_not_supported", "group__lcd__interface.html#gga1b70d876770ccff427513794d6b0b2a7aa27260d3e7c97fae14ccbb988aa29b05", null ]
+      [ "status_lcdc_no_active_layer_yet", "group__lcd__interface.html#ggad096a51ec1af43a3bef1c2f3045ce928a5ac506e0f76f957ddb4a86402bde06fe", null ],
+      [ "status_lcdc_layer_not_supported", "group__lcd__interface.html#ggad096a51ec1af43a3bef1c2f3045ce928aa27260d3e7c97fae14ccbb988aa29b05", null ]
     ] ],
     [ "lcdc_display_mode", "group__lcd__interface.html#gace4b674064d39a3e2d28d39cc47ed08b", [
       [ "lcdc_display_mode_normal", "group__lcd__interface.html#ggace4b674064d39a3e2d28d39cc47ed08ba250e3d53f02b0bcffd9e3f31c45c8733", null ],

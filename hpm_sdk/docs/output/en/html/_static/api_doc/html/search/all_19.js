@@ -9,7 +9,7 @@ var searchData=
   ['zero_6',['zero',['../structhpm__mcl__para.html#ad29865a44a08ccaeba7832fb7f4e0670',1,'hpm_mcl_para::zero'],['../structmcl__control__smc__cfg__t.html#aed579432d79414977de0849c71c0735b',1,'mcl_control_smc_cfg_t::zero']]],
   ['zero_5fcross_5fthreshold_7',['zero_cross_threshold',['../structsdm__comparator__config__t.html#adf0ec07c6c7fbb9307330c9b8888189f',1,'sdm_comparator_config_t']]],
   ['zero_5flength_5ftermination_8',['zero_length_termination',['../structdcd__qhd__t.html#ac6b2f17d99c36e9d905e4aa19ca4e51a',1,'dcd_qhd_t']]],
-  ['zq_9',['ZQ',['../structDDRPHY__Type.html#a6678eda84baac9845ccdc8fcb8dace94',1,'DDRPHY_Type']]],
+  ['zq_9',['ZQ',['../structDDRPHY__Type.html#a1b01d246cb8863e7b9ea0a9136c8ecc1',1,'DDRPHY_Type']]],
   ['zqctl0_10',['ZQCTL0',['../structDDRCTL__Type.html#a436f001a095c1ce2fcbb1700faa3411f',1,'DDRCTL_Type']]],
   ['zqctl1_11',['ZQCTL1',['../structDDRCTL__Type.html#a85ffc5bac2e400b149c59f3bf37c95e4',1,'DDRCTL_Type']]],
   ['zqstat_12',['ZQSTAT',['../structDDRCTL__Type.html#a3e232d4d2b3ee995a527d22df102a2c6',1,'DDRCTL_Type']]]

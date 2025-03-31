@@ -45,9 +45,16 @@ var searchData=
   ['esc_5fctrl_5fsignal_5ffunction_5ft_42',['esc_ctrl_signal_function_t',['../group__esc__interface.html#ga40fbe82036b22639e2d4c5e267688ad2',1,'hpm_esc_drv.h']]],
   ['esc_5feeprom_5fcmd_5ft_43',['esc_eeprom_cmd_t',['../group__esc__interface.html#ga3c7594a7a150bc5ba4aee21b6b54d1ee',1,'hpm_esc_drv.h']]],
   ['esc_5flatch_5fsource_5ft_44',['esc_latch_source_t',['../group__esc__interface.html#gad1df92c6cfbc9e350e70f202fceb83eb',1,'hpm_esc_drv.h']]],
-  ['ewdg_5fcnt_5fclk_5fsel_5ft_45',['ewdg_cnt_clk_sel_t',['../group__ewdg__interface.html#ga9a509cdb5b9bf7fcf0698d8501435b2b',1,'hpm_ewdg_drv.h']]],
-  ['ewdg_5flow_5fpower_5fmode_5ft_46',['ewdg_low_power_mode_t',['../group__ewdg__interface.html#ga99084a88c1fa40031054b67585e84715',1,'hpm_ewdg_drv.h']]],
-  ['ewdg_5frefresh_5funlock_5fmethod_5ft_47',['ewdg_refresh_unlock_method_t',['../group__ewdg__interface.html#ga0a3c25dee2b2577cec9b765ba5982715',1,'hpm_ewdg_drv.h']]],
-  ['ewdg_5fwindow_5flow_5flimit_5ft_48',['ewdg_window_low_limit_t',['../group__ewdg__interface.html#ga2325fa92237cc30c5d4c71b15503d2e0',1,'hpm_ewdg_drv.h']]],
-  ['ewdg_5fwindow_5fupper_5flimit_5ft_49',['ewdg_window_upper_limit_t',['../group__ewdg__interface.html#ga1e460ae4ca96e5847a23f278e8c69f37',1,'hpm_ewdg_drv.h']]]
+  ['eui_5fb_5fdisp_5fformat_5ft_45',['eui_b_disp_format_t',['../group__eui__interface.html#ga7ea0c8830b4bf002a911585f47cb5de2',1,'hpm_eui_drv.h']]],
+  ['eui_5fdedicate_5foutput_5flines_5ft_46',['eui_dedicate_output_lines_t',['../group__eui__interface.html#ga1f5df18cb4cedfd2fb75c95b35aec8ca',1,'hpm_eui_drv.h']]],
+  ['eui_5fdisp_5fctrl_5fidx_5ft_47',['eui_disp_ctrl_idx_t',['../group__eui__interface.html#ga9749f171d5d5fdb5caa095ee82949ab2',1,'hpm_eui_drv.h']]],
+  ['eui_5fdisp_5fdata_5fidx_5ft_48',['eui_disp_data_idx_t',['../group__eui__interface.html#ga88b596b1bbfd18f775abfbd865bf2769',1,'hpm_eui_drv.h']]],
+  ['eui_5firq_5fmask_5ft_49',['eui_irq_mask_t',['../group__eui__interface.html#gaeafa0a48250f370b5385fffe358053f4',1,'hpm_eui_drv.h']]],
+  ['eui_5ftime_5fid_5ft_50',['eui_time_id_t',['../group__eui__interface.html#gaf78384b384bc8df0f8397467433c8e23',1,'hpm_eui_drv.h']]],
+  ['eui_5fwork_5fmode_5ft_51',['eui_work_mode_t',['../group__eui__interface.html#gaf433dc6abe14dc9871255e2bba3cc68d',1,'hpm_eui_drv.h']]],
+  ['ewdg_5fcnt_5fclk_5fsel_5ft_52',['ewdg_cnt_clk_sel_t',['../group__ewdg__interface.html#ga9a509cdb5b9bf7fcf0698d8501435b2b',1,'hpm_ewdg_drv.h']]],
+  ['ewdg_5flow_5fpower_5fmode_5ft_53',['ewdg_low_power_mode_t',['../group__ewdg__interface.html#ga99084a88c1fa40031054b67585e84715',1,'hpm_ewdg_drv.h']]],
+  ['ewdg_5frefresh_5funlock_5fmethod_5ft_54',['ewdg_refresh_unlock_method_t',['../group__ewdg__interface.html#ga0a3c25dee2b2577cec9b765ba5982715',1,'hpm_ewdg_drv.h']]],
+  ['ewdg_5fwindow_5flow_5flimit_5ft_55',['ewdg_window_low_limit_t',['../group__ewdg__interface.html#ga2325fa92237cc30c5d4c71b15503d2e0',1,'hpm_ewdg_drv.h']]],
+  ['ewdg_5fwindow_5fupper_5flimit_5ft_56',['ewdg_window_upper_limit_t',['../group__ewdg__interface.html#ga1e460ae4ca96e5847a23f278e8c69f37',1,'hpm_ewdg_drv.h']]]
 ];

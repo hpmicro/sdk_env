@@ -1,10 +1,13 @@
 var HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h =
 [
+    [ "HPM_IP_FEATURE_ACMP_DAC_MATRIX", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#aa4168522ae68bd72f113ffd4d14e2a24", null ],
+    [ "HPM_IP_FEATURE_ACMP_FILT_LEN_EXTEND", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#af310437e153f1db09f02041ffd48c837", null ],
     [ "HPM_IP_FEATURE_ADC16_HAS_MOT_EN", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#aacd53eef9a610c94fb5ff48f9c3bd35e", null ],
     [ "HPM_IP_FEATURE_DAO_DATA_FORMAT_CONFIG", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#abfaeb7f13db91357b073195207af24b3", null ],
     [ "HPM_IP_FEATURE_DMAV2_BURST_IN_FIXED_TRANS", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#aa176bcc53dd074b909cc0812b3d63af8", null ],
     [ "HPM_IP_FEATURE_DMAV2_BYTE_ORDER_SWAP", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#ad27d91df7d8f4a6ed72a8528fb11d62d", null ],
     [ "HPM_IP_FEATURE_ENET_HAS_MII_MODE", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#a22a55689e40e4e3f3db3cec97e7c802c", null ],
+    [ "HPM_IP_FEATURE_EWDG_SOC_SUPPORT_TIMEOUT_INTERRUPT", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#adc0773594d48b09a85a6b1037dd4fb50", null ],
     [ "HPM_IP_FEATURE_FEMC_SRAM_CS1_CS2", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#a636fb48721725781def39fc8fc43ad92", null ],
     [ "HPM_IP_FEATURE_FFA_FP32", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#a44b4e7ad33e7814bbe38695b1266df88", null ],
     [ "HPM_IP_FEATURE_GPTMR_CNT_MODE", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#aacb138563ca0f52e50eb613c1f430fe5", null ],
@@ -29,6 +32,7 @@ var HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h =
     [ "HPM_IP_FEATURE_SPI_CS_SELECT", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#af7a12067c25aa6a0f50f971c39e7514f", null ],
     [ "HPM_IP_FEATURE_SPI_NEW_TRANS_COUNT", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#a43372dcce7b17c24a858c2e3706afbd4", null ],
     [ "HPM_IP_FEATURE_SPI_SUPPORT_DIRECTIO", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#aebf205427682b6a09b687d9a56a8e4ea", null ],
+    [ "HPM_IP_FEATURE_TRGM_HAS_TRGM_IN_OUT_STATUS", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#a86ccb39fde12fb350e1655e2efc488dd", null ],
     [ "HPM_IP_FEATURE_TRGM_HRPWM_CALIBRATION_1", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#aabc8d06ff6887cdf22aa9d418de5f192", null ],
     [ "HPM_IP_FEATURE_UART_9BIT_MODE", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#a7889ad15fddeb853ac4c2cf9f07489af", null ],
     [ "HPM_IP_FEATURE_UART_ADDR_MATCH", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#a57ed84096ba02abbe32ff9e6695e5559", null ],
@@ -38,5 +42,6 @@ var HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h =
     [ "HPM_IP_FEATURE_UART_IIR2", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#a213fd48b496276a9f217d9cb86192059", null ],
     [ "HPM_IP_FEATURE_UART_RX_EN", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#a232f562f18300e0eda5039031fb293e3", null ],
     [ "HPM_IP_FEATURE_UART_RX_IDLE_DETECT", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#aab5930a60e93d937d948bb1854cfad09", null ],
+    [ "HPM_IP_FEATURE_UART_STOP_BIT", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#a0cfb3effd25390e321eae63afb9edc82", null ],
     [ "HPM_IP_FEATURE_UART_TRIG_MODE", "HPM6E00_2HPM6E70_2hpm__soc__ip__feature_8h.html#a7e131d18b3ae8af3b379f0d2735ac9aa", null ]
 ];

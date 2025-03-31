@@ -31,10 +31,12 @@ var HPM5300_2HPM5361_2hpm__pcfg__drv_8h =
       [ "pcfg_pmc_periph_uart", "group__pcfg__interface.html#gga4471d0183b961ae9bdb70f1b98a988a6aa518ad33f2409e21e50aa89e7a418b38", null ]
     ] ],
     [ "pcfg_wakeup_src_t", "group__pcfg__interface.html#ga8189b2d880afe26808747af2225d2afa", [
+      [ "pcfg_wakeup_src_soc", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaac68f9ed219a27b45e5b0081c9840734d", null ],
       [ "pcfg_wakeup_src_puart", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaa8d277bd2e3d539a2a43f9ba6183c5e42", null ],
       [ "pcfg_wakeup_src_ptimer", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaaf6672d65e10bae147fbaf443ffa95f51", null ],
       [ "pcfg_wakeup_src_pwdg", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaa54530ef52461b5ed2a8d886761814102", null ],
-      [ "pcfg_wakeup_src_pgpio", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaa7cc7df3e475aba5124c525b7c483f032", null ]
+      [ "pcfg_wakeup_src_pgpio", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaa7cc7df3e475aba5124c525b7c483f032", null ],
+      [ "pcfg_wakeup_src_wkup", "group__pcfg__interface.html#gga8189b2d880afe26808747af2225d2afaa5b6a9d0ffc76f01665e6fbeee00de45e", null ]
     ] ],
     [ "pcfg_bandgap_is_trimmed", "HPM5300_2HPM5361_2hpm__pcfg__drv_8h.html#ga12defa029a359bafea6bf5ac4fd37ae8", null ],
     [ "pcfg_bandgap_reload_trim", "HPM5300_2HPM5361_2hpm__pcfg__drv_8h.html#ga2964c8b1ac520dc504a03e2aa183cf5b", null ],

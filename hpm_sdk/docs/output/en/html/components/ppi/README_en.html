@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. PPI Component &mdash; HPMicro Software Development Kit  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2. PLB Filter Component" href="../plb/filter/README_en.html" />
+    <link rel="prev" title="Components" href="../index_en.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../get_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../boards/index_en.html">Evaluation Boards</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_en.html">Components</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. PPI Component</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ppi-feature-introduction">1.1. PPI Feature Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ppi-configuration-introduction">1.2. PPI Configuration Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">1.3. PPI Component</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plb/filter/README_en.html">2. PLB Filter Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../i2c/README_en.html">3. I2C Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spi/README_en.html">4. SPI Component</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../samples/index_en.html">Samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../samples/drivers/index_en.html">Drivers Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docs/cmake_intro.html">SDK CMake API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_doc.html">SDK API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Change Log</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">HPMicro Software Development Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index_en.html">Components</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>PPI Component</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/components/ppi/README_en.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ppi-component">
+<span id="id1"></span><h1><span class="section-number">1. </span>PPI Component<a class="headerlink" href="#ppi-component" title="Permalink to this heading"></a></h1>
+<section id="ppi-feature-introduction">
+<h2><span class="section-number">1.1. </span>PPI Feature Introduction<a class="headerlink" href="#ppi-feature-introduction" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Supports 4 CS ports, each of which can be configured separately: address range (base address needs to be aligned with 1MB), port bit width (supports 8/16/32 bits) and command sequence (start/end index of command)</p></li>
+<li><p>There is a 32 bits data/address bus that supports: 32 bits data + 32 bits address (multiplexing mode), 16 bits data + 32 bits address (multiplexing mode), 8 bits data + 32 bits address (multiplexing mode), 16 bits data + 16 bits address (non multiplexing mode), 8 bits data + 24 bits address (non multiplexing mode)</p></li>
+<li><p>There are 4 valid byte selection ports (DM signal, used for SRAM’s UB/LB and other signals)</p></li>
+<li><p>There are 8 control lines (used for SRAM’s WE/OE/ADV signals)</p></li>
+<li><p>There is 1 clock line output (supporting clock always output and following instruction sequence output)</p></li>
+</ul>
+<img alt="../../_images/ppi_module.png" src="../../_images/ppi_module.png" />
+</section>
+<section id="ppi-configuration-introduction">
+<h2><span class="section-number">1.2. </span>PPI Configuration Introduction<a class="headerlink" href="#ppi-configuration-introduction" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p>CS Configuration
+The CS configuration structure is as follows:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ppi_port_size_t</span><span class="w"> </span><span class="n">port_size</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">addr_start_high_12bits</span><span class="p">;</span><span class="w">    </span><span class="cm">/* address space: 0xF8000000 ~ 0xFFFFFFFF */</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">addr_end_high_12bits</span><span class="p">;</span><span class="w">      </span><span class="cm">/* address space: 0xF8000000 ~ 0xFFFFFFFF */</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">addr_mask</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">sync_clk_en</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">sync_clk_sel</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">interval_cycle</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">rcmd_start0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">rcmd_end0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">rcmd_start1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">rcmd_end1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">wcmd_start0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">wcmd_end0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">wcmd_start1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">wcmd_end1</span><span class="p">;</span>
+<span class="cp">#if defined(HPM_IP_FEATURE_PPI_DM_POLARITY_EACH_CS) &amp;&amp; HPM_IP_FEATURE_PPI_DM_POLARITY_EACH_CS</span>
+<span class="w">    </span><span class="n">ppi_dm_valid_polarity_t</span><span class="w"> </span><span class="n">dm_polarity</span><span class="p">;</span>
+<span class="cp">#endif</span>
+<span class="p">}</span><span class="w"> </span><span class="n">ppi_cs_pin_config_t</span><span class="p">;</span><span class="w">    </span><span class="cm">/**&lt; ppi_cs_pin_config_t */</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The PPI memory address space is from 0xF800000 to 0xFFFFFFFF, which is <cite>Noncacheable</cite> attribute by default and can be configured as the <cite>Cacheable</cite> attribute through PMP. Note: PPI memory address space cacheable attribute only support: MEM_TYPE_MEM_WB_READ_WRITE_ALLOC - Memory, Write-back, Write-Allocate, Read-Allocate.</p></li>
+<li><p><cite>port_size</cite> is the port bit width, <cite>addr_start_high_12bits</cite> and <cite>addr_end_high_12bits</cite> are the top 12 bits of the start address and the top 12 bits of the end address, and <cite>addr_mask</cite> is the top 16 bit address mask.</p></li>
+<li><p><cite>sync_clk_en</cite> is whether to enable synchronization of the clock, <cite>sync_clk_sel</cite> is the time selection for CS output effective level (range from 0 to clkpin_cfg. cycle), and <cite>interval_cycle</cite> is the command interval time (unit: system clock cycle).</p></li>
+<li><p><cite>rcmd_start0</cite> and <cite>rcmd_end0</cite> are the start/end indexes of the first read command, while <cite>wcmd_start0</cite> and <cite>wcmd_end0</cite> are the start/end indexes of the first write command; <cite>rcmd_start1</cite> and <cite>rcmd_end1</cite> are the start/end indexes for the second and subsequent read commands, while <cite>wcmd_sart1</cite> and <cite>wcmd_end1</cite> are the start/end indexes for the second and subsequent write commands. For example, some devices that support burst transmission may have different timing for first and subsequent access, so each device can configure different command sequences for first and subsequent access. The start/end index corresponds to an index of 64 command words, ranging from 0 to 63.</p></li>
+</ul>
+</li>
+<li><p>CMD Configuration
+- There are a total of 64 command words, shared by 4 CS.
+- Each data transmission can be divided into several segments, each described by a command word. For example, in the following chapter “Introduction to PPI Components”, read/write instructions are divided into four segments.
+- For each segment, the duration (<cite>cmd_cycle</cite>), output level of CS pin (<cite>cs_pin_value</cite>), DQ pin function (<cite>ad_func_sel</cite>, data/address, 1 byte per group), DQ pin direction (<cite>ad_pin_dir</cite>, input/output, 1 byte per group), source of output bytes (<cite>byte_sel</cite>), level of 8 control lines (<cite>ctrl_pin_value</cite>), clock output enable (<cite>clk_output</cite>, clock pin is effective in cmd control output mode) can be configured. The structure of the CMD command word is as follows:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">cs_pin_value</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">clk_output</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">cmd_cycle</span><span class="p">;</span>
+<span class="w">  </span><span class="n">ppi_ad_func_t</span><span class="w"> </span><span class="n">ad_func_sel</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">  </span><span class="n">ppi_ad_pin_dir_t</span><span class="w"> </span><span class="n">ad_pin_dir</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">  </span><span class="n">ppi_byte_sel_t</span><span class="w"> </span><span class="n">byte_sel</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">ctrl_pin_value</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span>
+<span class="p">}</span><span class="w"> </span><span class="n">ppi_cmd_config_t</span><span class="p">;</span><span class="w">    </span><span class="cm">/**&lt; ppi_cmd_config_t */</span>
+</pre></div>
+</div>
+</li>
+<li><p>Control Pins Configuration
+- There are a total of 8 control signal pins.
+- The direction and polarity of each control pin can be independently configured, and the configured APIs are as follows:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ppi_config_ctrl_pin_polarity</span><span class="p">(</span><span class="n">PPI_Type</span><span class="w"> </span><span class="o">*</span><span class="n">ppi</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">ppi_ctrl_polarity_t</span><span class="w"> </span><span class="n">pol</span><span class="p">);</span>
+<span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ppi_set_ctrl_pin_dir</span><span class="p">(</span><span class="n">PPI_Type</span><span class="w"> </span><span class="o">*</span><span class="n">ppi</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">ppi_ctrl_pin_dir_t</span><span class="w"> </span><span class="n">dir</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+<li><p>Clock Pin Configuration
+- There is a total of 1 clock signal output.
+- The clock has two working modes: (1) always output; (2) The output is controlled by CMD, that is, ppi_cmdunconfig.clk_output controls the clock output.
+- The structure of clock pin configuration is as follows:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">cycle_num</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">high_num</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">low_num</span><span class="p">;</span>
+<span class="w">  </span><span class="n">ppi_clk_output_mode_t</span><span class="w"> </span><span class="n">mode</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">revert</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="n">ppi_clk_pin_config_t</span><span class="p">;</span><span class="w">    </span><span class="cm">/**&lt; ppi_clk_pin_config_t */</span>
+</pre></div>
+</div>
+<p>Among them, the three parameters of <cite>cycle_num</cite>, <cite>high_num</cite>, and <cite>low_num</cite> control the cycle of the output clock, the <cite>mode</cite> configures the working mode, and the <cite>revert</cite> controls whether the clock output is reversed.</p>
+</li>
+</ul>
+</section>
+<section id="id2">
+<h2><span class="section-number">1.3. </span>PPI Component<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>At present, PPI components have implemented asynchronous SRAM read and write timing, supporting address/data multiplexing mode and non multiplexing mode. The corresponding pins for each mode are as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>AD multiplexing</p></th>
+<th class="head"><p>Data</p></th>
+<th class="head"><p>Address</p></th>
+<th class="head"><p>Address Latch</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>32 bits data + 32 bits address</p></td>
+<td><p>D0 - D31 : DQ0 - DQ31</p></td>
+<td><p>A0 - A31 : DQ0 - DQ31</p></td>
+<td><p>DQ0 - DQ31 need address latch</p></td>
+</tr>
+<tr class="row-odd"><td><p>16 bits data + 32 bits address</p></td>
+<td><p>D0 - D15 : DQ0 - DQ15</p></td>
+<td><p>A0 - A31 : DQ0 - DQ31</p></td>
+<td><p>DQ0 - DQ15 need address latch, while DQ15 - DQ31 don’t need address latch</p></td>
+</tr>
+<tr class="row-even"><td><p>8 bits data + 32 bits address</p></td>
+<td><p>D0 - D7 : DQ0 - DQ7</p></td>
+<td><p>A0 - A31 : DQ0 - DQ31</p></td>
+<td><p>DQ0 - DQ7 need address latch, while DQ8 - DQ31 don’t need address latch</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>AD Non multiplexing</p></th>
+<th class="head"><p>Data</p></th>
+<th class="head"><p>Address</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>16 bits data + 16 bits address</p></td>
+<td><p>D0 - D15 : DQ0 - DQ15</p></td>
+<td><p>A0 - A15 : DQ16 - DQ31</p></td>
+</tr>
+<tr class="row-odd"><td><p>8 bits data + 24 bits address</p></td>
+<td><p>D0 - D7 : DQ0 - DQ7</p></td>
+<td><p>A0 - A23 : DQ8 - DQ31</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Note: Support DQ signals selection. For example, DQ0-7 signals select PPI’s DQ8-15 pins.</p></li>
+</ul>
+<p>The structure of asynchronous SRAM configuration is as follows:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">base_address</span><span class="p">;</span><span class="w">              </span><span class="cm">/**&lt; external SRAM base address, should be 1MB aligned */</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">size_in_byte</span><span class="p">;</span><span class="w">              </span><span class="cm">/**&lt; external SRAM size in byte */</span>
+<span class="w">    </span><span class="n">ppi_port_size_t</span><span class="w"> </span><span class="n">port_size</span><span class="p">;</span><span class="w">          </span><span class="cm">/**&lt; port size */</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">ad_mux_mode</span><span class="p">;</span><span class="w">                   </span><span class="cm">/**&lt; addr and data mux mode */</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">cs_valid_polarity</span><span class="p">;</span><span class="w">             </span><span class="cm">/**&lt; cs valid polarity */</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">dm_valid_polarity</span><span class="p">;</span><span class="w">             </span><span class="cm">/**&lt; dm valid polarity */</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">addr_valid_polarity</span><span class="p">;</span><span class="w">           </span><span class="cm">/**&lt; addr valid polarity */</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">adv_ctrl_pin</span><span class="p">;</span><span class="w">               </span><span class="cm">/**&lt; adv ctrl pin number, 0 - 7 */</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">rel_ctrl_pin</span><span class="p">;</span><span class="w">               </span><span class="cm">/**&lt; rel ctrl pin number, 0 - 7 */</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">wel_ctrl_pin</span><span class="p">;</span><span class="w">               </span><span class="cm">/**&lt; wel ctrl pin number, 0 - 7 */</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">as_in_ns</span><span class="p">;</span><span class="w">                  </span><span class="cm">/**&lt; address setup time */</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">ah_in_ns</span><span class="p">;</span><span class="w">                  </span><span class="cm">/**&lt; address hold time */</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">rel_in_ns</span><span class="p">;</span><span class="w">                 </span><span class="cm">/**&lt; RE low time */</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">reh_in_ns</span><span class="p">;</span><span class="w">                 </span><span class="cm">/**&lt; RE high time */</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">wel_in_ns</span><span class="p">;</span><span class="w">                 </span><span class="cm">/**&lt; WE low time */</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">weh_in_ns</span><span class="p">;</span><span class="w">                 </span><span class="cm">/**&lt; WE high time */</span>
+<span class="w">    </span><span class="n">ppi_dq_pins_t</span><span class="w"> </span><span class="n">dq_sig_sel</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="w">        </span><span class="cm">/**&lt; dq signal selection.</span>
+<span class="cm">                                         *   dq_sig_sel[0] is signal dq0-7 select ppi dq pins,</span>
+<span class="cm">                                         *   dq_sig_sel[1] is signal dq8-15 select ppi dq pins,</span>
+<span class="cm">                                         *   dq_sig_sel[2] is signal dq16-23 select ppi dq pins,</span>
+<span class="cm">                                         *   dq_sig_sel[3] is signal dq24-31 select ppi dq pins.</span>
+<span class="cm">                                         */</span>
+<span class="p">}</span><span class="w"> </span><span class="n">ppi_async_sram_config_t</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The corresponding read and write timing diagram is:</p>
+<img alt="../../_images/ppi_async_sram_rw.png" src="../../_images/ppi_async_sram_rw.png" />
+<p>Among them, CS is the chip selection signal and ADV, RE, and WE are control signals (selected from 8 control lines). The valid polarity of CS, ADV, and DM can be configured.</p>
+<p>The API for configuring asynchronous SRAM in PPI components is as follows. Each CS configuration will occupy 8 CMD command words, so cmd_start_index needs to be set to a multiple of 8, such as 0, 8, 16, 24, etc.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @brief config async sram</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in] ppi PPI base address</span>
+<span class="cm"> * @param[in] cs_index cs index, value: 0 - 3</span>
+<span class="cm"> * @param[in] cmd_index cmd start index, should be a multiple of 8, such as 0, 8, 16, 24 ...</span>
+<span class="cm"> * @param[in] config async sram config structure pointer, @ref ppi_async_sram_config_t</span>
+<span class="cm"> */</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">ppi_config_async_sram</span><span class="p">(</span><span class="n">PPI_Type</span><span class="w"> </span><span class="o">*</span><span class="n">ppi</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">cs_index</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">cmd_start_index</span><span class="p">,</span><span class="w"> </span><span class="n">ppi_async_sram_config_t</span><span class="w"> </span><span class="o">*</span><span class="n">config</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2025, HPMicro.
+      <span class="lastupdated">Last updated on Mar 31, 2025.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

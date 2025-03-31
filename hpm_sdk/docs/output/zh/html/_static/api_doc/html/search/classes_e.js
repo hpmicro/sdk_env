@@ -10,5 +10,6 @@ var searchData=
   ['ov5640_5flight_5fmode_5fconfig_5ft_7',['ov5640_light_mode_config_t',['../structov5640__light__mode__config__t.html',1,'']]],
   ['ov5640_5freg_5fval_5ft_8',['ov5640_reg_val_t',['../structov5640__reg__val__t.html',1,'']]],
   ['ov5640_5fresolution_5fparam_5ft_9',['ov5640_resolution_param_t',['../structov5640__resolution__param__t.html',1,'']]],
-  ['ov5640_5fspecial_5feffect_5fconfig_5ft_10',['ov5640_special_effect_config_t',['../structov5640__special__effect__config__t.html',1,'']]]
+  ['ov5640_5fspecial_5feffect_5fconfig_5ft_10',['ov5640_special_effect_config_t',['../structov5640__special__effect__config__t.html',1,'']]],
+  ['owr_5fconfig_5ft_11',['owr_config_t',['../structowr__config__t.html',1,'']]]
 ];

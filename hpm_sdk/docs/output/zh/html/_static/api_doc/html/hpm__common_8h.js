@@ -46,6 +46,7 @@ var hpm__common_8h =
     [ "HPM_NUM_TO_EVEN_CEILING", "group__common__interface.html#gae28d96fc0f52e4d7dc2293c1b7c62c0f", null ],
     [ "HPM_NUM_TO_EVEN_FLOOR", "group__common__interface.html#ga9b9cd52acbd0627bcecb82823b7ef165", null ],
     [ "HPM_PI", "group__common__interface.html#gac2dd9908fbbc94c75bca994cf381c8c2", null ],
+    [ "HPM_STRINGIFY", "group__common__interface.html#ga60045f4c87c1d25d128b217dd92e6f8e", null ],
     [ "IS_HPM_BIT_CLR", "group__common__interface.html#ga54d4cf93b299916066f1f9417d4cf5d6", null ],
     [ "IS_HPM_BIT_SET", "group__common__interface.html#gac6cf8bd74d90deca3777ffc68a718ae8", null ],
     [ "IS_HPM_BITMASK_CLR", "group__common__interface.html#ga7b40dad25644eb1ce4eca8daabb140b2", null ],

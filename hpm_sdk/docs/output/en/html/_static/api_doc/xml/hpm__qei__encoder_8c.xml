@@ -1,0 +1,601 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="hpm__qei__encoder_8c" kind="file" language="C++">
+    <compoundname>hpm_qei_encoder.c</compoundname>
+    <includes refid="hpm__qei__encoder_8h" local="yes">hpm_qei_encoder.h</includes>
+    <includes local="yes">board.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>components/plb/qei_encoder/hpm_qei_encoder.c</label>
+        <link refid="hpm__qei__encoder_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hpm_qei_encoder.h</label>
+        <link refid="hpm__qei__encoder_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>hpm_plb_drv.h</label>
+        <link refid="hpm__plb__drv_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>hpm_trgm_drv.h</label>
+        <link refid="hpm__trgm__drv_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>assert.h</label>
+      </node>
+      <node id="16">
+        <label>board.h</label>
+      </node>
+      <node id="11">
+        <label>hpm_plb_regs.h</label>
+      </node>
+      <node id="3">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="13">
+        <label>hpm_soc_ip_feature.h</label>
+      </node>
+      <node id="14">
+        <label>hpm_trgm_regs.h</label>
+      </node>
+      <node id="15">
+        <label>hpm_trgmmux_src.h</label>
+      </node>
+      <node id="7">
+        <label>stdbool.h</label>
+      </node>
+      <node id="8">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="hpm__qei__encoder_8c_1a16d89ce616b8ccb196448f7e4b7b84f5" prot="public" static="no">
+        <name>PLB_BASE_NUM</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/plb/qei_encoder/hpm_qei_encoder.c" line="11" column="9" bodyfile="components/plb/qei_encoder/hpm_qei_encoder.c" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="hpm__qei__encoder_8c_1a756d0d7954f63def2afed50906544cf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t plb_qei_encoder_init</definition>
+        <argsstring>(PLB_Type *plb, TRGM_Type *trgm, plb_qei_encoder_channel_t qei_chn, plb_qei_encoder_cfg_t *cfg)</argsstring>
+        <name>plb_qei_encoder_init</name>
+        <param>
+          <type><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> *</type>
+          <declname>plb</declname>
+        </param>
+        <param>
+          <type><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> *</type>
+          <declname>trgm</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref></type>
+          <declname>qei_chn</declname>
+        </param>
+        <param>
+          <type><ref refid="structplb__qei__encoder__cfg__t" kindref="compound">plb_qei_encoder_cfg_t</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+<para>Initializing the encoder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trgm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qei_chn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structplb__qei__encoder__cfg__t" kindref="compound">plb_qei_encoder_cfg_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref> Whether the initialization is successful or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>pwm</para>
+<para>pulse</para>
+<para>z phase</para>
+<para>Wait for the circuit to stabilize</para>
+<para>Zeroing registers, because of the timing logic, requires multiple zeroes to completely erase the data</para>
+        </inbodydescription>
+        <location file="components/plb/qei_encoder/hpm_qei_encoder.c" line="13" column="12" bodyfile="components/plb/qei_encoder/hpm_qei_encoder.c" bodystart="13" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__qei__encoder_8c_1adefcdbd1933d28311caa5a2f098937b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t plb_qei_encoder_get_phase_count</definition>
+        <argsstring>(PLB_Type *plb, plb_qei_encoder_channel_t qei_chn)</argsstring>
+        <name>plb_qei_encoder_get_phase_count</name>
+        <param>
+          <type><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> *</type>
+          <declname>plb</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref></type>
+          <declname>qei_chn</declname>
+        </param>
+        <briefdescription>
+<para>Get location information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qei_chn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Encoder position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/plb/qei_encoder/hpm_qei_encoder.c" line="226" column="10" bodyfile="components/plb/qei_encoder/hpm_qei_encoder.c" bodystart="226" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__qei__encoder_8c_1a007a7b3881a6198339f637632ff2f5d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void plb_qei_encoder_set_phase_count</definition>
+        <argsstring>(PLB_Type *plb, plb_qei_encoder_channel_t qei_chn, uint32_t val)</argsstring>
+        <name>plb_qei_encoder_set_phase_count</name>
+        <param>
+          <type><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> *</type>
+          <declname>plb</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref></type>
+          <declname>qei_chn</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Set phase count. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qei_chn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/plb/qei_encoder/hpm_qei_encoder.c" line="231" column="6" bodyfile="components/plb/qei_encoder/hpm_qei_encoder.c" bodystart="231" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__qei__encoder_8c_1aa8a88fa8805c25752e3ee0cce41364f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t plb_qei_encoder_get_laps_number</definition>
+        <argsstring>(PLB_Type *plb, plb_qei_encoder_channel_t qei_chn)</argsstring>
+        <name>plb_qei_encoder_get_laps_number</name>
+        <param>
+          <type><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> *</type>
+          <declname>plb</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref></type>
+          <declname>qei_chn</declname>
+        </param>
+        <briefdescription>
+<para>Get Lap Data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qei_chn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>laps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/plb/qei_encoder/hpm_qei_encoder.c" line="236" column="10" bodyfile="components/plb/qei_encoder/hpm_qei_encoder.c" bodystart="236" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__qei__encoder_8c_1a88eac8bb303928f2fdc9a2c52e01a21f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void plb_qei_encoder_set_laps_number</definition>
+        <argsstring>(PLB_Type *plb, plb_qei_encoder_channel_t qei_chn, int32_t val)</argsstring>
+        <name>plb_qei_encoder_set_laps_number</name>
+        <param>
+          <type><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> *</type>
+          <declname>plb</declname>
+        </param>
+        <param>
+          <type><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref></type>
+          <declname>qei_chn</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Set Lap data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structPLB__Type" kindref="compound">PLB_Type</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qei_chn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>laps </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/plb/qei_encoder/hpm_qei_encoder.c" line="241" column="6" bodyfile="components/plb/qei_encoder/hpm_qei_encoder.c" bodystart="241" bodyend="244"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2024<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__qei__encoder_8h" kindref="compound">hpm_qei_encoder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;board.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PLB_BASE_NUM<sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__qei__encoder_8c_1a756d0d7954f63def2afed50906544cf6" kindref="member">plb_qei_encoder_init</ref>(<ref refid="structPLB__Type" kindref="compound">PLB_Type</ref><sp/>*plb,<sp/><ref refid="structTRGM__Type" kindref="compound">TRGM_Type</ref><sp/>*trgm,<sp/><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref><sp/>qei_chn,<sp/><ref refid="structplb__qei__encoder__cfg__t" kindref="compound">plb_qei_encoder_cfg_t</ref><sp/>*cfg)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>chn;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionplb__type__a__truth__t" kindref="compound">plb_type_a_truth_t</ref><sp/>plb_type_a_lut<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga58e3ca86d242fb418571db5a847f2098" kindref="member">trgm_output_t</ref><sp/>trgm_output_cfg<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1gae750c6698cbcdaacbeb6077149d5f29e" kindref="member">trgm_filter_t</ref><sp/>trgm_filter_cfg<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>chn<sp/>=<sp/>qei_chn;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1a2af940f7d731a75c629a374cb61b6f46" kindref="member">mode</ref><sp/>==<sp/><ref refid="hpm__qei__encoder_8h_1af5945b5ca8c9399b25a32404956474c8a04a65e9bfc9c7caed1248d541cb59a2b" kindref="member">plb_abz_mode</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(chn<sp/>==<sp/><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfbad6966a69b3449a3dc2f6d04257de4f44" kindref="member">plb_qei_encoder_channel_7</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_filter_cfg.<ref refid="structtrgm__input__filter_1a943f0746a9e67ba4981816e9de2fd25a" kindref="member">sync</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_filter_cfg.<ref refid="structtrgm__input__filter_1aa846fe6dd2656b43c4c447e4689d4fff" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_filter_cfg.<ref refid="structtrgm__input__filter_1a16a2364957e449ee54ff38621dbd73a0" kindref="member">mode</ref><sp/>=<sp/><ref refid="group__trgm__interface_1ggacffb722a7799f4657bb946398552f583a13cb9b087eee300c274b79e73d2410fb" kindref="member">trgm_filter_mode_rapid_change</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_filter_cfg.<ref refid="structtrgm__input__filter_1acad04f504c382febdc286b4df5ba238a" kindref="member">filter_length</ref><sp/>=<sp/>cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1acbcc58fc04146b123721e0147370387b" kindref="member">filter_length</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga214a8f72afafd85a808c8221c83d1f5d" kindref="member">trgm_filter_config</ref>(trgm,<sp/><ref refid="HPM6E00_2HPM6E50_2hpm__trgmmux__src_8h_1a7ffe9c33b0299e59e17e2d1b384b1f32" kindref="member">HPM_TRGM0_FILTER_SRC_TRGM0_P00</ref><sp/>+<sp/>(cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1ac389e4e4395e887aa1799b17380d4c0f" kindref="member">trgm_input</ref>.<ref refid="structplb__qei__encoder__trgmux__input__t_1a3acbdaa6cb44a0b8c6eade0794553103" kindref="member">qei_a</ref><sp/>-<sp/><ref refid="HPM6E00_2HPM6E50_2hpm__trgmmux__src_8h_1a88042475988fd923b3abf407915b8c8c" kindref="member">HPM_TRGM0_INPUT_SRC_TRGM0_P00</ref>),<sp/>&amp;trgm_filter_cfg);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga214a8f72afafd85a808c8221c83d1f5d" kindref="member">trgm_filter_config</ref>(trgm,<sp/><ref refid="HPM6E00_2HPM6E50_2hpm__trgmmux__src_8h_1a7ffe9c33b0299e59e17e2d1b384b1f32" kindref="member">HPM_TRGM0_FILTER_SRC_TRGM0_P00</ref><sp/>+<sp/>(cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1ac389e4e4395e887aa1799b17380d4c0f" kindref="member">trgm_input</ref>.<ref refid="structplb__qei__encoder__trgmux__input__t_1a139ea071d77a94116b5262e2eb3e52b1" kindref="member">qei_b</ref><sp/>-<sp/><ref refid="HPM6E00_2HPM6E50_2hpm__trgmmux__src_8h_1a88042475988fd923b3abf407915b8c8c" kindref="member">HPM_TRGM0_INPUT_SRC_TRGM0_P00</ref>),<sp/>&amp;trgm_filter_cfg);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a7288c47c3db81599af8cc9327a9f4dc1" kindref="member">trgm_output_pulse_at_input_both_edge</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/>cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1ac389e4e4395e887aa1799b17380d4c0f" kindref="member">trgm_input</ref>.<ref refid="structplb__qei__encoder__trgmux__input__t_1a3acbdaa6cb44a0b8c6eade0794553103" kindref="member">qei_a</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM5300_2ip_2hpm__trgm__regs_8h_1aabe46d7529c058fd2239c59865874a8d" kindref="member">TRGM_TRGOCFG_PLB_IN_00</ref><sp/>+<sp/>chn<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a7288c47c3db81599af8cc9327a9f4dc1" kindref="member">trgm_output_pulse_at_input_both_edge</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/>cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1ac389e4e4395e887aa1799b17380d4c0f" kindref="member">trgm_input</ref>.<ref refid="structplb__qei__encoder__trgmux__input__t_1a139ea071d77a94116b5262e2eb3e52b1" kindref="member">qei_b</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM5300_2ip_2hpm__trgm__regs_8h_1a4e4df96e5c5dc61b857a9d80ade7b43d" kindref="member">TRGM_TRGOCFG_PLB_IN_01</ref><sp/>+<sp/>chn<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75aeead3c910b8a94d942ed87c2357c197d" kindref="member">trgm_output_same_as_input</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/>cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1ac389e4e4395e887aa1799b17380d4c0f" kindref="member">trgm_input</ref>.<ref refid="structplb__qei__encoder__trgmux__input__t_1a3acbdaa6cb44a0b8c6eade0794553103" kindref="member">qei_a</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM5300_2ip_2hpm__trgm__regs_8h_1a5289a99918e20a935eddb871437363a2" kindref="member">TRGM_TRGOCFG_PLB_IN_02</ref><sp/>+<sp/>chn<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75aeead3c910b8a94d942ed87c2357c197d" kindref="member">trgm_output_same_as_input</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/>cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1ac389e4e4395e887aa1799b17380d4c0f" kindref="member">trgm_input</ref>.<ref refid="structplb__qei__encoder__trgmux__input__t_1a139ea071d77a94116b5262e2eb3e52b1" kindref="member">qei_b</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM5300_2ip_2hpm__trgm__regs_8h_1a96aa24062efaaa9edcfcc664a317a9e8" kindref="member">TRGM_TRGOCFG_PLB_IN_03</ref><sp/>+<sp/>chn<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM5300_2HPM5321_2hpm__trgmmux__src_8h_1a2a2388a2b7b2045f2bf0adb85f074fca" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT00</ref><sp/>+<sp/>chn<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM6E00_2ip_2hpm__trgm__regs_8h_1a23df5de3dabcd25dae8586314d3be96a" kindref="member">TRGM_TRGOCFG_PLB_IN_32</ref><sp/>+<sp/>chn<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM5300_2HPM5321_2hpm__trgmmux__src_8h_1ab8c2c63bbd370a14885c100baec8febb" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT01</ref><sp/>+<sp/>chn<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM6E00_2ip_2hpm__trgm__regs_8h_1aa8e1e4353394790a65f62495c0f0ceda" kindref="member">TRGM_TRGOCFG_PLB_IN_33</ref><sp/>+<sp/>chn<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>plb_type_a_lut.<ref refid="unionplb__type__a__truth__t_1a79900419f616e4410804236fd0e410eb" kindref="member">val</ref><sp/>=<sp/>0x2442;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga3e797b9f47b01ca234d8efaf86390d6b" kindref="member">plb_type_a_set_lut</ref>(plb,<sp/>chn,<sp/>plb_type_a_table0,<sp/>&amp;plb_type_a_lut);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>plb_type_a_lut.<ref refid="unionplb__type__a__truth__t_1a79900419f616e4410804236fd0e410eb" kindref="member">val</ref><sp/>=<sp/>0x4224;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga3e797b9f47b01ca234d8efaf86390d6b" kindref="member">plb_type_a_set_lut</ref>(plb,<sp/>chn,<sp/>plb_type_a_table1,<sp/>&amp;plb_type_a_lut);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gaef0c0bcdd9e1ab9c6df3e813294131d7" kindref="member">plb_type_b_set_all_slice</ref>(plb,<sp/>chn,<sp/><ref refid="group__plb__interface_1ggaed07ec6802a1d19ae7d4081f623c6492aa8d9da0849ec85d9fb9a46e87201dc59" kindref="member">plb_slice_opt_keep</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gacc22a0097fc83cec521c16f7c94aacaf" kindref="member">plb_type_b_set_lut</ref>(plb,<sp/>chn,<sp/><ref refid="group__plb__interface_1gga07e1866501b646ecd5305021411ac592a84bf5c1ea4bf2dc96d089bcbf35c7a81" kindref="member">plb_type_b_slice_1</ref>,<sp/><ref refid="group__plb__interface_1ggaed07ec6802a1d19ae7d4081f623c6492a22f4f26c2e0b52c23e4c543a12497905" kindref="member">plb_slice_opt_add_one</ref>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gacc22a0097fc83cec521c16f7c94aacaf" kindref="member">plb_type_b_set_lut</ref>(plb,<sp/>chn,<sp/><ref refid="group__plb__interface_1gga07e1866501b646ecd5305021411ac592aa13095e1465090413aadc996255d655d" kindref="member">plb_type_b_slice_2</ref>,<sp/><ref refid="group__plb__interface_1ggaed07ec6802a1d19ae7d4081f623c6492a3773167bfd2c22e7a1607d6266969d74" kindref="member">plb_slice_opt_sub_one</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1ae1ee5a17320c2a07f7a79b3b7fca1781" kindref="member">enable_phase</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga355ec546402821e0f7a7131539ea2352" kindref="member">plb_type_b_set_lut_range_mask</ref>(plb,<sp/>chn,<sp/>0x00f0,<sp/><ref refid="group__plb__interface_1ggaed07ec6802a1d19ae7d4081f623c6492a79056e06d92759e786aea100766f7382" kindref="member">plb_slice_opt_get_cmp1_val</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga355ec546402821e0f7a7131539ea2352" kindref="member">plb_type_b_set_lut_range_mask</ref>(plb,<sp/>chn,<sp/>0x0f00,<sp/><ref refid="group__plb__interface_1ggaed07ec6802a1d19ae7d4081f623c6492a0263f59e59b2ba41d67a2bbdd72ff82c" kindref="member">plb_slice_opt_get_cmp0_val</ref>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gad50c123867091c92e40604991d06ddd5" kindref="member">plb_type_b_set_cmp_mode</ref>(plb,<sp/>chn,<sp/><ref refid="group__plb__interface_1gga2252b3c31528ffce1d38ec0ff1c19e18a27e2c1af61e2eb8904f7eea8da184e83" kindref="member">plb_type_b_cmp2</ref>,<sp/><ref refid="group__plb__interface_1ggafe02cfb50711d04323f018c6e8efa97ca380e036e6e4226c4ca59c5e1a54a23b5" kindref="member">plb_cmp_mode_eq</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gad50c123867091c92e40604991d06ddd5" kindref="member">plb_type_b_set_cmp_mode</ref>(plb,<sp/>chn,<sp/><ref refid="group__plb__interface_1gga2252b3c31528ffce1d38ec0ff1c19e18a0c968aab767297f83695479589dd488f" kindref="member">plb_type_b_cmp3</ref>,<sp/><ref refid="group__plb__interface_1ggafe02cfb50711d04323f018c6e8efa97ca380e036e6e4226c4ca59c5e1a54a23b5" kindref="member">plb_cmp_mode_eq</ref>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga4f27f5fd15f78d6751875ab9d9f8c122" kindref="member">plb_type_b_set_cmp_val</ref>(plb,<sp/>chn,<sp/><ref refid="group__plb__interface_1gga2252b3c31528ffce1d38ec0ff1c19e18a1375e46b7ddf21a45b406ba3a7dd982e" kindref="member">plb_type_b_cmp0</ref>,<sp/>cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1a3c1689a4e1239d9c400235e3455a18d0" kindref="member">phase_cnt</ref><sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga4f27f5fd15f78d6751875ab9d9f8c122" kindref="member">plb_type_b_set_cmp_val</ref>(plb,<sp/>chn,<sp/><ref refid="group__plb__interface_1gga2252b3c31528ffce1d38ec0ff1c19e18a05c46bc1aff54a747262481e6c06dac5" kindref="member">plb_type_b_cmp1</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga4f27f5fd15f78d6751875ab9d9f8c122" kindref="member">plb_type_b_set_cmp_val</ref>(plb,<sp/>chn,<sp/><ref refid="group__plb__interface_1gga2252b3c31528ffce1d38ec0ff1c19e18a27e2c1af61e2eb8904f7eea8da184e83" kindref="member">plb_type_b_cmp2</ref>,<sp/>cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1a3c1689a4e1239d9c400235e3455a18d0" kindref="member">phase_cnt</ref>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga4f27f5fd15f78d6751875ab9d9f8c122" kindref="member">plb_type_b_set_cmp_val</ref>(plb,<sp/>chn,<sp/><ref refid="group__plb__interface_1gga2252b3c31528ffce1d38ec0ff1c19e18a0c968aab767297f83695479589dd488f" kindref="member">plb_type_b_cmp3</ref>,<sp/>-1);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1a3c1689a4e1239d9c400235e3455a18d0" kindref="member">phase_cnt</ref><sp/>&lt;<sp/>4)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1a2af940f7d731a75c629a374cb61b6f46" kindref="member">mode</ref><sp/>==<sp/><ref refid="hpm__qei__encoder_8h_1af5945b5ca8c9399b25a32404956474c8a04a65e9bfc9c7caed1248d541cb59a2b" kindref="member">plb_abz_mode</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1a2af940f7d731a75c629a374cb61b6f46" kindref="member">mode</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="hpm__qei__encoder_8h_1af5945b5ca8c9399b25a32404956474c8a1ca03ed27d6b08e7fc5aa976a4eca57c" kindref="member">plb_ab_mode</ref>:</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM6E00_2HPM6E50_2hpm__trgmmux__src_8h_1a045299f70b1d86320d7b9ec58feb3f7e" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT34</ref><sp/>+<sp/>chn<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM6E00_2ip_2hpm__trgm__regs_8h_1ad2df4e09e16c1c8488627bb95f2cd205" kindref="member">TRGM_TRGOCFG_PLB_IN_34</ref><sp/>+<sp/>chn<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM6E00_2HPM6E50_2hpm__trgmmux__src_8h_1a1c8fba749006a61af17225ca79d283aa" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT35</ref><sp/>+<sp/>chn<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM6E00_2ip_2hpm__trgm__regs_8h_1ad598425de136a35344dcbe0a22b4c142" kindref="member">TRGM_TRGOCFG_PLB_IN_35</ref><sp/>+<sp/>chn<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="hpm__qei__encoder_8h_1af5945b5ca8c9399b25a32404956474c8a04a65e9bfc9c7caed1248d541cb59a2b" kindref="member">plb_abz_mode</ref>:</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1a2eeb1fe887650eae5896d3916265774b" kindref="member">enable_z_pin</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM5300_2HPM5321_2hpm__trgmmux__src_8h_1ab8c2c63bbd370a14885c100baec8febb" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT01</ref><sp/>+<sp/>(chn<sp/>+<sp/>1)<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM6E00_2ip_2hpm__trgm__regs_8h_1a23df5de3dabcd25dae8586314d3be96a" kindref="member">TRGM_TRGOCFG_PLB_IN_32</ref><sp/>+<sp/>(chn<sp/>+<sp/>1)<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM5300_2HPM5321_2hpm__trgmmux__src_8h_1a761a5bd530e7eda03df83b2d46809613" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT02</ref><sp/>+<sp/>(chn<sp/>+<sp/>1)<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM6E00_2ip_2hpm__trgm__regs_8h_1aa8e1e4353394790a65f62495c0f0ceda" kindref="member">TRGM_TRGOCFG_PLB_IN_33</ref><sp/>+<sp/>(chn<sp/>+<sp/>1)<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM5300_2HPM5321_2hpm__trgmmux__src_8h_1ab8c2c63bbd370a14885c100baec8febb" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT01</ref><sp/>+<sp/>(chn<sp/>+<sp/>1)<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM6E00_2ip_2hpm__trgm__regs_8h_1ad2df4e09e16c1c8488627bb95f2cd205" kindref="member">TRGM_TRGOCFG_PLB_IN_34</ref><sp/>+<sp/>chn<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM5300_2HPM5321_2hpm__trgmmux__src_8h_1a761a5bd530e7eda03df83b2d46809613" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT02</ref><sp/>+<sp/>(chn<sp/>+<sp/>1)<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM6E00_2ip_2hpm__trgm__regs_8h_1ad598425de136a35344dcbe0a22b4c142" kindref="member">TRGM_TRGOCFG_PLB_IN_35</ref><sp/>+<sp/>chn<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM6E00_2HPM6E50_2hpm__trgmmux__src_8h_1a045299f70b1d86320d7b9ec58feb3f7e" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT34</ref><sp/>+<sp/>chn<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM6E00_2ip_2hpm__trgm__regs_8h_1a23df5de3dabcd25dae8586314d3be96a" kindref="member">TRGM_TRGOCFG_PLB_IN_32</ref><sp/>+<sp/>(chn<sp/>+<sp/>1)<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM6E00_2HPM6E50_2hpm__trgmmux__src_8h_1a1c8fba749006a61af17225ca79d283aa" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT35</ref><sp/>+<sp/>chn<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM6E00_2ip_2hpm__trgm__regs_8h_1aa8e1e4353394790a65f62495c0f0ceda" kindref="member">TRGM_TRGOCFG_PLB_IN_33</ref><sp/>+<sp/>(chn<sp/>+<sp/>1)<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM6E00_2HPM6E50_2hpm__trgmmux__src_8h_1a045299f70b1d86320d7b9ec58feb3f7e" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT34</ref><sp/>+<sp/>chn<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM6E00_2ip_2hpm__trgm__regs_8h_1ad2df4e09e16c1c8488627bb95f2cd205" kindref="member">TRGM_TRGOCFG_PLB_IN_34</ref><sp/>+<sp/>chn<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM6E00_2HPM6E50_2hpm__trgmmux__src_8h_1a1c8fba749006a61af17225ca79d283aa" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT35</ref><sp/>+<sp/>chn<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM6E00_2ip_2hpm__trgm__regs_8h_1ad598425de136a35344dcbe0a22b4c142" kindref="member">TRGM_TRGOCFG_PLB_IN_35</ref><sp/>+<sp/>chn<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM5300_2HPM5321_2hpm__trgmmux__src_8h_1a2a2388a2b7b2045f2bf0adb85f074fca" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT00</ref><sp/>+<sp/>chn<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM5300_2ip_2hpm__trgm__regs_8h_1aabe46d7529c058fd2239c59865874a8d" kindref="member">TRGM_TRGOCFG_PLB_IN_00</ref><sp/>+<sp/>(chn<sp/>+<sp/>1)<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM5300_2HPM5321_2hpm__trgmmux__src_8h_1ab8c2c63bbd370a14885c100baec8febb" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT01</ref><sp/>+<sp/>chn<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM5300_2ip_2hpm__trgm__regs_8h_1a4e4df96e5c5dc61b857a9d80ade7b43d" kindref="member">TRGM_TRGOCFG_PLB_IN_01</ref><sp/>+<sp/>(chn<sp/>+<sp/>1)<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75aeead3c910b8a94d942ed87c2357c197d" kindref="member">trgm_output_same_as_input</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/><ref refid="HPM5300_2HPM5321_2hpm__trgmmux__src_8h_1a2a2388a2b7b2045f2bf0adb85f074fca" kindref="member">HPM_TRGM0_INPUT_SRC_PLB_OUT00</ref><sp/>+<sp/>(chn<sp/>+<sp/>1)<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM5300_2ip_2hpm__trgm__regs_8h_1a5289a99918e20a935eddb871437363a2" kindref="member">TRGM_TRGOCFG_PLB_IN_02</ref><sp/>+<sp/>(chn<sp/>+<sp/>1)<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6a26116df175e66951a10a76ad028464" kindref="member">invert</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a5e1ce6aead79ebd92f28c0ff72165823" kindref="member">type</ref><sp/><sp/><sp/>=<sp/><ref refid="group__trgm__interface_1gga06d91800a6a89291a4ce822231dbde75a075cf68c0bb6b5584ddc14ad0cfd313f" kindref="member">trgm_output_pulse_at_input_rising_edge</ref>;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trgm_output_cfg.<ref refid="structtrgm__output_1a6f05da4752f4f654e091185d35f7e7ee" kindref="member">input</ref><sp/><sp/>=<sp/>cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1ac389e4e4395e887aa1799b17380d4c0f" kindref="member">trgm_input</ref>.<ref refid="structplb__qei__encoder__trgmux__input__t_1a7cf50c2f43eef298d15c0c844c67d6fd" kindref="member">qei_z</ref>;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__trgm__interface_1ga7f29f7f93e85ec5707f1dc7a981381cb" kindref="member">trgm_output_config</ref>(trgm,<sp/><ref refid="HPM5300_2ip_2hpm__trgm__regs_8h_1a96aa24062efaaa9edcfcc664a317a9e8" kindref="member">TRGM_TRGOCFG_PLB_IN_03</ref><sp/>+<sp/>(chn<sp/>+<sp/>1)<sp/>*<sp/>4,<sp/>&amp;trgm_output_cfg);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gaef0c0bcdd9e1ab9c6df3e813294131d7" kindref="member">plb_type_b_set_all_slice</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/><ref refid="group__plb__interface_1ggaed07ec6802a1d19ae7d4081f623c6492aa8d9da0849ec85d9fb9a46e87201dc59" kindref="member">plb_slice_opt_keep</ref>);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1a2eeb1fe887650eae5896d3916265774b" kindref="member">enable_z_pin</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plb_type_a_lut.<ref refid="unionplb__type__a__truth__t_1a79900419f616e4410804236fd0e410eb" kindref="member">val</ref><sp/>=<sp/>0xb2b2;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga3e797b9f47b01ca234d8efaf86390d6b" kindref="member">plb_type_a_set_lut</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/>plb_type_a_table0,<sp/>&amp;plb_type_a_lut);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga26564b81827cb54b7ff0700291b5d188" kindref="member">plb_type_a_inject_by_sw</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/>0);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plb_type_a_lut.<ref refid="unionplb__type__a__truth__t_1a79900419f616e4410804236fd0e410eb" kindref="member">val</ref><sp/>=<sp/>0xf000;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga3e797b9f47b01ca234d8efaf86390d6b" kindref="member">plb_type_a_set_lut</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/>plb_type_a_table1,<sp/>&amp;plb_type_a_lut);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga26564b81827cb54b7ff0700291b5d188" kindref="member">plb_type_a_inject_by_sw</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/>0);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plb_type_a_lut.<ref refid="unionplb__type__a__truth__t_1a79900419f616e4410804236fd0e410eb" kindref="member">val</ref><sp/>=<sp/>0x0f00;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga3e797b9f47b01ca234d8efaf86390d6b" kindref="member">plb_type_a_set_lut</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/>plb_type_a_table2,<sp/>&amp;plb_type_a_lut);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga26564b81827cb54b7ff0700291b5d188" kindref="member">plb_type_a_inject_by_sw</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/>0);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gacc22a0097fc83cec521c16f7c94aacaf" kindref="member">plb_type_b_set_lut</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/><ref refid="group__plb__interface_1gga07e1866501b646ecd5305021411ac592a84bf5c1ea4bf2dc96d089bcbf35c7a81" kindref="member">plb_type_b_slice_1</ref>,<sp/><ref refid="group__plb__interface_1ggaed07ec6802a1d19ae7d4081f623c6492a22f4f26c2e0b52c23e4c543a12497905" kindref="member">plb_slice_opt_add_one</ref>);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gacc22a0097fc83cec521c16f7c94aacaf" kindref="member">plb_type_b_set_lut</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/><ref refid="group__plb__interface_1gga07e1866501b646ecd5305021411ac592aa13095e1465090413aadc996255d655d" kindref="member">plb_type_b_slice_2</ref>,<sp/><ref refid="group__plb__interface_1ggaed07ec6802a1d19ae7d4081f623c6492a3773167bfd2c22e7a1607d6266969d74" kindref="member">plb_slice_opt_sub_one</ref>);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gacc22a0097fc83cec521c16f7c94aacaf" kindref="member">plb_type_b_set_lut</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/><ref refid="group__plb__interface_1gga07e1866501b646ecd5305021411ac592a84bf5c1ea4bf2dc96d089bcbf35c7a81" kindref="member">plb_type_b_slice_1</ref>,<sp/><ref refid="group__plb__interface_1ggaed07ec6802a1d19ae7d4081f623c6492a22f4f26c2e0b52c23e4c543a12497905" kindref="member">plb_slice_opt_add_one</ref>);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gacc22a0097fc83cec521c16f7c94aacaf" kindref="member">plb_type_b_set_lut</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/><ref refid="group__plb__interface_1gga07e1866501b646ecd5305021411ac592aa13095e1465090413aadc996255d655d" kindref="member">plb_type_b_slice_2</ref>,<sp/><ref refid="group__plb__interface_1ggaed07ec6802a1d19ae7d4081f623c6492a3773167bfd2c22e7a1607d6266969d74" kindref="member">plb_slice_opt_sub_one</ref>);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa380c9b8304ad8399f1be634d6f5c4701" kindref="member">status_invalid_argument</ref>;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>board_delay_ms(1);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga26564b81827cb54b7ff0700291b5d188" kindref="member">plb_type_a_inject_by_sw</ref>(plb,<sp/>chn,<sp/>0);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gaec4852f8ebfaf4027203906a94bf4a59" kindref="member">plb_type_b_inject_by_sw</ref>(plb,<sp/>chn,<sp/>0);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga26564b81827cb54b7ff0700291b5d188" kindref="member">plb_type_a_inject_by_sw</ref>(plb,<sp/>chn,<sp/>0);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gaec4852f8ebfaf4027203906a94bf4a59" kindref="member">plb_type_b_inject_by_sw</ref>(plb,<sp/>chn,<sp/>0);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cfg-&gt;<ref refid="structplb__qei__encoder__cfg__t_1a2af940f7d731a75c629a374cb61b6f46" kindref="member">mode</ref><sp/>==<sp/><ref refid="hpm__qei__encoder_8h_1af5945b5ca8c9399b25a32404956474c8a04a65e9bfc9c7caed1248d541cb59a2b" kindref="member">plb_abz_mode</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga26564b81827cb54b7ff0700291b5d188" kindref="member">plb_type_a_inject_by_sw</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/>0);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gaec4852f8ebfaf4027203906a94bf4a59" kindref="member">plb_type_b_inject_by_sw</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/>0);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1ga26564b81827cb54b7ff0700291b5d188" kindref="member">plb_type_a_inject_by_sw</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/>0);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gaec4852f8ebfaf4027203906a94bf4a59" kindref="member">plb_type_b_inject_by_sw</ref>(plb,<sp/>chn<sp/>+<sp/>1,<sp/>0);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal">uint32_t<sp/><ref refid="hpm__qei__encoder_8c_1adefcdbd1933d28311caa5a2f098937b9" kindref="member">plb_qei_encoder_get_phase_count</ref>(<ref refid="structPLB__Type" kindref="compound">PLB_Type</ref><sp/>*plb,<sp/><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref><sp/>qei_chn)</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__plb__interface_1ga0b6bafba828c422898bb2d9c7264cf83" kindref="member">plb_type_b_get_counter</ref>(plb,<sp/>(<ref refid="group__plb__interface_1gae72a171c29a0c545b6e87e264484b0a1" kindref="member">plb_chn_t</ref>)qei_chn);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__qei__encoder_8c_1a007a7b3881a6198339f637632ff2f5d5" kindref="member">plb_qei_encoder_set_phase_count</ref>(<ref refid="structPLB__Type" kindref="compound">PLB_Type</ref><sp/>*plb,<sp/><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref><sp/>qei_chn,<sp/>uint32_t<sp/>val)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gaec4852f8ebfaf4027203906a94bf4a59" kindref="member">plb_type_b_inject_by_sw</ref>(plb,<sp/>(<ref refid="group__plb__interface_1gae72a171c29a0c545b6e87e264484b0a1" kindref="member">plb_chn_t</ref>)qei_chn,<sp/>val);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal">uint32_t<sp/><ref refid="hpm__qei__encoder_8c_1aa8a88fa8805c25752e3ee0cce41364f8" kindref="member">plb_qei_encoder_get_laps_number</ref>(<ref refid="structPLB__Type" kindref="compound">PLB_Type</ref><sp/>*plb,<sp/><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref><sp/>qei_chn)</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__plb__interface_1ga0b6bafba828c422898bb2d9c7264cf83" kindref="member">plb_type_b_get_counter</ref>(plb,<sp/>qei_chn<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpm__qei__encoder_8c_1a88eac8bb303928f2fdc9a2c52e01a21f" kindref="member">plb_qei_encoder_set_laps_number</ref>(<ref refid="structPLB__Type" kindref="compound">PLB_Type</ref><sp/>*plb,<sp/><ref refid="hpm__qei__encoder_8h_1a439f455a2ee5d6ae786469fadb2f6dfb" kindref="member">plb_qei_encoder_channel_t</ref><sp/>qei_chn,<sp/>int32_t<sp/>val)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__plb__interface_1gaec4852f8ebfaf4027203906a94bf4a59" kindref="member">plb_type_b_inject_by_sw</ref>(plb,<sp/>qei_chn<sp/>+<sp/>1,<sp/>val);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="components/plb/qei_encoder/hpm_qei_encoder.c"/>
+  </compounddef>
+</doxygen>

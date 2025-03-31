@@ -3,6 +3,7 @@ var structfemc__sdram__config__t =
     [ "act_to_act_in_ns", "structfemc__sdram__config__t.html#a0f08ea1dc69257400ae19fe23dc46e7a", null ],
     [ "act_to_precharge_in_ns", "structfemc__sdram__config__t.html#a3c9425213a300440b14962bd93487d55", null ],
     [ "act_to_rw_in_ns", "structfemc__sdram__config__t.html#ad38ab011b656f21d8e71c877c77215da", null ],
+    [ "auto_refresh_cmd_count", "structfemc__sdram__config__t.html#aaf41775b611d59a51afdffa1f0ed3faf", null ],
     [ "auto_refresh_count_in_one_burst", "structfemc__sdram__config__t.html#a0f11cad862dfb41747a1c1c4bf2d58e5", null ],
     [ "bank_num", "structfemc__sdram__config__t.html#aae1f97ca088f31e109a8e91ac2a42a94", null ],
     [ "base_address", "structfemc__sdram__config__t.html#a64de6c73ec24d2b1d5eade1bcf32e033", null ],

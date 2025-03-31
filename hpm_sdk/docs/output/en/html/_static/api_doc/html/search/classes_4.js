@@ -35,11 +35,14 @@ var searchData=
   ['enet_5ftype_32',['ENET_Type',['../structENET__Type.html',1,'']]],
   ['esc_5feeprom_5fclock_5fconfig_5ft_33',['esc_eeprom_clock_config_t',['../structesc__eeprom__clock__config__t.html',1,'']]],
   ['esc_5ftype_34',['ESC_Type',['../structESC__Type.html',1,'']]],
-  ['ewdg_5fconfig_5ft_35',['ewdg_config_t',['../structewdg__config__t.html',1,'']]],
-  ['ewdg_5ffunc_5fctrl_5fconfig_5ft_36',['ewdg_func_ctrl_config_t',['../structewdg__func__ctrl__config__t.html',1,'']]],
-  ['ewdg_5finterrupt_5freset_5fconfig_5ft_37',['ewdg_interrupt_reset_config_t',['../structewdg__interrupt__reset__config__t.html',1,'']]],
-  ['ewdg_5ftype_38',['EWDG_Type',['../structEWDG__Type.html',1,'']]],
-  ['exip_5fdriver_5finterface_5ft_39',['exip_driver_interface_t',['../structexip__driver__interface__t.html',1,'']]],
-  ['exip_5fregion_5fcontext_5ft_40',['exip_region_context_t',['../structexip__region__context__t.html',1,'']]],
-  ['exip_5fregion_5fparam_5ft_41',['exip_region_param_t',['../structexip__region__param__t.html',1,'']]]
+  ['eui_5fctrl_5fconfig_5ft_35',['eui_ctrl_config_t',['../structeui__ctrl__config__t.html',1,'']]],
+  ['eui_5fdisp_5fconfig_5ft_36',['eui_disp_config_t',['../structeui__disp__config__t.html',1,'']]],
+  ['eui_5fscan_5fdisp_5fdata_5ft_37',['eui_scan_disp_data_t',['../unioneui__scan__disp__data__t.html',1,'']]],
+  ['ewdg_5fconfig_5ft_38',['ewdg_config_t',['../structewdg__config__t.html',1,'']]],
+  ['ewdg_5ffunc_5fctrl_5fconfig_5ft_39',['ewdg_func_ctrl_config_t',['../structewdg__func__ctrl__config__t.html',1,'']]],
+  ['ewdg_5finterrupt_5freset_5fconfig_5ft_40',['ewdg_interrupt_reset_config_t',['../structewdg__interrupt__reset__config__t.html',1,'']]],
+  ['ewdg_5ftype_41',['EWDG_Type',['../structEWDG__Type.html',1,'']]],
+  ['exip_5fdriver_5finterface_5ft_42',['exip_driver_interface_t',['../structexip__driver__interface__t.html',1,'']]],
+  ['exip_5fregion_5fcontext_5ft_43',['exip_region_context_t',['../structexip__region__context__t.html',1,'']]],
+  ['exip_5fregion_5fparam_5ft_44',['exip_region_param_t',['../structexip__region__param__t.html',1,'']]]
 ];

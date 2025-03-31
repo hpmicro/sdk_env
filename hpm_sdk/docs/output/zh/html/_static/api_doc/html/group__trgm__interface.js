@@ -12,7 +12,8 @@ var group__trgm__interface =
       [ "type", "structtrgm__output.html#a5e1ce6aead79ebd92f28c0ff72165823", null ]
     ] ],
     [ "trgm_filter_mode_t", "group__trgm__interface.html#ga786704af55d598d72208aba099b43206", null ],
-    [ "trgm_input_filter_t", "group__trgm__interface.html#ga9f2369cf5885c95974a0f6134f836e73", null ],
+    [ "trgm_filter_t", "group__trgm__interface.html#gae750c6698cbcdaacbeb6077149d5f29e", null ],
+    [ "trgm_input_filter_t", "group__trgm__interface.html#ga06777a56cedd3a6965ed4a24d0faae0d", null ],
     [ "trgm_output_t", "group__trgm__interface.html#ga58e3ca86d242fb418571db5a847f2098", null ],
     [ "trgm_output_type_t", "group__trgm__interface.html#ga8d96b1f9bad5cebcd17b93566313a16e", null ],
     [ "trgm_filter_mode", "group__trgm__interface.html#gacffb722a7799f4657bb946398552f583", [
@@ -36,6 +37,13 @@ var group__trgm__interface =
     [ "trgm_disable_io_output", "group__trgm__interface.html#gae9c09b4c0a271bd4a1b50be1399e7721", null ],
     [ "trgm_dma_request_config", "group__trgm__interface.html#gaaf5605cb46ad30d89ed7eb018728e12a", null ],
     [ "trgm_enable_io_output", "group__trgm__interface.html#gad4388dcd01f86bdd25b5c88dad22e683", null ],
+    [ "trgm_filter_config", "group__trgm__interface.html#ga214a8f72afafd85a808c8221c83d1f5d", null ],
+    [ "trgm_filter_disable_sync", "group__trgm__interface.html#ga7affa6ff617ffe6ec967d3b2db6a32a0", null ],
+    [ "trgm_filter_enable_sync", "group__trgm__interface.html#ga12b8c462401d7dad8ee61fa5901c7e40", null ],
+    [ "trgm_filter_invert", "group__trgm__interface.html#gac098adf635b92ded554221ceb6329d34", null ],
+    [ "trgm_filter_set_filter_length", "group__trgm__interface.html#ga53998f517a5e0c2ac8f1dbbb8738059a", null ],
+    [ "trgm_filter_set_filter_shift", "group__trgm__interface.html#ga3c071cd4b3098ea77c21a991357e9624", null ],
+    [ "trgm_filter_set_mode", "group__trgm__interface.html#gab9e70a1f6165cc49190c95ba07b5e8f4", null ],
     [ "trgm_input_filter_config", "group__trgm__interface.html#ga20a96cc4542dee5bf00975a63080ddf2", null ],
     [ "trgm_input_filter_disable_sync", "group__trgm__interface.html#ga97741e65a8a3143e09349501908eca08", null ],
     [ "trgm_input_filter_enable_sync", "group__trgm__interface.html#ga524ffc9d6255e5dd270472ae168b611e", null ],

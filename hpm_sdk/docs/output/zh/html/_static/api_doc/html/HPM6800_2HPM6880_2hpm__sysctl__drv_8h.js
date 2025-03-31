@@ -463,6 +463,8 @@ var HPM6800_2HPM6880_2hpm__sysctl__drv_8h =
     [ "sysctl_enable_group_resource", "group__sysctl__interface.html#gab79bcd9d69474ff405fa6e3d00fb947e", null ],
     [ "sysctl_enable_wakeup_source_with_irq", "HPM6800_2HPM6880_2hpm__sysctl__drv_8h.html#ga82d7bcf7419b035d6274bc39d0ddcf2f", null ],
     [ "sysctl_enable_wakeup_source_with_mask", "HPM6800_2HPM6880_2hpm__sysctl__drv_8h.html#ga09ee09599a79c40ba4a26e726ed1aa95", null ],
+    [ "sysctl_get_cpu0_lp_retention", "HPM6800_2HPM6880_2hpm__sysctl__drv_8h.html#ga88937c3d59011ffcf9a4c196cc0c982e", null ],
+    [ "sysctl_get_cpu_lp_retention", "HPM6800_2HPM6880_2hpm__sysctl__drv_8h.html#gaa90e20f0744f3d745521d9a38d73d25f", null ],
     [ "sysctl_get_group_resource_value", "group__sysctl__interface.html#ga1c5397d751f477895cfd50d5fa649072", null ],
     [ "sysctl_get_wakeup_source_status", "HPM6800_2HPM6880_2hpm__sysctl__drv_8h.html#ga982d0f2c90deb6e10c53ceeb5c28357a", null ],
     [ "sysctl_monitor_get_current_result", "HPM6800_2HPM6880_2hpm__sysctl__drv_8h.html#gadcc69e28cb9a9aa8581695f5cabb0a5f", null ],

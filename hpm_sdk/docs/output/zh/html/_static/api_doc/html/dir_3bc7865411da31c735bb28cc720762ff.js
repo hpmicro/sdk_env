@@ -13,8 +13,6 @@ var dir_3bc7865411da31c735bb28cc720762ff =
     [ "hpm_gpiom_soc_drv.h", "HPM6800_2HPM6880_2hpm__gpiom__soc__drv_8h.html", "HPM6800_2HPM6880_2hpm__gpiom__soc__drv_8h" ],
     [ "hpm_interrupt.h", "HPM6800_2HPM6880_2hpm__interrupt_8h.html", "HPM6800_2HPM6880_2hpm__interrupt_8h" ],
     [ "hpm_iomux.h", "HPM6800_2HPM6880_2hpm__iomux_8h.html", "HPM6800_2HPM6880_2hpm__iomux_8h" ],
-    [ "hpm_l1c_drv.c", "HPM6800_2HPM6880_2hpm__l1c__drv_8c.html", "HPM6800_2HPM6880_2hpm__l1c__drv_8c" ],
-    [ "hpm_l1c_drv.h", "HPM6800_2HPM6880_2hpm__l1c__drv_8h.html", "HPM6800_2HPM6880_2hpm__l1c__drv_8h" ],
     [ "hpm_mcan_soc.h", "HPM6800_2HPM6880_2hpm__mcan__soc_8h.html", "HPM6800_2HPM6880_2hpm__mcan__soc_8h" ],
     [ "hpm_misc.h", "HPM6800_2HPM6880_2hpm__misc_8h.html", "HPM6800_2HPM6880_2hpm__misc_8h" ],
     [ "hpm_otp_drv.c", "HPM6800_2HPM6880_2hpm__otp__drv_8c.html", "HPM6800_2HPM6880_2hpm__otp__drv_8c" ],

@@ -1,0 +1,1243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="hpm__smbus_8c" kind="file" language="C++">
+    <compoundname>hpm_smbus.c</compoundname>
+    <includes refid="hpm__smbus_8h" local="yes">hpm_smbus.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>components/smbus/hpm_smbus.c</label>
+        <link refid="hpm__smbus_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hpm_smbus.h</label>
+        <link refid="hpm__smbus_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>hpm_common.h</label>
+        <link refid="hpm__common_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>hpm_i2c_drv.h</label>
+        <link refid="hpm__i2c__drv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="11">
+        <label>hpm_i2c_regs.h</label>
+      </node>
+      <node id="9">
+        <label>hpm_soc_feature.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t hpm_smbus_pec_crc8</definition>
+        <argsstring>(uint8_t *data, uint32_t len)</argsstring>
+        <name>hpm_smbus_pec_crc8</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/smbus/hpm_smbus.c" line="256" column="16" bodyfile="components/smbus/hpm_smbus.c" bodystart="256" bodyend="272" declfile="components/smbus/hpm_smbus.c" declline="10" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__smbus_8c_1ae3889d9d441879578ace9ce101807165" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_smbus_master_write_byte</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t slave_address, uint8_t data)</argsstring>
+        <name>hpm_smbus_master_write_byte</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slave_address</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>SMbus master write data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>write data at slave mode</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slave_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SMbus slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>byte to be writed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if writing is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/smbus/hpm_smbus.c" line="13" column="12" bodyfile="components/smbus/hpm_smbus.c" bodystart="13" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__smbus_8c_1a734fa837a9a526bfaf10fd15d7def6f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_smbus_master_read_byte</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t slave_address, uint8_t *data)</argsstring>
+        <name>hpm_smbus_master_read_byte</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slave_address</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>SMbus master read byte from certain slave device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Read byte from SMbus device</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slave_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SMbus slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the byte read from device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if reading is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/smbus/hpm_smbus.c" line="25" column="12" bodyfile="components/smbus/hpm_smbus.c" bodystart="25" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__smbus_8c_1a9351b65495ec2e512928b5086fefc888" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_smbus_master_write_byte_in_command</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t slave_address, uint8_t command, uint8_t data)</argsstring>
+        <name>hpm_smbus_master_write_byte_in_command</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slave_address</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>SMbus master write byte from certain slave device in command code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>write byte from SMbus device in command code</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slave_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SMbus slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>byte to be writed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if writing is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/smbus/hpm_smbus.c" line="44" column="12" bodyfile="components/smbus/hpm_smbus.c" bodystart="44" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__smbus_8c_1a310c20ad20d8e52fcf2fd8725e8a042d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_smbus_master_write_word_in_command</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t slave_address, uint8_t command, uint16_t data)</argsstring>
+        <name>hpm_smbus_master_write_word_in_command</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slave_address</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>SMbus master write word(16bits) from certain slave device in command code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>write word(16bits) from SMbus device in command code</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slave_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SMbus slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>word to be writed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if writing is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/smbus/hpm_smbus.c" line="57" column="12" bodyfile="components/smbus/hpm_smbus.c" bodystart="57" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__smbus_8c_1ac300e27e934afcde45d447211dc67dc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_smbus_master_read_byte_in_command</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t slave_address, uint8_t command, uint8_t *data)</argsstring>
+        <name>hpm_smbus_master_read_byte_in_command</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slave_address</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>SMbus master read byte from certain slave device in command code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>read byte from SMbus device in command code</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slave_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SMbus slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>byte to be read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if reading is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/smbus/hpm_smbus.c" line="70" column="12" bodyfile="components/smbus/hpm_smbus.c" bodystart="70" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__smbus_8c_1a15bf2b934ef3f389de089bf714da6ff6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_smbus_master_read_word_in_command</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t slave_address, uint8_t command, uint16_t *data)</argsstring>
+        <name>hpm_smbus_master_read_word_in_command</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slave_address</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>SMbus master read word(16bits) from certain slave device in command code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>read word from SMbus device in command code</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slave_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SMbus slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>word to be read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if reading is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/smbus/hpm_smbus.c" line="99" column="12" bodyfile="components/smbus/hpm_smbus.c" bodystart="99" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__smbus_8c_1a54e7e3782bd74d54638a3b5859668db8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_smbus_master_write_block_in_command</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t slave_address, uint8_t command, uint8_t *data, uint32_t size)</argsstring>
+        <name>hpm_smbus_master_write_block_in_command</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slave_address</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>SMbus master block write from certain slave device in command code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>block write from SMbus device in command code <simplesect kind="note"><para>size should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slave_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SMbus slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the buffer to store data read from device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be read in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if writing is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/smbus/hpm_smbus.c" line="126" column="12" bodyfile="components/smbus/hpm_smbus.c" bodystart="126" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__smbus_8c_1ad3aea6d1d21edc7be3ef03916082b794" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_smbus_master_read_block_in_command</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t slave_address, uint8_t command, uint8_t *data, uint32_t size)</argsstring>
+        <name>hpm_smbus_master_read_block_in_command</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slave_address</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>SMbus master block read from certain slave device in command code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>block read from SMbus device in command code <simplesect kind="note"><para>size should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slave_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SMbus slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the buffer to store data read from device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be read in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if reading is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/smbus/hpm_smbus.c" line="144" column="12" bodyfile="components/smbus/hpm_smbus.c" bodystart="144" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__smbus_8c_1a423dbdbf37dec1f37810c59c4bab33c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_smbus_master_write</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t slave_address, uint8_t *data, uint32_t size)</argsstring>
+        <name>hpm_smbus_master_write</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slave_address</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>SMbus master write data to certain slave device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Write data to SMbus device <simplesect kind="note"><para>size should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slave_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SMbus slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the data to be sent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be sent in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if writing is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/smbus/hpm_smbus.c" line="179" column="12" bodyfile="components/smbus/hpm_smbus.c" bodystart="179" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__smbus_8c_1af56ff56c89a04368258e75f197acbaa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_smbus_master_read</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t slave_address, uint8_t *data, uint32_t size)</argsstring>
+        <name>hpm_smbus_master_read</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>slave_address</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>SMbus master read data from certain slave device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Read data from SMbus device <simplesect kind="note"><para>size should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slave_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SMbus slave address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the buffer to store data read from device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be read in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if reading is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/smbus/hpm_smbus.c" line="195" column="12" bodyfile="components/smbus/hpm_smbus.c" bodystart="195" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__smbus_8c_1ac92d07af94c29b334a4cd914614f19d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_smbus_slave_write</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t *data, uint32_t size)</argsstring>
+        <name>hpm_smbus_slave_write</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>SMbus slave write data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Write data at SMbus slave mode. <simplesect kind="note"><para>size should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the buffer to store data sent from device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be sent in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if writing is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/smbus/hpm_smbus.c" line="215" column="12" bodyfile="components/smbus/hpm_smbus.c" bodystart="215" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="hpm__smbus_8c_1adba2177437a717a75be0bc1eff958276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></type>
+        <definition>hpm_stat_t hpm_smbus_slave_read</definition>
+        <argsstring>(I2C_Type *ptr, uint8_t *data, uint32_t size)</argsstring>
+        <name>hpm_smbus_slave_read</name>
+        <param>
+          <type><ref refid="structI2C__Type" kindref="compound">I2C_Type</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>SMbus slave read data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Read data at SMbus slave mode <simplesect kind="note"><para>size should not not greater than I2C_SOC_TRANSFER_COUNT_MAX</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C base address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the buffer to store data read from device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of data to be read in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status_success if reading is completed without any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="components/smbus/hpm_smbus.c" line="233" column="12" bodyfile="components/smbus/hpm_smbus.c" bodystart="233" bodyend="254"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2023<sp/>HPMicro</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>BSD-3-Clause</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hpm__smbus_8h" kindref="compound">hpm_smbus.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" kindref="member">hpm_smbus_pec_crc8</ref>(uint8_t<sp/>*data,<sp/>uint32_t<sp/>len);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__smbus_8c_1ae3889d9d441879578ace9ce101807165" kindref="member">hpm_smbus_master_write_byte</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>slave_address,<sp/>uint8_t<sp/>data)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buf[3];</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>addr<sp/>+<sp/>rw<sp/>bit*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[0]<sp/>=<sp/>(slave_address<sp/>&lt;&lt;<sp/>1);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[1]<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[2]<sp/>=<sp/><ref refid="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" kindref="member">hpm_smbus_pec_crc8</ref>(buf,<sp/>2);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__i2c__interface_1gae763d01089c1093c5d0cd2a6e3600dac" kindref="member">i2c_master_transfer</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;buf[1],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf)<sp/>-<sp/>1,<sp/><ref refid="group__i2c__interface_1ga5a3e7b03fa275ec2d334e95a2caf6477" kindref="member">I2C_WR</ref><sp/>|<sp/><ref refid="group__i2c__interface_1gaff8ca0023d15f72986a50cfe4611206e" kindref="member">I2C_WRITE_CHECK_ACK</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__smbus_8c_1a734fa837a9a526bfaf10fd15d7def6f1" kindref="member">hpm_smbus_master_read_byte</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>slave_address,<sp/>uint8_t<sp/>*data)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buf[3];</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>pec;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>addr<sp/>+<sp/>rw<sp/>bit*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[0]<sp/>=<sp/>(slave_address<sp/>&lt;&lt;<sp/>1)<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__i2c__interface_1gaa838ed222310fa510b6d0ad2fe84b065" kindref="member">i2c_master_read</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;buf[1],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stat<sp/>==<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pec<sp/>=<sp/><ref refid="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" kindref="member">hpm_smbus_pec_crc8</ref>(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pec<sp/>==<sp/>buf[2])<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data<sp/>=<sp/>buf[1];</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__smbus_8c_1a9351b65495ec2e512928b5086fefc888" kindref="member">hpm_smbus_master_write_byte_in_command</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>slave_address,<sp/>uint8_t<sp/>command,<sp/>uint8_t<sp/>data)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buf[4];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>addr<sp/>+<sp/>rw<sp/>bit*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[0]<sp/>=<sp/>(slave_address<sp/>&lt;&lt;<sp/>1);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[1]<sp/>=<sp/>command;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[2]<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[3]<sp/>=<sp/><ref refid="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" kindref="member">hpm_smbus_pec_crc8</ref>(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__i2c__interface_1gae763d01089c1093c5d0cd2a6e3600dac" kindref="member">i2c_master_transfer</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;buf[1],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf)<sp/>-<sp/>1,<sp/><ref refid="group__i2c__interface_1ga5a3e7b03fa275ec2d334e95a2caf6477" kindref="member">I2C_WR</ref><sp/>|<sp/><ref refid="group__i2c__interface_1gaff8ca0023d15f72986a50cfe4611206e" kindref="member">I2C_WRITE_CHECK_ACK</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__smbus_8c_1a310c20ad20d8e52fcf2fd8725e8a042d" kindref="member">hpm_smbus_master_write_word_in_command</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>slave_address,<sp/>uint8_t<sp/>command,<sp/>uint16_t<sp/>data)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buf[5];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>addr<sp/>+<sp/>rw<sp/>bit*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[0]<sp/>=<sp/>(slave_address<sp/>&lt;&lt;<sp/>1);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[1]<sp/>=<sp/>command;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>*(uint16_t<sp/>*)(&amp;buf[2])<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[4]<sp/>=<sp/><ref refid="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" kindref="member">hpm_smbus_pec_crc8</ref>(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__i2c__interface_1gae763d01089c1093c5d0cd2a6e3600dac" kindref="member">i2c_master_transfer</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;buf[1],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf)<sp/>-<sp/>1,<sp/><ref refid="group__i2c__interface_1ga5a3e7b03fa275ec2d334e95a2caf6477" kindref="member">I2C_WR</ref><sp/>|<sp/><ref refid="group__i2c__interface_1gaff8ca0023d15f72986a50cfe4611206e" kindref="member">I2C_WRITE_CHECK_ACK</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__smbus_8c_1ac300e27e934afcde45d447211dc67dc4" kindref="member">hpm_smbus_master_read_byte_in_command</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>slave_address,<sp/>uint8_t<sp/>command,<sp/>uint8_t<sp/>*data)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>pec;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buf[5];</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>addr<sp/>+<sp/>rw<sp/>bit*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[0]<sp/>=<sp/>(slave_address<sp/>&lt;&lt;<sp/>1);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[1]<sp/>=<sp/>command;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>write<sp/>command<sp/>code<sp/>in<sp/>smbus<sp/>spec*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__i2c__interface_1ga310880255897362043b7b241321b31be" kindref="member">i2c_master_seq_transmit_check_ack</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;command,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint8_t),<sp/><ref refid="group__i2c__interface_1gga2a32f75955dee93fd48534ff446c2c31a6e99d63798117a090c8ec01058cedf09" kindref="member">i2c_frist_frame</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stat<sp/>==<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf[2]<sp/>=<sp/>(slave_address<sp/>&lt;&lt;<sp/>1)<sp/>|<sp/>0x01;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>now<sp/>change<sp/>dir,restart,<sp/>read<sp/>the<sp/>byte<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1gae5a4c4e106257107efe0a26851a72491" kindref="member">HPM_CHECK_RET</ref>(<ref refid="group__i2c__interface_1gabaf4004f5931bfa8dadcddb7364a46b8" kindref="member">i2c_master_seq_receive</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;buf[3],<sp/>1,<sp/><ref refid="group__i2c__interface_1gga2a32f75955dee93fd48534ff446c2c31a6e99d63798117a090c8ec01058cedf09" kindref="member">i2c_frist_frame</ref>));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>the<sp/>pec<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1gae5a4c4e106257107efe0a26851a72491" kindref="member">HPM_CHECK_RET</ref>(<ref refid="group__i2c__interface_1gabaf4004f5931bfa8dadcddb7364a46b8" kindref="member">i2c_master_seq_receive</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;buf[4],<sp/>1,<sp/><ref refid="group__i2c__interface_1gga2a32f75955dee93fd48534ff446c2c31a5065fd7758ca532e5b478136a4c5a484" kindref="member">i2c_last_frame</ref>));</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stat<sp/>==<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pec<sp/>=<sp/><ref refid="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" kindref="member">hpm_smbus_pec_crc8</ref>(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pec<sp/>==<sp/>buf[4])<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data<sp/>=<sp/>buf[3];</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__smbus_8c_1a15bf2b934ef3f389de089bf714da6ff6" kindref="member">hpm_smbus_master_read_word_in_command</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>slave_address,<sp/>uint8_t<sp/>command,<sp/>uint16_t<sp/>*data)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>pec;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buf[6];</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>addr<sp/>+<sp/>rw<sp/>bit*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[0]<sp/>=<sp/>(slave_address<sp/>&lt;&lt;<sp/>1);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[1]<sp/>=<sp/>command;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>write<sp/>command<sp/>code<sp/>in<sp/>smbus<sp/>spec*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__i2c__interface_1ga310880255897362043b7b241321b31be" kindref="member">i2c_master_seq_transmit_check_ack</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;command,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint8_t),<sp/><ref refid="group__i2c__interface_1gga2a32f75955dee93fd48534ff446c2c31a6e99d63798117a090c8ec01058cedf09" kindref="member">i2c_frist_frame</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stat<sp/>==<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf[2]<sp/>=<sp/>(slave_address<sp/>&lt;&lt;<sp/>1)<sp/>|<sp/>0x01;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>now<sp/>change<sp/>dir,restart,<sp/>read<sp/>the<sp/>word<sp/>(16<sp/>bits)*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1gae5a4c4e106257107efe0a26851a72491" kindref="member">HPM_CHECK_RET</ref>(<ref refid="group__i2c__interface_1gabaf4004f5931bfa8dadcddb7364a46b8" kindref="member">i2c_master_seq_receive</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;buf[3],<sp/>2,<sp/><ref refid="group__i2c__interface_1gga2a32f75955dee93fd48534ff446c2c31a6e99d63798117a090c8ec01058cedf09" kindref="member">i2c_frist_frame</ref>));</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>the<sp/>pec<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1gae5a4c4e106257107efe0a26851a72491" kindref="member">HPM_CHECK_RET</ref>(<ref refid="group__i2c__interface_1gabaf4004f5931bfa8dadcddb7364a46b8" kindref="member">i2c_master_seq_receive</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;buf[5],<sp/>1,<sp/><ref refid="group__i2c__interface_1gga2a32f75955dee93fd48534ff446c2c31a5065fd7758ca532e5b478136a4c5a484" kindref="member">i2c_last_frame</ref>));</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pec<sp/>=<sp/><ref refid="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" kindref="member">hpm_smbus_pec_crc8</ref>(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pec<sp/>==<sp/>buf[5])<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*data<sp/>=<sp/>*(uint16_t<sp/>*)(&amp;buf[3]);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__smbus_8c_1a54e7e3782bd74d54638a3b5859668db8" kindref="member">hpm_smbus_master_write_block_in_command</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>slave_address,<sp/>uint8_t<sp/>command,<sp/>uint8_t<sp/>*data,<sp/>uint32_t<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buf[<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a214369ce4fafa9caa85c2bf60449caf6" kindref="member">I2C_SOC_TRANSFER_COUNT_MAX</ref>];</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>buf_size;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>frame<sp/>included<sp/>addr,<sp/>command,<sp/>data,<sp/>and<sp/>pec<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>&lt;=<sp/>(<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a214369ce4fafa9caa85c2bf60449caf6" kindref="member">I2C_SOC_TRANSFER_COUNT_MAX</ref><sp/>-<sp/>3));</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>addr<sp/>+<sp/>rw<sp/>bit*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[0]<sp/>=<sp/>slave_address<sp/>&lt;&lt;<sp/>1;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[1]<sp/>=<sp/>command;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[2]<sp/>=<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(&amp;buf[3],<sp/>data,<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[<ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>3]<sp/>=<sp/><ref refid="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" kindref="member">hpm_smbus_pec_crc8</ref>(buf,<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>3);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_size<sp/>=<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>3;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__i2c__interface_1gae763d01089c1093c5d0cd2a6e3600dac" kindref="member">i2c_master_transfer</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;buf[1],<sp/>buf_size,<sp/><ref refid="group__i2c__interface_1ga5a3e7b03fa275ec2d334e95a2caf6477" kindref="member">I2C_WR</ref><sp/>|<sp/><ref refid="group__i2c__interface_1gaff8ca0023d15f72986a50cfe4611206e" kindref="member">I2C_WRITE_CHECK_ACK</ref>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__smbus_8c_1ad3aea6d1d21edc7be3ef03916082b794" kindref="member">hpm_smbus_master_read_block_in_command</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>slave_address,<sp/>uint8_t<sp/>command,<sp/>uint8_t<sp/>*data,<sp/>uint32_t<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>pec;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>_size;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>buf_size;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buf[<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a214369ce4fafa9caa85c2bf60449caf6" kindref="member">I2C_SOC_TRANSFER_COUNT_MAX</ref>];</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>frame<sp/>included<sp/>addr,<sp/>command,<sp/>data,<sp/>and<sp/>pec<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>&lt;=<sp/>(<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a214369ce4fafa9caa85c2bf60449caf6" kindref="member">I2C_SOC_TRANSFER_COUNT_MAX</ref><sp/>-<sp/>3));</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>addr<sp/>+<sp/>rw<sp/>bit*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[0]<sp/>=<sp/>(slave_address<sp/>&lt;&lt;<sp/>1);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[1]<sp/>=<sp/>command;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>write<sp/>command<sp/>code<sp/>in<sp/>smbus<sp/>spec*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__i2c__interface_1ga310880255897362043b7b241321b31be" kindref="member">i2c_master_seq_transmit_check_ack</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;command,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint8_t),<sp/><ref refid="group__i2c__interface_1gga2a32f75955dee93fd48534ff446c2c31a6e99d63798117a090c8ec01058cedf09" kindref="member">i2c_frist_frame</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[2]<sp/>=<sp/>(slave_address<sp/>&lt;&lt;<sp/>1)<sp/>|<sp/>0x01;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stat<sp/>==<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>now<sp/>change<sp/>dir,restart,<sp/>read<sp/>the<sp/>block<sp/>count*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1gae5a4c4e106257107efe0a26851a72491" kindref="member">HPM_CHECK_RET</ref>(<ref refid="group__i2c__interface_1gabaf4004f5931bfa8dadcddb7364a46b8" kindref="member">i2c_master_seq_receive</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;buf[3],<sp/>1,<sp/><ref refid="group__i2c__interface_1gga2a32f75955dee93fd48534ff446c2c31a6e99d63798117a090c8ec01058cedf09" kindref="member">i2c_frist_frame</ref>));</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_size<sp/>=<sp/>buf[3];</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>data*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1gae5a4c4e106257107efe0a26851a72491" kindref="member">HPM_CHECK_RET</ref>(<ref refid="group__i2c__interface_1gabaf4004f5931bfa8dadcddb7364a46b8" kindref="member">i2c_master_seq_receive</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;buf[4],<sp/>_size,<sp/><ref refid="group__i2c__interface_1gga2a32f75955dee93fd48534ff446c2c31a459540552890348db37ffc5b639b57f9" kindref="member">i2c_next_frame</ref>));</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>pec<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1gae5a4c4e106257107efe0a26851a72491" kindref="member">HPM_CHECK_RET</ref>(<ref refid="group__i2c__interface_1gabaf4004f5931bfa8dadcddb7364a46b8" kindref="member">i2c_master_seq_receive</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;buf[_size<sp/>+<sp/>4],<sp/>1,<sp/><ref refid="group__i2c__interface_1gga2a32f75955dee93fd48534ff446c2c31a5065fd7758ca532e5b478136a4c5a484" kindref="member">i2c_last_frame</ref>));</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf_size<sp/>=<sp/>_size<sp/>+<sp/>4;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pec<sp/>=<sp/><ref refid="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" kindref="member">hpm_smbus_pec_crc8</ref>(buf,<sp/>buf_size);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pec<sp/>==<sp/>buf[<ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>4])<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(data,<sp/>&amp;buf[4],<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__smbus_8c_1a423dbdbf37dec1f37810c59c4bab33c7" kindref="member">hpm_smbus_master_write</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>slave_address,<sp/>uint8_t<sp/>*data,<sp/>uint32_t<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buf[<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a214369ce4fafa9caa85c2bf60449caf6" kindref="member">I2C_SOC_TRANSFER_COUNT_MAX</ref>];</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>buf_size;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>frame<sp/>included<sp/>addr,<sp/>data,<sp/>and<sp/>pec<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>&lt;=<sp/>(<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a214369ce4fafa9caa85c2bf60449caf6" kindref="member">I2C_SOC_TRANSFER_COUNT_MAX</ref><sp/>-<sp/>1));</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>addr<sp/>+<sp/>rw<sp/>bit*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[0]<sp/>=<sp/>(slave_address<sp/>&lt;&lt;<sp/>1)<sp/>|<sp/>0x01;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(&amp;buf[1],<sp/>data,<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[<ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>1]<sp/>=<sp/><ref refid="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" kindref="member">hpm_smbus_pec_crc8</ref>(buf,<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_size<sp/>=<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__i2c__interface_1gae763d01089c1093c5d0cd2a6e3600dac" kindref="member">i2c_master_transfer</ref>(ptr,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t)slave_address,<sp/>&amp;buf[1],<sp/>buf_size,<sp/><ref refid="group__i2c__interface_1ga5a3e7b03fa275ec2d334e95a2caf6477" kindref="member">I2C_WR</ref><sp/>|<sp/><ref refid="group__i2c__interface_1gaff8ca0023d15f72986a50cfe4611206e" kindref="member">I2C_WRITE_CHECK_ACK</ref>);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__smbus_8c_1af56ff56c89a04368258e75f197acbaa6" kindref="member">hpm_smbus_master_read</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>slave_address,<sp/>uint8_t<sp/>*data,<sp/>uint32_t<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>pec;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buf[<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a214369ce4fafa9caa85c2bf60449caf6" kindref="member">I2C_SOC_TRANSFER_COUNT_MAX</ref>];</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>frame<sp/>included<sp/>addr,<sp/>data,<sp/>and<sp/>pec<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>&lt;=<sp/>(<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a214369ce4fafa9caa85c2bf60449caf6" kindref="member">I2C_SOC_TRANSFER_COUNT_MAX</ref><sp/>-<sp/>2));</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[0]<sp/>=<sp/>(slave_address<sp/>&lt;&lt;<sp/>1);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__i2c__interface_1gaa838ed222310fa510b6d0ad2fe84b065" kindref="member">i2c_master_read</ref>(ptr,<sp/>slave_address,<sp/>&amp;buf[1],<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stat<sp/>==<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pec<sp/>=<sp/><ref refid="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" kindref="member">hpm_smbus_pec_crc8</ref>(buf,<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pec<sp/>==<sp/>buf[<ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>1])<sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(data,<sp/>&amp;buf[1],<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__smbus_8c_1ac92d07af94c29b334a4cd914614f19d1" kindref="member">hpm_smbus_slave_write</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>*data,<sp/>uint32_t<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buf[<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a214369ce4fafa9caa85c2bf60449caf6" kindref="member">I2C_SOC_TRANSFER_COUNT_MAX</ref>];</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>buf_size;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>slave_address;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>frame<sp/>included<sp/>addr,<sp/>data,<sp/>and<sp/>pec<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>&lt;=<sp/>(<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a214369ce4fafa9caa85c2bf60449caf6" kindref="member">I2C_SOC_TRANSFER_COUNT_MAX</ref><sp/>-<sp/>1));</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>slave_address<sp/>=<sp/>ptr-&gt;<ref refid="structI2C__Type_1ab2dae0e07c421d6159bf6afba5747733" kindref="member">ADDR</ref>;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>addr<sp/>+<sp/>rw<sp/>bit*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[0]<sp/>=<sp/>(slave_address<sp/>&lt;&lt;<sp/>1);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(&amp;buf[1],<sp/>data,<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[<ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>1]<sp/>=<sp/><ref refid="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" kindref="member">hpm_smbus_pec_crc8</ref>(buf,<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_size<sp/>=<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__i2c__interface_1gafe1d428a366d7e75ef4d470a263c487a" kindref="member">i2c_slave_write</ref>(ptr,<sp/>&amp;buf[1],<sp/>buf_size);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/><ref refid="hpm__smbus_8c_1adba2177437a717a75be0bc1eff958276" kindref="member">hpm_smbus_slave_read</ref>(<ref refid="structI2C__Type" kindref="compound">I2C_Type</ref><sp/>*ptr,<sp/>uint8_t<sp/>*data,<sp/>uint32_t<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>)</highlight></codeline>
+<codeline lineno="234"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__common__interface_1ga087efae82a4b174a0363363d9d5ece19" kindref="member">hpm_stat_t</ref><sp/>stat;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>pec;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buf[<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a214369ce4fafa9caa85c2bf60449caf6" kindref="member">I2C_SOC_TRANSFER_COUNT_MAX</ref>];</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>slave_address;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>frame<sp/>included<sp/>addr,<sp/>data,<sp/>and<sp/>pec<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>&lt;=<sp/>(<ref refid="HPM5300_2HPM5301_2hpm__soc__feature_8h_1a214369ce4fafa9caa85c2bf60449caf6" kindref="member">I2C_SOC_TRANSFER_COUNT_MAX</ref><sp/>-<sp/>2));</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>addr<sp/>+<sp/>rw<sp/>bit*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>slave_address<sp/>=<sp/>ptr-&gt;<ref refid="structI2C__Type_1ab2dae0e07c421d6159bf6afba5747733" kindref="member">ADDR</ref>;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>buf[0]<sp/>=<sp/>(slave_address<sp/>&lt;&lt;<sp/>1)<sp/>|<sp/>0x01;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__i2c__interface_1gafd10781c9ce78632402cf4c83b8b19af" kindref="member">i2c_slave_read</ref>(ptr,<sp/>&amp;buf[1],<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stat<sp/>==<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fa99d8737a9b635c0c9d87d7ac65801ce7" kindref="member">status_success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pec<sp/>=<sp/><ref refid="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" kindref="member">hpm_smbus_pec_crc8</ref>(buf,<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pec<sp/>==<sp/>buf[<ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref><sp/>+<sp/>1])<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(data,<sp/>&amp;buf[1],<sp/><ref refid="group__nnactivation_1gaf8fd9ce16b371c8a3bf5e0b37a69419f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stat<sp/>=<sp/><ref refid="group__common__interface_1gga57008dafb69438605b6d0039d9ed7a8fab3c0359cb713a70f593f2e46ab12bb39" kindref="member">status_fail</ref>;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stat;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="hpm__smbus_8c_1a1a266b12ca1178b98d6f25eee5b1df2c" kindref="member">hpm_smbus_pec_crc8</ref>(uint8_t<sp/>*data,<sp/>uint32_t<sp/>len)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>PEC<sp/>is<sp/>a<sp/>CRC-8<sp/>error-checking<sp/>byte,<sp/>calculated<sp/>on<sp/>all<sp/>the<sp/>message<sp/>bytes<sp/>(including<sp/>addresses<sp/>and<sp/>read/write<sp/>bits)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>i;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>crc<sp/>=<sp/>0x00;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len--)<sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>crc<sp/>^=<sp/>*data++;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>8;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(crc<sp/>&amp;<sp/>0x80)<sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>crc<sp/>=<sp/>(crc<sp/>&lt;&lt;<sp/>1)<sp/>^<sp/>0x07;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>crc<sp/>&lt;&lt;=<sp/>1;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>crc;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="components/smbus/hpm_smbus.c"/>
+  </compounddef>
+</doxygen>

@@ -19,8 +19,6 @@ var hpm__jpeg__drv_8h =
       [ "jpeg_pixel_format_argb8888", "group__Jpeg__interface.html#gga81f0371bcd94753ae19bce37847fb65fa2b8b8fe46c195ec0de4676b482ace5eb", null ],
       [ "jpeg_pixel_format_rgb565", "group__Jpeg__interface.html#gga81f0371bcd94753ae19bce37847fb65fa4b34179da8d7c6a438e39ebc0253278f", null ],
       [ "jpeg_pixel_format_yuv422h1p", "group__Jpeg__interface.html#gga81f0371bcd94753ae19bce37847fb65fa223deffd88dc7a21e8397b0a3638120c", null ],
-      [ "jpeg_pixel_format_yuv422h2p", "group__Jpeg__interface.html#gga81f0371bcd94753ae19bce37847fb65fa35b3a145a4e8ac2d78cc6fa6eeb53d02", null ],
-      [ "jpeg_pixel_format_yuv420", "group__Jpeg__interface.html#gga81f0371bcd94753ae19bce37847fb65faf64cab8129820cb9ffbb7fe0c320ac75", null ],
       [ "jpeg_pixel_format_y8", "group__Jpeg__interface.html#gga81f0371bcd94753ae19bce37847fb65fa3422665554771f1c6451dcfa51549b5a", null ]
     ] ],
     [ "jpeg_table", "group__Jpeg__interface.html#ga5f6ee13a4bf1e9df59d56d2a315b7a14", [

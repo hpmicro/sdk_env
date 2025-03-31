@@ -123,8 +123,8 @@ var group__lobs__interface =
       [ "pin31_di", "structlobs__trace__data__t.html#a173ef9d77624ead0537e13b9cb5a6fe1", null ],
       [ "pin31_do", "structlobs__trace__data__t.html#a5adaeb8ae207af23179071f26f8e6c17", null ],
       [ "pin31_oe", "structlobs__trace__data__t.html#aab10a7b8a6785c42c35200f261473309", null ],
-      [ "str_data", "structlobs__trace__data__t.html#a5c84328438c41bb37fe985252e360dc9", null ],
-      [ "trace_data", "structlobs__trace__data__t.html#aaeb332b94d06491b6b71d8af9f85e4e1", null ],
+      [ "str_data", "structlobs__trace__data__t.html#a0f5a304324bf2d6074675fe0254709fc", null ],
+      [ "trace_data", "structlobs__trace__data__t.html#a80331233d03fceb34a634c5d580b5e29", null ],
       [ "u32_data", "structlobs__trace__data__t.html#a63ec518350e548be65f4f0cb9d23bf59", null ]
     ] ],
     [ "LOBS_PIN_DI", "group__lobs__interface.html#gac39ffbc5aadb27e0db529f8c4a2f113f", null ],
@@ -141,7 +141,7 @@ var group__lobs__interface =
       [ "lobs_cnt_cmp_mode", "group__lobs__interface.html#gga8e988a24f728836be55b55cbb941d787ae06ce75ed4a5adb6fcdf8db18d7106dc", null ]
     ] ],
     [ "lobs_group_mode_t", "group__lobs__interface.html#gac8a84318f81ee2a61237892d707585ab", [
-      [ "lobs_one_group_128_bits", "group__lobs__interface.html#ggac8a84318f81ee2a61237892d707585ababbffd87aaded9de4b74a27e31756fb55", null ],
+      [ "lobs_one_group_96_bits", "group__lobs__interface.html#ggac8a84318f81ee2a61237892d707585aba10cd9eff61e0ae3631dec3b0d8e14008", null ],
       [ "lobs_two_group_8_bits", "group__lobs__interface.html#ggac8a84318f81ee2a61237892d707585aba6aff47dab06163e0c67b6ef36175d330", null ]
     ] ],
     [ "lobs_next_state_t", "group__lobs__interface.html#ga05c6633c55c801c707a2388a139fa80c", [

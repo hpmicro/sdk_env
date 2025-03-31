@@ -6,7 +6,7 @@ var structPLA__Type =
     [ "AOI_8TO7_04_05", "structPLA__Type.html#aeb352ce36526356cbb8340389f9c97e1", null ],
     [ "AOI_8TO7_06", "structPLA__Type.html#ae0572b98fdaeca538b596379a9b93f7e", null ],
     [ "CFG_FF", "structPLA__Type.html#a9b3868862dd6cf390c1e15f47f8de643", null ],
-    [ "CHN", "structPLA__Type.html#a6fcf12929af7c51717753caf0838ffb3", null ],
+    [ "CHN", "structPLA__Type.html#a1c97928f4105135d26271c1b4c835605", null ],
     [ "CHN_CFG_ACTIVE", "structPLA__Type.html#aeba125d6285acca3a50db5987fb6ce22", null ],
     [ "FILTER_1ST_PLA_IN", "structPLA__Type.html#a5f424508b1b42388ce2c9d69c8cc11f0", null ],
     [ "FILTER_1ST_PLA_OUT", "structPLA__Type.html#aff86ee04682fea4b087f4a9938e2addb", null ],
