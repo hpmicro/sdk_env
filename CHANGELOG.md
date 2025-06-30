@@ -1,5 +1,13 @@
 # Change Log 
 
+## [1.10.0] - 2025-06-30:
+- start_gui: add quick start menu
+- start_gui: change the gcc compile button text to compile.
+- start_gui: update docs and image for start_gui UI.
+- docs: add evkug ses guide.
+- docs: add hpm5e00evk ug
+- update sdk to v1.10.0
+
 ## [1.9.0] - 2025-03-31:
 - tools: openocd: support hybrid_xip
 - start_gui: replace sdk path with parameters in preset.bat.
@@ -153,6 +161,3 @@
  - Update openocd with improved flash erasing
  - Update included gnu gcc toolchain
 
-
-    
-    Signed-off-by: Joe YIN <qiang.yin@hpmicro.com>

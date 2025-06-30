@@ -1,9 +1,0 @@
-var searchData=
-[
-  ['femc_20driver_20apis_0',['femc driver APIs',['../group__dram__interface.html',1,'']]],
-  ['ffa_20driver_20apis_1',['FFA driver APIs',['../group__ffa__interface.html',1,'']]],
-  ['filtering_20functions_2',['DSP Filtering Functions',['../group__filtering.html',1,'']]],
-  ['foc_20apis_3',['HPMicro MCL FOC APIs',['../group__mcl__foc__interface.html',1,'']]],
-  ['fully_20connected_20functions_4',['NN Fully Connected Functions',['../group__nnfullyconnect.html',1,'']]],
-  ['functions_5',['Functions',['../group__basic__and.html',1,'Bitwise AND Functions'],['../group__basic__xor.html',1,'Bitwise exclusive OR Functions'],['../group__basic__or.html',1,'Bitwise Inclusive OR Functions'],['../group__basic__not.html',1,'Bitwise NOT Functions'],['../group__basic.html',1,'DSP Basic Functions'],['../group__complex.html',1,'DSP Complex Functions'],['../group__controller.html',1,'DSP Controller Functions'],['../group__dist.html',1,'DSP Distance Functions'],['../group__filtering.html',1,'DSP Filtering Functions'],['../group__matrix.html',1,'DSP Matrix Functions'],['../group__sort.html',1,'DSP Sort Functions'],['../group__statistics.html',1,'DSP Statistics Functions'],['../group__svm.html',1,'DSP SVM Functions'],['../group__transform.html',1,'DSP Transform Functions'],['../group__utils.html',1,'DSP Utils Functions'],['../group__hpmmath.html',1,'HPMicro Math Functions'],['../group__nnactivation.html',1,'NN Activation Functions'],['../group__nnbasic.html',1,'NN Basic Functions'],['../group__nnconcatenation.html',1,'NN Concatenation Functions'],['../group__nnconvolution.html',1,'NN Convolution Functions'],['../group__nnfullyconnect.html',1,'NN Fully Connected Functions'],['../group__nnpooling.html',1,'NN Pooling Functions'],['../group__nnsoftmax.html',1,'NN Softmax Functions'],['../group__nnutils.html',1,'NN Utils Functions']]]
-];
