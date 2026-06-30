@@ -1,5 +1,11 @@
 # Change Log 
 
+## [1.12.0] - 2026-06-30:
+- tools: openocd upgrade openocd for cJTAG support
+- start_gui: optimize hint when there is no corresponding SoC configuration file, it should default to empty.
+- start_gui: add hpm_build_type flash_dfu&flash_sdram_dfu support
+
+
 ## [1.11.0] - 2025-12-31:
 - docs: README: add compile error faq.
 - docs: ad notice about openocd updates.'
@@ -174,4 +180,3 @@
  - Update usb driver for FTDI to winusb from libusbk
  - Update openocd with improved flash erasing
  - Update included gnu gcc toolchain
-
