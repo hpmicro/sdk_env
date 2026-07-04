@@ -1,5 +1,14 @@
 # Change Log
 
+## [1.12.1] - 2026-07-05:
+
+- Main changes since 1.12.0
+- Tested Segger Embedded Studio Version: 8.28
+- Tested Zcc toolchain 4.1.5
+
+### Fixed:
+- samples: exclude dfu build type for certain samples
+
 ## [1.12.0] - 2026-06-30:
 
 - Main changes since 1.11.0

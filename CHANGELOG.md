@@ -1,6 +1,10 @@
 # Change Log 
 
+## [1.12.1] - 2026-07-05:
+- update sdk to v1.12.1
+
 ## [1.12.0] - 2026-06-30:
+- update sdk to v1.12.0
 - tools: openocd upgrade openocd for cJTAG support
 - start_gui: optimize hint when there is no corresponding SoC configuration file, it should default to empty.
 - start_gui: add hpm_build_type flash_dfu&flash_sdram_dfu support
