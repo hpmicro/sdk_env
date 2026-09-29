@@ -1,5 +1,9 @@
 # Change Log 
 
+## [1.13.0] - 2026-09-30:
+- update sdk to v1.13.0
+- docs: add hpm5100evk user guide
+
 ## [1.12.1] - 2026-07-05:
 - update sdk to v1.12.1
 
